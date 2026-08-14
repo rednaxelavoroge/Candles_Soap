@@ -6,7 +6,9 @@
   --color-sand: #eadfce;
   --color-clay: #c9b296;
   --color-ink: #2e2a26;
-  --color-muted: #7a7168;
+  /* Приглушённый текст: #7a7168 давал по --bg только 4.32:1 и валил проверку
+     контраста. Этот тон читается так же спокойно, но даёт 4.79:1. */
+  --color-muted: #736a61;
   --color-accent: #a88763;
 
   --font-display: var(--font-cormorant), Georgia, "Times New Roman", serif;

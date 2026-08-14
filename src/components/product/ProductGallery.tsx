@@ -3,7 +3,7 @@
 import { Media } from "@/components/ui/Media";
 import type { ContentImage, Video } from "@/lib/schemas";
 import Image from "next/image";
-import { useCallback, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 type Slide =
   | { kind: "image"; image: ContentImage }
@@ -35,13 +35,38 @@ export function ProductGallery({
   ];
 
   const [index, setIndex] = useState(0);
+  // Все кадры разом — это четыре больших изображения в первую загрузку ради
+  // одного видимого. Держим в DOM только показанные и один следующий: фейд
+  // остаётся плавным, а в первую загрузку уходит единственный кадр.
+  const [mounted, setMounted] = useState<Set<number>>(() => new Set([0]));
   const pointerStart = useRef<number | null>(null);
+
+  // Соседний ракурс подтягиваем после простоя: если начать сразу, он отбирает
+  // канал у первого кадра и утяжеляет LCP.
+  useEffect(() => {
+    if (slides.length < 2) return;
+    const prefetch = () => setMounted((known) => new Set(known).add(1));
+    const idle = window.requestIdleCallback
+      ? window.requestIdleCallback(prefetch, { timeout: 2500 })
+      : window.setTimeout(prefetch, 1200);
+    return () => {
+      if (window.cancelIdleCallback) window.cancelIdleCallback(idle as number);
+      else window.clearTimeout(idle as number);
+    };
+  }, [slides.length]);
 
   const go = useCallback(
     (next: number) => {
       setIndex((current) => {
         const target = next < 0 ? slides.length - 1 : next % slides.length;
-        return target === current ? current : target;
+        if (target === current) return current;
+        setMounted((known) => {
+          const grown = new Set(known);
+          grown.add(target);
+          grown.add((target + 1) % slides.length);
+          return grown;
+        });
+        return target;
       });
     },
     [slides.length],
@@ -91,11 +116,13 @@ export function ProductGallery({
             }`}
           >
             {slide.kind === "image" ? (
-              <Media
-                image={slide.image}
-                priority={slideIndex === 0}
-                sizes="(min-width: 768px) 50vw, 100vw"
-              />
+              mounted.has(slideIndex) ? (
+                <Media
+                  image={slide.image}
+                  priority={slideIndex === 0}
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                />
+              ) : null
             ) : slideIndex === index ? (
               <VideoSlide video={slide.video} title={title} />
             ) : null}
