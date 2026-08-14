@@ -9,16 +9,16 @@ import "./globals.css";
 const site = getSite();
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://candles-soap.vercel.app"),
+  metadataBase: new URL(site.domain),
   title: {
     default: `${site.owner} — изделия ручной работы`,
-    template: `%s — ${site.owner}`,
+    template: `%s — ${site.brand}`,
   },
   description: site.tagline,
   openGraph: {
     type: "website",
     locale: "ru_RU",
-    siteName: site.owner,
+    siteName: site.brand,
     title: `${site.owner} — изделия ручной работы`,
     description: site.tagline,
   },

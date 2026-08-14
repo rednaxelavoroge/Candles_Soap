@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 const NAV = [
   { href: "/catalog", label: "Каталог" },
   { href: "/#about", label: "Обо мне" },
-  { href: "/#contacts", label: "Контакты" },
+  { href: "/contacts", label: "Контакты" },
 ];
 
 export function SiteHeader() {
@@ -35,7 +35,7 @@ export function SiteHeader() {
     <header className="absolute inset-x-0 top-0 z-40">
       <div className="flex items-center justify-between px-5 py-5 md:px-8 md:py-7">
         <Link href="/" className="font-display text-lg tracking-wide md:text-xl">
-          {site.owner}
+          {site.brand}
         </Link>
 
         <nav aria-label="Основная навигация" className="hidden gap-8 text-sm md:flex">
@@ -60,7 +60,7 @@ export function SiteHeader() {
       {open ? (
         <div id="mobile-nav" className="fixed inset-0 z-50 flex flex-col bg-bg md:hidden">
           <div className="flex items-center justify-between px-5 py-5">
-            <span className="font-display text-lg">{site.owner}</span>
+            <span className="font-display text-lg">{site.brand}</span>
             <button type="button" onClick={() => setOpen(false)} className="text-sm tracking-wide">
               Закрыть
             </button>

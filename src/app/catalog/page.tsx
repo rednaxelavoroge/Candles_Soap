@@ -1,5 +1,6 @@
 import { Tile } from "@/components/ui/Tile";
 import { getCategories, getProductsByCategory } from "@/lib/content";
+import { pluralItems } from "@/lib/plural";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -30,7 +31,7 @@ export default function CatalogPage() {
                 href={`/catalog/${category.slug}`}
                 title={category.title}
                 image={category.cover}
-                caption={count > 0 ? `${count} ${plural(count)}` : undefined}
+                caption={count > 0 ? `${count} ${pluralItems(count)}` : undefined}
                 priority={index < 2}
                 className="aspect-[4/5] md:aspect-[3/4]"
                 sizes="(min-width: 768px) 25vw, 50vw"
@@ -41,12 +42,4 @@ export default function CatalogPage() {
       </ul>
     </div>
   );
-}
-
-function plural(count: number): string {
-  const mod10 = count % 10;
-  const mod100 = count % 100;
-  if (mod10 === 1 && mod100 !== 11) return "изделие";
-  if (mod10 >= 2 && mod10 <= 4 && (mod100 < 12 || mod100 > 14)) return "изделия";
-  return "изделий";
 }

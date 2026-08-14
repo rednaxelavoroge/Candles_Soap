@@ -1,11 +1,15 @@
 {
   "owner": "Анна Манасарян",
+  "brand": "AnnaManasaryan.Art",
+  "domain": "https://annamanasaryan.art",
   "tagline": "Свечи, мыло и предметы для дома — ручная работа, малые партии",
   "intro": "Я делаю вещи, которые живут в доме каждый день: свечи, которые не стыдно поставить на стол, мыло, которое приятно взять в руки, гипсовый декор со спокойной фактурой. Каждая партия небольшая, поэтому почти любую вещь можно повторить в вашем цвете и аромате.",
   "portrait": null,
   "contacts": {
-    "whatsapp": null,
-    "instagram": null,
+    "whatsapp": "+374 98 033 550",
+    "phone": "+7 915 003 35 50",
+    "instagram": "annamanasaryan.art",
+    "facebook": null,
     "email": null,
     "city": null
   }

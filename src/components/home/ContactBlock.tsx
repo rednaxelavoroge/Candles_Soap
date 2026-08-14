@@ -1,31 +1,13 @@
 import { getSite } from "@/lib/content";
+import { getSiteName, getSocialLinks, telHref, whatsappHref } from "@/lib/contacts";
+import Link from "next/link";
 
-/**
- * Показываем только те каналы связи, которые есть в данных: выдуманный номер
- * или пустая ссылка на прототипе хуже отсутствующей строки.
- */
 export function ContactBlock() {
   const { contacts } = getSite();
-
-  const channels = [
-    contacts.whatsapp
-      ? {
-          label: "WhatsApp",
-          value: contacts.whatsapp,
-          href: `https://wa.me/${contacts.whatsapp.replace(/\D/g, "")}`,
-        }
-      : null,
-    contacts.instagram
-      ? {
-          label: "Instagram",
-          value: `@${contacts.instagram}`,
-          href: `https://instagram.com/${contacts.instagram}`,
-        }
-      : null,
-    contacts.email
-      ? { label: "Почта", value: contacts.email, href: `mailto:${contacts.email}` }
-      : null,
-  ].filter((channel) => channel !== null);
+  const socials = getSocialLinks();
+  const whatsapp = whatsappHref(
+    `Здравствуйте! Пишу с сайта ${getSiteName()} — хочу уточнить по изделиям.`,
+  );
 
   return (
     <section
@@ -38,20 +20,49 @@ export function ContactBlock() {
         Повторю любую вещь в вашем цвете и аромате
       </h2>
 
-      {channels.length > 0 ? (
-        <ul className="mt-8 flex flex-col gap-4 md:mt-10 md:flex-row md:gap-12">
-          {channels.map((channel) => (
-            <li key={channel.label}>
-              <span className="eyebrow block">{channel.label}</span>
-              <a href={channel.href} className="link-underline mt-1 inline-block text-lg md:text-xl">
-                {channel.value}
+      <div className="mt-8 flex flex-col gap-8 md:mt-10 md:flex-row md:items-end md:justify-between">
+        <ul className="flex flex-col gap-4 md:flex-row md:gap-12">
+          {socials.map((social) => (
+            <li key={social.label}>
+              <span className="eyebrow block">{social.label}</span>
+              <a
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="link-underline mt-1 inline-block text-lg md:text-xl"
+              >
+                {social.value}
               </a>
             </li>
           ))}
+          {contacts.phone ? (
+            <li>
+              <span className="eyebrow block">Телефон</span>
+              <a
+                href={telHref(contacts.phone)}
+                className="link-underline mt-1 inline-block text-lg md:text-xl"
+              >
+                {contacts.phone}
+              </a>
+            </li>
+          ) : null}
         </ul>
-      ) : null}
 
-      {contacts.city ? <p className="mt-8 text-sm text-muted">{contacts.city}</p> : null}
+        {whatsapp ? (
+          <a
+            href={whatsapp}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex shrink-0 items-center justify-center border border-ink px-7 py-3.5 text-sm transition-colors duration-300 hover:bg-ink hover:text-surface"
+          >
+            Написать в WhatsApp
+          </a>
+        ) : null}
+      </div>
+
+      <Link href="/contacts" className="link-underline mt-8 inline-block text-sm">
+        Оставить заявку
+      </Link>
     </section>
   );
 }

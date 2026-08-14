@@ -72,12 +72,19 @@ export const productSchema = z.object({
 
 export const siteSchema = z.object({
   owner: z.string().min(1),
+  /** Написание в шапке и подвале — латиницей, как на домене. */
+  brand: z.string().min(1),
+  domain: z.string().min(1),
   tagline: z.string().min(1),
   intro: z.string().min(1),
   portrait: imageSchema.nullable(),
   contacts: z.object({
+    /** Номер для кнопки «Написать в WhatsApp». */
     whatsapp: z.string().nullable(),
+    /** Второй номер: показываем как телефон, кнопки WhatsApp у него нет. */
+    phone: z.string().nullable(),
     instagram: z.string().nullable(),
+    facebook: z.string().nullable(),
     email: z.string().nullable(),
     city: z.string().nullable(),
   }),
