@@ -189,11 +189,18 @@ function VideoSlide({ video, title }: { video: Video; title: string }) {
     return (
       <video
         controls
+        autoPlay
+        playsInline
+        loop
+        muted
         preload="none"
         poster={video.poster.src}
         className="h-full w-full object-cover"
       >
-        <source src={video.src} />
+        {/* mp4 первым: Safari умеет только его. webm — запасной вариант для
+            сборок Chromium без проприетарных кодеков. */}
+        <source src={video.src} type="video/mp4" />
+        <source src={video.src.replace(/\.mp4$/, ".webm")} type="video/webm" />
         Ваш браузер не поддерживает видео.
       </video>
     );

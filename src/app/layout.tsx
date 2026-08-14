@@ -8,8 +8,26 @@ import "./globals.css";
 
 const site = getSite();
 
+/**
+ * Абсолютный адрес сайта для og:image и canonical. Пока боевой домен не
+ * подключён, брать его из site.json нельзя: превью в мессенджерах ведёт на
+ * несуществующий хост, картинка не грузится и остаётся голый текст.
+ *
+ * VERCEL_PROJECT_PRODUCTION_URL Vercel подставляет сам — сейчас это
+ * candles-soap.vercel.app, а после привязки annamanasaryan.art станет им же.
+ */
+function resolveBaseUrl(): URL {
+  const explicit = process.env.NEXT_PUBLIC_SITE_URL;
+  if (explicit) return new URL(explicit);
+
+  const vercel = process.env.VERCEL_PROJECT_PRODUCTION_URL;
+  if (vercel) return new URL(`https://${vercel}`);
+
+  return new URL(site.domain);
+}
+
 export const metadata: Metadata = {
-  metadataBase: new URL(site.domain),
+  metadataBase: resolveBaseUrl(),
   title: {
     default: `${site.owner} — изделия ручной работы`,
     template: `%s — ${site.brand}`,

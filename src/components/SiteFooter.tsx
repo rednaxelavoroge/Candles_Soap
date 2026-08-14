@@ -4,6 +4,7 @@ import Link from "next/link";
 
 const NAV = [
   { href: "/catalog", label: "Каталог" },
+  { href: "/backstage", label: "Бэкстейдж" },
   { href: "/about", label: "Обо мне" },
   { href: "/contacts", label: "Контакты" },
 ];

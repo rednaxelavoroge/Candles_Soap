@@ -90,6 +90,18 @@ export const siteSchema = z.object({
   }),
 });
 
+/** Лента бэкстейджа: кадры и вертикальные ролики вперемешку. */
+export const backstageItemSchema = z.discriminatedUnion("kind", [
+  z.object({ kind: z.literal("image"), image: imageSchema, caption: z.string().min(1) }),
+  z.object({
+    kind: z.literal("video"),
+    src: z.string().min(1),
+    poster: imageSchema,
+    caption: z.string().min(1),
+  }),
+]);
+
+export type BackstageItem = z.infer<typeof backstageItemSchema>;
 export type ContentImage = z.infer<typeof imageSchema>;
 export type Video = z.infer<typeof videoSchema>;
 export type Category = z.infer<typeof categorySchema>;

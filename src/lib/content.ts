@@ -1,12 +1,15 @@
+import backstageJson from "@/data/backstage.json";
 import categoriesJson from "@/data/categories.json";
 import productsJson from "@/data/products.json";
 import siteJson from "@/data/site.json";
 import tagsJson from "@/data/tags.json";
 import {
+  backstageItemSchema,
   categorySchema,
   productSchema,
   siteSchema,
   tagSchema,
+  type BackstageItem,
   type Category,
   type Product,
   type Site,
@@ -35,6 +38,7 @@ const categories = parse(z.array(categorySchema), categoriesJson, "categories.js
 const tags = parse(z.array(tagSchema), tagsJson, "tags.json");
 const products = parse(z.array(productSchema), productsJson, "products.json");
 const site = parse(siteSchema, siteJson, "site.json");
+const backstage = parse(z.array(backstageItemSchema), backstageJson, "backstage.json");
 
 const categorySlugs = new Set(categories.map((c) => c.slug));
 const tagSlugs = new Set(tags.map((t) => t.slug));
@@ -47,6 +51,10 @@ for (const product of products) {
   if (unknownTag) {
     throw new Error(`Товар «${product.slug}»: неизвестный тег «${unknownTag}»`);
   }
+}
+
+export function getBackstage(): BackstageItem[] {
+  return backstage;
 }
 
 export function getSite(): Site {

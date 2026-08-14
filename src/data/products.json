@@ -37,7 +37,17 @@
         "alt": "Ледяная купель с двумя горящими фитилями"
       }
     ],
-    "video": null,
+    "video": {
+      "kind": "file",
+      "src": "/catalog/video/ledyanaya-kupel.mp4",
+      "poster": {
+        "src": "/catalog/candles/ledyanaya-kupel-01.webp",
+        "width": 1600,
+        "height": 1200,
+        "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAAAQAgCdASoQAAwAA4BaJYwCsAEKQonkllsAAP7NxITFdJeC0QlihEzm1AJ5a3YAMlYaxjLnIy9lhQQhnPo62W9tnRvhAAAA",
+        "alt": "Ледяная купель — короткий ролик"
+      }
+    },
     "price": 2200,
     "description": "Свеча в чугунно-чёрной ванночке: поверх залитого воска — крупные прозрачные осколки, похожие на колотый лёд. Два фитиля стоят между «льдинками», и пока свеча горит, они подсвечивают их изнутри тёплым. Форма отлита вручную, поэтому край у каждой ванночки чуть свой.",
     "specs": {
@@ -508,7 +518,17 @@
         "alt": "Размер мыла-книги виден по ладони"
       }
     ],
-    "video": null,
+    "video": {
+      "kind": "file",
+      "src": "/catalog/video/kniga-s-pionami.mp4",
+      "poster": {
+        "src": "/catalog/soap/kniga-s-pionami-01.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAQAgCdASoQABAAA4BaJQBOgB5yvee2+JmAAP7xgZmx93D1yuh1poQDv8SKgSD2KslLmWHDvQO+ISH2tZ+ysc68InCHH3jETPjYDZtUhCIu7Zj9GWbvQHIiQ/K1wAAA",
+        "alt": "Книга с пионами — короткий ролик"
+      }
+    },
     "price": 1900,
     "description": "Раскрытая книга, из которой растёт букет: пионы, хризантемы и мелкая зелень вылеплены отдельно и посажены в разворот. Страницы фисташковые, цветы пыльно-розовые. Тяжёлая, увесистая вещь — её обычно не пускают в дело, а ставят на полку.",
     "specs": {
@@ -646,7 +666,17 @@
         "alt": "Терракотовый вариант ладоней с красным сердцем"
       }
     ],
-    "video": null,
+    "video": {
+      "kind": "file",
+      "src": "/catalog/video/serdtse-v-ladonyakh.mp4",
+      "poster": {
+        "src": "/catalog/gypsum/serdtse-v-ladonyakh-01.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAABQAgCdASoQABAAA4BaJZAC7AYv1vDXPZ+9tGAA/vKqmT7EL65s3Oi4rfLR7EJYaEsBMWYXbSc8/lszuqLFDnjzky/3DLXPhWGR+Cf8y67BtgpgRYOX1AQb7K/qfh2AApgeGgul98h8ttsGmT00Ar6AAAA=",
+        "alt": "Сердце в ладонях — короткий ролик"
+      }
+    },
     "price": 1300,
     "description": "Две сложенные лодочкой ладони, отлитые из гипса, и гранёное сердце в них. Ладони делаются белыми или терракотовыми, сердце — красным. Сердце вынимается, так что чаша остаётся под кольца и серьги.",
     "specs": {

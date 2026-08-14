@@ -1,0 +1,170 @@
+[
+  {
+    "kind": "image",
+    "image": {
+      "src": "/catalog/candles/soty-02.webp",
+      "width": 1600,
+      "height": 1600,
+      "blurDataURL": "data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAADQAQCdASoQABAAA4BaJZQAAudeg6DwAAD+9CGE9/F+RccB0n3dQVJBwxAiIvTCgXtEpAAA",
+      "alt": "Свеча-соты в пыльно-розовом цвете"
+    },
+    "caption": "Соты"
+  },
+  {
+    "kind": "image",
+    "image": {
+      "src": "/catalog/soap/pryanichnyy-nabor-03.webp",
+      "width": 1600,
+      "height": 1600,
+      "blurDataURL": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAAAQAgCdASoQABAAA4BaJYwCdADRGxZbzAcAAP7q3AMOtJC7pSQKq+ERpHdE2He2BUbgSjyUOiTU4PFSuncMAAAA",
+      "alt": "Мыло-пряник в виде резной рамки"
+    },
+    "caption": "Пряничный набор"
+  },
+  {
+    "kind": "image",
+    "image": {
+      "src": "/catalog/gypsum/rakushka-02.webp",
+      "width": 1600,
+      "height": 1600,
+      "blurDataURL": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAACwAgCdASoQABAAA4BaJYwCdIIlmABwJVrsxDEHEgAA/vaNwBM4L//wE+My6S8Rlh3wDCh2Z6S9Xo5xNbVG7kSn2F9zLNyWCpo69LcedCf1xlHkKmswAA==",
+      "alt": "Голубая ракушка, вид под углом"
+    },
+    "caption": "Ракушка"
+  },
+  {
+    "kind": "image",
+    "image": {
+      "src": "/catalog/candles/mandariny-03.webp",
+      "width": 1600,
+      "height": 1200,
+      "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADQAQCdASoQAAwAA4BaJbACdADvMPemAAD+8N+nigQVENUG/V3/bhT+vEk+4Gg563VMG5EQHDp4mXKBN+wd5++UE5t30KhMdsi3Sw+z9go0AAAA",
+      "alt": "Целый и очищенный мандарин на подносе, тёмный фон"
+    },
+    "caption": "Мандарины"
+  },
+  {
+    "kind": "video",
+    "src": "/catalog/video/ledyanaya-kupel.mp4",
+    "poster": {
+      "src": "/catalog/candles/ledyanaya-kupel-01.webp",
+      "width": 1600,
+      "height": 1200,
+      "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAAAQAgCdASoQAAwAA4BaJYwCsAEKQonkllsAAP7NxITFdJeC0QlihEzm1AJ5a3YAMlYaxjLnIy9lhQQhnPo62W9tnRvhAAAA",
+      "alt": "Ледяная купель — короткий ролик"
+    },
+    "caption": "Ледяная купель"
+  },
+  {
+    "kind": "image",
+    "image": {
+      "src": "/catalog/soap/morskoe-dno-04.webp",
+      "width": 1600,
+      "height": 1200,
+      "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAACQAQCdASoQAAwAA4BaJQBOgBm1EkgA/GDV3H5/zs3N1vJM0SUec5jM1V+wRIkqy/ZRCIM9rEY+RDNDxZbTyDDGxBeaOMQ9AyeAAA==",
+      "alt": "Мыло «Морское дно» с песчаными разводами"
+    },
+    "caption": "Морское дно"
+  },
+  {
+    "kind": "image",
+    "image": {
+      "src": "/catalog/candles/globus-03.webp",
+      "width": 1600,
+      "height": 1600,
+      "blurDataURL": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAADwAQCdASoQABAAA4BaJZwAAudgGDI1y3AA/vaC/6YWTAQksSw5FE5SRkTe52+bGochPGnImGB0qWq0iL7VhAAA",
+      "alt": "Свеча-глобус, материки крупным планом"
+    },
+    "caption": "Глобус"
+  },
+  {
+    "kind": "image",
+    "image": {
+      "src": "/catalog/soap/konyak-i-stopka-02.webp",
+      "width": 1600,
+      "height": 1600,
+      "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAwAgCdASoQABAAA4BaJbACdLoAAsilL24gAAD+ufGvXzdMbKSW/ZPJrNJam41HG8Gh+6C0oGVh71evHOX1gHEU564KQRITW/mz2MU/xch9PAAA",
+      "alt": "Набор «Коньяк и стопка», вид сбоку"
+    },
+    "caption": "Коньяк и стопка"
+  },
+  {
+    "kind": "image",
+    "image": {
+      "src": "/catalog/gypsum/podnosy-s-businami-02.webp",
+      "width": 1600,
+      "height": 1600,
+      "blurDataURL": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAADQAQCdASoQABAAA4BaJaQAAudnLTMgAAD+8MiK45ApTgPzLPb2F3MAAAA=",
+      "alt": "Круглый графитовый поднос с бусинами"
+    },
+    "caption": "Подносы с бусинами"
+  },
+  {
+    "kind": "video",
+    "src": "/catalog/video/kniga-s-pionami.mp4",
+    "poster": {
+      "src": "/catalog/soap/kniga-s-pionami-01.webp",
+      "width": 1600,
+      "height": 1600,
+      "blurDataURL": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAQAgCdASoQABAAA4BaJQBOgB5yvee2+JmAAP7xgZmx93D1yuh1poQDv8SKgSD2KslLmWHDvQO+ISH2tZ+ysc68InCHH3jETPjYDZtUhCIu7Zj9GWbvQHIiQ/K1wAAA",
+      "alt": "Книга с пионами — короткий ролик"
+    },
+    "caption": "Книга с пионами"
+  },
+  {
+    "kind": "image",
+    "image": {
+      "src": "/catalog/candles/elka-na-kryshe-01.webp",
+      "width": 1600,
+      "height": 1200,
+      "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAQAgCdASoQAAwAA4BaJZQCsAELjYExde0AAP7xz94bRssVC/sOStvnhDa9n6nfvCWOZ7mztMQTDNaB8CGaZox/6SJljcmSTi16M3pb02uvBcAA",
+      "alt": "Свеча-машинка с ёлкой на крыше, снятая на снегу"
+    },
+    "caption": "Ёлка на крыше"
+  },
+  {
+    "kind": "image",
+    "image": {
+      "src": "/catalog/soap/nabor-dlya-malysha-03.webp",
+      "width": 1600,
+      "height": 1600,
+      "blurDataURL": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAwAgCdASoQABAAA4BaJbACdADOd/4zWpXZgAD+fUTrXclELyohhjFbGEYmAkdo+pYr/WeRpWbGm3Yb2AbBWh6y7/Cx6iCFZ4JlTxl7IdL8IMR3OCW5O4+vSIAAAA==",
+      "alt": "Мыло в форме детской коляски"
+    },
+    "caption": "Набор для малыша"
+  },
+  {
+    "kind": "image",
+    "image": {
+      "src": "/catalog/candles/tyulpany-03.webp",
+      "width": 1200,
+      "height": 1600,
+      "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAACwAQCdASoMABAAA4BaJQAAW6ETIJgAAP70MAesY8lf11Bf/AT64Y9Qctbh6IqeKOHO4iwGwAYtwfUwSP7hO/+nJehWrLUAAAA=",
+      "alt": "Золотая подводка на лепестках крупным планом"
+    },
+    "caption": "Тюльпаны"
+  },
+  {
+    "kind": "image",
+    "image": {
+      "src": "/catalog/soap/buket-v-korobke-02.webp",
+      "width": 1200,
+      "height": 1600,
+      "blurDataURL": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAACQAQCdASoMABAAA4BaJZQAApYI6AAA/O8XXDaNsgLkz6Fgbf5QipPR20bhsfzS7ACZJfcwl1WAAA==",
+      "alt": "С коробки снимают крышку, под ней мыльные цветы"
+    },
+    "caption": "Букет в коробке"
+  },
+  {
+    "kind": "video",
+    "src": "/catalog/video/serdtse-v-ladonyakh.mp4",
+    "poster": {
+      "src": "/catalog/gypsum/serdtse-v-ladonyakh-01.webp",
+      "width": 1600,
+      "height": 1600,
+      "blurDataURL": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAABQAgCdASoQABAAA4BaJZAC7AYv1vDXPZ+9tGAA/vKqmT7EL65s3Oi4rfLR7EJYaEsBMWYXbSc8/lszuqLFDnjzky/3DLXPhWGR+Cf8y67BtgpgRYOX1AQb7K/qfh2AApgeGgul98h8ttsGmT00Ar6AAAA=",
+      "alt": "Сердце в ладонях — короткий ролик"
+    },
+    "caption": "Сердце в ладонях"
+  }
+]
