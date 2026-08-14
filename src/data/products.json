@@ -1,1 +1,249 @@
-[]
+[
+  {
+    "id": "candles-ledyanaya-kupel",
+    "slug": "ledyanaya-kupel",
+    "title": "Ледяная купель",
+    "category": "candles",
+    "tags": [
+      "women"
+    ],
+    "images": [
+      {
+        "src": "/catalog/candles/ledyanaya-kupel-01.webp",
+        "width": 1600,
+        "height": 1200,
+        "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAAAQAgCdASoQAAwAA4BaJYwCsAEKQonkllsAAP7NxITFdJeC0QlihEzm1AJ5a3YAMlYaxjLnIy9lhQQhnPo62W9tnRvhAAAA",
+        "alt": "Свеча-ванночка из чёрного гипса с колотым восковым льдом"
+      },
+      {
+        "src": "/catalog/candles/ledyanaya-kupel-02.webp",
+        "width": 1600,
+        "height": 1200,
+        "blurDataURL": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAAAQAgCdASoQAAwAA4BaJZQC7AEPSn1He0gAAP7o2Lg23Asl7yJuDvlS44bVJixEBamlrV5SDXgHq4I8AAA=",
+        "alt": "Ледяная купель с зажжённым фитилём"
+      },
+      {
+        "src": "/catalog/candles/ledyanaya-kupel-03.webp",
+        "width": 1600,
+        "height": 1200,
+        "blurDataURL": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAADwAQCdASoQAAwAA4BaJZQC7ACj6Wsyg4AA/tuGjqwbhEZ0fjuNNmy6kri64Q0TkDViCe9S72bM279QKpFygGLAAAA=",
+        "alt": "Ледяная купель сразу после того, как фитиль потушили"
+      },
+      {
+        "src": "/catalog/candles/ledyanaya-kupel-04.webp",
+        "width": 1600,
+        "height": 1200,
+        "blurDataURL": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAADwAQCdASoQAAwAA4BaJZQCsAEObpm0z4AA/s3k/yyMRad6Kd21NrQPqlBkLHHyZRUREH6hXRgVWgJGAAA=",
+        "alt": "Ледяная купель с двумя горящими фитилями"
+      }
+    ],
+    "video": null,
+    "price": null,
+    "description": "Свеча в чугунно-чёрной ванночке: поверх залитого воска — крупные прозрачные осколки, похожие на колотый лёд. Два фитиля стоят между «льдинками», и пока свеча горит, они подсвечивают их изнутри тёплым. Форма отлита вручную, поэтому край у каждой ванночки чуть свой.",
+    "specs": {}
+  },
+  {
+    "id": "candles-soty",
+    "slug": "soty",
+    "title": "Соты",
+    "category": "candles",
+    "tags": [
+      "men"
+    ],
+    "images": [
+      {
+        "src": "/catalog/candles/soty-01.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAAAwAgCdASoQABAAA4BaJZQC7H8AGBtQmBPLAAD+9W+Jppgl71XYhEZqIs9D1oBAYtdy5tMQXhN8fYMeta34AfAi4SfxUHYYAAA=",
+        "alt": "Две свечи-соты, розовая и синяя, рядом"
+      },
+      {
+        "src": "/catalog/candles/soty-02.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAADQAQCdASoQABAAA4BaJZQAAudeg6DwAAD+9CGE9/F+RccB0n3dQVJBwxAiIvTCgXtEpAAA",
+        "alt": "Свеча-соты в пыльно-розовом цвете"
+      },
+      {
+        "src": "/catalog/candles/soty-03.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAACwAQCdASoQABAAA4BaJZQAAudS/QSAAP71brF7hK7R59awUsBWRyRE9BrT1Xl5DECxoMFv3F/5jQgA",
+        "alt": "Свеча-соты глубокого синего цвета"
+      },
+      {
+        "src": "/catalog/candles/soty-04.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAAAwAgCdASoQABAAA4BaJZQAAven8raKljIbAAD+9C6+4h4w6VXMoSHhVjwhUvqSVxIMEN+0dNqAAA==",
+        "alt": "Розовая свеча-соты крупным планом"
+      }
+    ],
+    "video": null,
+    "price": null,
+    "description": "Куб с сотовой гранью — рельеф идёт по всем четырём сторонам и ловит боковой свет. Отливается в двух цветах: пыльно-розовом и глубоком синем. Плотный воск, ровный срез, спокойная геометрия — ставится на полку или на рабочий стол и не спорит с интерьером.",
+    "specs": {}
+  },
+  {
+    "id": "candles-globus",
+    "slug": "globus",
+    "title": "Глобус",
+    "category": "candles",
+    "tags": [
+      "men",
+      "school"
+    ],
+    "images": [
+      {
+        "src": "/catalog/candles/globus-01.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAABQAgCdASoQABAAA4BaJYwCxC8AGBr6B3QNqSAA/vVnn9N1nbbBzdZg9YtQ/UtYI28vu4qjqrDbsB+wPDPEWetQ2gAAAA==",
+        "alt": "Свеча-глобус: синий шар с серебряными материками"
+      },
+      {
+        "src": "/catalog/candles/globus-02.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAAAwAgCdASoQABAAA4BaJZQC7H8AGBsAwWATAAD+9oL/2pdPLf9UUA0sLAsHGtOxVJ0H31ZFIEVXmvSHhTiqZYAA",
+        "alt": "Свеча-глобус, вид сбоку"
+      },
+      {
+        "src": "/catalog/candles/globus-03.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAADwAQCdASoQABAAA4BaJZwAAudgGDI1y3AA/vaC/6YWTAQksSw5FE5SRkTe52+bGochPGnImGB0qWq0iL7VhAAA",
+        "alt": "Свеча-глобус, материки крупным планом"
+      }
+    ],
+    "video": null,
+    "price": null,
+    "description": "Шар с материками на низкой подставке: тело залито глубоким синим, континенты подняты рельефом и укрыты серебром. Границы берегов прощупываются пальцем, серебро на свету уходит в холодный блеск. Заметная вещь на письменном столе и понятный подарок тому, кто много ездит.",
+    "specs": {}
+  },
+  {
+    "id": "candles-elka-na-kryshe",
+    "slug": "elka-na-kryshe",
+    "title": "Ёлка на крыше",
+    "category": "candles",
+    "tags": [
+      "new-year"
+    ],
+    "images": [
+      {
+        "src": "/catalog/candles/elka-na-kryshe-01.webp",
+        "width": 1600,
+        "height": 1200,
+        "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAQAgCdASoQAAwAA4BaJZQCsAELjYExde0AAP7xz94bRssVC/sOStvnhDa9n6nfvCWOZ7mztMQTDNaB8CGaZox/6SJljcmSTi16M3pb02uvBcAA",
+        "alt": "Свеча-машинка с ёлкой на крыше, снятая на снегу"
+      },
+      {
+        "src": "/catalog/candles/elka-na-kryshe-02.webp",
+        "width": 1600,
+        "height": 1200,
+        "blurDataURL": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAQAgCdASoQAAwAA4BaJYwCdAEJvjzLx8pAAP7v4Ij777SiYNGIeVTsfvbzFfR1LXMzT6gT2XLaMBbi3vRxpoTBFFSnj2QBouHrqgs8d0m7B1xp3u+ZByqAAAA=",
+        "alt": "Свеча-машинка с ёлкой на гипсовом подносе"
+      },
+      {
+        "src": "/catalog/candles/elka-na-kryshe-03.webp",
+        "width": 1600,
+        "height": 1200,
+        "blurDataURL": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAAAQAgCdASoQAAwAA4BaJQBOgCFgBVYiYZGYAP7x0bSpBE/dTW1E8dlzSu+FbrEfEOE1kU9vxMb5DWNSccYB/N9dhlaRmuH6fiL6fsx/VQumORqxxbmchIXnHTxfL6QwAAA=",
+        "alt": "Свеча-машинка с ёлкой в руке, виден размер"
+      },
+      {
+        "src": "/catalog/candles/elka-na-kryshe-04.webp",
+        "width": 1600,
+        "height": 1200,
+        "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAAAwAgCdASoQAAwAA4BaJZACdAEf/66ZhZXeAAD+8XI9b9iZfOzVUoFP10dCeg3FcXbiNzZCRRR0t0Zi9IeHnmji5P0fVZxg2tBYchwA",
+        "alt": "Свеча-машинка с ёлкой на фоне еловых веток"
+      }
+    ],
+    "video": null,
+    "price": null,
+    "description": "Пузатый автомобиль везёт на крыше еловую макушку, перевязанную бечёвкой. Кузов отлит в тёплом розово-персиковом воске, ёлка — отдельной деталью, с бронзовой присыпкой по хвое. Подаётся на овальном гипсовом подносе, который остаётся у хозяина и после того, как свеча догорит.",
+    "specs": {}
+  },
+  {
+    "id": "candles-mandariny",
+    "slug": "mandariny",
+    "title": "Мандарины",
+    "category": "candles",
+    "tags": [
+      "new-year",
+      "food"
+    ],
+    "images": [
+      {
+        "src": "/catalog/candles/mandariny-01.webp",
+        "width": 1600,
+        "height": 1200,
+        "blurDataURL": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAABwAgCdASoQAAwAA4BaJbACdH8Agny/rT9R+bAAAP7ufTdNdjIMfRD06tx2KaLXMYB1UDDCBGdS5KCl7baRGpZIMU/9hjTq3uZ8OCKdNyBHzAfZPDSAAA==",
+        "alt": "Три свечи-мандарина на белом гипсовом подносе"
+      },
+      {
+        "src": "/catalog/candles/mandariny-02.webp",
+        "width": 1600,
+        "height": 1200,
+        "blurDataURL": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAQAgCdASoQAAwAA4BaJagCdH8AFe9i845kAP72v+8S1M9O+XDi/jVB083DzaoaQ0eTHbyu2/SsR/2YHpGGJ402kpod93TyyMC+GuuGYTci7kfh1KpUEJAOwoAAAA==",
+        "alt": "Набор свечей-мандаринов на зелёном фоне"
+      },
+      {
+        "src": "/catalog/candles/mandariny-03.webp",
+        "width": 1600,
+        "height": 1200,
+        "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADQAQCdASoQAAwAA4BaJbACdADvMPemAAD+8N+nigQVENUG/V3/bhT+vEk+4Gg563VMG5EQHDp4mXKBN+wd5++UE5t30KhMdsi3Sw+z9go0AAAA",
+        "alt": "Целый и очищенный мандарин на подносе, тёмный фон"
+      },
+      {
+        "src": "/catalog/candles/mandariny-04.webp",
+        "width": 1600,
+        "height": 1067,
+        "blurDataURL": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAACwAQCdASoQAAsAA4BaJaACdACovlhAAPce1xOej6V3qcSQ24zpLEoBK7+Kgx3IeOEyA3kawbAomm9dxpKAAA==",
+        "alt": "Пара свечей-мандаринов на песочном фоне"
+      }
+    ],
+    "video": null,
+    "price": null,
+    "description": "Свечи-мандарины: гладкая кожура у целого плода и разобранные дольки у очищенного. Цвет набирается слоями, поэтому оранжевый получается неоднородным, как у настоящего фрукта. Набирается по два-три плода на гипсовый поднос — и весь Новый год пахнет цитрусом ещё до того, как свечу зажгли.",
+    "specs": {}
+  },
+  {
+    "id": "candles-tyulpany",
+    "slug": "tyulpany",
+    "title": "Тюльпаны",
+    "category": "candles",
+    "tags": [
+      "flowers",
+      "women"
+    ],
+    "images": [
+      {
+        "src": "/catalog/candles/tyulpany-01.webp",
+        "width": 1200,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADQAQCdASoMABAAA4BaJQAAW6HEF3tLgAD+9XSVgPwNpeCMcsaSRlFP3iCS6Fx6zRU7CFGuoSxA59d7StnlimYoEdAAAA==",
+        "alt": "Сливовая свеча-цилиндр с рельефом из тюльпанов"
+      },
+      {
+        "src": "/catalog/candles/tyulpany-02.webp",
+        "width": 1200,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAADQAQCdASoMABAAA4BaJYwAAud+ldRkVAD+9CXlDnFqW1tWVCARsfJsGnUhxzPkj33I7C1Kji5G/DYEsBBKD5B4AAA=",
+        "alt": "Свеча с тюльпанами и розой, вид сбоку"
+      },
+      {
+        "src": "/catalog/candles/tyulpany-03.webp",
+        "width": 1200,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAACwAQCdASoMABAAA4BaJQAAW6ETIJgAAP70MAesY8lf11Bf/AT64Y9Qctbh6IqeKOHO4iwGwAYtwfUwSP7hO/+nJehWrLUAAAA=",
+        "alt": "Золотая подводка на лепестках крупным планом"
+      }
+    ],
+    "video": null,
+    "price": null,
+    "description": "Сливовый цилиндр, по которому снизу доверху идут вылепленные тюльпаны и распустившаяся роза. Рельеф глубокий: бутоны выступают над телом свечи, между ними лежат листья, а по кромкам лепестков пущена золотая подводка. Каждый цветок ставится вручную, поэтому букет на двух свечах не повторяется.",
+    "specs": {}
+  }
+]

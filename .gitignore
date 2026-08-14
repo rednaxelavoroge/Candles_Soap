@@ -9,3 +9,6 @@ next-env.d.ts
 
 # кэш загрузок скрипта ingest — исходники не версионируем
 tools/.cache
+
+# промежуточный манифест ingest — производный файл, не версионируем
+tools/ingest-manifest.json

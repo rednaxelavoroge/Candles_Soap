@@ -1,10 +1,56 @@
 [
-  { "slug": "candles", "title": "Свечи", "cover": null, "order": 1 },
-  { "slug": "soap", "title": "Мыло", "cover": null, "order": 2 },
-  { "slug": "gypsum", "title": "Изделия из гипса", "cover": null, "order": 3 },
-  { "slug": "sachet", "title": "Саше и ароматы", "cover": null, "order": 4 },
-  { "slug": "holders", "title": "Подсвечники", "cover": null, "order": 5 },
-  { "slug": "boxes", "title": "Шкатулки и коробочки", "cover": null, "order": 6 },
-  { "slug": "plates", "title": "Подносы и тарелки", "cover": null, "order": 7 },
-  { "slug": "decor", "title": "Декор для интерьера", "cover": null, "order": 8 }
+  {
+    "slug": "candles",
+    "title": "Свечи",
+    "cover": {
+      "src": "/catalog/candles/ledyanaya-kupel-01.webp",
+      "width": 1600,
+      "height": 1200,
+      "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAAAQAgCdASoQAAwAA4BaJYwCsAEKQonkllsAAP7NxITFdJeC0QlihEzm1AJ5a3YAMlYaxjLnIy9lhQQhnPo62W9tnRvhAAAA",
+      "alt": "Свечи"
+    },
+    "order": 1
+  },
+  {
+    "slug": "soap",
+    "title": "Мыло",
+    "cover": null,
+    "order": 2
+  },
+  {
+    "slug": "gypsum",
+    "title": "Изделия из гипса",
+    "cover": null,
+    "order": 3
+  },
+  {
+    "slug": "sachet",
+    "title": "Саше и ароматы",
+    "cover": null,
+    "order": 4
+  },
+  {
+    "slug": "holders",
+    "title": "Подсвечники",
+    "cover": null,
+    "order": 5
+  },
+  {
+    "slug": "boxes",
+    "title": "Шкатулки и коробочки",
+    "cover": null,
+    "order": 6
+  },
+  {
+    "slug": "plates",
+    "title": "Подносы и тарелки",
+    "cover": null,
+    "order": 7
+  },
+  {
+    "slug": "decor",
+    "title": "Декор для интерьера",
+    "cover": null,
+    "order": 8
+  }
 ]

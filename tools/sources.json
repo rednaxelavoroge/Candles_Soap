@@ -3,6 +3,11 @@
     { "url": "https://annamanasaryan.com/g/soap/", "category": "soap" },
     { "url": "https://annamanasaryan.com/g/candle/", "category": "candles" }
   ],
+  "folders": [
+    { "dir": "../1-СВЕЧИ", "category": "candles" },
+    { "dir": "../1-МЫЛО", "category": "soap" },
+    { "dir": "../1-ГИПС", "category": "gypsum" }
+  ],
   "minSourceWidth": 500,
   "maxWidth": 1600,
   "webpQuality": 82,
