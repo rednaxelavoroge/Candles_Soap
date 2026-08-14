@@ -1,3 +1,4 @@
+import { HeroFigure } from "@/components/home/HeroFigure";
 import { Media } from "@/components/ui/Media";
 import { getFilledCategories, getProducts, getSite } from "@/lib/content";
 import { getSocialLinks, whatsappHref } from "@/lib/contacts";
@@ -33,8 +34,12 @@ export default function AboutPage() {
       </header>
 
       <div className="mt-10 grid gap-10 px-5 md:mt-14 md:grid-cols-2 md:gap-14 md:px-8">
-        <div className="relative aspect-[3/4] w-full bg-sand">
-          <Media image={site.portrait} sizes="(min-width: 768px) 45vw, 90vw" priority />
+        <div className="relative flex aspect-[3/4] w-full items-center justify-center overflow-hidden bg-ink">
+          {site.portrait ? (
+            <Media image={site.portrait} sizes="(min-width: 768px) 45vw, 90vw" priority />
+          ) : (
+            <HeroFigure className="h-[82%] w-auto" />
+          )}
         </div>
 
         <div className="md:pt-4">

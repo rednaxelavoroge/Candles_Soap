@@ -1,3 +1,4 @@
+import { HeroFigure } from "@/components/home/HeroFigure";
 import { Media } from "@/components/ui/Media";
 import { getSite } from "@/lib/content";
 import Link from "next/link";
@@ -8,8 +9,12 @@ export function AboutTeaser() {
   return (
     <section id="about" className="border-t border-sand py-14 md:py-20" aria-labelledby="about-heading">
       <div className="grid gap-8 px-5 md:grid-cols-2 md:items-center md:gap-14 md:px-8">
-        <div className="relative aspect-[4/5] w-full bg-sand md:aspect-[3/4]">
-          <Media image={site.portrait} sizes="(min-width: 768px) 45vw, 90vw" />
+        <div className="relative flex aspect-[4/5] w-full items-center justify-center overflow-hidden bg-ink md:aspect-[3/4]">
+          {site.portrait ? (
+            <Media image={site.portrait} sizes="(min-width: 768px) 45vw, 90vw" />
+          ) : (
+            <HeroFigure className="h-[82%] w-auto" />
+          )}
         </div>
 
         <div>
