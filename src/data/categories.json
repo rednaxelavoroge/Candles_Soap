@@ -26,7 +26,13 @@
   {
     "slug": "gypsum",
     "title": "Изделия из гипса",
-    "cover": null,
+    "cover": {
+      "src": "/catalog/gypsum/rakushka-01.webp",
+      "width": 1600,
+      "height": 1600,
+      "blurDataURL": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAABQAgCdASoQABAAA4BaJQBOkGQCr9ZLHCeQzTAA/vV6uAKfVDiuCWPi+ww3ElRCZE7IjNlUlaxmh5lkrh7yKekh/ux269OZS+x5F2QxcqFMq7XtEiW7FeKUHIYAAA==",
+      "alt": "Изделия из гипса"
+    },
     "order": 3
   },
   {

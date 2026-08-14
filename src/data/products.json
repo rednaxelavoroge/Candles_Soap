@@ -499,5 +499,133 @@
     "price": null,
     "description": "Мятная шляпная коробка, доверху набитая мыльными цветами: пионы, ранункулюсы, мелкие соцветия и веточки зелени. Оттенки идут от пудрового до лилового, ни один цветок не повторяется. Крышка снимается — под ней такой же плотный слой, коробка набита не только сверху.",
     "specs": {}
+  },
+  {
+    "id": "gypsum-rakushka",
+    "slug": "rakushka",
+    "title": "Ракушка",
+    "category": "gypsum",
+    "tags": [
+      "sea"
+    ],
+    "images": [
+      {
+        "src": "/catalog/gypsum/rakushka-01.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAABQAgCdASoQABAAA4BaJQBOkGQCr9ZLHCeQzTAA/vV6uAKfVDiuCWPi+ww3ElRCZE7IjNlUlaxmh5lkrh7yKekh/ux269OZS+x5F2QxcqFMq7XtEiW7FeKUHIYAAA==",
+        "alt": "Голубая гипсовая ракушка-гребешок"
+      },
+      {
+        "src": "/catalog/gypsum/rakushka-02.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAACwAgCdASoQABAAA4BaJYwCdIIlmABwJVrsxDEHEgAA/vaNwBM4L//wE+My6S8Rlh3wDCh2Z6S9Xo5xNbVG7kSn2F9zLNyWCpo69LcedCf1xlHkKmswAA==",
+        "alt": "Голубая ракушка, вид под углом"
+      },
+      {
+        "src": "/catalog/gypsum/rakushka-03.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAABQAgCdASoQABAAA4BaJZwAD5aQcNf2WPVsMgAA/vaSFUgrf+ksAWlYa+UOP2xHrNLpr2AdQ3WrnGv9mVIkm3kQOHdH3asnV5wAOd/mWHypxyBneD2CH+jTw8ul/tp7xIYAAA==",
+        "alt": "Белая гипсовая ракушка-гребешок"
+      },
+      {
+        "src": "/catalog/gypsum/rakushka-04.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAQAgCdASoQABAAA4BaJZwAAuR3lL5yIWlAAP71edDpf+pLdn5FgF9We5joYdi3U8oMEwEXGVGwQCETWvn+v78NZ6Yu2OJDgrgBT7Q8Hc65tjFnWdQvfE1ESGAAAA==",
+        "alt": "Белая ракушка, вид сверху"
+      }
+    ],
+    "video": null,
+    "price": null,
+    "description": "Гипсовая раковина-гребешок: ребристая снаружи, гладкая внутри. Годится под кольца у раковины, под мелочь в прихожей или как подставка под свечу. Отливается белой и в голубой заливке с растяжкой от края к центру.",
+    "specs": {}
+  },
+  {
+    "id": "gypsum-serdtse-v-ladonyakh",
+    "slug": "serdtse-v-ladonyakh",
+    "title": "Сердце в ладонях",
+    "category": "gypsum",
+    "tags": [
+      "heart",
+      "wedding"
+    ],
+    "images": [
+      {
+        "src": "/catalog/gypsum/serdtse-v-ladonyakh-01.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAABQAgCdASoQABAAA4BaJZAC7AYv1vDXPZ+9tGAA/vKqmT7EL65s3Oi4rfLR7EJYaEsBMWYXbSc8/lszuqLFDnjzky/3DLXPhWGR+Cf8y67BtgpgRYOX1AQb7K/qfh2AApgeGgul98h8ttsGmT00Ar6AAAA=",
+        "alt": "Гипсовые ладони с красным гранёным сердцем"
+      },
+      {
+        "src": "/catalog/gypsum/serdtse-v-ladonyakh-02.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAABwAgCdASoQABAAA4BaJYgBUftvc42orehSNewAAP7yprzTkKk99B3yJ9p15XJMdOY/fZIXi2hAxIxFK2neWk0IcNTXKw0Fjzq8p4Hj+3u7Ma8yAWto2vGlfL/SBvRT9glmHjLk0xnhUEDBQ84bAAAA",
+        "alt": "Сердце в ладонях, вид сверху"
+      },
+      {
+        "src": "/catalog/gypsum/serdtse-v-ladonyakh-03.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAAAwAgCdASoQABAAA4BaJYgBTAA0utvKvw0ncAD+8rQ3LK2+Xo9CvJZ7KqX9Gdsv2TmiKccODuf1+TkRINeyiyuDYCRZpmEGB0ChtkGS0Nuc3riQ8ZBwPoKnMjanSj3tBp0RGaIzZiaA4AAA",
+        "alt": "Сердце в ладонях под углом"
+      },
+      {
+        "src": "/catalog/gypsum/serdtse-v-ladonyakh-04.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAADQAgCdASoQABAAA4BaJbACdH8IIABgaE8k/hzDTOaAAP7xC9ji6V7HPeBfxdx0mbrWXTBllmx4I6Ij8M02sAjhplb7N56HaBiGHbG2iKbDt3jSG7LNXXEGyHR+rDcwAAA=",
+        "alt": "Терракотовый вариант ладоней с красным сердцем"
+      }
+    ],
+    "video": null,
+    "price": null,
+    "description": "Две сложенные лодочкой ладони, отлитые из гипса, и гранёное сердце в них. Ладони делаются белыми или терракотовыми, сердце — красным. Сердце вынимается, так что чаша остаётся под кольца и серьги.",
+    "specs": {}
+  },
+  {
+    "id": "gypsum-podnosy-s-businami",
+    "slug": "podnosy-s-businami",
+    "title": "Подносы с бусинами",
+    "category": "gypsum",
+    "tags": [],
+    "images": [
+      {
+        "src": "/catalog/gypsum/podnosy-s-businami-01.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAAAQAgCdASoQABAAA4BaJaQAAueCC3Pvl3xAAP7w1LYmR6c49Rxz7QHmjXATSQePcoj+DQiiiZ/Fgr91qnp4RYiDRq/d/SFSOjYpkk0nXyKiXqOAAAA=",
+        "alt": "Круглый белый гипсовый поднос с бортиком из бусин"
+      },
+      {
+        "src": "/catalog/gypsum/podnosy-s-businami-02.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAADQAQCdASoQABAAA4BaJaQAAudnLTMgAAD+8MiK45ApTgPzLPb2F3MAAAA=",
+        "alt": "Круглый графитовый поднос с бусинами"
+      },
+      {
+        "src": "/catalog/gypsum/podnosy-s-businami-03.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAwAgCdASoQABAAA4BaJaQAD4ovGa0uAH/yQAD+98bOv3qo7/TcmzzeVcYY6HbiG0a9n/jFXhi2dwfkDKLzDVYvx1YmOkqz3EcOKjW7HN1tl4uflZtWrbjXCAA=",
+        "alt": "Овальный и круглый подносы с бусинами"
+      },
+      {
+        "src": "/catalog/gypsum/podnosy-s-businami-04.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADQAQCdASoQABAAA4BaJaQAAqH2DTXAAAD++FZOJhDeoFzad7OChFxExrHoWJLu5m9D63fmlZLjhlBkW379CXwfKZj75j7vgBEPVWghdlDcAAAA",
+        "alt": "Овальные подносы с бусинами, вид сверху"
+      }
+    ],
+    "video": null,
+    "price": null,
+    "description": "Плоские подносы с бортиком из крупных бусин: круглые и овальные, от мелких — под кольца — до больших, куда встанет свеча и флакон. Поверхность матовая, слегка шершавая на ощупь. Белые и графитовые собираются в одну стопку и смотрятся как набор.",
+    "specs": {}
   }
 ]
