@@ -61,6 +61,15 @@ export function getCategory(slug: string): Category | undefined {
   return categories.find((category) => category.slug === slug);
 }
 
+/**
+ * Категории, в которых уже есть изделия. Пустой раздел остаётся доступным по
+ * прямой ссылке, но в сетки не попадает: плитка без обложки, ведущая в пустоту,
+ * читается как недоделанный сайт, а не как «раздел пока не наполнен».
+ */
+export function getFilledCategories(): Category[] {
+  return categories.filter((category) => getProductsByCategory(category.slug).length > 0);
+}
+
 export function getTags(): Tag[] {
   return tags;
 }
