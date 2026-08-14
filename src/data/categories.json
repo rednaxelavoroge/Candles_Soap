@@ -14,7 +14,13 @@
   {
     "slug": "soap",
     "title": "Мыло",
-    "cover": null,
+    "cover": {
+      "src": "/catalog/soap/kniga-s-pionami-01.webp",
+      "width": 1600,
+      "height": 1600,
+      "blurDataURL": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAQAgCdASoQABAAA4BaJQBOgB5yvee2+JmAAP7xgZmx93D1yuh1poQDv8SKgSD2KslLmWHDvQO+ISH2tZ+ysc68InCHH3jETPjYDZtUhCIu7Zj9GWbvQHIiQ/K1wAAA",
+      "alt": "Мыло"
+    },
     "order": 2
   },
   {

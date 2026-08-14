@@ -14,15 +14,25 @@ export function Hero() {
 
   return (
     <section className="relative h-svh min-h-[560px] w-full overflow-hidden bg-sand">
-      <Media image={site.portrait} sizes="100vw" priority />
+      {/* Портрет вертикальный: на широком экране object-cover срезает его по
+          высоте, и без привязки к верху кадр обрезается по глаза. */}
+      <Media image={site.portrait} sizes="100vw" priority className="object-top" />
 
       {/* Портрет снят при дневном свете и снизу светлый — белый текст по нему
           не прошёл бы по контрасту. Затемнение только там, где лежит подпись. */}
       {onPhoto ? (
-        <div
-          aria-hidden="true"
-          className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-ink/70 via-ink/25 to-transparent"
-        />
+        <>
+          {/* Шапка лежит поверх первого экрана и набрана цветом --ink. Светлая
+              подложка сверху нужна ей, тёмная снизу — имени и подписи. */}
+          <div
+            aria-hidden="true"
+            className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-bg/85 to-transparent"
+          />
+          <div
+            aria-hidden="true"
+            className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-ink/70 via-ink/25 to-transparent"
+          />
+        </>
       ) : null}
 
       {/* Нижний отступ разведён со скролл-индикатором, иначе на 375px они наезжают. */}
