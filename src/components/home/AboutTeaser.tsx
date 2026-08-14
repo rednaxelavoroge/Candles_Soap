@@ -20,8 +20,8 @@ export function AboutTeaser() {
           <p className="mt-5 max-w-prose text-sm leading-relaxed text-muted md:text-base">
             {site.intro}
           </p>
-          <Link href="/catalog" className="link-underline mt-7 inline-block text-sm">
-            Смотреть каталог
+          <Link href="/about" className="link-underline mt-7 inline-block text-sm">
+            Подробнее обо мне
           </Link>
         </div>
       </div>
