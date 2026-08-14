@@ -1,0 +1,68 @@
+[
+  {
+    "slug": "candles",
+    "title": "Свечи",
+    "cover": {
+      "src": "/catalog/candles/ledyanaya-kupel-01.webp",
+      "width": 1600,
+      "height": 1200,
+      "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAAAQAgCdASoQAAwAA4BaJYwCsAEKQonkllsAAP7NxITFdJeC0QlihEzm1AJ5a3YAMlYaxjLnIy9lhQQhnPo62W9tnRvhAAAA",
+      "alt": "Свечи"
+    },
+    "order": 1
+  },
+  {
+    "slug": "soap",
+    "title": "Мыло",
+    "cover": {
+      "src": "/catalog/soap/kniga-s-pionami-01.webp",
+      "width": 1600,
+      "height": 1600,
+      "blurDataURL": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAQAgCdASoQABAAA4BaJQBOgB5yvee2+JmAAP7xgZmx93D1yuh1poQDv8SKgSD2KslLmWHDvQO+ISH2tZ+ysc68InCHH3jETPjYDZtUhCIu7Zj9GWbvQHIiQ/K1wAAA",
+      "alt": "Мыло"
+    },
+    "order": 2
+  },
+  {
+    "slug": "gypsum",
+    "title": "Изделия из гипса",
+    "cover": {
+      "src": "/catalog/gypsum/rakushka-01.webp",
+      "width": 1600,
+      "height": 1600,
+      "blurDataURL": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAABQAgCdASoQABAAA4BaJQBOkGQCr9ZLHCeQzTAA/vV6uAKfVDiuCWPi+ww3ElRCZE7IjNlUlaxmh5lkrh7yKekh/ux269OZS+x5F2QxcqFMq7XtEiW7FeKUHIYAAA==",
+      "alt": "Изделия из гипса"
+    },
+    "order": 3
+  },
+  {
+    "slug": "sachet",
+    "title": "Саше и ароматы",
+    "cover": null,
+    "order": 4
+  },
+  {
+    "slug": "holders",
+    "title": "Подсвечники",
+    "cover": null,
+    "order": 5
+  },
+  {
+    "slug": "boxes",
+    "title": "Шкатулки и коробочки",
+    "cover": null,
+    "order": 6
+  },
+  {
+    "slug": "plates",
+    "title": "Подносы и тарелки",
+    "cover": null,
+    "order": 7
+  },
+  {
+    "slug": "decor",
+    "title": "Декор для интерьера",
+    "cover": null,
+    "order": 8
+  }
+]

@@ -1,0 +1,14 @@
+node_modules
+.next
+out
+.vercel
+.env*.local
+next-env.d.ts
+*.tsbuildinfo
+.DS_Store
+
+# кэш загрузок скрипта ingest — исходники не версионируем
+tools/.cache
+
+# промежуточный манифест ingest — производный файл, не версионируем
+tools/ingest-manifest.json

@@ -1,0 +1,133 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #f7f3ed;
+  --color-surface: #ffffff;
+  --color-sand: #eadfce;
+  --color-clay: #c9b296;
+  --color-ink: #2e2a26;
+  --color-muted: #7a7168;
+  --color-accent: #a88763;
+
+  --font-display: var(--font-cormorant), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-jost), system-ui, -apple-system, sans-serif;
+
+  /* Строго прямоугольная геометрия: скруглений в проекте нет. */
+  --radius-none: 0px;
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+}
+
+@layer base {
+  :root {
+    /* Белая рамка между изображениями. */
+    --frame-gap: 12px;
+  }
+
+  @media (min-width: 768px) {
+    :root {
+      --frame-gap: 20px;
+    }
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: auto;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-weight: 300;
+    font-synthesis-weight: none;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 300;
+    letter-spacing: -0.01em;
+  }
+
+  img,
+  video,
+  svg {
+    display: block;
+    max-width: 100%;
+  }
+
+  ::selection {
+    background-color: var(--color-sand);
+    color: var(--color-ink);
+  }
+
+  /* Фокус-стили не убираем — только приводим к палитре. */
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  /* Сетка с белой рамкой: зазор между плитками и такой же padding по краю. */
+  .frame-grid {
+    display: grid;
+    gap: var(--frame-gap);
+    padding: var(--frame-gap);
+    background-color: var(--color-surface);
+  }
+
+  .rule {
+    border: 0;
+    border-top: 1px solid var(--color-sand);
+  }
+
+  .eyebrow {
+    font-size: 0.6875rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+  }
+
+  /* Горизонтальные ленты: скрываем полосу прокрутки, поведение оставляем нативным. */
+  .no-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .link-underline {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 1px;
+    padding-bottom: 2px;
+    transition: background-size 400ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  @media (hover: hover) {
+    .link-underline:hover {
+      background-size: 0% 1px;
+    }
+  }
+}

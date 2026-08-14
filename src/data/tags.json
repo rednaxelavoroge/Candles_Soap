@@ -1,0 +1,14 @@
+[
+  { "slug": "wedding", "title": "Свадьба", "group": "occasion" },
+  { "slug": "christening", "title": "Крестины", "group": "occasion" },
+  { "slug": "new-year", "title": "Новый год", "group": "occasion" },
+  { "slug": "sea", "title": "Морская тема", "group": "occasion" },
+  { "slug": "flowers", "title": "Цветы", "group": "occasion" },
+  { "slug": "heart", "title": "Сердце", "group": "occasion" },
+  { "slug": "food", "title": "Еда", "group": "occasion" },
+  { "slug": "school", "title": "Школа", "group": "occasion" },
+  { "slug": "men", "title": "Мужчинам", "group": "recipient" },
+  { "slug": "women", "title": "Девушкам", "group": "recipient" },
+  { "slug": "kids", "title": "Детям", "group": "recipient" },
+  { "slug": "newborn", "title": "Новорождённым", "group": "recipient" }
+]

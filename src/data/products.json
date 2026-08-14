@@ -1,0 +1,631 @@
+[
+  {
+    "id": "candles-ledyanaya-kupel",
+    "slug": "ledyanaya-kupel",
+    "title": "Ледяная купель",
+    "category": "candles",
+    "tags": [
+      "women"
+    ],
+    "images": [
+      {
+        "src": "/catalog/candles/ledyanaya-kupel-01.webp",
+        "width": 1600,
+        "height": 1200,
+        "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAAAQAgCdASoQAAwAA4BaJYwCsAEKQonkllsAAP7NxITFdJeC0QlihEzm1AJ5a3YAMlYaxjLnIy9lhQQhnPo62W9tnRvhAAAA",
+        "alt": "Свеча-ванночка из чёрного гипса с колотым восковым льдом"
+      },
+      {
+        "src": "/catalog/candles/ledyanaya-kupel-02.webp",
+        "width": 1600,
+        "height": 1200,
+        "blurDataURL": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAAAQAgCdASoQAAwAA4BaJZQC7AEPSn1He0gAAP7o2Lg23Asl7yJuDvlS44bVJixEBamlrV5SDXgHq4I8AAA=",
+        "alt": "Ледяная купель с зажжённым фитилём"
+      },
+      {
+        "src": "/catalog/candles/ledyanaya-kupel-03.webp",
+        "width": 1600,
+        "height": 1200,
+        "blurDataURL": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAADwAQCdASoQAAwAA4BaJZQC7ACj6Wsyg4AA/tuGjqwbhEZ0fjuNNmy6kri64Q0TkDViCe9S72bM279QKpFygGLAAAA=",
+        "alt": "Ледяная купель сразу после того, как фитиль потушили"
+      },
+      {
+        "src": "/catalog/candles/ledyanaya-kupel-04.webp",
+        "width": 1600,
+        "height": 1200,
+        "blurDataURL": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAADwAQCdASoQAAwAA4BaJZQCsAEObpm0z4AA/s3k/yyMRad6Kd21NrQPqlBkLHHyZRUREH6hXRgVWgJGAAA=",
+        "alt": "Ледяная купель с двумя горящими фитилями"
+      }
+    ],
+    "video": null,
+    "price": null,
+    "description": "Свеча в чугунно-чёрной ванночке: поверх залитого воска — крупные прозрачные осколки, похожие на колотый лёд. Два фитиля стоят между «льдинками», и пока свеча горит, они подсвечивают их изнутри тёплым. Форма отлита вручную, поэтому край у каждой ванночки чуть свой.",
+    "specs": {}
+  },
+  {
+    "id": "candles-soty",
+    "slug": "soty",
+    "title": "Соты",
+    "category": "candles",
+    "tags": [
+      "men"
+    ],
+    "images": [
+      {
+        "src": "/catalog/candles/soty-01.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAAAwAgCdASoQABAAA4BaJZQC7H8AGBtQmBPLAAD+9W+Jppgl71XYhEZqIs9D1oBAYtdy5tMQXhN8fYMeta34AfAi4SfxUHYYAAA=",
+        "alt": "Две свечи-соты, розовая и синяя, рядом"
+      },
+      {
+        "src": "/catalog/candles/soty-02.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAADQAQCdASoQABAAA4BaJZQAAudeg6DwAAD+9CGE9/F+RccB0n3dQVJBwxAiIvTCgXtEpAAA",
+        "alt": "Свеча-соты в пыльно-розовом цвете"
+      },
+      {
+        "src": "/catalog/candles/soty-03.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAACwAQCdASoQABAAA4BaJZQAAudS/QSAAP71brF7hK7R59awUsBWRyRE9BrT1Xl5DECxoMFv3F/5jQgA",
+        "alt": "Свеча-соты глубокого синего цвета"
+      },
+      {
+        "src": "/catalog/candles/soty-04.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAAAwAgCdASoQABAAA4BaJZQAAven8raKljIbAAD+9C6+4h4w6VXMoSHhVjwhUvqSVxIMEN+0dNqAAA==",
+        "alt": "Розовая свеча-соты крупным планом"
+      }
+    ],
+    "video": null,
+    "price": null,
+    "description": "Куб с сотовой гранью — рельеф идёт по всем четырём сторонам и ловит боковой свет. Отливается в двух цветах: пыльно-розовом и глубоком синем. Плотный воск, ровный срез, спокойная геометрия — ставится на полку или на рабочий стол и не спорит с интерьером.",
+    "specs": {}
+  },
+  {
+    "id": "candles-globus",
+    "slug": "globus",
+    "title": "Глобус",
+    "category": "candles",
+    "tags": [
+      "men",
+      "school"
+    ],
+    "images": [
+      {
+        "src": "/catalog/candles/globus-01.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAABQAgCdASoQABAAA4BaJYwCxC8AGBr6B3QNqSAA/vVnn9N1nbbBzdZg9YtQ/UtYI28vu4qjqrDbsB+wPDPEWetQ2gAAAA==",
+        "alt": "Свеча-глобус: синий шар с серебряными материками"
+      },
+      {
+        "src": "/catalog/candles/globus-02.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAAAwAgCdASoQABAAA4BaJZQC7H8AGBsAwWATAAD+9oL/2pdPLf9UUA0sLAsHGtOxVJ0H31ZFIEVXmvSHhTiqZYAA",
+        "alt": "Свеча-глобус, вид сбоку"
+      },
+      {
+        "src": "/catalog/candles/globus-03.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAADwAQCdASoQABAAA4BaJZwAAudgGDI1y3AA/vaC/6YWTAQksSw5FE5SRkTe52+bGochPGnImGB0qWq0iL7VhAAA",
+        "alt": "Свеча-глобус, материки крупным планом"
+      }
+    ],
+    "video": null,
+    "price": null,
+    "description": "Шар с материками на низкой подставке: тело залито глубоким синим, континенты подняты рельефом и укрыты серебром. Границы берегов прощупываются пальцем, серебро на свету уходит в холодный блеск. Заметная вещь на письменном столе и понятный подарок тому, кто много ездит.",
+    "specs": {}
+  },
+  {
+    "id": "candles-elka-na-kryshe",
+    "slug": "elka-na-kryshe",
+    "title": "Ёлка на крыше",
+    "category": "candles",
+    "tags": [
+      "new-year"
+    ],
+    "images": [
+      {
+        "src": "/catalog/candles/elka-na-kryshe-01.webp",
+        "width": 1600,
+        "height": 1200,
+        "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAQAgCdASoQAAwAA4BaJZQCsAELjYExde0AAP7xz94bRssVC/sOStvnhDa9n6nfvCWOZ7mztMQTDNaB8CGaZox/6SJljcmSTi16M3pb02uvBcAA",
+        "alt": "Свеча-машинка с ёлкой на крыше, снятая на снегу"
+      },
+      {
+        "src": "/catalog/candles/elka-na-kryshe-02.webp",
+        "width": 1600,
+        "height": 1200,
+        "blurDataURL": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAQAgCdASoQAAwAA4BaJYwCdAEJvjzLx8pAAP7v4Ij777SiYNGIeVTsfvbzFfR1LXMzT6gT2XLaMBbi3vRxpoTBFFSnj2QBouHrqgs8d0m7B1xp3u+ZByqAAAA=",
+        "alt": "Свеча-машинка с ёлкой на гипсовом подносе"
+      },
+      {
+        "src": "/catalog/candles/elka-na-kryshe-03.webp",
+        "width": 1600,
+        "height": 1200,
+        "blurDataURL": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAAAQAgCdASoQAAwAA4BaJQBOgCFgBVYiYZGYAP7x0bSpBE/dTW1E8dlzSu+FbrEfEOE1kU9vxMb5DWNSccYB/N9dhlaRmuH6fiL6fsx/VQumORqxxbmchIXnHTxfL6QwAAA=",
+        "alt": "Свеча-машинка с ёлкой в руке, виден размер"
+      },
+      {
+        "src": "/catalog/candles/elka-na-kryshe-04.webp",
+        "width": 1600,
+        "height": 1200,
+        "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAAAwAgCdASoQAAwAA4BaJZACdAEf/66ZhZXeAAD+8XI9b9iZfOzVUoFP10dCeg3FcXbiNzZCRRR0t0Zi9IeHnmji5P0fVZxg2tBYchwA",
+        "alt": "Свеча-машинка с ёлкой на фоне еловых веток"
+      }
+    ],
+    "video": null,
+    "price": null,
+    "description": "Пузатый автомобиль везёт на крыше еловую макушку, перевязанную бечёвкой. Кузов отлит в тёплом розово-персиковом воске, ёлка — отдельной деталью, с бронзовой присыпкой по хвое. Подаётся на овальном гипсовом подносе, который остаётся у хозяина и после того, как свеча догорит.",
+    "specs": {}
+  },
+  {
+    "id": "candles-mandariny",
+    "slug": "mandariny",
+    "title": "Мандарины",
+    "category": "candles",
+    "tags": [
+      "new-year",
+      "food"
+    ],
+    "images": [
+      {
+        "src": "/catalog/candles/mandariny-01.webp",
+        "width": 1600,
+        "height": 1200,
+        "blurDataURL": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAABwAgCdASoQAAwAA4BaJbACdH8Agny/rT9R+bAAAP7ufTdNdjIMfRD06tx2KaLXMYB1UDDCBGdS5KCl7baRGpZIMU/9hjTq3uZ8OCKdNyBHzAfZPDSAAA==",
+        "alt": "Три свечи-мандарина на белом гипсовом подносе"
+      },
+      {
+        "src": "/catalog/candles/mandariny-02.webp",
+        "width": 1600,
+        "height": 1200,
+        "blurDataURL": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAQAgCdASoQAAwAA4BaJagCdH8AFe9i845kAP72v+8S1M9O+XDi/jVB083DzaoaQ0eTHbyu2/SsR/2YHpGGJ402kpod93TyyMC+GuuGYTci7kfh1KpUEJAOwoAAAA==",
+        "alt": "Набор свечей-мандаринов на зелёном фоне"
+      },
+      {
+        "src": "/catalog/candles/mandariny-03.webp",
+        "width": 1600,
+        "height": 1200,
+        "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADQAQCdASoQAAwAA4BaJbACdADvMPemAAD+8N+nigQVENUG/V3/bhT+vEk+4Gg563VMG5EQHDp4mXKBN+wd5++UE5t30KhMdsi3Sw+z9go0AAAA",
+        "alt": "Целый и очищенный мандарин на подносе, тёмный фон"
+      },
+      {
+        "src": "/catalog/candles/mandariny-04.webp",
+        "width": 1600,
+        "height": 1067,
+        "blurDataURL": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAACwAQCdASoQAAsAA4BaJaACdACovlhAAPce1xOej6V3qcSQ24zpLEoBK7+Kgx3IeOEyA3kawbAomm9dxpKAAA==",
+        "alt": "Пара свечей-мандаринов на песочном фоне"
+      }
+    ],
+    "video": null,
+    "price": null,
+    "description": "Свечи-мандарины: гладкая кожура у целого плода и разобранные дольки у очищенного. Цвет набирается слоями, поэтому оранжевый получается неоднородным, как у настоящего фрукта. Набирается по два-три плода на гипсовый поднос — и весь Новый год пахнет цитрусом ещё до того, как свечу зажгли.",
+    "specs": {}
+  },
+  {
+    "id": "candles-tyulpany",
+    "slug": "tyulpany",
+    "title": "Тюльпаны",
+    "category": "candles",
+    "tags": [
+      "flowers",
+      "women"
+    ],
+    "images": [
+      {
+        "src": "/catalog/candles/tyulpany-01.webp",
+        "width": 1200,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADQAQCdASoMABAAA4BaJQAAW6HEF3tLgAD+9XSVgPwNpeCMcsaSRlFP3iCS6Fx6zRU7CFGuoSxA59d7StnlimYoEdAAAA==",
+        "alt": "Сливовая свеча-цилиндр с рельефом из тюльпанов"
+      },
+      {
+        "src": "/catalog/candles/tyulpany-02.webp",
+        "width": 1200,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAADQAQCdASoMABAAA4BaJYwAAud+ldRkVAD+9CXlDnFqW1tWVCARsfJsGnUhxzPkj33I7C1Kji5G/DYEsBBKD5B4AAA=",
+        "alt": "Свеча с тюльпанами и розой, вид сбоку"
+      },
+      {
+        "src": "/catalog/candles/tyulpany-03.webp",
+        "width": 1200,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAACwAQCdASoMABAAA4BaJQAAW6ETIJgAAP70MAesY8lf11Bf/AT64Y9Qctbh6IqeKOHO4iwGwAYtwfUwSP7hO/+nJehWrLUAAAA=",
+        "alt": "Золотая подводка на лепестках крупным планом"
+      }
+    ],
+    "video": null,
+    "price": null,
+    "description": "Сливовый цилиндр, по которому снизу доверху идут вылепленные тюльпаны и распустившаяся роза. Рельеф глубокий: бутоны выступают над телом свечи, между ними лежат листья, а по кромкам лепестков пущена золотая подводка. Каждый цветок ставится вручную, поэтому букет на двух свечах не повторяется.",
+    "specs": {}
+  },
+  {
+    "id": "soap-morskoe-dno",
+    "slug": "morskoe-dno",
+    "title": "Морское дно",
+    "category": "soap",
+    "tags": [
+      "sea"
+    ],
+    "images": [
+      {
+        "src": "/catalog/soap/morskoe-dno-01.webp",
+        "width": 1600,
+        "height": 1200,
+        "blurDataURL": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAQCdASoQAAwAA4BaJZgCdAC9KvPzzIQA/e6y6A0C6l6U/O0BG6RK1XVPwRVyDkNXn2A0T3iR6PVXYwGwoGj+FWsyjKKAYj/GGtkIgAA=",
+        "alt": "Круглое синее мыло с раковинами внутри"
+      },
+      {
+        "src": "/catalog/soap/morskoe-dno-02.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAAAQAgCdASoQABAAA4BaJYgCdAENhA01VMAAAPxkxpSTL/eoaO7Ah94IxHJZwGBrhfGtDaLlv1EGozjuw/zmAQDTMdLVZyKdByEkSUryA2/DFuZFY5ctIf/q4NYP1fbxvNNAjDVsAAA=",
+        "alt": "Мыло «Морское дно» на голубой стружке"
+      },
+      {
+        "src": "/catalog/soap/morskoe-dno-03.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAABwAgCdASoQABAAA4BaJbACdH8AFwEpYvkaVzEAAP7e6Iwu08r2QH4M1r1MuOfNyEN08436blSHQUgx3FDmxcLqgXeU+Og26BFfqNydtwJXFjJjTsYvdAAA",
+        "alt": "Мыло «Морское дно», вид под углом"
+      },
+      {
+        "src": "/catalog/soap/morskoe-dno-04.webp",
+        "width": 1600,
+        "height": 1200,
+        "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAACQAQCdASoQAAwAA4BaJQBOgBm1EkgA/GDV3H5/zs3N1vJM0SUec5jM1V+wRIkqy/ZRCIM9rEY+RDNDxZbTyDDGxBeaOMQ9AyeAAA==",
+        "alt": "Мыло «Морское дно» с песчаными разводами"
+      }
+    ],
+    "video": null,
+    "price": null,
+    "description": "Круглое мыло цвета глубокой воды: внутри прозрачного слоя — настоящие створки раковин и светлые песчаные разводы. Смотрится как заглянуть в воду сверху. Каждая заливка получается своей: раковины ложатся по-разному, и двух одинаковых кусков не бывает.",
+    "specs": {}
+  },
+  {
+    "id": "soap-pryanichnyy-nabor",
+    "slug": "pryanichnyy-nabor",
+    "title": "Пряничный набор",
+    "category": "soap",
+    "tags": [
+      "new-year"
+    ],
+    "images": [
+      {
+        "src": "/catalog/soap/pryanichnyy-nabor-01.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAABQAgCdASoQABAAA4BaJYwC7AELZTNCreKg1gAA/t+pagjO2UWo6W6Pt4TtH1v3eqB+kQd25ybaEJLygnpjNcoon4AAAA==",
+        "alt": "Мыло-пряник в виде домика с белой росписью"
+      },
+      {
+        "src": "/catalog/soap/pryanichnyy-nabor-02.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAQCdASoQABAAA4BaJQBOgCGudtKU0YAA/t7StfwQTpAX9qVWUgnZoNoqfA1rUoL9GJqxavjxsMvratzhYpQqu/42Z+Kns+lk7xAAAAA=",
+        "alt": "Мыло-пряник в форме сердца"
+      },
+      {
+        "src": "/catalog/soap/pryanichnyy-nabor-03.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAAAQAgCdASoQABAAA4BaJYwCdADRGxZbzAcAAP7q3AMOtJC7pSQKq+ERpHdE2He2BUbgSjyUOiTU4PFSuncMAAAA",
+        "alt": "Мыло-пряник в виде резной рамки"
+      },
+      {
+        "src": "/catalog/soap/pryanichnyy-nabor-04.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAADwAQCdASoQABAAA4BaJQBOgCPzoy8BOwAA/ueQiGnm+Rb+jmJlTKttOF8tReksfQSXtuW+SW6FzWyI5boEhEqwAAA=",
+        "alt": "Мыло-пряник в виде рождественского сапожка"
+      }
+    ],
+    "video": null,
+    "price": null,
+    "description": "Четыре куска в виде расписных пряников: домик, рамка, сердце и рождественский сапожок. Основа карамельного цвета, узор выведен белым — как глазурь, только не липнет. Набор кладётся в коробку целиком, но каждый кусок живёт и отдельно.",
+    "specs": {}
+  },
+  {
+    "id": "soap-konyak-i-stopka",
+    "slug": "konyak-i-stopka",
+    "title": "Коньяк и стопка",
+    "category": "soap",
+    "tags": [
+      "men"
+    ],
+    "images": [
+      {
+        "src": "/catalog/soap/konyak-i-stopka-01.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADQAQCdASoQABAAA4BaJbACdAC8qlnqWAD9Hfd6eHOWLW70zx7sIUoudbG3KWF8iNjD+q2zHoDw6oSTznOWsA/qGkCUU9etLZs/328z9yNLAAAA",
+        "alt": "Мыло-бутылка коньяка и стопка в деревянном ящике"
+      },
+      {
+        "src": "/catalog/soap/konyak-i-stopka-02.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAwAgCdASoQABAAA4BaJbACdLoAAsilL24gAAD+ufGvXzdMbKSW/ZPJrNJam41HG8Gh+6C0oGVh71evHOX1gHEU564KQRITW/mz2MU/xch9PAAA",
+        "alt": "Набор «Коньяк и стопка», вид сбоку"
+      },
+      {
+        "src": "/catalog/soap/konyak-i-stopka-03.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAQAgCdASoQABAAA4BaJbACdLoAAwMV30+AAP5T9Ka9o605Cteq9EDiq/vWpzPQozx0XwOMZxR7MJwMzRpPfpyFriyfjVg7/XeLaBbv4tikNSAA",
+        "alt": "Мыло-бутылка коньяка на древесной стружке"
+      },
+      {
+        "src": "/catalog/soap/konyak-i-stopka-04.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADQAQCdASoQABAAA4BaJaACdADuGVPAAAD+05tFzQQeRo6owolUdMMPQSg8qteEXp/X6/Lmy5IZN5nlo52LZdGSGQJH8foK7jl6i96WuGvgTP3IuAAAAA==",
+        "alt": "Мыло-стопка с янтарным слоем внутри"
+      }
+    ],
+    "video": null,
+    "price": null,
+    "description": "Бутылка коньяка с наклеенной этикеткой и толстостенная стопка рядом — оба куска мыльные, оба в полный обхват ладони. Стекло имитируется прозрачной основой с лёгкой мутью, жидкость внутри — янтарным слоем. Укладывается в деревянный ящик со стружкой: подарок собран и упакован сразу.",
+    "specs": {}
+  },
+  {
+    "id": "soap-nabor-dlya-malysha",
+    "slug": "nabor-dlya-malysha",
+    "title": "Набор для малыша",
+    "category": "soap",
+    "tags": [
+      "newborn",
+      "kids"
+    ],
+    "images": [
+      {
+        "src": "/catalog/soap/nabor-dlya-malysha-01.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAQAgCdASoQABAAA4BaJbACdACyiX0P2mAAAP6B+LRQhNSft31r+62bWSxLOwLkrz5qPrfUQYGn/7jfNSCCAPXLjkC1LfvwyEA8Juy9/XsBINh8NoQAAA==",
+        "alt": "Набор детского мыла: коляска, соска и боди"
+      },
+      {
+        "src": "/catalog/soap/nabor-dlya-malysha-02.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAAAQAgCdASoQABAAA4BaJbACdADQ878SssT0APnnuPLyQSJo9mVyRERdIzfqwvV25Fn6dwHVOzyp4MURu+jmVyxPtiWlU2XL2DRTicqRVOsjWbzeb+inwf3Dy42BuDphJGAAAA==",
+        "alt": "Мыло в форме соски с жемчужным кантом"
+      },
+      {
+        "src": "/catalog/soap/nabor-dlya-malysha-03.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAwAgCdASoQABAAA4BaJbACdADOd/4zWpXZgAD+fUTrXclELyohhjFbGEYmAkdo+pYr/WeRpWbGm3Yb2AbBWh6y7/Cx6iCFZ4JlTxl7IdL8IMR3OCW5O4+vSIAAAA==",
+        "alt": "Мыло в форме детской коляски"
+      },
+      {
+        "src": "/catalog/soap/nabor-dlya-malysha-04.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADQAQCdASoQABAAA4BaJbACdABk3GdeAADuWyJmER43vXf8MxO4vmpv5kgwcKqSEcnXucMD00EWOmbWM1WRf3sA+pV7wA9ssDwebgrlf0yRpsAakjSc9RBAAAA=",
+        "alt": "Мыло в форме боди для новорождённого"
+      }
+    ],
+    "video": null,
+    "price": null,
+    "description": "Три куска на выписку и первые месяцы: соска, боди и коляска. Голубой оттенок ровный, по краям пущен жемчужный кант, рельеф мелкий и чёткий. Тот же набор отливается в розовом, если девочка.",
+    "specs": {}
+  },
+  {
+    "id": "soap-kniga-s-pionami",
+    "slug": "kniga-s-pionami",
+    "title": "Книга с пионами",
+    "category": "soap",
+    "tags": [
+      "wedding",
+      "flowers"
+    ],
+    "images": [
+      {
+        "src": "/catalog/soap/kniga-s-pionami-01.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAQAgCdASoQABAAA4BaJQBOgB5yvee2+JmAAP7xgZmx93D1yuh1poQDv8SKgSD2KslLmWHDvQO+ISH2tZ+ysc68InCHH3jETPjYDZtUhCIu7Zj9GWbvQHIiQ/K1wAAA",
+        "alt": "Мыло-книга с букетом пионов на развороте"
+      },
+      {
+        "src": "/catalog/soap/kniga-s-pionami-02.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAABwAgCdASoQABAAA4BaJQBOgMXhtfz3nu/ZqVLAAP7ytNRPX356EB2cdWgXTK1OSE5ctUviZIrBk3vGrvUNzkqmjLA9+XFg1KW1+zKYXuZAzS/7mOvfVZdeX4ffjYmnNF37o2AA",
+        "alt": "Мыло-книга с пионами, вид сверху"
+      },
+      {
+        "src": "/catalog/soap/kniga-s-pionami-03.webp",
+        "width": 1200,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADwAQCdASoMABAAA4BaJZACdADMz/ePlAAAzKKuQFGctikv1/6uKUJnTPqSrPh8zLgR5eQraMAYBkL1zeVrUPaSP8Na21dWEYQC+JmUwlkluGFAAAA=",
+        "alt": "Мыло-книга с пионами в руках"
+      },
+      {
+        "src": "/catalog/soap/kniga-s-pionami-04.webp",
+        "width": 1200,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAQAgCdASoMABAAA4BaJbACdADNFS3OOa4AAP6bEy/r0Wpktipg7pFHB5CxjVMi389bS2jwlAp/iAqOy2a87BLubq7iuFHDAhvA3oSy4c4x3HYjdpBakAAA",
+        "alt": "Размер мыла-книги виден по ладони"
+      }
+    ],
+    "video": null,
+    "price": null,
+    "description": "Раскрытая книга, из которой растёт букет: пионы, хризантемы и мелкая зелень вылеплены отдельно и посажены в разворот. Страницы фисташковые, цветы пыльно-розовые. Тяжёлая, увесистая вещь — её обычно не пускают в дело, а ставят на полку.",
+    "specs": {}
+  },
+  {
+    "id": "soap-buket-v-korobke",
+    "slug": "buket-v-korobke",
+    "title": "Букет в коробке",
+    "category": "soap",
+    "tags": [
+      "flowers",
+      "women"
+    ],
+    "images": [
+      {
+        "src": "/catalog/soap/buket-v-korobke-01.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAADwAQCdASoQABAAA4BaJZQAAudgSRa7MwAA/tMqa7WJQOlJ7T/FZ5+8mjzlXqusPgPTZGxtoFyiALpj6AA=",
+        "alt": "Мятная коробка с букетом мыльных цветов"
+      },
+      {
+        "src": "/catalog/soap/buket-v-korobke-02.webp",
+        "width": 1200,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAACQAQCdASoMABAAA4BaJZQAApYI6AAA/O8XXDaNsgLkz6Fgbf5QipPR20bhsfzS7ACZJfcwl1WAAA==",
+        "alt": "С коробки снимают крышку, под ней мыльные цветы"
+      },
+      {
+        "src": "/catalog/soap/buket-v-korobke-03.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAAAQAgCdASoQABAAA4BaJZQCdIExFwGle6cgAP6NMO4CL8bIQ3bw0m6mUIK62qGbbNMtParvz1lAlv9VV200g3ZNE3l2fBQ6Uj0AAA==",
+        "alt": "Букет мыльных цветов сверху"
+      }
+    ],
+    "video": null,
+    "price": null,
+    "description": "Мятная шляпная коробка, доверху набитая мыльными цветами: пионы, ранункулюсы, мелкие соцветия и веточки зелени. Оттенки идут от пудрового до лилового, ни один цветок не повторяется. Крышка снимается — под ней такой же плотный слой, коробка набита не только сверху.",
+    "specs": {}
+  },
+  {
+    "id": "gypsum-rakushka",
+    "slug": "rakushka",
+    "title": "Ракушка",
+    "category": "gypsum",
+    "tags": [
+      "sea"
+    ],
+    "images": [
+      {
+        "src": "/catalog/gypsum/rakushka-01.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAABQAgCdASoQABAAA4BaJQBOkGQCr9ZLHCeQzTAA/vV6uAKfVDiuCWPi+ww3ElRCZE7IjNlUlaxmh5lkrh7yKekh/ux269OZS+x5F2QxcqFMq7XtEiW7FeKUHIYAAA==",
+        "alt": "Голубая гипсовая ракушка-гребешок"
+      },
+      {
+        "src": "/catalog/gypsum/rakushka-02.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAACwAgCdASoQABAAA4BaJYwCdIIlmABwJVrsxDEHEgAA/vaNwBM4L//wE+My6S8Rlh3wDCh2Z6S9Xo5xNbVG7kSn2F9zLNyWCpo69LcedCf1xlHkKmswAA==",
+        "alt": "Голубая ракушка, вид под углом"
+      },
+      {
+        "src": "/catalog/gypsum/rakushka-03.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAABQAgCdASoQABAAA4BaJZwAD5aQcNf2WPVsMgAA/vaSFUgrf+ksAWlYa+UOP2xHrNLpr2AdQ3WrnGv9mVIkm3kQOHdH3asnV5wAOd/mWHypxyBneD2CH+jTw8ul/tp7xIYAAA==",
+        "alt": "Белая гипсовая ракушка-гребешок"
+      },
+      {
+        "src": "/catalog/gypsum/rakushka-04.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAQAgCdASoQABAAA4BaJZwAAuR3lL5yIWlAAP71edDpf+pLdn5FgF9We5joYdi3U8oMEwEXGVGwQCETWvn+v78NZ6Yu2OJDgrgBT7Q8Hc65tjFnWdQvfE1ESGAAAA==",
+        "alt": "Белая ракушка, вид сверху"
+      }
+    ],
+    "video": null,
+    "price": null,
+    "description": "Гипсовая раковина-гребешок: ребристая снаружи, гладкая внутри. Годится под кольца у раковины, под мелочь в прихожей или как подставка под свечу. Отливается белой и в голубой заливке с растяжкой от края к центру.",
+    "specs": {}
+  },
+  {
+    "id": "gypsum-serdtse-v-ladonyakh",
+    "slug": "serdtse-v-ladonyakh",
+    "title": "Сердце в ладонях",
+    "category": "gypsum",
+    "tags": [
+      "heart",
+      "wedding"
+    ],
+    "images": [
+      {
+        "src": "/catalog/gypsum/serdtse-v-ladonyakh-01.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAABQAgCdASoQABAAA4BaJZAC7AYv1vDXPZ+9tGAA/vKqmT7EL65s3Oi4rfLR7EJYaEsBMWYXbSc8/lszuqLFDnjzky/3DLXPhWGR+Cf8y67BtgpgRYOX1AQb7K/qfh2AApgeGgul98h8ttsGmT00Ar6AAAA=",
+        "alt": "Гипсовые ладони с красным гранёным сердцем"
+      },
+      {
+        "src": "/catalog/gypsum/serdtse-v-ladonyakh-02.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAABwAgCdASoQABAAA4BaJYgBUftvc42orehSNewAAP7yprzTkKk99B3yJ9p15XJMdOY/fZIXi2hAxIxFK2neWk0IcNTXKw0Fjzq8p4Hj+3u7Ma8yAWto2vGlfL/SBvRT9glmHjLk0xnhUEDBQ84bAAAA",
+        "alt": "Сердце в ладонях, вид сверху"
+      },
+      {
+        "src": "/catalog/gypsum/serdtse-v-ladonyakh-03.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAAAwAgCdASoQABAAA4BaJYgBTAA0utvKvw0ncAD+8rQ3LK2+Xo9CvJZ7KqX9Gdsv2TmiKccODuf1+TkRINeyiyuDYCRZpmEGB0ChtkGS0Nuc3riQ8ZBwPoKnMjanSj3tBp0RGaIzZiaA4AAA",
+        "alt": "Сердце в ладонях под углом"
+      },
+      {
+        "src": "/catalog/gypsum/serdtse-v-ladonyakh-04.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAADQAgCdASoQABAAA4BaJbACdH8IIABgaE8k/hzDTOaAAP7xC9ji6V7HPeBfxdx0mbrWXTBllmx4I6Ij8M02sAjhplb7N56HaBiGHbG2iKbDt3jSG7LNXXEGyHR+rDcwAAA=",
+        "alt": "Терракотовый вариант ладоней с красным сердцем"
+      }
+    ],
+    "video": null,
+    "price": null,
+    "description": "Две сложенные лодочкой ладони, отлитые из гипса, и гранёное сердце в них. Ладони делаются белыми или терракотовыми, сердце — красным. Сердце вынимается, так что чаша остаётся под кольца и серьги.",
+    "specs": {}
+  },
+  {
+    "id": "gypsum-podnosy-s-businami",
+    "slug": "podnosy-s-businami",
+    "title": "Подносы с бусинами",
+    "category": "gypsum",
+    "tags": [],
+    "images": [
+      {
+        "src": "/catalog/gypsum/podnosy-s-businami-01.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAAAQAgCdASoQABAAA4BaJaQAAueCC3Pvl3xAAP7w1LYmR6c49Rxz7QHmjXATSQePcoj+DQiiiZ/Fgr91qnp4RYiDRq/d/SFSOjYpkk0nXyKiXqOAAAA=",
+        "alt": "Круглый белый гипсовый поднос с бортиком из бусин"
+      },
+      {
+        "src": "/catalog/gypsum/podnosy-s-businami-02.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAADQAQCdASoQABAAA4BaJaQAAudnLTMgAAD+8MiK45ApTgPzLPb2F3MAAAA=",
+        "alt": "Круглый графитовый поднос с бусинами"
+      },
+      {
+        "src": "/catalog/gypsum/podnosy-s-businami-03.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAwAgCdASoQABAAA4BaJaQAD4ovGa0uAH/yQAD+98bOv3qo7/TcmzzeVcYY6HbiG0a9n/jFXhi2dwfkDKLzDVYvx1YmOkqz3EcOKjW7HN1tl4uflZtWrbjXCAA=",
+        "alt": "Овальный и круглый подносы с бусинами"
+      },
+      {
+        "src": "/catalog/gypsum/podnosy-s-businami-04.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADQAQCdASoQABAAA4BaJaQAAqH2DTXAAAD++FZOJhDeoFzad7OChFxExrHoWJLu5m9D63fmlZLjhlBkW379CXwfKZj75j7vgBEPVWghdlDcAAAA",
+        "alt": "Овальные подносы с бусинами, вид сверху"
+      }
+    ],
+    "video": null,
+    "price": null,
+    "description": "Плоские подносы с бортиком из крупных бусин: круглые и овальные, от мелких — под кольца — до больших, куда встанет свеча и флакон. Поверхность матовая, слегка шершавая на ощупь. Белые и графитовые собираются в одну стопку и смотрятся как набор.",
+    "specs": {}
+  }
+]
