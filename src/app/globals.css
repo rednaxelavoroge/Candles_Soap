@@ -118,6 +118,67 @@
     display: none;
   }
 
+  /**
+   * Первый экран: медленная смена кадров с наездом. Четыре слайда по семь
+   * секунд, цикл 28 секунд, задержка задаётся переменной --delay.
+   *
+   * Всё на CSS и без единой строки скрипта: смена работает до гидратации,
+   * а анимируются только opacity и transform — layout не пересчитывается.
+   * Слайды кроме первого спрятаны обычным opacity: во время задержки
+   * анимация ещё не применяет свои значения, и они не мигают на загрузке.
+   */
+  .hero-slide {
+    opacity: 0;
+    will-change: opacity, transform;
+    animation:
+      hero-fade 28s var(--delay) infinite,
+      hero-zoom 28s var(--delay) infinite;
+  }
+
+  .hero-slide:first-child {
+    opacity: 1;
+  }
+
+  @keyframes hero-fade {
+    0%,
+    21.4% {
+      opacity: 1;
+    }
+    25%,
+    96.4% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes hero-zoom {
+    0% {
+      transform: scale(1.09);
+    }
+    25% {
+      transform: scale(1.14);
+    }
+    25.01%,
+    96.4% {
+      transform: scale(1.06);
+    }
+    100% {
+      transform: scale(1.09);
+    }
+  }
+
+  /* При запросе на уменьшение движения остаётся один статичный кадр. */
+  @media (prefers-reduced-motion: reduce) {
+    .hero-slide {
+      animation: none;
+    }
+    .hero-slide:not(:first-child) {
+      display: none;
+    }
+  }
+
   .link-underline {
     background-image: linear-gradient(currentColor, currentColor);
     background-position: 0 100%;

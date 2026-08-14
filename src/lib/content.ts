@@ -98,6 +98,25 @@ export function getProduct(category: string, slug: string): Product | undefined 
   return products.find((product) => product.category === category && product.slug === slug);
 }
 
+/**
+ * Кадры для первого экрана. Отобраны вручную по одному признаку: тёмный фон,
+ * по которому белая подпись читается на любом кадре смены. Порядок — это
+ * порядок показа, поэтому список живёт кодом, а не выводится из каталога.
+ */
+const HERO_SLIDES = [
+  "gypsum/serdtse-v-ladonyakh",
+  "candles/tyulpany",
+  "candles/soty",
+  "gypsum/rakushka",
+] as const;
+
+export function getHeroSlides() {
+  return HERO_SLIDES.map((reference) => {
+    const [category, slug] = reference.split("/");
+    return getProduct(category, slug)?.images[0];
+  }).filter((image) => image !== undefined);
+}
+
 /** Первое изображение товара — обложка в сетках и в OpenGraph. */
 export function getCover(product: Product) {
   return product.images[0];

@@ -1,61 +1,59 @@
-import { HeroFigure } from "@/components/home/HeroFigure";
-import { Media } from "@/components/ui/Media";
-import { getSite } from "@/lib/content";
+import { getHeroSlides, getSite } from "@/lib/content";
+import Image from "next/image";
 
 /**
- * Первый экран. Пока фотографии хозяйки нет, показываем рисованный образ:
- * он не лежит подложкой под текстом, а стоит рядом, поэтому подпись читается
- * без плашек и затемнений. Как только в site.json появится portrait, экран
- * переключается на полноэкранный снимок.
+ * Первый экран: полноэкранная смена кадров каталога с медленным наездом.
+ * Пока фотографии хозяйки нет, витриной работают её собственные изделия —
+ * это сильнее любой иллюстрации. Когда в site.json появится portrait,
+ * он встаёт первым кадром и смена начинается с него.
+ *
+ * Подпись лежит на полосе сплошного цвета: кадры разные, и белый текст
+ * прямо по фотографии на каком-нибудь из них обязательно потеряется.
+ * Градиентной растяжки здесь нет — по брифу их в проекте не бывает.
  */
 export function Hero() {
   const site = getSite();
-
-  if (site.portrait) {
-    return (
-      <section className="relative h-svh min-h-[560px] w-full overflow-hidden bg-ink">
-        <Media image={site.portrait} sizes="100vw" priority className="object-center" />
-        <div className="absolute inset-0 flex flex-col justify-end px-5 pb-28 md:px-8 md:pb-24">
-          <h1 className="font-display text-5xl leading-[0.95] text-surface sm:text-6xl md:text-7xl lg:text-8xl">
-            {site.owner}
-          </h1>
-          <p className="mt-4 max-w-md text-sm text-surface md:mt-5 md:text-base">{site.tagline}</p>
-        </div>
-        <ScrollCue />
-      </section>
-    );
-  }
+  const slides = site.portrait ? [site.portrait, ...getHeroSlides()] : getHeroSlides();
 
   return (
-    <section className="relative flex h-svh min-h-[560px] w-full flex-col overflow-hidden bg-ink">
-      <div className="flex flex-1 flex-col items-center justify-center gap-2 px-5 pt-20 pb-28 md:flex-row md:items-end md:gap-10 md:px-8 md:pb-24">
-        <HeroFigure className="h-[42vh] w-auto shrink-0 md:order-2 md:h-[70vh]" />
-
-        <div className="w-full md:order-1 md:flex-1">
-          <h1 className="font-display text-5xl leading-[0.95] text-surface sm:text-6xl md:text-7xl lg:text-8xl">
-            {site.owner}
-          </h1>
-          <p className="mt-4 max-w-md text-sm text-surface/80 md:mt-5 md:text-base">
-            {site.tagline}
-          </p>
+    <section className="relative h-svh min-h-[560px] w-full overflow-hidden bg-ink">
+      {slides.map((image, index) => (
+        <div
+          key={image.src}
+          className="hero-slide absolute inset-0"
+          style={{ "--delay": `${index * 7}s` } as React.CSSProperties}
+          aria-hidden={index > 0}
+        >
+          <Image
+            src={image.src}
+            alt={index === 0 ? image.alt : ""}
+            fill
+            sizes="100vw"
+            priority={index === 0}
+            placeholder="blur"
+            blurDataURL={image.blurDataURL}
+            className="object-cover"
+          />
         </div>
+      ))}
+
+      <div className="absolute inset-x-0 bottom-0 bg-ink/80 px-5 pt-8 pb-24 md:px-8 md:pt-10 md:pb-20">
+        <p className="eyebrow text-clay">{site.brand}</p>
+        <h1 className="mt-3 font-display text-5xl leading-[0.95] text-surface sm:text-6xl md:text-7xl lg:text-8xl">
+          {site.owner}
+        </h1>
+        <p className="mt-4 max-w-md text-sm text-sand md:mt-5 md:text-base">{site.tagline}</p>
       </div>
 
-      <ScrollCue />
+      <div
+        aria-hidden="true"
+        className="absolute inset-x-0 bottom-6 flex justify-center text-surface md:bottom-7"
+      >
+        <span className="flex flex-col items-center gap-2">
+          <span className="text-[0.625rem] tracking-[0.2em] uppercase">Листайте</span>
+          <span className="block h-7 w-px bg-current" />
+        </span>
+      </div>
     </section>
-  );
-}
-
-function ScrollCue() {
-  return (
-    <div
-      aria-hidden="true"
-      className="absolute inset-x-0 bottom-5 flex justify-center text-surface md:bottom-6"
-    >
-      <span className="flex flex-col items-center gap-2">
-        <span className="text-[0.625rem] tracking-[0.2em] uppercase">Листайте</span>
-        <span className="block h-8 w-px bg-current" />
-      </span>
-    </div>
   );
 }

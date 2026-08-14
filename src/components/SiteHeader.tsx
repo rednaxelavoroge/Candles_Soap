@@ -2,6 +2,7 @@
 
 import { getSite } from "@/lib/content";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const NAV = [
@@ -14,6 +15,11 @@ const NAV = [
 export function SiteHeader() {
   const site = getSite();
   const [open, setOpen] = useState(false);
+
+  // Шапка лежит поверх содержимого. На главной под ней полноэкранная
+  // фотография, и обычный тёмный текст по ней теряется — там светлый.
+  const onDarkHero = usePathname() === "/";
+  const tone = onDarkHero ? "text-surface" : "text-ink";
 
   // Меню на весь экран не должно оставлять страницу прокручиваемой под собой.
   useEffect(() => {
@@ -33,7 +39,7 @@ export function SiteHeader() {
   }, [open]);
 
   return (
-    <header className="absolute inset-x-0 top-0 z-40">
+    <header className={`absolute inset-x-0 top-0 z-40 ${tone}`}>
       <div className="flex items-center justify-between px-5 py-5 md:px-8 md:py-7">
         <Link href="/" className="font-display text-lg tracking-wide md:text-xl">
           {site.brand}
