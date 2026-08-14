@@ -11,7 +11,8 @@
     "ingest": "node tools/ingest.mjs",
     "metrics": "node tools/photo-metrics.mjs",
     "content:drafts": "node tools/apply-drafts.mjs",
-    "content:clear-drafts": "node tools/apply-drafts.mjs --clear"
+    "content:clear-drafts": "node tools/apply-drafts.mjs --clear",
+    "find-videos": "node tools/find-videos.mjs"
   },
   "dependencies": {
     "framer-motion": "^11.15.0",
