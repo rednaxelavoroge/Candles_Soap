@@ -1,0 +1,10 @@
+{
+  "pages": [
+    { "url": "https://annamanasaryan.com/g/soap/", "category": "soap" },
+    { "url": "https://annamanasaryan.com/g/candle/", "category": "candles" }
+  ],
+  "minSourceWidth": 500,
+  "maxWidth": 1600,
+  "webpQuality": 82,
+  "groupSize": 4
+}

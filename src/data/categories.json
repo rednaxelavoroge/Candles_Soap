@@ -1,0 +1,10 @@
+[
+  { "slug": "candles", "title": "Свечи", "cover": null, "order": 1 },
+  { "slug": "soap", "title": "Мыло", "cover": null, "order": 2 },
+  { "slug": "gypsum", "title": "Изделия из гипса", "cover": null, "order": 3 },
+  { "slug": "sachet", "title": "Саше и ароматы", "cover": null, "order": 4 },
+  { "slug": "holders", "title": "Подсвечники", "cover": null, "order": 5 },
+  { "slug": "boxes", "title": "Шкатулки и коробочки", "cover": null, "order": 6 },
+  { "slug": "plates", "title": "Подносы и тарелки", "cover": null, "order": 7 },
+  { "slug": "decor", "title": "Декор для интерьера", "cover": null, "order": 8 }
+]
