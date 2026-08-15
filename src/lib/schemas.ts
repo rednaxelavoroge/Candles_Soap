@@ -44,7 +44,7 @@ export const categorySchema = z.object({
 export const tagSchema = z.object({
   slug: z.string().min(1),
   title: z.string().min(1),
-  group: z.enum(["occasion", "recipient"]),
+  group: z.enum(["occasion", "recipient", "form"]),
 });
 
 export const specsSchema = z.object({

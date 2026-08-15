@@ -10,6 +10,7 @@ import { useMemo } from "react";
 const GROUP_TITLES: Record<TagGroup, string> = {
   occasion: "Повод",
   recipient: "Кому",
+  form: "Форма",
 };
 
 /**

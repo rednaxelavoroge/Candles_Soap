@@ -1,4 +1,4 @@
-import { HeroBlots } from "@/components/home/HeroBlots";
+import { Blots } from "@/components/ui/Blots";
 import { getHeroSlides, getSite } from "@/lib/content";
 import Image from "next/image";
 
@@ -16,7 +16,7 @@ export function Hero() {
 
   return (
     <section className="relative flex min-h-svh w-full flex-col overflow-hidden bg-bg">
-      <HeroBlots />
+      <Blots />
 
       <div className="relative flex flex-1 flex-col justify-center gap-8 px-5 pt-28 pb-24 md:flex-row md:items-center md:gap-14 md:px-8 md:pt-32 md:pb-28">
         <div className="md:flex-1">

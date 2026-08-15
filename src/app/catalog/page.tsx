@@ -1,3 +1,4 @@
+import { Blots } from "@/components/ui/Blots";
 import { Tile } from "@/components/ui/Tile";
 import { getFilledCategories } from "@/lib/content";
 import type { Metadata } from "next";
@@ -18,9 +19,10 @@ export default function CatalogPage() {
 
   return (
     <div className="pt-24 md:pt-32">
-      <header className="px-5 pb-8 md:px-8 md:pb-12">
-        <p className="eyebrow">Каталог</p>
-        <h1 className="mt-2 font-display text-4xl md:text-6xl">Разделы</h1>
+      <header className="relative overflow-hidden px-5 pt-4 pb-10 md:px-8 md:pb-14">
+        <Blots variant={1} />
+        <p className="eyebrow relative">Каталог</p>
+        <h1 className="relative mt-2 font-display text-4xl md:text-6xl">Разделы</h1>
       </header>
 
       <ul

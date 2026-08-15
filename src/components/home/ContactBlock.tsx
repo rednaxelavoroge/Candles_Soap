@@ -1,3 +1,4 @@
+import { Blots } from "@/components/ui/Blots";
 import { getSite } from "@/lib/content";
 import { getSiteName, getSocialLinks, telHref, whatsappHref } from "@/lib/contacts";
 import Link from "next/link";
@@ -12,10 +13,11 @@ export function ContactBlock() {
   return (
     <section
       id="contacts"
-      className="border-t border-sand px-5 py-14 md:px-8 md:py-20"
+      className="relative overflow-hidden border-t border-sand px-5 py-14 md:px-8 md:py-20"
       aria-labelledby="contacts-heading"
     >
-      <p className="eyebrow">Контакты</p>
+      <Blots variant={3} />
+      <p className="eyebrow relative">Контакты</p>
       <h2 id="contacts-heading" className="mt-2 max-w-3xl font-display text-3xl md:text-5xl">
         Повторю любую вещь в вашем цвете и аромате
       </h2>

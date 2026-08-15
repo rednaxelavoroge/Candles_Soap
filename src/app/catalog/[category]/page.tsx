@@ -1,3 +1,4 @@
+import { Blots } from "@/components/ui/Blots";
 import { CategoryView } from "@/components/catalog/CategoryView";
 import { ProductGrid } from "@/components/catalog/ProductGrid";
 import { getCategories, getCategory, getProductsByCategory, getTagsForCategory } from "@/lib/content";
@@ -35,11 +36,12 @@ export default async function CategoryPage({ params }: { params: Promise<Params>
 
   return (
     <div className="pt-24 md:pt-32">
-      <header className="px-5 pb-8 md:px-8 md:pb-10">
-        <Link href="/catalog" className="link-underline eyebrow">
+      <header className="relative overflow-hidden px-5 pt-4 pb-10 md:px-8 md:pb-12">
+        <Blots variant={2} />
+        <Link href="/catalog" className="link-underline eyebrow relative">
           Каталог
         </Link>
-        <h1 className="mt-2 font-display text-4xl md:text-6xl">{category.title}</h1>
+        <h1 className="relative mt-2 font-display text-4xl md:text-6xl">{category.title}</h1>
       </header>
 
       {products.length === 0 ? (

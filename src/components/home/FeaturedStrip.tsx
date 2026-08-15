@@ -1,3 +1,4 @@
+import { Blots } from "@/components/ui/Blots";
 import { DragScroller } from "@/components/ui/DragScroller";
 import { Tile } from "@/components/ui/Tile";
 import { getCover, getFeaturedProducts } from "@/lib/content";
@@ -8,15 +9,19 @@ export function FeaturedStrip() {
   if (products.length === 0) return null;
 
   return (
-    <section className="border-t border-sand py-14 md:py-20" aria-labelledby="featured-heading">
-      <div className="mb-6 px-5 md:mb-9 md:px-8">
+    <section
+      className="relative overflow-hidden border-t border-sand py-14 md:py-20"
+      aria-labelledby="featured-heading"
+    >
+      <Blots variant={1} />
+      <div className="relative mb-6 px-5 md:mb-9 md:px-8">
         <p className="eyebrow">Избранное</p>
         <h2 id="featured-heading" className="mt-2 font-display text-3xl md:text-5xl">
           Готово к отправке
         </h2>
       </div>
 
-      <DragScroller className="px-5 md:px-8">
+      <DragScroller className="relative px-5 md:px-8">
         <ul className="flex w-max gap-3 md:gap-5">
           {products.map((product) => (
             <li key={product.id} className="w-[68vw] max-w-[340px] shrink-0 sm:w-[46vw] md:w-[24vw]">
