@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Переносит предварительные цены и характеристики из tools/draft-content.json
+ * Переносит предварительные характеристики из tools/draft-content.json
  * в src/data/products.json, а с флагом --clear стирает их обратно.
  *
  *   npm run content:drafts        проставить
@@ -9,6 +9,10 @@
  * Значения в draft-content.json заказчицей не подтверждены: их придумал
  * разработчик, чтобы карточки на показе выглядели живыми. До выхода на
  * боевой домен каждую строку нужно заменить настоящей либо стереть.
+ *
+ * Цену скрипт не проставляет ни при каких условиях: заказчица просила убрать
+ * цены с сайта совсем, поэтому price остаётся null. --clear на всякий случай
+ * обнуляет и её — если цена откуда-то всё же взялась, это ошибка.
  */
 import { readFile, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
@@ -31,7 +35,6 @@ for (const product of products) {
   }
   const draft = drafts.products[product.slug];
   if (!draft) continue;
-  product.price = draft.price;
   product.specs = draft.specs;
   touched++;
 }

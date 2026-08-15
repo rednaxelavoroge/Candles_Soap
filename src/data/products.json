@@ -3,6 +3,7 @@
     "id": "candles-ledyanaya-kupel",
     "slug": "ledyanaya-kupel",
     "title": "Ледяная купель",
+    "article": "СВ-01",
     "category": "candles",
     "tags": [
       "women"
@@ -55,13 +56,13 @@
       "scent": "Без отдушки",
       "composition": "Парафин, гипсовая форма, два хлопковых фитиля",
       "burnTime": "около 20 часов"
-    },
-    "article": "СВ-01"
+    }
   },
   {
     "id": "candles-soty",
     "slug": "soty",
     "title": "Соты",
+    "article": "СВ-02",
     "category": "candles",
     "tags": [
       "men",
@@ -105,13 +106,13 @@
       "scent": "Медовый воск",
       "composition": "Парафин, хлопковый фитиль",
       "burnTime": "около 12 часов"
-    },
-    "article": "СВ-02"
+    }
   },
   {
     "id": "candles-globus",
     "slug": "globus",
     "title": "Глобус",
+    "article": "СВ-03",
     "category": "candles",
     "tags": [
       "men",
@@ -149,13 +150,13 @@
       "scent": "Без отдушки",
       "composition": "Парафин, акриловая патина, хлопковый фитиль",
       "burnTime": "около 16 часов"
-    },
-    "article": "СВ-03"
+    }
   },
   {
     "id": "candles-elka-na-kryshe",
     "slug": "elka-na-kryshe",
     "title": "Ёлка на крыше",
+    "article": "СВ-04",
     "category": "candles",
     "tags": [
       "new-year"
@@ -198,13 +199,13 @@
       "scent": "Хвоя",
       "composition": "Парафин, гипсовый поднос, хлопковый фитиль",
       "burnTime": "около 14 часов"
-    },
-    "article": "СВ-04"
+    }
   },
   {
     "id": "candles-mandariny",
     "slug": "mandariny",
     "title": "Мандарины",
+    "article": "СВ-05",
     "category": "candles",
     "tags": [
       "new-year",
@@ -248,13 +249,13 @@
       "scent": "Мандарин",
       "composition": "Парафин, хлопковый фитиль",
       "burnTime": "около 12 часов"
-    },
-    "article": "СВ-05"
+    }
   },
   {
     "id": "candles-tyulpany",
     "slug": "tyulpany",
     "title": "Тюльпаны",
+    "article": "СВ-06",
     "category": "candles",
     "tags": [
       "flowers",
@@ -291,13 +292,184 @@
       "scent": "Без отдушки",
       "composition": "Парафин, акриловая патина, хлопковый фитиль",
       "burnTime": "около 15 часов"
-    },
-    "article": "СВ-06"
+    }
+  },
+  {
+    "id": "candles-geksagon",
+    "slug": "geksagon",
+    "title": "Гексагон",
+    "article": "СВ-07",
+    "category": "candles",
+    "tags": [
+      "new-year",
+      "geometric"
+    ],
+    "images": [
+      {
+        "src": "/catalog/candles/geksagon-01.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAADQAQCdASoQABAAA4BaJbACdAED8BZAAAD+9HS/S+YbIiVxRMsUPV/h2ipvFJIH/IiMgYyQSUyDj5la7jSND53ym/+4oDf5VYfujSvGbITHc7YbULIu7j0BOmxzvOHkYAA=",
+        "alt": "Красная шестигранная свеча с двумя фитилями на гипсовой подставке"
+      },
+      {
+        "src": "/catalog/candles/geksagon-02.webp",
+        "width": 1200,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAwAgCdASoMABAAA4BaJbACdAEQFTV2swy8sAD+8wXQbBNoyAHoLkPgokdf6Y3GLEaNhzKbH5V/mGPg2UMIcRNrFmcPgBCHZC46ftOOtkd2HKJsceKXQAAA",
+        "alt": "Шестигранная свеча с зажжёнными фитилями"
+      },
+      {
+        "src": "/catalog/candles/geksagon-03.webp",
+        "width": 1200,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAAAQAgCdASoMABAAA4BaJbAC7AEPAlWnqucgAP75v5Pe9QNprNDIWg3reNZloSpX6bk+FKCfT3q2aTJnwljTGLnecaAAAA==",
+        "alt": "Свеча-гексагон горит на тёмном фоне"
+      }
+    ],
+    "video": null,
+    "price": null,
+    "description": "Плоская шестигранная плита алого воска на круглой гипсовой подставке с оттиском. Фитилей два, они стоят в верхних гранях: воск проседает внутрь, а рёбра держат форму до конца. По телу пущена серебряная искра — на просвет она собирается в тонкую полосу вдоль ребра.",
+    "specs": {}
+  },
+  {
+    "id": "sachet-medalony",
+    "slug": "medalony",
+    "title": "Медальоны",
+    "article": "СШ-02",
+    "category": "sachet",
+    "tags": [
+      "women"
+    ],
+    "images": [
+      {
+        "src": "/catalog/sachet/medalony-01.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAABwAgCdASoQABAAA4BaJQBOgMUt4/0o65x9KGwAAP718aONpSfzx9y6h5v+X4vgyyZm7NW+X/QhsdaClbbZda92xiewNyLY/LXf3gdFz+koGO3FTbOoLOnJ75oSIpVdZOpPH/08NvlcFQe/jNrVkAJNc8u/d8fXY80BICsWlyS2wJps0agBQAAA",
+        "alt": "Четыре ароматических медальона в гипсовых рамках"
+      },
+      {
+        "src": "/catalog/sachet/medalony-02.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAAAwAwCdASoQABAAA4BaJQBOj+EEA2wAzwTNxWtbSJIo/JsAAP73gmku6z/5mE2JuHXxFnMCrpVOdk7VM7Op0GJsI5DYRzxXlmyQK7EcnAiAEqDSvMlNVicI8kYbZUr/gAu+p4UbTUF0y/Gn63AgAA==",
+        "alt": "Медальон с восковыми розами внутри"
+      },
+      {
+        "src": "/catalog/sachet/medalony-03.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAACQAgCdASoQABAAA4BaJYwCdICXgqi/HY1t9fiWAAD+94Dl8xZd+s43WwTeYSHWfPYzTM4zfbYR5aEsOiUlEV1QatraFBbCMxnnXd9CvtkGvAyx3E47Q/Etsk+/VvptTT4z8/47QdiVa9N5A4DBiXvhAAA=",
+        "alt": "Медальон с кофейным зерном и долькой шоколада"
+      },
+      {
+        "src": "/catalog/sachet/medalony-04.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAABQAgCdASoQABAAA4BaJYwBTAA80+gZYGUO4gAA/vhVFqVR7+bTZmBxJKuTiFl4sKJ9mFhogalXXD0n33GX9/1Cd9geRlVsp79CRYWyRO8puejNY3E1RtRl1ifLp1pCq+rR68IAAAA=",
+        "alt": "Розовый медальон с лепестками внутри"
+      }
+    ],
+    "video": null,
+    "price": null,
+    "description": "Восковое саше в гипсовом кольце: по ободу выдавлено HOME DECORATION, сверху оставлена прорезь под ленту. Внутрь залит воск с наполнением — сухие бутоны, кофейное зерно с долькой шоколада, мелкие розы, лепестки. Не горит: работает от тепла, вешается на плечики в шкафу или на зеркало в машине.",
+    "specs": {}
+  },
+  {
+    "id": "holders-meshochek",
+    "slug": "meshochek",
+    "title": "Мешочек",
+    "article": "ПС-04",
+    "category": "holders",
+    "tags": [
+      "new-year"
+    ],
+    "images": [
+      {
+        "src": "/catalog/holders/meshochek-01.webp",
+        "width": 1200,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAQAgCdASoMABAAA4BaJZwAD45QbhawmGzAAP74S4r2fvFVcC+Jf2OlVzZ+Y+d/dr1Egp32Fi1C24S1CI34UpRxgoNn4b3Fmfl01B9/hUtmgAAA",
+        "alt": "Белый гипсовый подсвечник-мешок со снежинками"
+      },
+      {
+        "src": "/catalog/holders/meshochek-02.webp",
+        "width": 1200,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAwAgCdASoMABAAA4BaJYgCdAEUoVAKKWFQAAD+8wypJ3lo6yDMgneC1qP17ZKbprbxEixIQdyafuVe1CkglKageNEkYtWmXf8g85rdbZi1OA/dq+Kw2N7f8/PbFboA",
+        "alt": "Красный подсвечник-мешок на фоне еловых веток"
+      },
+      {
+        "src": "/catalog/holders/meshochek-03.webp",
+        "width": 1600,
+        "height": 1200,
+        "blurDataURL": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAAAwAgCdASoQAAwAA4BaJQBOgMXh7Z8nuuOwAAD+7N530ialbtU13oSzR62D0cSKtoYHguqdQfJIf8WJOw8Rd7xpU7C82iOUepdXN53IF0ln52EcPgNW9EQzUqABjFtWPjQkogAA",
+        "alt": "Белый и красный мешочки рядом"
+      },
+      {
+        "src": "/catalog/holders/meshochek-04.webp",
+        "width": 1600,
+        "height": 1200,
+        "blurDataURL": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAABQAgCdASoQAAwAA4BaJQBOgMW+7f9DgtQF8/wA/uzb+yA8euZJ4dvNSkz0F/ELbPfLrU5BRQ4fZ7Fbg9qzt38IM3yXOYyolbzOwO//pp8KwiJOSbhQhv0tQFZXFsYh4sGdUAAA",
+        "alt": "Пара мешочков со вставленными свечами"
+      }
+    ],
+    "video": null,
+    "price": null,
+    "description": "Гипсовый мешок, перехваченный верёвкой, — тот самый, с которым ходит Дед Мороз. По белому боку набиты снежинки и ёлки, у красного расписаны верх и завязка. Горловина широкая: внутрь встаёт чайная свеча, а после праздников мешок остаётся на полке под мелочь.",
+    "specs": {}
+  },
+  {
+    "id": "holders-botinochki",
+    "slug": "botinochki",
+    "title": "Ботиночки",
+    "article": "ПС-05",
+    "category": "holders",
+    "tags": [
+      "new-year",
+      "kids"
+    ],
+    "images": [
+      {
+        "src": "/catalog/holders/botinochki-01.webp",
+        "width": 1200,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADQAQCdASoMABAAA4BaJZwAAlxzzoSSsAD+94UGhbi+S0ftRr0iGbUY1xUJeVE62HDDCZZTesGikFcz14D3rkIBY6lD+ZwA",
+        "alt": "Белый ботинок-подсвечник с золотой подошвой"
+      },
+      {
+        "src": "/catalog/holders/botinochki-02.webp",
+        "width": 1200,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADQAQCdASoMABAAA4BaJZQAAlyaRwfEAAD++FV8PTad7i82bkd8ooTCVJXzkChZgO290ECsMmi9755M6fB+kuSeqoCsefPCImAAAA==",
+        "alt": "Ботинок-подсвечник с гномом и красной подошвой"
+      },
+      {
+        "src": "/catalog/holders/botinochki-03.webp",
+        "width": 1200,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAQAgCdASoMABAAA4BaJZQAAudlY0zUPrMAAP73xzZMeJFkTV1y+Dwd/9NuDmZTmIKz9o8sh9Zv8gzZlVS9jBRFPxCoj/MH+8RlQYK1droAAA==",
+        "alt": "Ботинок-подсвечник со шнуровкой, вид сбоку"
+      },
+      {
+        "src": "/catalog/holders/botinochki-04.webp",
+        "width": 1600,
+        "height": 1200,
+        "blurDataURL": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAADwAQCdASoQAAwAA4BaJZQAD5GwK5DFrAAA/vbhWdpRQ1U5/LWwbvTVSsm4b4PQRSAF49a7NHz6RI542KN11YE5R8y4ZMJL+2jfCXGtla/7Kksm51/zBV2f6t4LmJzgAAA=",
+        "alt": "Пара ботинков-подсвечников рядом"
+      }
+    ],
+    "video": null,
+    "price": null,
+    "description": "Ботинок со шнуровкой и гномом на язычке: гипс белый, подошва золотая или красная. Внутрь залита свеча вровень с краем голенища — сиреневая или вишнёвая. Ставятся парой: два ботинка смотрят в разные стороны и держат стол как скобки.",
+    "specs": {}
   },
   {
     "id": "soap-morskoe-dno",
     "slug": "morskoe-dno",
     "title": "Морское дно",
+    "article": "МЛ-01",
     "category": "soap",
     "tags": [
       "sea"
@@ -340,13 +512,13 @@
       "scent": "Морская свежесть",
       "composition": "Мыльная основа, косметический пигмент, глицерин",
       "weight": "около 100 г"
-    },
-    "article": "МЛ-01"
+    }
   },
   {
     "id": "soap-pryanichnyy-nabor",
     "slug": "pryanichnyy-nabor",
     "title": "Пряничный набор",
+    "article": "МЛ-02",
     "category": "soap",
     "tags": [
       "new-year"
@@ -389,13 +561,13 @@
       "scent": "Корица и имбирь",
       "composition": "Мыльная основа, косметический пигмент, глицерин",
       "weight": "около 260 г"
-    },
-    "article": "МЛ-02"
+    }
   },
   {
     "id": "soap-konyak-i-stopka",
     "slug": "konyak-i-stopka",
     "title": "Коньяк и стопка",
+    "article": "МЛ-03",
     "category": "soap",
     "tags": [
       "men"
@@ -438,13 +610,13 @@
       "scent": "Табак и ваниль",
       "composition": "Мыльная основа, косметический пигмент, глицерин",
       "weight": "около 200 г"
-    },
-    "article": "МЛ-03"
+    }
   },
   {
     "id": "soap-nabor-dlya-malysha",
     "slug": "nabor-dlya-malysha",
     "title": "Набор для малыша",
+    "article": "МЛ-04",
     "category": "soap",
     "tags": [
       "newborn",
@@ -488,13 +660,13 @@
       "scent": "Без отдушки",
       "composition": "Мыльная основа без отдушки, глицерин",
       "weight": "около 220 г"
-    },
-    "article": "МЛ-04"
+    }
   },
   {
     "id": "soap-kniga-s-pionami",
     "slug": "kniga-s-pionami",
     "title": "Книга с пионами",
+    "article": "МЛ-05",
     "category": "soap",
     "tags": [
       "wedding",
@@ -548,13 +720,13 @@
       "scent": "Пион",
       "composition": "Мыльная основа, косметический пигмент, глицерин",
       "weight": "около 180 г"
-    },
-    "article": "МЛ-05"
+    }
   },
   {
     "id": "soap-buket-v-korobke",
     "slug": "buket-v-korobke",
     "title": "Букет в коробке",
+    "article": "МЛ-06",
     "category": "soap",
     "tags": [
       "flowers",
@@ -591,13 +763,13 @@
       "scent": "Роза",
       "composition": "Мыльная основа, косметический пигмент, подарочная коробка",
       "weight": "около 300 г"
-    },
-    "article": "МЛ-06"
+    }
   },
   {
     "id": "gypsum-rakushka",
     "slug": "rakushka",
     "title": "Ракушка",
+    "article": "ГП-01",
     "category": "gypsum",
     "tags": [
       "sea"
@@ -639,13 +811,13 @@
       "size": "11 × 10 см",
       "composition": "Гипс, акриловая краска",
       "weight": "около 180 г"
-    },
-    "article": "ГП-01"
+    }
   },
   {
     "id": "gypsum-serdtse-v-ladonyakh",
     "slug": "serdtse-v-ladonyakh",
     "title": "Сердце в ладонях",
+    "article": "ГП-02",
     "category": "gypsum",
     "tags": [
       "heart",
@@ -698,13 +870,13 @@
       "size": "12 × 9 см",
       "composition": "Гипс, акриловая краска",
       "weight": "около 250 г"
-    },
-    "article": "ГП-02"
+    }
   },
   {
     "id": "gypsum-podnosy-s-businami",
     "slug": "podnosy-s-businami",
     "title": "Подносы с бусинами",
+    "article": "ГП-03",
     "category": "gypsum",
     "tags": [],
     "images": [
@@ -744,7 +916,539 @@
       "size": "набор из двух подносов, 18 и 14 см",
       "composition": "Гипс, акриловая краска, декоративные бусины",
       "weight": "около 600 г"
-    },
-    "article": "ГП-03"
+    }
+  },
+  {
+    "id": "sachet-aromadiski",
+    "slug": "aromadiski",
+    "title": "Аромадиски",
+    "article": "СШ-01",
+    "category": "sachet",
+    "tags": [],
+    "images": [
+      {
+        "src": "/catalog/sachet/aromadiski-01.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAQAgCdASoQABAAA4BaJYwCdAChsOIAy+IAAP7vPyGa5e8Dt+tAeJ69qyW8KFb2T7+aoeMzpjBkS9lDnJ6fUMrhwHhWXL/e5pkIoYZ173ZC4vgWo1cPMEZz/NWaDAAA",
+        "alt": "Гипсовые аромадиски с разным рельефом, вид сверху"
+      },
+      {
+        "src": "/catalog/sachet/aromadiski-02.webp",
+        "width": 1600,
+        "height": 1067,
+        "blurDataURL": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAABwAgCdASoQAAsAA4BaJYwCdAYtBnJvKvOe2nYAAP6J3ZeYOLHpMHAWP3L92+Uda0Vqq3hlQQfaELfhdxf+b42DB+soNeo5qCnejvcbmiMXpEygzPxz+d3EFn7QtxQBfl1yfkAA",
+        "alt": "Шесть аромадисков, разложенных на зелёной ткани"
+      },
+      {
+        "src": "/catalog/sachet/aromadiski-03.webp",
+        "width": 1600,
+        "height": 1067,
+        "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAwAgCdASoQAAsAA4BaJYwCdAYv1dN/80gQAAD+72RWCB4gmBzqwO+1ZLtkI9kXnYVao+OWNXR7sc/SgZOI41c16aSdsCXvQXawumIU1NW3q8AA",
+        "alt": "Диск с зелёным крапом и диск со спиральным рельефом"
+      },
+      {
+        "src": "/catalog/sachet/aromadiski-04.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAwAgCdASoQABAAA4BaJZQCdADw3ZvohzoAAAD+8N/PKMCobdId0O8FYZi/k0hAUly4wK5Gv9R7JqR8Map2AV9UBSrZYR36B4KAxMknz1E3kU0fp9cAAA==",
+        "alt": "Круглый аромадиск с зелёным крапом крупным планом"
+      }
+    ],
+    "video": null,
+    "price": null,
+    "description": "Круглые гипсовые диски с рельефом: волна, галька, спираль, мелкая мозаика. Гипс пористый и держит аромамасло неделями — три-четыре капли на тыльную сторону, и диск уходит в шкаф, в машину или в ящик с бельём. Зелёный крап набрызган кистью, поэтому рисунок у каждого свой.",
+    "specs": {}
+  },
+  {
+    "id": "holders-riflenye-podsvechniki",
+    "slug": "riflenye-podsvechniki",
+    "title": "Рифлёные подсвечники",
+    "article": "ПС-01",
+    "category": "holders",
+    "tags": [],
+    "images": [
+      {
+        "src": "/catalog/holders/riflenye-podsvechniki-01.webp",
+        "width": 1600,
+        "height": 1200,
+        "blurDataURL": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAACQAQCdASoQAAwAA4BaJaQAAuZoCgAA/vd2Ryiq2LE1phoVhqB7UZDZdpi/dYpXg8VUCuypXc/mg2AAAAA=",
+        "alt": "Четыре белых рифлёных подсвечника в ряд"
+      },
+      {
+        "src": "/catalog/holders/riflenye-podsvechniki-02.webp",
+        "width": 1600,
+        "height": 1200,
+        "blurDataURL": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAAAQAgCdASoQAAwAA4BaJZwAAt4r3uc//ZqAAP71c+wfFhtPONW2TCydo7/a77D40aNv7bpp8xb88ahlLf1ooJJ+QARborqL7d26UfNGEd9MOuleaAA=",
+        "alt": "Низкий и высокий белые рифлёные подсвечники"
+      },
+      {
+        "src": "/catalog/holders/riflenye-podsvechniki-03.webp",
+        "width": 1600,
+        "height": 1067,
+        "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAAAQAgCdASoQAAsAA4BaJQBdgCHgpQ2Ws2GAAP7zXvPAMT6r3m8BH7QI4cSUDF5KnOfjgZ752PSnygW2ZJmczJIEyrPSBYAA",
+        "alt": "Белый и терракотовый рифлёные подсвечники рядом"
+      },
+      {
+        "src": "/catalog/holders/riflenye-podsvechniki-04.webp",
+        "width": 1600,
+        "height": 1200,
+        "blurDataURL": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAADQAQCdASoQAAwAA4BaJQBOgCHHT132AAD+93h/aY1qbnkZvET6oo9aaONS7TcEvYNjObO1gAA=",
+        "alt": "Два терракотовых подсвечника: гладкий и рифлёный"
+      }
+    ],
+    "video": null,
+    "price": null,
+    "description": "Низкие стаканы с вертикальным рубчиком — под чайную свечу и под наливную. Отливаются белыми и терракотовыми, в двух высотах: низкий садится вровень со свечой, высокий прикрывает пламя от сквозняка. Рифление только снаружи, внутри стенка гладкая, поэтому нагар стирается пальцем.",
+    "specs": {}
+  },
+  {
+    "id": "holders-granenyy-kamen",
+    "slug": "granenyy-kamen",
+    "title": "Гранёный камень",
+    "article": "ПС-02",
+    "category": "holders",
+    "tags": [
+      "men"
+    ],
+    "images": [
+      {
+        "src": "/catalog/holders/granenyy-kamen-01.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAADQAQCdASoQABAAA4BaJaQAAudnCRtrIAD+9oRXQ1gMDTIeXnV9Vk1thHnKsaqm9QdEyJgFAAA=",
+        "alt": "Чёрный гранёный подсвечник с медными прожилками"
+      },
+      {
+        "src": "/catalog/holders/granenyy-kamen-02.webp",
+        "width": 1600,
+        "height": 1200,
+        "blurDataURL": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAAAwAQCdASoQAAwAA4BaJaQAA3AA/vHoEm2HL6cWROxh1P8l+6k05gejGrAKAAAA",
+        "alt": "Гранёный подсвечник рядом с шаром-подсвечником"
+      }
+    ],
+    "video": null,
+    "price": null,
+    "description": "Многогранник с широкой чашей под свечу: гипс залит чёрным, по рёбрам пущена медь, поверхность нарочно оставлена в трещинах — выходит похоже на скол породы. Каждая грань ловит свет по-своему, поэтому подсвечник интереснее всего стоит не в центре стола, а сбоку, у стены.",
+    "specs": {}
+  },
+  {
+    "id": "holders-shary",
+    "slug": "shary",
+    "title": "Шары",
+    "article": "ПС-03",
+    "category": "holders",
+    "tags": [],
+    "images": [
+      {
+        "src": "/catalog/holders/shary-01.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAADQAQCdASoQABAAA4BaJaQAAudkx5szAAD+9WqyX/uaVSWUjhAc4FPyeV7HkxgYLyXAAA==",
+        "alt": "Чёрный шар-подсвечник с белым кракелюром"
+      },
+      {
+        "src": "/catalog/holders/shary-02.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAADwAQCdASoQABAAA4BaJQBOgCHgQcYnOQAA/vQjAn4SkZY/X02CugV/RZK72bK3U8qFWiPdY2B0PtV+JxrgEAAA",
+        "alt": "Терракотовый шар-подсвечник"
+      },
+      {
+        "src": "/catalog/holders/shary-03.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAADQAQCdASoQABAAA4BaJZQAAudUy2bsAAD+9Wv/yzrKCeVRVakyW435X6AyrcMGd8FO4mma840AAA==",
+        "alt": "Изумрудный шар-подсвечник со звёздочками"
+      },
+      {
+        "src": "/catalog/holders/shary-04.webp",
+        "width": 1600,
+        "height": 1067,
+        "blurDataURL": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAADwAQCdASoQAAsAA4BaJZQAAudkwC2UHowA/vQgQN1r50r8+lWRmTV/6olotFctH7o0442y5WloAA==",
+        "alt": "Три шара-подсвечника разных цветов рядом"
+      }
+    ],
+    "video": null,
+    "price": null,
+    "description": "Шар с круглым отверстием сверху: свеча уходит внутрь, наружу пробивается только тёплое пятно света. Цвет набирается по-разному — чёрный с белой паутиной кракелюра, ровный терракотовый, изумрудный с рассыпанными звёздами. Дно спилено, поэтому шар стоит и не катится.",
+    "specs": {}
+  },
+  {
+    "id": "boxes-riflenaya-shkatulka",
+    "slug": "riflenaya-shkatulka",
+    "title": "Рифлёная шкатулка",
+    "article": "ШК-01",
+    "category": "boxes",
+    "tags": [],
+    "images": [
+      {
+        "src": "/catalog/boxes/riflenaya-shkatulka-01.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAABwAgCdASoQABAAA4BaJaACdH8IIABgapJQ2PGgAP72jaSoyY8T8VsZ3WDM1ijGg/vCz/aS/SEsz7utXrsiDhwwAAA=",
+        "alt": "Терракотовая рифлёная шкатулка с крышкой"
+      },
+      {
+        "src": "/catalog/boxes/riflenaya-shkatulka-02.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAABwAgCdASoQABAAA4BaJagCdGaA2wAHK1LphSdwAP72hpuXVWTW6r9cgAzZcVlvUy695y0lMt/dLXkUaAA=",
+        "alt": "Терракотовая шкатулка, крышка закрыта"
+      },
+      {
+        "src": "/catalog/boxes/riflenaya-shkatulka-03.webp",
+        "width": 1600,
+        "height": 1200,
+        "blurDataURL": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAADwAQCdASoQAAwAA4BaJZwC7AD0gfq6sOAA/vK0uqBY1D8wNF/gndy3KXaWOH8me5Ph2iR6bDZSWJzE8UAAAA==",
+        "alt": "Белая рифлёная шкатулка с крышкой"
+      }
+    ],
+    "video": null,
+    "price": null,
+    "description": "Круглая шкатулка с плотной крышкой: бок в вертикальный рубчик, крышка гладкая и садится впритирку. Отливается терракотовой и белой, стенка толстая — кольца и серьги внутри не гремят. Диаметр под ладонь, высота такая, что цепочка ложится не сворачиваясь.",
+    "specs": {}
+  },
+  {
+    "id": "boxes-yashchichki",
+    "slug": "yashchichki",
+    "title": "Ящички",
+    "article": "ШК-02",
+    "category": "boxes",
+    "tags": [],
+    "images": [
+      {
+        "src": "/catalog/boxes/yashchichki-01.webp",
+        "width": 1600,
+        "height": 1067,
+        "blurDataURL": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAAAQAgCdASoQAAsAA4BaJYgCdAEPDIQgmp5AAP73lnY41y90uaeAjgLGSz19udAx8VbJEsj0GeapoAAA",
+        "alt": "Три гипсовых ящичка с фактурой доски"
+      },
+      {
+        "src": "/catalog/boxes/yashchichki-02.webp",
+        "width": 1600,
+        "height": 1200,
+        "blurDataURL": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAADwAQCdASoQAAwAA4BaJZgCdAEO/D2Q+AAA/vKqhe6FMPM2rhgAPDGKs9z/9l8Wb7xP19WbWAA=",
+        "alt": "Гипсовый ящичек, вид сверху"
+      },
+      {
+        "src": "/catalog/boxes/yashchichki-03.webp",
+        "width": 1600,
+        "height": 1200,
+        "blurDataURL": "data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAADwAQCdASoQAAwAA4BaJZACdAEPCmdxYAAA/vWWgiuxnSGTf/FOyqkwsMMveCKa76AAAA==",
+        "alt": "Гипсовый ящичек, вид сбоку"
+      }
+    ],
+    "video": null,
+    "price": null,
+    "description": "Квадратные ящички, отлитые с фактурой доски: видны волокна и стык между рейками, гипс подкрашен под тёплое дерево. Стенки прямые, дно ровное, поэтому ящички ставятся в ряд или один в другой. Под мелочь на комоде, под специи на кухне и под подарок, если внутрь положить стружку.",
+    "specs": {}
+  },
+  {
+    "id": "boxes-azhurnaya-shkatulka",
+    "slug": "azhurnaya-shkatulka",
+    "title": "Ажурная шкатулка",
+    "article": "ШК-03",
+    "category": "boxes",
+    "tags": [
+      "wedding",
+      "women"
+    ],
+    "images": [
+      {
+        "src": "/catalog/boxes/azhurnaya-shkatulka-01.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAAAwAgCdASoQABAAA4BaJaQAD5AwXlHJ1ppnYAD++FIb77m4sK8DPkca/DZsrkPfnlpIO4pMdfZpd7ugsCtmydsE+hwd3j1WzkmgwAAA",
+        "alt": "Белая ажурная шкатулка с крышкой-луковкой"
+      },
+      {
+        "src": "/catalog/boxes/azhurnaya-shkatulka-02.webp",
+        "width": 1600,
+        "height": 1200,
+        "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADwAQCdASoQAAwAA4BaJaQAAqH7YjHOgAAA/vhWasTPAnHVVJBDvnE4YgZVH1+yyy65bbbYTdDk/lSZBa2pjXEYBh3F7mKrmupjwAAA",
+        "alt": "Ажурная шкатулка со снятой крышкой"
+      }
+    ],
+    "video": null,
+    "price": null,
+    "description": "Белая шкатулка с рельефным пояском и крышкой на точёном шарике — из тех, что ставят на туалетный столик, а не убирают в ящик. Узор глубокий, по нему сразу видно, что вещь литая. Внутри помещается коробочка с кольцом: шкатулку чаще всего берут под предложение и под обручальные.",
+    "specs": {}
+  },
+  {
+    "id": "boxes-paskhalnoe-yaytso",
+    "slug": "paskhalnoe-yaytso",
+    "title": "Пасхальное яйцо",
+    "article": "ШК-04",
+    "category": "boxes",
+    "tags": [],
+    "images": [
+      {
+        "src": "/catalog/boxes/paskhalnoe-yaytso-01.webp",
+        "width": 1200,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADwAQCdASoMABAAA4BaJaQAAl3Q3/ddCQAA/veCCb46MUr2+I5HPgmGaax8zC9ICDnZFznO3gyF9eY2cc2s20dIdKxGjSAA",
+        "alt": "Гипсовое яйцо-шкатулка с розовой искрой"
+      },
+      {
+        "src": "/catalog/boxes/paskhalnoe-yaytso-02.webp",
+        "width": 1600,
+        "height": 1200,
+        "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADQAQCdASoQAAwAA4BaJaQAAucK/n/uIAD++Euo8Mu1ACy4CWXB4fxZ7TDhpv0OuzcGnxZnNGA/9nY8Z5IAnuW6/oS8XfvAAAA=",
+        "alt": "Раскрытое яйцо и чашечка на ножке рядом"
+      }
+    ],
+    "video": null,
+    "price": null,
+    "description": "Яйцо, разъятое пополам зигзагом: верх снимается, нижняя половина остаётся чашей. Скорлупа побелена и присыпана розовой искрой, край надколот нарочно — так же, как надкалывают настоящее. Из той же формы отливается маленькая чашечка на ножке: под яйцо к завтраку или под кольцо.",
+    "specs": {}
+  },
+  {
+    "id": "plates-shestigranniki",
+    "slug": "shestigranniki",
+    "title": "Шестигранники",
+    "article": "ПД-01",
+    "category": "plates",
+    "tags": [],
+    "images": [
+      {
+        "src": "/catalog/plates/shestigranniki-01.webp",
+        "width": 1600,
+        "height": 1200,
+        "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAABwAQCdASoQAAwAA4BaJZQC7ABSgAD+9XtxRwW2kwfHiRAvzsMutxm8UXPnwd1JEqykK5c7X95x1jJuRKZTbBPZYc/O0DrX/lNHNoAYAazYsAAA",
+        "alt": "Четыре шестигранные гипсовые подставки на тёмном фоне"
+      },
+      {
+        "src": "/catalog/plates/shestigranniki-02.webp",
+        "width": 1600,
+        "height": 1067,
+        "blurDataURL": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAQCdASoQAAsAA4BaJZQAAvaaS5fydQAA/sUY6mrYwij8R714BgbndugVpZHmudFFUEm4eXtQZz1JTCb9IB/eFoeoec7/XOm3bxTOAAA=",
+        "alt": "Шестигранные подставки на белой доске"
+      }
+    ],
+    "video": null,
+    "price": null,
+    "description": "Шестигранные подставки с невысоким бортиком — под кружку, под кольца, под свечу. Заливка у каждой своя: чёрная и графитовая ровным цветом, синяя с белым разводом, светлые — с запечатанными в гипс веточками и ягодами. Набор из четырёх укладывается встык, без зазоров.",
+    "specs": {}
+  },
+  {
+    "id": "plates-spil-dereva",
+    "slug": "spil-dereva",
+    "title": "Спил дерева",
+    "article": "ПД-02",
+    "category": "plates",
+    "tags": [],
+    "images": [
+      {
+        "src": "/catalog/plates/spil-dereva-01.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAABwAgCdASoQABAAA4BaJaACdGaAAwcpi/jj7uxgAP71dIaIsDeN0ktFEsZlnKGdMcZNKhvxrnG8ME90M5nkEeiFgAA=",
+        "alt": "Круглый гипсовый поднос с рисунком годовых колец"
+      },
+      {
+        "src": "/catalog/plates/spil-dereva-02.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAAAQAgCdASoQABAAA4BaJbACdAEO/x0+6UcAAP70Hdi2Si2gaQORuoHZsiqR6oHeLWn2pC7EwZEgHeorFNAAAA==",
+        "alt": "Поднос «Спил дерева», вид под углом"
+      }
+    ],
+    "video": null,
+    "price": null,
+    "description": "Круглый поднос, отлитый с годовых колец: рисунок снят с настоящего спила, поэтому кольца идут не по циркулю, а как выросли. Гипс подкрашен в рыжину и протёрт по выступам — рельеф читается даже в тени. Края нарочно неровные, по кромке видно кору.",
+    "specs": {}
+  },
+  {
+    "id": "plates-volna",
+    "slug": "volna",
+    "title": "Волна",
+    "article": "ПД-03",
+    "category": "plates",
+    "tags": [],
+    "images": [
+      {
+        "src": "/catalog/plates/volna-01.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADwAQCdASoQABAAA4BaJaQAApPo9ly+RgAA/veCXJNL4FYODK5JtXl+D3/gBTQ7qKFwst2aTiYzPeri6llRoaJAbznkqtczqz8IDMRAG8AAAA==",
+        "alt": "Белый треугольный поднос с концентрическим рельефом"
+      },
+      {
+        "src": "/catalog/plates/volna-02.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAQAgCdASoQABAAA4BaJaQAAueKhtX9FFxAAP74VemQg2JJmwpQ2w6UDmqYF8cG1+shojdOoC31spthBSlvxXhPrUrzkaUoKoeNXzTwaGbgAA==",
+        "alt": "Поднос «Волна», вид сверху"
+      }
+    ],
+    "video": null,
+    "price": null,
+    "description": "Треугольный поднос со скруглёнными углами: от центра расходится концентрический рубчик и на просвет собирается в воронку. Белый, матовый, без единой краски — цвет самого гипса. Держит и мыло у раковины, и украшения на комоде: бортика хватает, чтобы кольцо не съехало.",
+    "specs": {}
+  },
+  {
+    "id": "plates-drapirovka",
+    "slug": "drapirovka",
+    "title": "Драпировка",
+    "article": "ПД-04",
+    "category": "plates",
+    "tags": [
+      "wedding"
+    ],
+    "images": [
+      {
+        "src": "/catalog/plates/drapirovka-01.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAQAgCdASoQABAAA4BaJaQAAueENdFMKYYAAP74VQLXSLV+jjFDrpWZbW0MMG8c+eTxTjtpLIRGX1fj2ADkXFd/Vjj+p7cPCHthdIS5StAAAA==",
+        "alt": "Белое блюдо в гипсовой драпировке, вид сверху"
+      },
+      {
+        "src": "/catalog/plates/drapirovka-02.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAABQAgCdASoQABAAA4BaJaQAD45QcC7LHmpaiAAA/vhLikaFSF5ttont6kvVTUlr4lpi0vAYvfH+Bco2RsHxZa85mqqTAHwgyWwY3bEsPjD6AAAA",
+        "alt": "Блюдо-драпировка, вид под углом"
+      }
+    ],
+    "video": null,
+    "price": null,
+    "description": "Блюдо, вокруг которого гипс застыл складками ткани: середина ровная и гладкая, края собраны, будто поднос завернули в платок. Складки укладываются вручную по сырому, поэтому одинаковых не выходит — второго такого же блюда не будет даже у автора.",
+    "specs": {}
+  },
+  {
+    "id": "plates-serdtse-i-zvezda",
+    "slug": "serdtse-i-zvezda",
+    "title": "Сердце и звезда",
+    "article": "ПД-05",
+    "category": "plates",
+    "tags": [
+      "heart"
+    ],
+    "images": [
+      {
+        "src": "/catalog/plates/serdtse-i-zvezda-01.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAAAwAgCdASoQABAAA4BaJZwAD4/QTZVLpzbEgAD+9XTseSaAqkFb8zx1N/99eUIesOLC0dhJqM13+9Ae5Kv2GU1UHPWXmoE/b1y+o6wshT+s0EFQuFYc/UYNyLJ3iXgAAAA=",
+        "alt": "Белое гипсовое блюдце в форме сердца"
+      },
+      {
+        "src": "/catalog/plates/serdtse-i-zvezda-02.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAABQAgCdASoQABAAA4BaJaQAD5CQhQ3ZKEoIeAAA/vkXGTP8mqmqq0NrY4tjDTmplfwv3QwqSurLBEfeQllj+wz5BmfC1d5KndrKF2vf8po/mxmLr9KZNSzDVIwAAA==",
+        "alt": "Гипсовое блюдце в форме звезды"
+      }
+    ],
+    "video": null,
+    "price": null,
+    "description": "Два маленьких блюдца из одной серии: сердце и пятиконечная звезда. Борт поднят, дно ровное — под кольца, серьги и мелочь из карманов. Молочно-белый гипс, поверхность матовая; отливаются и в цвете, если под интерьер нужен не белый.",
+    "specs": {}
+  },
+  {
+    "id": "decor-rakoviny",
+    "slug": "rakoviny",
+    "title": "Раковины",
+    "article": "ДК-01",
+    "category": "decor",
+    "tags": [
+      "sea"
+    ],
+    "images": [
+      {
+        "src": "/catalog/decor/rakoviny-01.webp",
+        "width": 1600,
+        "height": 1200,
+        "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAAAwAgCdASoQAAwAA4BaJQBOj+ACr96tGybtgAD+8N973uXduBZeLd/amE6PN3SZvVtmLokRq/u59lktKKf+o9eCXkC/sl3Qz2gAAA==",
+        "alt": "Голубая гипсовая раковина-рапан с волнистым краем"
+      },
+      {
+        "src": "/catalog/decor/rakoviny-02.webp",
+        "width": 1600,
+        "height": 1200,
+        "blurDataURL": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAACwAQCdASoQAAwAA4BaJZwAAuP4VZEgAP70K1tzNl4pWJ7wkEkPKy449G+GJa15GisyvwcGBqDgAA==",
+        "alt": "Графитовый рапан, вид сверху"
+      },
+      {
+        "src": "/catalog/decor/rakoviny-03.webp",
+        "width": 1600,
+        "height": 1200,
+        "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADwAQCdASoQAAwAA4BaJZQCdADwh38GxgAA/vQyydVAkDydy+ukndFo4ZVqiMXgmZUULYYxriv64LzI+7axpRjmiaEVoOo31jjHEsAA",
+        "alt": "Белый рапан с перламутровой растяжкой"
+      },
+      {
+        "src": "/catalog/decor/rakoviny-04.webp",
+        "width": 1600,
+        "height": 1200,
+        "blurDataURL": "data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAADwAQCdASoQAAwAA4BaJZwAAvrew1eAm2AA/vQnK1U7DNC9ZHVCDfmqlskkiLiB6Q2QAA==",
+        "alt": "Витая раковина-башенка из чёрного гипса"
+      }
+    ],
+    "video": null,
+    "price": null,
+    "description": "Створки, снятые с настоящих раковин: волнистый рапан с гофрированным краем и витая башенка. Заливка идёт с растяжкой — от белого к небу, от графита к чёрному, так что цвет сгущается ко дну. Внутри чаша, поэтому раковину берут и как подставку: под кольца, под спички, под маленькую свечу.",
+    "specs": {}
+  },
+  {
+    "id": "decor-tsvetochnyy-lug",
+    "slug": "tsvetochnyy-lug",
+    "title": "Цветочный луг",
+    "article": "ДК-02",
+    "category": "decor",
+    "tags": [
+      "flowers"
+    ],
+    "images": [
+      {
+        "src": "/catalog/decor/tsvetochnyy-lug-01.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAQAgCdASoQABAAA4BaJYwAAueIMToUfV8AAP73ehu4bKtoECmNxg3rtsJJBYiPfZlyStpYw7a7u4Zb1AloQ8prl6QeLwxa+UCTGusGlAAAAA==",
+        "alt": "Гипсовое кашпо с травой и сиреневыми цветами"
+      },
+      {
+        "src": "/catalog/decor/tsvetochnyy-lug-02.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAQAgCdASoQABAAA4BaJQApgAatIy6Tj+6AAP72k7O8FaYc1zPKSoiqYiFZ2i2HOQH2wTeJXtjF9keqKiFYbq5cz/cEBGQVmrxofazM/AiFGJf1ieCgAA==",
+        "alt": "Кашпо «Цветочный луг», вид сбоку"
+      }
+    ],
+    "video": null,
+    "price": null,
+    "description": "Кашпо, у которого низ — трава, а по верхнему краю посажены сиреневые цветы. Стебли протянуты вертикально и прокрашены в два зелёных, лепестки ставятся по одному, поэтому венок на двух кашпо не повторяется. Внутрь входит наливная свеча или горшок с суккулентом.",
+    "specs": {}
+  },
+  {
+    "id": "decor-lodka-i-vannochka",
+    "slug": "lodka-i-vannochka",
+    "title": "Лодка и ванночка",
+    "article": "ДК-03",
+    "category": "decor",
+    "tags": [
+      "sea"
+    ],
+    "images": [
+      {
+        "src": "/catalog/decor/lodka-i-vannochka-01.webp",
+        "width": 1600,
+        "height": 1067,
+        "blurDataURL": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAADwAQCdASoQAAsAA4BaJaQAAp1zMxIXQAAA/vavbrzNqzgcNHTumqsSOR8atkBsFmMWc8C1VYG9KHXYAAA=",
+        "alt": "Гипсовая лодка с канатом по борту"
+      },
+      {
+        "src": "/catalog/decor/lodka-i-vannochka-02.webp",
+        "width": 1600,
+        "height": 1067,
+        "blurDataURL": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAACQAQCdASoQAAsAA4BaJaQAAuMf9wAA/vd5jhR1/1LF2x9QhYXsIcdD2ioH36XY6V4KzTepgJSbwdbATwm5WC1hcluU5a4F6OjhhU1wAAA=",
+        "alt": "Гипсовая ванночка на низких ножках"
+      }
+    ],
+    "video": null,
+    "price": null,
+    "description": "Две белые формы из одной серии: лодка с перекинутым через борт канатом и ванночка на низких ножках. Обе достаточно глубокие, чтобы держать мыло у раковины или мелочь в прихожей, и достаточно узнаваемые, чтобы стоять пустыми. Гипс не крашен, только заглажен, — фактура остаётся матовой.",
+    "specs": {}
   }
 ]

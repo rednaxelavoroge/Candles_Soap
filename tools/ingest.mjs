@@ -28,6 +28,11 @@
  * порядку файлов — нет. Без плана изображения режутся подряд по groupSize,
  * чтобы было с чем работать дальше.
  *
+ * Папка съёмки и раздел каталога — не одно и то же: подсвечники, шкатулки,
+ * подносы и саше снимались вместе со свечами и гипсом. Поэтому у товара есть
+ * необязательное поле source — из какой папки брать файлы; по умолчанию это
+ * его же категория.
+ *
  * Названия товаров скрипт не выдумывает: осмысленные русские названия
  * проставляются вручную в плане, когда изображения уже можно посмотреть.
  * Оригиналы в репозиторий не попадают — только обработанный public/catalog.
@@ -205,20 +210,20 @@ async function ingestLocal(config, plan) {
     // не разобрана. Вываливать её в каталог целиком нельзя, иначе один запуск
     // с частичным планом кладёт в public несколько сотен лишних файлов.
     if (plan) {
-      const planned = plan.products.filter((product) => product.category === folder.category);
+      const planned = plan.products.filter((product) => sourceOf(product) === folder.category);
       if (!planned.length) {
-        console.log("  в плане нет товаров этой категории — пропускаем");
+        console.log("  в плане нет товаров из этой папки — пропускаем");
         continue;
       }
       entries.push({
-        category: folder.category,
-        products: await ingestPlanned(dir, folder.category, planned, config),
+        source: folder.category,
+        products: await ingestPlanned(dir, planned, config),
       });
       continue;
     }
 
     entries.push({
-      category: folder.category,
+      source: folder.category,
       products: await ingestWholeFolder(dir, folder.category, config),
     });
   }
@@ -226,8 +231,16 @@ async function ingestLocal(config, plan) {
   return entries;
 }
 
-/** Ракурсы товара перечислены в плане — имя файла собираем из слага. */
-async function ingestPlanned(dir, category, planned, config) {
+/** Папка съёмки, из которой берутся файлы товара. */
+function sourceOf(product) {
+  return product.source ?? product.category;
+}
+
+/**
+ * Ракурсы товара перечислены в плане — имя файла собираем из слага. Раскладываем
+ * по категории товара, а не по папке: из одной съёмки выходит несколько разделов.
+ */
+async function ingestPlanned(dir, planned, config) {
   const products = [];
 
   for (const product of planned) {
@@ -236,7 +249,7 @@ async function ingestPlanned(dir, category, planned, config) {
       const fileName = `${product.slug}-${String(index + 1).padStart(2, "0")}.webp`;
       try {
         const buffer = await readFile(join(dir, file));
-        const processed = await processBuffer(buffer, category, fileName, config);
+        const processed = await processBuffer(buffer, product.category, fileName, config);
         if (processed) images.push({ ...processed, alt: altFor(product, index), source: file });
         else console.warn(`  ✗ ${file}: меньше ${config.minSourceWidth}px`);
       } catch (error) {
@@ -359,9 +372,10 @@ export function groupIntoProducts(images, groupSize = 4) {
 /* ── перенос в контент ────────────────────────────────────────────────────── */
 
 /**
- * Названия, описания и теги уже написаны человеком в плане — здесь остаётся
- * механическая часть: разложить обработанные кадры по src/data/*.json.
- * Цены и характеристики скрипт не выдумывает: их проставит заказчица.
+ * Названия, описания, артикулы и теги уже написаны человеком в плане — здесь
+ * остаётся механическая часть: разложить обработанные кадры по src/data/*.json.
+ * Характеристики скрипт не выдумывает: их проставит заказчица. Цену не пишем
+ * совсем — заказчица просила убрать цены с сайта, поле остаётся пустым.
  */
 async function writeContent(manifest, plan, config) {
   const planned = manifest.flatMap((entry) => entry.products.filter((product) => product.slug));
@@ -370,6 +384,7 @@ async function writeContent(manifest, plan, config) {
     id: `${product.category}-${product.slug}`,
     slug: product.slug,
     title: product.title,
+    article: product.article,
     category: product.category,
     tags: product.tags ?? [],
     images: product.images.map(({ src, width, height, blurDataURL, alt }) => ({
@@ -379,11 +394,14 @@ async function writeContent(manifest, plan, config) {
       blurDataURL,
       alt,
     })),
-    video: null,
+    video: product.video ? { ...product.video, poster: posterFor(product) } : null,
     price: null,
     description: product.description,
     specs: product.specs ?? {},
   }));
+
+  assertUnique(products, "article");
+  assertUnique(products, "id");
 
   await writeJson(join(DATA_DIR, "products.json"), products);
   console.log(`\nsrc/data/products.json: ${products.length} товаров`);
@@ -398,15 +416,7 @@ async function writeContent(manifest, plan, config) {
   const categories = JSON.parse(await readFile(join(DATA_DIR, "categories.json"), "utf8"));
   for (const category of categories) {
     const cover = covers.get(category.slug);
-    category.cover = cover
-      ? {
-          src: cover.src,
-          width: cover.width,
-          height: cover.height,
-          blurDataURL: cover.blurDataURL,
-          alt: category.title,
-        }
-      : null;
+    category.cover = cover ? { ...imageOf(cover), alt: category.title } : null;
   }
   await writeJson(join(DATA_DIR, "categories.json"), categories);
   console.log(`src/data/categories.json: обложек ${covers.size}`);
@@ -426,6 +436,36 @@ async function writeContent(manifest, plan, config) {
 
 async function writeJson(path, value) {
   await writeFile(path, `${JSON.stringify(value, null, 2)}\n`, "utf8");
+}
+
+/**
+ * Постер ролика — первый кадр товара: отдельного кадра под него не снимали.
+ * Подпись при этом своя: под роликом она читается как описание видео, а не
+ * фотографии, и повторять текст первого кадра здесь незачем.
+ */
+function posterFor(product) {
+  return { ...imageOf(product.images[0]), alt: `${product.title} — короткий ролик` };
+}
+
+/** Поля изображения без служебных: в контент уходит только то, что описано схемой. */
+function imageOf({ src, width, height, blurDataURL, alt }) {
+  return { src, width, height, blurDataURL, alt };
+}
+
+/**
+ * Артикул — то, по чему заказчица находит изделие в переписке, а id — ключ
+ * маршрута. Повтор любого из них означает опечатку в плане, и заметить её
+ * на собранном сайте почти невозможно: страницы просто дублируются.
+ */
+function assertUnique(products, field) {
+  const seen = new Map();
+  for (const product of products) {
+    const previous = seen.get(product[field]);
+    if (previous) {
+      throw new Error(`Повтор ${field} «${product[field]}»: ${previous} и ${product.slug}`);
+    }
+    seen.set(product[field], product.slug);
+  }
 }
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {

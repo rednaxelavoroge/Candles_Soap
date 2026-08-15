@@ -38,31 +38,61 @@
   {
     "slug": "sachet",
     "title": "Саше и ароматы",
-    "cover": null,
+    "cover": {
+      "src": "/catalog/sachet/medalony-01.webp",
+      "width": 1600,
+      "height": 1600,
+      "blurDataURL": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAABwAgCdASoQABAAA4BaJQBOgMUt4/0o65x9KGwAAP718aONpSfzx9y6h5v+X4vgyyZm7NW+X/QhsdaClbbZda92xiewNyLY/LXf3gdFz+koGO3FTbOoLOnJ75oSIpVdZOpPH/08NvlcFQe/jNrVkAJNc8u/d8fXY80BICsWlyS2wJps0agBQAAA",
+      "alt": "Саше и ароматы"
+    },
     "order": 4
   },
   {
     "slug": "holders",
     "title": "Подсвечники",
-    "cover": null,
+    "cover": {
+      "src": "/catalog/holders/riflenye-podsvechniki-01.webp",
+      "width": 1600,
+      "height": 1200,
+      "blurDataURL": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAACQAQCdASoQAAwAA4BaJaQAAuZoCgAA/vd2Ryiq2LE1phoVhqB7UZDZdpi/dYpXg8VUCuypXc/mg2AAAAA=",
+      "alt": "Подсвечники"
+    },
     "order": 5
   },
   {
     "slug": "boxes",
     "title": "Шкатулки и коробочки",
-    "cover": null,
+    "cover": {
+      "src": "/catalog/boxes/azhurnaya-shkatulka-01.webp",
+      "width": 1600,
+      "height": 1600,
+      "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAAAwAgCdASoQABAAA4BaJaQAD5AwXlHJ1ppnYAD++FIb77m4sK8DPkca/DZsrkPfnlpIO4pMdfZpd7ugsCtmydsE+hwd3j1WzkmgwAAA",
+      "alt": "Шкатулки и коробочки"
+    },
     "order": 6
   },
   {
     "slug": "plates",
     "title": "Подносы и тарелки",
-    "cover": null,
+    "cover": {
+      "src": "/catalog/plates/volna-01.webp",
+      "width": 1600,
+      "height": 1600,
+      "blurDataURL": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADwAQCdASoQABAAA4BaJaQAApPo9ly+RgAA/veCXJNL4FYODK5JtXl+D3/gBTQ7qKFwst2aTiYzPeri6llRoaJAbznkqtczqz8IDMRAG8AAAA==",
+      "alt": "Подносы и тарелки"
+    },
     "order": 7
   },
   {
     "slug": "decor",
     "title": "Декор для интерьера",
-    "cover": null,
+    "cover": {
+      "src": "/catalog/decor/rakoviny-01.webp",
+      "width": 1600,
+      "height": 1200,
+      "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAAAwAgCdASoQAAwAA4BaJQBOj+ACr96tGybtgAD+8N973uXduBZeLd/amE6PN3SZvVtmLokRq/u59lktKKf+o9eCXkC/sl3Qz2gAAA==",
+      "alt": "Декор для интерьера"
+    },
     "order": 8
   }
 ]
