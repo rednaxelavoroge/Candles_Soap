@@ -8,7 +8,8 @@ type TileProps = {
   image: ContentImage | null;
   sizes: string;
   priority?: boolean;
-  caption?: string;
+  /** Артикул изделия. В разделах он идёт под названием на той же плашке. */
+  article?: string;
   /**
    * Держать подпись видимой и на десктопе. Нужно витринным блокам, где название
    * направления — часть композиции, а не подсказка при наведении.
@@ -19,10 +20,12 @@ type TileProps = {
 };
 
 /**
- * Плитка каталога. При наведении изображение увеличивается внутри неизменной
- * рамки (overflow: hidden на обёртке), название проступает поверх на плашке
- * сплошного цвета — теней и градиентов в проекте нет.
- * На тач-устройствах (hover: none) название видно всегда, zoom выключен.
+ * Плитка каталога. В покое это чистая фотография в белой рамке — сетка должна
+ * читаться галереей, а не витриной магазина. Название и артикул проступают
+ * только при наведении, на плашке сплошного цвета.
+ *
+ * На тач-устройствах наведения не существует, поэтому там подпись видна всегда,
+ * а вместо неё работает отклик на нажатие.
  */
 export function Tile({
   href,
@@ -30,7 +33,7 @@ export function Tile({
   image,
   sizes,
   priority,
-  caption,
+  article,
   persistentTitle = false,
   className,
 }: TileProps) {
@@ -43,15 +46,19 @@ export function Tile({
       href={href}
       className={`group relative block overflow-hidden bg-sand ${className ?? "aspect-[3/4]"}`}
     >
-      <div className="absolute inset-0 transition-transform duration-[600ms] ease-out will-change-transform group-hover:scale-[1.06] motion-reduce:transition-none motion-reduce:group-hover:scale-100">
+      <div className="absolute inset-0 transition-transform duration-[600ms] ease-out will-change-transform group-hover:scale-[1.08] group-active:scale-[1.08] motion-reduce:transition-none motion-reduce:group-hover:scale-100">
         <Media image={image} sizes={sizes} priority={priority} />
       </div>
 
       <div
-        className={`absolute inset-x-0 bottom-0 bg-surface/90 px-3 py-2.5 opacity-100 transition-opacity duration-500 md:px-5 md:py-4 ${revealOnHover}`}
+        className={`absolute inset-x-0 bottom-0 bg-surface/85 px-4 py-3 opacity-100 transition-opacity duration-500 md:px-5 md:py-4 ${revealOnHover}`}
       >
         <span className="block font-display text-base leading-tight md:text-xl">{title}</span>
-        {caption ? <span className="mt-0.5 block text-xs text-muted">{caption}</span> : null}
+        {article ? (
+          <span className="mt-1 block text-[0.6875rem] tracking-[0.14em] text-muted uppercase">
+            Артикул {article}
+          </span>
+        ) : null}
       </div>
     </Link>
   );

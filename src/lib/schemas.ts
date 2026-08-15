@@ -59,6 +59,8 @@ export const productSchema = z.object({
   id: z.string().min(1),
   slug: z.string().min(1),
   title: z.string().min(1),
+  /** Артикул: по нему заказчица находит изделие, когда о нём спрашивают. */
+  article: z.string().min(1),
   /** Ровно одна категория на товар. */
   category: z.string().min(1),
   /** Тегов сколько угодно — по ним и работает фильтрация в разделе. */

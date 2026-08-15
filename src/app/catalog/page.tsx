@@ -1,6 +1,5 @@
 import { Tile } from "@/components/ui/Tile";
-import { getFilledCategories, getProductsByCategory } from "@/lib/content";
-import { pluralItems } from "@/lib/plural";
+import { getFilledCategories } from "@/lib/content";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -30,7 +29,6 @@ export default function CatalogPage() {
         }`}
       >
         {categories.map((category, index) => {
-          const count = getProductsByCategory(category.slug).length;
           const isLastOdd = oddOnMobile && index === categories.length - 1;
           return (
             <li key={category.slug} className="contents">
@@ -38,7 +36,6 @@ export default function CatalogPage() {
                 href={`/catalog/${category.slug}`}
                 title={category.title}
                 image={category.cover}
-                caption={`${count} ${pluralItems(count)}`}
                 priority={index < 2}
                 className={
                   isLastOdd

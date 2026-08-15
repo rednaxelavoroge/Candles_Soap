@@ -24,7 +24,7 @@ export function FeaturedStrip() {
                 href={`/catalog/${product.category}/${product.slug}`}
                 title={product.title}
                 image={getCover(product)}
-                caption={product.price ? `${product.price.toLocaleString("ru-RU")} ₽` : undefined}
+                article={product.article}
                 className="aspect-[4/5]"
                 sizes="(min-width: 768px) 24vw, 68vw"
               />

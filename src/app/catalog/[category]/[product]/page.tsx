@@ -85,11 +85,9 @@ export default async function ProductPage({ params }: { params: Promise<Params> 
         <div className="md:pt-2">
           <h1 className="font-display text-3xl leading-tight md:text-5xl">{product.title}</h1>
 
-          {product.price ? (
-            <p className="mt-4 text-xl md:text-2xl">{product.price.toLocaleString("ru-RU")} ₽</p>
-          ) : (
-            <p className="mt-4 text-sm text-muted">Цена по запросу</p>
-          )}
+          <p className="mt-3 text-xs tracking-[0.14em] text-muted uppercase">
+            Артикул {product.article}
+          </p>
 
           <p className="mt-6 max-w-prose text-sm leading-relaxed text-muted md:text-base">
             {product.description}
@@ -131,7 +129,7 @@ export default async function ProductPage({ params }: { params: Promise<Params> 
                   href={`/catalog/${item.category}/${item.slug}`}
                   title={item.title}
                   image={getCover(item)}
-                  caption={item.price ? `${item.price.toLocaleString("ru-RU")} ₽` : undefined}
+                  article={item.article}
                   className="aspect-[4/5]"
                   sizes="(min-width: 768px) 25vw, 50vw"
                 />
