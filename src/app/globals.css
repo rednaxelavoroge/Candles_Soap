@@ -179,6 +179,34 @@
     }
   }
 
+  /**
+   * Наезд фотографии при наведении. В референсе заказчицы
+   * (themes.themegoods.com/photography, demo4) замерено на живой странице:
+   * transform scale(1.3), transition 0.3s ease-in-out. Ровно столько у нас
+   * читается рывком — там кадр стоит голым, а у нас поверх него в тот же
+   * момент проступает белая плашка, и два быстрых движения спорят друг с
+   * другом. Кривую берём его, масштаб и время мягче; правится одной строкой.
+   */
+  .tile-zoom {
+    --tile-zoom: 1.18;
+    transition: transform 500ms ease-in-out;
+    will-change: transform;
+  }
+
+  .group:hover .tile-zoom,
+  .group:focus-visible .tile-zoom,
+  .group:active .tile-zoom {
+    transform: scale(var(--tile-zoom));
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .group:hover .tile-zoom,
+    .group:focus-visible .tile-zoom,
+    .group:active .tile-zoom {
+      transform: none;
+    }
+  }
+
   .link-underline {
     background-image: linear-gradient(currentColor, currentColor);
     background-position: 0 100%;
