@@ -70,6 +70,13 @@ export const productSchema = z.object({
   price: z.number().positive().nullable(),
   description: z.string().min(1),
   specs: specsSchema,
+  /**
+   * Три тона акварельных пятен вокруг кадра, снятые с самой обложки
+   * командой `npm run tones`. У заказчицы в примерах цвет брызг подобран
+   * под снимок: у зефира розовые, у тюльпанов зелёно-сиреневые.
+   * Пока не проставлены — пятна берут песочные тона сайта.
+   */
+  tones: z.array(z.string()).length(3).optional(),
 });
 
 export const siteSchema = z.object({

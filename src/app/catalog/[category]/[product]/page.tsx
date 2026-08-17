@@ -1,5 +1,6 @@
 import { ProductGallery } from "@/components/product/ProductGallery";
 import { Tile } from "@/components/ui/Tile";
+import { Watercolor } from "@/components/ui/Watercolor";
 import {
   getCategory,
   getCover,
@@ -80,7 +81,20 @@ export default async function ProductPage({ params }: { params: Promise<Params> 
       </nav>
 
       <div className="grid gap-10 px-5 md:grid-cols-2 md:gap-14 md:px-8">
-        <ProductGallery images={product.images} video={product.video} title={product.title} />
+        {/* Акварельные пятна вокруг кадра — та композиция, которую заказчица
+            прислала примерами. Тона сняты с самой обложки, поэтому у каждого
+            изделия свои: у сот розово-сиреневые, у глобуса голубые. */}
+        <div className="relative">
+          {/* Разлёт несимметричный: влево и по вертикали пятна выходят далеко,
+              вправо почти нет — там колонка с названием и описанием, и
+              заказчица уже отмечала, что кляксы налезают на шрифт. */}
+          <div className="pointer-events-none absolute -top-[10%] -bottom-[10%] -left-[16%] -right-[2%]">
+            <Watercolor tones={product.tones} seed={product.article.length + product.slug.length} />
+          </div>
+          <div className="relative">
+            <ProductGallery images={product.images} video={product.video} title={product.title} />
+          </div>
+        </div>
 
         <div className="md:pt-2">
           <h1 className="font-display text-3xl leading-tight md:text-5xl">{product.title}</h1>

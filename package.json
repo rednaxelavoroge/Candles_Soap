@@ -13,7 +13,8 @@
     "content:drafts": "node tools/apply-drafts.mjs",
     "content:clear-drafts": "node tools/apply-drafts.mjs --clear",
     "find-videos": "node tools/find-videos.mjs",
-    "portrait": "node tools/set-portrait.mjs"
+    "portrait": "node tools/set-portrait.mjs",
+    "tones": "node tools/extract-tones.mjs"
   },
   "dependencies": {
     "framer-motion": "^11.15.0",

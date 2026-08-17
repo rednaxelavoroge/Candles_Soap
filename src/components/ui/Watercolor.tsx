@@ -65,14 +65,24 @@ export function Watercolor({
           {/* Шум задаёт рваный край: без него пятно остаётся ровным овалом. */}
           <feTurbulence
             type="fractalNoise"
-            baseFrequency="0.022 0.03"
-            numOctaves={4}
+            baseFrequency="0.05 0.06"
+            numOctaves={3}
             seed={seed + 7}
             result="noise"
           />
-          <feDisplacementMap in="SourceGraphic" in2="noise" scale="26" xChannelSelector="R" yChannelSelector="G" />
+          {/* Смещение считается в единицах viewBox, а он всего 100 единиц
+              в ширину. Значение 26 сдвигало контур на четверть рисунка,
+              пятна наезжали друг на друга и сливались в мутное поле.
+              Восьми хватает, чтобы край стал рваным, а пятно осталось пятном. */}
+          <feDisplacementMap
+            in="SourceGraphic"
+            in2="noise"
+            scale="8"
+            xChannelSelector="R"
+            yChannelSelector="G"
+          />
           {/* Лёгкое размытие поверх — акварель не даёт резкой кромки. */}
-          <feGaussianBlur stdDeviation="0.6" />
+          <feGaussianBlur stdDeviation="0.5" />
         </filter>
       </defs>
 
