@@ -12,7 +12,8 @@
     "metrics": "node tools/photo-metrics.mjs",
     "content:drafts": "node tools/apply-drafts.mjs",
     "content:clear-drafts": "node tools/apply-drafts.mjs --clear",
-    "find-videos": "node tools/find-videos.mjs"
+    "find-videos": "node tools/find-videos.mjs",
+    "portrait": "node tools/set-portrait.mjs"
   },
   "dependencies": {
     "framer-motion": "^11.15.0",

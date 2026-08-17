@@ -54,13 +54,18 @@ const SPARSE: Bristle[] = [
   [46, 12, 0.6, 0.6],
 ];
 
-/** Брызги у конца мазка: без них край выглядит слишком чистым. */
-const FLECKS: [number, number, number][] = [
-  [4, 384, 4.5],
-  [30, 400, 2.6],
-  [-16, 410, 3.2],
-  [44, 424, 2],
-  [14, 430, 2.4],
+/**
+ * Брызги у конца мазка: без них край выглядит слишком чистым. Часть капель —
+ * колечки, а не точки: на присланных заказчицей примерах вокруг кадра
+ * разлетаются именно кружки с пустой серединой.
+ * Четвёртое значение — толщина обводки; 0 означает залитую каплю.
+ */
+const FLECKS: [number, number, number, number][] = [
+  [4, 384, 4.5, 0],
+  [30, 400, 3.4, 1.4],
+  [-16, 410, 3.2, 0],
+  [44, 424, 4, 1.6],
+  [14, 430, 2.4, 0],
 ];
 
 function BrushStroke({
@@ -86,9 +91,21 @@ function BrushStroke({
           <path key={index} d={BRISTLE} transform={`translate(${dx} ${dy}) scale(${sx} ${sy})`} />
         ))}
         {flecks
-          ? FLECKS.map(([cx, cy, r], index) => (
-              <ellipse key={`f${index}`} cx={cx} cy={cy} rx={r} ry={r * 1.6} />
-            ))
+          ? FLECKS.map(([cx, cy, r, ring], index) =>
+              ring ? (
+                <circle
+                  key={`f${index}`}
+                  cx={cx}
+                  cy={cy}
+                  r={r}
+                  fill="none"
+                  stroke={fill}
+                  strokeWidth={ring}
+                />
+              ) : (
+                <ellipse key={`f${index}`} cx={cx} cy={cy} rx={r} ry={r * 1.6} />
+              ),
+            )
           : null}
       </g>
     </svg>
@@ -116,39 +133,43 @@ const CLAY = "#C9B296";
  * низких шапках каталога мазок съёживался в мелкую чёрточку. Нижний предел
  * в пикселях держит его крупным, а лишнее уходит за край секции — ровно так
  * мазки и обрезаны в референсе.
+ *
+ * Все мазки держатся у самых краёв секции. Заказчица написала прямо:
+ * «кляксы внизу сильно вылезли на верх шрифта» — на контактах мазок проходил
+ * прямо по заголовку. Полосы у левого и правого края текст не задевают:
+ * он идёт колонкой по центру и не доходит до края.
  */
 const COMPOSITION: Placement[] = [
   // Главное пятно: длинный мазок у правого края, сверху вниз.
   {
     fill: SAND,
-    opacity: 0.85,
+    opacity: 0.7,
     dense: true,
     flecks: true,
-    style: { top: "4%", right: "7%", height: "max(84%, 420px)", rotate: "6deg" },
+    style: { top: "2%", right: "-4%", height: "max(84%, 420px)", rotate: "6deg" },
   },
   // Слева внизу, почти поперёк — уравновешивает правый.
   {
     fill: SAND,
-    opacity: 0.55,
+    opacity: 0.45,
     dense: false,
     flecks: false,
-    style: { bottom: "-8%", left: "2%", height: "max(60%, 300px)", rotate: "-64deg" },
+    style: { bottom: "-10%", left: "-6%", height: "max(60%, 300px)", rotate: "-64deg" },
   },
   // Два коротких по диагонали, глина — почти на пределе видимости.
-  // Держатся у краёв: в середине секции они спорили бы с заголовком.
   {
     fill: CLAY,
-    opacity: 0.22,
+    opacity: 0.18,
     dense: false,
     flecks: true,
-    style: { top: "2%", left: "7%", height: "max(38%, 220px)", rotate: "28deg" },
+    style: { top: "-4%", left: "1%", height: "max(38%, 220px)", rotate: "28deg" },
   },
   {
     fill: CLAY,
-    opacity: 0.16,
+    opacity: 0.14,
     dense: false,
     flecks: false,
-    style: { bottom: "4%", right: "31%", height: "max(34%, 200px)", rotate: "-16deg" },
+    style: { bottom: "2%", right: "12%", height: "max(34%, 200px)", rotate: "-16deg" },
   },
 ];
 

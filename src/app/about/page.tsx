@@ -96,19 +96,8 @@ export default function AboutPage() {
         </div>
       </div>
 
-      <section
-        className="mt-16 border-t border-sand px-5 py-14 md:mt-24 md:px-8 md:py-20"
-        aria-labelledby="how-heading"
-      >
-        <p className="eyebrow">Как это работает</p>
-        <h2 id="how-heading" className="mt-2 max-w-3xl font-display text-3xl md:text-5xl">
-          Малые партии, поэтому почти всё можно повторить под вас
-        </h2>
-        <p className="mt-6 max-w-prose text-sm leading-relaxed text-muted md:text-base">
-          Выберите вещь в каталоге и напишите, что хочется изменить: цвет, аромат, размер,
-          надпись на подарочной бирке. Я скажу, что из этого выполнимо и сколько займёт времени.
-        </p>
-      </section>
+      {/* Секция «Как это работает» убрана по просьбе заказчицы:
+          «там был раздел, как это работает, тоже это не нужно». */}
     </div>
   );
 }

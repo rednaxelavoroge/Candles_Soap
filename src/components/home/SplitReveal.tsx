@@ -15,22 +15,28 @@ const PARALLAX_MAX = 8;
 
 type SplitRevealProps = {
   /** Декоративные слова на расходящихся половинах. */
-  wordTop: string;
-  wordBottom: string;
+  wordLeft: string;
+  wordRight: string;
   children: ReactNode;
 };
 
 /**
- * Две половины экрана расходятся по вертикали по мере прокрутки секции, между
+ * Две половины экрана расходятся в стороны по мере прокрутки секции, между
  * ними раскрывается содержимое. Источник анимации — прогресс скролла, а не
  * mousemove, поэтому эффект одинаково живой на десктопе и на телефоне.
  * Курсорный параллакс добавляется поверх только на устройствах с точным
  * указателем и не превышает 8px.
  *
+ * Половины расходятся именно влево и вправо: «мне не нравится, что оно наверх
+ * и вниз поднимается, я бы хотела, чтобы по диагонали ушло — „ручная“ в одну
+ * сторону, „работа“ в другую». Диагональ задаётся тем, что левое слово стоит
+ * выше середины, а правое ниже: слова уходят по разным углам и не режутся
+ * краем половины.
+ *
  * Анимируются исключительно transform и opacity — ни одного свойства,
  * вызывающего перерасчёт layout.
  */
-export function SplitReveal({ wordTop, wordBottom, children }: SplitRevealProps) {
+export function SplitReveal({ wordLeft, wordRight, children }: SplitRevealProps) {
   const sectionRef = useRef<HTMLElement>(null);
   const stageRef = useRef<HTMLDivElement>(null);
   const reduced = useReducedMotion();
@@ -40,8 +46,8 @@ export function SplitReveal({ wordTop, wordBottom, children }: SplitRevealProps)
     offset: ["start start", "end end"],
   });
 
-  const topY = useTransform(scrollYProgress, [0, 0.72], ["0%", "-101%"]);
-  const bottomY = useTransform(scrollYProgress, [0, 0.72], ["0%", "101%"]);
+  const leftX = useTransform(scrollYProgress, [0, 0.72], ["0%", "-101%"]);
+  const rightX = useTransform(scrollYProgress, [0, 0.72], ["0%", "101%"]);
   const revealOpacity = useTransform(scrollYProgress, [0.16, 0.46], [0, 1]);
   const revealScale = useTransform(scrollYProgress, [0.16, 0.82], [0.96, 1]);
 
@@ -80,7 +86,7 @@ export function SplitReveal({ wordTop, wordBottom, children }: SplitRevealProps)
     return (
       <section className="bg-surface px-5 py-16 md:px-8 md:py-24">
         <p aria-hidden="true" className="font-display text-4xl leading-none md:text-6xl">
-          {wordTop} {wordBottom}
+          {wordLeft} {wordRight}
         </p>
         <div className="mt-10">{children}</div>
       </section>
@@ -97,23 +103,25 @@ export function SplitReveal({ wordTop, wordBottom, children }: SplitRevealProps)
           {children}
         </motion.div>
 
+        {/* Левая половина: слово прижато к правому краю и поднято над серединой. */}
         <motion.div
           aria-hidden="true"
-          style={{ y: topY }}
-          className="pointer-events-none absolute inset-x-0 top-0 flex h-1/2 items-end justify-center border-b border-sand bg-bg will-change-transform"
+          style={{ x: leftX }}
+          className="pointer-events-none absolute inset-y-0 left-0 flex w-1/2 items-center justify-end border-r border-sand bg-bg will-change-transform"
         >
-          <span className="translate-y-[0.12em] font-display text-[18vw] leading-[0.8] md:text-[13vw]">
-            {wordTop}
+          <span className="-translate-y-[0.42em] pr-[0.06em] font-display text-[15vw] leading-[0.8] md:text-[11vw]">
+            {wordLeft}
           </span>
         </motion.div>
 
+        {/* Правая половина: слово у левого края и опущено — вместе выходит диагональ. */}
         <motion.div
           aria-hidden="true"
-          style={{ y: bottomY }}
-          className="pointer-events-none absolute inset-x-0 bottom-0 flex h-1/2 items-start justify-center bg-bg will-change-transform"
+          style={{ x: rightX }}
+          className="pointer-events-none absolute inset-y-0 right-0 flex w-1/2 items-center justify-start bg-bg will-change-transform"
         >
-          <span className="-translate-y-[0.18em] font-display text-[18vw] leading-[0.8] md:text-[13vw]">
-            {wordBottom}
+          <span className="translate-y-[0.42em] pl-[0.06em] font-display text-[15vw] leading-[0.8] md:text-[11vw]">
+            {wordRight}
           </span>
         </motion.div>
       </div>

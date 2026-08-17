@@ -17,10 +17,10 @@ export function Directions() {
 
   return (
     <div className="mx-auto w-full max-w-[1500px] px-5 md:px-8">
+      {/* «Направления» переименованы в «Каталог» по её просьбе:
+          «вы там написали направление, это на самом деле нужно написать каталог». */}
       <p className="eyebrow">Что я делаю</p>
-      <h2 className="mt-2 font-display text-3xl leading-tight md:text-5xl">
-        {directions.length === 4 ? "Четыре направления" : "Направления"}
-      </h2>
+      <h2 className="mt-2 font-display text-3xl leading-tight md:text-5xl">Каталог</h2>
 
       <ul
         className={`frame-grid mt-5 grid-cols-2 md:mt-8 ${

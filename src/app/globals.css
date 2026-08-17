@@ -11,15 +11,16 @@
   --color-muted: #736a61;
   --color-accent: #a88763;
 
-  --font-display: var(--font-cormorant), Georgia, "Times New Roman", serif;
-  --font-sans: var(--font-jost), system-ui, -apple-system, sans-serif;
+  --font-display: var(--font-comfortaa), system-ui, sans-serif;
+  --font-sans: var(--font-comfortaa), system-ui, -apple-system, sans-serif;
 
-  /* Строго прямоугольная геометрия: скруглений в проекте нет. */
+  /* Заказчица просила «полукруглые края» у кадров — ей так понравилось
+     в черновике сына. Скругление мягкое: рамка остаётся рамкой. */
   --radius-none: 0px;
-  --radius-sm: 0px;
-  --radius-md: 0px;
-  --radius-lg: 0px;
-  --radius-xl: 0px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 18px;
 }
 
 @layer base {

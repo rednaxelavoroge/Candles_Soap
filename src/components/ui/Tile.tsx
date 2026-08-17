@@ -20,19 +20,20 @@ type TileProps = {
 };
 
 /**
- * Плитка каталога. В покое это чистая фотография в белой рамке — сетка должна
- * читаться галереей, а не витриной магазина. Название и артикул проступают
- * только при наведении.
+ * Плитка каталога. В покое это чистая фотография — сетка должна читаться
+ * галереей, а не витриной магазина.
  *
- * Плашка снята с референса заказчицы (azalea.qodeinteractive.com/portfolio-gallery):
- * там она белая с прозрачностью 0.9, кроет плитку целиком, текст выключен по
- * центру по обеим осям, проявляется opacity 0 → 1 за 0.4s. Раньше у нас была
- * узкая полоса по нижнему краю с текстом влево — рисовали по словесному
- * описанию, вслепую.
+ * При наведении кадр темнеет и на нём проступают название и артикул — так
+ * заказчица описала это словами: «наводишь пальчиком или мышкой, он сразу
+ * темнеет, название и артикул, потому что часто люди не хотят открывать,
+ * увидели и название выписали». До этого здесь была белая плашка, снятая
+ * с azalea; её просьба точнее — оставляем затемнение.
  *
- * На тач-устройствах наведения не существует. Плашка во весь кадр там была бы
- * приклеена намертво и забелила бы всю сетку, поэтому на них остаётся полоса
- * по нижнему краю. Тем же режимом живут витринные плитки с persistentTitle.
+ * Затемнение берётся тоном --ink с прозрачностью, а не чистым чёрным:
+ * чёрного заказчица не хочет нигде.
+ *
+ * На тач-устройствах наведения нет, поэтому там подпись держится всегда —
+ * иначе в сетке не понять, что где. Тем же режимом живут витринные плитки.
  */
 export function Tile({
   href,
@@ -44,16 +45,14 @@ export function Tile({
   persistentTitle = false,
   className,
 }: TileProps) {
-  // Полоса по нижнему краю: тач-устройства и витринные блоки, где подпись
-  // видна всегда. Наведение здесь ничего не переключает.
+  // Полоса по нижнему краю: тач-устройства и витринные плитки, где подпись
+  // видна всегда. Затемнять там весь кадр нельзя — фотографии в сетке
+  // потемнели бы разом и навсегда.
   const band = "absolute inset-x-0 bottom-0 px-4 py-3 md:px-5 md:py-4";
 
-  // Плашка во весь кадр — только там, где наведение существует.
+  // Затемнение во весь кадр — только там, где есть наведение.
   const plate = [
     "[@media(hover:hover)]:inset-0",
-    "[@media(hover:hover)]:flex",
-    "[@media(hover:hover)]:flex-col",
-    "[@media(hover:hover)]:items-center",
     "[@media(hover:hover)]:justify-center",
     "[@media(hover:hover)]:p-5",
     "[@media(hover:hover)]:opacity-0",
@@ -64,25 +63,25 @@ export function Tile({
   return (
     <Link
       href={href}
-      className={`group relative block overflow-hidden bg-sand ${className ?? "aspect-[3/4]"}`}
+      className={`group relative block overflow-hidden rounded-md bg-sand ${className ?? "aspect-[3/4]"}`}
     >
       <div className="tile-zoom absolute inset-0">
         <Media image={image} sizes={sizes} priority={priority} />
       </div>
 
       <div
-        className={`${band} bg-surface/90 text-center transition-opacity duration-[400ms] ease-[ease] ${
+        className={`${band} flex flex-col items-center justify-end bg-ink/55 text-center transition-opacity duration-[400ms] ease-[ease] ${
           persistentTitle ? "" : plate
         }`}
       >
-        <span className="block font-display text-base leading-tight md:text-xl">{title}</span>
+        <span className="block font-display text-base leading-tight text-white md:text-xl">
+          {title}
+        </span>
 
         {article ? (
           <>
-            {/* Короткая черта между названием и артикулом — как разделитель
-                в референсе, только в нашей глине вместо его розового. */}
-            <span aria-hidden="true" className="mx-auto mt-2 block h-px w-8 bg-clay" />
-            <span className="mt-2 block text-[0.6875rem] tracking-[0.2em] text-muted uppercase">
+            <span aria-hidden="true" className="mt-2 block h-px w-8 bg-white/50" />
+            <span className="mt-2 block text-[0.6875rem] tracking-[0.2em] text-white/80 uppercase">
               Артикул {article}
             </span>
           </>

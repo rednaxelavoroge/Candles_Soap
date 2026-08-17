@@ -1,6 +1,5 @@
-import { EnquiryForm } from "@/components/contacts/EnquiryForm";
 import { getSite } from "@/lib/content";
-import { getSiteName, getSocialLinks, telHref, whatsappHref } from "@/lib/contacts";
+import { getSocialLinks, telHref, whatsappHref } from "@/lib/contacts";
 import type { Metadata } from "next";
 
 const DESCRIPTION = "WhatsApp, Instagram, Facebook и телефон для заказа изделий ручной работы.";
@@ -11,6 +10,11 @@ export const metadata: Metadata = {
   openGraph: { title: "Контакты", description: DESCRIPTION },
 };
 
+/**
+ * Форма заявки убрана по просьбе заказчицы: «в контактах просто ссылки на
+ * номер и ватсап кликабельный — достаточно». Остаются сами контакты и одна
+ * кнопка в WhatsApp.
+ */
 export default function ContactsPage() {
   const { contacts, owner } = getSite();
   const socials = getSocialLinks();
@@ -29,12 +33,19 @@ export default function ContactsPage() {
         </p>
       </header>
 
-      <div className="mt-12 grid gap-12 px-5 pb-20 md:mt-16 md:grid-cols-2 md:gap-16 md:px-8">
+      <div className="mt-12 px-5 pb-20 md:mt-16 md:px-8">
         {whatsappBase ? (
-          <EnquiryForm whatsappBase={whatsappBase} siteName={getSiteName()} />
+          <a
+            href={whatsappBase}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block rounded-sm border border-ink px-7 py-3 text-sm transition-colors duration-300 hover:bg-ink hover:text-white"
+          >
+            Написать в WhatsApp
+          </a>
         ) : null}
 
-        <div className="md:pl-4">
+        <div className="mt-10 max-w-xl">
           <ul className="border-t border-sand">
             {socials.map((social) => (
               <li key={social.label} className="border-b border-sand py-4">
