@@ -1,4 +1,5 @@
 import { Blots } from "@/components/ui/Blots";
+import { Watercolor } from "@/components/ui/Watercolor";
 import { getHeroSlides, getSite } from "@/lib/content";
 import Image from "next/image";
 
@@ -27,8 +28,16 @@ export function Hero() {
           <p className="mt-5 max-w-md text-sm text-muted md:text-base">{site.tagline}</p>
         </div>
 
-        {/* Белая рамка вокруг кадра — тот же приём, что зазоры в сетках. */}
-        <div className="bg-surface p-3 md:p-5 md:shrink-0">
+        {/* Кадр в белой рамке, из-под которого во все стороны расходятся
+            акварельные пятна и капли — та композиция, которую заказчица
+            прислала картинками. Пятна лежат шире рамки, поэтому выступают
+            за неё по всем сторонам. */}
+        <div className="relative md:shrink-0">
+          <div className="absolute -inset-[18%]">
+            <Watercolor seed={3} />
+          </div>
+
+          <div className="relative bg-surface p-3 md:p-5">
           <div className="relative aspect-[4/5] w-full overflow-hidden bg-sand md:h-[62vh] md:w-auto md:aspect-[4/5]">
             {slides.map((image, index) => (
               <div
@@ -49,6 +58,7 @@ export function Hero() {
                 />
               </div>
             ))}
+            </div>
           </div>
         </div>
       </div>

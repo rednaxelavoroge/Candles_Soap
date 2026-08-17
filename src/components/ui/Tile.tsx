@@ -17,6 +17,12 @@ type TileProps = {
   persistentTitle?: boolean;
   /** Пропорции и раскладка задаются снаружи: `aspect-square md:aspect-[3/4]`. */
   className?: string;
+  /**
+   * Держать собственные пропорции снимка вместо заданных снаружи. Нужно
+   * кладке каталога: горизонтальный кадр должен остаться горизонтальным,
+   * а не обрезаться под общий размер плитки.
+   */
+  natural?: boolean;
 };
 
 /**
@@ -44,7 +50,10 @@ export function Tile({
   article,
   persistentTitle = false,
   className,
+  natural = false,
 }: TileProps) {
+  const naturalRatio =
+    natural && image ? { aspectRatio: `${image.width} / ${image.height}` } : undefined;
   // Полоса по нижнему краю: тач-устройства и витринные плитки, где подпись
   // видна всегда. Затемнять там весь кадр нельзя — фотографии в сетке
   // потемнели бы разом и навсегда.
@@ -63,7 +72,10 @@ export function Tile({
   return (
     <Link
       href={href}
-      className={`group relative block overflow-hidden rounded-md bg-sand ${className ?? "aspect-[3/4]"}`}
+      style={naturalRatio}
+      className={`group relative block overflow-hidden rounded-md bg-sand ${
+        natural ? "" : (className ?? "aspect-[3/4]")
+      }`}
     >
       <div className="tile-zoom absolute inset-0">
         <Media image={image} sizes={sizes} priority={priority} />
