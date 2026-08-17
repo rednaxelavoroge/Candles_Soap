@@ -32,27 +32,32 @@ function CatalogSection({ category, index, total, count, intro }: SectionProps) 
   const ref = useRef<HTMLElement>(null);
   const reduced = useReducedMotion();
 
-  // Секция проходит экран целиком: 0 — только показалась снизу,
-  // 0.5 — стоит по центру, 1 — ушла за верх.
+  // Секция вдвое выше экрана, а внутри неё закреплённая сцена. Пока идёт
+  // прокрутка этой высоты, сцена стоит на месте и половины успевают сойтись
+  // и разойтись. Без закрепления секция уезжает вверх одновременно с
+  // движением, и весь съезд смазывается за долю секунды — со стороны
+  // кажется, что ничего не происходит.
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start end", "end start"],
+    offset: ["start start", "end end"],
   });
 
   // Текст приходит со своей стороны, кадр — с противоположной.
   const textFrom = index % 2 === 0 ? -1 : 1;
 
+  // Половины приходят из-за краёв экрана, сходятся к середине, держатся
+  // и снова расходятся. Ход большой — иначе движение не читается.
   const textX = useTransform(
     scrollYProgress,
-    [0, 0.34, 0.66, 1],
-    [`${textFrom * 62}%`, "0%", "0%", `${textFrom * 62}%`],
+    [0, 0.32, 0.68, 1],
+    [`${textFrom * 115}%`, "0%", "0%", `${textFrom * 115}%`],
   );
   const mediaX = useTransform(
     scrollYProgress,
-    [0, 0.34, 0.66, 1],
-    [`${-textFrom * 62}%`, "0%", "0%", `${-textFrom * 62}%`],
+    [0, 0.32, 0.68, 1],
+    [`${-textFrom * 115}%`, "0%", "0%", `${-textFrom * 115}%`],
   );
-  const fade = useTransform(scrollYProgress, [0, 0.26, 0.74, 1], [0, 1, 1, 0]);
+  const fade = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0.15, 1, 1, 0.15]);
 
   const number = `${String(index + 1).padStart(2, "0")} / ${String(total).padStart(2, "0")}`;
 
@@ -106,27 +111,29 @@ function CatalogSection({ category, index, total, count, intro }: SectionProps) 
     <section
       ref={ref}
       aria-labelledby={`section-${category.slug}`}
-      className="flex min-h-svh items-center overflow-hidden py-10 md:py-16"
+      className="relative h-[200svh]"
     >
-      <div className="grid w-full items-center gap-6 px-5 md:grid-cols-2 md:gap-10 md:px-8">
+      <div className="sticky top-0 flex h-svh items-center overflow-hidden">
+        <div className="grid w-full items-center gap-6 px-5 md:grid-cols-2 md:gap-10 md:px-8">
         {/* Кадр всегда идёт первым в разметке на узком экране: там половин нет,
             и фотография должна стоять над названием, а не под ним. */}
         <div className="contents md:hidden">{media}</div>
 
-        {index % 2 === 0 ? (
-          <>
-            <span id={`section-${category.slug}`} className="sr-only">
-              {category.title}
-            </span>
-            {text}
-            <div className="hidden md:block">{media}</div>
-          </>
-        ) : (
-          <>
-            <div className="hidden md:block">{media}</div>
-            {text}
-          </>
-        )}
+          {index % 2 === 0 ? (
+            <>
+              <span id={`section-${category.slug}`} className="sr-only">
+                {category.title}
+              </span>
+              {text}
+              <div className="hidden md:block">{media}</div>
+            </>
+          ) : (
+            <>
+              <div className="hidden md:block">{media}</div>
+              {text}
+            </>
+          )}
+        </div>
       </div>
     </section>
   );
