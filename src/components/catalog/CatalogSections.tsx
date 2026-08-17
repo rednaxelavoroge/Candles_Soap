@@ -1,5 +1,6 @@
 "use client";
 
+import { Blots } from "@/components/ui/Blots";
 import { Media } from "@/components/ui/Media";
 import type { Category } from "@/lib/schemas";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
@@ -11,94 +12,109 @@ type SectionProps = {
   index: number;
   total: number;
   count: number;
-  /** Необязательный текст раздела от заказчицы. */
   intro: string | null;
 };
 
-/**
- * Одна макросекция каталога: половина экрана с текстом, половина с кадром.
- *
- * Стороны чередуются через одну — так это устроено в черновике, который
- * заказчица показала: «слева написано, что это свечи, справа фотографии,
- * внизу следующее — слева мыло, справа фотографии».
- *
- * Половины съезжаются к середине, когда секция входит в экран, и разъезжаются
- * обратно, когда уходит. Прогресс берётся от прокрутки, поэтому движение идёт
- * в обе стороны и повторяется каждый раз: «у него плохо, что один раз оно
- * надвигается и всё, а я бы хотела вверх поднимаешь — оно опять идёт,
- * вверх, вниз, вверх, вниз».
- */
+const CATEGORY_SUBTITLES: Record<string, string> = {
+  candles: "Свечи из соевого воска и авторские формы",
+  soap: "Мыло ручной работы с натуральными маслами",
+  gypsum: "Скульптурные подсвечники, шкатулки и блюда",
+  sachet: "Деликатные восковые и льняные аромасаше",
+  holders: "Фактурные подсвечники из гипса",
+  boxes: "Рельефные шкатулки и коробочки",
+  plates: "Декоративные подносы и тарелки",
+  decor: "Предметы декора для уютного дома",
+};
+
 function CatalogSection({ category, index, total, count, intro }: SectionProps) {
   const ref = useRef<HTMLElement>(null);
   const reduced = useReducedMotion();
 
-  // Секция проходит экран целиком: 0 — только показалась снизу,
-  // 0.5 — стоит по центру, 1 — ушла за верх.
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "end start"],
   });
 
-  // Текст приходит со своей стороны, кадр — с противоположной.
   const textFrom = index % 2 === 0 ? -1 : 1;
 
   const textX = useTransform(
     scrollYProgress,
-    [0, 0.34, 0.66, 1],
-    [`${textFrom * 62}%`, "0%", "0%", `${textFrom * 62}%`],
+    [0, 0.35, 0.65, 1],
+    [`${textFrom * 50}%`, "0%", "0%", `${textFrom * 50}%`],
   );
   const mediaX = useTransform(
     scrollYProgress,
-    [0, 0.34, 0.66, 1],
-    [`${-textFrom * 62}%`, "0%", "0%", `${-textFrom * 62}%`],
+    [0, 0.35, 0.65, 1],
+    [`${-textFrom * 50}%`, "0%", "0%", `${-textFrom * 50}%`],
   );
-  const fade = useTransform(scrollYProgress, [0, 0.26, 0.74, 1], [0, 1, 1, 0]);
+  const scale = useTransform(scrollYProgress, [0, 0.35, 0.65, 1], [0.94, 1, 1, 0.94]);
+  const fade = useTransform(scrollYProgress, [0, 0.25, 0.75, 1], [0, 1, 1, 0]);
 
   const number = `${String(index + 1).padStart(2, "0")} / ${String(total).padStart(2, "0")}`;
+  const subtitle = CATEGORY_SUBTITLES[category.slug] ?? "Авторская ручная работа";
 
   const text = (
     <motion.div
       style={reduced ? undefined : { x: textX, opacity: fade }}
-      className="flex w-full flex-col justify-center px-5 py-10 will-change-transform md:px-12 lg:px-20"
+      className="flex w-full flex-col justify-center px-5 py-8 md:px-12 lg:px-16 will-change-transform"
     >
-      <p className="eyebrow">{number}</p>
-      <h2 className="mt-4 font-display text-3xl leading-tight md:text-5xl lg:text-6xl">
+      <span className="text-xs font-medium tracking-[0.22em] text-muted uppercase">
+        {number}
+      </span>
+      <h2 className="mt-3 font-display text-3xl leading-tight text-ink md:text-5xl lg:text-6xl">
         {category.title}
       </h2>
+      <p className="mt-3 text-sm font-medium text-accent md:text-base">
+        {subtitle}
+      </p>
       {intro ? (
-        <p className="mt-5 max-w-md text-sm leading-relaxed text-muted md:text-base">{intro}</p>
+        <p className="mt-4 max-w-md text-sm leading-relaxed text-muted md:text-base">{intro}</p>
       ) : (
-        <p className="mt-5 text-sm text-muted md:text-base">
-          {count} {plural(count)}
+        <p className="mt-4 text-sm text-muted md:text-base">
+          Коллекция включает {count} {plural(count)}, выполненных вручную из качественных материалов.
         </p>
       )}
-      <Link
-        href={`/catalog/${category.slug}`}
-        className="link-underline mt-8 inline-block self-start text-sm md:text-base"
-      >
-        Смотреть изделия →
-      </Link>
+      <div className="mt-8 flex items-center gap-6">
+        <Link
+          href={`/catalog/${category.slug}`}
+          className="group inline-flex items-center gap-3 border border-ink bg-transparent px-7 py-3.5 text-sm tracking-wide text-ink transition-all duration-300 hover:bg-ink hover:text-white"
+        >
+          <span>Смотреть изделия</span>
+          <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+        </Link>
+      </div>
     </motion.div>
   );
 
   const media = (
     <motion.div
-      style={reduced ? undefined : { x: mediaX, opacity: fade }}
-      className="relative w-full overflow-hidden rounded-md will-change-transform"
+      style={reduced ? undefined : { x: mediaX, scale, opacity: fade }}
+      className="relative flex items-center justify-center p-4 md:p-8 will-change-transform"
     >
-      <Link
-        href={`/catalog/${category.slug}`}
-        aria-label={`Смотреть раздел «${category.title}»`}
-        className="group relative block h-[44vh] w-full md:h-[72vh]"
-      >
-        <div className="tile-zoom absolute inset-0">
-          <Media
-            image={category.cover}
-            sizes="(min-width: 768px) 50vw, 100vw"
-            priority={index === 0}
-          />
-        </div>
-      </Link>
+      {/* Акварельная клякса сзади */}
+      <Blots variant={index} className="scale-110 opacity-70" />
+
+      {/* Белая рамка со скруглениями */}
+      <div className="relative z-10 w-full max-w-lg rounded-xl bg-surface p-3 shadow-sm md:p-5">
+        <Link
+          href={`/catalog/${category.slug}`}
+          aria-label={`Смотреть раздел «${category.title}»`}
+          className="group relative block aspect-[4/5] w-full overflow-hidden rounded-lg bg-sand md:aspect-[3/4]"
+        >
+          <div className="tile-zoom absolute inset-0">
+            <Media
+              image={category.cover}
+              sizes="(min-width: 1024px) 45vw, (min-width: 768px) 50vw, 100vw"
+              priority={index === 0}
+            />
+          </div>
+          <div className="absolute inset-0 flex items-center justify-center bg-ink/40 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+            <span className="rounded-full bg-white/90 px-5 py-2 text-xs font-medium tracking-widest text-ink uppercase backdrop-blur-sm">
+              Открыть раздел
+            </span>
+          </div>
+        </Link>
+      </div>
     </motion.div>
   );
 
@@ -106,11 +122,9 @@ function CatalogSection({ category, index, total, count, intro }: SectionProps) 
     <section
       ref={ref}
       aria-labelledby={`section-${category.slug}`}
-      className="flex min-h-svh items-center overflow-hidden py-10 md:py-16"
+      className="relative flex min-h-[85vh] items-center overflow-hidden py-12 md:min-h-svh md:py-20"
     >
-      <div className="grid w-full items-center gap-6 px-5 md:grid-cols-2 md:gap-10 md:px-8">
-        {/* Кадр всегда идёт первым в разметке на узком экране: там половин нет,
-            и фотография должна стоять над названием, а не под ним. */}
+      <div className="mx-auto grid w-full max-w-[1500px] items-center gap-8 px-5 md:grid-cols-2 md:gap-12 md:px-8">
         <div className="contents md:hidden">{media}</div>
 
         {index % 2 === 0 ? (
@@ -147,7 +161,7 @@ export function CatalogSections({
   categories: { category: Category; count: number; intro: string | null }[];
 }) {
   return (
-    <div>
+    <div className="divide-y divide-sand/40">
       {categories.map((entry, index) => (
         <CatalogSection
           key={entry.category.slug}

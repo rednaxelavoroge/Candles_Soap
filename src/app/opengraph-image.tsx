@@ -16,15 +16,19 @@ export const contentType = "image/png";
 
 const LEGACY_UA = "Mozilla/5.0 (Windows NT 6.1)";
 
-async function loadFont(family: string, weight: number): Promise<ArrayBuffer> {
-  const css = await fetch(
-    `https://fonts.googleapis.com/css2?family=${family}:wght@${weight}&subset=cyrillic`,
-    { headers: { "user-agent": LEGACY_UA } },
-  ).then((response) => response.text());
+async function loadFont(family: string, weight: number): Promise<ArrayBuffer | null> {
+  try {
+    const css = await fetch(
+      `https://fonts.googleapis.com/css2?family=${family}:wght@${weight}&subset=cyrillic`,
+      { headers: { "user-agent": LEGACY_UA } },
+    ).then((response) => response.text());
 
-  const url = css.match(/src: url\((https:\/\/[^)]+)\)/)?.[1];
-  if (!url) throw new Error(`Не нашёл ttf для ${family}`);
-  return fetch(url).then((response) => response.arrayBuffer());
+    const url = css.match(/src: url\((https:\/\/[^)]+)\)/)?.[1];
+    if (!url) return null;
+    return await fetch(url).then((response) => response.arrayBuffer());
+  } catch {
+    return null;
+  }
 }
 
 export default async function OpengraphImage() {
@@ -102,9 +106,10 @@ export default async function OpengraphImage() {
     {
       ...size,
       fonts: [
-        { name: "Cormorant Garamond", data: display, weight: 400, style: "normal" },
-        { name: "Jost", data: sans, weight: 300, style: "normal" },
+        ...(display ? [{ name: "Cormorant Garamond", data: display, weight: 400 as const, style: "normal" as const }] : []),
+        ...(sans ? [{ name: "Jost", data: sans, weight: 300 as const, style: "normal" as const }] : []),
       ],
     },
   );
 }
+

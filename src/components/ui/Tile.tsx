@@ -20,20 +20,8 @@ type TileProps = {
 };
 
 /**
- * Плитка каталога. В покое это чистая фотография — сетка должна читаться
- * галереей, а не витриной магазина.
- *
- * При наведении кадр темнеет и на нём проступают название и артикул — так
- * заказчица описала это словами: «наводишь пальчиком или мышкой, он сразу
- * темнеет, название и артикул, потому что часто люди не хотят открывать,
- * увидели и название выписали». До этого здесь была белая плашка, снятая
- * с azalea; её просьба точнее — оставляем затемнение.
- *
- * Затемнение берётся тоном --ink с прозрачностью, а не чистым чёрным:
- * чёрного заказчица не хочет нигде.
- *
- * На тач-устройствах наведения нет, поэтому там подпись держится всегда —
- * иначе в сетке не понять, что где. Тем же режимом живут витринные плитки.
+ * Плитка каталога со скруглёнными краями и мягким затемнением на ховере.
+ * При наведении плавно проявляется название изделия, артикул и кнопка «Подробнее».
  */
 export function Tile({
   href,
@@ -45,12 +33,8 @@ export function Tile({
   persistentTitle = false,
   className,
 }: TileProps) {
-  // Полоса по нижнему краю: тач-устройства и витринные плитки, где подпись
-  // видна всегда. Затемнять там весь кадр нельзя — фотографии в сетке
-  // потемнели бы разом и навсегда.
   const band = "absolute inset-x-0 bottom-0 px-4 py-3 md:px-5 md:py-4";
 
-  // Затемнение во весь кадр — только там, где есть наведение.
   const plate = [
     "[@media(hover:hover)]:inset-0",
     "[@media(hover:hover)]:justify-center",
@@ -63,29 +47,33 @@ export function Tile({
   return (
     <Link
       href={href}
-      className={`group relative block overflow-hidden rounded-md bg-sand ${className ?? "aspect-[3/4]"}`}
+      className={`group relative block overflow-hidden rounded-xl bg-sand shadow-sm transition-all duration-300 hover:shadow-md ${className ?? "aspect-[3/4]"}`}
     >
       <div className="tile-zoom absolute inset-0">
         <Media image={image} sizes={sizes} priority={priority} />
       </div>
 
       <div
-        className={`${band} flex flex-col items-center justify-end bg-ink/55 text-center transition-opacity duration-[400ms] ease-[ease] ${
+        className={`${band} flex flex-col items-center justify-end bg-ink/65 text-center backdrop-blur-[2px] transition-opacity duration-300 ${
           persistentTitle ? "" : plate
         }`}
       >
-        <span className="block font-display text-base leading-tight text-white md:text-xl">
+        <span className="block font-display text-base leading-tight text-white md:text-lg lg:text-xl">
           {title}
         </span>
 
         {article ? (
           <>
-            <span aria-hidden="true" className="mt-2 block h-px w-8 bg-white/50" />
-            <span className="mt-2 block text-[0.6875rem] tracking-[0.2em] text-white/80 uppercase">
+            <span aria-hidden="true" className="my-2 block h-px w-8 bg-white/40" />
+            <span className="block text-[0.6875rem] font-medium tracking-[0.2em] text-white/90 uppercase">
               Артикул {article}
             </span>
           </>
         ) : null}
+
+        <span className="mt-3 hidden text-xs font-medium tracking-wider text-sand uppercase group-hover:block">
+          Подробнее →
+        </span>
       </div>
     </Link>
   );

@@ -8,19 +8,11 @@ import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useMemo } from "react";
 
 const GROUP_TITLES: Record<TagGroup, string> = {
-  occasion: "Повод",
+  occasion: "Повод и тематика",
   recipient: "Кому",
   form: "Форма",
 };
 
-/**
- * Фильтрация без перезагрузки: выбранные теги живут в ?tags=, поэтому ссылку на
- * подборку можно отправить заказчице, а «назад» возвращает предыдущий набор.
- *
- * Внутри одной группы теги складываются по «или» (свадьба ИЛИ крестины),
- * между группами — по «и» (свадьба И девушкам). Иначе добавление второго
- * повода сужало бы выдачу до пустоты.
- */
 export function CategoryView({ products, tags }: { products: Product[]; tags: Tag[] }) {
   const router = useRouter();
   const pathname = usePathname();
@@ -76,12 +68,29 @@ export function CategoryView({ products, tags }: { products: Product[]; tags: Ta
   };
 
   return (
-    <>
-      <DragScroller className="px-5 pb-6 md:px-8 md:pb-8">
+    <div className="w-full">
+      {/* Горизонтальная лента подкатегорий / тегов */}
+      <DragScroller className="px-5 pb-8 md:px-8 md:pb-10">
         <div className="flex w-max items-end gap-6 md:gap-10">
+          {/* Кнопка "Все изделия" */}
+          <div className="flex flex-col gap-2">
+            <span className="eyebrow mb-1">Все</span>
+            <button
+              type="button"
+              onClick={() => setTags(new Set())}
+              className={`rounded-full px-5 py-2.5 text-sm font-medium whitespace-nowrap transition-all duration-300 ${
+                active.size === 0
+                  ? "border border-ink bg-ink text-white shadow-sm"
+                  : "border border-sand bg-surface/70 text-ink hover:border-clay"
+              }`}
+            >
+              Все изделия ({products.length})
+            </button>
+          </div>
+
           {groups.map(([group, groupTags]) => (
-            <fieldset key={group} className="flex flex-col gap-2">
-              <legend className="eyebrow mb-2">{GROUP_TITLES[group]}</legend>
+            <fieldset key={group} className="flex flex-col gap-2 border-0 p-0 m-0">
+              <legend className="eyebrow mb-1">{GROUP_TITLES[group]}</legend>
               <div className="flex gap-2">
                 {groupTags.map((tag) => {
                   const selected = active.has(tag.slug);
@@ -91,10 +100,10 @@ export function CategoryView({ products, tags }: { products: Product[]; tags: Ta
                       type="button"
                       onClick={() => toggle(tag.slug)}
                       aria-pressed={selected}
-                      className={`border px-4 py-2 text-sm whitespace-nowrap transition-colors duration-300 ${
+                      className={`rounded-full px-5 py-2.5 text-sm font-medium whitespace-nowrap transition-all duration-300 ${
                         selected
-                          ? "border-ink bg-ink text-surface"
-                          : "border-sand text-ink hover:border-clay"
+                          ? "border border-ink bg-ink text-white shadow-sm"
+                          : "border border-sand bg-surface/70 text-ink hover:border-clay hover:bg-surface"
                       }`}
                     >
                       {tag.title}
@@ -109,21 +118,23 @@ export function CategoryView({ products, tags }: { products: Product[]; tags: Ta
             <button
               type="button"
               onClick={() => setTags(new Set())}
-              className="link-underline pb-2 text-sm whitespace-nowrap text-muted"
+              className="link-underline pb-2.5 text-sm whitespace-nowrap text-muted hover:text-ink"
             >
-              Сбросить
+              Сбросить фильтры
             </button>
           ) : null}
         </div>
       </DragScroller>
 
-      <p aria-live="polite" className="px-5 pb-4 text-sm text-muted md:px-8">
-        {filtered.length > 0
-          ? `${filtered.length} ${pluralItems(filtered.length)}`
-          : "По выбранным фильтрам ничего нет"}
-      </p>
+      <div className="flex items-center justify-between px-5 pb-6 text-sm text-muted md:px-8">
+        <p aria-live="polite">
+          {filtered.length > 0
+            ? `Показано: ${filtered.length} ${pluralItems(filtered.length)}`
+            : "По выбранным критериям ничего не найдено"}
+        </p>
+      </div>
 
       {filtered.length > 0 ? <ProductGrid products={filtered} /> : null}
-    </>
+    </div>
   );
 }
