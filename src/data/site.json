@@ -4,7 +4,13 @@
   "domain": "https://annamanasaryan.art",
   "tagline": "Свечи, мыло и предметы для дома — ручная работа, малые партии",
   "intro": "Я делаю вещи, которые живут в доме каждый день: свечи, которые не стыдно поставить на стол, мыло, которое приятно взять в руки, гипсовый декор со спокойной фактурой. Каждая партия небольшая, поэтому почти любую вещь можно повторить в вашем цвете и аромате.",
-  "portrait": null,
+  "portrait": {
+    "src": "/portrait.webp?v=65807cfb",
+    "width": 1078,
+    "height": 1460,
+    "blurDataURL": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAADwAQCdASoMABAAA4BaJYgCdAEXxWb5SMwA/rC1maFHZWzBYLVVpcnIG2Sgi3nbMZrHV06mO+qnrIrzZsd8YAZzcBb0tepWHLx+3qnJZ66eTkn4C0u/Xd8VaIw4tSA7q1fFcgAA",
+    "alt": "Анна Манасарян со свечой в руках"
+  },
   "contacts": {
     "whatsapp": "+374 98 033 550",
     "phone": "+7 915 003 35 50",
