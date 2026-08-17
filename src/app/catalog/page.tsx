@@ -1,6 +1,6 @@
+import { CatalogSections } from "@/components/catalog/CatalogSections";
 import { Blots } from "@/components/ui/Blots";
-import { Tile } from "@/components/ui/Tile";
-import { getFilledCategories } from "@/lib/content";
+import { getFilledCategories, getProductsByCategory } from "@/lib/content";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -12,10 +12,22 @@ export const metadata: Metadata = {
   },
 };
 
+/**
+ * Каталог разделами во весь экран вместо сетки плиток. Так устроен черновик,
+ * который показала заказчица: половина экрана с текстом, половина с кадром,
+ * стороны чередуются, половины съезжаются и разъезжаются при прокрутке.
+ *
+ * Текста разделов у нас пока нет: сочинять описание её изделий нельзя —
+ * это утверждения о настоящем товаре. Пока стоит количество изделий, поле
+ * под её текст готово.
+ */
 export default function CatalogPage() {
-  // Только наполненные разделы: пустая плитка в сетке выглядит как поломка.
-  const categories = getFilledCategories();
-  const oddOnMobile = categories.length % 2 === 1;
+  // Только наполненные разделы: пустая секция во весь экран читается поломкой.
+  const categories = getFilledCategories().map((category) => ({
+    category,
+    count: getProductsByCategory(category.slug).length,
+    intro: null,
+  }));
 
   return (
     <div className="pt-24 md:pt-32">
@@ -25,35 +37,7 @@ export default function CatalogPage() {
         <h1 className="relative mt-2 font-display text-4xl md:text-6xl">Разделы</h1>
       </header>
 
-      <ul
-        className={`frame-grid grid-cols-2 ${
-          categories.length === 3 ? "md:grid-cols-3" : "md:grid-cols-4"
-        }`}
-      >
-        {categories.map((category, index) => {
-          const isLastOdd = oddOnMobile && index === categories.length - 1;
-          return (
-            <li key={category.slug} className="contents">
-              <Tile
-                href={`/catalog/${category.slug}`}
-                title={category.title}
-                image={category.cover}
-                priority={index < 2}
-                className={
-                  isLastOdd
-                    ? "col-span-2 aspect-[16/9] md:col-span-1 md:aspect-[3/4]"
-                    : "aspect-[4/5] md:aspect-[3/4]"
-                }
-                sizes={
-                  categories.length === 3
-                    ? "(min-width: 768px) 33vw, 100vw"
-                    : "(min-width: 768px) 25vw, 50vw"
-                }
-              />
-            </li>
-          );
-        })}
-      </ul>
+      <CatalogSections categories={categories} />
     </div>
   );
 }
