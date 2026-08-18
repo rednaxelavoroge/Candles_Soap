@@ -1,5 +1,6 @@
 import { ProductGallery } from "@/components/product/ProductGallery";
 import { Tile } from "@/components/ui/Tile";
+import { Watercolor } from "@/components/ui/Watercolor";
 import {
   getCategory,
   getCover,

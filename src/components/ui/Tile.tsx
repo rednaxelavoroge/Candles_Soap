@@ -17,6 +17,12 @@ type TileProps = {
   persistentTitle?: boolean;
   /** Пропорции и раскладка задаются снаружи: `aspect-square md:aspect-[3/4]`. */
   className?: string;
+  /**
+   * Держать собственные пропорции снимка вместо заданных снаружи. Нужно
+   * кладке каталога: горизонтальный кадр должен остаться горизонтальным,
+   * а не обрезаться под общий размер плитки.
+   */
+  natural?: boolean;
 };
 
 /**
@@ -32,6 +38,7 @@ export function Tile({
   article,
   persistentTitle = false,
   className,
+  natural = false,
 }: TileProps) {
   const band = "absolute inset-x-0 bottom-0 px-4 py-3 md:px-5 md:py-4";
 
