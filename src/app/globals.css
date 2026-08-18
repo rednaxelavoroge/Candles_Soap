@@ -10,9 +10,9 @@
   --color-muted: #786a5d;
   --color-accent: #a88763;
 
-  /* Люксовый тёплый темно-коричневый цвет для всех кнопок и активных элементов */
-  --color-btn-brown: #3e2b20;
-  --color-btn-brown-hover: #291c14;
+  /* Мягкий тёплый кофейно-шоколадный коричневый цвет для кнопок и активных элементов */
+  --color-btn-brown: #73533f;
+  --color-btn-brown-hover: #5a3f2e;
 
   --font-display: "Comfortaa", system-ui, -apple-system, sans-serif;
   --font-sans: "Montserrat", system-ui, -apple-system, sans-serif;
@@ -91,7 +91,7 @@
 }
 
 @layer components {
-  /* Премиальная кнопка глубокого темно-коричневого оттенка */
+  /* Премиальная кнопка мягкого благородного коричневого оттенка */
   .btn-brown {
     background-color: var(--color-btn-brown);
     color: #ffffff;
@@ -101,7 +101,7 @@
   .btn-brown:hover {
     background-color: var(--color-btn-brown-hover);
     border-color: var(--color-btn-brown-hover);
-    box-shadow: 0 8px 24px rgba(62, 43, 32, 0.2);
+    box-shadow: 0 6px 20px rgba(115, 83, 63, 0.25);
   }
 
   .btn-brown-outline {
@@ -113,7 +113,7 @@
   .btn-brown-outline:hover {
     background-color: var(--color-btn-brown);
     color: #ffffff;
-    box-shadow: 0 6px 20px rgba(62, 43, 32, 0.15);
+    box-shadow: 0 6px 20px rgba(115, 83, 63, 0.2);
   }
 
   .frame-grid {

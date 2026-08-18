@@ -37,7 +37,7 @@ export function FeaturedCarousel() {
               type="button"
               onClick={() => scroll("left")}
               aria-label="Листать назад"
-              className="group flex h-12 w-12 items-center justify-center rounded-full border border-sand bg-bg transition-all duration-300 hover:border-ink hover:bg-ink hover:text-white"
+              className="group flex h-12 w-12 items-center justify-center rounded-full border border-sand bg-bg transition-all duration-300 hover:border-btn-brown hover:bg-btn-brown hover:text-white shadow-sm"
             >
               <span className="text-lg transition-transform duration-300 group-hover:-translate-x-0.5">←</span>
             </button>
@@ -45,7 +45,7 @@ export function FeaturedCarousel() {
               type="button"
               onClick={() => scroll("right")}
               aria-label="Листать вперёд"
-              className="group flex h-12 w-12 items-center justify-center rounded-full border border-sand bg-bg transition-all duration-300 hover:border-ink hover:bg-ink hover:text-white"
+              className="group flex h-12 w-12 items-center justify-center rounded-full border border-sand bg-bg transition-all duration-300 hover:border-btn-brown hover:bg-btn-brown hover:text-white shadow-sm"
             >
               <span className="text-lg transition-transform duration-300 group-hover:translate-x-0.5">→</span>
             </button>
