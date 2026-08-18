@@ -3,9 +3,7 @@
 import { Blots } from "@/components/ui/Blots";
 import { Media } from "@/components/ui/Media";
 import type { Category } from "@/lib/schemas";
-import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
-import { useRef } from "react";
 
 type SectionProps = {
   category: Category;
@@ -27,75 +25,46 @@ const CATEGORY_SUBTITLES: Record<string, string> = {
 };
 
 function CatalogSection({ category, index, total, count, intro }: SectionProps) {
-  const ref = useRef<HTMLElement>(null);
-  const reduced = useReducedMotion();
-
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"],
-  });
-
-  const textFrom = index % 2 === 0 ? -1 : 1;
-
-  const textX = useTransform(
-    scrollYProgress,
-    [0, 0.35, 0.65, 1],
-    [`${textFrom * 50}%`, "0%", "0%", `${textFrom * 50}%`],
-  );
-  const mediaX = useTransform(
-    scrollYProgress,
-    [0, 0.35, 0.65, 1],
-    [`${-textFrom * 50}%`, "0%", "0%", `${-textFrom * 50}%`],
-  );
-  const scale = useTransform(scrollYProgress, [0, 0.35, 0.65, 1], [0.94, 1, 1, 0.94]);
-  const fade = useTransform(scrollYProgress, [0, 0.25, 0.75, 1], [0, 1, 1, 0]);
-
   const number = `${String(index + 1).padStart(2, "0")} / ${String(total).padStart(2, "0")}`;
   const subtitle = CATEGORY_SUBTITLES[category.slug] ?? "Авторская ручная работа";
 
   const text = (
-    <motion.div
-      style={reduced ? undefined : { x: textX, opacity: fade }}
-      className="flex w-full flex-col justify-center px-5 py-8 md:px-12 lg:px-16 will-change-transform"
-    >
+    <div className="flex w-full flex-col justify-center px-4 py-4 md:px-8 lg:px-12">
       <span className="text-xs font-medium tracking-[0.22em] text-muted uppercase">
         {number}
       </span>
-      <h2 className="mt-3 font-display text-3xl leading-tight text-ink md:text-5xl lg:text-6xl">
+      <h2 className="mt-2 font-display text-2xl leading-tight text-ink sm:text-3xl md:text-4xl lg:text-5xl">
         {category.title}
       </h2>
-      <p className="mt-3 text-sm font-medium text-accent md:text-base">
+      <p className="mt-2 text-sm font-medium text-accent md:text-base">
         {subtitle}
       </p>
       {intro ? (
-        <p className="mt-4 max-w-md text-sm leading-relaxed text-muted md:text-base">{intro}</p>
+        <p className="mt-3 max-w-md text-sm leading-relaxed text-muted md:text-base">{intro}</p>
       ) : (
-        <p className="mt-4 text-sm text-muted md:text-base">
+        <p className="mt-3 text-sm text-muted md:text-base">
           Коллекция включает {count} {plural(count)}, выполненных вручную из качественных материалов.
         </p>
       )}
-      <div className="mt-8 flex items-center gap-6">
+      <div className="mt-6 flex items-center gap-5">
         <Link
           href={`/catalog/${category.slug}`}
-          className="group inline-flex items-center gap-3 border border-ink bg-transparent px-7 py-3.5 text-sm tracking-wide text-ink transition-all duration-300 hover:bg-ink hover:text-white"
+          className="group inline-flex items-center gap-2.5 rounded-md border border-ink bg-transparent px-6 py-3 text-sm tracking-wide text-ink transition-all duration-300 hover:bg-ink hover:text-white"
         >
           <span>Смотреть изделия</span>
           <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
         </Link>
       </div>
-    </motion.div>
+    </div>
   );
 
   const media = (
-    <motion.div
-      style={reduced ? undefined : { x: mediaX, scale, opacity: fade }}
-      className="relative flex items-center justify-center p-4 md:p-8 will-change-transform"
-    >
+    <div className="relative flex items-center justify-center p-3 md:p-6">
       {/* Акварельная клякса сзади */}
-      <Blots variant={index} className="scale-110 opacity-70" />
+      <Blots variant={index} className="scale-105 opacity-60" />
 
       {/* Белая рамка со скруглениями */}
-      <div className="relative z-10 w-full max-w-lg rounded-xl bg-surface p-3 shadow-sm md:p-5">
+      <div className="relative z-10 w-full max-w-md rounded-xl bg-surface p-3 shadow-sm md:p-4">
         <Link
           href={`/catalog/${category.slug}`}
           aria-label={`Смотреть раздел «${category.title}»`}
@@ -104,7 +73,7 @@ function CatalogSection({ category, index, total, count, intro }: SectionProps) 
           <div className="tile-zoom absolute inset-0">
             <Media
               image={category.cover}
-              sizes="(min-width: 1024px) 45vw, (min-width: 768px) 50vw, 100vw"
+              sizes="(min-width: 1024px) 40vw, (min-width: 768px) 50vw, 100vw"
               priority={index === 0}
             />
           </div>
@@ -115,16 +84,15 @@ function CatalogSection({ category, index, total, count, intro }: SectionProps) 
           </div>
         </Link>
       </div>
-    </motion.div>
+    </div>
   );
 
   return (
     <section
-      ref={ref}
       aria-labelledby={`section-${category.slug}`}
-      className="relative flex min-h-[85vh] items-center overflow-hidden py-12 md:min-h-svh md:py-20"
+      className="relative py-8 md:py-12"
     >
-      <div className="mx-auto grid w-full max-w-[1500px] items-center gap-8 px-5 md:grid-cols-2 md:gap-12 md:px-8">
+      <div className="mx-auto grid w-full max-w-[1400px] items-center gap-6 px-5 md:grid-cols-2 md:gap-10 md:px-8">
         <div className="contents md:hidden">{media}</div>
 
         {index % 2 === 0 ? (
@@ -161,7 +129,7 @@ export function CatalogSections({
   categories: { category: Category; count: number; intro: string | null }[];
 }) {
   return (
-    <div className="divide-y divide-sand/40">
+    <div className="divide-y divide-sand/50">
       {categories.map((entry, index) => (
         <CatalogSection
           key={entry.category.slug}

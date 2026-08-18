@@ -4,16 +4,14 @@ import { Blots } from "@/components/ui/Blots";
 import { Media } from "@/components/ui/Media";
 import { getCategory, getProductsByCategory } from "@/lib/content";
 import type { Category } from "@/lib/schemas";
-import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import Link from "next/link";
-import { useRef } from "react";
 
 type ShowcaseItem = {
   category: Category;
   number: string;
   subtitle: string;
   description: string;
-  imageSrc?: string;
 };
 
 const SHOWCASE_ITEMS: ShowcaseItem[] = [
@@ -98,56 +96,29 @@ function ShowcaseSection({
   item: ShowcaseItem;
   index: number;
 }) {
-  const ref = useRef<HTMLElement>(null);
   const reduced = useReducedMotion();
-
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"],
-  });
-
-  // Текст и медиа приходят с противоположных сторон при скролле
-  const textFrom = index % 2 === 0 ? -1 : 1;
-
-  const textX = useTransform(
-    scrollYProgress,
-    [0, 0.35, 0.65, 1],
-    [`${textFrom * 50}%`, "0%", "0%", `${textFrom * 50}%`],
-  );
-  const mediaX = useTransform(
-    scrollYProgress,
-    [0, 0.35, 0.65, 1],
-    [`${-textFrom * 50}%`, "0%", "0%", `${-textFrom * 50}%`],
-  );
-  const scale = useTransform(scrollYProgress, [0, 0.35, 0.65, 1], [0.92, 1, 1, 0.92]);
-  const opacity = useTransform(scrollYProgress, [0, 0.25, 0.75, 1], [0, 1, 1, 0]);
-
-  const categoryData = getCategory(item.category.slug) ?? item.category;
   const count = getProductsByCategory(item.category.slug).length;
 
   const textBlock = (
-    <motion.div
-      style={reduced ? undefined : { x: textX, opacity }}
-      className="flex w-full flex-col justify-center px-4 py-8 md:px-10 lg:px-16 will-change-transform"
-    >
+    <div className="flex w-full flex-col justify-center px-4 py-4 md:px-8 lg:px-12">
       <span className="text-xs font-medium tracking-[0.22em] text-muted uppercase">
         {item.number}
       </span>
-      <h3 className="mt-3 font-display text-3xl leading-tight text-ink md:text-5xl lg:text-6xl">
+      <h3 className="mt-2 font-display text-2xl leading-tight text-ink sm:text-3xl md:text-4xl lg:text-5xl">
         {item.category.title}
       </h3>
-      <p className="mt-3 text-sm font-medium tracking-wide text-accent md:text-base">
+      <p className="mt-2 text-sm font-medium tracking-wide text-accent md:text-base">
         {item.subtitle}
       </p>
-      <p className="mt-5 max-w-lg text-sm leading-relaxed text-muted md:text-base">
+      <p className="mt-3 max-w-lg text-sm leading-relaxed text-muted md:text-base">
         {item.description}
       </p>
-      <div className="mt-8 flex items-center gap-6">
+      <div className="mt-6 flex items-center gap-5">
         <Link
           href={`/catalog/${item.category.slug}`}
-          className="group inline-flex items-center gap-3 border border-ink bg-transparent px-7 py-3.5 text-sm tracking-wide text-ink transition-all duration-300 hover:bg-ink hover:text-white"
+          className="group inline-flex items-center gap-2.5 rounded-md border border-ink bg-transparent px-6 py-3 text-sm tracking-wide text-ink transition-all duration-300 hover:bg-ink hover:text-white"
         >
-          <span>Смотреть коллекцию</span>
+          <span>Смотреть изделия</span>
           <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
         </Link>
         {count > 0 ? (
@@ -156,31 +127,27 @@ function ShowcaseSection({
           </span>
         ) : null}
       </div>
-    </motion.div>
+    </div>
   );
 
   const mediaBlock = (
-    <motion.div
-      style={reduced ? undefined : { x: mediaX, scale, opacity }}
-      className="relative flex items-center justify-center p-4 md:p-8 will-change-transform"
-    >
-      {/* Акварельная клякса сзади кадра — точь-в-точь как в Azalea */}
-      <Blots variant={index} className="scale-110 opacity-70" />
+    <div className="relative flex items-center justify-center p-3 md:p-6">
+      {/* Акварельная клякса сзади кадра */}
+      <Blots variant={index} className="scale-105 opacity-60" />
 
-      {/* Белая рамка вокруг кадра с мягкими углами */}
-      <div className="relative z-10 w-full max-w-lg rounded-lg bg-surface p-3 shadow-sm md:p-5">
+      {/* Белая рамка вокруг кадра со скруглениями */}
+      <div className="relative z-10 w-full max-w-md rounded-xl bg-surface p-3 shadow-sm md:p-4">
         <Link
           href={`/catalog/${item.category.slug}`}
-          className="group relative block aspect-[4/5] w-full overflow-hidden rounded-md bg-sand"
+          className="group relative block aspect-[4/5] w-full overflow-hidden rounded-lg bg-sand md:aspect-[3/4]"
         >
           <div className="tile-zoom absolute inset-0">
             <Media
               image={item.category.cover}
-              sizes="(min-width: 1024px) 45vw, (min-width: 768px) 50vw, 100vw"
+              sizes="(min-width: 1024px) 40vw, (min-width: 768px) 50vw, 100vw"
               priority={index === 0}
             />
           </div>
-          {/* Плавное затемнение на ховере с надписью */}
           <div className="absolute inset-0 flex items-center justify-center bg-ink/40 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
             <span className="rounded-full bg-white/90 px-5 py-2 text-xs font-medium tracking-widest text-ink uppercase backdrop-blur-sm">
               Открыть раздел
@@ -188,17 +155,12 @@ function ShowcaseSection({
           </div>
         </Link>
       </div>
-    </motion.div>
+    </div>
   );
 
   return (
-    <section
-      ref={ref}
-      aria-label={item.category.title}
-      className="relative flex min-h-[85vh] items-center overflow-hidden py-12 md:min-h-svh md:py-20"
-    >
-      <div className="mx-auto grid w-full max-w-[1500px] items-center gap-8 px-5 md:grid-cols-2 md:gap-12 md:px-8">
-        {/* На мобильном кадр идёт первым */}
+    <div className="relative py-8 md:py-12">
+      <div className="mx-auto grid w-full max-w-[1400px] items-center gap-6 px-5 md:grid-cols-2 md:gap-10 md:px-8">
         <div className="contents md:hidden">{mediaBlock}</div>
 
         {index % 2 === 0 ? (
@@ -213,20 +175,20 @@ function ShowcaseSection({
           </>
         )}
       </div>
-    </section>
+    </div>
   );
 }
 
 export function CatalogShowcase() {
   return (
-    <div id="catalog" className="relative w-full bg-bg py-8 md:py-16">
-      <div className="mx-auto max-w-[1500px] px-5 pb-6 text-center md:px-8 md:pb-10">
+    <div id="catalog" className="relative w-full bg-bg py-8 md:py-12">
+      <div className="mx-auto max-w-[1400px] px-5 pb-4 text-center md:px-8 md:pb-6">
         <p className="eyebrow">Авторские коллекции</p>
-        <h2 className="mt-3 font-display text-4xl leading-tight text-ink md:text-6xl">Каталог</h2>
-        <div className="mx-auto mt-4 h-px w-16 bg-clay/50" />
+        <h2 className="mt-2 font-display text-3xl leading-tight text-ink md:text-5xl">Каталог</h2>
+        <div className="mx-auto mt-3 h-px w-16 bg-clay/50" />
       </div>
 
-      <div className="divide-y divide-sand/40">
+      <div className="divide-y divide-sand/50">
         {SHOWCASE_ITEMS.map((item, index) => (
           <ShowcaseSection key={item.category.slug} item={item} index={index} />
         ))}
