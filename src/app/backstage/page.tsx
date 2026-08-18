@@ -16,7 +16,7 @@ export default function BackstagePage() {
 
   return (
     <div className="pt-24 md:pt-32">
-      <header className="relative overflow-hidden px-5 pb-10 md:px-8 md:pb-14">
+      <header className="relative overflow-hidden px-5 pb-8 md:px-8 md:pb-12">
         <span className="eyebrow relative">Мастерская</span>
         <h1 className="relative mt-2 max-w-3xl font-display text-4xl leading-tight text-ink md:text-6xl">
           Кадры и короткие ролики
@@ -28,10 +28,11 @@ export default function BackstagePage() {
 
       {items.length > 0 ? (
         <div className="px-5 md:px-8">
-          <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 [column-fill:_balance]">
+          {/* Сетка в 2 колонки на смартфонах и 3-4 колонки на больших экранах */}
+          <div className="columns-2 sm:columns-2 md:columns-3 lg:columns-4 gap-3.5 md:gap-6 [column-fill:_balance]">
             {items.map((item, index) => (
-              <div key={index} className="mb-6 break-inside-avoid">
-                <BackstageTile item={item} priority={index < 3} index={index} />
+              <div key={index} className="mb-3.5 break-inside-avoid md:mb-6">
+                <BackstageTile item={item} priority={index < 4} index={index} />
               </div>
             ))}
           </div>
