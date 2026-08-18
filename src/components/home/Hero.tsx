@@ -70,17 +70,6 @@ export function Hero() {
           </div>
         </div>
       </div>
-
-      {/* Индикатор скролла */}
-      <div
-        aria-hidden="true"
-        className="relative z-10 flex justify-center pb-4 text-muted md:pb-6"
-      >
-        <a href="#catalog" className="group flex flex-col items-center gap-1.5 text-muted transition-colors hover:text-ink">
-          <span className="text-[0.5625rem] font-semibold tracking-[0.25em] uppercase">Листайте вниз</span>
-          <span className="block h-5 w-px bg-clay transition-transform duration-300 group-hover:scale-y-125" />
-        </a>
-      </div>
     </section>
   );
 }

@@ -12,13 +12,10 @@ type Slide =
 const SWIPE_THRESHOLD = 40;
 
 /**
- * Галерея ракурсов: крупный кадр и лента миниатюр — вертикальная на десктопе,
- * горизонтальная на узком экране. Переключение фейдом, свайп пальцем,
- * стрелки с клавиатуры. Видео живёт отдельным слотом в той же ленте.
- *
- * Кадры отрисованы все сразу и переключаются opacity: так переход остаётся
- * на композиторе и не дёргает layout. Плеер монтируется только когда его
- * слайд стал активным, чтобы ничего не тянуть в первую загрузку.
+ * Премиальная мультимедиа-галерея изделия:
+ * - Крупный основной кадр со скругленными краями и мягкой тенью
+ * - Произвольные пропорции миниатюр (горизонтальные и вертикальные кадры не обрезаются под жесткий квадрат)
+ * - Поддержка видеороликов с бейджем воспроизведения
  */
 export function ProductGallery({
   images,
@@ -35,14 +32,9 @@ export function ProductGallery({
   ];
 
   const [index, setIndex] = useState(0);
-  // Все кадры разом — это четыре больших изображения в первую загрузку ради
-  // одного видимого. Держим в DOM только показанные и один следующий: фейд
-  // остаётся плавным, а в первую загрузку уходит единственный кадр.
   const [mounted, setMounted] = useState<Set<number>>(() => new Set([0]));
   const pointerStart = useRef<number | null>(null);
 
-  // Соседний ракурс подтягиваем после простоя: если начать сразу, он отбирает
-  // канал у первого кадра и утяжеляет LCP.
   useEffect(() => {
     if (slides.length < 2) return;
     const prefetch = () => setMounted((known) => new Set(known).add(1));
@@ -95,8 +87,15 @@ export function ProductGallery({
     go(delta < 0 ? index + 1 : index - 1);
   };
 
+  const currentSlide = slides[index];
+  const currentPoster = currentSlide.kind === "image" ? currentSlide.image : currentSlide.poster;
+  const mainAspect = currentPoster?.width && currentPoster?.height
+    ? `${currentPoster.width} / ${currentPoster.height}`
+    : "4 / 5";
+
   return (
-    <div className="flex flex-col gap-3 md:flex-row-reverse md:gap-5">
+    <div className="flex flex-col gap-4">
+      {/* Главный крупный кадр */}
       <div
         role="tabpanel"
         id={`slide-${index}`}
@@ -105,7 +104,8 @@ export function ProductGallery({
         onKeyDown={onKeyDown}
         onPointerDown={onPointerDown}
         onPointerUp={onPointerUp}
-        className="relative aspect-[4/5] w-full touch-pan-y overflow-hidden bg-sand md:flex-1"
+        style={{ aspectRatio: mainAspect }}
+        className="relative w-full max-h-[70vh] touch-pan-y overflow-hidden rounded-2xl bg-sand/30 shadow-[0_4px_24px_rgba(62,43,32,0.06)] border border-sand/60 transition-all duration-500"
       >
         {slides.map((slide, slideIndex) => (
           <div
@@ -120,7 +120,7 @@ export function ProductGallery({
                 <Media
                   image={slide.image}
                   priority={slideIndex === 0}
-                  sizes="(min-width: 768px) 50vw, 100vw"
+                  sizes="(min-width: 1024px) 50vw, 100vw"
                 />
               ) : null
             ) : slideIndex === index ? (
@@ -130,36 +130,45 @@ export function ProductGallery({
         ))}
       </div>
 
-      <div
-        role="tablist"
-        aria-label="Ракурсы"
-        aria-orientation="vertical"
-        className="no-scrollbar flex gap-3 overflow-x-auto md:w-20 md:flex-col md:overflow-x-visible md:overflow-y-auto lg:w-24"
-      >
-        {slides.map((slide, slideIndex) => {
-          const selected = slideIndex === index;
-          const poster = slide.kind === "image" ? slide.image : slide.poster;
-          return (
-            <button
-              key={slideIndex}
-              type="button"
-              role="tab"
-              aria-selected={selected}
-              aria-controls={`slide-${slideIndex}`}
-              onClick={() => go(slideIndex)}
-              className={`relative aspect-square w-16 shrink-0 overflow-hidden bg-sand transition-opacity duration-300 md:w-full ${
-                selected ? "opacity-100" : "opacity-55 hover:opacity-100"
-              }`}
-            >
-              <Media image={poster} sizes="96px" />
-              {slide.kind === "video" ? <PlayBadge /> : null}
-              <span className="sr-only">
-                {slide.kind === "video" ? "Видео" : `Кадр ${slideIndex + 1}`}
-              </span>
-            </button>
-          );
-        })}
-      </div>
+      {/* Лента миниатюр с естественными пропорциями и скруглениями */}
+      {slides.length > 1 ? (
+        <div
+          role="tablist"
+          aria-label="Ракурсы"
+          className="no-scrollbar flex items-center gap-3 overflow-x-auto pb-2 pt-1"
+        >
+          {slides.map((slide, slideIndex) => {
+            const selected = slideIndex === index;
+            const poster = slide.kind === "image" ? slide.image : slide.poster;
+            const thumbAspect = poster?.width && poster?.height
+              ? `${poster.width} / ${poster.height}`
+              : "4 / 5";
+
+            return (
+              <button
+                key={slideIndex}
+                type="button"
+                role="tab"
+                aria-selected={selected}
+                aria-controls={`slide-${slideIndex}`}
+                onClick={() => go(slideIndex)}
+                style={{ aspectRatio: thumbAspect }}
+                className={`relative h-18 sm:h-20 shrink-0 overflow-hidden rounded-xl bg-sand transition-all duration-300 ${
+                  selected
+                    ? "ring-2 ring-btn-brown opacity-100 shadow-md scale-105"
+                    : "opacity-60 hover:opacity-100 hover:scale-102 border border-sand/60"
+                }`}
+              >
+                <Media image={poster} sizes="120px" />
+                {slide.kind === "video" ? <PlayBadge /> : null}
+                <span className="sr-only">
+                  {slide.kind === "video" ? "Видео" : `Кадр ${slideIndex + 1}`}
+                </span>
+              </button>
+            );
+          })}
+        </div>
+      ) : null}
     </div>
   );
 }
@@ -168,20 +177,17 @@ function PlayBadge() {
   return (
     <span
       aria-hidden="true"
-      className="absolute inset-0 flex items-center justify-center bg-ink/25"
+      className="absolute inset-0 flex items-center justify-center bg-ink/35 backdrop-blur-[1px]"
     >
-      <svg viewBox="0 0 24 24" className="h-7 w-7 fill-surface">
-        <path d="M8 5v14l11-7z" />
-      </svg>
+      <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white/90 shadow-md">
+        <svg viewBox="0 0 24 24" className="ml-0.5 h-4 w-4 fill-btn-brown">
+          <path d="M8 5v14l11-7z" />
+        </svg>
+      </span>
     </span>
   );
 }
 
-/**
- * Локальный файл играем сразу с постером. Внешний ролик до клика — это только
- * картинка и кнопка: iframe плеера монтируется по нажатию, поэтому YouTube и
- * Vimeo не попадают в первую загрузку страницы.
- */
 function VideoSlide({ video, title }: { video: Video; title: string }) {
   const [started, setStarted] = useState(false);
 
@@ -197,8 +203,6 @@ function VideoSlide({ video, title }: { video: Video; title: string }) {
         poster={video.poster.src}
         className="h-full w-full object-cover"
       >
-        {/* mp4 первым: Safari умеет только его. webm — запасной вариант для
-            сборок Chromium без проприетарных кодеков. */}
         <source src={video.src} type="video/mp4" />
         <source src={video.src.replace(/\.mp4$/, ".webm")} type="video/webm" />
         Ваш браузер не поддерживает видео.
@@ -211,7 +215,7 @@ function VideoSlide({ video, title }: { video: Video; title: string }) {
       <button
         type="button"
         onClick={() => setStarted(true)}
-        className="absolute inset-0 h-full w-full"
+        className="absolute inset-0 h-full w-full group"
         aria-label={`Смотреть видео: ${title}`}
       >
         <Image
@@ -223,7 +227,16 @@ function VideoSlide({ video, title }: { video: Video; title: string }) {
           blurDataURL={video.poster.blurDataURL}
           className="object-cover"
         />
-        <PlayBadge />
+        <span
+          aria-hidden="true"
+          className="absolute inset-0 flex items-center justify-center bg-ink/25 group-hover:bg-ink/40 transition-colors"
+        >
+          <span className="flex h-16 w-16 items-center justify-center rounded-full bg-white/95 shadow-xl transition-transform duration-300 group-hover:scale-110">
+            <svg viewBox="0 0 24 24" className="ml-1 h-7 w-7 fill-btn-brown">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+          </span>
+        </span>
       </button>
     );
   }
