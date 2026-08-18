@@ -1,6 +1,5 @@
 "use client";
 
-import { Blots } from "@/components/ui/Blots";
 import { Media } from "@/components/ui/Media";
 import { getCategories, getProductsByCategory } from "@/lib/content";
 import type { Category } from "@/lib/schemas";
@@ -133,16 +132,13 @@ function ShowcaseSection({
       whileInView={reduced ? undefined : { opacity: 1, x: 0, scale: 1 }}
       viewport={{ once: false, amount: 0.25 }}
       transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-      className="relative flex items-center justify-center p-4 md:p-8 will-change-transform"
+      className="relative flex items-center justify-center p-2 md:p-4 will-change-transform"
     >
-      {/* Акварельные брызги в стиле Azalea прямо за фотографией */}
-      <Blots variant={index} className="scale-125 opacity-85 pointer-events-none" />
-
-      {/* Фотография раздела в тонком обрамлении со скруглением */}
-      <div className="relative z-10 w-full max-w-md overflow-hidden rounded-2xl md:rounded-3xl shadow-[0_12px_36px_rgba(62,43,32,0.12)] border border-white/60 transition-transform duration-500 hover:scale-[1.02]">
+      {/* Изображение автора с естественной акварелью без фоновых клякс сайта и без обрезок */}
+      <div className="relative w-full max-w-[480px] overflow-hidden rounded-2xl transition-transform duration-500 hover:scale-[1.02]">
         <Link
           href={`/catalog/${item.category.slug}`}
-          className="group relative block aspect-[4/5] w-full overflow-hidden bg-sand md:aspect-[3/4]"
+          className="group relative block aspect-square w-full overflow-hidden"
         >
           <div className="tile-zoom absolute inset-0">
             <Media
@@ -151,7 +147,7 @@ function ShowcaseSection({
               priority={index === 0}
             />
           </div>
-          <div className="absolute inset-0 flex items-center justify-center bg-ink/35 opacity-0 transition-opacity duration-300 group-hover:opacity-100 backdrop-blur-[2px]">
+          <div className="absolute inset-0 flex items-center justify-center bg-ink/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100 backdrop-blur-[1px]">
             <span className="rounded-full bg-white/95 px-6 py-2.5 text-xs font-semibold tracking-widest text-ink uppercase shadow-md backdrop-blur-sm">
               Открыть раздел →
             </span>

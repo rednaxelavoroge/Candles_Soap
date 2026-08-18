@@ -1,6 +1,5 @@
 "use client";
 
-import { Blots } from "@/components/ui/Blots";
 import { Media } from "@/components/ui/Media";
 import { getCover, getProducts } from "@/lib/content";
 import Link from "next/link";
@@ -64,11 +63,6 @@ export function FeaturedCarousel() {
                 style={{ scrollSnapAlign: "start" }}
                 className="group relative flex-none w-[280px] sm:w-[320px] md:w-[360px]"
               >
-                {/* Акварельная клякса сзади кадра */}
-                <div className="absolute -inset-4 pointer-events-none opacity-40 group-hover:opacity-75 transition-opacity duration-500">
-                  <Blots variant={idx % 4} className="scale-105" />
-                </div>
-
                 <div className="relative rounded-2xl bg-bg p-3 shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-sand/40 transition-all duration-500 hover:shadow-[0_12px_32px_rgba(0,0,0,0.08)] hover:-translate-y-1">
                   <Link
                     href={`/catalog/${product.category}/${product.slug}`}
