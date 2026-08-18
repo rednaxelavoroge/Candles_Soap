@@ -3,12 +3,9 @@
 import { useEffect } from "react";
 
 /**
- * Плавный скролл. Framer Motion читает обычный scrollY, а Lenis именно его и
- * двигает, поэтому useScroll в секциях продолжает работать без интеграций.
- *
- * Библиотека подгружается динамически и уже после простоя: без неё страница
- * полностью рабочая, а в первую загрузку она добавляла блокирующий разбор
- * скрипта. При prefers-reduced-motion не грузим вовсе — остаётся нативный скролл.
+ * Премиальный плавный инерционный скролл в стиле Sansara и Novo.
+ * Framer Motion считывает нативный scrollY, а Lenis плавно интерполирует движение,
+ * создавая ощущение тяжести, мягкости и люксовой динамики.
  */
 export function SmoothScroll() {
   useEffect(() => {
@@ -23,10 +20,10 @@ export function SmoothScroll() {
       if (cancelled) return;
 
       lenis = new Lenis({
-        duration: 1.05,
-        easing: (t) => 1 - Math.pow(1 - t, 3),
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
         smoothWheel: true,
-        // На тач-устройствах оставляем нативную инерцию: она плавнее и дешевле.
+        wheelMultiplier: 0.95,
         syncTouch: false,
       });
 
@@ -38,8 +35,8 @@ export function SmoothScroll() {
     };
 
     const idle = window.requestIdleCallback
-      ? window.requestIdleCallback(start, { timeout: 1200 })
-      : window.setTimeout(start, 300);
+      ? window.requestIdleCallback(start, { timeout: 800 })
+      : window.setTimeout(start, 200);
 
     return () => {
       cancelled = true;

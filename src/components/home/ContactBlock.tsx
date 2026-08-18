@@ -13,20 +13,20 @@ export function ContactBlock() {
   return (
     <section
       id="contacts"
-      className="relative overflow-hidden border-t border-sand bg-bg px-5 py-16 md:px-8 md:py-24"
+      className="relative overflow-hidden border-t border-sand/50 bg-bg px-5 py-20 md:px-8 md:py-28"
       aria-labelledby="contacts-heading"
     >
-      <Blots variant={3} className="opacity-50" />
+      <Blots variant={3} className="opacity-60" />
       <div className="relative z-10 mx-auto max-w-[1500px]">
         <span className="eyebrow">Контакты и заказ</span>
         <h2 id="contacts-heading" className="mt-3 max-w-3xl font-display text-3xl leading-tight text-ink md:text-5xl lg:text-6xl">
           Повторю любую вещь в вашем цвете и аромате
         </h2>
-        <p className="mt-4 max-w-2xl text-base text-muted md:text-lg">
+        <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted md:text-lg">
           Напишите мне лично — обсудим детали заказа, подберём форму, цветовую гамму и ароматы.
         </p>
 
-        <div className="mt-10 flex flex-col gap-8 md:mt-12 md:flex-row md:items-end md:justify-between">
+        <div className="mt-12 flex flex-col gap-10 md:mt-14 md:flex-row md:items-end md:justify-between">
           <ul className="flex flex-col gap-6 md:flex-row md:gap-14">
             {socials.map((social) => (
               <li key={social.label}>
@@ -59,7 +59,7 @@ export function ContactBlock() {
               href={whatsapp}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex shrink-0 items-center justify-center gap-3 rounded-md border border-ink bg-ink px-8 py-4 text-sm font-medium tracking-wide text-white transition-all duration-300 hover:bg-transparent hover:text-ink shadow-sm"
+              className="inline-flex shrink-0 items-center justify-center gap-3 rounded-full border border-ink bg-ink px-9 py-4 text-xs font-semibold tracking-[0.2em] text-white uppercase transition-all duration-300 hover:bg-transparent hover:text-ink hover:shadow-lg"
             >
               <span>Написать в WhatsApp</span>
               <span>→</span>
@@ -67,7 +67,7 @@ export function ContactBlock() {
           ) : null}
         </div>
 
-        <div className="mt-10 flex items-center gap-6">
+        <div className="mt-12 flex items-center gap-6">
           <Link href="/contacts" className="link-underline text-sm font-medium text-muted hover:text-ink">
             Все контактные данные →
           </Link>

@@ -1,8 +1,10 @@
 import { AboutTeaser } from "@/components/home/AboutTeaser";
 import { CatalogShowcase } from "@/components/home/CatalogShowcase";
 import { ContactBlock } from "@/components/home/ContactBlock";
+import { FeaturedCarousel } from "@/components/home/FeaturedCarousel";
 import { Hero } from "@/components/home/Hero";
 import { SplitReveal } from "@/components/home/SplitReveal";
+
 import Link from "next/link";
 
 export default function HomePage() {
@@ -44,8 +46,12 @@ export default function HomePage() {
       {/* 3. Каталог макросекциями со сплит-слайдером как в Azalea */}
       <CatalogShowcase />
 
-      {/* 4. Блок об авторе */}
+      {/* 4. Горизонтальная плавная галерея избранных изделий (Novo & ThemeGoods) */}
+      <FeaturedCarousel />
+
+      {/* 5. Блок об авторе */}
       <AboutTeaser />
+
 
       {/* 5. Контакты и быстрый заказ в WhatsApp */}
       <ContactBlock />
