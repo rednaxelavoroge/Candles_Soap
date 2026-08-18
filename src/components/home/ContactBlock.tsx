@@ -1,11 +1,10 @@
 import { Blots } from "@/components/ui/Blots";
 import { getSite } from "@/lib/content";
-import { getSiteName, getSocialLinks, telHref, whatsappHref } from "@/lib/contacts";
+import { getSiteName, telHref, whatsappHref } from "@/lib/contacts";
 import Link from "next/link";
 
 export function ContactBlock() {
   const { contacts } = getSite();
-  const socials = getSocialLinks();
   const whatsapp = whatsappHref(
     `Здравствуйте! Пишу с сайта ${getSiteName()} — хочу уточнить по поводу изделий ручной работы.`,
   );
@@ -27,28 +26,41 @@ export function ContactBlock() {
         </p>
 
         <div className="mt-12 flex flex-col gap-10 md:mt-14 md:flex-row md:items-end md:justify-between">
-          <ul className="flex flex-col gap-6 md:flex-row md:gap-14">
-            {socials.map((social) => (
-              <li key={social.label}>
-                <span className="eyebrow block">{social.label}</span>
-                <a
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="link-underline mt-1 inline-block text-lg font-medium text-ink md:text-xl"
-                >
-                  {social.value}
-                </a>
-              </li>
-            ))}
+          <ul className="flex flex-col gap-6 md:flex-row md:gap-12">
             {contacts.phone ? (
               <li>
-                <span className="eyebrow block">Телефон</span>
+                <span className="eyebrow block">Телефон (Армения)</span>
                 <a
                   href={telHref(contacts.phone)}
                   className="link-underline mt-1 inline-block text-lg font-medium text-ink md:text-xl"
                 >
                   {contacts.phone}
+                </a>
+              </li>
+            ) : null}
+
+            {contacts.phoneRussia ? (
+              <li>
+                <span className="eyebrow block">Телефон (Россия)</span>
+                <a
+                  href={telHref(contacts.phoneRussia)}
+                  className="link-underline mt-1 inline-block text-lg font-medium text-ink md:text-xl"
+                >
+                  {contacts.phoneRussia}
+                </a>
+              </li>
+            ) : null}
+
+            {contacts.instagram ? (
+              <li>
+                <span className="eyebrow block">Instagram</span>
+                <a
+                  href={`https://instagram.com/${contacts.instagram}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="link-underline mt-1 inline-block text-lg font-medium text-ink md:text-xl"
+                >
+                  @{contacts.instagram}
                 </a>
               </li>
             ) : null}
@@ -59,7 +71,7 @@ export function ContactBlock() {
               href={whatsapp}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex shrink-0 items-center justify-center gap-3 rounded-full border border-ink bg-ink px-9 py-4 text-xs font-semibold tracking-[0.2em] text-white uppercase transition-all duration-300 hover:bg-transparent hover:text-ink hover:shadow-lg"
+              className="inline-flex shrink-0 items-center justify-center gap-3 rounded-full btn-brown px-9 py-4 text-xs font-semibold tracking-[0.2em] uppercase shadow-md"
             >
               <span>Написать в WhatsApp</span>
               <span>→</span>

@@ -3,7 +3,7 @@ import { getSite } from "@/lib/content";
 import { getSocialLinks, telHref, whatsappHref } from "@/lib/contacts";
 import type { Metadata } from "next";
 
-const DESCRIPTION = "WhatsApp, Instagram, Facebook и телефон для заказа изделий ручной работы Анны Манасарян.";
+const DESCRIPTION = "WhatsApp, Instagram, Facebook и телефоны для заказа изделий ручной работы Анны Манасарян.";
 
 export const metadata: Metadata = {
   title: "Контакты — AnnaManasaryan.Art",
@@ -29,13 +29,13 @@ export default function ContactsPage() {
         </p>
       </header>
 
-      <div className="mt-8 px-5 pb-20 md:mt-12 md:px-8">
+      <div className="mt-6 px-5 pb-20 md:mt-10 md:px-8">
         {whatsappBase ? (
           <a
             href={whatsappBase}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 rounded-md border border-ink bg-ink px-8 py-4 text-sm font-medium tracking-wide text-white transition-all duration-300 hover:bg-transparent hover:text-ink shadow-sm"
+            className="inline-flex items-center gap-3 rounded-full btn-brown px-9 py-4 text-xs font-semibold tracking-[0.2em] uppercase shadow-md"
           >
             <span>Написать в WhatsApp</span>
             <span>→</span>
@@ -44,23 +44,23 @@ export default function ContactsPage() {
 
         <div className="mt-12 max-w-2xl">
           <ul className="divide-y divide-sand border-y border-sand">
-            {socials.map((social) => (
-              <li key={social.label} className="flex justify-between items-center py-5">
-                <span className="eyebrow">{social.label}</span>
+            {contacts.whatsapp ? (
+              <li className="flex justify-between items-center py-5">
+                <span className="eyebrow">WhatsApp</span>
                 <a
-                  href={social.href}
+                  href={whatsappBase ?? "#"}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="link-underline text-lg font-medium text-ink md:text-xl"
                 >
-                  {social.value}
+                  {contacts.whatsapp} (Армения)
                 </a>
               </li>
-            ))}
+            ) : null}
 
             {contacts.phone ? (
               <li className="flex justify-between items-center py-5">
-                <span className="eyebrow">Телефон / Звонки</span>
+                <span className="eyebrow">Телефон (Армения)</span>
                 <a
                   href={telHref(contacts.phone)}
                   className="link-underline text-lg font-medium text-ink md:text-xl"
@@ -70,21 +70,34 @@ export default function ContactsPage() {
               </li>
             ) : null}
 
-            {contacts.email ? (
+            {contacts.phoneRussia ? (
               <li className="flex justify-between items-center py-5">
-                <span className="eyebrow">Электронная почта</span>
+                <span className="eyebrow">Телефон (Россия)</span>
                 <a
-                  href={`mailto:${contacts.email}`}
+                  href={telHref(contacts.phoneRussia)}
                   className="link-underline text-lg font-medium text-ink md:text-xl"
                 >
-                  {contacts.email}
+                  {contacts.phoneRussia}
+                </a>
+              </li>
+            ) : null}
+
+            {contacts.instagram ? (
+              <li className="flex justify-between items-center py-5">
+                <span className="eyebrow">Instagram</span>
+                <a
+                  href={`https://instagram.com/${contacts.instagram}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="link-underline text-lg font-medium text-ink md:text-xl"
+                >
+                  @{contacts.instagram}
                 </a>
               </li>
             ) : null}
           </ul>
 
-          {contacts.city ? <p className="mt-6 text-sm text-muted">{contacts.city}</p> : null}
-          <p className="mt-6 text-sm font-medium text-muted">С уважением, {owner}</p>
+          <p className="mt-8 text-sm font-medium text-muted">С уважением, {owner}</p>
         </div>
       </div>
     </div>

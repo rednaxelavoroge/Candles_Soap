@@ -6,8 +6,7 @@ function toDigits(value: string): string {
 }
 
 /**
- * Ссылка на WhatsApp с предзаполненным текстом. Второй номер сюда не попадает:
- * заказчица просила показывать его как обычный телефон.
+ * Ссылка на WhatsApp с предзаполненным текстом (на армянский номер).
  */
 export function whatsappHref(message?: string): string | null {
   const { contacts } = getSite();
@@ -23,14 +22,14 @@ export function telHref(value: string): string {
 
 export type SocialLink = { label: string; href: string; value: string };
 
-/** Соцсети в порядке приоритета. Пустые каналы просто не попадают в список. */
+/** Соцсети в порядке приоритета. */
 export function getSocialLinks(): SocialLink[] {
   const { contacts } = getSite();
   const links: SocialLink[] = [];
 
   const whatsapp = whatsappHref();
   if (whatsapp && contacts.whatsapp) {
-    links.push({ label: "WhatsApp", href: whatsapp, value: contacts.whatsapp });
+    links.push({ label: "WhatsApp", href: whatsapp, value: `${contacts.whatsapp} (Армения)` });
   }
   if (contacts.instagram) {
     links.push({
@@ -57,8 +56,6 @@ export function getSiteName(): string {
 
 /**
  * Текст, который подставляется в WhatsApp при обращении из карточки товара.
- * Название не оборачиваем в кавычки: они почти всегда уже есть в самом
- * названии, и получалось «Свеча «Морская галька»».
  */
 export function productEnquiry(title: string): string {
   return `Здравствуйте! Пишу с сайта ${getSiteName()}. Интересует: ${title}. Подскажите, пожалуйста, по наличию и срокам.`;

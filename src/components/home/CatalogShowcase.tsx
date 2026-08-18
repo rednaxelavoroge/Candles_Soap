@@ -125,7 +125,7 @@ function ShowcaseSection({
       <div className="mt-7 flex items-center gap-5">
         <Link
           href={`/catalog/${item.category.slug}`}
-          className="group inline-flex items-center gap-2.5 rounded-full border border-ink bg-transparent px-7 py-3 text-sm tracking-wide text-ink transition-all duration-300 hover:bg-ink hover:text-white"
+          className="group inline-flex items-center gap-2.5 rounded-full btn-brown-outline px-7 py-3 text-xs font-semibold tracking-[0.18em] uppercase"
         >
           <span>Смотреть изделия</span>
           <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>

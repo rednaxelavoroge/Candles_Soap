@@ -88,10 +88,11 @@ export const siteSchema = z.object({
   intro: z.string().min(1),
   portrait: imageSchema.nullable(),
   contacts: z.object({
-    /** Номер для кнопки «Написать в WhatsApp». */
+    /** Номер для кнопки «Написать в WhatsApp» и звонков (Армения). */
     whatsapp: z.string().nullable(),
-    /** Второй номер: показываем как телефон, кнопки WhatsApp у него нет. */
     phone: z.string().nullable(),
+    /** Российский номер телефона. */
+    phoneRussia: z.string().nullable().optional(),
     instagram: z.string().nullable(),
     facebook: z.string().nullable(),
     email: z.string().nullable(),

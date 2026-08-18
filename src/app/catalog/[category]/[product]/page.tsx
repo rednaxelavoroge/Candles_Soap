@@ -132,7 +132,7 @@ export default async function ProductPage({ params }: { params: Promise<Params> 
                 href={whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-3 rounded-md border border-ink bg-ink px-8 py-4 text-sm font-medium tracking-wide text-white transition-all duration-300 hover:bg-transparent hover:text-ink shadow-sm"
+                className="inline-flex items-center justify-center gap-3 rounded-full btn-brown px-9 py-4 text-xs font-semibold tracking-[0.2em] uppercase shadow-md"
               >
                 <span>Написать в WhatsApp</span>
                 <span>→</span>
