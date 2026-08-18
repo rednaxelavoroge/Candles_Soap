@@ -37,7 +37,6 @@ export default async function CategoryPage({ params }: { params: Promise<Params>
   return (
     <div className="pt-24 md:pt-32">
       <header className="relative overflow-hidden px-5 pt-4 pb-10 md:px-8 md:pb-12">
-        <Blots variant={2} />
         <Link href="/catalog" className="link-underline eyebrow relative">
           Каталог
         </Link>

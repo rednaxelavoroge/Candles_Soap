@@ -1,35 +1,49 @@
 "use client";
 
-import { Blots } from "@/components/ui/Blots";
 import { Media } from "@/components/ui/Media";
+import { getCategories, getProductsByCategory } from "@/lib/content";
 import type { Category } from "@/lib/schemas";
 import { motion, useReducedMotion } from "framer-motion";
 import Link from "next/link";
 
-type SectionProps = {
+export function CatalogSections() {
+  const categories = getCategories();
+
+  return (
+    <div className="flex flex-col gap-12 md:gap-20">
+      {categories.map((category, index) => (
+        <CatalogSectionItem
+          key={category.slug}
+          category={category}
+          index={index}
+          total={categories.length}
+        />
+      ))}
+    </div>
+  );
+}
+
+const SHOWCASE_DESC: Record<string, string> = {
+  soap: "Мыло варится вручную небольшими партиями — с добавлением растительных масел и мягким, обволакивающим ароматом.",
+  candles: "Интерьерные и формовые свечи из 100% натурального соевого воска с хлопковыми и деревянными фитилями.",
+  sachet: "Аромасаше и флорентийские пластины для шкафов, гардеробных и спальни со стойким шлейфом.",
+  gypsum: "Подсвечники, подносы, шкатулки и вазы из высокопрочного скульптурного гипса с бархатистой текстурой.",
+};
+
+function CatalogSectionItem({
+  category,
+  index,
+  total,
+}: {
   category: Category;
   index: number;
   total: number;
-  count: number;
-  intro: string | null;
-};
-
-const CATEGORY_SUBTITLES: Record<string, string> = {
-  candles: "Свечи из соевого воска и авторские формы",
-  soap: "Мыло ручной работы с натуральными маслами",
-  gypsum: "Скульптурные подсвечники, шкатулки и блюда",
-  sachet: "Деликатные восковые и льняные аромасаше",
-  holders: "Фактурные подсвечники из гипса",
-  boxes: "Рельефные шкатулки и коробочки",
-  plates: "Декоративные подносы и тарелки",
-  decor: "Предметы декора для уютного дома",
-};
-
-function CatalogSection({ category, index, total, count, intro }: SectionProps) {
+}) {
   const reduced = useReducedMotion();
-  const number = `${String(index + 1).padStart(2, "0")} / ${String(total).padStart(2, "0")}`;
-  const subtitle = CATEGORY_SUBTITLES[category.slug] ?? "Авторская ручная работа";
+  const count = getProductsByCategory(category.slug).length;
+  const num = `0${index + 1} / 0${total}`;
   const textFrom = index % 2 === 0 ? -1 : 1;
+  const description = SHOWCASE_DESC[category.slug] ?? "Авторские изделия ручной работы малых партий.";
 
   const text = (
     <motion.div
@@ -40,21 +54,14 @@ function CatalogSection({ category, index, total, count, intro }: SectionProps) 
       className="flex w-full flex-col justify-center px-4 py-4 md:px-8 lg:px-12 will-change-transform"
     >
       <span className="text-xs font-medium tracking-[0.22em] text-accent uppercase">
-        {number}
+        {num}
       </span>
-      <h2 className="mt-3 font-display text-2xl leading-tight text-ink sm:text-3xl md:text-4xl lg:text-5xl">
+      <h2 className="mt-3 font-display text-3xl leading-tight text-ink sm:text-4xl md:text-5xl">
         {category.title}
       </h2>
-      <p className="mt-2 text-sm font-medium text-clay md:text-base">
-        {subtitle}
+      <p className="mt-4 max-w-lg text-base leading-relaxed text-muted md:text-lg">
+        {description}
       </p>
-      {intro ? (
-        <p className="mt-4 max-w-md text-sm leading-relaxed text-muted md:text-base">{intro}</p>
-      ) : (
-        <p className="mt-4 text-sm text-muted md:text-base">
-          Коллекция включает {count} {plural(count)}, выполненных вручную из качественных материалов.
-        </p>
-      )}
       <div className="mt-7 flex items-center gap-5">
         <Link
           href={`/catalog/${category.slug}`}
@@ -63,27 +70,28 @@ function CatalogSection({ category, index, total, count, intro }: SectionProps) 
           <span>Смотреть изделия</span>
           <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
         </Link>
+        {count > 0 ? (
+          <span className="text-xs tracking-wider text-muted">
+            {count} {count === 1 ? "изделие" : count < 5 ? "изделия" : "изделий"}
+          </span>
+        ) : null}
       </div>
     </motion.div>
   );
 
   const media = (
     <motion.div
-      initial={reduced ? undefined : { opacity: 0, x: -textFrom * 45, scale: 0.96 }}
+      initial={reduced ? undefined : { opacity: 0, x: -textFrom * 45, scale: 0.98 }}
       whileInView={reduced ? undefined : { opacity: 1, x: 0, scale: 1 }}
       viewport={{ once: false, amount: 0.25 }}
       transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-      className="relative flex items-center justify-center p-4 md:p-6 will-change-transform"
+      className="relative flex items-center justify-center p-2 md:p-6 will-change-transform"
     >
-      {/* Акварельная клякса сзади */}
-      <Blots variant={index} className="scale-110 opacity-70" />
-
-      {/* Белая рамка со скруглениями */}
-      <div className="relative z-10 w-full max-w-md rounded-2xl bg-surface p-3.5 shadow-[0_4px_20px_rgba(0,0,0,0.05)] transition-transform duration-500 hover:scale-[1.02] md:p-5">
+      <div className="relative z-10 w-full max-w-md overflow-hidden rounded-2xl md:rounded-3xl shadow-[0_8px_30px_rgba(62,43,32,0.06)] transition-transform duration-500 hover:scale-[1.02]">
         <Link
           href={`/catalog/${category.slug}`}
           aria-label={`Смотреть раздел «${category.title}»`}
-          className="group relative block aspect-[4/5] w-full overflow-hidden rounded-xl bg-sand md:aspect-[3/4]"
+          className="group relative block aspect-[4/5] w-full overflow-hidden bg-sand md:aspect-[3/4]"
         >
           <div className="tile-zoom absolute inset-0">
             <Media
@@ -92,8 +100,8 @@ function CatalogSection({ category, index, total, count, intro }: SectionProps) 
               priority={index === 0}
             />
           </div>
-          <div className="absolute inset-0 flex items-center justify-center bg-ink/40 opacity-0 transition-opacity duration-300 group-hover:opacity-100 backdrop-blur-[2px]">
-            <span className="rounded-full bg-white/90 px-6 py-2.5 text-xs font-semibold tracking-widest text-ink uppercase shadow-md backdrop-blur-sm">
+          <div className="absolute inset-0 flex items-center justify-center bg-ink/35 opacity-0 transition-opacity duration-300 group-hover:opacity-100 backdrop-blur-[2px]">
+            <span className="rounded-full bg-white/95 px-6 py-2.5 text-xs font-semibold tracking-widest text-ink uppercase shadow-md backdrop-blur-sm">
               Открыть раздел →
             </span>
           </div>
@@ -103,58 +111,24 @@ function CatalogSection({ category, index, total, count, intro }: SectionProps) 
   );
 
   return (
-    <section
-      aria-labelledby={`section-${category.slug}`}
-      className="relative overflow-hidden py-10 md:py-16"
-    >
+    <div className="relative overflow-hidden py-8 md:py-14 border-t border-sand/40">
       <div className="mx-auto grid w-full max-w-[1400px] items-center gap-8 px-5 md:grid-cols-2 md:gap-12 md:px-8">
         <div className="contents md:hidden">{media}</div>
 
         {index % 2 === 0 ? (
           <>
-            <span id={`section-${category.slug}`} className="sr-only">
-              {category.title}
-            </span>
-            {text}
+            <div className="hidden md:block">{text}</div>
             <div className="hidden md:block">{media}</div>
           </>
         ) : (
           <>
             <div className="hidden md:block">{media}</div>
-            {text}
+            <div className="hidden md:block">{text}</div>
           </>
         )}
+
+        <div className="contents md:hidden">{text}</div>
       </div>
-    </section>
-  );
-}
-
-function plural(count: number) {
-  const tail = count % 10;
-  const hundred = count % 100;
-  if (hundred >= 11 && hundred <= 14) return "изделий";
-  if (tail === 1) return "изделие";
-  if (tail >= 2 && tail <= 4) return "изделия";
-  return "изделий";
-}
-
-export function CatalogSections({
-  categories,
-}: {
-  categories: { category: Category; count: number; intro: string | null }[];
-}) {
-  return (
-    <div className="divide-y divide-sand/40">
-      {categories.map((entry, index) => (
-        <CatalogSection
-          key={entry.category.slug}
-          category={entry.category}
-          index={index}
-          total={categories.length}
-          count={entry.count}
-          intro={entry.intro}
-        />
-      ))}
     </div>
   );
 }

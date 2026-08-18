@@ -1,4 +1,3 @@
-import { Blots } from "@/components/ui/Blots";
 import { getSite } from "@/lib/content";
 import { getSocialLinks, telHref, whatsappHref } from "@/lib/contacts";
 import type { Metadata } from "next";
@@ -19,7 +18,6 @@ export default function ContactsPage() {
   return (
     <div className="pt-24 md:pt-32">
       <header className="relative overflow-hidden px-5 pb-8 md:px-8 md:pb-12">
-        <Blots variant={3} className="opacity-50" />
         <span className="eyebrow relative">Связаться с автором</span>
         <h1 className="relative mt-2 max-w-2xl font-display text-4xl leading-tight text-ink md:text-6xl">
           Напишите — отвечу лично

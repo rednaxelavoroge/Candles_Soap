@@ -1,5 +1,4 @@
 import { BackstageTile } from "@/components/backstage/BackstageItem";
-import { Blots } from "@/components/ui/Blots";
 import { getBackstage } from "@/lib/content";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -18,7 +17,6 @@ export default function BackstagePage() {
   return (
     <div className="pt-24 md:pt-32">
       <header className="relative overflow-hidden px-5 pb-10 md:px-8 md:pb-14">
-        <Blots variant={1} className="opacity-70" />
         <span className="eyebrow relative">Мастерская</span>
         <h1 className="relative mt-2 max-w-3xl font-display text-4xl leading-tight text-ink md:text-6xl">
           Кадры и короткие ролики

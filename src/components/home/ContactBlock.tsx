@@ -1,4 +1,3 @@
-import { Blots } from "@/components/ui/Blots";
 import { getSite } from "@/lib/content";
 import { getSiteName, telHref, whatsappHref } from "@/lib/contacts";
 import Link from "next/link";
@@ -15,7 +14,6 @@ export function ContactBlock() {
       className="relative overflow-hidden border-t border-sand/50 bg-bg px-5 py-20 md:px-8 md:py-28"
       aria-labelledby="contacts-heading"
     >
-      <Blots variant={3} className="opacity-60" />
       <div className="relative z-10 mx-auto max-w-[1500px]">
         <span className="eyebrow">Контакты и заказ</span>
         <h2 id="contacts-heading" className="mt-3 max-w-3xl font-display text-3xl leading-tight text-ink md:text-5xl lg:text-6xl">
