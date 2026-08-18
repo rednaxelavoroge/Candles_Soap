@@ -31,7 +31,17 @@
   },
   {
     "slug": "food",
-    "title": "Еда",
+    "title": "Еда и сладости",
+    "group": "occasion"
+  },
+  {
+    "slug": "sweets",
+    "title": "Сладости и десерты",
+    "group": "occasion"
+  },
+  {
+    "slug": "gift",
+    "title": "Подарочные наборы",
     "group": "occasion"
   },
   {
@@ -62,6 +72,21 @@
   {
     "slug": "geometric",
     "title": "Геометрической формы",
+    "group": "form"
+  },
+  {
+    "slug": "podsvechniki",
+    "title": "Подсвечники",
+    "group": "form"
+  },
+  {
+    "slug": "shkatulki",
+    "title": "Шкатулки",
+    "group": "form"
+  },
+  {
+    "slug": "podnosy",
+    "title": "Подносы",
     "group": "form"
   }
 ]

@@ -1,5 +1,6 @@
 "use client";
 
+import { Blots } from "@/components/ui/Blots";
 import { Media } from "@/components/ui/Media";
 import { getCategories, getProductsByCategory } from "@/lib/content";
 import type { Category } from "@/lib/schemas";
@@ -14,25 +15,30 @@ type ShowcaseItem = {
 };
 
 const SHOWCASE_DATA: Record<string, { subtitle: string; description: string }> = {
-  soap: {
-    subtitle: "Нежная пена и натуральные масла",
-    description:
-      "Мыло варится вручную небольшими партиями — с добавлением растительных масел и мягким, обволакивающим ароматом. Изящные цветочные корзины и десертные композиции.",
-  },
   candles: {
     subtitle: "Тепло соевого воска и хлопка",
     description:
       "Интерьерные и формовые свечи из 100% натурального воска. Мягкое чистое горение, хлопковые и деревянные фитили, деликатные авторские композиции.",
   },
+  soap: {
+    subtitle: "Нежная пена и натуральные масла",
+    description:
+      "Мыло варится вручную небольшими партиями — с добавлением растительных масел и мягким, обволакивающим ароматом. Изящные цветочные корзины и десертные наборы.",
+  },
+  gypsum: {
+    subtitle: "Подсвечники, шкатулки и подносы",
+    description:
+      "Шкатулки, подсвечники, подносы, тарелки и вазы из высокопрочного скульптурного гипса. Чистые линии, приятная бархатистая текстура и долговечность.",
+  },
+  decor: {
+    subtitle: "Предметы и акценты для дома",
+    description:
+      "Интерьерные раковины, композиции цветочный луг, лодочки и ванночки. Авторские детали, создающие гармонию и стиль в любом пространстве.",
+  },
   sachet: {
     subtitle: "Тонкий аромат вашего дома",
     description:
-      "Аромасаше и флорентийские пластины для шкафов, гардеробных и спальни. Сохраняют стойкий благородный шлейф до нескольких месяцев.",
-  },
-  gypsum: {
-    subtitle: "Фактура и спокойствие камня",
-    description:
-      "Подсвечники, подносы, шкатулки и вазы из высокопрочного скульптурного гипса. Чистые линии, приятная бархатистая текстура и долговечность.",
+      "Аромасаше, флорентийские пластины и аромадиски для гардеробных, спален и комодов. Сохраняют стойкий благородный шлейф до нескольких месяцев.",
   },
 };
 
@@ -55,12 +61,11 @@ export function CatalogShowcase() {
   return (
     <section id="catalog" className="relative overflow-hidden bg-bg py-16 md:py-24" aria-label="Каталог изделий">
       <div className="mx-auto max-w-[1500px] px-5 pb-12 md:px-8">
-        <span className="eyebrow">Разделы коллекции</span>
-        <h2 className="mt-2 font-display text-3xl leading-tight text-ink sm:text-4xl md:text-5xl lg:text-6xl">
-          Каталог мастерской
+        <h2 className="font-display text-3xl leading-tight text-ink sm:text-4xl md:text-5xl lg:text-6xl">
+          Каталог
         </h2>
         <p className="mt-3 max-w-2xl text-base leading-relaxed text-muted md:text-lg">
-          Выберите направление, чтобы посмотреть все доступные формы, палитру оттенков и варианты ароматов.
+          Выберите раздел, чтобы посмотреть все доступные изделия, палитру оттенков и варианты ароматов.
         </p>
       </div>
 
@@ -128,10 +133,13 @@ function ShowcaseSection({
       whileInView={reduced ? undefined : { opacity: 1, x: 0, scale: 1 }}
       viewport={{ once: false, amount: 0.25 }}
       transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-      className="relative flex items-center justify-center p-2 md:p-6 will-change-transform"
+      className="relative flex items-center justify-center p-4 md:p-8 will-change-transform"
     >
-      {/* Изображение раздела прямо со скруглением без внешних белых рамок */}
-      <div className="relative z-10 w-full max-w-md overflow-hidden rounded-2xl md:rounded-3xl shadow-[0_8px_30px_rgba(62,43,32,0.06)] transition-transform duration-500 hover:scale-[1.02]">
+      {/* Акварельные брызги в стиле Azalea прямо за фотографией */}
+      <Blots variant={index} className="scale-125 opacity-85 pointer-events-none" />
+
+      {/* Фотография раздела в тонком обрамлении со скруглением */}
+      <div className="relative z-10 w-full max-w-md overflow-hidden rounded-2xl md:rounded-3xl shadow-[0_12px_36px_rgba(62,43,32,0.12)] border border-white/60 transition-transform duration-500 hover:scale-[1.02]">
         <Link
           href={`/catalog/${item.category.slug}`}
           className="group relative block aspect-[4/5] w-full overflow-hidden bg-sand md:aspect-[3/4]"

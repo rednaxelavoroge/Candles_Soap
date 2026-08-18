@@ -1,5 +1,34 @@
 [
   {
+    "id": "soap-desert-na-blyudtse-serdtse",
+    "slug": "desert-na-blyudtse-serdtse",
+    "title": "Десертный набор на блюдце-сердце",
+    "article": "МЫ-07",
+    "category": "soap",
+    "tags": [
+      "sweets",
+      "gift",
+      "women"
+    ],
+    "images": [
+      {
+        "src": "/catalog/featured/anna-art-1.webp",
+        "width": 1254,
+        "height": 1254,
+        "blurDataURL": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAQAgCdASoQABAAA4BaJQBOgB5yvee2+JmAAP7xgZmx93D1yuh1poQDv8SKgSD2KslLmWHDvQO+ISH2tZ+ysc68InCHH3jETPjYDZtUhCIu7Zj9GWbvQHIiQ/K1wAAA",
+        "alt": "Десертный набор на блюдце-сердце"
+      }
+    ],
+    "video": null,
+    "price": null,
+    "description": "Нежная десертная композиция из мыла ручной работы в виде ягодных пирожных и безе на изящном блюдце-сердце. Натуральные масла и тонкий десертный аромат.",
+    "specs": {
+      "composition": "Натуральная мыльная основа, ухаживающие масла, косметический пигмент, гипоаллергенный аромат",
+      "scent": "Ягодный мусс и ваниль",
+      "weight": "~180 г"
+    }
+  },
+  {
     "id": "candles-ledyanaya-kupel",
     "slug": "ledyanaya-kupel",
     "title": "Ледяная купель",
@@ -421,9 +450,10 @@
     "slug": "meshochek",
     "title": "Мешочек",
     "article": "ПС-04",
-    "category": "holders",
+    "category": "gypsum",
     "tags": [
-      "new-year"
+      "new-year",
+      "podsvechniki"
     ],
     "images": [
       {
@@ -470,10 +500,11 @@
     "slug": "botinochki",
     "title": "Ботиночки",
     "article": "ПС-05",
-    "category": "holders",
+    "category": "gypsum",
     "tags": [
       "new-year",
-      "kids"
+      "kids",
+      "podsvechniki"
     ],
     "images": [
       {
@@ -1065,8 +1096,10 @@
     "slug": "riflenye-podsvechniki",
     "title": "Рифлёные подсвечники",
     "article": "ПС-01",
-    "category": "holders",
-    "tags": [],
+    "category": "gypsum",
+    "tags": [
+      "podsvechniki"
+    ],
     "images": [
       {
         "src": "/catalog/holders/riflenye-podsvechniki-01.webp",
@@ -1112,9 +1145,10 @@
     "slug": "granenyy-kamen",
     "title": "Гранёный камень",
     "article": "ПС-02",
-    "category": "holders",
+    "category": "gypsum",
     "tags": [
-      "men"
+      "men",
+      "podsvechniki"
     ],
     "images": [
       {
@@ -1147,8 +1181,10 @@
     "slug": "shary",
     "title": "Шары",
     "article": "ПС-03",
-    "category": "holders",
-    "tags": [],
+    "category": "gypsum",
+    "tags": [
+      "podsvechniki"
+    ],
     "images": [
       {
         "src": "/catalog/holders/shary-01.webp",
@@ -1194,8 +1230,10 @@
     "slug": "riflenaya-shkatulka",
     "title": "Рифлёная шкатулка",
     "article": "ШК-01",
-    "category": "boxes",
-    "tags": [],
+    "category": "gypsum",
+    "tags": [
+      "shkatulki"
+    ],
     "images": [
       {
         "src": "/catalog/boxes/riflenaya-shkatulka-01.webp",
@@ -1234,8 +1272,10 @@
     "slug": "yashchichki",
     "title": "Ящички",
     "article": "ШК-02",
-    "category": "boxes",
-    "tags": [],
+    "category": "gypsum",
+    "tags": [
+      "shkatulki"
+    ],
     "images": [
       {
         "src": "/catalog/boxes/yashchichki-01.webp",
@@ -1274,10 +1314,11 @@
     "slug": "azhurnaya-shkatulka",
     "title": "Ажурная шкатулка",
     "article": "ШК-03",
-    "category": "boxes",
+    "category": "gypsum",
     "tags": [
       "wedding",
-      "women"
+      "women",
+      "shkatulki"
     ],
     "images": [
       {
@@ -1310,8 +1351,10 @@
     "slug": "paskhalnoe-yaytso",
     "title": "Пасхальное яйцо",
     "article": "ШК-04",
-    "category": "boxes",
-    "tags": [],
+    "category": "gypsum",
+    "tags": [
+      "shkatulki"
+    ],
     "images": [
       {
         "src": "/catalog/boxes/paskhalnoe-yaytso-01.webp",
@@ -1343,8 +1386,10 @@
     "slug": "shestigranniki",
     "title": "Шестигранники",
     "article": "ПД-01",
-    "category": "plates",
-    "tags": [],
+    "category": "gypsum",
+    "tags": [
+      "podnosy"
+    ],
     "images": [
       {
         "src": "/catalog/plates/shestigranniki-01.webp",
@@ -1376,8 +1421,10 @@
     "slug": "spil-dereva",
     "title": "Спил дерева",
     "article": "ПД-02",
-    "category": "plates",
-    "tags": [],
+    "category": "gypsum",
+    "tags": [
+      "podnosy"
+    ],
     "images": [
       {
         "src": "/catalog/plates/spil-dereva-01.webp",
@@ -1409,8 +1456,10 @@
     "slug": "volna",
     "title": "Волна",
     "article": "ПД-03",
-    "category": "plates",
-    "tags": [],
+    "category": "gypsum",
+    "tags": [
+      "podnosy"
+    ],
     "images": [
       {
         "src": "/catalog/plates/volna-01.webp",
@@ -1442,9 +1491,10 @@
     "slug": "drapirovka",
     "title": "Драпировка",
     "article": "ПД-04",
-    "category": "plates",
+    "category": "gypsum",
     "tags": [
-      "wedding"
+      "wedding",
+      "podnosy"
     ],
     "images": [
       {
@@ -1477,9 +1527,10 @@
     "slug": "serdtse-i-zvezda",
     "title": "Сердце и звезда",
     "article": "ПД-05",
-    "category": "plates",
+    "category": "gypsum",
     "tags": [
-      "heart"
+      "heart",
+      "podnosy"
     ],
     "images": [
       {

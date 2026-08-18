@@ -7,7 +7,7 @@
       "width": 1600,
       "height": 1200,
       "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAAAQAgCdASoQAAwAA4BaJYwCsAEKQonkllsAAP7NxITFdJeC0QlihEzm1AJ5a3YAMlYaxjLnIy9lhQQhnPo62W9tnRvhAAAA",
-      "alt": "Свечи"
+      "alt": "Свечи ручной работы"
     },
     "order": 1
   },
@@ -15,17 +15,17 @@
     "slug": "soap",
     "title": "Мыло",
     "cover": {
-      "src": "/catalog/soap/kniga-s-pionami-01.webp",
-      "width": 1600,
-      "height": 1600,
+      "src": "/catalog/featured/anna-art-1.webp",
+      "width": 1254,
+      "height": 1254,
       "blurDataURL": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAQAgCdASoQABAAA4BaJQBOgB5yvee2+JmAAP7xgZmx93D1yuh1poQDv8SKgSD2KslLmWHDvQO+ISH2tZ+ysc68InCHH3jETPjYDZtUhCIu7Zj9GWbvQHIiQ/K1wAAA",
-      "alt": "Мыло"
+      "alt": "Декоративное мыло ручной работы"
     },
     "order": 2
   },
   {
     "slug": "gypsum",
-    "title": "Изделия из гипса",
+    "title": "Гипсовые изделия",
     "cover": {
       "src": "/catalog/gypsum/rakushka-01.webp",
       "width": 1600,
@@ -34,54 +34,6 @@
       "alt": "Изделия из гипса"
     },
     "order": 3
-  },
-  {
-    "slug": "sachet",
-    "title": "Саше и ароматы",
-    "cover": {
-      "src": "/catalog/sachet/medalony-01.webp",
-      "width": 1600,
-      "height": 1600,
-      "blurDataURL": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAABwAgCdASoQABAAA4BaJQBOgMUt4/0o65x9KGwAAP718aONpSfzx9y6h5v+X4vgyyZm7NW+X/QhsdaClbbZda92xiewNyLY/LXf3gdFz+koGO3FTbOoLOnJ75oSIpVdZOpPH/08NvlcFQe/jNrVkAJNc8u/d8fXY80BICsWlyS2wJps0agBQAAA",
-      "alt": "Саше и ароматы"
-    },
-    "order": 4
-  },
-  {
-    "slug": "holders",
-    "title": "Подсвечники",
-    "cover": {
-      "src": "/catalog/holders/riflenye-podsvechniki-01.webp",
-      "width": 1600,
-      "height": 1200,
-      "blurDataURL": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAACQAQCdASoQAAwAA4BaJaQAAuZoCgAA/vd2Ryiq2LE1phoVhqB7UZDZdpi/dYpXg8VUCuypXc/mg2AAAAA=",
-      "alt": "Подсвечники"
-    },
-    "order": 5
-  },
-  {
-    "slug": "boxes",
-    "title": "Шкатулки и коробочки",
-    "cover": {
-      "src": "/catalog/boxes/azhurnaya-shkatulka-01.webp",
-      "width": 1600,
-      "height": 1600,
-      "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAAAwAgCdASoQABAAA4BaJaQAD5AwXlHJ1ppnYAD++FIb77m4sK8DPkca/DZsrkPfnlpIO4pMdfZpd7ugsCtmydsE+hwd3j1WzkmgwAAA",
-      "alt": "Шкатулки и коробочки"
-    },
-    "order": 6
-  },
-  {
-    "slug": "plates",
-    "title": "Подносы и тарелки",
-    "cover": {
-      "src": "/catalog/plates/volna-01.webp",
-      "width": 1600,
-      "height": 1600,
-      "blurDataURL": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADwAQCdASoQABAAA4BaJaQAApPo9ly+RgAA/veCXJNL4FYODK5JtXl+D3/gBTQ7qKFwst2aTiYzPeri6llRoaJAbznkqtczqz8IDMRAG8AAAA==",
-      "alt": "Подносы и тарелки"
-    },
-    "order": 7
   },
   {
     "slug": "decor",
@@ -93,6 +45,18 @@
       "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAAAwAgCdASoQAAwAA4BaJQBOj+ACr96tGybtgAD+8N973uXduBZeLd/amE6PN3SZvVtmLokRq/u59lktKKf+o9eCXkC/sl3Qz2gAAA==",
       "alt": "Декор для интерьера"
     },
-    "order": 8
+    "order": 4
+  },
+  {
+    "slug": "sachet",
+    "title": "Аромасаше",
+    "cover": {
+      "src": "/catalog/sachet/medalony-01.webp",
+      "width": 1600,
+      "height": 1600,
+      "blurDataURL": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAABwAgCdASoQABAAA4BaJQBOgMUt4/0o65x9KGwAAP718aONpSfzx9y6h5v+X4vgyyZm7NW+X/QhsdaClbbZda92xiewNyLY/LXf3gdFz+koGO3FTbOoLOnJ75oSIpVdZOpPH/08NvlcFQe/jNrVkAJNc8u/d8fXY80BICsWlyS2wJps0agBQAAA",
+      "alt": "Аромасаше"
+    },
+    "order": 5
   }
 ]

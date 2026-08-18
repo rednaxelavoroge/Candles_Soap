@@ -1,5 +1,6 @@
 "use client";
 
+import { Blots } from "@/components/ui/Blots";
 import { Media } from "@/components/ui/Media";
 import { getCategories, getProductsByCategory } from "@/lib/content";
 import type { Category } from "@/lib/schemas";
@@ -85,9 +86,12 @@ function CatalogSectionItem({
       whileInView={reduced ? undefined : { opacity: 1, x: 0, scale: 1 }}
       viewport={{ once: false, amount: 0.25 }}
       transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-      className="relative flex items-center justify-center p-2 md:p-6 will-change-transform"
+      className="relative flex items-center justify-center p-4 md:p-8 will-change-transform"
     >
-      <div className="relative z-10 w-full max-w-md overflow-hidden rounded-2xl md:rounded-3xl shadow-[0_8px_30px_rgba(62,43,32,0.06)] transition-transform duration-500 hover:scale-[1.02]">
+      {/* Акварельные кляксы / брызги прямо за фото */}
+      <Blots variant={index} className="scale-125 opacity-85 pointer-events-none" />
+
+      <div className="relative z-10 w-full max-w-md overflow-hidden rounded-2xl md:rounded-3xl shadow-[0_12px_36px_rgba(62,43,32,0.12)] border border-white/60 transition-transform duration-500 hover:scale-[1.02]">
         <Link
           href={`/catalog/${category.slug}`}
           aria-label={`Смотреть раздел «${category.title}»`}
