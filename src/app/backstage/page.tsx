@@ -12,22 +12,13 @@ export const metadata: Metadata = {
   openGraph: { title: "Бэкстейдж — AnnaManasaryan.Art", description: DESCRIPTION },
 };
 
-const LAYOUT_PATTERNS = [
-  "aspect-[4/5] md:aspect-[3/4]",
-  "aspect-[4/5] md:col-span-2 md:aspect-[16/10]",
-  "aspect-[4/5] md:aspect-[4/5]",
-  "aspect-[4/5] md:aspect-[3/4]",
-  "aspect-[4/5] md:col-span-2 md:aspect-[3/2]",
-  "aspect-[4/5] md:aspect-[2/3]",
-] as const;
-
 export default function BackstagePage() {
   const items = getBackstage();
 
   return (
     <div className="pt-24 md:pt-32">
-      <header className="relative overflow-hidden px-5 pb-8 md:px-8 md:pb-12">
-        <Blots variant={1} />
+      <header className="relative overflow-hidden px-5 pb-10 md:px-8 md:pb-14">
+        <Blots variant={1} className="opacity-70" />
         <span className="eyebrow relative">Мастерская</span>
         <h1 className="relative mt-2 max-w-3xl font-display text-4xl leading-tight text-ink md:text-6xl">
           Кадры и короткие ролики
@@ -38,21 +29,20 @@ export default function BackstagePage() {
       </header>
 
       {items.length > 0 ? (
-        <ul className="frame-grid grid-cols-2 md:grid-cols-4">
-          {items.map((item, index) => {
-            const pattern = LAYOUT_PATTERNS[index % LAYOUT_PATTERNS.length];
-            return (
-              <li key={index} className="contents">
-                <BackstageTile item={item} priority={index < 2} className={pattern} />
-              </li>
-            );
-          })}
-        </ul>
+        <div className="px-5 md:px-8">
+          <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 [column-fill:_balance]">
+            {items.map((item, index) => (
+              <div key={index} className="mb-6 break-inside-avoid">
+                <BackstageTile item={item} priority={index < 3} index={index} />
+              </div>
+            ))}
+          </div>
+        </div>
       ) : (
         <p className="px-5 pb-16 text-sm text-muted md:px-8">Лента пока пуста.</p>
       )}
 
-      <div className="flex items-center justify-between px-5 py-14 md:px-8 md:py-20">
+      <div className="flex flex-wrap items-center justify-between gap-4 px-5 py-14 md:px-8 md:py-20">
         <Link href="/catalog" className="link-underline text-base font-medium text-ink">
           ← Перейти в каталог изделий
         </Link>

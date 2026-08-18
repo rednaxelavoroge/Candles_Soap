@@ -99,47 +99,62 @@ function ShowcaseSection({
   const reduced = useReducedMotion();
   const count = getProductsByCategory(item.category.slug).length;
 
+  // Плавное появление с двух сторон без застревания
+  const textFrom = index % 2 === 0 ? -1 : 1;
+
   const textBlock = (
-    <div className="flex w-full flex-col justify-center px-4 py-4 md:px-8 lg:px-12">
-      <span className="text-xs font-medium tracking-[0.22em] text-muted uppercase">
+    <motion.div
+      initial={reduced ? undefined : { opacity: 0, x: textFrom * 45 }}
+      whileInView={reduced ? undefined : { opacity: 1, x: 0 }}
+      viewport={{ once: false, amount: 0.25 }}
+      transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+      className="flex w-full flex-col justify-center px-4 py-4 md:px-8 lg:px-12 will-change-transform"
+    >
+      <span className="text-xs font-medium tracking-[0.22em] text-accent uppercase">
         {item.number}
       </span>
-      <h3 className="mt-2 font-display text-2xl leading-tight text-ink sm:text-3xl md:text-4xl lg:text-5xl">
+      <h3 className="mt-3 font-display text-2xl leading-tight text-ink sm:text-3xl md:text-4xl lg:text-5xl">
         {item.category.title}
       </h3>
-      <p className="mt-2 text-sm font-medium tracking-wide text-accent md:text-base">
+      <p className="mt-2 text-sm font-medium tracking-wide text-clay md:text-base">
         {item.subtitle}
       </p>
-      <p className="mt-3 max-w-lg text-sm leading-relaxed text-muted md:text-base">
+      <p className="mt-4 max-w-lg text-sm leading-relaxed text-muted md:text-base">
         {item.description}
       </p>
-      <div className="mt-6 flex items-center gap-5">
+      <div className="mt-7 flex items-center gap-5">
         <Link
           href={`/catalog/${item.category.slug}`}
-          className="group inline-flex items-center gap-2.5 rounded-md border border-ink bg-transparent px-6 py-3 text-sm tracking-wide text-ink transition-all duration-300 hover:bg-ink hover:text-white"
+          className="group inline-flex items-center gap-2.5 rounded-full border border-ink bg-transparent px-7 py-3 text-sm tracking-wide text-ink transition-all duration-300 hover:bg-ink hover:text-white"
         >
           <span>Смотреть изделия</span>
           <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
         </Link>
         {count > 0 ? (
-          <span className="text-xs tracking-wider text-muted/80">
+          <span className="text-xs tracking-wider text-muted">
             {count} {count === 1 ? "изделие" : count < 5 ? "изделия" : "изделий"}
           </span>
         ) : null}
       </div>
-    </div>
+    </motion.div>
   );
 
   const mediaBlock = (
-    <div className="relative flex items-center justify-center p-3 md:p-6">
+    <motion.div
+      initial={reduced ? undefined : { opacity: 0, x: -textFrom * 45, scale: 0.96 }}
+      whileInView={reduced ? undefined : { opacity: 1, x: 0, scale: 1 }}
+      viewport={{ once: false, amount: 0.25 }}
+      transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+      className="relative flex items-center justify-center p-4 md:p-6 will-change-transform"
+    >
       {/* Акварельная клякса сзади кадра */}
-      <Blots variant={index} className="scale-105 opacity-60" />
+      <Blots variant={index} className="scale-110 opacity-70" />
 
       {/* Белая рамка вокруг кадра со скруглениями */}
-      <div className="relative z-10 w-full max-w-md rounded-xl bg-surface p-3 shadow-sm md:p-4">
+      <div className="relative z-10 w-full max-w-md rounded-2xl bg-surface p-3.5 shadow-[0_4px_20px_rgba(0,0,0,0.05)] transition-transform duration-500 hover:scale-[1.02] md:p-5">
         <Link
           href={`/catalog/${item.category.slug}`}
-          className="group relative block aspect-[4/5] w-full overflow-hidden rounded-lg bg-sand md:aspect-[3/4]"
+          className="group relative block aspect-[4/5] w-full overflow-hidden rounded-xl bg-sand md:aspect-[3/4]"
         >
           <div className="tile-zoom absolute inset-0">
             <Media
@@ -148,19 +163,19 @@ function ShowcaseSection({
               priority={index === 0}
             />
           </div>
-          <div className="absolute inset-0 flex items-center justify-center bg-ink/40 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-            <span className="rounded-full bg-white/90 px-5 py-2 text-xs font-medium tracking-widest text-ink uppercase backdrop-blur-sm">
-              Открыть раздел
+          <div className="absolute inset-0 flex items-center justify-center bg-ink/40 opacity-0 transition-opacity duration-300 group-hover:opacity-100 backdrop-blur-[2px]">
+            <span className="rounded-full bg-white/90 px-6 py-2.5 text-xs font-semibold tracking-widest text-ink uppercase shadow-md backdrop-blur-sm">
+              Открыть раздел →
             </span>
           </div>
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 
   return (
-    <div className="relative py-8 md:py-12">
-      <div className="mx-auto grid w-full max-w-[1400px] items-center gap-6 px-5 md:grid-cols-2 md:gap-10 md:px-8">
+    <div className="relative overflow-hidden py-10 md:py-16">
+      <div className="mx-auto grid w-full max-w-[1400px] items-center gap-8 px-5 md:grid-cols-2 md:gap-12 md:px-8">
         <div className="contents md:hidden">{mediaBlock}</div>
 
         {index % 2 === 0 ? (
@@ -181,18 +196,20 @@ function ShowcaseSection({
 
 export function CatalogShowcase() {
   return (
-    <div id="catalog" className="relative w-full bg-bg py-8 md:py-12">
-      <div className="mx-auto max-w-[1400px] px-5 pb-4 text-center md:px-8 md:pb-6">
-        <p className="eyebrow">Авторские коллекции</p>
-        <h2 className="mt-2 font-display text-3xl leading-tight text-ink md:text-5xl">Каталог</h2>
-        <div className="mx-auto mt-3 h-px w-16 bg-clay/50" />
+    <section id="catalog" className="relative w-full bg-bg py-10 md:py-16">
+      <div className="mx-auto max-w-[1400px] px-5 pb-6 text-center md:px-8 md:pb-8">
+        <span className="eyebrow">Авторские коллекции</span>
+        <h2 className="mt-2 font-display text-3xl leading-tight text-ink md:text-5xl lg:text-6xl">
+          Каталог
+        </h2>
+        <div className="mx-auto mt-4 h-px w-20 bg-clay/50" />
       </div>
 
-      <div className="divide-y divide-sand/50">
+      <div className="divide-y divide-sand/40">
         {SHOWCASE_ITEMS.map((item, index) => (
           <ShowcaseSection key={item.category.slug} item={item} index={index} />
         ))}
       </div>
-    </div>
+    </section>
   );
 }

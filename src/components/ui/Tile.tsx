@@ -8,26 +8,20 @@ type TileProps = {
   image: ContentImage | null;
   sizes: string;
   priority?: boolean;
-  /** Артикул изделия. В разделах он идёт под названием на той же плашке. */
+  /** Код изделия (например, СВ-05). Выводится без слова «Артикул». */
   article?: string;
-  /**
-   * Держать подпись видимой и на десктопе. Нужно витринным блокам, где название
-   * направления — часть композиции, а не подсказка при наведении.
-   */
+  /** Держать подпись видимой всегда (только для витринных блоков). */
   persistentTitle?: boolean;
-  /** Пропорции и раскладка задаются снаружи: `aspect-square md:aspect-[3/4]`. */
   className?: string;
-  /**
-   * Держать собственные пропорции снимка вместо заданных снаружи. Нужно
-   * кладке каталога: горизонтальный кадр должен остаться горизонтальным,
-   * а не обрезаться под общий размер плитки.
-   */
   natural?: boolean;
 };
 
 /**
- * Плитка каталога со скруглёнными краями и мягким затемнением на ховере.
- * При наведении плавно проявляется название изделия, артикул и кнопка «Подробнее».
+ * Премиальная плитка изделия.
+ * В спокойном состоянии — чистая фотография без каких-либо затемнений или плашек.
+ * При наведении на десктопе или касании на мобильном плавно проявляется
+ * мягкое затемнение с названием изделия, номером и кнопкой «Смотреть».
+ * Сохраняет естественные пропорции кадра (горизонтальные не обрезаются).
  */
 export function Tile({
   href,
@@ -38,50 +32,46 @@ export function Tile({
   article,
   persistentTitle = false,
   className,
-  natural = false,
 }: TileProps) {
-  const band = "absolute inset-x-0 bottom-0 px-4 py-3 md:px-5 md:py-4";
+  const overlayClass = persistentTitle
+    ? "opacity-100"
+    : "opacity-0 group-hover:opacity-100 group-active:opacity-100 group-focus-visible:opacity-100";
 
-  const plate = [
-    "[@media(hover:hover)]:inset-0",
-    "[@media(hover:hover)]:justify-center",
-    "[@media(hover:hover)]:p-5",
-    "[@media(hover:hover)]:opacity-0",
-    "[@media(hover:hover)]:group-hover:opacity-100",
-    "[@media(hover:hover)]:group-focus-visible:opacity-100",
-  ].join(" ");
-
-  const aspectClass = natural ? "mb-4" : (className ?? "aspect-[3/4]");
+  // Вычисляем настоящее соотношение сторон кадра, чтобы горизонтальные и вертикальные фото отображались без обрезки
+  const aspectRatio = image?.width && image?.height
+    ? `${image.width} / ${image.height}`
+    : "4 / 5";
 
   return (
     <Link
       href={href}
-      className={`group relative block overflow-hidden rounded-xl bg-sand shadow-sm transition-all duration-300 hover:shadow-md ${aspectClass}`}
+      style={{ aspectRatio }}
+      className={`group relative block w-full overflow-hidden rounded-2xl bg-sand/30 shadow-[0_2px_12px_rgba(0,0,0,0.04)] transition-all duration-500 hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)] hover:-translate-y-0.5 ${className ?? ""}`}
     >
-      <div className={natural ? "tile-zoom relative w-full" : "tile-zoom absolute inset-0"}>
+      <div className="tile-zoom absolute inset-0">
         <Media image={image} sizes={sizes} priority={priority} />
       </div>
 
+      {/* Мягкое затемнение с названием и номером: только по наведению / касанию */}
       <div
-        className={`${band} flex flex-col items-center justify-end bg-ink/65 text-center backdrop-blur-[2px] transition-opacity duration-300 ${
-          persistentTitle ? "" : plate
-        }`}
+        className={`absolute inset-0 flex flex-col items-center justify-center bg-ink/60 p-5 text-center backdrop-blur-[3px] transition-opacity duration-300 ease-out ${overlayClass}`}
       >
-        <span className="block font-display text-base leading-tight text-white md:text-lg lg:text-xl">
+        <span className="block font-display text-base font-normal leading-snug text-white sm:text-lg lg:text-xl drop-shadow-sm">
           {title}
         </span>
 
         {article ? (
           <>
-            <span aria-hidden="true" className="my-2 block h-px w-8 bg-white/40" />
-            <span className="block text-[0.6875rem] font-medium tracking-[0.2em] text-white/90 uppercase">
-              Артикул {article}
+            <span aria-hidden="true" className="my-2.5 block h-px w-8 bg-white/40" />
+            <span className="block text-xs font-semibold tracking-[0.2em] text-white/90 uppercase">
+              {article}
             </span>
           </>
         ) : null}
 
-        <span className="mt-3 hidden text-xs font-medium tracking-wider text-sand uppercase group-hover:block">
-          Подробнее →
+        <span className="mt-3.5 inline-flex items-center gap-1.5 rounded-full bg-white/20 px-3.5 py-1 text-[0.6875rem] font-medium tracking-wider text-white uppercase backdrop-blur-sm">
+          <span>Смотреть</span>
+          <span>→</span>
         </span>
       </div>
     </Link>
