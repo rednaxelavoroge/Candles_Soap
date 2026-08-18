@@ -1,6 +1,6 @@
 import { Blots } from "@/components/ui/Blots";
-import { Watercolor } from "@/components/ui/Watercolor";
 import { getHeroSlides, getSite } from "@/lib/content";
+
 import Image from "next/image";
 import Link from "next/link";
 

@@ -95,21 +95,20 @@ function CatalogSection({ category, index, total, count, intro }: SectionProps) 
       <div className="mx-auto grid w-full max-w-[1400px] items-center gap-6 px-5 md:grid-cols-2 md:gap-10 md:px-8">
         <div className="contents md:hidden">{media}</div>
 
-          {index % 2 === 0 ? (
-            <>
-              <span id={`section-${category.slug}`} className="sr-only">
-                {category.title}
-              </span>
-              {text}
-              <div className="hidden md:block">{media}</div>
-            </>
-          ) : (
-            <>
-              <div className="hidden md:block">{media}</div>
-              {text}
-            </>
-          )}
-        </div>
+        {index % 2 === 0 ? (
+          <>
+            <span id={`section-${category.slug}`} className="sr-only">
+              {category.title}
+            </span>
+            {text}
+            <div className="hidden md:block">{media}</div>
+          </>
+        ) : (
+          <>
+            <div className="hidden md:block">{media}</div>
+            {text}
+          </>
+        )}
       </div>
     </section>
   );

@@ -51,12 +51,14 @@ export function Tile({
     "[@media(hover:hover)]:group-focus-visible:opacity-100",
   ].join(" ");
 
+  const aspectClass = natural ? "mb-4" : (className ?? "aspect-[3/4]");
+
   return (
     <Link
       href={href}
-      className={`group relative block overflow-hidden rounded-xl bg-sand shadow-sm transition-all duration-300 hover:shadow-md ${className ?? "aspect-[3/4]"}`}
+      className={`group relative block overflow-hidden rounded-xl bg-sand shadow-sm transition-all duration-300 hover:shadow-md ${aspectClass}`}
     >
-      <div className="tile-zoom absolute inset-0">
+      <div className={natural ? "tile-zoom relative w-full" : "tile-zoom absolute inset-0"}>
         <Media image={image} sizes={sizes} priority={priority} />
       </div>
 
