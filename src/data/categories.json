@@ -2,24 +2,24 @@
   {
     "slug": "candles",
     "title": "Свечи",
-    "subtitle": "Тепло соевого воска и хлопка",
-    "description": "Интерьерные и формовые свечи из 100% натурального воска. Мягкое чистое горение, хлопковые и деревянные фитили, деликатные авторские композиции.",
+    "subtitle": "Дизайнерские свечи украсят любой интерьер",
+    "description": "Дизайнерские свечи украсят любой интерьер и подарят красоту своим горением.",
     "cover": {
-      "src": "/catalog/candles/ledyanaya-kupel-01.webp",
-      "width": 1600,
-      "height": 1200,
+      "src": "/catalog/featured/cover-candles.webp",
+      "width": 1254,
+      "height": 1254,
       "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAAAQAgCdASoQAAwAA4BaJYwCsAEKQonkllsAAP7NxITFdJeC0QlihEzm1AJ5a3YAMlYaxjLnIy9lhQQhnPo62W9tnRvhAAAA",
-      "alt": "Свечи ручной работы"
+      "alt": "Дизайнерские свечи"
     },
     "order": 1
   },
   {
     "slug": "soap",
     "title": "Мыло",
-    "subtitle": "Нежная пена и натуральные масла",
-    "description": "Мыло варится вручную небольшими партиями — с добавлением растительных масел и мягким, обволакивающим ароматом. Изящные цветочные корзины и десертные наборы.",
+    "subtitle": "Бережное очищение и эстетика",
+    "description": "Мыло не только бережно смывает вашу кожу, но и дает эстетическое удовольствие от пользования, украшает интерьер.",
     "cover": {
-      "src": "/catalog/featured/anna-art-1.webp",
+      "src": "/catalog/featured/cover-soap.webp",
       "width": 1254,
       "height": 1254,
       "blurDataURL": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAQAgCdASoQABAAA4BaJQBOgB5yvee2+JmAAP7xgZmx93D1yuh1poQDv8SKgSD2KslLmWHDvQO+ISH2tZ+ysc68InCHH3jETPjYDZtUhCIu7Zj9GWbvQHIiQ/K1wAAA",
@@ -30,26 +30,26 @@
   {
     "slug": "gypsum",
     "title": "Гипсовые изделия",
-    "subtitle": "Подсвечники, шкатулки и подносы",
-    "description": "Шкатулки, подсвечники, подносы, тарелки и вазы из высокопрочного скульптурного гипса. Чистые линии, приятная бархатистая текстура и долговечность.",
+    "subtitle": "Подсвечники, шкатулки, подносы",
+    "description": "Свечи в гипсовых подсвечниках, шкатулках, подносах — красивые и удобные для использования.",
     "cover": {
-      "src": "/catalog/gypsum/rakushka-01.webp",
-      "width": 1600,
-      "height": 1600,
+      "src": "/catalog/featured/cover-gypsum.webp",
+      "width": 1254,
+      "height": 1254,
       "blurDataURL": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAABQAgCdASoQABAAA4BaJQBOkGQCr9ZLHCeQzTAA/vV6uAKfVDiuCWPi+ww3ElRCZE7IjNlUlaxmh5lkrh7yKekh/ux269OZS+x5F2QxcqFMq7XtEiW7FeKUHIYAAA==",
-      "alt": "Изделия из гипса"
+      "alt": "Гипсовые изделия"
     },
     "order": 3
   },
   {
     "slug": "decor",
     "title": "Декор для интерьера",
-    "subtitle": "Предметы и акценты для дома",
-    "description": "Интерьерные раковины, композиции цветочный луг, лодочки и ванночки. Авторские детали, создающие гармонию и стиль в любом пространстве.",
+    "subtitle": "Текстурные картины и акценты",
+    "description": "Текстурные картины, шкатулки, подносы.",
     "cover": {
-      "src": "/catalog/decor/rakoviny-01.webp",
-      "width": 1600,
-      "height": 1200,
+      "src": "/catalog/featured/cover-decor.webp",
+      "width": 1254,
+      "height": 1254,
       "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAAAwAgCdASoQAAwAA4BaJQBOj+ACr96tGybtgAD+8N973uXduBZeLd/amE6PN3SZvVtmLokRq/u59lktKKf+o9eCXkC/sl3Qz2gAAA==",
       "alt": "Декор для интерьера"
     },
@@ -61,9 +61,9 @@
     "subtitle": "Тонкий аромат вашего дома",
     "description": "Аромасаше, флорентийские пластины и аромадиски для гардеробных, спален и комодов. Сохраняют стойкий благородный шлейф до нескольких месяцев.",
     "cover": {
-      "src": "/catalog/sachet/medalony-01.webp",
-      "width": 1600,
-      "height": 1600,
+      "src": "/catalog/featured/cover-sachet.webp",
+      "width": 1254,
+      "height": 1254,
       "blurDataURL": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAABwAgCdASoQABAAA4BaJQBOgMUt4/0o65x9KGwAAP718aONpSfzx9y6h5v+X4vgyyZm7NW+X/QhsdaClbbZda92xiewNyLY/LXf3gdFz+koGO3FTbOoLOnJ75oSIpVdZOpPH/08NvlcFQe/jNrVkAJNc8u/d8fXY80BICsWlyS2wJps0agBQAAA",
       "alt": "Аромасаше"
     },

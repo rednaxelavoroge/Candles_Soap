@@ -3,12 +3,12 @@ import { getBackstage } from "@/lib/content";
 import type { Metadata } from "next";
 import Link from "next/link";
 
-const DESCRIPTION = "Кадры мастерской и короткие ролики изделий ручной работы: свечи, мыло, гипс.";
+const DESCRIPTION = "Живой процесс создания изделий в мастерской Анны Манасарян: свечи, мыло, гипс, аромасаше.";
 
 export const metadata: Metadata = {
   title: "Бэкстейдж — Процесс создания",
   description: DESCRIPTION,
-  openGraph: { title: "Бэкстейдж — AnnaManasaryan.Art", description: DESCRIPTION },
+  openGraph: { title: "Бэкстейдж — Процесс создания", description: DESCRIPTION },
 };
 
 export default function BackstagePage() {
@@ -17,18 +17,17 @@ export default function BackstagePage() {
   return (
     <div className="pt-24 md:pt-32">
       <header className="relative overflow-hidden px-5 pb-8 md:px-8 md:pb-12">
-        <span className="eyebrow relative">Мастерская</span>
+        <span className="eyebrow relative">Бэкстейдж</span>
         <h1 className="relative mt-2 max-w-3xl font-display text-4xl leading-tight text-ink md:text-6xl">
-          Кадры и короткие ролики
+          Процесс создания
         </h1>
         <p className="relative mt-4 max-w-prose text-base leading-relaxed text-muted md:text-lg">
-          Живой процесс создания изделий: текстура гипса, заливка соевого воска, нежные формы мыльных букетов и детали ручной работы.
+          Живой процесс создания изделий: текстура гипса, заливка натурального соевого воска, формы мыльных композиций и детали ручной работы.
         </p>
       </header>
 
       {items.length > 0 ? (
         <div className="px-5 md:px-8">
-          {/* Сетка в 2 колонки на смартфонах и 3-4 колонки на больших экранах */}
           <div className="columns-2 sm:columns-2 md:columns-3 lg:columns-4 gap-3.5 md:gap-6 [column-fill:_balance]">
             {items.map((item, index) => (
               <div key={index} className="mb-3.5 break-inside-avoid md:mb-6">
