@@ -37,6 +37,8 @@ export const videoSchema = z.discriminatedUnion("kind", [
 export const categorySchema = z.object({
   slug: z.string().min(1),
   title: z.string().min(1),
+  subtitle: z.string().optional(),
+  description: z.string().optional(),
   cover: imageSchema.nullable(),
   order: z.number().int(),
 });

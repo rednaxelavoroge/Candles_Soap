@@ -13,47 +13,15 @@ type ShowcaseItem = {
   description: string;
 };
 
-const SHOWCASE_DATA: Record<string, { subtitle: string; description: string }> = {
-  candles: {
-    subtitle: "Тепло соевого воска и хлопка",
-    description:
-      "Интерьерные и формовые свечи из 100% натурального воска. Мягкое чистое горение, хлопковые и деревянные фитили, деликатные авторские композиции.",
-  },
-  soap: {
-    subtitle: "Нежная пена и натуральные масла",
-    description:
-      "Мыло варится вручную небольшими партиями — с добавлением растительных масел и мягким, обволакивающим ароматом. Изящные цветочные корзины и десертные наборы.",
-  },
-  gypsum: {
-    subtitle: "Подсвечники, шкатулки и подносы",
-    description:
-      "Шкатулки, подсвечники, подносы, тарелки и вазы из высокопрочного скульптурного гипса. Чистые линии, приятная бархатистая текстура и долговечность.",
-  },
-  decor: {
-    subtitle: "Предметы и акценты для дома",
-    description:
-      "Интерьерные раковины, композиции цветочный луг, лодочки и ванночки. Авторские детали, создающие гармонию и стиль в любом пространстве.",
-  },
-  sachet: {
-    subtitle: "Тонкий аромат вашего дома",
-    description:
-      "Аромасаше, флорентийские пластины и аромадиски для гардеробных, спален и комодов. Сохраняют стойкий благородный шлейф до нескольких месяцев.",
-  },
-};
-
 export function CatalogShowcase() {
   const categories = getCategories();
 
   const showcaseItems: ShowcaseItem[] = categories.map((cat, idx) => {
-    const custom = SHOWCASE_DATA[cat.slug] ?? {
-      subtitle: "Авторские изделия ручной работы",
-      description: "Каждая партия небольшая, поэтому почти любую вещь можно повторить в вашем цвете и аромате.",
-    };
     return {
       category: cat,
       number: `0${idx + 1} / 0${categories.length}`,
-      subtitle: custom.subtitle,
-      description: custom.description,
+      subtitle: cat.subtitle || "Авторские изделия ручной работы",
+      description: cat.description || "Каждая партия небольшая, поэтому почти любую вещь можно повторить в вашем цвете и аромате.",
     };
   });
 
@@ -134,7 +102,6 @@ function ShowcaseSection({
       transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
       className="relative flex items-center justify-center p-2 md:p-4 will-change-transform"
     >
-      {/* Изображение автора с естественной акварелью без фоновых клякс сайта и без обрезок */}
       <div className="relative w-full max-w-[480px] overflow-hidden rounded-2xl transition-transform duration-500 hover:scale-[1.02]">
         <Link
           href={`/catalog/${item.category.slug}`}

@@ -7,7 +7,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
-type Tab = "products" | "backstage" | "texts" | "settings";
+type Tab = "products" | "categories" | "texts" | "backstage" | "settings";
 
 export default function AdminPage() {
   const router = useRouter();
@@ -43,6 +43,9 @@ export default function AdminPage() {
   const [newImagesData, setNewImagesData] = useState<
     Array<{ base64: string; width: number; height: number; blurDataURL: string }>
   >([]);
+
+  // Редактирование категории
+  const [editCategory, setEditCategory] = useState<Category | null>(null);
 
   // Портрет автора
   const [newPortraitData, setNewPortraitData] = useState<{
@@ -80,16 +83,20 @@ export default function AdminPage() {
           return;
         }
 
-        const [prodRes, backRes, siteRes] = await Promise.all([
+        const [prodRes, backRes, siteRes, catRes] = await Promise.all([
           fetch("/api/admin/products"),
           fetch("/api/admin/backstage"),
           fetch("/api/admin/site"),
+          fetch("/api/admin/categories"),
         ]);
 
         if (prodRes.ok) {
           const p = await prodRes.json();
           setProducts(p.products || []);
-          setCategories(p.categories || []);
+        }
+        if (catRes.ok) {
+          const c = await catRes.json();
+          setCategories(c.categories || []);
         }
         if (backRes.ok) {
           const b = await backRes.json();
@@ -213,6 +220,29 @@ export default function AdminPage() {
       }
     } catch {
       alert("Ошибка удаления");
+    }
+  };
+
+  // Сохранение категории
+  const handleSaveCategory = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!editCategory) return;
+
+    try {
+      const res = await fetch("/api/admin/categories", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ category: editCategory }),
+      });
+      if (res.ok) {
+        setCategories((prev) =>
+          prev.map((c) => (c.slug === editCategory.slug ? editCategory : c)),
+        );
+        setEditCategory(null);
+        showToast("✓ Раздел каталога успешно обновлен!");
+      }
+    } catch {
+      alert("Ошибка сохранения раздела");
     }
   };
 
@@ -371,6 +401,17 @@ export default function AdminPage() {
             Изделия ({products.length})
           </button>
           <button
+            onClick={() => setTab("categories")}
+            type="button"
+            className={`rounded-full px-5 py-2 text-xs font-semibold uppercase tracking-wider transition-all ${
+              tab === "categories"
+                ? "btn-brown shadow-sm"
+                : "bg-surface/60 text-muted hover:text-ink"
+            }`}
+          >
+            Разделы каталога ({categories.length})
+          </button>
+          <button
             onClick={() => setTab("texts")}
             type="button"
             className={`rounded-full px-5 py-2 text-xs font-semibold uppercase tracking-wider transition-all ${
@@ -409,7 +450,6 @@ export default function AdminPage() {
         {tab === "products" ? (
           <div className="mt-8">
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-              {/* Поиск и фильтр */}
               <div className="flex flex-1 flex-wrap items-center gap-3">
                 <input
                   type="text"
@@ -432,7 +472,6 @@ export default function AdminPage() {
                 </select>
               </div>
 
-              {/* Кнопка добавления */}
               <button
                 onClick={() => {
                   setEditProduct({
@@ -455,7 +494,6 @@ export default function AdminPage() {
               </button>
             </div>
 
-            {/* Сетка товаров */}
             <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
               {filteredProducts.map((p) => {
                 const cover = p.images?.[0]?.src || "/placeholder.jpg";
@@ -513,7 +551,109 @@ export default function AdminPage() {
           </div>
         ) : null}
 
-        {/* 2. ВКЛАДКА ТЕКСТЫ И ОБО МНЕ */}
+        {/* 2. ВКЛАДКА РАЗДЕЛЫ КАТАЛОГА */}
+        {tab === "categories" ? (
+          <div className="mt-8 max-w-3xl">
+            <h2 className="font-display text-lg font-medium text-ink">
+              Названия и описания разделов каталога
+            </h2>
+            <p className="mt-1 text-xs text-muted">
+              Здесь вы можете изменить названия и пояснительные тексты для каждого направления каталога.
+            </p>
+
+            <div className="mt-6 flex flex-col gap-4">
+              {categories.map((cat) => (
+                <div
+                  key={cat.slug}
+                  className="rounded-2xl border border-sand/60 bg-surface p-5 shadow-sm"
+                >
+                  {editCategory?.slug === cat.slug ? (
+                    <form onSubmit={handleSaveCategory} className="flex flex-col gap-4">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                          <label className="block text-[0.7rem] font-semibold uppercase tracking-wider text-muted mb-1">
+                            Название раздела
+                          </label>
+                          <input
+                            type="text"
+                            value={editCategory.title}
+                            onChange={(e) =>
+                              setEditCategory({ ...editCategory, title: e.target.value })
+                            }
+                            required
+                            className="w-full rounded-xl border border-sand bg-bg/50 px-3 py-2 text-xs text-ink focus:border-btn-brown focus:outline-none"
+                          />
+                        </div>
+
+                        <div>
+                          <label className="block text-[0.7rem] font-semibold uppercase tracking-wider text-muted mb-1">
+                            Краткий подзаголовок
+                          </label>
+                          <input
+                            type="text"
+                            value={editCategory.subtitle || ""}
+                            onChange={(e) =>
+                              setEditCategory({ ...editCategory, subtitle: e.target.value })
+                            }
+                            className="w-full rounded-xl border border-sand bg-bg/50 px-3 py-2 text-xs text-ink focus:border-btn-brown focus:outline-none"
+                          />
+                        </div>
+                      </div>
+
+                      <div>
+                        <label className="block text-[0.7rem] font-semibold uppercase tracking-wider text-muted mb-1">
+                          Подробное описание раздела
+                        </label>
+                        <textarea
+                          rows={3}
+                          value={editCategory.description || ""}
+                          onChange={(e) =>
+                            setEditCategory({ ...editCategory, description: e.target.value })
+                          }
+                          className="w-full rounded-xl border border-sand bg-bg/50 px-3 py-2 text-xs text-ink focus:border-btn-brown focus:outline-none"
+                        />
+                      </div>
+
+                      <div className="flex gap-2 justify-end">
+                        <button
+                          type="button"
+                          onClick={() => setEditCategory(null)}
+                          className="rounded-full border border-sand px-4 py-1.5 text-xs text-muted hover:text-ink"
+                        >
+                          Отмена
+                        </button>
+                        <button
+                          type="submit"
+                          className="rounded-full btn-brown px-5 py-1.5 text-xs font-semibold uppercase tracking-wider shadow-sm"
+                        >
+                          Сохранить ✓
+                        </button>
+                      </div>
+                    </form>
+                  ) : (
+                    <div className="flex items-start justify-between gap-4">
+                      <div>
+                        <h3 className="font-display text-base text-ink">{cat.title}</h3>
+                        <p className="text-xs font-medium text-clay mt-0.5">{cat.subtitle}</p>
+                        <p className="text-xs text-muted mt-2 leading-relaxed max-w-xl">
+                          {cat.description}
+                        </p>
+                      </div>
+                      <button
+                        onClick={() => setEditCategory(cat)}
+                        className="rounded-full border border-sand px-4 py-1.5 text-xs font-medium text-btn-brown hover:bg-sand/30 transition-colors"
+                      >
+                        Изменить
+                      </button>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        ) : null}
+
+        {/* 3. ВКЛАДКА ТЕКСТЫ И ОБО МНЕ */}
         {tab === "texts" ? (
           <div className="mt-8 max-w-2xl rounded-2xl border border-sand/60 bg-surface p-6 shadow-sm">
             <h2 className="font-display text-lg font-medium text-ink">
@@ -556,7 +696,6 @@ export default function AdminPage() {
                 />
               </div>
 
-              {/* Фото автора */}
               <div>
                 <label className="block text-xs font-semibold uppercase tracking-wider text-muted mb-1">
                   Портретное фото автора
@@ -589,7 +728,7 @@ export default function AdminPage() {
           </div>
         ) : null}
 
-        {/* 3. ВКЛАДКА БЭКСТЕЙДЖ */}
+        {/* 4. ВКЛАДКА БЭКСТЕЙДЖ */}
         {tab === "backstage" ? (
           <div className="mt-8">
             <div className="rounded-2xl border border-sand/60 bg-surface p-6 shadow-sm">
@@ -642,7 +781,6 @@ export default function AdminPage() {
               </form>
             </div>
 
-            {/* Список кадров */}
             <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
               {backstage.map((b, idx) => {
                 const src = b.kind === "image" ? b.image.src : b.poster.src;
@@ -669,7 +807,7 @@ export default function AdminPage() {
           </div>
         ) : null}
 
-        {/* 4. ВКЛАДКА КОНТАКТЫ */}
+        {/* 5. ВКЛАДКА КОНТАКТЫ */}
         {tab === "settings" ? (
           <div className="mt-8 max-w-xl rounded-2xl border border-sand/60 bg-surface p-6 shadow-sm">
             <h2 className="font-display text-lg font-medium text-ink">Настройка контактов</h2>
@@ -823,7 +961,6 @@ export default function AdminPage() {
                 />
               </div>
 
-              {/* Характеристики */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
                   <label className="block text-[0.7rem] font-semibold uppercase tracking-wider text-muted mb-1">
@@ -862,7 +999,6 @@ export default function AdminPage() {
                 </div>
               </div>
 
-              {/* Загрузка фотографий с авто-сжатием */}
               <div className="rounded-2xl border border-dashed border-sand p-4 bg-bg/30">
                 <label className="block text-xs font-semibold uppercase tracking-wider text-ink mb-1">
                   📷 Фотографии изделия (с авто-сжатием в WebP)
@@ -885,7 +1021,6 @@ export default function AdminPage() {
                   <p className="mt-2 text-xs font-medium text-emerald-700">{imageStats}</p>
                 ) : null}
 
-                {/* Предпросмотр существующих и новых фото */}
                 <div className="mt-3 flex flex-wrap gap-2">
                   {editProduct.images?.map((img, i) => (
                     <div key={i} className="relative h-16 w-16 overflow-hidden rounded-lg border border-sand">
