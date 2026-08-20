@@ -7,7 +7,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
-type Tab = "products" | "backstage" | "settings";
+type Tab = "products" | "backstage" | "texts" | "settings";
 
 export default function AdminPage() {
   const router = useRouter();
@@ -18,11 +18,17 @@ export default function AdminPage() {
   const [products, setProducts] = useState<Product[]>([]);
   const [categories, setCategories] = useState<Category[]>([]);
   const [backstage, setBackstage] = useState<BackstageItem[]>([]);
-  const [siteContacts, setSiteContacts] = useState({
-    phone: "",
-    phoneRussia: "",
-    whatsapp: "",
-    instagram: "",
+  const [siteData, setSiteData] = useState({
+    owner: "",
+    tagline: "",
+    intro: "",
+    portrait: { src: "" },
+    contacts: {
+      phone: "",
+      phoneRussia: "",
+      whatsapp: "",
+      instagram: "",
+    },
   });
 
   // Фильтр
@@ -37,6 +43,14 @@ export default function AdminPage() {
   const [newImagesData, setNewImagesData] = useState<
     Array<{ base64: string; width: number; height: number; blurDataURL: string }>
   >([]);
+
+  // Портрет автора
+  const [newPortraitData, setNewPortraitData] = useState<{
+    base64: string;
+    width: number;
+    height: number;
+    blurDataURL: string;
+  } | null>(null);
 
   // Модалка бэкстейджа
   const [newBackstageCaption, setNewBackstageCaption] = useState("");
@@ -83,7 +97,7 @@ export default function AdminPage() {
         }
         if (siteRes.ok) {
           const s = await siteRes.json();
-          if (s.site?.contacts) setSiteContacts(s.site.contacts);
+          if (s.site) setSiteData(s.site);
         }
       } catch (err) {
         console.error("Failed to load admin data:", err);
@@ -163,7 +177,6 @@ export default function AdminPage() {
 
       const data = await res.json();
       if (res.ok && data.ok) {
-        // Обновляем список локально
         setProducts((prev) => {
           const idx = prev.findIndex((p) => p.id === data.product.id);
           if (idx >= 0) {
@@ -203,6 +216,29 @@ export default function AdminPage() {
     }
   };
 
+  // Сохранение текстов и Обо мне
+  const handleSaveTexts = async (e: React.FormEvent) => {
+    e.preventDefault();
+    try {
+      const res = await fetch("/api/admin/site", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          owner: siteData.owner,
+          tagline: siteData.tagline,
+          intro: siteData.intro,
+          portraitData: newPortraitData,
+        }),
+      });
+      if (res.ok) {
+        setNewPortraitData(null);
+        showToast("✓ Тексты и фото автора успешно сохранены!");
+      }
+    } catch {
+      alert("Ошибка сохранения");
+    }
+  };
+
   // Сохранение настроек контактов
   const handleSaveContacts = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -210,7 +246,7 @@ export default function AdminPage() {
       const res = await fetch("/api/admin/site", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ contacts: siteContacts }),
+        body: JSON.stringify({ contacts: siteData.contacts }),
       });
       if (res.ok) {
         showToast("✓ Контакты успешно обновлены!");
@@ -333,6 +369,17 @@ export default function AdminPage() {
             }`}
           >
             Изделия ({products.length})
+          </button>
+          <button
+            onClick={() => setTab("texts")}
+            type="button"
+            className={`rounded-full px-5 py-2 text-xs font-semibold uppercase tracking-wider transition-all ${
+              tab === "texts"
+                ? "btn-brown shadow-sm"
+                : "bg-surface/60 text-muted hover:text-ink"
+            }`}
+          >
+            Тексты и Обо мне
           </button>
           <button
             onClick={() => setTab("backstage")}
@@ -466,10 +513,85 @@ export default function AdminPage() {
           </div>
         ) : null}
 
-        {/* 2. ВКЛАДКА БЭКСТЕЙДЖ */}
+        {/* 2. ВКЛАДКА ТЕКСТЫ И ОБО МНЕ */}
+        {tab === "texts" ? (
+          <div className="mt-8 max-w-2xl rounded-2xl border border-sand/60 bg-surface p-6 shadow-sm">
+            <h2 className="font-display text-lg font-medium text-ink">
+              Тексты сайта и страница «Обо мне»
+            </h2>
+            <form onSubmit={handleSaveTexts} className="mt-6 flex flex-col gap-5">
+              <div>
+                <label className="block text-xs font-semibold uppercase tracking-wider text-muted mb-1">
+                  Имя автора / Мастера
+                </label>
+                <input
+                  type="text"
+                  value={siteData.owner}
+                  onChange={(e) => setSiteData({ ...siteData, owner: e.target.value })}
+                  className="w-full rounded-xl border border-sand bg-bg/50 px-4 py-2.5 text-xs text-ink focus:border-btn-brown focus:outline-none"
+                />
+              </div>
+
+              <div>
+                <label className="block text-xs font-semibold uppercase tracking-wider text-muted mb-1">
+                  Краткий слоган (на главной под именем)
+                </label>
+                <input
+                  type="text"
+                  value={siteData.tagline}
+                  onChange={(e) => setSiteData({ ...siteData, tagline: e.target.value })}
+                  className="w-full rounded-xl border border-sand bg-bg/50 px-4 py-2.5 text-xs text-ink focus:border-btn-brown focus:outline-none"
+                />
+              </div>
+
+              <div>
+                <label className="block text-xs font-semibold uppercase tracking-wider text-muted mb-1">
+                  История и философия (текст «Обо мне» и на главной)
+                </label>
+                <textarea
+                  rows={5}
+                  value={siteData.intro}
+                  onChange={(e) => setSiteData({ ...siteData, intro: e.target.value })}
+                  className="w-full rounded-xl border border-sand bg-bg/50 px-4 py-2.5 text-xs text-ink focus:border-btn-brown focus:outline-none"
+                />
+              </div>
+
+              {/* Фото автора */}
+              <div>
+                <label className="block text-xs font-semibold uppercase tracking-wider text-muted mb-1">
+                  Портретное фото автора
+                </label>
+                <input
+                  type="file"
+                  accept="image/*"
+                  onChange={async (e) => {
+                    const file = e.target.files?.[0];
+                    if (!file) return;
+                    const opt = await optimizeImageClient(file, 1400, 0.85);
+                    setNewPortraitData({
+                      base64: opt.dataUrl,
+                      width: opt.width,
+                      height: opt.height,
+                      blurDataURL: opt.blurDataURL,
+                    });
+                  }}
+                  className="text-xs text-muted file:mr-3 file:rounded-full file:border-0 file:btn-brown file:px-4 file:py-2 file:text-xs file:font-semibold"
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="mt-2 rounded-full btn-brown py-3 text-xs font-semibold uppercase tracking-wider shadow-md"
+              >
+                Сохранить все тексты →
+              </button>
+            </form>
+          </div>
+        ) : null}
+
+        {/* 3. ВКЛАДКА БЭКСТЕЙДЖ */}
         {tab === "backstage" ? (
           <div className="mt-8">
-            {/* Форма добавления фото */}
             <div className="rounded-2xl border border-sand/60 bg-surface p-6 shadow-sm">
               <h2 className="font-display text-lg font-medium text-ink">
                 + Добавить кадр в Бэкстейдж
@@ -547,7 +669,7 @@ export default function AdminPage() {
           </div>
         ) : null}
 
-        {/* 3. ВКЛАДКА КОНТАКТЫ */}
+        {/* 4. ВКЛАДКА КОНТАКТЫ */}
         {tab === "settings" ? (
           <div className="mt-8 max-w-xl rounded-2xl border border-sand/60 bg-surface p-6 shadow-sm">
             <h2 className="font-display text-lg font-medium text-ink">Настройка контактов</h2>
@@ -558,9 +680,16 @@ export default function AdminPage() {
                 </label>
                 <input
                   type="text"
-                  value={siteContacts.phone}
+                  value={siteData.contacts.phone}
                   onChange={(e) =>
-                    setSiteContacts({ ...siteContacts, phone: e.target.value, whatsapp: e.target.value })
+                    setSiteData({
+                      ...siteData,
+                      contacts: {
+                        ...siteData.contacts,
+                        phone: e.target.value,
+                        whatsapp: e.target.value,
+                      },
+                    })
                   }
                   className="w-full rounded-xl border border-sand bg-bg/50 px-4 py-2.5 text-xs text-ink focus:border-btn-brown focus:outline-none"
                 />
@@ -572,8 +701,16 @@ export default function AdminPage() {
                 </label>
                 <input
                   type="text"
-                  value={siteContacts.phoneRussia}
-                  onChange={(e) => setSiteContacts({ ...siteContacts, phoneRussia: e.target.value })}
+                  value={siteData.contacts.phoneRussia}
+                  onChange={(e) =>
+                    setSiteData({
+                      ...siteData,
+                      contacts: {
+                        ...siteData.contacts,
+                        phoneRussia: e.target.value,
+                      },
+                    })
+                  }
                   className="w-full rounded-xl border border-sand bg-bg/50 px-4 py-2.5 text-xs text-ink focus:border-btn-brown focus:outline-none"
                 />
               </div>
@@ -584,8 +721,16 @@ export default function AdminPage() {
                 </label>
                 <input
                   type="text"
-                  value={siteContacts.instagram}
-                  onChange={(e) => setSiteContacts({ ...siteContacts, instagram: e.target.value })}
+                  value={siteData.contacts.instagram}
+                  onChange={(e) =>
+                    setSiteData({
+                      ...siteData,
+                      contacts: {
+                        ...siteData.contacts,
+                        instagram: e.target.value,
+                      },
+                    })
+                  }
                   className="w-full rounded-xl border border-sand bg-bg/50 px-4 py-2.5 text-xs text-ink focus:border-btn-brown focus:outline-none"
                 />
               </div>
@@ -676,6 +821,45 @@ export default function AdminPage() {
                   placeholder="Подробное описание изделия, состава, аромата..."
                   className="w-full rounded-xl border border-sand bg-bg/50 px-4 py-2.5 text-xs text-ink focus:border-btn-brown focus:outline-none"
                 />
+              </div>
+
+              {/* Характеристики */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div>
+                  <label className="block text-[0.7rem] font-semibold uppercase tracking-wider text-muted mb-1">
+                    Аромат
+                  </label>
+                  <input
+                    type="text"
+                    value={editProduct.specs?.scent || ""}
+                    onChange={(e) =>
+                      setEditProduct({
+                        ...editProduct,
+                        specs: { ...(editProduct.specs || {}), scent: e.target.value },
+                      })
+                    }
+                    placeholder="Например: Ваниль и сандал"
+                    className="w-full rounded-xl border border-sand bg-bg/50 px-3 py-2 text-xs text-ink focus:border-btn-brown focus:outline-none"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-[0.7rem] font-semibold uppercase tracking-wider text-muted mb-1">
+                    Состав и материалы
+                  </label>
+                  <input
+                    type="text"
+                    value={editProduct.specs?.composition || ""}
+                    onChange={(e) =>
+                      setEditProduct({
+                        ...editProduct,
+                        specs: { ...(editProduct.specs || {}), composition: e.target.value },
+                      })
+                    }
+                    placeholder="100% соевый воск, хлопковый фитиль"
+                    className="w-full rounded-xl border border-sand bg-bg/50 px-3 py-2 text-xs text-ink focus:border-btn-brown focus:outline-none"
+                  />
+                </div>
               </div>
 
               {/* Загрузка фотографий с авто-сжатием */}

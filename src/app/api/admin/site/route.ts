@@ -1,5 +1,5 @@
 import { checkAdminAuth } from "@/lib/admin-auth";
-import { saveJsonData } from "@/lib/data-storage";
+import { saveJsonData, saveMediaFile } from "@/lib/data-storage";
 import { getSite } from "@/lib/content";
 import { NextResponse } from "next/server";
 
@@ -15,19 +15,41 @@ export async function POST(req: Request) {
 
   try {
     const body = await req.json();
+    const { owner, tagline, intro, contacts, portraitData } = body;
     const current = getSite();
+
+    let portrait = current.portrait;
+    if (portraitData && portraitData.base64) {
+      const base64Data = portraitData.base64.replace(/^data:image\/\w+;base64,/, "");
+      const buffer = Buffer.from(base64Data, "base64");
+      const fileName = `portrait-${Date.now()}.webp`;
+      const savedPath = await saveMediaFile(fileName, buffer, "image/webp");
+
+      portrait = {
+        src: savedPath,
+        width: portraitData.width || 1200,
+        height: portraitData.height || 1600,
+        blurDataURL: portraitData.blurDataURL || "",
+        alt: `${owner || current.owner} — портрет`,
+      };
+    }
+
     const updated = {
       ...current,
-      ...body,
+      owner: owner ?? current.owner,
+      tagline: tagline ?? current.tagline,
+      intro: intro ?? current.intro,
+      portrait,
       contacts: {
         ...current.contacts,
-        ...(body.contacts || {}),
+        ...(contacts || {}),
       },
     };
 
     await saveJsonData("src/data/site.json", updated);
     return NextResponse.json({ ok: true, site: updated });
-  } catch {
+  } catch (err) {
+    console.error("Site API error:", err);
     return NextResponse.json({ error: "Ошибка сохранения настроек" }, { status: 500 });
   }
 }
