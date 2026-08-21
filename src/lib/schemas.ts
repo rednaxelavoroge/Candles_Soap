@@ -104,12 +104,12 @@ export const siteSchema = z.object({
 
 /** Лента бэкстейджа: кадры и вертикальные ролики вперемешку. */
 export const backstageItemSchema = z.discriminatedUnion("kind", [
-  z.object({ kind: z.literal("image"), image: imageSchema, caption: z.string().min(1) }),
+  z.object({ kind: z.literal("image"), image: imageSchema, caption: z.string() }),
   z.object({
     kind: z.literal("video"),
     src: z.string().min(1),
     poster: imageSchema,
-    caption: z.string().min(1),
+    caption: z.string(),
   }),
 ]);
 

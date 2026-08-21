@@ -29,12 +29,6 @@ export function BackstageTile({
         <div className="tile-zoom absolute inset-0">
           <Media image={item.image} priority={priority} sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw" />
         </div>
-        <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/60 via-ink/20 to-transparent p-3 md:p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-          <span className="font-display text-xs sm:text-sm font-medium text-white drop-shadow-sm line-clamp-2">
-            {item.caption}
-          </span>
-        </div>
-        <figcaption className="sr-only">{item.caption}</figcaption>
       </figure>
     );
   }
@@ -63,7 +57,7 @@ export function BackstageTile({
           type="button"
           onClick={() => setPlaying(true)}
           className="group absolute inset-0 h-full w-full"
-          aria-label={`Смотреть видео: ${item.caption}`}
+          aria-label="Смотреть видео процесса"
         >
           <div className="tile-zoom absolute inset-0">
             <Media image={item.poster} priority={priority} sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw" />
@@ -79,23 +73,16 @@ export function BackstageTile({
 
           <span
             aria-hidden="true"
-            className="absolute inset-0 flex items-center justify-center bg-ink/25 transition-colors group-hover:bg-ink/40"
+            className="absolute inset-0 flex items-center justify-center bg-ink/20 transition-colors group-hover:bg-ink/35"
           >
-            <span className="flex h-11 w-11 md:h-14 md:w-14 items-center justify-center rounded-full bg-white/90 shadow-xl backdrop-blur-sm transition-transform duration-300 group-hover:scale-110">
+            <span className="flex h-12 w-12 md:h-14 md:w-14 items-center justify-center rounded-full bg-white/90 shadow-xl backdrop-blur-sm transition-transform duration-300 group-hover:scale-110">
               <svg viewBox="0 0 24 24" className="ml-0.5 md:ml-1 h-5 w-5 md:h-6 md:w-6 fill-ink">
                 <path d="M8 5v14l11-7z" />
               </svg>
             </span>
           </span>
-
-          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/70 via-ink/25 to-transparent p-3 md:p-4 text-left">
-            <span className="font-display text-xs sm:text-sm font-medium text-white drop-shadow-sm line-clamp-2">
-              {item.caption}
-            </span>
-          </div>
         </button>
       )}
-      <figcaption className="sr-only">{item.caption}</figcaption>
     </figure>
   );
 }

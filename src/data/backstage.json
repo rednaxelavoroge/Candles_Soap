@@ -9,18 +9,7 @@
       "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAAAQAgCdASoQAAwAA4BaJYwCsAEKQonkllsAAP7NxITFdJeC0QlihEzm1AJ5a3YAMlYaxjLnIy9lhQQhnPo62W9tnRvhAAAA",
       "alt": "Ледяная купель — короткий ролик"
     },
-    "caption": "Ледяная купель"
-  },
-  {
-    "kind": "image",
-    "image": {
-      "src": "/catalog/candles/soty-02.webp",
-      "width": 1600,
-      "height": 1600,
-      "blurDataURL": "data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAADQAQCdASoQABAAA4BaJZQAAudeg6DwAAD+9CGE9/F+RccB0n3dQVJBwxAiIvTCgXtEpAAA",
-      "alt": "Свеча-соты в пыльно-розовом цвете"
-    },
-    "caption": "Соты"
+    "caption": ""
   },
   {
     "kind": "video",
@@ -32,18 +21,7 @@
       "blurDataURL": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAQAgCdASoQABAAA4BaJQBOgB5yvee2+JmAAP7xgZmx93D1yuh1poQDv8SKgSD2KslLmWHDvQO+ISH2tZ+ysc68InCHH3jETPjYDZtUhCIu7Zj9GWbvQHIiQ/K1wAAA",
       "alt": "Книга с пионами — короткий ролик"
     },
-    "caption": "Книга с пионами"
-  },
-  {
-    "kind": "image",
-    "image": {
-      "src": "/catalog/soap/pryanichnyy-nabor-03.webp",
-      "width": 1600,
-      "height": 1600,
-      "blurDataURL": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAAAQAgCdASoQABAAA4BaJYwCdADRGxZbzAcAAP7q3AMOtJC7pSQKq+ERpHdE2He2BUbgSjyUOiTU4PFSuncMAAAA",
-      "alt": "Мыло-пряник в виде резной рамки"
-    },
-    "caption": "Пряничный набор"
+    "caption": ""
   },
   {
     "kind": "video",
@@ -55,18 +33,7 @@
       "blurDataURL": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAABQAgCdASoQABAAA4BaJZAC7AYv1vDXPZ+9tGAA/vKqmT7EL65s3Oi4rfLR7EJYaEsBMWYXbSc8/lszuqLFDnjzky/3DLXPhWGR+Cf8y67BtgpgRYOX1AQb7K/qfh2AApgeGgul98h8ttsGmT00Ar6AAAA=",
       "alt": "Сердце в ладонях — короткий ролик"
     },
-    "caption": "Сердце в ладонях"
-  },
-  {
-    "kind": "image",
-    "image": {
-      "src": "/catalog/gypsum/rakushka-02.webp",
-      "width": 1600,
-      "height": 1600,
-      "blurDataURL": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAACwAgCdASoQABAAA4BaJYwCdIIlmABwJVrsxDEHEgAA/vaNwBM4L//wE+My6S8Rlh3wDCh2Z6S9Xo5xNbVG7kSn2F9zLNyWCpo69LcedCf1xlHkKmswAA==",
-      "alt": "Голубая ракушка, вид под углом"
-    },
-    "caption": "Ракушка"
+    "caption": ""
   },
   {
     "kind": "video",
@@ -78,18 +45,7 @@
       "blurDataURL": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAADQAwCdASoQABwAPu1iqU2ppaQiMAgBMB2JQBOgA2PrwU0Q05lvBwAA/q+MpqpRBeZIuMso5AxLRYm5yy5kV0Y8Jw9vb0LaK0Y+qrkl+y2atSmPwSQNrwNawB1TsGhAWhwyQPfL40k5shGlVgp5lbibXBqqv0yfAAA=",
       "alt": "Заливка мыльной композиции — процесс создания"
     },
-    "caption": "Заливка мыльной композиции"
-  },
-  {
-    "kind": "image",
-    "image": {
-      "src": "/catalog/candles/mandariny-03.webp",
-      "width": 1600,
-      "height": 1200,
-      "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADQAQCdASoQAAwAA4BaJbACdADvMPemAAD+8N+nigQVENUG/V3/bhT+vEk+4Gg563VMG5EQHDp4mXKBN+wd5++UE5t30KhMdsi3Sw+z9go0AAAA",
-      "alt": "Целый и очищенный мандарин на подносе, тёмный фон"
-    },
-    "caption": "Мандарины"
+    "caption": ""
   },
   {
     "kind": "video",
@@ -101,18 +57,7 @@
       "blurDataURL": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAADwAwCdASoQABwAPu1mq04ppaQiMAgBMB2JYwCdAB41K3/x/7QPxqWAAPbsAV1qVEgd8YLdGbJOCdz3FHStk/JwHMKD1L9NaPpWbFjj57bP6SW8J4eQ3jmtxIgtzkJbW7qQs8/dTyMmIVLHZwAAAA==",
       "alt": "Создание мыльного букета — процесс создания"
     },
-    "caption": "Создание мыльного букета"
-  },
-  {
-    "kind": "image",
-    "image": {
-      "src": "/catalog/soap/morskoe-dno-04.webp",
-      "width": 1600,
-      "height": 1200,
-      "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAACQAQCdASoQAAwAA4BaJQBOgBm1EkgA/GDV3H5/zs3N1vJM0SUec5jM1V+wRIkqy/ZRCIM9rEY+RDNDxZbTyDDGxBeaOMQ9AyeAAA==",
-      "alt": "Мыло «Морское дно» с песчаными разводами"
-    },
-    "caption": "Морское дно"
+    "caption": ""
   },
   {
     "kind": "video",
@@ -124,18 +69,7 @@
       "blurDataURL": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAAAQBACdASoQABwAPu1kqU2ppaOiMAgBMB2JZACdACP/wpplHN6P9AVVYAD9TjonLVzOMg861wob8YUZ6Le4tJdC9fDT6H4+TR+PhcRw9YDWywI4HixtUPPst/6BRxurlkajqa/55U1QAA==",
       "alt": "Декорирование мыла ручной работы — процесс создания"
     },
-    "caption": "Декорирование мыла ручной работы"
-  },
-  {
-    "kind": "image",
-    "image": {
-      "src": "/catalog/candles/globus-03.webp",
-      "width": 1600,
-      "height": 1600,
-      "blurDataURL": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAADwAQCdASoQABAAA4BaJZwAAudgGDI1y3AA/vaC/6YWTAQksSw5FE5SRkTe52+bGochPGnImGB0qWq0iL7VhAAA",
-      "alt": "Свеча-глобус, материки крупным планом"
-    },
-    "caption": "Глобус"
+    "caption": ""
   },
   {
     "kind": "video",
@@ -147,18 +81,7 @@
       "blurDataURL": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADwAwCdASoQABwAPu1iqU2ppaQiMAgBMB2JQBWABDEh6yVRo3H5gHAAAP7Y1dKqBkOvVRl1D2BjaaPF+zwOHAhcm1Cprnmqi9dW2G4yQQifhItlPPHVzOIAAAA=",
       "alt": "Финальные штрихи мыльного набора — процесс создания"
     },
-    "caption": "Финальные штрихи мыльного набора"
-  },
-  {
-    "kind": "image",
-    "image": {
-      "src": "/catalog/soap/konyak-i-stopka-02.webp",
-      "width": 1600,
-      "height": 1600,
-      "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAwAgCdASoQABAAA4BaJbACdLoAAsilL24gAAD+ufGvXzdMbKSW/ZPJrNJam41HG8Gh+6C0oGVh71evHOX1gHEU564KQRITW/mz2MU/xch9PAAA",
-      "alt": "Набор «Коньяк и стопка», вид сбоку"
-    },
-    "caption": "Коньяк и стопка"
+    "caption": ""
   },
   {
     "kind": "video",
@@ -170,18 +93,7 @@
       "blurDataURL": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAACwAwCdASoQABwAPu1kqk4ppaQiMAgBMB2JZwAAW6zBuQN+Dj+tgAD9y5rartcCYsvwUvjiZwzOsB0H2M4I9tPsx+ndNCTa2b2vtXjtigLqu4J7QrHgWF0AE33OyD+KQAA=",
       "alt": "Сборка подарочной композиции — процесс создания"
     },
-    "caption": "Сборка подарочной композиции"
-  },
-  {
-    "kind": "image",
-    "image": {
-      "src": "/catalog/gypsum/podnosy-s-businami-02.webp",
-      "width": 1600,
-      "height": 1600,
-      "blurDataURL": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAADQAQCdASoQABAAA4BaJaQAAudnLTMgAAD+8MiK45ApTgPzLPb2F3MAAAA=",
-      "alt": "Круглый графитовый поднос с бусинами"
-    },
-    "caption": "Подносы с бусинами"
+    "caption": ""
   },
   {
     "kind": "video",
@@ -193,18 +105,7 @@
       "blurDataURL": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAACQAwCdASoQABwAPu1qrU8ppiQiMAgBMB2JQAAj3WJrcDCTxInSAP6MHOz74fI7WBYjYSRdHzs3YVXAO5lPIwyLZ5b8T8/fs0ILHdN8X/DUG8699oWRFOFnAAA=",
       "alt": "Заливка натурального соевого воска — процесс создания"
     },
-    "caption": "Заливка натурального соевого воска"
-  },
-  {
-    "kind": "image",
-    "image": {
-      "src": "/catalog/candles/elka-na-kryshe-01.webp",
-      "width": 1600,
-      "height": 1200,
-      "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAQAgCdASoQAAwAA4BaJZQCsAELjYExde0AAP7xz94bRssVC/sOStvnhDa9n6nfvCWOZ7mztMQTDNaB8CGaZox/6SJljcmSTi16M3pb02uvBcAA",
-      "alt": "Свеча-машинка с ёлкой на крыше, снятая на снегу"
-    },
-    "caption": "Ёлка на крыше"
+    "caption": ""
   },
   {
     "kind": "video",
@@ -216,18 +117,7 @@
       "blurDataURL": "data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAADQBACdASoQABwAPu1iqU2ppaQiMAgBMB2JZAC7MoM20E5/0P5FVwmIDWi5n3iwAAD+wF17v5RAvCAMQbjESvu+/xd7+hUG0GHVQqUSWEvcierp0YmeNqli0KoaneLI7pOi1VpC6mnAyRqnc1rB0yv9dua8Vcztnlf9rCRsKcYzVo7NSLzMiUlGeoSPf1NoAAA=",
       "alt": "Установка хлопковых фитилей — процесс создания"
     },
-    "caption": "Установка хлопковых фитилей"
-  },
-  {
-    "kind": "image",
-    "image": {
-      "src": "/catalog/soap/nabor-dlya-malysha-03.webp",
-      "width": 1600,
-      "height": 1600,
-      "blurDataURL": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAwAgCdASoQABAAA4BaJbACdADOd/4zWpXZgAD+fUTrXclELyohhjFbGEYmAkdo+pYr/WeRpWbGm3Yb2AbBWh6y7/Cx6iCFZ4JlTxl7IdL8IMR3OCW5O4+vSIAAAA==",
-      "alt": "Мыло в форме детской коляски"
-    },
-    "caption": "Набор для малыша"
+    "caption": ""
   },
   {
     "kind": "video",
@@ -239,18 +129,7 @@
       "blurDataURL": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAACwAwCdASoQABwAPu1iqU2ppaOiMAgBMB2JYgCw7AsP4/eWOml3QAD51qenj+95Ha48tBwjiCSQCWiQ9txTJMZP0gG92yeqNuFE4G/AAYZnlClH7gTHse6BgIRBQLwI7x8uB24KAAA=",
       "alt": "Ароматические свечи в процессе — процесс создания"
     },
-    "caption": "Ароматические свечи в процессе"
-  },
-  {
-    "kind": "image",
-    "image": {
-      "src": "/catalog/candles/tyulpany-03.webp",
-      "width": 1200,
-      "height": 1600,
-      "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAACwAQCdASoMABAAA4BaJQAAW6ETIJgAAP70MAesY8lf11Bf/AT64Y9Qctbh6IqeKOHO4iwGwAYtwfUwSP7hO/+nJehWrLUAAAA=",
-      "alt": "Золотая подводка на лепестках крупным планом"
-    },
-    "caption": "Тюльпаны"
+    "caption": ""
   },
   {
     "kind": "video",
@@ -262,18 +141,7 @@
       "blurDataURL": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADwAQCdASoQABAAA4BaJaAC7ADp+d0g4DgA/vF+/OLNvSd79SkgH/zysFT3YcjPszdtQikEL9nPwz+Zvtk3x5NxKGeO7BSjtonk0bD7DXXr7FzkAAA=",
       "alt": "Свечи-мандарины ручной работы — процесс создания"
     },
-    "caption": "Свечи-мандарины ручной работы"
-  },
-  {
-    "kind": "image",
-    "image": {
-      "src": "/catalog/soap/buket-v-korobke-02.webp",
-      "width": 1200,
-      "height": 1600,
-      "blurDataURL": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAACQAQCdASoMABAAA4BaJZQAApYI6AAA/O8XXDaNsgLkz6Fgbf5QipPR20bhsfzS7ACZJfcwl1WAAA==",
-      "alt": "С коробки снимают крышку, под ней мыльные цветы"
-    },
-    "caption": "Букет в коробке"
+    "caption": ""
   },
   {
     "kind": "video",
@@ -285,7 +153,7 @@
       "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAABQAwCdASoQABwALrV2u12jqampiYC0SgAAudQsd1Zl+V6fgAD9yT/08M2HlY82k7M/SVNfIVRJsbUXOZG72Ck6c14ElZEymo6bkTRM1AksqJAA",
       "alt": "Тепло горящего пламени — процесс создания"
     },
-    "caption": "Тепло горящего пламени"
+    "caption": ""
   },
   {
     "kind": "video",
@@ -297,7 +165,7 @@
       "blurDataURL": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAABQBACdASoQABwAPu1iqU2ppaQiMAgBMB2JZQCsAdwA9FDS19+AfjzVz5kAAP6V0QUCoAjDpTcXa+3lgf+uofe8vgt+wekAr6mhdvLk2+DsxskwhcYGqQwffk5FUgTod5BMqcTFyTYkQlUxN2f9Cu4h0HMgd94ofii7ZgDHaE0psEGiUVuTOXYAAAA=",
       "alt": "Формовые свечи мастерской — процесс создания"
     },
-    "caption": "Формовые свечи мастерской"
+    "caption": ""
   },
   {
     "kind": "video",
@@ -309,6 +177,6 @@
       "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAAAQAgCdASoQABAAA4BaJYwCsADHk/SoRNOAAP72k4x6UdZcIM/djc3aCMEX4G3skFBwGDAmd5t9cLlQ8XMAsGY97vJnJVcC0g0DRPAA",
       "alt": "Атмосфера вечерней мастерской — процесс создания"
     },
-    "caption": "Атмосфера вечерней мастерской"
+    "caption": ""
   }
 ]
