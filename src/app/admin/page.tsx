@@ -44,8 +44,15 @@ export default function AdminPage() {
     Array<{ base64: string; width: number; height: number; blurDataURL: string }>
   >([]);
 
-  // Редактирование категории
-  const [editCategory, setEditCategory] = useState<Category | null>(null);
+  // Редактирование / Создание категории
+  const [editCategory, setEditCategory] = useState<Partial<Category> | null>(null);
+  const [isCategoryModalOpen, setIsCategoryModalOpen] = useState(false);
+  const [newCategoryCover, setNewCategoryCover] = useState<{
+    base64: string;
+    width: number;
+    height: number;
+    blurDataURL: string;
+  } | null>(null);
 
   // Портрет автора
   const [newPortraitData, setNewPortraitData] = useState<{
@@ -223,26 +230,55 @@ export default function AdminPage() {
     }
   };
 
-  // Сохранение категории
+  // Сохранение / Создание категории
   const handleSaveCategory = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!editCategory) return;
+    if (!editCategory || !editCategory.title) {
+      alert("Укажите название раздела");
+      return;
+    }
 
     try {
       const res = await fetch("/api/admin/categories", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ category: editCategory }),
+        body: JSON.stringify({
+          category: editCategory,
+          coverData: newCategoryCover,
+        }),
       });
-      if (res.ok) {
-        setCategories((prev) =>
-          prev.map((c) => (c.slug === editCategory.slug ? editCategory : c)),
-        );
+      const data = await res.json();
+      if (res.ok && data.ok) {
+        setCategories(data.categories);
+        setIsCategoryModalOpen(false);
         setEditCategory(null);
-        showToast("✓ Раздел каталога успешно обновлен!");
+        setNewCategoryCover(null);
+        showToast("✓ Раздел каталога успешно сохранен!");
+      } else {
+        alert(data.error || "Ошибка сохранения раздела");
       }
     } catch {
       alert("Ошибка сохранения раздела");
+    }
+  };
+
+  // Удаление категории
+  const handleDeleteCategory = async (slug: string, title: string) => {
+    if (!confirm(`Вы действительно хотите удалить раздел «${title}»?`)) return;
+
+    try {
+      const res = await fetch(`/api/admin/categories?slug=${encodeURIComponent(slug)}`, {
+        method: "DELETE",
+      });
+      const data = await res.json();
+      if (res.ok && data.ok) {
+        setCategories(data.categories);
+        showToast(`Раздел «${title}» удален`);
+      } else {
+        alert(data.error || "Ошибка удаления");
+      }
+    } catch {
+      alert("Ошибка удаления");
     }
   };
 
@@ -475,7 +511,7 @@ export default function AdminPage() {
               <button
                 onClick={() => {
                   setEditProduct({
-                    category: "soap",
+                    category: categories[0]?.slug || "candles",
                     title: "",
                     article: `АРТ-${Math.floor(100 + Math.random() * 900)}`,
                     description: "",
@@ -551,102 +587,81 @@ export default function AdminPage() {
           </div>
         ) : null}
 
-        {/* 2. ВКЛАДКА РАЗДЕЛЫ КАТАЛОГА */}
+        {/* 2. ВКЛАДКА РАЗДЕЛЫ КАТАЛОГА (ПОЛНЫЙ КОНСТРУКТОР РАЗДЕЛОВ) */}
         {tab === "categories" ? (
-          <div className="mt-8 max-w-3xl">
-            <h2 className="font-display text-lg font-medium text-ink">
-              Названия и описания разделов каталога
-            </h2>
-            <p className="mt-1 text-xs text-muted">
-              Здесь вы можете изменить названия и пояснительные тексты для каждого направления каталога.
-            </p>
+          <div className="mt-8 max-w-4xl">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+              <div>
+                <h2 className="font-display text-lg font-medium text-ink">
+                  Разделы каталога (блоки на главной и в каталоге)
+                </h2>
+                <p className="mt-1 text-xs text-muted">
+                  Вы можете добавлять новые направления (например, «Мастер-классы», «Картины»), менять названия и удалять ненужные.
+                </p>
+              </div>
+
+              <button
+                onClick={() => {
+                  setEditCategory({
+                    title: "",
+                    subtitle: "",
+                    description: "",
+                    order: categories.length + 1,
+                  });
+                  setNewCategoryCover(null);
+                  setIsCategoryModalOpen(true);
+                }}
+                type="button"
+                className="inline-flex items-center justify-center gap-2 rounded-full btn-brown px-5 py-2.5 text-xs font-semibold uppercase tracking-wider shadow-md"
+              >
+                <span>+ Добавить новый раздел</span>
+              </button>
+            </div>
 
             <div className="mt-6 flex flex-col gap-4">
               {categories.map((cat) => (
                 <div
                   key={cat.slug}
-                  className="rounded-2xl border border-sand/60 bg-surface p-5 shadow-sm"
+                  className="rounded-2xl border border-sand/60 bg-surface p-5 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4"
                 >
-                  {editCategory?.slug === cat.slug ? (
-                    <form onSubmit={handleSaveCategory} className="flex flex-col gap-4">
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div>
-                          <label className="block text-[0.7rem] font-semibold uppercase tracking-wider text-muted mb-1">
-                            Название раздела
-                          </label>
-                          <input
-                            type="text"
-                            value={editCategory.title}
-                            onChange={(e) =>
-                              setEditCategory({ ...editCategory, title: e.target.value })
-                            }
-                            required
-                            className="w-full rounded-xl border border-sand bg-bg/50 px-3 py-2 text-xs text-ink focus:border-btn-brown focus:outline-none"
-                          />
-                        </div>
-
-                        <div>
-                          <label className="block text-[0.7rem] font-semibold uppercase tracking-wider text-muted mb-1">
-                            Краткий подзаголовок
-                          </label>
-                          <input
-                            type="text"
-                            value={editCategory.subtitle || ""}
-                            onChange={(e) =>
-                              setEditCategory({ ...editCategory, subtitle: e.target.value })
-                            }
-                            className="w-full rounded-xl border border-sand bg-bg/50 px-3 py-2 text-xs text-ink focus:border-btn-brown focus:outline-none"
-                          />
-                        </div>
+                  <div className="flex items-start gap-4">
+                    {cat.cover?.src ? (
+                      <div className="relative h-16 w-16 flex-shrink-0 overflow-hidden rounded-xl bg-sand/40">
+                        <Image src={cat.cover.src} alt="" fill sizes="64px" className="object-cover" />
                       </div>
-
-                      <div>
-                        <label className="block text-[0.7rem] font-semibold uppercase tracking-wider text-muted mb-1">
-                          Подробное описание раздела
-                        </label>
-                        <textarea
-                          rows={3}
-                          value={editCategory.description || ""}
-                          onChange={(e) =>
-                            setEditCategory({ ...editCategory, description: e.target.value })
-                          }
-                          className="w-full rounded-xl border border-sand bg-bg/50 px-3 py-2 text-xs text-ink focus:border-btn-brown focus:outline-none"
-                        />
-                      </div>
-
-                      <div className="flex gap-2 justify-end">
-                        <button
-                          type="button"
-                          onClick={() => setEditCategory(null)}
-                          className="rounded-full border border-sand px-4 py-1.5 text-xs text-muted hover:text-ink"
-                        >
-                          Отмена
-                        </button>
-                        <button
-                          type="submit"
-                          className="rounded-full btn-brown px-5 py-1.5 text-xs font-semibold uppercase tracking-wider shadow-sm"
-                        >
-                          Сохранить ✓
-                        </button>
-                      </div>
-                    </form>
-                  ) : (
-                    <div className="flex items-start justify-between gap-4">
-                      <div>
+                    ) : null}
+                    <div>
+                      <div className="flex items-center gap-2">
                         <h3 className="font-display text-base text-ink">{cat.title}</h3>
-                        <p className="text-xs font-medium text-clay mt-0.5">{cat.subtitle}</p>
-                        <p className="text-xs text-muted mt-2 leading-relaxed max-w-xl">
-                          {cat.description}
-                        </p>
+                        <span className="text-[0.65rem] font-mono text-muted bg-sand/40 px-2 py-0.5 rounded">
+                          /{cat.slug}
+                        </span>
                       </div>
-                      <button
-                        onClick={() => setEditCategory(cat)}
-                        className="rounded-full border border-sand px-4 py-1.5 text-xs font-medium text-btn-brown hover:bg-sand/30 transition-colors"
-                      >
-                        Изменить
-                      </button>
+                      <p className="text-xs font-medium text-clay mt-0.5">{cat.subtitle}</p>
+                      <p className="text-xs text-muted mt-1 leading-relaxed max-w-xl line-clamp-2">
+                        {cat.description}
+                      </p>
                     </div>
-                  )}
+                  </div>
+
+                  <div className="flex items-center gap-2 self-end md:self-center">
+                    <button
+                      onClick={() => {
+                        setEditCategory(cat);
+                        setNewCategoryCover(null);
+                        setIsCategoryModalOpen(true);
+                      }}
+                      className="rounded-full border border-sand px-4 py-1.5 text-xs font-medium text-btn-brown hover:bg-sand/30 transition-colors"
+                    >
+                      Редактировать
+                    </button>
+                    <button
+                      onClick={() => handleDeleteCategory(cat.slug, cat.title)}
+                      className="rounded-full border border-sand px-3 py-1.5 text-xs font-medium text-red-500 hover:bg-red-50 transition-colors"
+                    >
+                      Удалить
+                    </button>
+                  </div>
                 </div>
               ))}
             </div>
@@ -884,6 +899,108 @@ export default function AdminPage() {
         ) : null}
       </div>
 
+      {/* МОДАЛЬНОЕ ОКНО ДОБАВЛЕНИЯ / РЕДАКТИРОВАНИЯ РАЗДЕЛА КАТАЛОГА */}
+      {isCategoryModalOpen && editCategory ? (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-ink/50 p-4 backdrop-blur-sm overflow-y-auto">
+          <div className="relative my-8 w-full max-w-xl rounded-3xl border border-sand bg-surface p-6 shadow-2xl md:p-8">
+            <div className="flex items-center justify-between border-b border-sand pb-4">
+              <h2 className="font-display text-xl text-ink">
+                {editCategory.slug ? "Редактирование раздела" : "Новый раздел каталога"}
+              </h2>
+              <button
+                onClick={() => setIsCategoryModalOpen(false)}
+                type="button"
+                className="rounded-full p-2 text-muted hover:bg-sand/30"
+              >
+                ✕
+              </button>
+            </div>
+
+            <form onSubmit={handleSaveCategory} className="mt-6 flex flex-col gap-4">
+              <div>
+                <label className="block text-xs font-semibold uppercase tracking-wider text-muted mb-1">
+                  Название раздела *
+                </label>
+                <input
+                  type="text"
+                  value={editCategory.title || ""}
+                  onChange={(e) => setEditCategory({ ...editCategory, title: e.target.value })}
+                  placeholder="Например: Мастер-классы или Текстурные картины"
+                  required
+                  className="w-full rounded-xl border border-sand bg-bg/50 px-4 py-2.5 text-xs text-ink focus:border-btn-brown focus:outline-none"
+                />
+              </div>
+
+              <div>
+                <label className="block text-xs font-semibold uppercase tracking-wider text-muted mb-1">
+                  Краткий подзаголовок
+                </label>
+                <input
+                  type="text"
+                  value={editCategory.subtitle || ""}
+                  onChange={(e) => setEditCategory({ ...editCategory, subtitle: e.target.value })}
+                  placeholder="Например: Обучение и творческие встречи"
+                  className="w-full rounded-xl border border-sand bg-bg/50 px-4 py-2.5 text-xs text-ink focus:border-btn-brown focus:outline-none"
+                />
+              </div>
+
+              <div>
+                <label className="block text-xs font-semibold uppercase tracking-wider text-muted mb-1">
+                  Подробное описание раздела
+                </label>
+                <textarea
+                  rows={3}
+                  value={editCategory.description || ""}
+                  onChange={(e) =>
+                    setEditCategory({ ...editCategory, description: e.target.value })
+                  }
+                  placeholder="Текст, который будет отображаться на главной под названием раздела..."
+                  className="w-full rounded-xl border border-sand bg-bg/50 px-4 py-2.5 text-xs text-ink focus:border-btn-brown focus:outline-none"
+                />
+              </div>
+
+              <div>
+                <label className="block text-xs font-semibold uppercase tracking-wider text-muted mb-1">
+                  Обложка раздела (фотография с авто-сжатием)
+                </label>
+                <input
+                  type="file"
+                  accept="image/*"
+                  onChange={async (e) => {
+                    const file = e.target.files?.[0];
+                    if (!file) return;
+                    const opt = await optimizeImageClient(file, 1400, 0.85);
+                    setNewCategoryCover({
+                      base64: opt.dataUrl,
+                      width: opt.width,
+                      height: opt.height,
+                      blurDataURL: opt.blurDataURL,
+                    });
+                  }}
+                  className="text-xs text-muted file:mr-3 file:rounded-full file:border-0 file:btn-brown file:px-4 file:py-2 file:text-xs file:font-semibold"
+                />
+              </div>
+
+              <div className="mt-4 flex justify-end gap-3 border-t border-sand pt-4">
+                <button
+                  type="button"
+                  onClick={() => setIsCategoryModalOpen(false)}
+                  className="rounded-full border border-sand px-6 py-2.5 text-xs font-semibold text-muted hover:text-ink"
+                >
+                  Отмена
+                </button>
+                <button
+                  type="submit"
+                  className="rounded-full btn-brown px-8 py-2.5 text-xs font-semibold uppercase tracking-wider shadow-md"
+                >
+                  Сохранить раздел ✓
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      ) : null}
+
       {/* МОДАЛЬНОЕ ОКНО ДОБАВЛЕНИЯ / РЕДАКТИРОВАНИЯ ТОВАРА */}
       {isModalOpen && editProduct ? (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-ink/50 p-4 backdrop-blur-sm overflow-y-auto">
@@ -922,7 +1039,7 @@ export default function AdminPage() {
                     Категория *
                   </label>
                   <select
-                    value={editProduct.category || "soap"}
+                    value={editProduct.category || categories[0]?.slug || "candles"}
                     onChange={(e) => setEditProduct({ ...editProduct, category: e.target.value })}
                     className="w-full rounded-xl border border-sand bg-bg/50 px-4 py-2.5 text-xs text-ink focus:border-btn-brown focus:outline-none"
                   >
