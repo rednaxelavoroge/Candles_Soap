@@ -63,11 +63,15 @@ jobs:
           TARGET="${FTP_DIR:-public_html}"
           echo "Заливаю в $TARGET на $FTP_HOST"
           # mirror -R: из локальной папки на сервер.
-          # --delete: убирает на сервере то, чего больше нет у нас.
           # --parallel: несколько файлов разом, иначе 300 файлов льются долго.
+          #
+          # Флага --delete здесь намеренно нет. В папке домена annamanasaryan.art
+          # на хостинге лежит рабочий WordPress, и удаление лишнего снесло бы
+          # его целиком. Выкладка только добавляет и обновляет свои файлы,
+          # чужого не трогает.
           lftp -u "$FTP_USER","$FTP_PASSWORD" "$FTP_HOST" <<LFTP
             set ssl:verify-certificate no
             set ftp:ssl-allow yes
-            mirror -R --delete --parallel=4 --verbose out "$TARGET"
+            mirror -R --parallel=4 --verbose out "$TARGET"
             bye
           LFTP
