@@ -1,6 +1,6 @@
 node_modules
 .next
-out
+/out
 .vercel
 .env*.local
 next-env.d.ts
@@ -14,4 +14,6 @@ tools/.cache
 tools/ingest-manifest.json
 
 # Статическая выгрузка для хостинга вне Vercel
-/out
+
+# Служебные файлы выкладки на Netlify
+/.netlify
