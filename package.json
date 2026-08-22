@@ -15,7 +15,8 @@
     "find-videos": "node tools/find-videos.mjs",
     "portrait": "node tools/set-portrait.mjs",
     "tones": "node tools/extract-tones.mjs",
-    "build:static": "node tools/build-static.mjs"
+    "build:static": "node tools/build-static.mjs",
+    "fonts": "node tools/fetch-fonts.mjs"
   },
   "dependencies": {
     "framer-motion": "^11.15.0",
