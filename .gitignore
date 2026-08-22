@@ -12,3 +12,6 @@ tools/.cache
 
 # промежуточный манифест ingest — производный файл, не версионируем
 tools/ingest-manifest.json
+
+# Статическая выгрузка для хостинга вне Vercel
+/out
