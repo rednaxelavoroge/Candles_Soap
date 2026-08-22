@@ -14,7 +14,8 @@
     "content:clear-drafts": "node tools/apply-drafts.mjs --clear",
     "find-videos": "node tools/find-videos.mjs",
     "portrait": "node tools/set-portrait.mjs",
-    "tones": "node tools/extract-tones.mjs"
+    "tones": "node tools/extract-tones.mjs",
+    "build:static": "node tools/build-static.mjs"
   },
   "dependencies": {
     "framer-motion": "^11.15.0",
