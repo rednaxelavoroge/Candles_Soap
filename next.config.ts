@@ -13,7 +13,11 @@ const isExport = process.env.STATIC_EXPORT === "1";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
-  ...(isExport ? { output: "export" as const } : {}),
+  // trailingSlash в выгрузке обязателен. Без него страницы ложатся файлами
+  // catalog.html, а Apache на обычном хостинге по адресу /catalog такой файл
+  // не найдёт — откроется только главная. С ним каждая страница становится
+  // папкой с index.html, и сервер отдаёт её сам, без всяких правил.
+  ...(isExport ? { output: "export" as const, trailingSlash: true } : {}),
   images: {
     unoptimized: isExport,
     formats: ["image/webp"],

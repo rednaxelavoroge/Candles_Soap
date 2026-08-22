@@ -1,0 +1,25 @@
+# Настройка для обычного хостинга с Apache (Namecheap).
+# На Vercel этот файл не используется и ни на что не влияет.
+
+# Наш сайт — статические html. index.html должен идти раньше index.php,
+# иначе сервер отдаст постороннний index.php, если тот окажется в папке.
+DirectoryIndex index.html index.php
+
+# Своя страница «не найдено» вместо стандартной страницы сервера.
+ErrorDocument 404 /404.html
+
+# Картинки и шрифты не меняются между сборками — пусть браузер держит их
+# у себя и не запрашивает заново. Это заметно ускоряет повторные заходы,
+# особенно на плохой связи.
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType text/css "access plus 1 week"
+  ExpiresByType application/javascript "access plus 1 week"
+</IfModule>
+
+# Сжатие текстовых файлов при передаче.
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript image/svg+xml
+</IfModule>
