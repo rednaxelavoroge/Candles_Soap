@@ -1,0 +1,73 @@
+# Выкладка публичного сайта на обычный хостинг по FTP.
+#
+# Зачем. На Vercel сайт в России открывается еле-еле — дело в маршруте до
+# серверов Vercel, настройками это не лечится. Хостинг, где стоит
+# annamanasaryan.com, в России работает нормально, поэтому людям сайт
+# отдаётся оттуда.
+#
+# Пароль от FTP хранится в секретах репозитория и в коде не появляется.
+# Разработчик его не видит.
+#
+# Что происходит: при каждом изменении в main сайт пересобирается статикой
+# и заливается на хостинг. Это же работает и для правок из админки —
+# она сохраняет данные коммитом в репозиторий, значит после её правки
+# сайт на хостинге обновится сам.
+
+name: Выложить сайт на хостинг
+
+on:
+  push:
+    branches: [main]
+  # Позволяет запустить выкладку вручную кнопкой во вкладке Actions.
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Проверить, заданы ли доступы
+        id: check
+        run: |
+          if [ -z "${{ secrets.FTP_HOST }}" ]; then
+            echo "Секрет FTP_HOST не задан — выкладка пропущена."
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Установить зависимости
+        if: steps.check.outputs.ready == 'true'
+        run: npm ci
+
+      - name: Собрать статику
+        if: steps.check.outputs.ready == 'true'
+        run: npm run build:static
+
+      - name: Залить на хостинг
+        if: steps.check.outputs.ready == 'true'
+        env:
+          FTP_HOST: ${{ secrets.FTP_HOST }}
+          FTP_USER: ${{ secrets.FTP_USER }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          # Папка на хостинге. Если секрет не задан, берётся public_html.
+          FTP_DIR: ${{ secrets.FTP_DIR }}
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq lftp
+          TARGET="${FTP_DIR:-public_html}"
+          echo "Заливаю в $TARGET на $FTP_HOST"
+          # mirror -R: из локальной папки на сервер.
+          # --delete: убирает на сервере то, чего больше нет у нас.
+          # --parallel: несколько файлов разом, иначе 300 файлов льются долго.
+          lftp -u "$FTP_USER","$FTP_PASSWORD" "$FTP_HOST" <<LFTP
+            set ssl:verify-certificate no
+            set ftp:ssl-allow yes
+            mirror -R --delete --parallel=4 --verbose out "$TARGET"
+            bye
+          LFTP
