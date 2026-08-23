@@ -1,7 +1,7 @@
 "use client";
 
 import { optimizeImageClient } from "@/lib/image-optimizer";
-import type { BackstageItem, Category, Product } from "@/lib/schemas";
+import type { BackstageItem, Category, Product, Tag } from "@/lib/schemas";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -17,6 +17,7 @@ export default function AdminPage() {
   // Данные
   const [products, setProducts] = useState<Product[]>([]);
   const [categories, setCategories] = useState<Category[]>([]);
+  const [tags, setTags] = useState<Tag[]>([]);
   const [backstage, setBackstage] = useState<BackstageItem[]>([]);
   const [siteData, setSiteData] = useState({
     owner: "",
@@ -28,6 +29,9 @@ export default function AdminPage() {
       phoneRussia: "",
       whatsapp: "",
       instagram: "",
+      facebook: "",
+      email: "",
+      city: "",
     },
   });
 
@@ -100,6 +104,7 @@ export default function AdminPage() {
         if (prodRes.ok) {
           const p = await prodRes.json();
           setProducts(p.products || []);
+          setTags(p.tags || []);
         }
         if (catRes.ok) {
           const c = await catRes.json();
@@ -874,13 +879,76 @@ export default function AdminPage() {
                 </label>
                 <input
                   type="text"
-                  value={siteData.contacts.instagram}
+                  value={siteData.contacts.instagram || ""}
                   onChange={(e) =>
                     setSiteData({
                       ...siteData,
                       contacts: {
                         ...siteData.contacts,
                         instagram: e.target.value,
+                      },
+                    })
+                  }
+                  className="w-full rounded-xl border border-sand bg-bg/50 px-4 py-2.5 text-xs text-ink focus:border-btn-brown focus:outline-none"
+                />
+              </div>
+
+              <div>
+                <label className="block text-xs font-semibold uppercase tracking-wider text-muted mb-1">
+                  Facebook (ссылка на профиль / страницу)
+                </label>
+                <input
+                  type="text"
+                  placeholder="https://facebook.com/..."
+                  value={siteData.contacts.facebook || ""}
+                  onChange={(e) =>
+                    setSiteData({
+                      ...siteData,
+                      contacts: {
+                        ...siteData.contacts,
+                        facebook: e.target.value,
+                      },
+                    })
+                  }
+                  className="w-full rounded-xl border border-sand bg-bg/50 px-4 py-2.5 text-xs text-ink focus:border-btn-brown focus:outline-none"
+                />
+              </div>
+
+              <div>
+                <label className="block text-xs font-semibold uppercase tracking-wider text-muted mb-1">
+                  Email для связи
+                </label>
+                <input
+                  type="email"
+                  placeholder="anna@example.com"
+                  value={siteData.contacts.email || ""}
+                  onChange={(e) =>
+                    setSiteData({
+                      ...siteData,
+                      contacts: {
+                        ...siteData.contacts,
+                        email: e.target.value,
+                      },
+                    })
+                  }
+                  className="w-full rounded-xl border border-sand bg-bg/50 px-4 py-2.5 text-xs text-ink focus:border-btn-brown focus:outline-none"
+                />
+              </div>
+
+              <div>
+                <label className="block text-xs font-semibold uppercase tracking-wider text-muted mb-1">
+                  Город / Локация
+                </label>
+                <input
+                  type="text"
+                  placeholder="Ереван, Армения"
+                  value={siteData.contacts.city || ""}
+                  onChange={(e) =>
+                    setSiteData({
+                      ...siteData,
+                      contacts: {
+                        ...siteData.contacts,
+                        city: e.target.value,
                       },
                     })
                   }
@@ -1078,7 +1146,40 @@ export default function AdminPage() {
                 />
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {/* Выбор подразделов / тематики (теги) */}
+              <div>
+                <label className="block text-xs font-semibold uppercase tracking-wider text-muted mb-1.5">
+                  Подразделы и темы (отметьте подходящие)
+                </label>
+                <div className="flex flex-wrap gap-2 p-3 bg-bg/50 rounded-2xl border border-sand max-h-48 overflow-y-auto">
+                  {tags.map((t) => {
+                    const isChecked = (editProduct.tags || []).includes(t.slug);
+                    return (
+                      <button
+                        key={t.slug}
+                        type="button"
+                        onClick={() => {
+                          const currentTags = editProduct.tags || [];
+                          const nextTags = isChecked
+                            ? currentTags.filter((s) => s !== t.slug)
+                            : [...currentTags, t.slug];
+                          setEditProduct({ ...editProduct, tags: nextTags });
+                        }}
+                        className={`rounded-full px-3.5 py-1.5 text-xs font-medium transition-all ${
+                          isChecked
+                            ? "bg-btn-brown text-white shadow-sm scale-105"
+                            : "bg-surface text-ink border border-sand hover:border-clay"
+                        }`}
+                      >
+                        {isChecked ? "✓ " : "+ "}{t.title}
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* 5 характеристик изделия */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                 <div>
                   <label className="block text-[0.7rem] font-semibold uppercase tracking-wider text-muted mb-1">
                     Аромат
@@ -1111,6 +1212,108 @@ export default function AdminPage() {
                       })
                     }
                     placeholder="100% соевый воск, хлопковый фитиль"
+                    className="w-full rounded-xl border border-sand bg-bg/50 px-3 py-2 text-xs text-ink focus:border-btn-brown focus:outline-none"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-[0.7rem] font-semibold uppercase tracking-wider text-muted mb-1">
+                    Вес
+                  </label>
+                  <input
+                    type="text"
+                    value={editProduct.specs?.weight || ""}
+                    onChange={(e) =>
+                      setEditProduct({
+                        ...editProduct,
+                        specs: { ...(editProduct.specs || {}), weight: e.target.value },
+                      })
+                    }
+                    placeholder="Например: 120 г"
+                    className="w-full rounded-xl border border-sand bg-bg/50 px-3 py-2 text-xs text-ink focus:border-btn-brown focus:outline-none"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-[0.7rem] font-semibold uppercase tracking-wider text-muted mb-1">
+                    Размеры
+                  </label>
+                  <input
+                    type="text"
+                    value={editProduct.specs?.size || ""}
+                    onChange={(e) =>
+                      setEditProduct({
+                        ...editProduct,
+                        specs: { ...(editProduct.specs || {}), size: e.target.value },
+                      })
+                    }
+                    placeholder="Например: 8 × 8 × 10 см"
+                    className="w-full rounded-xl border border-sand bg-bg/50 px-3 py-2 text-xs text-ink focus:border-btn-brown focus:outline-none"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-[0.7rem] font-semibold uppercase tracking-wider text-muted mb-1">
+                    Время горения (для свечей)
+                  </label>
+                  <input
+                    type="text"
+                    value={editProduct.specs?.burnTime || ""}
+                    onChange={(e) =>
+                      setEditProduct({
+                        ...editProduct,
+                        specs: { ...(editProduct.specs || {}), burnTime: e.target.value },
+                      })
+                    }
+                    placeholder="Например: до 35 часов"
+                    className="w-full rounded-xl border border-sand bg-bg/50 px-3 py-2 text-xs text-ink focus:border-btn-brown focus:outline-none"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-[0.7rem] font-semibold uppercase tracking-wider text-muted mb-1">
+                    Ссылка на видео YouTube / файл
+                  </label>
+                  <input
+                    type="text"
+                    value={
+                      editProduct.video
+                        ? editProduct.video.kind === "youtube"
+                          ? `https://youtube.com/watch?v=${editProduct.video.id}`
+                          : editProduct.video.kind === "vimeo"
+                          ? `https://vimeo.com/${editProduct.video.id}`
+                          : editProduct.video.src
+                        : ""
+                    }
+                    onChange={(e) => {
+                      const val = e.target.value.trim();
+                      if (!val) {
+                        setEditProduct({ ...editProduct, video: null });
+                      } else {
+                        const match = val.match(
+                          /(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([\w-]{11})/,
+                        );
+                        const fallbackPoster = editProduct.images?.[0] || {
+                          src: "/placeholder.jpg",
+                          width: 800,
+                          height: 800,
+                          blurDataURL: "",
+                          alt: editProduct.title || "",
+                        };
+                        if (match) {
+                          setEditProduct({
+                            ...editProduct,
+                            video: { kind: "youtube", id: match[1], poster: fallbackPoster },
+                          });
+                        } else {
+                          setEditProduct({
+                            ...editProduct,
+                            video: { kind: "file", src: val, poster: fallbackPoster },
+                          });
+                        }
+                      }
+                    }}
+                    placeholder="https://youtube.com/watch?v=..."
                     className="w-full rounded-xl border border-sand bg-bg/50 px-3 py-2 text-xs text-ink focus:border-btn-brown focus:outline-none"
                   />
                 </div>

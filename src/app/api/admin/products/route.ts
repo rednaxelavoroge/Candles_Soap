@@ -1,6 +1,6 @@
 import { checkAdminAuth } from "@/lib/admin-auth";
 import { saveJsonData, saveMediaFile } from "@/lib/data-storage";
-import { getCategories, getProducts } from "@/lib/content";
+import { getCategories, getProducts, getTags } from "@/lib/content";
 import type { Product } from "@/lib/schemas";
 import { NextResponse } from "next/server";
 
@@ -12,7 +12,8 @@ export async function GET() {
 
   const products = getProducts();
   const categories = getCategories();
-  return NextResponse.json({ products, categories });
+  const tags = getTags();
+  return NextResponse.json({ products, categories, tags });
 }
 
 export async function POST(req: Request) {
