@@ -5,6 +5,7 @@ import { getCategories, getProductsByCategory } from "@/lib/content";
 import type { Category } from "@/lib/schemas";
 import { motion, useReducedMotion } from "framer-motion";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 type ShowcaseItem = {
   category: Category;
@@ -52,6 +53,11 @@ function ShowcaseSection({
   item: ShowcaseItem;
   index: number;
 }) {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const reduced = useReducedMotion();
   const count = getProductsByCategory(item.category.slug).length;
 
@@ -69,8 +75,8 @@ function ShowcaseSection({
         
         {/* Текстовый блок */}
         <motion.div
-          initial={reduced ? undefined : { opacity: 0, x: textInitialX, y: 15 }}
-          whileInView={reduced ? undefined : { opacity: 1, x: 0, y: 0 }}
+          initial={mounted && !reduced ? { opacity: 0, x: textInitialX, y: 15 } : false}
+          whileInView={mounted && !reduced ? { opacity: 1, x: 0, y: 0 } : undefined}
           viewport={{ once: true, amount: 0, margin: "150px 0px 150px 0px" }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           className={`flex w-full flex-col justify-center px-2 py-4 will-change-transform md:px-8 lg:px-12 ${
@@ -107,8 +113,8 @@ function ShowcaseSection({
 
         {/* Блок изображения */}
         <motion.div
-          initial={reduced ? undefined : { opacity: 0, x: mediaInitialX, y: 15, scale: 0.96 }}
-          whileInView={reduced ? undefined : { opacity: 1, x: 0, y: 0, scale: 1 }}
+          initial={mounted && !reduced ? { opacity: 0, x: mediaInitialX, y: 15, scale: 0.96 } : false}
+          whileInView={mounted && !reduced ? { opacity: 1, x: 0, y: 0, scale: 1 } : undefined}
           viewport={{ once: true, amount: 0, margin: "150px 0px 150px 0px" }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           className={`relative flex items-center justify-center p-2 will-change-transform md:p-4 ${
