@@ -155,6 +155,62 @@ export function getTagsForCategory(slug: string): Tag[] {
   return tags.filter((tag) => used.has(tag.slug));
 }
 
+/**
+ * Второй уровень каталога: Каталог → Разделы → Фотографии.
+ *
+ * Раздел — это тег в пределах одной категории: «Мыло → Морская тема». Отдельной
+ * сущности под него нет намеренно, иначе одно и то же изделие пришлось бы
+ * заводить дважды. Первым идёт раздел «Все изделия»: без него товар, которому
+ * ещё не проставили тег, не был бы виден вообще ниоткуда.
+ *
+ * Обложка раздела — первый кадр первого его изделия. Своя обложка у раздела
+ * появится, когда заказчица загрузит её через админку.
+ */
+export const ALL_SECTION = "vse";
+
+export type Section = {
+  slug: string;
+  title: string;
+  count: number;
+  cover: Product["images"][number] | null;
+};
+
+export function getSectionsForCategory(categorySlug: string): Section[] {
+  const inCategory = getProductsByCategory(categorySlug);
+  if (inCategory.length === 0) return [];
+
+  const sections: Section[] = [
+    {
+      slug: ALL_SECTION,
+      title: "Все изделия",
+      count: inCategory.length,
+      cover: inCategory[0].images[0] ?? null,
+    },
+  ];
+
+  for (const tag of getTagsForCategory(categorySlug)) {
+    const products = inCategory.filter((product) => product.tags.includes(tag.slug));
+    sections.push({
+      slug: tag.slug,
+      title: tag.title,
+      count: products.length,
+      cover: products[0]?.images[0] ?? null,
+    });
+  }
+
+  return sections;
+}
+
+export function getSection(categorySlug: string, sectionSlug: string): Section | undefined {
+  return getSectionsForCategory(categorySlug).find((section) => section.slug === sectionSlug);
+}
+
+export function getProductsBySection(categorySlug: string, sectionSlug: string): Product[] {
+  const inCategory = getProductsByCategory(categorySlug);
+  if (sectionSlug === ALL_SECTION) return inCategory;
+  return inCategory.filter((product) => product.tags.includes(sectionSlug));
+}
+
 /** Похожие товары: сначала по совпадению тегов, затем просто соседи по категории. */
 export function getRelatedProducts(product: Product, limit = 4): Product[] {
   return getProductsByCategory(product.category)

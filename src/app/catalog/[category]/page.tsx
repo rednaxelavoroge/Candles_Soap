@@ -1,11 +1,8 @@
-import { Blots } from "@/components/ui/Blots";
-import { CategoryView } from "@/components/catalog/CategoryView";
-import { ProductGrid } from "@/components/catalog/ProductGrid";
-import { getCategories, getCategory, getProductsByCategory, getTagsForCategory } from "@/lib/content";
+import { CategorySections } from "@/components/catalog/CategorySections";
+import { getCategories, getCategory, getSectionsForCategory } from "@/lib/content";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Suspense } from "react";
 
 type Params = { category: string };
 
@@ -18,7 +15,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   const category = getCategory(slug);
   if (!category) return {};
 
-  const description = `${category.title} ручной работы — раздел каталога.`;
+  const description = `${category.title} ручной работы — разделы каталога.`;
   return {
     title: category.title,
     description,
@@ -26,13 +23,16 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   };
 }
 
+/**
+ * Второй уровень: нажали «Мыло» — увидели разделы, а не сразу все фотографии.
+ * Матрица изделий живёт уровнем ниже, в /catalog/<категория>/razdel/<раздел>.
+ */
 export default async function CategoryPage({ params }: { params: Promise<Params> }) {
   const { category: slug } = await params;
   const category = getCategory(slug);
   if (!category) notFound();
 
-  const products = getProductsByCategory(slug);
-  const tags = getTagsForCategory(slug);
+  const sections = getSectionsForCategory(slug);
 
   return (
     <div className="pt-24 md:pt-32">
@@ -41,18 +41,21 @@ export default async function CategoryPage({ params }: { params: Promise<Params>
           Каталог
         </Link>
         <h1 className="relative mt-2 font-display text-4xl md:text-6xl">{category.title}</h1>
+        {category.description ? (
+          <p className="relative mt-4 max-w-2xl text-base leading-relaxed text-muted md:text-lg">
+            {category.description}
+          </p>
+        ) : null}
       </header>
 
-      {products.length === 0 ? (
+      {sections.length === 0 ? (
         <p className="px-5 pb-16 text-sm text-muted md:px-8">В этом разделе пока нет изделий.</p>
-      ) : tags.length > 0 ? (
-        // useSearchParams требует границы Suspense: в статику уезжает
-        // нефильтрованная сетка, фильтры оживают после гидратации.
-        <Suspense fallback={<ProductGrid products={products} />}>
-          <CategoryView products={products} tags={tags} />
-        </Suspense>
       ) : (
-        <ProductGrid products={products} />
+        <CategorySections
+          categorySlug={category.slug}
+          categoryTitle={category.title}
+          sections={sections}
+        />
       )}
     </div>
   );
