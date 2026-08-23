@@ -47,6 +47,12 @@ export const tagSchema = z.object({
   slug: z.string().min(1),
   title: z.string().min(1),
   group: z.enum(["occasion", "recipient", "form"]),
+  /**
+   * Порядок раздела на странице категории. Задан по её прайсам: сначала идут
+   * разделы в том порядке, в каком она перечисляет их сама, следом наши —
+   * те, строк под которые в прайсе нет.
+   */
+  order: z.number().int().optional(),
 });
 
 export const specsSchema = z.object({
@@ -89,6 +95,11 @@ export const siteSchema = z.object({
   tagline: z.string().min(1),
   intro: z.string().min(1),
   portrait: imageSchema.nullable(),
+  /**
+   * Кадры с самой Анной для страницы «Обо мне». Это не каталог: изделие тут
+   * в руках у мастера, а не на предметной съёмке.
+   */
+  gallery: z.array(imageSchema).optional(),
   contacts: z.object({
     /** Номер для кнопки «Написать в WhatsApp» и звонков (Армения). */
     whatsapp: z.string().nullable(),

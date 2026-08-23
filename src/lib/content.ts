@@ -152,7 +152,9 @@ export function getFeaturedProducts(limit = 8): Product[] {
  */
 export function getTagsForCategory(slug: string): Tag[] {
   const used = new Set(getProductsByCategory(slug).flatMap((product) => product.tags));
-  return tags.filter((tag) => used.has(tag.slug));
+  return tags
+    .filter((tag) => used.has(tag.slug))
+    .sort((a, b) => (a.order ?? 999) - (b.order ?? 999));
 }
 
 /**

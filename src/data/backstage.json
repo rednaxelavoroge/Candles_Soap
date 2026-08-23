@@ -178,5 +178,469 @@
       "alt": "Атмосфера вечерней мастерской — процесс создания"
     },
     "caption": ""
+  },
+  {
+    "kind": "image",
+    "image": {
+      "src": "/about/podarok-1.webp",
+      "width": 1600,
+      "height": 1200,
+      "blurDataURL": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADwAQCdASoQAAwAA4BaJaAAD43vuchNrUgA/qNnwz2ZzU20AkWnBwbbwClaallyvrR+zMo3UGGF8F65882bUL2ES8qzyQkvvtGC1URoV2r8/99KGrX8UAAA",
+      "alt": "Мыло-книга с пионами как подарок"
+    },
+    "caption": ""
+  },
+  {
+    "kind": "image",
+    "image": {
+      "src": "/about/podarok-2.webp",
+      "width": 1600,
+      "height": 1200,
+      "blurDataURL": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAAAwAgCdASoQAAwAA4BaJaACdAYuRdQntS3ZLADfhUx8Wo1f3hSdQ36UZyelwD0aIwIkjSChQxy0lkDeFkEw8Wi4SLVvD8qcg+xkejrgemYL88hkgDB84502qdH79x5/LLW5Rk9CU20AAA==",
+      "alt": "Изделие Анны Манасарян в подарок"
+    },
+    "caption": ""
+  },
+  {
+    "kind": "image",
+    "image": {
+      "src": "/about/podarok-3.webp",
+      "width": 1600,
+      "height": 1200,
+      "blurDataURL": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAABQAgCdASoQAAwAA4BaJaACdAYvNWOo4BdURwAA38pIYA11B9070RS2MNbW2SohEyCSyb/zCNdspBxQW+LEqDqvKGzZ8ewMS1/yGqx/xTjDHGBUNnhllKDRsNnvOkta0zBaDIAA",
+      "alt": "Подарок из мастерской Анны Манасарян"
+    },
+    "caption": ""
+  },
+  {
+    "kind": "image",
+    "image": {
+      "src": "/about/podarok-4.webp",
+      "width": 1600,
+      "height": 1200,
+      "blurDataURL": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAADwAQCdASoQAAwAA4BaJaACdACZepD/dcAA4BHselVZNRpuGPcmVuoTmQbEEp+xkwpVl7cWTSMbj6HnD6otA06AAvvMRTY9aXLOzyZdnhaGw+93RvouNwjNw0StD6uIdGAwz2N6CwAAAA==",
+      "alt": "Мыло ручной работы как подарок паре"
+    },
+    "caption": ""
+  },
+  {
+    "kind": "video",
+    "src": "/catalog/video/candle-process-8.mp4",
+    "poster": {
+      "src": "/catalog/video/candle-process-8-poster.webp",
+      "width": 720,
+      "height": 1280,
+      "blurDataURL": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAADwAwCdASoQABwAPu1iqU2ppaOiMAgBMB2JbAC7ABInLyL1VU684xpwAPnWiweED0svLh/wBt3G4RacdN2LQV0bE15PLmmd7WWc9KDG2A+EZ0MqrxncvavVCqfho5ssjHIuRP0B3zzxCQ4x/QFuQa6NGYDLwAAA",
+      "alt": "Кадр из мастерской"
+    },
+    "caption": ""
+  },
+  {
+    "kind": "video",
+    "src": "/catalog/video/candle-process-9.mp4",
+    "poster": {
+      "src": "/catalog/video/candle-process-9-poster.webp",
+      "width": 720,
+      "height": 1280,
+      "blurDataURL": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAAAwBACdASoQABwAPu1iqU2ppaOiMAgBMB2JbACdMoADT1+hMMKW+ApBW3AA/uTp9UP/qYMxPPQL3aPQa0cPxsuG1srWGjPKoyAIkW3VOCFlTB/imRFvNphRpdvZJ+CimXQGDFN2mA0/4Kx3evgDXqiayeqs4jf7UIl61n1IgAA=",
+      "alt": "Кадр из мастерской"
+    },
+    "caption": ""
+  },
+  {
+    "kind": "video",
+    "src": "/catalog/video/candle-process-10.mp4",
+    "poster": {
+      "src": "/catalog/video/candle-process-10-poster.webp",
+      "width": 1280,
+      "height": 720,
+      "blurDataURL": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACQAQCdASoQAAkAA4BaJZwAAuQW+wAA/vd9h/Kj72HYx0vaQ7wQ8Oq6sGy9QAAA",
+      "alt": "Кадр из мастерской"
+    },
+    "caption": ""
+  },
+  {
+    "kind": "video",
+    "src": "/catalog/video/candle-process-11.mp4",
+    "poster": {
+      "src": "/catalog/video/candle-process-11-poster.webp",
+      "width": 720,
+      "height": 1280,
+      "blurDataURL": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAAAQBACdASoQABwAPu1iqU2ppaOiMAgBMB2JbACdMoADTpaoQgm1UYQNAAD+6Rk8NkO3obCwHMkLERpmUhUAEF6nFAC0jG0fLkNAiunU6Vb6PessRM8AFfsVqC6u3smni6IkgXjjF3mGnya7aEnTDiPyLXm0r2FFLd5kG/kB20MidxTcAAA=",
+      "alt": "Кадр из мастерской"
+    },
+    "caption": ""
+  },
+  {
+    "kind": "video",
+    "src": "/catalog/video/candle-process-12.mp4",
+    "poster": {
+      "src": "/catalog/video/candle-process-12-poster.webp",
+      "width": 720,
+      "height": 1280,
+      "blurDataURL": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAACwAwCdASoQABwAPu1kqU2ppaOiMAgBMB2JZQAAR+Fpz274sDIOgAD+6/6ml1WIs1+bw/X63kiHAHy/uWgQXjOkOJrRfWCDG4Kd0KeffdcdgBWxZqvtAAAA",
+      "alt": "Кадр из мастерской"
+    },
+    "caption": ""
+  },
+  {
+    "kind": "video",
+    "src": "/catalog/video/candle-process-13.mp4",
+    "poster": {
+      "src": "/catalog/video/candle-process-13-poster.webp",
+      "width": 720,
+      "height": 1280,
+      "blurDataURL": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAwAwCdASoQABwAPu1iqU2ppaOiMAgBMB2JQAALemmHwYQAAP7ow+EDutopOPEYd7R5syn+XeZFsxQIunLgI1nhpDdL37ozFwx1GJn9k5eAwoFHMIiQAAAA",
+      "alt": "Кадр из мастерской"
+    },
+    "caption": ""
+  },
+  {
+    "kind": "video",
+    "src": "/catalog/video/candle-process-14.mp4",
+    "poster": {
+      "src": "/catalog/video/candle-process-14-poster.webp",
+      "width": 720,
+      "height": 1280,
+      "blurDataURL": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAABQBACdASoQABwAPu1iqk2ppaQiMAgBMB2JZgCdACHb3nlm6A4+4a5P7F7IAP7r4sTysI7eIxvUGS8K3Fe9jel3p2z89XvFT6NfNwA2Lrs/p6bwU8niC1555Z2ro8e2ergI189JooNnYgzQcm2rn/LLWuMmAAAA",
+      "alt": "Кадр из мастерской"
+    },
+    "caption": ""
+  },
+  {
+    "kind": "video",
+    "src": "/catalog/video/candle-process-15.mp4",
+    "poster": {
+      "src": "/catalog/video/candle-process-15-poster.webp",
+      "width": 720,
+      "height": 1068,
+      "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADQAwCdASoQABgAPu1iqU2ppaOiMAgBMB2JZQDCgCHfI5Vn+QYCUqAA/uK97suzKsTX2PoDu7ZPB2c4LLyIJ6vQWas5i4hj6nbFoSyZRuT6SGAA",
+      "alt": "Кадр из мастерской"
+    },
+    "caption": ""
+  },
+  {
+    "kind": "video",
+    "src": "/catalog/video/candle-process-16.mp4",
+    "poster": {
+      "src": "/catalog/video/candle-process-16-poster.webp",
+      "width": 720,
+      "height": 1280,
+      "blurDataURL": "data:image/webp;base64,UklGRuoAAABXRUJQVlA4IN4AAACwBACdASoQABwAPu1iqU2ppaOiMAgBMB2JYwC2yywTmAk7hnVoUkmLNmSZaRBAAOATz8Po3Y2Z5eE/yORlPGe5ToO9AVhCXZZWXLAiGCIMMvMy1y9Sup5KvHEMrdwye5nGgPT4IWbLIzefNLVE6BCrfuITHYK8TcTh83KcnJJw5f/cplq37cjnf0+W16w4z+ocACIzu4SucdRDzBoRg9rngvk6O7epLNOyIWsadR/al9lYJzbMxUYc/mh20UduIbO2MWHCvEA6ONiykKB+ADQSkIzP6JibcP+aZmD8AAA=",
+      "alt": "Кадр из мастерской"
+    },
+    "caption": ""
+  },
+  {
+    "kind": "video",
+    "src": "/catalog/video/candle-process-17.mp4",
+    "poster": {
+      "src": "/catalog/video/candle-process-17-poster.webp",
+      "width": 720,
+      "height": 1280,
+      "blurDataURL": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAAAQBACdASoQABwAPu1Ct1apoqakGAEwHYlAAAudfKMHTn5DctBfq4+sAAD+8NERlI+/iDhpe9DhIMPvNa6ORnOEyBvFT8dUbmjez2y2NdK+FFNX3aWBsQtQhlbgg4NAfTvb/q4X/cexqiJ0sim9aLhRbcUDYM4lv04T5BXb21VV/lO7xNMnVz+zdAA=",
+      "alt": "Кадр из мастерской"
+    },
+    "caption": ""
+  },
+  {
+    "kind": "video",
+    "src": "/catalog/video/candle-process-18.mp4",
+    "poster": {
+      "src": "/catalog/video/candle-process-18-poster.webp",
+      "width": 720,
+      "height": 1280,
+      "blurDataURL": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAAAQBACdASoQABwAPu1iqU2ppaQiMAgBMB2JYwC06CDpfgE3KlVDpGbSAADKdlolJlg309XYtjDCgfXoIR/DG23PecUq1zGk5vbeoxNAeTYs9/UqdxoSUi4uvQbmQNKlWogyCbJXAAA=",
+      "alt": "Кадр из мастерской"
+    },
+    "caption": ""
+  },
+  {
+    "kind": "video",
+    "src": "/catalog/video/candle-process-19.mp4",
+    "poster": {
+      "src": "/catalog/video/candle-process-19-poster.webp",
+      "width": 720,
+      "height": 1280,
+      "blurDataURL": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAADwAwCdASoQABwAPu1iqU2ppaOiMAgBMB2JbAC7ABInLyL1VU684xpwAPnWiweED0svLh/wBt3G4RacdN2LQV0bE15PLmmd7WWc9KDG2A+EZ0MqrxncvavVCqfho5ssjHIuRP0B3zzxCQ4x/QFuQa6NGYDLwAAA",
+      "alt": "Кадр из мастерской"
+    },
+    "caption": ""
+  },
+  {
+    "kind": "video",
+    "src": "/catalog/video/candle-process-20.mp4",
+    "poster": {
+      "src": "/catalog/video/candle-process-20-poster.webp",
+      "width": 720,
+      "height": 1280,
+      "blurDataURL": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAADQAwCdASoQABwAPu1iqU2ppaOiMAgBMB2JQAAkIbzrHeR8fneFCAAAyuzEi7TITCzWEs3Q2/eOfaXWrYa4xDucxcMJUt4u6dhDLBV4I5NNn0XwGxSn7jYEQB5fxE19iAzOAgeU2xFaEIAA",
+      "alt": "Кадр из мастерской"
+    },
+    "caption": ""
+  },
+  {
+    "kind": "video",
+    "src": "/catalog/video/candle-process-21.mp4",
+    "poster": {
+      "src": "/catalog/video/candle-process-21-poster.webp",
+      "width": 1280,
+      "height": 720,
+      "blurDataURL": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAADQAQCdASoQAAkAA4BaJZQAAvZi6tSyAAD3QEoAyOeoHUOiQmhTnErXZI8vNrpZgAA=",
+      "alt": "Кадр из мастерской"
+    },
+    "caption": ""
+  },
+  {
+    "kind": "video",
+    "src": "/catalog/video/candle-process-22.mp4",
+    "poster": {
+      "src": "/catalog/video/candle-process-22-poster.webp",
+      "width": 720,
+      "height": 1280,
+      "blurDataURL": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAADQAwCdASoQABwAPu1kqk2ppaQiMAgBMB2JQBOgBDuOtQ0TX7U54EAA/riiszlw2sGysYHG4AxXuZFZPj+KINu9OHUShHXJpE+YyV+3iFoewq9/O3rrjmSyeg6rOda6ULITdqWuWeYfYUEu6g7Pun8kqIpYHYzJu2fCkRiigDc2AAAA",
+      "alt": "Кадр из мастерской"
+    },
+    "caption": ""
+  },
+  {
+    "kind": "video",
+    "src": "/catalog/video/candle-process-23.mp4",
+    "poster": {
+      "src": "/catalog/video/candle-process-23-poster.webp",
+      "width": 720,
+      "height": 1280,
+      "blurDataURL": "data:image/webp;base64,UklGRqwAAABXRUJQVlA4IKAAAACQBACdASoQABwAPu1iqU2ppaOiMAgBMB2JbAC7MoAlp0nn9CFN3Y3sYGvSkAAA/s1P7nU1kQU94Nk4+N3NzUnY/bvPznv02CF4eMnQ8xboZLVBTzlTNHQp5RFW3aLr/IFth0zs7rxV257TolUtaZzxgiGPLqbNTpF0kR5wfKpnYrLozMgePM2HD/PDCAjJ3eIPchgZ2FfBRK1TbsCUAAAA",
+      "alt": "Кадр из мастерской"
+    },
+    "caption": ""
+  },
+  {
+    "kind": "video",
+    "src": "/catalog/video/candle-process-24.mp4",
+    "poster": {
+      "src": "/catalog/video/candle-process-24-poster.webp",
+      "width": 720,
+      "height": 1280,
+      "blurDataURL": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAABQBACdASoQABwAPu1iqk4ppaQiMAgBMB2JbACdAB6VvESmxMi+kwsd1uB4AP58i/tSXIsk/0Bu6fprw8/u2YDsWYodKDXABJNIv8ZHWZoJ2/LyDw9ULrM+xPQ1og/acwd7BxuXe2TXCQEjHLIQPPu7Ga+vKDftf9AXzbO/IyMdMJCzebn33SiYFZfmukAA",
+      "alt": "Кадр из мастерской"
+    },
+    "caption": ""
+  },
+  {
+    "kind": "video",
+    "src": "/catalog/video/candle-process-25.mp4",
+    "poster": {
+      "src": "/catalog/video/candle-process-25-poster.webp",
+      "width": 720,
+      "height": 1068,
+      "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADQAwCdASoQABgAPu1iqU2ppaOiMAgBMB2JZQDCgCHfI5Vn+QYCUqAA/uK97suzKsTX2PoDu7ZPB2c4LLyIJ6vQWas5i4hj6nbFoSyZRuT6SGAA",
+      "alt": "Кадр из мастерской"
+    },
+    "caption": ""
+  },
+  {
+    "kind": "video",
+    "src": "/catalog/video/candle-process-26.mp4",
+    "poster": {
+      "src": "/catalog/video/candle-process-26-poster.webp",
+      "width": 720,
+      "height": 1280,
+      "blurDataURL": "data:image/webp;base64,UklGRuoAAABXRUJQVlA4IN4AAACwBACdASoQABwAPu1iqU2ppaOiMAgBMB2JYwC2yywTmAk7hnVoUkmLNmSZaRBAAOATz8Po3Y2Z5eE/yORlPGe5ToO9AVhCXZZWXLAiGCIMMvMy1y9Sup5KvHEMrdwye5nGgPT4IWbLIzefNLVE6BCrfuITHYK8TcTh83KcnJJw5f/cplq37cjnf0+W16w4z+ocACIzu4SucdRDzBoRg9rngvk6O7epLNOyIWsadR/al9lYJzbMxUYc/mh20UduIbO2MWHCvEA6ONiykKB+ADQSkIzP6JibcP+aZmD8AAA=",
+      "alt": "Кадр из мастерской"
+    },
+    "caption": ""
+  },
+  {
+    "kind": "video",
+    "src": "/catalog/video/candle-process-27.mp4",
+    "poster": {
+      "src": "/catalog/video/candle-process-27-poster.webp",
+      "width": 720,
+      "height": 1280,
+      "blurDataURL": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAAAQBACdASoQABwAPu1Ct1apoqakGAEwHYlAAAudfKMHTn5DctBfq4+sAAD+8NERlI+/iDhpe9DhIMPvNa6ORnOEyBvFT8dUbmjez2y2NdK+FFNX3aWBsQtQhlbgg4NAfTvb/q4X/cexqiJ0sim9aLhRbcUDYM4lv04T5BXb21VV/lO7xNMnVz+zdAA=",
+      "alt": "Кадр из мастерской"
+    },
+    "caption": ""
+  },
+  {
+    "kind": "video",
+    "src": "/catalog/video/candle-process-28.mp4",
+    "poster": {
+      "src": "/catalog/video/candle-process-28-poster.webp",
+      "width": 720,
+      "height": 960,
+      "blurDataURL": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAAAQBACdASoQABUAPu1iqU2ppaOiMAgBMB2JagCdABnlWHs6pQVXbS9jAAD+6dWjCzOIRMHHAXClVZ9slgvwBpWSa4U8pFWjFc3pmie9j7mqLX+ZiiY7aCB44MtUnOJUW3O995jWqTorHwASkeEMrcBp717fw4RamHb2LQAA",
+      "alt": "Кадр из мастерской"
+    },
+    "caption": ""
+  },
+  {
+    "kind": "video",
+    "src": "/catalog/video/soap-process-6.mp4",
+    "poster": {
+      "src": "/catalog/video/soap-process-6-poster.webp",
+      "width": 720,
+      "height": 1280,
+      "blurDataURL": "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAAAQBACdASoQABwAPu1iqU2ppaOiMAgBMB2JYwC2yBoiMWI8Gy71QsRkUAD+6a/MEEZ20KQggwYI8VtZPKcAO587BcczkX0uj3vu+e/icWBm3IsUVKHKtKAT/T4j+F2YYA4xfK9YXOQQX2JL1yCKFLVgR9HSrl+Arqx/qKhiAgAAAA==",
+      "alt": "Кадр из мастерской"
+    },
+    "caption": ""
+  },
+  {
+    "kind": "video",
+    "src": "/catalog/video/soap-process-7.mp4",
+    "poster": {
+      "src": "/catalog/video/soap-process-7-poster.webp",
+      "width": 720,
+      "height": 1280,
+      "blurDataURL": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAAAwBACdASoQABwAPu1iqU2ppaOiMAgBMB2JZAC7ABmBDI06LSUsJi4b6YAA8DFIl3OGWwViQnklpGMx8iPOa96eBzY9ZKlOitJo9yZfxl4QPMTF/zixA9WNpNjSrIfEmoaP4qlAAAA=",
+      "alt": "Кадр из мастерской"
+    },
+    "caption": ""
+  },
+  {
+    "kind": "video",
+    "src": "/catalog/video/soap-process-8.mp4",
+    "poster": {
+      "src": "/catalog/video/soap-process-8-poster.webp",
+      "width": 720,
+      "height": 1280,
+      "blurDataURL": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAABQAwCdASoQABwAPu1iqU2ppaOiMAgBMB2JagC7AC0LHwmL0ADM+6XlX45/BRvu0QJ/jfKnquuXmjO9gPioqKOs5k30JohLTpwa7v5aekTbRJXd9zV94d6p3v5gAA==",
+      "alt": "Кадр из мастерской"
+    },
+    "caption": ""
+  },
+  {
+    "kind": "video",
+    "src": "/catalog/video/soap-process-9.mp4",
+    "poster": {
+      "src": "/catalog/video/soap-process-9-poster.webp",
+      "width": 720,
+      "height": 1280,
+      "blurDataURL": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAADQAwCdASoQABwAPu1iqk2ppaQiMAgBMB2JZAAAMgcD/8rlLmmzGIAA/epr4R25sEJ2M8zn/sRUwxVGMzX4QPre52bzlZZ1xGB4kKdG0i4mH/Xq7tWANUPaz7cWvoM69TgAAA==",
+      "alt": "Кадр из мастерской"
+    },
+    "caption": ""
+  },
+  {
+    "kind": "video",
+    "src": "/catalog/video/soap-process-10.mp4",
+    "poster": {
+      "src": "/catalog/video/soap-process-10-poster.webp",
+      "width": 720,
+      "height": 1280,
+      "blurDataURL": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAACQAwCdASoQABwAPu1kqk4ppaQiMAgBMB2JZQABHut0DT3j5y74AP7DUgYBUO/KzAL7McLrckRb9pvysQHUURYGc5L3b0JHE+ndJaAVxLQosMXQXIYXFR2x+F+sIGsUqvZO1V2MAAA=",
+      "alt": "Кадр из мастерской"
+    },
+    "caption": ""
+  },
+  {
+    "kind": "video",
+    "src": "/catalog/video/soap-process-11.mp4",
+    "poster": {
+      "src": "/catalog/video/soap-process-11-poster.webp",
+      "width": 720,
+      "height": 1280,
+      "blurDataURL": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAACwAwCdASoQABwAPu1kqk4ppaQiMAgBMB2JZAAAW3VLuTsBJTI4SAD+7z4E+RN2LzMSSfunb52J0DfTnf2GsWdF3v8kZzgHlQ3jfaFBoxa7ozXZ3XTCipjF7oMJqcJHcd3XYNvASYAAAA==",
+      "alt": "Кадр из мастерской"
+    },
+    "caption": ""
+  },
+  {
+    "kind": "video",
+    "src": "/catalog/video/soap-process-12.mp4",
+    "poster": {
+      "src": "/catalog/video/soap-process-12-poster.webp",
+      "width": 1280,
+      "height": 720,
+      "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAABQAgCdASoQAAkAA4BaJbACdH8AFd5b9EZEpgAA317QtiH/YFgIDDzINq9wJ5Uq+kGL7PYHaLk6qnVAJnNbN5Xw24tc2NlYgAA=",
+      "alt": "Кадр из мастерской"
+    },
+    "caption": ""
+  },
+  {
+    "kind": "video",
+    "src": "/catalog/video/soap-process-13.mp4",
+    "poster": {
+      "src": "/catalog/video/soap-process-13-poster.webp",
+      "width": 1280,
+      "height": 720,
+      "blurDataURL": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAACwAQCdASoQAAkAA4BaJZQAAn/e9tvAAP72k+eUYz3+l0glHZW07cwh+/MqyWjvRvS0EVSdYAA=",
+      "alt": "Кадр из мастерской"
+    },
+    "caption": ""
+  },
+  {
+    "kind": "video",
+    "src": "/catalog/video/soap-process-14.mp4",
+    "poster": {
+      "src": "/catalog/video/soap-process-14-poster.webp",
+      "width": 720,
+      "height": 1280,
+      "blurDataURL": "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAAAQBACdASoQABwAPu1iqU2ppaOiMAgBMB2JYwC2yBoiMWI8Gy71QsRkUAD+6a/MEEZ20KQggwYI8VtZPKcAO587BcczkX0uj3vu+e/icWBm3IsUVKHKtKAT/T4j+F2YYA4xfK9YXOQQX2JL1yCKFLVgR9HSrl+Arqx/qKhiAgAAAA==",
+      "alt": "Кадр из мастерской"
+    },
+    "caption": ""
+  },
+  {
+    "kind": "video",
+    "src": "/catalog/video/soap-process-15.mp4",
+    "poster": {
+      "src": "/catalog/video/soap-process-15-poster.webp",
+      "width": 720,
+      "height": 1280,
+      "blurDataURL": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAACwAwCdASoQABwAPu1iqU2ppaOiMAgBMB2JQBdgAerQodlebN+1gAD+U/XyP4kH3QYNkJ51tEoI46nq9xZRl9A/X/s7cgAvVUEjC33bmNCLI4A9pDIsE8o4v29lHXVJLavz51pl2bf9hoefTrU2GjcdwDs2Iw4sQrQJ5phyfbiWrqgAAAA=",
+      "alt": "Кадр из мастерской"
+    },
+    "caption": ""
+  },
+  {
+    "kind": "video",
+    "src": "/catalog/video/soap-process-16.mp4",
+    "poster": {
+      "src": "/catalog/video/soap-process-16-poster.webp",
+      "width": 720,
+      "height": 1280,
+      "blurDataURL": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAACQAwCdASoQABwAPu1iqU2ppaQiMAgBMB2JZQC7ACFl9iL36AAAAP7ypMSdGl88URzVyTbJtwcTOM0X4CWM6Ivgs7ImHOxyWlu97pxT0A2uasPkdIdR6wXxkQVbC3zS0DvKC9Zz0zHEsQAA",
+      "alt": "Кадр из мастерской"
+    },
+    "caption": ""
+  },
+  {
+    "kind": "video",
+    "src": "/catalog/video/soap-process-17.mp4",
+    "poster": {
+      "src": "/catalog/video/soap-process-17-poster.webp",
+      "width": 720,
+      "height": 1280,
+      "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAABQBACdASoQABwAPu1kq04ppaQiMAgBMB2JYwAWIAMRAIdcDrVLXOfyI0IQAPlc3a92Cd5QkLf6JxiuQKi9ea2ceh9MbCE1ZIWtfyAA",
+      "alt": "Кадр из мастерской"
+    },
+    "caption": ""
+  },
+  {
+    "kind": "video",
+    "src": "/catalog/video/soap-process-18.mp4",
+    "poster": {
+      "src": "/catalog/video/soap-process-18-poster.webp",
+      "width": 720,
+      "height": 1280,
+      "blurDataURL": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAACwAwCdASoQABwAPu1iqU2ppaOiMAgBMB2JQBdgAerQodlebN+1gAD+U/XyP4kH3QYNkJ51tEoI46nq9xZRl9A/X/s7cgAvVUEjC33bmNCLI4A9pDIsE8o4v29lHXVJLavz51pl2bf9hoefTrU2GjcdwDs2Iw4sQrQJ5phyfbiWrqgAAAA=",
+      "alt": "Кадр из мастерской"
+    },
+    "caption": ""
+  },
+  {
+    "kind": "video",
+    "src": "/catalog/video/soap-process-19.mp4",
+    "poster": {
+      "src": "/catalog/video/soap-process-19-poster.webp",
+      "width": 720,
+      "height": 1280,
+      "blurDataURL": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAACwAwCdASoQABwAPu1iqU2ppaQiMAgBMB2JZAAAKwRU++gab9gfwAD96msRwL4Zr6OtdQ6g+FJXlR39iwQ/4Uxu7+FKk68RyQ+ewUJdCtAYwkmuENjCX54YUkrkcoAA",
+      "alt": "Кадр из мастерской"
+    },
+    "caption": ""
   }
 ]

@@ -1,102 +1,122 @@
 [
   {
-    "slug": "wedding",
-    "title": "Свадьба",
-    "group": "occasion"
-  },
-  {
-    "slug": "christening",
-    "title": "Крестины",
-    "group": "occasion"
-  },
-  {
-    "slug": "new-year",
-    "title": "Новый год",
-    "group": "occasion"
-  },
-  {
     "slug": "sea",
     "title": "Морская тема",
-    "group": "occasion"
-  },
-  {
-    "slug": "flowers",
-    "title": "Цветы",
-    "group": "occasion"
-  },
-  {
-    "slug": "heart",
-    "title": "Сердце",
-    "group": "occasion"
-  },
-  {
-    "slug": "food",
-    "title": "Еда и сладости",
-    "group": "occasion"
-  },
-  {
-    "slug": "sweets",
-    "title": "Сладости и десерты",
-    "group": "occasion"
-  },
-  {
-    "slug": "gift",
-    "title": "Подарочные наборы",
-    "group": "occasion"
-  },
-  {
-    "slug": "school",
-    "title": "Школа",
-    "group": "occasion"
-  },
-  {
-    "slug": "march8",
-    "title": "8 Марта",
-    "group": "occasion"
-  },
-  {
-    "slug": "easter",
-    "title": "Пасха",
-    "group": "occasion"
-  },
-  {
-    "slug": "men",
-    "title": "Мужчинам",
-    "group": "recipient"
+    "group": "occasion",
+    "order": 10
   },
   {
     "slug": "women",
     "title": "Девушкам",
-    "group": "recipient"
+    "group": "recipient",
+    "order": 20
+  },
+  {
+    "slug": "men",
+    "title": "Мужчинам",
+    "group": "recipient",
+    "order": 30
   },
   {
     "slug": "kids",
     "title": "Детям",
-    "group": "recipient"
+    "group": "recipient",
+    "order": 40
   },
   {
     "slug": "newborn",
     "title": "Новорождённым",
-    "group": "recipient"
+    "group": "recipient",
+    "order": 50
+  },
+  {
+    "slug": "school",
+    "title": "Школа",
+    "group": "occasion",
+    "order": 60
+  },
+  {
+    "slug": "food",
+    "title": "Еда",
+    "group": "occasion",
+    "order": 70
+  },
+  {
+    "slug": "flowers",
+    "title": "Цветы",
+    "group": "occasion",
+    "order": 80
+  },
+  {
+    "slug": "heart",
+    "title": "Сердце",
+    "group": "occasion",
+    "order": 90
+  },
+  {
+    "slug": "new-year",
+    "title": "Новый год",
+    "group": "occasion",
+    "order": 100
   },
   {
     "slug": "geometric",
-    "title": "Геометрической формы",
-    "group": "form"
+    "title": "Геометрические фигуры",
+    "group": "form",
+    "order": 110
   },
   {
     "slug": "podsvechniki",
-    "title": "Подсвечники",
-    "group": "form"
+    "title": "Свечи в подсвечниках",
+    "group": "form",
+    "order": 120
   },
   {
     "slug": "shkatulki",
     "title": "Шкатулки",
-    "group": "form"
+    "group": "form",
+    "order": 130
   },
   {
     "slug": "podnosy",
     "title": "Подносы",
-    "group": "form"
+    "group": "form",
+    "order": 140
+  },
+  {
+    "slug": "wedding",
+    "title": "Свадьба",
+    "group": "occasion",
+    "order": 150
+  },
+  {
+    "slug": "christening",
+    "title": "Крестины",
+    "group": "occasion",
+    "order": 160
+  },
+  {
+    "slug": "march8",
+    "title": "8 Марта",
+    "group": "occasion",
+    "order": 170
+  },
+  {
+    "slug": "easter",
+    "title": "Пасха",
+    "group": "occasion",
+    "order": 180
+  },
+  {
+    "slug": "gift",
+    "title": "Подарочные наборы",
+    "group": "occasion",
+    "order": 190
+  },
+  {
+    "slug": "misc",
+    "title": "Разное",
+    "group": "occasion",
+    "order": 200
   }
 ]

@@ -77,6 +77,31 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
+
+      {site.gallery && site.gallery.length > 0 ? (
+        // Кадры с самой Анной. Кладкой, а не ровной сеткой: снимки вертикальные
+        // и горизонтальные вперемешку, и подгонять их под одну форму значит
+        // обрезать то, ради чего кадр снят.
+        <section className="mt-20 px-5 md:mt-28 md:px-8">
+          <span className="eyebrow">В мастерской и на съёмке</span>
+          <div className="mt-6 columns-2 gap-3.5 md:columns-3 md:gap-6 [column-fill:_balance]">
+            {site.gallery.map((image, index) => (
+              <div
+                key={image.src}
+                className="mb-3.5 break-inside-avoid overflow-hidden rounded-2xl md:mb-6"
+              >
+                <div className="relative w-full" style={{ aspectRatio: `${image.width} / ${image.height}` }}>
+                  <Media
+                    image={image}
+                    sizes="(min-width: 768px) 33vw, 50vw"
+                    priority={index === 0}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      ) : null}
     </div>
   );
 }

@@ -2,7 +2,7 @@
   {
     "id": "candles-ledyanaya-kupel",
     "slug": "ledyanaya-kupel",
-    "title": "Ледяная купель",
+    "title": "Ванна со льдом",
     "article": "СВ-01",
     "category": "candles",
     "tags": [
@@ -14,77 +14,77 @@
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAAAQAgCdASoQAAwAA4BaJYwCsAEKQonkllsAAP7NxITFdJeC0QlihEzm1AJ5a3YAMlYaxjLnIy9lhQQhnPo62W9tnRvhAAAA",
-        "alt": "Свеча-ванночка из чёрного гипса с колотым восковым льдом"
+        "alt": "Ванна со льдом"
       },
       {
         "src": "/catalog/candles/ledyanaya-kupel-02.webp",
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAAAQAgCdASoQAAwAA4BaJZQC7AEPSn1He0gAAP7o2Lg23Asl7yJuDvlS44bVJixEBamlrV5SDXgHq4I8AAA=",
-        "alt": "Ледяная купель с зажжённым фитилём"
+        "alt": "Ванна со льдом — ракурс 2"
       },
       {
         "src": "/catalog/candles/ledyanaya-kupel-03.webp",
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAADwAQCdASoQAAwAA4BaJZQC7ACj6Wsyg4AA/tuGjqwbhEZ0fjuNNmy6kri64Q0TkDViCe9S72bM279QKpFygGLAAAA=",
-        "alt": "Ледяная купель сразу после того, как фитиль потушили"
+        "alt": "Ванна со льдом — ракурс 3"
       },
       {
         "src": "/catalog/candles/ledyanaya-kupel-04.webp",
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAADwAQCdASoQAAwAA4BaJZQCsAEObpm0z4AA/s3k/yyMRad6Kd21NrQPqlBkLHHyZRUREH6hXRgVWgJGAAA=",
-        "alt": "Ледяная купель с двумя горящими фитилями"
+        "alt": "Ванна со льдом — ракурс 4"
       },
       {
         "src": "/catalog/candles/ledyanaya-kupel-05.webp",
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAAAQAgCdASoQAAwAA4BaJYwCdAELX69MxmawAP73ehxbJY3XsNIn274KQCHdJz1/fv0t6YMm823egzYXTRlFwSyADAAAAA==",
-        "alt": "Ледяная купель — ракурс 5"
+        "alt": "Ванна со льдом — ракурс 5"
       },
       {
         "src": "/catalog/candles/ledyanaya-kupel-06.webp",
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAACwAQCdASoQAAwAA4BaJZwAAudU7iSAAP71Z570W+78yp8VhDUaXu5w6zAAAA==",
-        "alt": "Ледяная купель — ракурс 6"
+        "alt": "Ванна со льдом — ракурс 6"
       },
       {
         "src": "/catalog/candles/ledyanaya-kupel-07.webp",
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAACwAQCdASoQAAwAA4BaJZwAAudVhC4AAP73fOjZsl8ThhzTEV1SapFX3hCYAA==",
-        "alt": "Ледяная купель — ракурс 7"
+        "alt": "Ванна со льдом — ракурс 7"
       },
       {
         "src": "/catalog/candles/ledyanaya-kupel-08.webp",
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAADwAQCdASoQAAwAA4BaJZwC7AEPCwDY7AAA/vVyI0LoINY07PCNzkHO6OMYK1PagAA=",
-        "alt": "Ледяная купель — ракурс 8"
+        "alt": "Ванна со льдом — ракурс 8"
       },
       {
         "src": "/catalog/candles/ledyanaya-kupel-09.webp",
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAAAQAgCdASoQAAwAA4BaJQBOgCKV/k/loUowAP7pB1+yJYh39Ij/L5Wda6AMgBJMq1jegB8o5g6uZifEJFcn0ig8O7fIIBvRt0TMZgAA",
-        "alt": "Ледяная купель — ракурс 9"
+        "alt": "Ванна со льдом — ракурс 9"
       },
       {
         "src": "/catalog/candles/ledyanaya-kupel-10.webp",
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAACwAQCdASoQAAwAA4BaJYwCdADa4JpAAP52nErfoiWOV39ubyNC/tPGqIoyKJZQAnoD8hdvDMvd5R7AAAA=",
-        "alt": "Ледяная купель — ракурс 10"
+        "alt": "Ванна со льдом — ракурс 10"
       },
       {
         "src": "/catalog/candles/ledyanaya-kupel-11.webp",
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAADwAQCdASoQAAwAA4BaJZQC7AC8VXXF51gA/tuGp8eBKIHAacZbLjcxnoSrLDbECCkobNO0cjuXgs89KLOljAAA",
-        "alt": "Ледяная купель — ракурс 11"
+        "alt": "Ванна со льдом — ракурс 11"
       }
     ],
     "video": {
@@ -95,7 +95,7 @@
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAAAQAgCdASoQAAwAA4BaJYwCsAEKQonkllsAAP7NxITFdJeC0QlihEzm1AJ5a3YAMlYaxjLnIy9lhQQhnPo62W9tnRvhAAAA",
-        "alt": "Ледяная купель — короткий ролик"
+        "alt": "Ванна со льдом — короткий ролик"
       }
     },
     "price": null,
@@ -175,7 +175,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Куб с сотовой гранью — рельеф идёт по всем четырём сторонам и ловит боковой свет. Отливается в двух цветах: пыльно-розовом и глубоком синем. Плотный воск, ровный срез, спокойная геометрия — ставится на полку или на рабочий стол и не спорит с интерьером.",
+    "description": "Куб с сотовой гранью — рельеф идёт по всем четырём сторонам и ловит боковой свет. Отливается в двух цветах: пыльно-розовом и глубоком синем.",
     "specs": {
       "size": "7 × 7 × 7 см",
       "scent": "Медовый воск",
@@ -191,7 +191,7 @@
   {
     "id": "candles-globus",
     "slug": "globus",
-    "title": "Глобус",
+    "title": "Земной шар",
     "article": "СВ-03",
     "category": "candles",
     "tags": [
@@ -205,21 +205,21 @@
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAABQAgCdASoQABAAA4BaJYwCxC8AGBr6B3QNqSAA/vVnn9N1nbbBzdZg9YtQ/UtYI28vu4qjqrDbsB+wPDPEWetQ2gAAAA==",
-        "alt": "Свеча-глобус: синий шар с серебряными материками"
+        "alt": "Земной шар"
       },
       {
         "src": "/catalog/candles/globus-02.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAAAwAgCdASoQABAAA4BaJZQC7H8AGBsAwWATAAD+9oL/2pdPLf9UUA0sLAsHGtOxVJ0H31ZFIEVXmvSHhTiqZYAA",
-        "alt": "Свеча-глобус, вид сбоку"
+        "alt": "Земной шар — ракурс 2"
       },
       {
         "src": "/catalog/candles/globus-03.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAADwAQCdASoQABAAA4BaJZwAAudgGDI1y3AA/vaC/6YWTAQksSw5FE5SRkTe52+bGochPGnImGB0qWq0iL7VhAAA",
-        "alt": "Свеча-глобус, материки крупным планом"
+        "alt": "Земной шар — ракурс 3"
       }
     ],
     "video": null,
@@ -377,7 +377,7 @@
   {
     "id": "candles-tyulpany",
     "slug": "tyulpany",
-    "title": "Тюльпаны",
+    "title": "Букет тюльпанов",
     "article": "СВ-06",
     "category": "candles",
     "tags": [
@@ -390,28 +390,28 @@
         "width": 1200,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADQAQCdASoMABAAA4BaJQAAW6HEF3tLgAD+9XSVgPwNpeCMcsaSRlFP3iCS6Fx6zRU7CFGuoSxA59d7StnlimYoEdAAAA==",
-        "alt": "Сливовая свеча-цилиндр с рельефом из тюльпанов"
+        "alt": "Букет тюльпанов"
       },
       {
         "src": "/catalog/candles/tyulpany-02.webp",
         "width": 1200,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAADQAQCdASoMABAAA4BaJYwAAud+ldRkVAD+9CXlDnFqW1tWVCARsfJsGnUhxzPkj33I7C1Kji5G/DYEsBBKD5B4AAA=",
-        "alt": "Свеча с тюльпанами и розой, вид сбоку"
+        "alt": "Букет тюльпанов — ракурс 2"
       },
       {
         "src": "/catalog/candles/tyulpany-03.webp",
         "width": 1200,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAACwAQCdASoMABAAA4BaJQAAW6ETIJgAAP70MAesY8lf11Bf/AT64Y9Qctbh6IqeKOHO4iwGwAYtwfUwSP7hO/+nJehWrLUAAAA=",
-        "alt": "Золотая подводка на лепестках крупным планом"
+        "alt": "Букет тюльпанов — ракурс 3"
       },
       {
         "src": "/catalog/candles/tyulpany-04.webp",
         "width": 1200,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAADQAQCdASoMABAAA4BaJYgAAueG5kWA4AD+93z8x/iaonPRuSdU5A5jJPZOgtiDTrh/lpGha+IJGAAA",
-        "alt": "Тюльпаны — ракурс 4"
+        "alt": "Букет тюльпанов — ракурс 4"
       }
     ],
     "video": null,
@@ -432,7 +432,7 @@
   {
     "id": "candles-geksagon",
     "slug": "geksagon",
-    "title": "Гексагон",
+    "title": "Панно шестиугольное",
     "article": "СВ-07",
     "category": "candles",
     "tags": [
@@ -445,21 +445,21 @@
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAADQAQCdASoQABAAA4BaJbACdAED8BZAAAD+9HS/S+YbIiVxRMsUPV/h2ipvFJIH/IiMgYyQSUyDj5la7jSND53ym/+4oDf5VYfujSvGbITHc7YbULIu7j0BOmxzvOHkYAA=",
-        "alt": "Красная шестигранная свеча с двумя фитилями на гипсовой подставке"
+        "alt": "Панно шестиугольное"
       },
       {
         "src": "/catalog/candles/geksagon-02.webp",
         "width": 1200,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAwAgCdASoMABAAA4BaJbACdAEQFTV2swy8sAD+8wXQbBNoyAHoLkPgokdf6Y3GLEaNhzKbH5V/mGPg2UMIcRNrFmcPgBCHZC46ftOOtkd2HKJsceKXQAAA",
-        "alt": "Шестигранная свеча с зажжёнными фитилями"
+        "alt": "Панно шестиугольное — ракурс 2"
       },
       {
         "src": "/catalog/candles/geksagon-03.webp",
         "width": 1200,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAAAQAgCdASoMABAAA4BaJbAC7AEPAlWnqucgAP75v5Pe9QNprNDIWg3reNZloSpX6bk+FKCfT3q2aTJnwljTGLnecaAAAA==",
-        "alt": "Свеча-гексагон горит на тёмном фоне"
+        "alt": "Панно шестиугольное — ракурс 3"
       }
     ],
     "video": null,
@@ -660,7 +660,7 @@
   {
     "id": "candles-kniga-s-kristallami",
     "slug": "kniga-s-kristallami",
-    "title": "Книга с кристаллами",
+    "title": "Кристаллы в книге гипсовой",
     "article": "СВ-08",
     "category": "candles",
     "tags": [
@@ -673,33 +673,33 @@
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAABwAQCdASoQAAwAA4BaJZwAAXeJ/AD90URnZAitxF0nW14hRagv+AO+O6HAAA==",
-        "alt": "Книга с кристаллами"
+        "alt": "Кристаллы в книге гипсовой"
       },
       {
         "src": "/catalog/candles/kniga-s-kristallami-02.webp",
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAADQAQCdASoQAAwAA4BaJZwAAn2+SCY/AAD3IB5v/zhpumBu8xPAaxRcygEE7cUAAAA=",
-        "alt": "Книга с кристаллами — ракурс 2"
+        "alt": "Кристаллы в книге гипсовой — ракурс 2"
       },
       {
         "src": "/catalog/candles/kniga-s-kristallami-03.webp",
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAACwAQCdASoQAAwAA4BaJZwAAbrdcAqAAPxUbNmVSjO0tvi5bmQJo3xj4ubn0EQUjgG7nXy+TVai7I4gHAA=",
-        "alt": "Книга с кристаллами — ракурс 3"
+        "alt": "Кристаллы в книге гипсовой — ракурс 3"
       },
       {
         "src": "/catalog/candles/kniga-s-kristallami-04.webp",
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAADQAQCdASoQAAwAA4BaJZwAAqFj05om0AD4LV4/kD/KyA3JiGBacYNQ9QSH7SsO/vt/jeHAijhQAA==",
-        "alt": "Книга с кристаллами — ракурс 4"
+        "alt": "Кристаллы в книге гипсовой — ракурс 4"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Свеча-книга: раскрытые страницы отлиты из воска, в углублении правой страницы — россыпь восковых кристаллов. Отливается в двух цветах, пудровом и каменно-сером.",
+    "description": "Раскрытая книга, отлитая целиком: страницы с прорисованным обрезом, а в углублении правой — россыпь восковых кристаллов с гранями. Фитиль стоит между ними, и огонь просвечивает камни насквозь. Отливается в двух цветах — пудровом и каменно-сером.",
     "specs": {},
     "tones": [
       "#D3E3F0",
@@ -714,7 +714,6 @@
     "article": "СВ-09",
     "category": "candles",
     "tags": [
-      "sweets",
       "food",
       "women"
     ],
@@ -743,7 +742,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Пирожное с шапкой розового крема, малиной и зёрнами граната сверху. Помещается в ладони.",
+    "description": "Пирожное с высокой шапкой розового крема: сверху малина, зёрна граната и тонкая шоколадная стружка. Помещается в ладони целиком. Каждый ягодный элемент лепится отдельно и ставится вручную, поэтому шапка у каждого пирожного своя.",
     "specs": {},
     "tones": [
       "#F9B4AB",
@@ -758,7 +757,6 @@
     "article": "СВ-10",
     "category": "candles",
     "tags": [
-      "sweets",
       "food",
       "kids"
     ],
@@ -787,7 +785,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Свечи-пончики со сливочной шапкой, цветной посыпкой и ягодами, снятые на кружевной салфетке.",
+    "description": "Пончики со сливочной глазурью и цветной посыпкой, каждый с ягодой на верхушке. Сняты на кружевной салфетке — так и подаются, по два-три вместе. Глазурь стекает по краю по-разному, повторов не бывает.",
     "specs": {},
     "tones": [
       "#F9CAA6",
@@ -802,7 +800,6 @@
     "article": "СВ-11",
     "category": "candles",
     "tags": [
-      "sweets",
       "food",
       "new-year"
     ],
@@ -831,7 +828,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Крупная клубника на шоколадном печенье со сливочной прослойкой.",
+    "description": "Крупная клубника с прорисованными семечками сидит на шоколадном печенье со сливочной прослойкой. Ягода отливается отдельно и сажается на основание вручную. Хороша как маленький подарок в дополнение к большому.",
     "specs": {},
     "tones": [
       "#EBF099",
@@ -846,7 +843,6 @@
     "article": "СВ-12",
     "category": "candles",
     "tags": [
-      "sweets",
       "food",
       "gift"
     ],
@@ -882,7 +878,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Набор пирожных на круглой деревянной доске: кусок торта, капкейки, эклеры, дольки апельсина.",
+    "description": "Набор пирожных на круглой деревянной доске: кусок торта, капкейки с кремом, эклеры и дольки апельсина. Собирается как настоящая подача к чаю — доска входит в набор. Состав меняется от партии к партии, потому что каждый десерт лепится отдельно.",
     "specs": {},
     "tones": [
       "#F9B7A2",
@@ -897,7 +893,6 @@
     "article": "СВ-13",
     "category": "candles",
     "tags": [
-      "sweets",
       "food",
       "gift"
     ],
@@ -926,7 +921,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Три десертные свечи в деревянной подставке с гнёздами: клубника, малиновое пирожное, капкейк.",
+    "description": "Три десертные свечи в деревянной подставке с гнёздами: клубника, малиновое пирожное и капкейк со сливками. Подставка входит в набор, свечи вынимаются.",
     "specs": {},
     "tones": [
       "#F9B7A1",
@@ -941,7 +936,6 @@
     "article": "СВ-14",
     "category": "candles",
     "tags": [
-      "sweets",
       "food",
       "women"
     ],
@@ -963,7 +957,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Круглая доска с шестью полусферами разных цветов — от белого и сливочного до сиреневого.",
+    "description": "Круглая доска с шестью полусферами: белая, сливочная, розовая, сиреневая, шоколадная. Похоже на витрину кондитерской в миниатюре. Цвета набираются вручную, поэтому оттенки в каждом наборе чуть разные.",
     "specs": {},
     "tones": [
       "#F9BDA2",
@@ -978,7 +972,6 @@
     "article": "СВ-15",
     "category": "candles",
     "tags": [
-      "sweets",
       "food"
     ],
     "images": [
@@ -1013,7 +1006,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Две десертные полусферы, шоколадная и глазированная, на гипсовом блюде с бусинами.",
+    "description": "Две десертные полусферы — шоколадная и глазированная с потёком — на гипсовом блюде с бусинным краем. Блюдо отливается отдельно и остаётся, когда свечи догорят: в него можно положить украшения.",
     "specs": {},
     "tones": [
       "#F9C0AD",
@@ -1024,7 +1017,7 @@
   {
     "id": "candles-yagody-v-banke",
     "slug": "yagody-v-banke",
-    "title": "Ягоды в банке",
+    "title": "Банка варенья",
     "article": "СВ-16",
     "category": "candles",
     "tags": [
@@ -1038,40 +1031,40 @@
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADwAQCdASoQAAwAA4BaJbACdADpnFq1FAAA/u6xXtoCkJvsLwBbP841PJ69dz9kZX7/MBVtC6wfWFe3DThtKO5qwemtZji050AAAA==",
-        "alt": "Ягоды в банке"
+        "alt": "Банка варенья"
       },
       {
         "src": "/catalog/candles/yagody-v-banke-02.webp",
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAAAQAgCdASoQAAwAA4BaJbACdAEPhwHLMApQAP7s1gJ0KkNDrC7aqa8FBNaCAkHb4Ea3zJlTgGuPQ1EkecoUn/x/ha8+ATpjzfJp4AAA",
-        "alt": "Ягоды в банке — ракурс 2"
+        "alt": "Банка варенья — ракурс 2"
       },
       {
         "src": "/catalog/candles/yagody-v-banke-03.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAAAQAgCdASoQABAAA4BaJZgCdAEO0p7tIlrgAP6QS76W2H0Yud+lZT1ZL31KbQIa1W69XPL7XHQF8lZbctdGgNZ+Vs7r8IAA",
-        "alt": "Ягоды в банке — ракурс 3"
+        "alt": "Банка варенья — ракурс 3"
       },
       {
         "src": "/catalog/candles/yagody-v-banke-04.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAQCdASoQABAAA4BaJQBOgCKUgT+6bAwA/tSP2/a/v+/+qXypMkOwk+VXcyrd6zeKW2Xxxvhk41J2XHCIG0qex/SDUVvoYw1M2+MYMAA=",
-        "alt": "Ягоды в банке — ракурс 4"
+        "alt": "Банка варенья — ракурс 4"
       },
       {
         "src": "/catalog/candles/yagody-v-banke-05.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAAAQAgCdASoQABAAA4BaJbACdADdEWdowCLgAP7uoVcLbPfVCi/3UQIZr2iAdCEbHzyExLN2eKZhF2KRdsMJgnVQAFSjumkh0+z9YQ/M1v0r8agAAAA=",
-        "alt": "Ягоды в банке — ракурс 5"
+        "alt": "Банка варенья — ракурс 5"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Свеча в стеклянной банке: восковые ягоды залиты прозрачным гелем, будто варенье в собственном соку.",
+    "description": "Стеклянная банка, в которой восковые ягоды залиты прозрачным гелем — выглядит как варенье в собственном соку. Фитиль проходит сквозь заливку, и огонь подсвечивает ягоды изнутри. Банка настоящая, стеклянная.",
     "specs": {},
     "tones": [
       "#F9DFBA",
@@ -1100,7 +1093,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Тёмно-красное яблоко в натуральную величину, фитиль выходит из черенка.",
+    "description": "Яблоко в натуральную величину, тёмно-красное с восковым налётом на боку. Фитиль выходит из черенка, и первые минуты горит будто сама плодоножка. Форма отлита вручную, поэтому бок у каждого яблока свой.",
     "specs": {},
     "tones": [
       "#F9BBA5",
@@ -1172,7 +1165,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Гранат: целый плод с короной-чашечкой и разрезанный, с проработанными зёрнами на срезе.",
+    "description": "Гранат с проработанной кожурой и короной-чашечкой. Отливается целым и разрезанным — на срезе видно каждое зерно. Цвет набирается слоями, от винного к тёмно-красному, и на свету глубина видна лучше, чем на фотографии.",
     "specs": {},
     "tones": [
       "#F9B6B8",
@@ -1209,7 +1202,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Гранатовая свеча в гипсовых ладонях: подставка держит плод, как в горсти.",
+    "description": "Гранатовая свеча в гипсовых ладонях: подставка держит плод, как в горсти. Ладони отливаются из гипса отдельно и остаются после свечи — в них хорошо смотрятся кольца или мелкие украшения.",
     "specs": {},
     "tones": [
       "#DCEDE1",
@@ -1252,7 +1245,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Бальное платье с пышной юбкой и корсетом, отлитое с золотым напылением по складкам.",
+    "description": "Платье с драпированным лифом и пышной юбкой: складки идут от талии к подолу. Отливается розовым и сиреневым, отдельно кладётся цветок.",
     "specs": {},
     "tones": [
       "#BBEAF0",
@@ -1268,7 +1261,8 @@
     "category": "candles",
     "tags": [
       "men",
-      "geometric"
+      "geometric",
+      "misc"
     ],
     "images": [
       {
@@ -1281,7 +1275,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Цилиндр бирюзового тона, разбитый на осколки и собранный обратно золотыми швами.",
+    "description": "Цилиндр цвета бирюзы, будто разбитый и собранный обратно золотыми швами — так в Японии починяют керамику, и трещина становится украшением. Швы прорисовываются вручную, рисунок трещин у каждой свечи неповторим.",
     "specs": {},
     "tones": [
       "#D9F597",
@@ -1324,7 +1318,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Свеча-глыба: синие и белые слои воска сходятся острой вершиной, поверхность будто скол льда.",
+    "description": "Глыба со сколами: синие и белые слои воска сходятся острой вершиной, поверхность матовая, как настоящий лёд. Пока свеча горит, свет уходит в толщу и подсвечивает слои изнутри. Каждая заливка даёт свой рисунок сколов.",
     "specs": {},
     "tones": [
       "#DEEDDF",
@@ -1381,7 +1375,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Чёрный конус с красными потёками лавы по склонам.",
+    "description": "Чёрный конус с красными потёками лавы по склонам — от вершины к основанию. Потёки наливаются отдельно, поверх остывшего чёрного воска, поэтому текут у каждого вулкана по-своему. Хорошо смотрится парой.",
     "specs": {},
     "tones": [
       "#F9D3D3",
@@ -1430,7 +1424,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Тот же конус в бордово-серой гамме: тёмное основание и винные потёки.",
+    "description": "Тот же конус в бордово-серой гамме: тёмное каменное основание и винные потёки по склонам. Спокойнее чёрно-красного, ставится в интерьер, где яркий цвет был бы лишним.",
     "specs": {},
     "tones": [
       "#F3E7DD",
@@ -1441,7 +1435,7 @@
   {
     "id": "candles-serdtse-karibskoe",
     "slug": "serdtse-karibskoe",
-    "title": "Сердце «Карибы»",
+    "title": "Морская в сердце",
     "article": "СВ-25",
     "category": "candles",
     "tags": [
@@ -1455,19 +1449,19 @@
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAACwAQCdASoQABAAA4BaJQBdgBwp+E4gAP5T9fUh3GrOUy5VzWhySm72isie9IqFvIMrLgyLBtAAAA==",
-        "alt": "Сердце «Карибы»"
+        "alt": "Морская в сердце"
       },
       {
         "src": "/catalog/candles/serdtse-karibskoe-02.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAAAQAgCdASoQABAAA4BaJQBOgCHhPB3vRhTAAP6LreHWZDxect2dwxbeVJninGPLmsAJDzyM6L62o3gRFJt83JpejGELP903MbWAAA==",
-        "alt": "Сердце «Карибы» — ракурс 2"
+        "alt": "Морская в сердце — ракурс 2"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Сердце-подсвечник: внутри бирюзовая вода, по краю пена, на дне ракушки и морская звезда.",
+    "description": "Сердце-подсвечник, налитое до краёв бирюзовой водой: по кромке поднимается белая пена, на дне лежат ракушки и морская звезда. Пока горит, вода светится изнутри и кажется прозрачной. Ракушки укладываются вручную, поэтому дно у каждого сердца своё.",
     "specs": {},
     "tones": [
       "#D3E7F0",
@@ -1478,7 +1472,7 @@
   {
     "id": "candles-rakushka-rapan",
     "slug": "rakushka-rapan",
-    "title": "Ракушка рапан",
+    "title": "Морская в ракушке",
     "article": "СВ-26",
     "category": "candles",
     "tags": [
@@ -1491,33 +1485,33 @@
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAACwAQCdASoQAAwAA4BaJZwAAuMdBV6AAP3eAzYgTys2TcZ9MSbDj82OcEo58Y2AUAA=",
-        "alt": "Ракушка рапан"
+        "alt": "Морская в ракушке"
       },
       {
         "src": "/catalog/candles/rakushka-rapan-02.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAADwAQCdASoQABAAA4BaJZwAAubfKu1TZgAA/oyptl53S2+DWSOyxo8vKkUhSiStfuZ/kcAA",
-        "alt": "Ракушка рапан — ракурс 2"
+        "alt": "Морская в ракушке — ракурс 2"
       },
       {
         "src": "/catalog/candles/rakushka-rapan-03.webp",
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAADwAQCdASoQAAwAA4BaJZwAAuW6aD5CLgAA/c5Z1DOuJtZiGMHYJ6pDhul8dgAA",
-        "alt": "Ракушка рапан — ракурс 3"
+        "alt": "Морская в ракушке — ракурс 3"
       },
       {
         "src": "/catalog/candles/rakushka-rapan-04.webp",
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAADwAQCdASoQAAwAA4BaJZwAAu06h4GSK4AA/rFJ/f+0VUJe6lGZl7xMQAAAAA==",
-        "alt": "Ракушка рапан — ракурс 4"
+        "alt": "Морская в ракушке — ракурс 4"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Крупная витая раковина, залитая морской водой с ракушками внутри.",
+    "description": "Крупная витая раковина, залитая внутри морской водой — по дну лежат ракушки, у края собирается пена. Витки прорисованы до самого острия. Раковина остаётся целой и после того, как воск выгорит.",
     "specs": {},
     "tones": [
       "#F6E5DF",
@@ -1528,7 +1522,7 @@
   {
     "id": "candles-more-v-ladonyakh",
     "slug": "more-v-ladonyakh",
-    "title": "Море в ладонях",
+    "title": "Морская в руке",
     "article": "СВ-27",
     "category": "candles",
     "tags": [
@@ -1542,26 +1536,26 @@
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAAAQAgCdASoQABAAA4BaJZwAAvyQaZnP9wgAAP3SRflexoqd95dxAcSkZpalAgDZtgWqPfudqQD49W3IAh/AAA==",
-        "alt": "Море в ладонях"
+        "alt": "Морская в руке"
       },
       {
         "src": "/catalog/candles/more-v-ladonyakh-02.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAADQAQCdASoQABAAA4BaJZwAApwAZ8OxgAD8gqs+yZPG0vdT+GhhIABIibYVdWzrKpdCb+hM1O5DOWQUAAA=",
-        "alt": "Море в ладонях — ракурс 2"
+        "alt": "Морская в руке — ракурс 2"
       },
       {
         "src": "/catalog/candles/more-v-ladonyakh-03.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAABQAgCdASoQABAAA4BaJZwAD45On0yzTmYeBAAA/vhWS19vbPYudTJZrFTsj24iiqHmlCVeLe8Lss7xvKbJ1A/OW/pr+2okMKi4jNVJOLwz8OLOI34jtq54B80zAslIEwjgAA==",
-        "alt": "Море в ладонях — ракурс 3"
+        "alt": "Морская в руке — ракурс 3"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Гипсовые ладони держат бирюзовую воду с ракушками; по воде выложена надпись.",
+    "description": "Гипсовые ладони держат бирюзовую воду с ракушками — будто зачерпнули у берега. По воде выложена надпись из мелких раковин. Ладони гипсовые и остаются после того, как воск выгорит.",
     "specs": {},
     "tones": [
       "#E7E8EC",
@@ -1572,7 +1566,7 @@
   {
     "id": "candles-mishka-v-vannochke",
     "slug": "mishka-v-vannochke",
-    "title": "Мишка в ванночке",
+    "title": "Медвежонок в подсвечнике",
     "article": "СВ-28",
     "category": "candles",
     "tags": [
@@ -1585,12 +1579,12 @@
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAADwAQCdASoQABAAA4BaJZQAAp2xihI9dAAA/rGNVuUaBK26zOpXJrhcyXuDyEfAQGYSo5p4Ii/sZeeTgAA=",
-        "alt": "Мишка в ванночке"
+        "alt": "Медвежонок в подсвечнике"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Медвежонок сидит в ребристой гипсовой ванночке с водой и ракушками.",
+    "description": "Медвежонок сидит в ребристой гипсовой ванночке с водой, вокруг него ракушки. Ванночка гипсовая, медвежонок восковой — когда свеча догорит, ванночку можно оставить как мыльницу или подставку.",
     "specs": {},
     "tones": [
       "#F9CEC2",
@@ -1633,7 +1627,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Крупные фиолетовые кристаллы с блёстками в гипсовом блюде с бусинами, фитилей несколько.",
+    "description": "Крупные фиолетовые кристаллы с блёстками, выложенные в гипсовом блюде с бусинным краем. Фитилей несколько: можно зажечь один или все сразу. Кристаллы отливаются по отдельности и укладываются вручную, поэтому композиция каждый раз новая.",
     "specs": {},
     "tones": [
       "#D6BAF0",
@@ -1668,7 +1662,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Початок кукурузы с проработанными зёрнами, на гипсовой подставке и без неё.",
+    "description": "Початок кукурузы с проработанными зёрнами — рельеф идёт по всей длине. Ставится на гипсовую подставку или прямо на стол. Зёрна прописываются в форме, и на свету видно, как рельеф ловит тень.",
     "specs": {},
     "tones": [
       "#F9CCBF",
@@ -1697,7 +1691,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Две свечи на овальном гипсовом блюде: ребристая тыква и апельсин.",
+    "description": "Две свечи на овальном гипсовом блюде: ребристая тыква и апельсин с пористой кожурой. Осенняя пара — ставится на стол вместе, блюдо входит в набор.",
     "specs": {},
     "tones": [
       "#DAF598",
@@ -1733,7 +1727,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Белая свеча в форме завязанного мешочка, с перламутровым отливом.",
+    "description": "Белая свеча в форме завязанного мешочка: складки собираются к узлу, поверхность с перламутровым отливом. Простая форма, которая хорошо стоит рядом с посудой и не спорит с ней.",
     "specs": {},
     "tones": [
       "#F9C0A6",
@@ -1744,7 +1738,7 @@
   {
     "id": "candles-perets",
     "slug": "perets",
-    "title": "Болгарский перец",
+    "title": "Перец",
     "article": "СВ-33",
     "category": "candles",
     "tags": [
@@ -1756,19 +1750,19 @@
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAAAQAgCdASoQABAAA4BaJZQC7AEPhvJgmtEgAP71bYeMVIR1siQhIX3IjsGqrKnCrxqNRIwI9uOIDjbgeaOsAA==",
-        "alt": "Болгарский перец"
+        "alt": "Перец"
       },
       {
         "src": "/catalog/candles/perets-02.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAADwAQCdASoQABAAA4BaJZQC7AEO+oKa1QAA/vQsAWPrwJTMo0aXVw8j9JH2cXoxh4fpmZq2ql3MBgAA",
-        "alt": "Болгарский перец — ракурс 2"
+        "alt": "Перец — ракурс 2"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Зелёный перец в натуральную величину, фитиль спрятан в плодоножке.",
+    "description": "Болгарский перец в натуральную величину, глубокий зелёный с глянцем. Фитиль спрятан в плодоножке, поэтому свеча до первого зажигания читается как настоящий овощ. Ставится в кухню, к столу.",
     "specs": {},
     "tones": [
       "#E5ECCC",
@@ -1804,7 +1798,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Лимон с пористой кожурой, отлит в натуральную величину.",
+    "description": "Лимон с пористой кожурой и живой неровностью боков, отлит в натуральную величину. Цвет набран плотно, без просветов. Хорошо смотрится рядом с мандаринами того же набора.",
     "specs": {},
     "tones": [
       "#F9DFBF",
@@ -1815,7 +1809,7 @@
   {
     "id": "candles-elka",
     "slug": "elka",
-    "title": "Ёлка",
+    "title": "Ёлка-плиссе",
     "article": "СВ-35",
     "category": "candles",
     "tags": [
@@ -1829,61 +1823,61 @@
         "width": 1200,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAACwAQCdASoMABAAA4BaJYwAAuddOLGgAP7ypOvuQKFb43iAsw71FrbGwwxlro4kyex517hnAAA=",
-        "alt": "Ёлка"
+        "alt": "Ёлка-плиссе"
       },
       {
         "src": "/catalog/candles/elka-02.webp",
         "width": 1200,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAADQAQCdASoMABAAA4BaJYgC7AEOxnYAAAD+8rFPpVT/XGSeVPkt0JgJmFSIA3D9bbDiWjA6rAAAAA==",
-        "alt": "Ёлка — ракурс 2"
+        "alt": "Ёлка-плиссе — ракурс 2"
       },
       {
         "src": "/catalog/candles/elka-03.webp",
         "width": 1200,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAAAwAgCdASoMABAAA4BaJYgCdAEQ/hrRQTAJAAD+3Fv48yioC4neVflPBZxh7vYYTByQZP5S3gA=",
-        "alt": "Ёлка — ракурс 3"
+        "alt": "Ёлка-плиссе — ракурс 3"
       },
       {
         "src": "/catalog/candles/elka-04.webp",
         "width": 1200,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAADwAQCdASoMABAAA4BaJQBOgCHfaN/tgAAA/vLUuVZKDBo47t+FPb49rQdtFQVJCE6Hj5IwGJGJxO6mNKWoIAAA",
-        "alt": "Ёлка — ракурс 4"
+        "alt": "Ёлка-плиссе — ракурс 4"
       },
       {
         "src": "/catalog/candles/elka-05.webp",
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAAAQAgCdASoQAAwAA4BaJQBOgB6R7dlgxccAAP7uoTrT6wePE8L1ss3QhRvdeUF1qxnwS8B3tho1DD7w7mxAAA==",
-        "alt": "Ёлка — ракурс 5"
+        "alt": "Ёлка-плиссе — ракурс 5"
       },
       {
         "src": "/catalog/candles/elka-06.webp",
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADwAQCdASoQAAwAA4BaJZQCw7EOby47ukAA/vQl0PUy9xW8OrPOjD0mT5bRAOYVaT+ghcr7H+6lg8QwUoiRG84nFgAAAA==",
-        "alt": "Ёлка — ракурс 6"
+        "alt": "Ёлка-плиссе — ракурс 6"
       },
       {
         "src": "/catalog/candles/elka-07.webp",
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAADwAQCdASoQAAwAA4BaJZQCdAEPAIEufsAA/vKbNnhWFaesgE2nn+ayN01HxW5673DuVTwgtGo6hbwA",
-        "alt": "Ёлка — ракурс 7"
+        "alt": "Ёлка-плиссе — ракурс 7"
       },
       {
         "src": "/catalog/candles/elka-08.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAABQAgCdASoQABAAA4BaJYwCw7EPAm17jcoq+QAA/vaJoaec/aHraBlmey0cOJUp5C9N2Zi4uBtTLX+3irEl1RXWVYomZ2vyFZ3P5LQA",
-        "alt": "Ёлка — ракурс 8"
+        "alt": "Ёлка-плиссе — ракурс 8"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Ярусная ёлка с проработанной хвоей. Отливается в нескольких размерах и оттенках — от бирюзового до салатового.",
+    "description": "Ярусная ёлка с прорисованной хвоей: каждый ярус лежит на предыдущем и отбрасывает свою тень. Отливается в нескольких размерах и оттенках — от бирюзового до салатового, поэтому из них собирается лес на подоконнике.",
     "specs": {},
     "tones": [
       "#F9D3C3",
@@ -1912,7 +1906,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Ёлка стоит в гипсовых ладонях-подставке.",
+    "description": "Ёлка стоит в гипсовых ладонях-подставке: маленький зимний сюжет, который держится в одной руке. Ладони остаются, ёлку можно заменить новой.",
     "specs": {},
     "tones": [
       "#E0ECD8",
@@ -1955,7 +1949,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Та же ёлка сверху: ярусы хвои складываются в звезду, фитиль в центре.",
+    "description": "Та же ёлка, снятая сверху: ярусы хвои складываются в звезду с фитилём в центре. Такой её видят, когда ставят на стол и смотрят сверху — рисунок читается лучше всего при боковом свете.",
     "specs": {},
     "tones": [
       "#CEF58B",
@@ -1966,7 +1960,7 @@
   {
     "id": "candles-elochnye-shary",
     "slug": "elochnye-shary",
-    "title": "Ёлочные шары",
+    "title": "Ёлочная игрушка",
     "article": "СВ-38",
     "category": "candles",
     "tags": [
@@ -1979,47 +1973,47 @@
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAADwAQCdASoQABAAA4BaJYwAAp3LjYeTKWgA/vQy1/E86BHl2zqoDLtof/tMKK98YXHSaB2jcjYAAA==",
-        "alt": "Ёлочные шары"
+        "alt": "Ёлочная игрушка"
       },
       {
         "src": "/catalog/candles/elochnye-shary-02.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAABQAgCdASoQABAAA4BaJQBYheADA4CFDbYgBgAA/vV0aOvrjpwq4r/iHAdgYD/yP6Kx9ywA",
-        "alt": "Ёлочные шары — ракурс 2"
+        "alt": "Ёлочная игрушка — ракурс 2"
       },
       {
         "src": "/catalog/candles/elochnye-shary-03.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAAAwAgCdASoQABAAA4BaJQBWD+AC+PV2m7FAAAD+9DBo9b+h4WUSO7yjyGK5dX98A2nA2XwXHGuBKTuDAAA=",
-        "alt": "Ёлочные шары — ракурс 3"
+        "alt": "Ёлочная игрушка — ракурс 3"
       },
       {
         "src": "/catalog/candles/elochnye-shary-04.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAAAQAgCdASoQABAAA4BaJQAAYv+p4kw1gIpAAP7yzSvIZe1+v+izPjUMRJ2tlvfLI430Jg/kj+eznac1AgUwAA==",
-        "alt": "Ёлочные шары — ракурс 4"
+        "alt": "Ёлочная игрушка — ракурс 4"
       },
       {
         "src": "/catalog/candles/elochnye-shary-05.webp",
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADwAQCdASoQAAwAA4BaJZACw7ED/vCOy0AA/vEU7cC2exxSTQgUxgs3mKf+X1fZelAUWanNJHYcKqu33JXijb0HCYYgAA==",
-        "alt": "Ёлочные шары — ракурс 5"
+        "alt": "Ёлочная игрушка — ракурс 5"
       },
       {
         "src": "/catalog/candles/elochnye-shary-06.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAACQAgCdASoQABAAA4BaJYgC7H8AFx/2lN2/8KeCAAD+8Z3iogI3v/rq/ee5rEcnoPboyiJgLN+MNde6YYAmKey46EXwtRRuFTlWcNZqlbci+aEtOelaf+2XO3LjEJkDFBNlgAAA",
-        "alt": "Ёлочные шары — ракурс 6"
+        "alt": "Ёлочная игрушка — ракурс 6"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Шары-шишки с чешуйчатой поверхностью и подвесом-навершием, фиолетовые и синие.",
+    "description": "Шары с блеском, уложенные в деревянный ящичек с ячейками. Ящик входит в набор — его ставят под ёлку как есть.",
     "specs": {},
     "tones": [
       "#E5EBDD",
@@ -2062,7 +2056,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Красный колпак с загнутым кончиком, весь в снежных блёстках.",
+    "description": "Красный колпак с загнутым кончиком, весь в снежных блёстках. Стоит сам, без подставки. Блёстки набираются в воск, а не насыпаются сверху, поэтому не осыпаются от рук.",
     "specs": {},
     "tones": [
       "#DAF58E",
@@ -2105,7 +2099,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Гладкий красный шар с инеем из блёсток по верху.",
+    "description": "Гладкий красный шар с инеем из блёсток по верхней половине — как ёлочный шар, только крупнее и без нитки. Ставится на блюдо или прямо на скатерть.",
     "specs": {},
     "tones": [
       "#DCF58D",
@@ -2162,7 +2156,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Композиция на овальном гипсовом блюде: шар, шишка и колпак вместе.",
+    "description": "Композиция на овальном гипсовом блюде: шар, шишка и колпак вместе. Собирается как готовый подарок — блюдо входит в набор и остаётся после праздника.",
     "specs": {},
     "tones": [
       "#E2F29A",
@@ -2173,13 +2167,13 @@
   {
     "id": "candles-chashka-kakao",
     "slug": "chashka-kakao",
-    "title": "Чашка какао",
+    "title": "Чашка кофе",
     "article": "СВ-42",
     "category": "candles",
     "tags": [
       "new-year",
-      "sweets",
-      "women"
+      "women",
+      "food"
     ],
     "images": [
       {
@@ -2187,40 +2181,40 @@
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADQAQCdASoQABAAA4BaJZgC7AEfcEx00AD+8Z13RYXPzW/gsysYprH+wW5zUyyldceKMayDIHMLSNXdOGFoVlzPO2dYwsATiAA=",
-        "alt": "Чашка какао"
+        "alt": "Чашка кофе"
       },
       {
         "src": "/catalog/candles/chashka-kakao-02.webp",
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAAAwAgCdASoQAAwAA4BaJagCdH8AFxKvVU06AAD+7uUSX/BZiqWr9UK3C746GoixH0Ruh/hASZIBcvWivIpQlpU7vZKZFCuaeMAAAA==",
-        "alt": "Чашка какао — ракурс 2"
+        "alt": "Чашка кофе — ракурс 2"
       },
       {
         "src": "/catalog/candles/chashka-kakao-03.webp",
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAAAQAgCdASoQAAwAA4BaJZgCdADwUu0zvuFSAP7w5qTarlnzESqFe2/WlkxyjLETzpfgUDhYlpegGxi8AU3xcJq42QVSUaN/T5oYQAAA",
-        "alt": "Чашка какао — ракурс 3"
+        "alt": "Чашка кофе — ракурс 3"
       },
       {
         "src": "/catalog/candles/chashka-kakao-04.webp",
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAAAQAgCdASoQAAwAA4BaJbACdAD6DJ3wfDMAAP7kXTuuGRw5KXHNQs+Ej5H1AdLeWRwLYtfK8818+bAuEGsBdYd9Ea9dydz30tKK0kvky28FMaAAAAA=",
-        "alt": "Чашка какао — ракурс 4"
+        "alt": "Чашка кофе — ракурс 4"
       },
       {
         "src": "/catalog/candles/chashka-kakao-05.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAAAwAgCdASoQABAAA4BaJZAC7AEfZSF/sookAAD+qu88oeEzTOSfwcV0vR6qFYOQZFeAISCvYYOiLjXnqF+Ai3cjCEzP1SDy613h9RxqLW+lDLSYQzgR23hCuwX4BvhOAAA=",
-        "alt": "Чашка какао — ракурс 5"
+        "alt": "Чашка кофе — ракурс 5"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Чашка в «вязаном» свитере на блюдце, внутри какао со сливочной шапкой и посыпкой. Красная и сиреневая.",
+    "description": "Чашка в «вязаном» свитере на блюдце, внутри — кофе со сливочной шапкой и посыпкой. Рельеф вязки идёт по всей чашке, петля к петле. Отливается красной и сиреневой.",
     "specs": {},
     "tones": [
       "#E0F58B",
@@ -2249,7 +2243,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Деревянная доска с тремя свечами: две шишки и груша.",
+    "description": "Деревянная доска с тремя свечами: две шишки и груша. Ставится на стол как есть, доска входит в набор.",
     "specs": {},
     "tones": [
       "#F9DFDA",
@@ -2260,7 +2254,7 @@
   {
     "id": "candles-banka-s-gnomami",
     "slug": "banka-s-gnomami",
-    "title": "Банка с гномами",
+    "title": "Банка новогодняя детская",
     "article": "СВ-44",
     "category": "candles",
     "tags": [
@@ -2274,40 +2268,40 @@
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADQAQCdASoQAAwAA4BaJQBdgB5UmF/TAAD+8t0z+SbLSqtBKDGd3f7schgs1QYdbol7TzKXw+lDcwG5Do800P1rMtFhthysjD2liMM9wAAwLgAA",
-        "alt": "Банка с гномами"
+        "alt": "Банка новогодняя детская"
       },
       {
         "src": "/catalog/candles/banka-s-gnomami-02.webp",
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAQAgCdASoQAAwAA4BaJQBdgCP6LkaP8cKAAP7y3THLnvxlw/ca/KN3VOjSz4gdMU7VHODuX8rgkrgH0XYxvdl+L4JhOf2+wc3d59MUnNFB8WQAAFGIAA==",
-        "alt": "Банка с гномами — ракурс 2"
+        "alt": "Банка новогодняя детская — ракурс 2"
       },
       {
         "src": "/catalog/candles/banka-s-gnomami-03.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAAAQAgCdASoQABAAA4BaJQBdgBu1GvSGFojAAP71e9zdDfdw7QotmuZUIoTxDtPe3b1H+2XjnuNcHSTobtZDtv61VgO8VlvjuN1Y2jKWkQWVDJHDQAA=",
-        "alt": "Банка с гномами — ракурс 3"
+        "alt": "Банка новогодняя детская — ракурс 3"
       },
       {
         "src": "/catalog/candles/banka-s-gnomami-04.webp",
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAAAQAgCdASoQAAwAA4BaJQBdgCP/qesSO4AAAP7y4BJy65WWr4JivUbXJjBhvE9wfAzTFQ9ENBrLYzuERhrJJu4A",
-        "alt": "Банка с гномами — ракурс 4"
+        "alt": "Банка новогодняя детская — ракурс 4"
       },
       {
         "src": "/catalog/candles/banka-s-gnomami-05.webp",
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADwAQCdASoQAAwAA4BaJQAAYsiR2yN0dAAA/vLgEnLsJJlzFSSMMkmAEfkDFeSV/rvLOG0pI/CPdc8cJdvT+JTef0HxlXQgAAA=",
-        "alt": "Банка с гномами — ракурс 5"
+        "alt": "Банка новогодняя детская — ракурс 5"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Свечи в стеклянных банках: внутри гномы и снеговики на снежной поверхности.",
+    "description": "Стеклянная банка со снежной поверхностью, внутри — гномы и снеговики в колпаках. Детский сюжет, который можно рассматривать: фигурки лепятся отдельно и ставятся в банку по одной.",
     "specs": {},
     "tones": [
       "#D9F590",
@@ -2343,7 +2337,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Плоская свеча-открытка с рождественским венком и надписью, на гипсовой подставке, с двумя фитилями.",
+    "description": "Плоская свеча-открытка с рождественским венком и надписью, на гипсовой подставке. Два фитиля по верхнему краю — горит как настоящая свеча-панно, оставляя рисунок нетронутым дольше обычного.",
     "specs": {},
     "tones": [
       "#CEF5BE",
@@ -2354,7 +2348,7 @@
   {
     "id": "candles-zimnyaya-kartina",
     "slug": "zimnyaya-kartina",
-    "title": "Зимняя картина",
+    "title": "Панно новогоднее",
     "article": "СВ-46",
     "category": "candles",
     "tags": [
@@ -2367,54 +2361,54 @@
         "width": 1600,
         "height": 1453,
         "blurDataURL": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADQAQCdASoQAA8AA4BaJQBOgB6OUOe0jAD+8ZzeOvX7hQ9xg+e0R9scKd8s/+hL0VtE6HHyXdu8u1c0zpPQLWskKtYRsUoc6wACUeC3vFYmuq1ZhDagAA==",
-        "alt": "Зимняя картина"
+        "alt": "Панно новогоднее"
       },
       {
         "src": "/catalog/candles/zimnyaya-kartina-02.webp",
         "width": 1200,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADwAQCdASoMABAAA4BaJZACdAEPgAJLqQAA/u6pRpwsqnjTP5z5dylVBseHi6PYQcLF//B0dX04hYKlLojr9RttniFvtrEVXZsiVhdi5vqCLL2NTMQAAA==",
-        "alt": "Зимняя картина — ракурс 2"
+        "alt": "Панно новогоднее — ракурс 2"
       },
       {
         "src": "/catalog/candles/zimnyaya-kartina-03.webp",
         "width": 1200,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAQAgCdASoMABAAA4BaJYgCdAELMbwh41QAAP7vaH8Ye3TB0u3aen/tBLZy2IzwFc7j0ILXSgnV8QqYYUf0pGjhI65WH3oZrgTHnOuLY9ACcHauexNEKhpq+gA=",
-        "alt": "Зимняя картина — ракурс 3"
+        "alt": "Панно новогоднее — ракурс 3"
       },
       {
         "src": "/catalog/candles/zimnyaya-kartina-04.webp",
         "width": 1200,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAwAgCdASoMABAAA4BaJYgCdADbfFh1dnnbAAD+8rSN9KwgzzL3q/zyM23sxms6UUftLAYOE06+aAO+zscqoQNJw07XdpdwiGarMUNMq3GfATU1cgniwAAA",
-        "alt": "Зимняя картина — ракурс 4"
+        "alt": "Панно новогоднее — ракурс 4"
       },
       {
         "src": "/catalog/candles/zimnyaya-kartina-05.webp",
         "width": 1200,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAADwAQCdASoMABAAA4BaJQBOgCFKlSVNa4AA/u9kctaOt2to6SMrVoTb+Kc3bHCOW9TC/fSuNY2l/N8pSrFflVaiRMPvzUHN9974XP11bTFKfE9y42yB2AZ5BjzNhYAA",
-        "alt": "Зимняя картина — ракурс 5"
+        "alt": "Панно новогоднее — ракурс 5"
       },
       {
         "src": "/catalog/candles/zimnyaya-kartina-06.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAQCdASoQABAAA4BaJYwCdAD2PFmivcAA/vDfp65tr2Q+a0Y8WSBYL5+xkar0wJ+7bRVb77TnkT/CB+n+Z1mVSqFUGkK7EXnemE+AAAA=",
-        "alt": "Зимняя картина — ракурс 6"
+        "alt": "Панно новогоднее — ракурс 6"
       },
       {
         "src": "/catalog/candles/zimnyaya-kartina-07.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAwAgCdASoQABAAA4BaJQBOgB7H4wWl2QuYAAD+6/9GX4Zwu+7I+NmDHfeWTceP/aqullXS1RzQs3rck1Gvr1T+hr39IxgLSwAxjKGDhq7GOF9imYFgSVMsoaAAAA==",
-        "alt": "Зимняя картина — ракурс 7"
+        "alt": "Панно новогоднее — ракурс 7"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Свеча-панно с рваным краем: заснеженное поле в блёстках, снизу еловая ветка с ягодами. Держится на гипсовой подставке.",
+    "description": "Свеча-панно с рваным краем: заснеженное поле в блёстках, снизу еловая ветка с красными ягодами. Держится в гипсовой подставке вертикально, как картина. Край рвётся вручную, поэтому одинаковых не бывает.",
     "specs": {},
     "tones": [
       "#CBF596",
@@ -2450,7 +2444,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Шар, собранный из мелких ягод, на круглом гипсовом блюде.",
+    "description": "Шар, собранный из мелких ягод, на круглом гипсовом блюде. Каждая ягода отливается отдельно и садится на основу вручную — поверхность получается живой, с неровностями.",
     "specs": {},
     "tones": [
       "#C1F5A7",
@@ -2461,7 +2455,7 @@
   {
     "id": "candles-shar-i-snezhinki",
     "slug": "shar-i-snezhinki",
-    "title": "Шар и снежинки",
+    "title": "Набор из ёлочной игрушки и снежинок",
     "article": "СВ-48",
     "category": "candles",
     "tags": [
@@ -2474,61 +2468,61 @@
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAAAQAgCdASoQABAAA4BaJQBOgB9esZCWbgCAAP7e34VsgrowqgGaKs4O71/GmqsKVUFcnRES3f4Ob+z3cPHV4xEPVh2mdorrselRW+AA",
-        "alt": "Шар и снежинки"
+        "alt": "Набор из ёлочной игрушки и снежинок"
       },
       {
         "src": "/catalog/candles/shar-i-snezhinki-02.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADQAQCdASoQABAAA4BaJQBOgBQ4hHKJgAD+r496D2GyI1YXUjGJdv1KsaWMCwoJoiNILn9NAdy9bcVDReuxUktoQHsekMuAAAA=",
-        "alt": "Шар и снежинки — ракурс 2"
+        "alt": "Набор из ёлочной игрушки и снежинок — ракурс 2"
       },
       {
         "src": "/catalog/candles/shar-i-snezhinki-03.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADwAQCdASoQABAAA4BaJQBOgBQxx2+QugAA/t7fi5dOSCD2XHzWYR8TPO2Aepp779RRQgXMMFCG5Hfy3fct2Oe/6CNxnnYTKmAQVtu7TcwnAAAA",
-        "alt": "Шар и снежинки — ракурс 3"
+        "alt": "Набор из ёлочной игрушки и снежинок — ракурс 3"
       },
       {
         "src": "/catalog/candles/shar-i-snezhinki-04.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADQAQCdASoQABAAA4BaJYwCdAEDHynkcAD+04ii7Tz2OlMvKfzEyCKIzhB2cJ3jM6PXdlSwoSfUpha6636/joucguSg66PAAAA=",
-        "alt": "Шар и снежинки — ракурс 4"
+        "alt": "Набор из ёлочной игрушки и снежинок — ракурс 4"
       },
       {
         "src": "/catalog/candles/shar-i-snezhinki-05.webp",
         "width": 1600,
         "height": 1067,
         "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADQAQCdASoQAAsAA4BaJZwAAveIZUJ0AAD+RbY4EClEvtnxUjYNbgsrV6XlMT3Me+rZzyXAEaz3tphO9ZGD6q4dwrEtlk0oQAA=",
-        "alt": "Шар и снежинки — ракурс 5"
+        "alt": "Набор из ёлочной игрушки и снежинок — ракурс 5"
       },
       {
         "src": "/catalog/candles/shar-i-snezhinki-06.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAQCdASoQABAAA4BaJZQC7AEPEK2XzAAA/vR9fFEf+lo2NXDcfoZ9C+nGw5WsafWVtfqnV8egPekaTI9oDctjsnE5JR5OMNXqWoYAAAA=",
-        "alt": "Шар и снежинки — ракурс 6"
+        "alt": "Набор из ёлочной игрушки и снежинок — ракурс 6"
       },
       {
         "src": "/catalog/candles/shar-i-snezhinki-07.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADQAQCdASoQABAAA4BaJZQAAuaUl2GgAAD+8zTbRNnW0aMJgKSVknSDoMOTdm0SCPJvCjMPHNYiW7jqRYJMuOHqQw7wZvuCeEAAAA==",
-        "alt": "Шар и снежинки — ракурс 7"
+        "alt": "Набор из ёлочной игрушки и снежинок — ракурс 7"
       },
       {
         "src": "/catalog/candles/shar-i-snezhinki-08.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADwAQCdASoQABAAA4BaJZQC7AEPTB2x5AAA/vR9fFEf+lo1R70gxbn5SUwUG2yGDbTmWNenP49iJfAR2iJ9IXKizk0xrcW5AAA=",
-        "alt": "Шар и снежинки — ракурс 8"
+        "alt": "Набор из ёлочной игрушки и снежинок — ракурс 8"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Набор на гипсовом блюде: крупный шар и две снежинки. Собирается в синем, сиреневом и бирюзовом.",
+    "description": "Набор на гипсовом блюде: крупный шар и две снежинки рядом. Собирается в синем, сиреневом и бирюзовом. Блюдо с бусинным краем входит в набор.",
     "specs": {},
     "tones": [
       "#BED0F0",
@@ -2539,7 +2533,7 @@
   {
     "id": "candles-chernaya-rakushka",
     "slug": "chernaya-rakushka",
-    "title": "Чёрная ракушка",
+    "title": "Ракушка с блёстками",
     "article": "СВ-49",
     "category": "candles",
     "tags": [
@@ -2552,19 +2546,19 @@
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAAAwAgCdASoQAAwAA4BaJYwCdAD2CPWA15+oAAD+UyiX46OeF6m4a94G5EiQj2RgZjXiZ7CLLrBX5ER7334AAA==",
-        "alt": "Чёрная ракушка"
+        "alt": "Ракушка с блёстками"
       },
       {
         "src": "/catalog/candles/chernaya-rakushka-02.webp",
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADwAQCdASoQAAwAA4BaJYwCdAEP/vjO4AAA/c7er450gXafdZK4Mo7fHJO4mUytIZ/poLFeRj+dkg6737HuDiMM6wAAAA==",
-        "alt": "Чёрная ракушка — ракурс 2"
+        "alt": "Ракушка с блёстками — ракурс 2"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Витая раковина тёмного тона, залитая воском с синим глиттером.",
+    "description": "Витая раковина тёмного тона, залитая воском с синим глиттером — на свету видно, как блёстки уходят в глубину витка. Раковина остаётся целой и после свечи.",
     "specs": {},
     "tones": [
       "#D1EAF0",
@@ -2580,7 +2574,8 @@
     "category": "candles",
     "tags": [
       "new-year",
-      "women"
+      "women",
+      "misc"
     ],
     "images": [
       {
@@ -2600,7 +2595,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Цилиндр с фактурой вязаного полотна и косой по кругу, верх в серебряной крошке.",
+    "description": "Цилиндр с фактурой вязаного полотна: по кругу идёт коса, верх присыпан серебряной крошкой. Рельеф глубокий, тень от него ложится крупно.",
     "specs": {},
     "tones": [
       "#F9E4D4",
@@ -2636,7 +2631,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Высокая витая свеча из красного воска, вся в снежных блёстках, на гипсовой подставке.",
+    "description": "Высокая витая свеча красного воска, вся в снежных блёстках, на гипсовой подставке. Витки закручиваются вручную, пока воск тёплый, поэтому шаг витка у каждой свой.",
     "specs": {},
     "tones": [
       "#E1F48D",
@@ -2647,7 +2642,7 @@
   {
     "id": "candles-tsifry-goda",
     "slug": "tsifry-goda",
-    "title": "Цифры года",
+    "title": "Цифры для торта",
     "article": "СВ-52",
     "category": "candles",
     "tags": [
@@ -2660,26 +2655,26 @@
         "width": 1600,
         "height": 1222,
         "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAAAwAgCdASoQAAwAA4BaJYwCdAERF0jRMn94AAD+8uA8Rsn/sGIpwoodoH8k+dZ5IRJbAVSctKOO8p6fU5bbyMAVwUNOh7XCArHcCAAA",
-        "alt": "Цифры года"
+        "alt": "Цифры для торта"
       },
       {
         "src": "/catalog/candles/tsifry-goda-02.webp",
         "width": 1600,
         "height": 1191,
         "blurDataURL": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADQAQCdASoQAAwAA4BaJQBOgCICjWbxQAD+9FwFaXJ04T6ySjAYSfkVoaz640q+nQFXIfi5crXMANdwhx5A3VbxM/XWhrHccyq3ZN2kW1mAAA==",
-        "alt": "Цифры года — ракурс 2"
+        "alt": "Цифры для торта — ракурс 2"
       },
       {
         "src": "/catalog/candles/tsifry-goda-03.webp",
         "width": 1600,
         "height": 1187,
         "blurDataURL": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAQAgCdASoQAAwAA4BaJYgCdAE1EDcEprswAP72kxzx99Tb+sZrtc7zRIERzGihSBPSkadv4y7KDNzz5dQNET6OJxshfjfNSJ0Lunw9qEAAAA==",
-        "alt": "Цифры года — ракурс 3"
+        "alt": "Цифры для торта — ракурс 3"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Свечи-цифры на блюде-раковине, рядом сердце. Год отливается под заказ.",
+    "description": "Свечи-цифры на блюде-раковине, рядом сердце. Год или возраст отливаются под заказ — цифры делаются любые.",
     "specs": {},
     "tones": [
       "#C3F5A5",
@@ -2715,7 +2710,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Русалка с распущенными волосами, синий воск с золотой проводкой по хвосту.",
+    "description": "Русалка с распущенными волосами: хвост уходит кольцом, по чешуе пущена золотая проводка. Синий воск набран слоями, от светлого у хвоста к глубокому у плеч.",
     "specs": {},
     "tones": [
       "#EFE6E7",
@@ -2726,7 +2721,7 @@
   {
     "id": "candles-oblaka",
     "slug": "oblaka",
-    "title": "Облака",
+    "title": "Облака, цветы в подсвечнике",
     "article": "СВ-54",
     "category": "candles",
     "tags": [
@@ -2739,33 +2734,33 @@
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAABwAgCdASoQABAAA4BaJZQAEQL8X7p2rBAyAn14AP71epmu8hrcXDy9AM42DZjzqEsovqAvuv8db27nvXbzdH7YAKtRUQ1sRvkrYtTYkh0+vCJgpQ36EfJaITGe3rnxrwq0JWrnTcOmiH7BEN7K1AP+80AAAA==",
-        "alt": "Облака"
+        "alt": "Облака, цветы в подсвечнике"
       },
       {
         "src": "/catalog/candles/oblaka-02.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAAAQAgCdASoQABAAA4BaJZwAD5bu4a3kHKhAAP70tpmvHXFMDuhbUh79YKza7o707nJkgIiqr85We+v2vuxAjci6npiOOHdPWvYn8SCFujatp6jDi/e5/E/e4uUd4PX7ylb//YBpodlGMiD+N1dAq6NJ89SsAAAA",
-        "alt": "Облака — ракурс 2"
+        "alt": "Облака, цветы в подсвечнике — ракурс 2"
       },
       {
         "src": "/catalog/candles/oblaka-03.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAAAQAgCdASoQABAAA4BaJZwAD4/OgUbQGcYAAP72kW37pXhnaYGu6cc9JqnK42+64n16VQ+S5IqjDwidtDm0fgO/KDhv+L1bH8ge1HdeXSBvZpgSWu3YBBI6HZOb6qXbczogrj2yQ0UztpSigAA=",
-        "alt": "Облака — ракурс 3"
+        "alt": "Облака, цветы в подсвечнике — ракурс 3"
       },
       {
         "src": "/catalog/candles/oblaka-04.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAABwAgCdASoQABAAA4BaJYgCdAYsZlKgRmqeI/JoAP722XCZfyK7LJ5Ojyd8Jmu5G38mtJiYQCE2NCREBOfnRmeB/82diLilPIhkFo9xtauKzbckzS6u6FkbZyQo4Y76kfQEpEpxbpJtRtNXCoHKqQw+cIZe/qx/igXXAAAA",
-        "alt": "Облака — ракурс 4"
+        "alt": "Облака, цветы в подсвечнике — ракурс 4"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Ребристая гипсовая ванночка с синей водой, по которой плывут белые облака.",
+    "description": "Ребристая гипсовая ванночка с синей водой, по которой плывут белые облака. Облака лепятся отдельно и ставятся на воду по одному. Ванночка гипсовая и остаётся после свечи.",
     "specs": {},
     "tones": [
       "#D6D9F0",
@@ -2776,7 +2771,7 @@
   {
     "id": "candles-kovboyskie-sapogi",
     "slug": "kovboyskie-sapogi",
-    "title": "Ковбойские сапоги",
+    "title": "Сапог",
     "article": "СВ-55",
     "category": "candles",
     "tags": [
@@ -2789,33 +2784,33 @@
         "width": 1200,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAACwAQCdASoMABAAA4BaJYgCdADWki5AAP6e59qAeQKF0I77Px8WScw4DUN8jdV1NXZywnbmcRN3IRqTAsAAAA==",
-        "alt": "Ковбойские сапоги"
+        "alt": "Сапог"
       },
       {
         "src": "/catalog/candles/kovboyskie-sapogi-02.webp",
         "width": 1200,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAADwAQCdASoMABAAA4BaJYwCdAD0bbBNZAAA/tp3Ye90t2EBw0u1BdXzqTd87g3/4DKmwAAA",
-        "alt": "Ковбойские сапоги — ракурс 2"
+        "alt": "Сапог — ракурс 2"
       },
       {
         "src": "/catalog/candles/kovboyskie-sapogi-03.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAABQAgCdASoQABAAA4BaJYwC7AEfZgo6Ne9sltAA/uRYgq9Rvw/yOIOYdoGFBMU63n3cNGXLBQcurBk2AAA=",
-        "alt": "Ковбойские сапоги — ракурс 3"
+        "alt": "Сапог — ракурс 3"
       },
       {
         "src": "/catalog/candles/kovboyskie-sapogi-04.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAADwAQCdASoQABAAA4BaJYwC7AD0duq86sAA/tp4wo4VOMhHFsB2/j+QaCMDES1qcwfqLJ3mixKQicAA",
-        "alt": "Ковбойские сапоги — ракурс 4"
+        "alt": "Сапог — ракурс 4"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Сапог с тиснёным узором и медным отливом; отливается парой и поодиночке.",
+    "description": "Ковбойский сапог с тиснёным узором по голенищу и медным отливом. Отливается парой и поодиночке — пара смотрится как пара настоящих, поставленных рядом.",
     "specs": {},
     "tones": [
       "#F9BCAC",
@@ -2826,7 +2821,7 @@
   {
     "id": "candles-angel-v-kolybeli",
     "slug": "angel-v-kolybeli",
-    "title": "Ангел в колыбели",
+    "title": "Ангелочек",
     "article": "СВ-56",
     "category": "candles",
     "tags": [
@@ -2839,19 +2834,19 @@
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAABQAgCdASoQABAAA4BaJZgCdIExGBsAwZKiQCAA/vVoF2JNsn2ClCOaKv2mxof+vbhZXF9rhcGNBsksF3JQ9z7ecxctbFIxJ4ylyuAA",
-        "alt": "Ангел в колыбели"
+        "alt": "Ангелочек"
       },
       {
         "src": "/catalog/candles/angel-v-kolybeli-02.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAABwAgCdASoQABAAA4BaJZACdH8AGBqXciWJpTZAAP71bKpNTbbHd+Gh9Ihu4R72yrxEEmE9lnZ4CCCqt/wrSEdDMQbPIe9wAxiTxlLlcAA=",
-        "alt": "Ангел в колыбели — ракурс 2"
+        "alt": "Ангелочек — ракурс 2"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Спящий младенец с крыльями в плетёной колыбели.",
+    "description": "Спящий младенец с крыльями в плетёной колыбели. Плетение прорисовано по всему борту, крылья лепятся отдельно. Подарок к рождению или крестинам.",
     "specs": {},
     "tones": [
       "#F9D9CA",
@@ -2923,7 +2918,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Карусель с лошадками: гипсовый корпус с крышей, внутри свеча. Есть белая с серебром, розовая и фиолетовая.",
+    "description": "Карусель с лошадками: гипсовый корпус с крышей, внутри — свеча. Пока горит, свет выходит между столбиками и лошадки читаются силуэтом. Корпус остаётся, свечу внутри можно менять.",
     "specs": {},
     "tones": [
       "#F9E5DC",
@@ -2959,7 +2954,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Овальный медальон: серебряные цветы на синем фоне.",
+    "description": "Овальный медальон: серебряные цветы лежат рельефом по глубокому синему полю. Рельеф прорабатывается по контуру вручную, поэтому серебро ложится только на выступающие лепестки.",
     "specs": {},
     "tones": [
       "#EAE7F0",
@@ -2970,7 +2965,7 @@
   {
     "id": "candles-tsilindr-s-tyulpanami",
     "slug": "tsilindr-s-tyulpanami",
-    "title": "Цилиндр с тюльпанами",
+    "title": "Свеча цилиндрическая с тюльпанами",
     "article": "СВ-59",
     "category": "candles",
     "tags": [
@@ -2984,19 +2979,19 @@
         "width": 1200,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAAAQAgCdASoMABAAA4BaJQBOgCIj92tb/bQAAP71dIY2fxmN5HIRLVC8YdSY453J07lR2eq8Hl+a+ijnezpNjk1Fv/KxQUfwAAA=",
-        "alt": "Цилиндр с тюльпанами"
+        "alt": "Свеча цилиндрическая с тюльпанами"
       },
       {
         "src": "/catalog/candles/tsilindr-s-tyulpanami-02.webp",
         "width": 1200,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAwAgCdASoMABAAA4BaJYgCdAELZH3HxZGogAD+9DAJEqJ477b/nSRod1x+M/n8owolUUrOQ5c+DXS9xvp7z2ELGJmZBTS4zFA7eorQhqAAAA==",
-        "alt": "Цилиндр с тюльпанами — ракурс 2"
+        "alt": "Свеча цилиндрическая с тюльпанами — ракурс 2"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Пудровый цилиндр, по кругу расписанные тюльпаны с зелёными листьями.",
+    "description": "Пудровый цилиндр, по кругу которого расписаны тюльпаны с зелёными листьями. Роспись идёт лентой и смыкается — свечу можно поставить любой стороной.",
     "specs": {},
     "tones": [
       "#F9E2CE",
@@ -3007,7 +3002,7 @@
   {
     "id": "candles-morskaya-zvezda",
     "slug": "morskaya-zvezda",
-    "title": "Морская звезда",
+    "title": "Свеча в звезде",
     "article": "СВ-60",
     "category": "candles",
     "tags": [
@@ -3020,33 +3015,33 @@
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAABwAgCdASoQABAAA4BaJZQAD5PwNhdOw6TbxqAAAP73ehYb9ye2nzYP2MF+qRFq39XLlrnFCpT4hD8nhfq7Eta3iGCGrvJOUbx0WT0bGAKtG1CGnQWAywZjczb/uXgA",
-        "alt": "Морская звезда"
+        "alt": "Свеча в звезде"
       },
       {
         "src": "/catalog/candles/morskaya-zvezda-02.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAABQAgCdASoQABAAA4BaJZwAD4hQjlQdPV4szAAA/vhV6TgJf0J6vtfx4UuczV1HtZIThhy1sIdpk+aORF359TALkpSVJOpy7mwASwZ4OtHff3tr+3Sx1bzVIBNEfUz4Q3hZZG+StVzy54QA",
-        "alt": "Морская звезда — ракурс 2"
+        "alt": "Свеча в звезде — ракурс 2"
       },
       {
         "src": "/catalog/candles/morskaya-zvezda-03.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAABQAgCdASoQABAAA4BaJaQAD4zQeFOoQDrAAgAA/vkSICtFCbcIXBz/DdLTKJhq74XiecIp7qU7llsqX5UHzmfVn8p+Qkpq7pHFbSB8cnEUaN3Gd+JPVZQOe22pL/rBuoUAAA==",
-        "alt": "Морская звезда — ракурс 3"
+        "alt": "Свеча в звезде — ракурс 3"
       },
       {
         "src": "/catalog/candles/morskaya-zvezda-04.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAwAgCdASoQABAAA4BaJZQAD4wQXj6GRsGUAAD+93rTr+hMDBDQfOfV3kRL8JZPONv2ITVgtN7uTZ2YTHtnnlipvxPtLyKFff4yN47eCJTgQAAA",
-        "alt": "Морская звезда — ракурс 4"
+        "alt": "Свеча в звезде — ракурс 4"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Пятиконечная звезда-подсвечник: бирюзовая вода внутри, по краю рельефный борт, фитилей пять.",
+    "description": "Пятиконечная звезда-подсвечник: внутри бирюзовая вода, по краю поднятый рельефный борт, на дне ракушки. Фитилей пять, по одному на луч — можно зажечь все или только те, что ближе.",
     "specs": {},
     "tones": [
       "#E9E9E7",
@@ -3057,7 +3052,7 @@
   {
     "id": "candles-medvezhonok-s-podarkom",
     "slug": "medvezhonok-s-podarkom",
-    "title": "Медвежонок с подарком",
+    "title": "Медвежонок в подарке",
     "article": "СВ-61",
     "category": "candles",
     "tags": [
@@ -3071,19 +3066,19 @@
         "width": 1200,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAADwAQCdASoMABAAA4BaJZACdAEOz1zYlIAA/vd2XTZYQIEFQlVss74hK3ef3xZ26nUoTxuuCuJ/fmqIAAA=",
-        "alt": "Медвежонок с подарком"
+        "alt": "Медвежонок в подарке"
       },
       {
         "src": "/catalog/candles/medvezhonok-s-podarkom-02.webp",
         "width": 1200,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAAAQAgCdASoMABAAA4BaJZgCdAEO+rFYpe3gAP73c6bqqDZ9ZsIt9L1r5mXazTYZ0SsbxcEEJnBmvGlLurHwPRsxBaAAAA==",
-        "alt": "Медвежонок с подарком — ракурс 2"
+        "alt": "Медвежонок в подарке — ракурс 2"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Медвежонок сидит на подарочной коробке с бантом.",
+    "description": "Медвежонок сидит на подарочной коробке с бантом. Лапы, бант и коробка лепятся отдельно и собираются вручную — поза у каждого медвежонка получается чуть своя.",
     "specs": {},
     "tones": [
       "#F9B8A3",
@@ -3119,7 +3114,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Медвежонок с охапкой цветных карандашей, на шоколадной подставке.",
+    "description": "Медвежонок с охапкой цветных карандашей на шоколадной подставке. Карандаши отливаются по одному, каждый своего цвета. Подарок к первому сентября или ко дню учителя.",
     "specs": {},
     "tones": [
       "#F1EABD",
@@ -3130,7 +3125,7 @@
   {
     "id": "candles-utyata-v-vannochke",
     "slug": "utyata-v-vannochke",
-    "title": "Утята в ванночке",
+    "title": "Ванна с утятами",
     "article": "СВ-63",
     "category": "candles",
     "tags": [
@@ -3143,26 +3138,26 @@
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADQAQCdASoQAAwAA4BaJQBOgCHKI6zoUAD+9CG6fy263nqqSkrWLq5MKjOH5XT6/uSwgFbEows7GPNjLrAMM6MD2kMBCkAaOigBcEAA",
-        "alt": "Утята в ванночке"
+        "alt": "Ванна с утятами"
       },
       {
         "src": "/catalog/candles/utyata-v-vannochke-02.webp",
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAwAgCdASoQAAwAA4BaJYwCxC8AGDiqMR5tsAD+9pItokaPfkNpdqlXrXMXNenwCu0vWf8+NeQTpugmzGAn+KgaAbhCv1mpRAwXJNCf3nbMiOxZ8AAAAA==",
-        "alt": "Утята в ванночке — ракурс 2"
+        "alt": "Ванна с утятами — ракурс 2"
       },
       {
         "src": "/catalog/candles/utyata-v-vannochke-03.webp",
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAABQAgCdASoQAAwAA4BaJQBYheAQRhfuNkcerAAA/vVrNE/Ucpj9bb9wY37dQ1E3fPORdBqoX32XxN3KctNVV7/Tn5CeVMVTAbGAAA==",
-        "alt": "Утята в ванночке — ракурс 3"
+        "alt": "Ванна с утятами — ракурс 3"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Гипсовая ванночка с водой, в ней плавают жёлтые утята.",
+    "description": "Гипсовая ванночка с водой, в которой плавают жёлтые утята — сюжет для детской. Ванночка гипсовая: когда воск выгорит, в ней можно держать мелочи.",
     "specs": {},
     "tones": [
       "#E5EBD9",
@@ -3177,7 +3172,6 @@
     "article": "СВ-64",
     "category": "candles",
     "tags": [
-      "sweets",
       "food"
     ],
     "images": [
@@ -3198,7 +3192,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Шар из тёмного воска на шестигранном гипсовом блюде, вокруг рассыпаны шоколадные капли.",
+    "description": "Шар из тёмного воска на шестигранном гипсовом блюде, вокруг рассыпаны шоколадные капли. Капли отливаются отдельно и раскладываются вручную.",
     "specs": {},
     "tones": [
       "#F9C3AD",
@@ -3242,7 +3236,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Сердце тёплого телесного тона с золотой прожилкой по краю.",
+    "description": "Сердце тёплого телесного тона с золотой прожилкой, идущей по краю. Форма гладкая, без рельефа — вся выразительность в цвете и в том, как золото ловит свет.",
     "specs": {},
     "tones": [
       "#F9C1A3",
@@ -3278,7 +3272,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Гипсовый стакан с лепестками по краю и свечой внутри; во втором варианте — с сухоцветами.",
+    "description": "Гипсовый стакан с лепестками по верхнему краю, внутри свеча. Во втором варианте в воск вмешаны сухие соцветия — они просвечивают, пока свеча горит. Стакан остаётся после.",
     "specs": {},
     "tones": [
       "#DAF1C1",
@@ -3293,7 +3287,6 @@
     "article": "СВ-67",
     "category": "candles",
     "tags": [
-      "sweets",
       "food",
       "women"
     ],
@@ -3329,7 +3322,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Корзиночки с кремом, малиной и шоколадной крошкой, по несколько штук.",
+    "description": "Корзиночки с кремом, малиной и шоколадной крошкой — по несколько штук вместе. Тесто прорабатывается рельефом по борту, ягоды сажаются вручную. Хороши как маленькие подарки к чаю.",
     "specs": {},
     "tones": [
       "#F9DDC4",
@@ -3358,7 +3351,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Сердце с ягодной фактурой в гипсовом блюде с бусинами.",
+    "description": "Сердце с ягодной фактурой — вся поверхность собрана из мелких зёрен, как малина. Подаётся в гипсовом блюде с бусинным краем, блюдо входит в набор.",
     "specs": {},
     "tones": [
       "#F9DBD1",
@@ -3374,7 +3367,8 @@
     "category": "candles",
     "tags": [
       "women",
-      "gift"
+      "gift",
+      "misc"
     ],
     "images": [
       {
@@ -3387,7 +3381,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Свеча-моток пряжи с проработанными нитями.",
+    "description": "Свеча-моток пряжи: нити прорисованы по всему клубку, виток к витку. Подарок тому, кто вяжет.",
     "specs": {},
     "tones": [
       "#F9DCC8",
@@ -3480,7 +3474,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Свеча-шкатулка с крупным бантом, внутри — монеты. Отливается в золоте, серебре, розовом и голубом.",
+    "description": "Свеча-шкатулка с крупным бантом на крышке, внутри — монеты. Отливается в золоте, серебре, розовом и голубом. Бант лепится отдельно и ставится на крышку вручную.",
     "specs": {},
     "tones": [
       "#F8E6D6",
@@ -3601,7 +3595,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Крупный бутон розы в гипсовом кашпо. Кашпо разной фактуры: ребристое, в пузырьках, в чешуе.",
+    "description": "Крупный бутон розы в гипсовом кашпо: лепестки идут слоями от середины к краю. Кашпо бывает ребристым, в пузырьках и в чешуе — выбирается под интерьер. Кашпо остаётся, свечу можно заменить.",
     "specs": {},
     "tones": [
       "#F9E5DA",
@@ -3666,7 +3660,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Роллы и нигири на круглых гипсовых тарелочках.",
+    "description": "Роллы и нигири на круглых гипсовых тарелочках: рис прорабатывается зерном, рыба наливается отдельным слоем. Тарелочки входят в набор.",
     "specs": {},
     "tones": [
       "#EFE7E2",
@@ -3709,7 +3703,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Яблоко, обвитое змеёй с чешуёй под медь. Чёрное и красное.",
+    "description": "Яблоко, обвитое змеёй с чешуёй под медь. Чешуя прорисована по всему телу, голова лежит на боку плода. Отливается чёрным и красным.",
     "specs": {},
     "tones": [
       "#F9DAD0",
@@ -3745,7 +3739,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Русалка, лежащая в раскрытой раковине; голубой воск с золотой проводкой.",
+    "description": "Русалка, лежащая в раскрытой раковине: створка поднимается за спиной веером. Голубой воск с золотой проводкой по хвосту и по краю створки.",
     "specs": {},
     "tones": [
       "#F4E7D4",
@@ -3788,7 +3782,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Стеклянная банка с янтарным гелем, внутри плавают восковые звёзды.",
+    "description": "Стеклянная банка с янтарным гелем, внутри плавают восковые звёзды. Гель прозрачный, поэтому звёзды видно со всех сторон, а огонь просвечивает их насквозь.",
     "specs": {},
     "tones": [
       "#F9D9CA",
@@ -3804,7 +3798,8 @@
     "category": "candles",
     "tags": [
       "men",
-      "gift"
+      "gift",
+      "misc"
     ],
     "images": [
       {
@@ -3824,7 +3819,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Стопка книг с обрезами и корешками, отлитая целиком.",
+    "description": "Стопка книг, отлитая целиком: видны обрезы страниц и корешки с тиснением. Ставится на письменный стол или на полку рядом с настоящими книгами.",
     "specs": {},
     "tones": [
       "#F1E8D3",
@@ -3874,7 +3869,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Овальный барельеф с фигурами и золотой патиной по рельефу. Бежевый, розовый и сиреневый.",
+    "description": "Овальный барельеф с фигурами и золотой патиной, втёртой по рельефу. Отливается бежевым, розовым и сиреневым — патина на каждом ложится по-своему.",
     "specs": {},
     "tones": [
       "#F9CEC0",
@@ -3910,7 +3905,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Бутылка с этикеткой и фольгой на горлышке, фитиль выходит из пробки.",
+    "description": "Бутылка с этикеткой и фольгой на горлышке, фитиль выходит из пробки. В натуральную величину, стоит сама.",
     "specs": {},
     "tones": [
       "#F2E7DD",
@@ -3947,7 +3942,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Сердце, собранное из бутонов тюльпанов на листьях. Розовое и салатовое.",
+    "description": "Сердце, собранное из бутонов тюльпанов на листьях: бутоны лепятся по одному и укладываются от края к середине. Отливается розовым и салатовым.",
     "specs": {},
     "tones": [
       "#F5E9BF",
@@ -3962,7 +3957,6 @@
     "article": "СВ-80",
     "category": "candles",
     "tags": [
-      "sweets",
       "food",
       "women"
     ],
@@ -4005,7 +3999,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Свеча в керамической чаше: поверх воска — плитка шоколада, орехи и сухие лепестки.",
+    "description": "Свеча в керамической чаше: поверх воска лежит плитка шоколада, орехи и сухие лепестки. Чаша настоящая, керамическая, и остаётся после свечи.",
     "specs": {},
     "tones": [
       "#F9D4C3",
@@ -4034,7 +4028,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Тёмно-зелёная ёлка со снежными шапками на ветвях и звездой на макушке.",
+    "description": "Тёмно-зелёная ёлка со снежными шапками на ветвях и звездой на макушке. Снег наносится по краю каждого яруса вручную.",
     "specs": {},
     "tones": [
       "#D1F5B3",
@@ -4077,7 +4071,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Ярусная ёлка с медно-золотым напылением; отливается в двух размерах. Есть светлая версия.",
+    "description": "Ярусная ёлка с медно-золотым напылением, в двух размерах — их ставят парой, большую и малую. Есть светлая версия, без золота.",
     "specs": {},
     "tones": [
       "#E1F0B5",
@@ -4121,7 +4115,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Шар, собранный из ягод малины, на круглом гипсовом блюде.",
+    "description": "Шар, собранный из ягод малины, на круглом гипсовом блюде. Каждая ягода отливается отдельно, поэтому поверхность живая и чуть неровная.",
     "specs": {},
     "tones": [
       "#E5F387",
@@ -4172,7 +4166,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Две мандариновые свечи на гипсовом блюде с веткой хвои. Блюда разной формы — овальное, круглое, с бусинами.",
+    "description": "Две мандариновые свечи на гипсовом блюде с веткой хвои. Блюда разной формы — овальное, круглое, с бусинным краем; выбирается при заказе.",
     "specs": {},
     "tones": [
       "#EBECBE",
@@ -4222,7 +4216,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Овальные аромамедальоны с рельефной лошадкой в ажурной рамке, с отверстием под ленту.",
+    "description": "Овальные аромамедальоны с рельефной лошадкой в ажурной рамке, с отверстием под ленту. Вешаются в шкаф или в машину.",
     "specs": {},
     "tones": [
       "#EFE6EB",
@@ -4258,7 +4252,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Овальный медальон с рельефным букетом на гладком поле, тёплого терракотового тона.",
+    "description": "Овальный медальон с рельефным букетом на гладком поле, тёплого терракотового тона. Кладётся в бельевой ящик.",
     "specs": {},
     "tones": [
       "#F3E6E6",
@@ -4294,7 +4288,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Круглые и овальные диски с вплавленными сухими соцветиями.",
+    "description": "Круглые и овальные диски с вплавленными сухими соцветиями — цветы видны прямо в толще. Каждый диск собирается отдельно.",
     "specs": {},
     "tones": [
       "#F9D5CC",
@@ -4330,7 +4324,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Плоские ёлочки с подвесом из красной ленты: зелёная с надписью и голубая со звёздами.",
+    "description": "Плоские ёлочки с подвесом из красной ленты: зелёная с надписью и голубая со звёздами. Вешаются на ёлку или на ручку двери.",
     "specs": {},
     "tones": [
       "#BDF5BB",
@@ -4359,7 +4353,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Круглая плитка с рельефным цветком в центре и надписью по краю.",
+    "description": "Круглая плитка с рельефным цветком в центре и надписью по краю. Кладётся в шкаф или ставится на полку как небольшой предмет.",
     "specs": {},
     "tones": [
       "#F9E6D6",
@@ -4402,7 +4396,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Гипсовые вазочки с рваным краем, будто скорлупа, расписанные мелкими цветами.",
+    "description": "Гипсовые вазочки с рваным краем, будто скорлупа, расписанные мелкими цветами. Роспись наносится вручную, по одной вазочке.",
     "specs": {},
     "tones": [
       "#F8E4E5",
@@ -4439,7 +4433,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Овальное блюдо с зелёной поляной и бутонами тюльпанов по всей длине.",
+    "description": "Овальное блюдо с зелёной поляной и бутонами тюльпанов по всей длине. Бутоны отливаются отдельно и сажаются на поверхность вручную.",
     "specs": {},
     "tones": [
       "#F9E4D6",
@@ -4468,7 +4462,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Кашпо в форме завязанного мешочка, светлые и с новогодней росписью.",
+    "description": "Кашпо в форме завязанного мешочка: складки собираются к горловине. Есть светлые и с новогодней росписью. В них ставят свечу или мелкие сухоцветы.",
     "specs": {},
     "tones": [
       "#DFF1AE",
@@ -4497,7 +4491,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Набор подсвечников с лепестковым краем под медь: два низких и один высокий.",
+    "description": "Набор подсвечников с лепестковым краем под медь: два низких и один высокий. Ставятся группой, свеча утапливается в середину.",
     "specs": {},
     "tones": [
       "#F9E6A5",
@@ -4838,7 +4832,7 @@
   {
     "id": "soap-morskie-kruglyshi",
     "slug": "morskie-kruglyshi",
-    "title": "Морские круги",
+    "title": "Круглое с ракушками",
     "article": "МЛ-08",
     "category": "soap",
     "tags": [
@@ -4851,26 +4845,26 @@
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAAAQAgCdASoQAAwAA4BaJagCdAEWjQGxlcIAAP6pxHyQGXlq8QGl9HHMaZCOtQxydN13dy+xpTp4rWln06qde51A8S7nF9ZbP0QHjbx9HJ/JFGzCUot7ZNnHJwcotHkb0pW+4SAA",
-        "alt": "Морские круги"
+        "alt": "Круглое с ракушками"
       },
       {
         "src": "/catalog/soap/morskie-kruglyshi-02.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAABQAgCdASoQABAAA4BaJQBOgMYYqzDNbrtICCAA/vV7bcoimd4iYnMDE7340NXBf1d4zQSJ7glnGpi5fyr6o5vOFCfGH7mSJcbamD5RWxOVrs6x0V1noa79GFjy1JLi6BCY7KCXnowAAA==",
-        "alt": "Морские круги — ракурс 2"
+        "alt": "Круглое с ракушками — ракурс 2"
       },
       {
         "src": "/catalog/soap/morskie-kruglyshi-03.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAAAwAgCdASoQABAAA4BaJQBOgMXrqygiADAtgAD+81Mte92eQ2i2x3opJJd099fCGGtiB6YdnFj6+TaXndgQRZ6glbpmpK1Ba7uK9OB5RMa9iOUNXKE6DCUNpOdXfDqwMeHS0y+oZgVJ5fKV3xoAAA==",
-        "alt": "Морские круги — ракурс 3"
+        "alt": "Круглое с ракушками — ракурс 3"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Круглое мыло с прозрачной синей толщей, внутри — ракушки, будто смотришь в воду сверху.",
+    "description": "Круглое мыло цвета глубокой воды: сквозь прозрачный слой видны створки раковин, будто смотришь в воду сверху. Раковины ложатся при каждой заливке по-своему, поэтому двух одинаковых кусков не бывает.",
     "specs": {},
     "tones": [
       "#A3DAF0",
@@ -4881,7 +4875,7 @@
   {
     "id": "soap-morskoy-brusok",
     "slug": "morskoy-brusok",
-    "title": "Морской брусок",
+    "title": "Прямоугольное с ракушками",
     "article": "МЛ-09",
     "category": "soap",
     "tags": [
@@ -4894,33 +4888,33 @@
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAABQAgCdASoQAAwAA4BaJZQCdAYwd2yhoPrjkoAA/uzfOI1moAR9ldRzUWaCO0dIOTV2GLwB8a0yF3ppchI/voFvroxEZuyLdZYWATOEMtU3Xk5grO4vmPOAZMlZeAAA",
-        "alt": "Морской брусок"
+        "alt": "Прямоугольное с ракушками"
       },
       {
         "src": "/catalog/soap/morskoy-brusok-02.webp",
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAAAQAgCdASoQAAwAA4BaJZQC7AD1fV3UffPAAP7w33ve/mo/cJpeocxZDCpl2e3evtJbxcrIWL57fs6cv+Qu7vecOn2ctSzuJCF5xbQX+AA=",
-        "alt": "Морской брусок — ракурс 2"
+        "alt": "Прямоугольное с ракушками — ракурс 2"
       },
       {
         "src": "/catalog/soap/morskoy-brusok-03.webp",
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAwAgCdASoQAAwAA4BaJYwCdAEQzG7pAByAAAD+rZ9H21Uw2c4X3lhCNQ/bBtnmGSSzybN4An5fAnthgwuKYmEFoJwZdFaa+EDl1/mihvC4OFrKNo5tLqgx0UAAAA==",
-        "alt": "Морской брусок — ракурс 3"
+        "alt": "Прямоугольное с ракушками — ракурс 3"
       },
       {
         "src": "/catalog/soap/morskoy-brusok-04.webp",
         "width": 1200,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAABQAgCdASoMABAAA4BaJQBOj+ADL/B57tKtfgAAzgiCS0JMFHzqlpKcrYDrJxp+EH5+cpypqKLiOD5DvRQRvzz7/pNSEjHRMDlVYQHIGqVvc5cg56yDW1CA0mWIG0jcAAA=",
-        "alt": "Морской брусок — ракурс 4"
+        "alt": "Прямоугольное с ракушками — ракурс 4"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Прямоугольный брусок из прозрачной синей основы с вплавленными ракушками и створками.",
+    "description": "Прямоугольный брусок из прозрачной синей основы с вплавленными раковинами и створками. Ровные грани, чистый срез — удобно держать в руке. Внутренний рисунок виден на просвет.",
     "specs": {},
     "tones": [
       "#CEECF0",
@@ -4963,7 +4957,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Крупная морская звезда с зернистой поверхностью, отдельно и в подарочной коробке.",
+    "description": "Крупная морская звезда с зернистой поверхностью: лучи чуть подняты, как у настоящей. Кладётся в подарочную коробку с наполнителем — так и дарится.",
     "specs": {},
     "tones": [
       "#DCEDE4",
@@ -4978,7 +4972,6 @@
     "article": "МЛ-11",
     "category": "soap",
     "tags": [
-      "sweets",
       "food",
       "gift"
     ],
@@ -5021,7 +5014,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Деревянная доска с гнёздами, в них — тарталетки с ягодами, кремом и шоколадной крошкой.",
+    "description": "Деревянная доска с гнёздами, в них — тарталетки с ягодами, кремом и шоколадной крошкой. Собирается как настоящая подача к чаю; доска входит в набор.",
     "specs": {},
     "tones": [
       "#F9BA9C",
@@ -5036,7 +5029,6 @@
     "article": "МЛ-12",
     "category": "soap",
     "tags": [
-      "sweets",
       "food",
       "gift"
     ],
@@ -5093,7 +5085,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Набор в деревянной подставке: вафли, дольки шоколада и печенье.",
+    "description": "Набор в деревянной подставке: вафли, дольки шоколада и печенье. Каждый предмет отливается отдельно, состав набора можно собрать по своему выбору.",
     "specs": {},
     "tones": [
       "#F9BEA0",
@@ -5104,11 +5096,10 @@
   {
     "id": "soap-morozhenoe-rozhki",
     "slug": "morozhenoe-rozhki",
-    "title": "Мороженое-рожки",
+    "title": "Мороженое рожок",
     "article": "МЛ-13",
     "category": "soap",
     "tags": [
-      "sweets",
       "food",
       "kids"
     ],
@@ -5118,26 +5109,26 @@
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADwAQCdASoQAAwAA4BaJbACdADp7bi0IAAA/uzZbaqwzXgUGVPg9iz+5Yv2wo8U6Nz8NzSEn2NkmF7qqnr8butfNm7JkAAA",
-        "alt": "Мороженое-рожки"
+        "alt": "Мороженое рожок"
       },
       {
         "src": "/catalog/soap/morozhenoe-rozhki-02.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAACQAgCdASoQABAAA4BaJbACdLoAAzrEDZsyKkSUAAD+fVhL2KwHSg98JtFniK2c5gwgMixKQIMxrkbIAGb/tjuf5qzDSRK8QAQMCXhDdthgqid4nmK6tao9Sd576lgAAAA=",
-        "alt": "Мороженое-рожки — ракурс 2"
+        "alt": "Мороженое рожок — ракурс 2"
       },
       {
         "src": "/catalog/soap/morozhenoe-rozhki-03.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAABwAgCdASoQABAAA4BaJbACdLoAAr1fsvh7lLYAAP6+A4Hc0WmU+AufnltKjw3utYuBw83X0h+u8Tkxh4o9GfNDZFc1fiSnZyToaVpJ+QZwaRBZD2p5+QUivt2LzAUoAAA=",
-        "alt": "Мороженое-рожки — ракурс 3"
+        "alt": "Мороженое рожок — ракурс 3"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Рожки с шариками мороженого и эскимо на палочке.",
+    "description": "Рожки с шариками мороженого и эскимо на палочке. Вафельная сетка прорисована по всему рожку, шарики лепятся отдельно и садятся сверху.",
     "specs": {},
     "tones": [
       "#F9B99B",
@@ -5148,11 +5139,10 @@
   {
     "id": "soap-tartaletki",
     "slug": "tartaletki",
-    "title": "Тарталетки",
+    "title": "Тарталетка с ягодами",
     "article": "МЛ-14",
     "category": "soap",
     "tags": [
-      "sweets",
       "food",
       "women"
     ],
@@ -5162,19 +5152,19 @@
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADwAQCdASoQABAAA4BaJbACdADxMbIo9kAA/nHhzJ3IGQwckPvK+5Ikwe9II/i39UxZhNVq4yMnKFmxCnmY97OZ1t251WAuaKkR69aWzcu++g8cy5rrFAAA",
-        "alt": "Тарталетки"
+        "alt": "Тарталетка с ягодами"
       },
       {
         "src": "/catalog/soap/tartaletki-02.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADQAQCdASoQABAAA4BaJbACdLoAAzpzcAD+hKCyCOwRfqFpEXhbv6Z3nMQxU8NNjLJWNA1cVdS4If6ZGUuHQEG5q5ytrczQGcagL3E+HrvQ4xxflvjF1eFyAAA=",
-        "alt": "Тарталетки — ракурс 2"
+        "alt": "Тарталетка с ягодами — ракурс 2"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Корзиночки с кремом, ягодами и шоколадными шариками на круглой доске.",
+    "description": "Корзиночка с кремом, ягодами и шоколадными шариками. Борт прорабатывается рельефом, начинка выкладывается вручную — двух одинаковых не выходит.",
     "specs": {},
     "tones": [
       "#F9BC9E",
@@ -5185,11 +5175,10 @@
   {
     "id": "soap-kusok-torta",
     "slug": "kusok-torta",
-    "title": "Кусок торта",
+    "title": "Кусок торта треугольный",
     "article": "МЛ-15",
     "category": "soap",
     "tags": [
-      "sweets",
       "food"
     ],
     "images": [
@@ -5198,12 +5187,12 @@
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAAAQAgCdASoQAAwAA4BaJagCdAELM74GvOoAAP7LyqQJzPlYVu4mvU0FxSEyMvoETW88l4PaMSvHnsm/a4k5i39A5sGDJrbJ8AA=",
-        "alt": "Кусок торта"
+        "alt": "Кусок торта треугольный"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Кусок слоёного торта с карамельной глазурью и гроздью ягод сверху.",
+    "description": "Кусок слоёного торта с карамельной глазурью: видны прослойки крема, сверху гроздь ягод. Подаётся на кружевной салфетке.",
     "specs": {},
     "tones": [
       "#F9B5A4",
@@ -5214,7 +5203,7 @@
   {
     "id": "soap-zayka-s-serdtsem",
     "slug": "zayka-s-serdtsem",
-    "title": "Зайка с сердцем",
+    "title": "Зайчик с сердечком",
     "article": "МЛ-16",
     "category": "soap",
     "tags": [
@@ -5228,19 +5217,19 @@
         "width": 1200,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADwAQCdASoMABAAA4BaJQBOgCIfuW2jsYAAzjkxxF4Nlf6hfC/OLKNjK+e18OcVfoL/aq7gQg550wFHKGcCOJSNUYqyT+iMMgdj2uAA",
-        "alt": "Зайка с сердцем"
+        "alt": "Зайчик с сердечком"
       },
       {
         "src": "/catalog/soap/zayka-s-serdtsem-02.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADQAQCdASoQABAAA4BaJQAAXCaa7OvhQAD3mRRuS0zeUTKe+EjL04gAtkdJf7Co3yhC6eMVJYs49uAWyJkpax9mh+Oey5cMAAA=",
-        "alt": "Зайка с сердцем — ракурс 2"
+        "alt": "Зайчик с сердечком — ракурс 2"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Пушистый зайчонок с красным сердечком в лапах, в подарочной коробке и на блюдце.",
+    "description": "Пушистый зайчонок с красным сердечком в лапах: шерсть проработана зерном по всему телу. Дарится в коробке с наполнителем или на блюдце.",
     "specs": {},
     "tones": [
       "#F9DAC2",
@@ -5251,13 +5240,13 @@
   {
     "id": "soap-konfety",
     "slug": "konfety",
-    "title": "Конфеты",
+    "title": "Конфета",
     "article": "МЛ-17",
     "category": "soap",
     "tags": [
       "kids",
-      "sweets",
-      "gift"
+      "gift",
+      "food"
     ],
     "images": [
       {
@@ -5265,26 +5254,26 @@
         "width": 1200,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADQAQCdASoMABAAA4BaJYgC7ADGVf8JgAD+yHGaoZAiEcU1do9vwuLFiTm+nYzrmrvauMBAfp+STDcNS/a1qaH9g+W+2AAqBcXGIAAA",
-        "alt": "Конфеты"
+        "alt": "Конфета"
       },
       {
         "src": "/catalog/soap/konfety-02.webp",
         "width": 1200,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAQCdASoMABAAA4BaJQBYdiIG1vWQ2gAA/sjYGAKWL4cC036bW7kfPJPG2O5D0adrtKFFrOlck7Az5NsyPNbOutOOeZ3OpORsBcK/gAA=",
-        "alt": "Конфеты — ракурс 2"
+        "alt": "Конфета — ракурс 2"
       },
       {
         "src": "/catalog/soap/konfety-03.webp",
         "width": 1600,
         "height": 1599,
         "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAACwAQCdASoQABAAA4BaJQAAOJMYDrfAAPyiMXvgMKir3O9i0RZoSc6sDH+xFUQbwQwpP7kZ+IadOfQQwdt08IPSl+Gv8361OJrAAA==",
-        "alt": "Конфеты — ракурс 3"
+        "alt": "Конфета — ракурс 3"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Мыло-конфета в скрученном фантике, в прозрачной упаковке. Розовое, голубое и сине-фиолетовое.",
+    "description": "Мыло-конфета в скрученном фантике: складки фантика прорисованы по краям. Отливается розовой, голубой и сине-фиолетовой, упаковывается в прозрачную плёнку.",
     "specs": {},
     "tones": [
       "#F9B1DF",
@@ -5295,7 +5284,7 @@
   {
     "id": "soap-banka-s-varenem",
     "slug": "banka-s-varenem",
-    "title": "Банка с вареньем",
+    "title": "Банка варенья",
     "article": "МЛ-18",
     "category": "soap",
     "tags": [
@@ -5308,26 +5297,26 @@
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAACQAQCdASoQAAwAA4BaJagCdAEFlgAA/u6Dd/UOsUDuSu5PEnevMzwNw92h6m+Um+VcYxzCwiAEYWS1WDZY2LGE0k6O9Lqk09UQAA==",
-        "alt": "Банка с вареньем"
+        "alt": "Банка варенья"
       },
       {
         "src": "/catalog/soap/banka-s-varenem-02.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAQAgCdASoQABAAA4BaJagCdADw2OWkxqAAAP7unw+NAHjS4t+ky5lnyApLg14HE7fOmmq5ipaMEjtRQnZUCB5+Y3H+5thEuACONVJj0aa4ElbdUEFAAA==",
-        "alt": "Банка с вареньем — ракурс 2"
+        "alt": "Банка варенья — ракурс 2"
       },
       {
         "src": "/catalog/soap/banka-s-varenem-03.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAABQAgCdASoQABAAA4BaJbACdADw2TmKCMUd14AA/u6fTXoDL2eUQH1GKqvXAgHdXbUYmmRlt+lS6/8cFTJA9j2GolJ4+6WDjtFrVprfnJNDXk721Uiqf+Uuvhe64jDRruk/Wm0YDUwAAA==",
-        "alt": "Банка с вареньем — ракурс 3"
+        "alt": "Банка варенья — ракурс 3"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Баночка с ягодами под кружевной крышкой, перевязанная бечёвкой.",
+    "description": "Баночка с ягодами под кружевной крышкой, перевязанная бечёвкой — как заготовка из погреба. Ягоды видно сквозь стекло основы.",
     "specs": {},
     "tones": [
       "#F9BAA0",
@@ -5338,7 +5327,7 @@
   {
     "id": "soap-laym",
     "slug": "laym",
-    "title": "Лайм",
+    "title": "Дольки лимона",
     "article": "МЛ-19",
     "category": "soap",
     "tags": [
@@ -5351,12 +5340,12 @@
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAAAQAgCdASoQABAAA4BaJZAC7ADw7pZau+TQAMkgU0NF1F/fjodkPNyPoO7BnsixawEjAtQ2SHXJBLX3/DbA41gWm3nTyLW5Lcz+6a/ZidBoPKqLgAA=",
-        "alt": "Лайм"
+        "alt": "Дольки лимона"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Полупрозрачные дольки лайма на стеклянной тарелке.",
+    "description": "Полупрозрачные дольки лимона с прожилками: на просвет видно каждую. Подаются на стеклянной тарелке, по три-четыре штуки.",
     "specs": {},
     "tones": [
       "#DCEED8",
@@ -5407,7 +5396,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Плитка на мешковине, засаженная объёмными цветами: сиреневые пионы и красные маки.",
+    "description": "Плитка на мешковине, засаженная объёмными цветами: сиреневые пионы, розовые бутоны, зелёные листья. Каждый цветок лепится отдельно и садится на основу вручную — букет получается свой.",
     "specs": {},
     "tones": [
       "#D2F58A",
@@ -5418,11 +5407,10 @@
   {
     "id": "soap-beze-s-yagodami",
     "slug": "beze-s-yagodami",
-    "title": "Безе с ягодами",
+    "title": "Десерт Павлова",
     "article": "МЛ-21",
     "category": "soap",
     "tags": [
-      "sweets",
       "food",
       "women"
     ],
@@ -5432,54 +5420,54 @@
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADwAQCdASoQAAwAA4BaJaACdAEM/rf3k5AA/urTPOk4H0Gbf+gGGP+5gHBxoyTLZyGutV7HfK+squnLDBwuOuV9p1KeBJfQpc0AAA==",
-        "alt": "Безе с ягодами"
+        "alt": "Десерт Павлова"
       },
       {
         "src": "/catalog/soap/beze-s-yagodami-02.webp",
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAACwAQCdASoQAAwAA4BaJYgCdAEOGY+AAP6yEv5TrY6j6FtWUMDpjP7s5dnjgRcrV4XAVhxB1bax8iyHQOrzXO6iMAA=",
-        "alt": "Безе с ягодами — ракурс 2"
+        "alt": "Десерт Павлова — ракурс 2"
       },
       {
         "src": "/catalog/soap/beze-s-yagodami-03.webp",
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADwAQCdASoQAAwAA4BaJbACdAEMSIJitwAA/sVNhKa1Y8mn23qKmdTO2+FZvPIAk2nS3eeYfzjXDtfT4j8i3rWTRSsAUgXikAA=",
-        "alt": "Безе с ягодами — ракурс 3"
+        "alt": "Десерт Павлова — ракурс 3"
       },
       {
         "src": "/catalog/soap/beze-s-yagodami-04.webp",
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAADwAQCdASoQAAwAA4BaJZQCdACqmFednAAA/sPenU//3LYyGRtoaMTx7b3wMy7v6jDMdhAHc75VAAAA",
-        "alt": "Безе с ягодами — ракурс 4"
+        "alt": "Десерт Павлова — ракурс 4"
       },
       {
         "src": "/catalog/soap/beze-s-yagodami-05.webp",
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAAAwAgCdASoQAAwAA4BaJYwCdAEPSb+ceLo3gAD+1JTVqFVijJ+GIO/JDBrn4U1vjVjgYeLKjUs54mWUAAA=",
-        "alt": "Безе с ягодами — ракурс 5"
+        "alt": "Десерт Павлова — ракурс 5"
       },
       {
         "src": "/catalog/soap/beze-s-yagodami-06.webp",
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAACQAQCdASoQAAwAA4BaJQBOgMVuQ4AA/HV1Z2SZv10Px3RqFSZN6fAXJeZtJ3EdDn3OYUGgSA4LCYxbfmfa3qzzM5XYYAAA",
-        "alt": "Безе с ягодами — ракурс 6"
+        "alt": "Десерт Павлова — ракурс 6"
       },
       {
         "src": "/catalog/soap/beze-s-yagodami-07.webp",
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAACQAQCdASoQAAwAA4BaJYwCdABvcwAA/Kt2cY0jg7Y0DmBENevm9wUYWE09dP9RLlDtBjeoaDsAAV1yjS1tSrR2D8AAAA==",
-        "alt": "Безе с ягодами — ракурс 7"
+        "alt": "Десерт Павлова — ракурс 7"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Меренга с завитком и ягодой на верхушке, подаётся на деревянной и гипсовой подставке.",
+    "description": "Меренга с завитком и ягодой на верхушке: завиток тянется от основания к острию, как у взбитого белка. Подаётся на деревянной или гипсовой подставке.",
     "specs": {},
     "tones": [
       "#F9C49E",
@@ -5494,8 +5482,8 @@
     "article": "МЛ-22",
     "category": "soap",
     "tags": [
-      "sweets",
-      "women"
+      "women",
+      "food"
     ],
     "images": [
       {
@@ -5522,7 +5510,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Белая меренга в ребристом гипсовом кашпо.",
+    "description": "Белая меренга в ребристом гипсовом кашпо. Кашпо остаётся после — в нём удобно держать кольца или мелочи.",
     "specs": {},
     "tones": [
       "#F9E1D3",
@@ -5533,13 +5521,13 @@
   {
     "id": "soap-chashka-kakao",
     "slug": "chashka-kakao",
-    "title": "Чашка какао",
+    "title": "Чашка кофе",
     "article": "МЛ-23",
     "category": "soap",
     "tags": [
-      "sweets",
       "new-year",
-      "women"
+      "women",
+      "food"
     ],
     "images": [
       {
@@ -5547,28 +5535,28 @@
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAAAQAgCdASoQAAwAA4BaJQBOgCFskN/maOIAAP7nIadoPMS4Feld0xA/5MBdwKZjApe+S8wtvlWAE9mbrgiDDU1AyD0CCtMzPsAAAA==",
-        "alt": "Чашка какао"
+        "alt": "Чашка кофе"
       },
       {
         "src": "/catalog/soap/chashka-kakao-02.webp",
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAABQAgCdASoQAAwAA4BaJQBOj+DdAAcu/tnyeIAA/vH1KnpT8cxaoxvFDTijB5NW8FeGiapej5lMhxBCZUX8EfFy4NyvOoH54PuXORCkYAA=",
-        "alt": "Чашка какао — ракурс 2"
+        "alt": "Чашка кофе — ракурс 2"
       },
       {
         "src": "/catalog/soap/chashka-kakao-03.webp",
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAAAQAgCdASoQAAwAA4BaJYgC7AEPC2dOGTMAAP7ULswqWX6NxCDu9dqPw5jWn/dduuFLy+hi7pIgLNF29RJdAAAA",
-        "alt": "Чашка какао — ракурс 3"
+        "alt": "Чашка кофе — ракурс 3"
       },
       {
         "src": "/catalog/soap/chashka-kakao-04.webp",
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAADQAQCdASoQAAwAA4BaJQBdgCHhYBt1cAD+1C7MLKOcFG6LT47SznAAExvqr50ld+1snygBGfgQ6S+piDTF6rkJ8AA=",
-        "alt": "Чашка какао — ракурс 4"
+        "alt": "Чашка кофе — ракурс 4"
       }
     ],
     "video": null,
@@ -5609,7 +5597,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Наполовину очищенный мандарин: дольки под снятой кожурой.",
+    "description": "Наполовину очищенный мандарин: дольки видны под снятой кожурой, кожура отогнута лепестками. Собирается из двух отливок — плода и кожуры.",
     "specs": {},
     "tones": [
       "#F9C8AA",
@@ -5659,7 +5647,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Брусок из прозрачной основы, внутри — цветы и листья, будто в стекле.",
+    "description": "Брусок из прозрачной основы, внутри — цветы и листья, будто в стекле. На просвет видно каждый лепесток. Композиция собирается перед заливкой, поэтому повторить её точно нельзя.",
     "specs": {},
     "tones": [
       "#F9DCC6",
@@ -5689,7 +5677,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Раскрытая книга с букетом тюльпанов на страницах.",
+    "description": "Раскрытая книга, на страницах — букет тюльпанов с листьями. Страницы прорисованы обрезом, книга держит форму сама.",
     "specs": {},
     "tones": [
       "#D2F592",
@@ -5700,7 +5688,7 @@
   {
     "id": "soap-chasy",
     "slug": "chasy",
-    "title": "Часы",
+    "title": "Часы со стрелками",
     "article": "МЛ-27",
     "category": "soap",
     "tags": [
@@ -5713,47 +5701,47 @@
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAACwAQCdASoQAAwAA4BaJZwAAi1bopwAAP6whNI+OpNOxtjMcVMJDubY0EGPWmwTi3yNNgWQ2ZcG4p4++IIY+/UlCgAAAA==",
-        "alt": "Часы"
+        "alt": "Часы со стрелками"
       },
       {
         "src": "/catalog/soap/chasy-02.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAABQAgCdASoQABAAA4BaJYgCdAEDH55kQeVEIAAA/tOWjf+eY2M1WVdrleD/BgG/QLXw6jULqtLO5LA8I8YkLSu1dQWZ2LAAAAA=",
-        "alt": "Часы — ракурс 2"
+        "alt": "Часы со стрелками — ракурс 2"
       },
       {
         "src": "/catalog/soap/chasy-03.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAAAQAgCdASoQABAAA4BaJZACdADRaJoWuNSAAP7TlfNkUm62BFDq+SY7z9PGhcYh3Qsk7RsNW1EFpdzt8TB//8YGRGAgyAAA",
-        "alt": "Часы — ракурс 3"
+        "alt": "Часы со стрелками — ракурс 3"
       },
       {
         "src": "/catalog/soap/chasy-04.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAwAgCdASoQABAAA4BaJQBOgMWvrIyQf8y+gAD667kDZxQeoUaTE6j5w2uWvVklzTSkZZ8kuBp/ziF3Clgh8JXTtANAKxK26ButVkG/wNbRPFu9xk7xAAAA",
-        "alt": "Часы — ракурс 4"
+        "alt": "Часы со стрелками — ракурс 4"
       },
       {
         "src": "/catalog/soap/chasy-05.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAQAgCdASoQABAAA4BaJQBOgB8iVZYB33MAAM02k/k7P3P7siVVjx/h6fQkfzklJARJPtuFO2vodj4sDAswLFZDtRNNkFUKL9ou+lk7xAAAAA==",
-        "alt": "Часы — ракурс 5"
+        "alt": "Часы со стрелками — ракурс 5"
       },
       {
         "src": "/catalog/soap/chasy-06.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADQAQCdASoQABAAA4BaJQBOgBSreJ8AAADLoaJbSkw+eFWO3gKVD4V39c3jZMmVChEKLJe/0tSCdsZ90v45nbYA2y8m4wpMcqIe27Uk3YGAAA==",
-        "alt": "Часы — ракурс 6"
+        "alt": "Часы со стрелками — ракурс 6"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Наручные часы с проработанным ремешком и циферблатом. Мужские стальные и женские цветные.",
+    "description": "Наручные часы с прорисованным ремешком и циферблатом: видны стрелки и деления. Мужские — стальные, женские — цветные, с узким ремешком.",
     "specs": {},
     "tones": [
       "#F2E5EC",
@@ -5769,7 +5757,8 @@
     "category": "soap",
     "tags": [
       "men",
-      "gift"
+      "gift",
+      "misc"
     ],
     "images": [
       {
@@ -5789,7 +5778,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Мыло-блистер: серебристая подложка с белыми таблетками.",
+    "description": "Мыло-блистер: серебристая подложка с белыми таблетками в ячейках. Шутка для врача или того, кто устал болеть.",
     "specs": {},
     "tones": [
       "#ECE8E2",
@@ -5800,7 +5789,7 @@
   {
     "id": "soap-buterbrod-s-ikroy",
     "slug": "buterbrod-s-ikroy",
-    "title": "Бутерброд с икрой",
+    "title": "Бутерброд с красной икрой",
     "article": "МЛ-29",
     "category": "soap",
     "tags": [
@@ -5813,19 +5802,19 @@
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADwAQCdASoQAAwAA4BaJbACdADsq+RPAAAA964kWwLNsq7DbVoBkI+XsDpDD1SFukscJHJwedTvnShXaNyF68i/ffMgAA==",
-        "alt": "Бутерброд с икрой"
+        "alt": "Бутерброд с красной икрой"
       },
       {
         "src": "/catalog/soap/buterbrod-s-ikroy-02.webp",
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADwAQCdASoQAAwAA4BaJbACdADOCzDlIAAA/H/3iOxBeBwUl0sYLEGDTxge3zIBM5+Mh9vnR+iMng+v5zolRdTCvDWiCAAA",
-        "alt": "Бутерброд с икрой — ракурс 2"
+        "alt": "Бутерброд с красной икрой — ракурс 2"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Кусок хлеба с маслом и красной икрой, каждая икринка отлита отдельно.",
+    "description": "Кусок хлеба с маслом и красной икрой: каждая икринка отливается отдельно и укладывается вручную. Мякиш прорисован по срезу.",
     "specs": {},
     "tones": [
       "#F9B69A",
@@ -5861,7 +5850,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Глобус на подставке с прорисованными материками.",
+    "description": "Глобус на подставке с прорисованными материками: ось и ножка отливаются серебром. Подарок учителю или школьнику.",
     "specs": {},
     "tones": [
       "#DEEBEF",
@@ -5872,7 +5861,7 @@
   {
     "id": "soap-planeta-zemlya",
     "slug": "planeta-zemlya",
-    "title": "Планета Земля",
+    "title": "Земной шар",
     "article": "МЛ-31",
     "category": "soap",
     "tags": [
@@ -5885,19 +5874,19 @@
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAwAgCdASoQABAAA4BaJQBOioAAc3yeBrnlIAD+039l2r1IKdYtW22pmA1gC+2cpTCYyQfSlDdeIEMCFVZVF2dPCR62V7KwCM9fIx2ZnZcT3bAA",
-        "alt": "Планета Земля"
+        "alt": "Земной шар"
       },
       {
         "src": "/catalog/soap/planeta-zemlya-02.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAQAgCdASoQABAAA4BaJZACdMn8A8WjLlzAAP4jEZnLTWk9r0yQ+xsFCbBUJ17koOzxlZF+2Puytkf1nM3PgW0wbzo/iH90reZK7hrQJQAAAA==",
-        "alt": "Планета Земля — ракурс 2"
+        "alt": "Земной шар — ракурс 2"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Полусфера-планета из прозрачной основы: океаны на просвет, материки светлее.",
+    "description": "Полусфера-планета из прозрачной основы: океаны просвечивают, материки набраны светлее. На просвет видно всю толщу.",
     "specs": {},
     "tones": [
       "#B0EAF0",
@@ -5908,7 +5897,7 @@
   {
     "id": "soap-rakushka-yantarnaya",
     "slug": "rakushka-yantarnaya",
-    "title": "Ракушка янтарная",
+    "title": "Ракушка спиральная",
     "article": "МЛ-32",
     "category": "soap",
     "tags": [
@@ -5921,12 +5910,12 @@
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAAAwAgCdASoQABAAA4BaJZQC7H8AEpFDDAajgAD8TxlTCESUiBid64oY/UnBSWGL5JsGoZgBaSlDTcuEqo05x7AA",
-        "alt": "Ракушка янтарная"
+        "alt": "Ракушка спиральная"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Витая раковина из медовой прозрачной основы.",
+    "description": "Витая раковина из медовой прозрачной основы: витки просвечивают насквозь и на свету становятся тёплыми, янтарными.",
     "specs": {},
     "tones": [
       "#F9D29F",
@@ -5937,7 +5926,7 @@
   {
     "id": "soap-lavanda",
     "slug": "lavanda",
-    "title": "Лаванда",
+    "title": "Букет лаванды",
     "article": "МЛ-33",
     "category": "soap",
     "tags": [
@@ -5950,12 +5939,12 @@
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAADQAQCdASoQABAAA4BaJQBWACHt1JjcQAD+i8qMCmv+LoFOySySOM2KqTo8+PhDcnlWV7F4JFwpyPkESuj67AAbUAA=",
-        "alt": "Лаванда"
+        "alt": "Букет лаванды"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Связка лавандовых соцветий на стебле, сиреневая с зелёным.",
+    "description": "Связка лавандовых соцветий на стебле: каждое соцветие проработано зерном, стебель уходит зелёным. Кладётся в бельё как саше.",
     "specs": {},
     "tones": [
       "#F9C7E2",
@@ -5984,7 +5973,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Овал из прозрачной синей основы, внутри две медузы с длинными щупальцами.",
+    "description": "Овал из прозрачной синей основы, внутри — две медузы с длинными щупальцами. Смотреть лучше на просвет: тогда видно, что щупальца уходят в глубину слоя.",
     "specs": {},
     "tones": [
       "#ADD8F0",
@@ -6013,7 +6002,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Круглое мыло с розовыми лотосами на синей воде.",
+    "description": "Круглое мыло с розовыми лотосами на синей воде: цветы подняты рельефом, вода уходит вглубь. Лепестки расписываются по одному.",
     "specs": {},
     "tones": [
       "#9FD3F0",
@@ -6024,7 +6013,7 @@
   {
     "id": "soap-zvezda-s-korallom",
     "slug": "zvezda-s-korallom",
-    "title": "Звезда с кораллом",
+    "title": "Морская звезда в кораллах",
     "article": "МЛ-36",
     "category": "soap",
     "tags": [
@@ -6037,12 +6026,12 @@
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAACQAgCdASoQABAAA4BaJYgCdIIr/+6BoE03yn970AD+w6Y2big1QTGraS+uVLHjVj19rA0ev5v2ShJq3lQfVZ9vJCo740WanqT+l3EE/qqnaOHN+SpqmBSoAAA=",
-        "alt": "Звезда с кораллом"
+        "alt": "Морская звезда в кораллах"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Овал бирюзового тона с морской звездой, кораллом и ракушками в рельефе.",
+    "description": "Овал бирюзового тона: морская звезда, коралловая ветка и мелкие ракушки собраны в один рельеф. Оранжевый коралл расписывается по выступающим местам вручную.",
     "specs": {},
     "tones": [
       "#F1E9C9",
@@ -6072,7 +6061,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Три тюльпана с листьями на сиреневом поле.",
+    "description": "Три тюльпана с листьями на сиреневом поле. Бутоны объёмные, листья лежат по диагонали — рисунок читается с любой стороны.",
     "specs": {},
     "tones": [
       "#F9C0E7",
@@ -6101,7 +6090,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Жёлтый прозрачный брусок с двумя сердцами внутри.",
+    "description": "Жёлтый прозрачный брусок с двумя сердцами внутри, красным и зелёным. На просвет сердца читаются насквозь.",
     "specs": {},
     "tones": [
       "#F2E7D9",
@@ -6116,7 +6105,6 @@
     "article": "МЛ-39",
     "category": "soap",
     "tags": [
-      "sweets",
       "food"
     ],
     "images": [
@@ -6137,7 +6125,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Вафля с шоколадной прослойкой и ягодой сверху.",
+    "description": "Вафля с шоколадной прослойкой и ягодой сверху. Клетки прорабатываются глубоко, поэтому рисунок держится до конца куска.",
     "specs": {},
     "tones": [
       "#F9BA9C",
@@ -6148,7 +6136,7 @@
   {
     "id": "soap-tsvety-v-kashpo",
     "slug": "tsvety-v-kashpo",
-    "title": "Цветы в кашпо",
+    "title": "Мак в гипсовом кашпо",
     "article": "МЛ-40",
     "category": "soap",
     "tags": [
@@ -6162,19 +6150,19 @@
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADwAQCdASoQABAAA4BaJQBOgBndTcdWIAAA/tS00fnAStDXaSd9TfyE0Ve0w6RIu32wJKh3e907Bd/ky2wTWcB+9ppmQ9+FoS2aCYAA",
-        "alt": "Цветы в кашпо"
+        "alt": "Мак в гипсовом кашпо"
       },
       {
         "src": "/catalog/soap/tsvety-v-kashpo-02.webp",
         "width": 1200,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADwAQCdASoMABAAA4BaJZQAAu1ipgkk+QAA/mYB+yur7SBi7bXaJ6AL2e7NUBtZun5HJeZQJyf1wP0zi9MipVcnL0tcAA==",
-        "alt": "Цветы в кашпо — ракурс 2"
+        "alt": "Мак в гипсовом кашпо — ракурс 2"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Букет объёмных цветов в вязаном кашпо.",
+    "description": "Букет объёмных цветов в вязаном гипсовом кашпо. Кашпо остаётся после того, как мыло израсходуется, — в нём хорошо смотрятся живые сухоцветы.",
     "specs": {},
     "tones": [
       "#F9CFBF",
@@ -6210,7 +6198,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Медвежонок с охапкой воздушных шаров, на подставке.",
+    "description": "Медвежонок с охапкой воздушных шаров: шары лепятся по одному, каждый своего цвета. Стоит на белой подставке.",
     "specs": {},
     "tones": [
       "#F9BFAC",
@@ -6221,7 +6209,7 @@
   {
     "id": "soap-zaytsy",
     "slug": "zaytsy",
-    "title": "Зайцы",
+    "title": "Зайка с зайчонком",
     "article": "МЛ-42",
     "category": "soap",
     "tags": [
@@ -6234,26 +6222,26 @@
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAABwAgCdASoQABAAA4BaJbACdAECwgQs3kxcfawAAP3tMr/PKgeEXxWjmQBqtEZx5EEaA8tfS47P2n1kPzOl5AgCFI1+jBB3MXgmK+kt2JUYpK6EYAA=",
-        "alt": "Зайцы"
+        "alt": "Зайка с зайчонком"
       },
       {
         "src": "/catalog/soap/zaytsy-02.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADwAQCdASoQABAAA4BaJZwAAu1oSHZ0tYAA/sNs/69HFQ4aqx8RvAuZfMnAj936BHQiTWuMuSfO0NhIl7EdqAvkEHJEAAAA",
-        "alt": "Зайцы — ракурс 2"
+        "alt": "Зайка с зайчонком — ракурс 2"
       },
       {
         "src": "/catalog/soap/zaytsy-03.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADQAQCdASoQABAAA4BaJZwAAq9boyYQAAD+rysAKRIgS8p6BFXjpbf7gi8zRDmJcdRCIoPaoxq/Hvfesxk9wijp5XAAAA==",
-        "alt": "Зайцы — ракурс 3"
+        "alt": "Зайка с зайчонком — ракурс 3"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Пара зайцев, прижавшихся друг к другу, и зайчонок отдельно.",
+    "description": "Пара зайцев, прижавшихся друг к другу, и зайчонок отдельно. Серый тон с белым подпалом, уши подняты — фигурка стоит сама.",
     "specs": {},
     "tones": [
       "#F9C5A4",
@@ -6283,7 +6271,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Букет мыльных цветов, упакованный в прозрачный пакет с цветочной бумагой.",
+    "description": "Букет мыльных цветов, упакованный в прозрачный пакет с цветочной бумагой, как настоящий из цветочной лавки.",
     "specs": {},
     "tones": [
       "#F9C9BD",
@@ -6294,7 +6282,7 @@
   {
     "id": "soap-shlepanets",
     "slug": "shlepanets",
-    "title": "Шлёпанец",
+    "title": "Шлепки",
     "article": "МЛ-44",
     "category": "soap",
     "tags": [
@@ -6307,12 +6295,12 @@
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAAAQAgCdASoQAAwAA4BaJQBOgCBTdv4ZDxMAAP7Tyez8cNPanX+XHfqz8ex8y01HHgC6jqh4guTcQHgionWW6/EQcMbPvDwAJ8AAAA==",
-        "alt": "Шлёпанец"
+        "alt": "Шлепки"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Пляжный шлёпанец с цветами на ремешке.",
+    "description": "Пляжный шлёпанец с цветами на ремешке: подошва прорисована рифлением, цветы лепятся отдельно.",
     "specs": {},
     "tones": [
       "#B1EDF0",
@@ -6323,7 +6311,7 @@
   {
     "id": "soap-koshelek",
     "slug": "koshelek",
-    "title": "Кошелёк",
+    "title": "Портмоне",
     "article": "МЛ-45",
     "category": "soap",
     "tags": [
@@ -6336,12 +6324,12 @@
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAQCdASoQABAAA4BaJQBOgBe6ZEgCx4AAyuAQ1QA3lD1066GBLt0j0O3W1id+TWF6o0/2jv8Z5qRHc5qk29buTihGVtzydbiiifgAAAA=",
-        "alt": "Кошелёк"
+        "alt": "Портмоне"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Кожаный кошелёк с прошивкой и клапаном, отлитый до мелочей.",
+    "description": "Кожаный кошелёк с прошивкой по краю и клапаном: фактура кожи проработана по всей поверхности. Лежит на деревянной подставке.",
     "specs": {},
     "tones": [
       "#F9C8AE",
@@ -6377,7 +6365,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Рыба с чешуёй и плавниками на овальном блюде, серебристая и медная.",
+    "description": "Рыба с прорисованной чешуёй и плавниками, лежит на овальном блюде. Отливается серебристой и медной — цвет набирается по чешуе, поэтому блеск идёт волной.",
     "specs": {},
     "tones": [
       "#F6E6D9",
@@ -6421,7 +6409,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Гипсовая шкатулка с крышкой, внутри — розы и пионы из мыла.",
+    "description": "Гипсовая шкатулка с крышкой, внутри — розы и пионы из мыла. Шкатулка остаётся: в ней держат украшения.",
     "specs": {},
     "tones": [
       "#F9E4D2",
@@ -6506,7 +6494,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Бутылка с этикеткой, бокал с пенной шапкой и раки. Собирается в круглой коробке и деревянном ящике.",
+    "description": "Бутылка с этикеткой, бокал с пенной шапкой и раки. Собирается в круглой коробке или в деревянном ящике со стружкой — как готовый подарок.",
     "specs": {},
     "tones": [
       "#F9C3A0",
@@ -6522,7 +6510,8 @@
     "category": "soap",
     "tags": [
       "food",
-      "kids"
+      "kids",
+      "men"
     ],
     "images": [
       {
@@ -6542,7 +6531,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Глазунья с растёкшимся белком и жёлтым желтком, на тарелке.",
+    "description": "Глазунья с растёкшимся белком и выпуклым жёлтым желтком, на тарелке. Белок наливается свободно, поэтому форма у каждой своя.",
     "specs": {},
     "tones": [
       "#F9D1AC",
@@ -6553,7 +6542,7 @@
   {
     "id": "soap-raki",
     "slug": "raki",
-    "title": "Раки",
+    "title": "Рак",
     "article": "МЛ-50",
     "category": "soap",
     "tags": [
@@ -6566,12 +6555,12 @@
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAQCdASoQABAAA4BaJbACdADWkZo44wAA/dJEuRb257Q3syTtoGUL7NV6gbm/9Ol9NMre1w4Ya8o07tLXSawekUhHy0blMWV3D54QQAA=",
-        "alt": "Раки"
+        "alt": "Рак"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Пара варёных раков на овальном блюде.",
+    "description": "Пара варёных раков на овальном блюде: клешни и панцирь прорисованы до сегментов. Цвет набирается плотный, кирпичный.",
     "specs": {},
     "tones": [
       "#F9B5A2",
@@ -6614,7 +6603,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Спящие утята на блюдце-сердце и в деревянном ящичке.",
+    "description": "Спящие утята — на блюдце-сердце и в деревянном ящичке. Клювы и лапки расписываются вручную, поэтому мордочки чуть разные.",
     "specs": {},
     "tones": [
       "#F9CCB2",
@@ -6644,7 +6633,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Цыплёнок, вылупляющийся из скорлупы.",
+    "description": "Цыплёнок, вылупляющийся из скорлупы: половинка скорлупы отлита отдельно, цыплёнок сидит в ней. Пух проработан зерном.",
     "specs": {},
     "tones": [
       "#F9D0AA",
@@ -6688,7 +6677,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Кашпо-коробка с растительным рисунком, полное объёмных цветов.",
+    "description": "Кашпо-коробка с растительным рисунком, полная объёмных цветов: пионы, ромашки, мелкие бутоны. Дарится целиком, разбирать не нужно.",
     "specs": {},
     "tones": [
       "#F9D4BE",
@@ -6703,8 +6692,8 @@
     "article": "МЛ-54",
     "category": "soap",
     "tags": [
-      "sweets",
-      "women"
+      "women",
+      "food"
     ],
     "images": [
       {
@@ -6738,7 +6727,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Сиреневая чаша с малиной и муссовый торт с ягодами на подарочной коробке.",
+    "description": "Сиреневая гипсовая чаша с малиной и муссовый торт с ягодами на подарочной коробке. Собирается как подарок целиком — с коробкой и наполнителем.",
     "specs": {},
     "tones": [
       "#F9B4B0",
@@ -6788,7 +6777,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Зелёная ёлка с цветными шарами, у подножия — гусеница.",
+    "description": "Зелёная ёлка с цветными шарами, у подножия — гусеница. Шары лепятся по одному, каждый своего цвета; детский сюжет, который рассматривают.",
     "specs": {},
     "tones": [
       "#D4F5A3",
@@ -6838,7 +6827,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Платье с драпированным лифом и пышной юбкой, розовое и сиреневое; отдельно — цветок.",
+    "description": "Платье с драпированным лифом и пышной юбкой: складки идут от талии к подолу. Отливается розовым и сиреневым, отдельно кладётся цветок.",
     "specs": {},
     "tones": [
       "#EAD4F0",
@@ -6895,7 +6884,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Набор плоских фигур с белой росписью: сердце, варежка, домик, сапожок, звёзды.",
+    "description": "Набор плоских фигур с белой росписью, как имбирные пряники: сердце, варежка, домик, сапожок, звёзды. Роспись наносится тонкой кистью по остывшему рельефу, поэтому узор у каждой фигуры свой.",
     "specs": {},
     "tones": [
       "#F2EF91",
@@ -6952,7 +6941,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Бирюзовые фигуры с белым узором: сердце, варежка, сапожок, снежинки.",
+    "description": "Бирюзовые фигуры с белым узором: сердце, варежка, сапожок и снежинки. Узор идёт завитками по всей поверхности, белым по цвету.",
     "specs": {},
     "tones": [
       "#92F5A8",
@@ -6968,7 +6957,7 @@
     "category": "soap",
     "tags": [
       "new-year",
-      "sweets"
+      "food"
     ],
     "images": [
       {
@@ -6981,7 +6970,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Снежинки песочного цвета с белой глазурью по рельефу.",
+    "description": "Снежинки песочного цвета с белой глазурью по рельефу — как печенье, вынутое из формы. Глазурь ложится только на выступы.",
     "specs": {},
     "tones": [
       "#F9D2C0",
@@ -6992,11 +6981,10 @@
   {
     "id": "soap-vaflya-s-dzhemom",
     "slug": "vaflya-s-dzhemom",
-    "title": "Вафля с джемом",
+    "title": "Слойка с джемом",
     "article": "МЛ-60",
     "category": "soap",
     "tags": [
-      "sweets",
       "food"
     ],
     "images": [
@@ -7005,19 +6993,19 @@
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAwAgCdASoQABAAA4BaJaACdAD5QSOWfIUUAAD+ZgFRfPbvevHfUmsQkm3MNuedSwxpuiU4YwuZxmSbAEZ0PZ3OZ4eoQSQ5+3KEtQRZRICj5ZNmqwAAAA==",
-        "alt": "Вафля с джемом"
+        "alt": "Слойка с джемом"
       },
       {
         "src": "/catalog/soap/vaflya-s-dzhemom-02.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAABQAgCdASoQABAAA4BaJbACdGaAAlKT6a7RlQAA/mYf77C3kgEMZC34PK4dbFxArJUO27N/NgFWuSd8Nn5FLkRUFY3MmJHmXV2/V9ahsTFmmEdM2v3Ui9HTICidJFEAAAA=",
-        "alt": "Вафля с джемом — ракурс 2"
+        "alt": "Слойка с джемом — ракурс 2"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Толстая вафля с ягодным джемом в клетках, на деревянном блюде.",
+    "description": "Толстая вафля с ягодным джемом, залитым в клетки, на деревянном блюде. Джем наливается отдельным слоем, поверх готовой вафли.",
     "specs": {},
     "tones": [
       "#F9B5A7",
@@ -7046,7 +7034,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Детская соска голубого цвета на рифлёном блюдце.",
+    "description": "Детская соска голубого цвета на рифлёном блюдце. Мелочь, которую дарят вместе с большим подарком к рождению.",
     "specs": {},
     "tones": [
       "#A9EFF0",
@@ -7057,7 +7045,7 @@
   {
     "id": "soap-barelef-materinstvo",
     "slug": "barelef-materinstvo",
-    "title": "Барельеф «Материнство»",
+    "title": "Беременная",
     "article": "МЛ-62",
     "category": "soap",
     "tags": [
@@ -7070,12 +7058,12 @@
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAACQAQCdASoQABAAA4BaJYwAAb14SwAA1Vyrg9tVDN/oQLMtLBNPKx4VINpGBga8SFealfRaIkTiEh5lLHggMaBo5KJmRHb732zAtWAA",
-        "alt": "Барельеф «Материнство»"
+        "alt": "Беременная"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Овальный барельеф: женский силуэт в ожидании ребёнка, сине-белый.",
+    "description": "Овальный барельеф: женский силуэт в ожидании ребёнка, сине-белый. Рельеф мягкий, без резких линий.",
     "specs": {},
     "tones": [
       "#C4C3F0",
@@ -7086,7 +7074,7 @@
   {
     "id": "soap-butylka-i-ryumka",
     "slug": "butylka-i-ryumka",
-    "title": "Бутылка и рюмка",
+    "title": "Бутылка водки",
     "article": "МЛ-63",
     "category": "soap",
     "tags": [
@@ -7099,19 +7087,19 @@
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAQAgCdASoQABAAA4BaJbACdAEedT59nNAAAP6iSzCZa5vQeeZX7yVFeBw+SN64vBaog+VbPVAxN+ydzEWs8QHJ8HdohcoXjNY998/cYdMWAAAA",
-        "alt": "Бутылка и рюмка"
+        "alt": "Бутылка водки"
       },
       {
         "src": "/catalog/soap/butylka-i-ryumka-02.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAQCdASoQABAAA4BaJbACdADdtnl5tgAA/nGY7ecwHdJB0lw8OCMjhdkrP+bRHccXEc7wYkFKc99rZVv9vyo0PT2TKNY+8K8YdMWAAAA=",
-        "alt": "Бутылка и рюмка — ракурс 2"
+        "alt": "Бутылка водки — ракурс 2"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Бутылка с этикеткой и гранёная рюмка в деревянном ящичке.",
+    "description": "Бутылка с этикеткой и гранёная рюмка в деревянном ящичке. Ящик входит в набор.",
     "specs": {},
     "tones": [
       "#F9BD98",
@@ -7122,7 +7110,7 @@
   {
     "id": "soap-pivo-i-stopka",
     "slug": "pivo-i-stopka",
-    "title": "Пиво и стопка",
+    "title": "Бутылка пива",
     "article": "МЛ-64",
     "category": "soap",
     "tags": [
@@ -7135,19 +7123,19 @@
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADQAQCdASoQABAAA4BaJbACdACn4ebbkADgzd1RnbTML5IGf8S5G2S1qB0cbVbYjzPvRtWwiRP+NDbys4qloT9eqqZdtpyPi7aLVwyAAAA=",
-        "alt": "Пиво и стопка"
+        "alt": "Бутылка пива"
       },
       {
         "src": "/catalog/soap/pivo-i-stopka-02.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADQAQCdASoQABAAA4BaJbACdACq76bV0ADZ19Lyt9uCXJcHknMuz/bzrRrvfwf6iSscMGXKeeNrsn7e2r++qqwJ40vKXxdtYGYkuIYA",
-        "alt": "Пиво и стопка — ракурс 2"
+        "alt": "Бутылка пива — ракурс 2"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Бутылка пива и стопка на стружке.",
+    "description": "Бутылка пива и стопка, уложенные на древесную стружку. Этикетка расписывается вручную.",
     "specs": {},
     "tones": [
       "#F9BE9F",
@@ -7176,7 +7164,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Крупный сиреневый цветок с раскрытыми лепестками на белой тарелке.",
+    "description": "Крупный сиреневый цветок с раскрытыми лепестками на белой тарелке. Лепестки идут слоями, к середине сходятся плотнее.",
     "specs": {},
     "tones": [
       "#F9B8DB",
@@ -7205,7 +7193,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Балерина в красной пачке, вылепленная поверх белой основы.",
+    "description": "Балерина в красной пачке, вылепленная поверх белой основы: юбка идёт объёмными складками, руки подняты в позицию.",
     "specs": {},
     "tones": [
       "#F9B8B9",
@@ -7216,7 +7204,7 @@
   {
     "id": "soap-avtomobil",
     "slug": "avtomobil",
-    "title": "Автомобиль",
+    "title": "Автомобиль Порше",
     "article": "МЛ-67",
     "category": "soap",
     "tags": [
@@ -7229,26 +7217,26 @@
         "width": 1600,
         "height": 1156,
         "blurDataURL": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADQAQCdASoQAAwAA4BaJagCdADMaI1wAAD90xnb4GWbdvNyERCoJu3l9dDXUximXm9KqBhEqJ+RnwpYsRRGMi/n7pxvxhMaZbqrne7q+Glawx0rSgAAAA==",
-        "alt": "Автомобиль"
+        "alt": "Автомобиль Порше"
       },
       {
         "src": "/catalog/soap/avtomobil-02.webp",
         "width": 1600,
         "height": 1315,
         "blurDataURL": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAAAQAgCdASoQAA0AA4BaJbACdADPm29O4rMAAP6Me3ZOzPony6aKN8MEAxuJLud/Jz7UX46eo356zSuHwSwa4ijb1h0lppYfzjInXp5cumjZtHBrw5MyJO6Bquq/f3oatjWcAAAA",
-        "alt": "Автомобиль — ракурс 2"
+        "alt": "Автомобиль Порше — ракурс 2"
       },
       {
         "src": "/catalog/soap/avtomobil-03.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAAAQAgCdASoQABAAA4BaJaACdAED7PQUlho6AP5anLRXwPag+TymWU/S2q/bIV1yY5vdl7FX/q8WmDThqXUXGwZoUxc+qnwO+mHHEdNy2D4FlUgAAAA=",
-        "alt": "Автомобиль — ракурс 3"
+        "alt": "Автомобиль Порше — ракурс 3"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Спортивная машина с прорисованными фарами и дисками. Красная и фиолетовая.",
+    "description": "Спортивная машина с прорисованными фарами и дисками. Отливается красной и фиолетовой, кузов полируется до глянца.",
     "specs": {},
     "tones": [
       "#F9B6B1",
@@ -7284,7 +7272,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Гранёное сердце, как обработанный камень. Сине-фиолетовое и синее.",
+    "description": "Гранёное сердце, как обработанный камень: грани идут от середины к краю и ловят свет. Отливается синим и сине-фиолетовым.",
     "specs": {},
     "tones": [
       "#E0B9F0",
@@ -7320,7 +7308,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Мишки и сердца, разложенные по ячейкам белой коробки-витрины.",
+    "description": "Мишки и сердца, разложенные по ячейкам белой коробки-витрины. Набор дарится как есть, ячейки держат фигурки на месте.",
     "specs": {},
     "tones": [
       "#F9C9CE",
@@ -7370,7 +7358,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Фигурки на деревянных блюдцах: слонёнок с шарами, пингвин, снеговик, мишка в шапке.",
+    "description": "Фигурки на деревянных блюдцах: слонёнок с шарами, пингвин в шапке, снеговик, мишка в шарфе. Каждая расписывается вручную, блюдце входит в набор.",
     "specs": {},
     "tones": [
       "#F9D1B4",
@@ -7381,7 +7369,7 @@
   {
     "id": "soap-mashinka-s-elkoy",
     "slug": "mashinka-s-elkoy",
-    "title": "Машинка с ёлкой",
+    "title": "Машина с ёлкой",
     "article": "МЛ-71",
     "category": "soap",
     "tags": [
@@ -7395,26 +7383,26 @@
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAwAgCdASoQABAAA4BaJaACdAD6ClFsn1w6gAD+3ugT7uQZVn1NUI+1byZsQsPcMQaA+S7ZBjq23UaSnpc4q0UlGVmWQ1YARRpnpbUUdzwAAA==",
-        "alt": "Машинка с ёлкой"
+        "alt": "Машина с ёлкой"
       },
       {
         "src": "/catalog/soap/mashinka-s-elkoy-02.webp",
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAABQAgCdASoQAAwAA4BaJZACw7Ef/ReTCrrKAAAA/rHUrXuU1lVKeKBmnAfho3DYzm/kV5LY2JJkTijkFoEZpD9oU5V8zw+YpPYZ/URX4PW8LIVufgAAAA==",
-        "alt": "Машинка с ёлкой — ракурс 2"
+        "alt": "Машина с ёлкой — ракурс 2"
       },
       {
         "src": "/catalog/soap/mashinka-s-elkoy-03.webp",
         "width": 1200,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAABQAgCdASoMABAAA4BaJagC7AELZBHsiT53KcAA/uEyJx5Twv+7gYTtk4if8HB1UPpOZQYEb20VR6SJpakw5XC02UwEgRh4DBRyRFrmVagAAA==",
-        "alt": "Машинка с ёлкой — ракурс 3"
+        "alt": "Машина с ёлкой — ракурс 3"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Красный автомобиль с ёлкой на крыше.",
+    "description": "Красный автомобиль с ёлкой на крыше — сюжет, который все узнают. Ёлка лепится отдельно и ставится на багажник.",
     "specs": {},
     "tones": [
       "#F9C5AB",
@@ -7425,7 +7413,7 @@
   {
     "id": "soap-rakushka-s-zhemchuzhinami",
     "slug": "rakushka-s-zhemchuzhinami",
-    "title": "Ракушка с жемчужинами",
+    "title": "Ракушка с жемчугами",
     "article": "МЛ-72",
     "category": "soap",
     "tags": [
@@ -7439,40 +7427,40 @@
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADwAQCdASoQABAAA4BaJZgCdADPz+7AxAAA1OxwNNn9tgdpoqPncFFvgW3TEPfM6k9sJ6itdtS9+72cLENpJ4kft5dSIGsHA80ECPKvTR/jCY5eAAA=",
-        "alt": "Ракушка с жемчужинами"
+        "alt": "Ракушка с жемчугами"
       },
       {
         "src": "/catalog/soap/rakushka-s-zhemchuzhinami-02.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADQAQCdASoQABAAA4BaJYgCdAC5355gAADZLWxy+Bn8ZxBR2TouHzqdeXDrL3F1BAWP2Yb9JVpeKja+0ACC1sKvV5lNtirUwAA=",
-        "alt": "Ракушка с жемчужинами — ракурс 2"
+        "alt": "Ракушка с жемчугами — ракурс 2"
       },
       {
         "src": "/catalog/soap/rakushka-s-zhemchuzhinami-03.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAQAgCdASoQABAAA4BaJQBOj+EEAAhnRg5AAP6M91qURZhcrupNaY84g4KG9rLGsLSMFKItpwLX1kM7QisA3aTZUCLsD+0St9zEERKYBw8dsAAA",
-        "alt": "Ракушка с жемчужинами — ракурс 3"
+        "alt": "Ракушка с жемчугами — ракурс 3"
       },
       {
         "src": "/catalog/soap/rakushka-s-zhemchuzhinami-04.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAABQAgCdASoQABAAA4BaJQBOj+EEAAqRf/pMcAAA/ozyPIdlIrzpHY8w09xtlS3zZbw6tUsyrvOfb8xCopIEaFIUjDUZauwBF3OQAA==",
-        "alt": "Ракушка с жемчужинами — ракурс 4"
+        "alt": "Ракушка с жемчугами — ракурс 4"
       },
       {
         "src": "/catalog/soap/rakushka-s-zhemchuzhinami-05.webp",
         "width": 1523,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAABQAgCdASoPABAAA4BaJZgCdH8AGCbL34xXaAAA/NV295YTi2RHnBAzYvhCrPeSsFnYBN8vMjl05N6ftw5oPsSselgsjmKHjkk+zf7spRYIjZ5acIcscsAA",
-        "alt": "Ракушка с жемчужинами — ракурс 5"
+        "alt": "Ракушка с жемчугами — ракурс 5"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Раскрытая створка гребешка с жемчужинами внутри, синяя с перламутром.",
+    "description": "Раскрытая створка гребешка, внутри — жемчужины. Синий перламутр набирается по краю и уходит к светлому центру. Жемчужины ставятся вручную, поэтому лежат каждый раз иначе.",
     "specs": {},
     "tones": [
       "#B3D3F0",
@@ -7508,7 +7496,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Набор косметики: помада, флакон духов, тени и кисти.",
+    "description": "Набор косметики: помада, флакон духов, тени и кисти. Каждая мелочь отливается отдельно, набор собирается в коробку.",
     "specs": {},
     "tones": [
       "#F9D5B8",
@@ -7559,7 +7547,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Коробка-витрина с букетом тюльпанов и пионов под прозрачной крышкой.",
+    "description": "Коробка-витрина с букетом тюльпанов и пионов под прозрачной крышкой. Через крышку видно весь букет — подарок не нужно разворачивать.",
     "specs": {},
     "tones": [
       "#F9C8CB",
@@ -7595,7 +7583,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Домик с белой росписью и снежинками в подарочной коробке.",
+    "description": "Домик с белой росписью и снежинками, в подарочной коробке. Роспись идёт по крыше и наличникам, как на настоящем прянике.",
     "specs": {},
     "tones": [
       "#F9D5B7",
@@ -7631,7 +7619,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Раскладка мелких фигур одной партии: пирожные, пингвины, ёлки, варежки, помада, машинки.",
+    "description": "Раскладка мелких фигур одной партии: пирожные, пингвины, ёлочки, варежки, помада, машинки. Так набор выглядит до того, как его разложат по коробкам, — из него собирают подарок под заказ.",
     "specs": {},
     "tones": [
       "#F9D9C5",
@@ -7675,7 +7663,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Два красных сердца в белой коробке: одно с потёком, второе с кардиограммой и надписью.",
+    "description": "Два красных сердца в белой коробке: одно с потёком, второе с кардиограммой и надписью. Дарится парой.",
     "specs": {},
     "tones": [
       "#F9C7AD",
@@ -7704,7 +7692,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Овал с рыбами и водорослями на синем фоне, в белой рамке.",
+    "description": "Овал с рыбами и водорослями на синем фоне, в белой рамке-борте. Рыбы раскрашиваются по рельефу, каждая своим цветом.",
     "specs": {},
     "tones": [
       "#ABD7F0",
@@ -7733,7 +7721,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Шары с блеском в деревянном ящичке с ячейками.",
+    "description": "Шары с блеском, уложенные в деревянный ящичек с ячейками. Ящик входит в набор — его ставят под ёлку как есть.",
     "specs": {},
     "tones": [
       "#D6F2C2",
@@ -7763,7 +7751,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Квадратное панно, сплошь засаженное объёмными цветами.",
+    "description": "Квадратное панно, сплошь покрытое объёмными цветами — от края до края, без просветов. Дарится как картина: его чаще ставят на полку, чем пускают в дело.",
     "specs": {},
     "tones": [
       "#F9C8C1",
@@ -7774,12 +7762,13 @@
   {
     "id": "soap-shar-iz-sharikov",
     "slug": "shar-iz-sharikov",
-    "title": "Шар из шариков",
+    "title": "Круг с шариками",
     "article": "МЛ-81",
     "category": "soap",
     "tags": [
       "kids",
-      "gift"
+      "gift",
+      "misc"
     ],
     "images": [
       {
@@ -7787,19 +7776,19 @@
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAACwAQCdASoQABAAA4BaJZwAAudF0LTAAP7tTzWMDylSNMKaRBcsnciQEhjbNbPwnnHcXY4AAAA=",
-        "alt": "Шар из шариков"
+        "alt": "Круг с шариками"
       },
       {
         "src": "/catalog/soap/shar-iz-sharikov-02.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADwAQCdASoQABAAA4BaJQBdgCHfPbw+qcAA/tNExNjg0Wfx1JdESUe1/p/xA7/G+BoC6xv/pHc861j6e3/k3GE9lu5kGioAAAA=",
-        "alt": "Шар из шариков — ракурс 2"
+        "alt": "Круг с шариками — ракурс 2"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Шар, собранный из мелких шариков, розово-голубой, на гипсовом блюде.",
+    "description": "Шар, собранный из мелких шариков, розово-голубой, на гипсовом блюде. Каждый шарик отливается отдельно.",
     "specs": {},
     "tones": [
       "#F8E3EC",
@@ -7834,7 +7823,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Зелёные динозаврики с длинной шеей, поодиночке и в стеклянной чаше.",
+    "description": "Зелёные динозаврики с длинной шеей — по одному и парой. Простая форма, которую удобно держать детской рукой.",
     "specs": {},
     "tones": [
       "#85F593",
@@ -7845,7 +7834,7 @@
   {
     "id": "soap-mishka-s-karandashami",
     "slug": "mishka-s-karandashami",
-    "title": "Мишка с карандашами",
+    "title": "Медвежонок с карандашами",
     "article": "МЛ-83",
     "category": "soap",
     "tags": [
@@ -7858,26 +7847,26 @@
         "width": 1200,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAADQAQCdASoMABAAA4BaJZwAAuc/QwnAAAD+00eB5jBnUsQvJvf73rOJVZ3ke0Ri1Ar3cU4EtyGujAAA",
-        "alt": "Мишка с карандашами"
+        "alt": "Медвежонок с карандашами"
       },
       {
         "src": "/catalog/soap/mishka-s-karandashami-02.webp",
         "width": 1200,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADwAQCdASoMABAAA4BaJZQAAujc7TNmYwAA/q+ieIgVk96I8O22ZzfEzcNbn+P3K7kvJHo50LUIiplrk3pnUWoQeBozqZ13MgAAAA==",
-        "alt": "Мишка с карандашами — ракурс 2"
+        "alt": "Медвежонок с карандашами — ракурс 2"
       },
       {
         "src": "/catalog/soap/mishka-s-karandashami-03.webp",
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAACwAQCdASoQAAwAA4BaJQBOgB4J1xRAAP6PEZ27TMceo2BH1AzJpdMUsmw6uFHgvBxNBAxcMawFRhKj0FKk/C7gAAA=",
-        "alt": "Мишка с карандашами — ракурс 3"
+        "alt": "Медвежонок с карандашами — ракурс 3"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Медвежонок с цветными карандашами, отдельно и в подарочной коробке.",
+    "description": "Медвежонок с цветными карандашами: карандаши отливаются по одному, каждый своего цвета. Дарится к первому сентября, в коробке.",
     "specs": {},
     "tones": [
       "#F9D1BA",
@@ -7920,7 +7909,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Круглое мыло с дельфинами, выпрыгивающими из волны.",
+    "description": "Круглое мыло с дельфинами, выпрыгивающими из волны: гребень пены прорисован отдельно, белым. Рельеф глубокий, рисунок держится до конца куска.",
     "specs": {},
     "tones": [
       "#C3DEF0",
@@ -7931,7 +7920,7 @@
   {
     "id": "soap-kniga-s-kristallami",
     "slug": "kniga-s-kristallami",
-    "title": "Книга с кристаллами",
+    "title": "Кристаллы в книге гипсовой",
     "article": "МЛ-85",
     "category": "soap",
     "tags": [
@@ -7944,33 +7933,33 @@
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAACwAQCdASoQAAwAA4BaJZwAApJeXedsAP7w2cNxDGH+iXm2DMz1oxyed/rdhOjdDNooVbUt3RAH0s57ikAAAA==",
-        "alt": "Книга с кристаллами"
+        "alt": "Кристаллы в книге гипсовой"
       },
       {
         "src": "/catalog/soap/kniga-s-kristallami-02.webp",
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAACwAQCdASoQAAwAA4BaJZwAAudVhzkwAP7xCCqeOxSTPbHFChMBsh2yvpG/PvG78NAAAA==",
-        "alt": "Книга с кристаллами — ракурс 2"
+        "alt": "Кристаллы в книге гипсовой — ракурс 2"
       },
       {
         "src": "/catalog/soap/kniga-s-kristallami-03.webp",
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAACwAQCdASoQAAwAA4BaJZwAAoa2pgfAAP7yppnccFM7vpkalrPpGwUvPdNvCaTaX/eawV+/4aLqC5JMAAA=",
-        "alt": "Книга с кристаллами — ракурс 3"
+        "alt": "Кристаллы в книге гипсовой — ракурс 3"
       },
       {
         "src": "/catalog/soap/kniga-s-kristallami-04.webp",
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAADQAQCdASoQAAwAA4BaJZwAApM5PRmGAAD+8q/Z2B0eL8va7BhHbaKPHPaWIjZn2U/3d//0lqA0WorwUwAAAA==",
-        "alt": "Книга с кристаллами — ракурс 4"
+        "alt": "Кристаллы в книге гипсовой — ракурс 4"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Раскрытая книга, на правой странице — россыпь кристаллов.",
+    "description": "Раскрытая книга, на правой странице — россыпь кристаллов с гранями. Страницы прорисованы обрезом, кристаллы отливаются отдельно.",
     "specs": {},
     "tones": [
       "#D7EEE2",
@@ -7981,12 +7970,13 @@
   {
     "id": "soap-mesyats",
     "slug": "mesyats",
-    "title": "Месяц",
+    "title": "Луна и солнце",
     "article": "МЛ-86",
     "category": "soap",
     "tags": [
       "kids",
-      "women"
+      "women",
+      "misc"
     ],
     "images": [
       {
@@ -7994,19 +7984,19 @@
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAQAgCdASoQAAwAA4BaJQBOgCHw6Sx0LocAAP7xgJgzpMafKrpq6VMxaU4XVGp0oInttbFCnMAtPmgpDTxfchHyr5Kp2NPZOLusDmkaxe4sgJ4XX7uzWw1GWlBHwAAA",
-        "alt": "Месяц"
+        "alt": "Луна и солнце"
       },
       {
         "src": "/catalog/soap/mesyats-02.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAACwAgCdASoQABAAA4BaJZACdH8G6AA4lKNDtsTkvTgA/vDOXLjdfME3eDy17lTNqkGXQ5AEC2ecHeb+FkLQNMlod98VDLKGTdRerXr6DGsyLgAA",
-        "alt": "Месяц — ракурс 2"
+        "alt": "Луна и солнце — ракурс 2"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Месяц с профилем лица, серебряный с золотым.",
+    "description": "Месяц с профилем лица: серебряная половина и золотая. Металлик втирается по рельефу, поэтому блеск идёт по выступам.",
     "specs": {},
     "tones": [
       "#D6EFDF",
@@ -8035,7 +8025,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Сросшиеся кристаллы сиреневого тона с прозрачными гранями.",
+    "description": "Сросшиеся кристаллы сиреневого тона с прозрачными гранями — как кусок породы. Грани скалываются вручную, поэтому форма у каждого своя.",
     "specs": {},
     "tones": [
       "#F9E6C8",
@@ -8046,7 +8036,7 @@
   {
     "id": "soap-konvert-s-serdechkami",
     "slug": "konvert-s-serdechkami",
-    "title": "Конверт с сердечками",
+    "title": "Конверт с сердцами",
     "article": "МЛ-88",
     "category": "soap",
     "tags": [
@@ -8059,19 +8049,19 @@
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADwAQCdASoQAAwAA4BaJQAAXIbP9/H7gAAA/pDFTdYW3UoDa6v7XLrs5oo1AZTdABpS24v/HHNpaL+Wd4Jr7jIyFgAAAA==",
-        "alt": "Конверт с сердечками"
+        "alt": "Конверт с сердцами"
       },
       {
         "src": "/catalog/soap/konvert-s-serdechkami-02.webp",
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAACwAQCdASoQAAwAA4BaJYwAAu0cIfAAAMp+Rm29T5S5V3d3w4JsYbUdvB8401UqDBgnFZAA",
-        "alt": "Конверт с сердечками — ракурс 2"
+        "alt": "Конверт с сердцами — ракурс 2"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Прямоугольник из прозрачной основы с россыпью цветных сердец и одним крупным в центре.",
+    "description": "Прямоугольник из прозрачной основы с россыпью цветных сердец и одним крупным в центре — как конверт с письмом.",
     "specs": {},
     "tones": [
       "#F9C7CA",
@@ -8100,7 +8090,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Детская коляска с рельефными колёсами и капюшоном, синяя.",
+    "description": "Детская коляска с рельефными колёсами и поднятым капюшоном, синяя. Подарок к рождению — кладётся в набор для малыша.",
     "specs": {},
     "tones": [
       "#C5CBF0",
@@ -8136,7 +8126,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Сердце из прозрачной основы, внутри — цветные сердечки. Розовое и жёлто-оранжевое.",
+    "description": "Сердце из прозрачной основы, внутри — россыпь цветных сердечек. На просвет видно, как они лежат в толще.",
     "specs": {},
     "tones": [
       "#F9D8DC",
@@ -8173,7 +8163,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Розовая доска с сердцем из цветов и бусин.",
+    "description": "Розовая доска с сердцем из цветов и бусин: цветы лепятся по одному и укладываются по контуру.",
     "specs": {},
     "tones": [
       "#EBE9DA",
@@ -8237,7 +8227,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Красные губы с глянцевой поверхностью, на рифлёном блюдце.",
+    "description": "Красные губы с глянцевой поверхностью на рифлёном блюдце. Цвет набирается плотный, глянец держится до конца куска.",
     "specs": {},
     "tones": [
       "#F9BABB",
@@ -8248,7 +8238,7 @@
   {
     "id": "soap-kryshka-banki",
     "slug": "kryshka-banki",
-    "title": "Крышка банки",
+    "title": "Консервная банка",
     "article": "МЛ-93",
     "category": "soap",
     "tags": [
@@ -8260,19 +8250,19 @@
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAACwAQCdASoQAAwAA4BaJZQCdACvjKAAAP0cyh3IMLIq6GxlwiBZ2Ky39nVP0+NCHZIZenwcW8AAAA==",
-        "alt": "Крышка банки"
+        "alt": "Консервная банка"
       },
       {
         "src": "/catalog/soap/kryshka-banki-02.webp",
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAACwAQCdASoQAAwAA4BaJZQCdABwM5AAAP4+3+SnUWfAdKjL2FE41UZZY1d49kJFcXWOmH1QAAA=",
-        "alt": "Крышка банки — ракурс 2"
+        "alt": "Консервная банка — ракурс 2"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Крышка жестяной банки с ключом-открывашкой, отлитая в сером.",
+    "description": "Крышка жестяной банки с ключом-открывашкой, отлитая в сером металлике. Мелкая деталь сделана точно — узнаётся сразу.",
     "specs": {},
     "tones": [
       "#F9E4D2",
@@ -8283,7 +8273,7 @@
   {
     "id": "soap-elochki-s-sharikami",
     "slug": "elochki-s-sharikami",
-    "title": "Ёлочки с шариками",
+    "title": "Ёлка с шарами",
     "article": "МЛ-94",
     "category": "soap",
     "tags": [
@@ -8296,19 +8286,19 @@
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAAAQAgCdASoQABAAA4BaJYgCdAywCxGOhnnAAP7r/08n/e9a4ulKY71VPbyeHb5F0XUUtgShIcTo0FKzaTBj6AcsBFNb3LRR+e4AAA==",
-        "alt": "Ёлочки с шариками"
+        "alt": "Ёлка с шарами"
       },
       {
         "src": "/catalog/soap/elochki-s-sharikami-02.webp",
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAwAgCdASoQAAwAA4BaJZQC7AEfla02/6ptIAD941Oi3b+s7ZZ7VIrU7TqLunsEYq32UBIzKAiVmu/On0S9AUnRV3aVnYVy/Sw6oavyJ7ZAdO7UZEcwHPrKvAgAAA==",
-        "alt": "Ёлочки с шариками — ракурс 2"
+        "alt": "Ёлка с шарами — ракурс 2"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Плоские ёлочки с цветными шарами и звёздами, по нескольку штук.",
+    "description": "Плоские ёлочки с цветными шарами и звёздами, по нескольку штук вместе. Шары расписываются вручную, поэтому одинаковых ёлок не бывает.",
     "specs": {},
     "tones": [
       "#C5F595",
@@ -8344,7 +8334,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Бежевая ёлка с перламутровыми шарами, рядом ёлочные шары.",
+    "description": "Бежевая ёлка с перламутровыми шарами, рядом — ёлочные шары того же тона. Спокойная гамма, для тех, кому яркое не подходит.",
     "specs": {},
     "tones": [
       "#F9C2A8",
@@ -8408,7 +8398,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Плоские фигуры с золотой и белой росписью: ёлка, сердце с ключом, паровоз, машинка с ёлкой.",
+    "description": "Плоские фигуры с золотой и белой росписью: ёлка, сердце с ключом, ретро-паровоз, машинка с ёлкой. Золото втирается по рельефу вручную.",
     "specs": {},
     "tones": [
       "#F9E4A6",
@@ -8494,7 +8484,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Вязаные шапки с помпоном и варежки с росписью: бирюзовые, персиковые, красные.",
+    "description": "Вязаные шапки с помпоном и варежки с росписью: рельеф вязки идёт петля к петле. Отливаются бирюзовыми, персиковыми и красными.",
     "specs": {},
     "tones": [
       "#AFF1F0",
@@ -8505,7 +8495,7 @@
   {
     "id": "soap-snezhinki",
     "slug": "snezhinki",
-    "title": "Снежинки",
+    "title": "Снежинки в ассортименте",
     "article": "МЛ-98",
     "category": "soap",
     "tags": [
@@ -8517,19 +8507,19 @@
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAABwAgCdASoQABAAA4BaJagCdDBD/+gCnzr+H4CAAP7f5pxYZtcinJvGMf04x4yBvPrr7lhxk7vWEtZOUVeNFzjeFt9/jcdcjtbr3bKV3ystBWMOgAFmg8AwGjSshBrkVfp/98+vTEQ3JU482BLAAA==",
-        "alt": "Снежинки"
+        "alt": "Снежинки в ассортименте"
       },
       {
         "src": "/catalog/soap/snezhinki-02.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAAAwAgCdASoQABAAA4BaJbACdAD2PjKVf1TdBAD+8RI01IGT0aZiV+WL3GOCnobOrAm2sgEkCWaXZQYZtJX0ZsUrJ8cXW23u3A6/HGxZTwQHqF7lqj00uSrgOoiTOIbeUQAAAA==",
-        "alt": "Снежинки — ракурс 2"
+        "alt": "Снежинки в ассортименте — ракурс 2"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Тонкие снежинки разного рисунка, бирюзовые и перламутровые.",
+    "description": "Тонкие снежинки разного рисунка, бирюзовые и перламутровые. Лучи проработаны до кончиков, поэтому каждая читается отдельно.",
     "specs": {},
     "tones": [
       "#92EAF0",
@@ -8593,7 +8583,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Красные фигуры с золотым узором: сапожок, варежка, шапка, шарф и надпись «С Новым годом».",
+    "description": "Красные фигуры с золотым узором: сапожок, варежка, шапка, шарф и надпись «С Новым годом». Собирается набором, состав можно выбрать.",
     "specs": {},
     "tones": [
       "#DBF58D",
@@ -8622,7 +8612,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Круглое мыло с Дедом Морозом и годом на белом поле.",
+    "description": "Круглое мыло с Дедом Морозом на белом поле, внизу — год цифрами. Борода и шуба проработаны рельефом, год меняется под заказ.",
     "specs": {},
     "tones": [
       "#D9F591",
@@ -8651,7 +8641,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Мандарин и ребристая тыква на овальном блюде с хвоей.",
+    "description": "Мандарин и ребристая тыква на овальном блюде с веткой хвои. Осенне-зимний набор, блюдо входит в комплект.",
     "specs": {},
     "tones": [
       "#EDF08E",
@@ -8687,7 +8677,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Спираль аммонита с медным напылением по рельефу.",
+    "description": "Спираль аммонита с медным напылением по рельефу: витки уходят к центру и становятся мельче. Напыление наносится кистью.",
     "specs": {},
     "tones": [
       "#F9BF9E",
@@ -8716,7 +8706,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Ананас с чешуйчатым телом и зелёной короной.",
+    "description": "Ананас с чешуйчатым телом и зелёной короной: чешуя идёт по спирали, как у настоящего. Корона лепится отдельно.",
     "specs": {},
     "tones": [
       "#F9D5A6",
@@ -8731,8 +8721,8 @@
     "article": "МЛ-104",
     "category": "soap",
     "tags": [
-      "sweets",
-      "kids"
+      "kids",
+      "food"
     ],
     "images": [
       {
@@ -8745,7 +8735,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Пончик с шоколадной глазурью и сахарной струйкой.",
+    "description": "Пончик с шоколадной глазурью и сахарной струйкой поверх. Глазурь стекает по краю по-разному, поэтому каждый пончик свой.",
     "specs": {},
     "tones": [
       "#F9C3BC",
@@ -8756,11 +8746,10 @@
   {
     "id": "soap-kusok-piroga",
     "slug": "kusok-piroga",
-    "title": "Кусок пирога",
+    "title": "Кусок торта треугольный с ягодами",
     "article": "МЛ-105",
     "category": "soap",
     "tags": [
-      "sweets",
       "food"
     ],
     "images": [
@@ -8769,19 +8758,19 @@
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAwAgCdASoQABAAA4BaJZQBTAA4fktaKPEAAAD+7WEWPrbm/bcBU0xIY7lp8nYQ6CnWdkrftnZTpwE2YhP8f7aslyGgZ5tcs9TrR/EccEAAAA==",
-        "alt": "Кусок пирога"
+        "alt": "Кусок торта треугольный с ягодами"
       },
       {
         "src": "/catalog/soap/kusok-piroga-02.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADwAQCdASoQABAAA4BaJZQAAxZhS9iKgKAA/ueDqQM7Ebc+B1vUbnR56fX34jSvq3qvgftf++eXSNZ//WgwW/cYVxIAAA==",
-        "alt": "Кусок пирога — ракурс 2"
+        "alt": "Кусок торта треугольный с ягодами — ракурс 2"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Треугольный кусок пирога с ягодами и фисташками на глазури.",
+    "description": "Треугольный кусок пирога: ягоды и фисташковая крошка лежат на тёмной глазури. Ягоды отливаются по одной и сажаются вручную.",
     "specs": {},
     "tones": [
       "#F9BEBD",
@@ -8792,7 +8781,7 @@
   {
     "id": "soap-arbuz",
     "slug": "arbuz",
-    "title": "Арбуз",
+    "title": "Долька арбуза",
     "article": "МЛ-106",
     "category": "soap",
     "tags": [
@@ -8805,19 +8794,19 @@
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAQAgCdASoQABAAA4BaJbACdAEO+aq9vDAAAP7nIcc4/HTwduPjd2CajLBR13XUhXHkH1SYdFBQiRP075Wb1FoKxleW7oqg3gt1uRVOM36eMAAA",
-        "alt": "Арбуз"
+        "alt": "Долька арбуза"
       },
       {
         "src": "/catalog/soap/arbuz-02.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAADQAQCdASoQABAAA4BaJbACdAEH1Wa3gAD+7VqfLELkMuQW2/FX9W2sswutas67mqdNiiT9KZfiCkz5naCj0G2ZryIMRVBg8PCC/UheXdjZMlNKegdt7LN3IrLAAA==",
-        "alt": "Арбуз — ракурс 2"
+        "alt": "Долька арбуза — ракурс 2"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Долька арбуза с косточками и зелёной коркой.",
+    "description": "Долька арбуза с чёрными косточками и зелёной коркой. Косточки ставятся по одной, поэтому рисунок у каждой дольки свой.",
     "specs": {},
     "tones": [
       "#F9B6B0",
@@ -8846,7 +8835,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Баночка с ягодами и надписью, под кружевной крышкой.",
+    "description": "Баночка варенья с надписью на этикетке и кружевом на крышке. Этикетка расписывается вручную, надпись можно сделать свою.",
     "specs": {},
     "tones": [
       "#F9BBCF",
@@ -8857,7 +8846,7 @@
   {
     "id": "soap-vosmoe-marta",
     "slug": "vosmoe-marta",
-    "title": "Восьмое марта",
+    "title": "8 марта с ландышами",
     "article": "МЛ-108",
     "category": "soap",
     "tags": [
@@ -8871,33 +8860,33 @@
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAAAQAgCdASoQABAAA4BaJYwBTAA9EHkI81q2AP7v0SgrZl4WTlbQm1KbJTCrbM2fUjuwBFPkRGIsuQZjAyBMg2AA",
-        "alt": "Восьмое марта"
+        "alt": "8 марта с ландышами"
       },
       {
         "src": "/catalog/soap/vosmoe-marta-02.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAAAQAgCdASoQABAAA4BaJYwC7AEPhvERvOsGAP7fJAYgh/E/K448r+wlX0TAcDUq5SIeWF/cm11O6fEyGM5CQAAA",
-        "alt": "Восьмое марта — ракурс 2"
+        "alt": "8 марта с ландышами — ракурс 2"
       },
       {
         "src": "/catalog/soap/vosmoe-marta-03.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAABQAQCdASoQABAAA4BaJZQABDOAAP7s+I/+TfcyYvJX9JnR5/I5umwedU0ZJ98yxbt2gBAlQe+rBPPts9+lwQAA",
-        "alt": "Восьмое марта — ракурс 3"
+        "alt": "8 марта с ландышами — ракурс 3"
       },
       {
         "src": "/catalog/soap/vosmoe-marta-04.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAADQAQCdASoQABAAA4BaJZwAAp1NJeX4oAD+3uww0JINeqLW+YWZlhVW0TYqZiGlSkhWicGlNM9TEnF+ma3gAA==",
-        "alt": "Восьмое марта — ракурс 4"
+        "alt": "8 марта с ландышами — ракурс 4"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Восьмёрка с объёмными цветами: гиацинты и ландыши на сиреневом поле.",
+    "description": "Восьмёрка с объёмными цветами: по цифре пущены гиацинты и ландыши на зелёных листьях. Отливается к весеннему празднику, цветы можно выбрать.",
     "specs": {},
     "tones": [
       "#F9C6E8",
@@ -8908,11 +8897,10 @@
   {
     "id": "soap-morozhenoe-v-kremanke",
     "slug": "morozhenoe-v-kremanke",
-    "title": "Мороженое в креманке",
+    "title": "Креманка на ножке с мороженым",
     "article": "МЛ-109",
     "category": "soap",
     "tags": [
-      "sweets",
       "food"
     ],
     "images": [
@@ -8921,19 +8909,19 @@
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADwAQCdASoQABAAA4BaJYwCdAEO+oLJFgAA/vkP7+A8iuFzN3Z5+Sqh51I4y2AY0b1YmPf1NYVHQeYiMu8dBLK1KqOjAPugAAA=",
-        "alt": "Мороженое в креманке"
+        "alt": "Креманка на ножке с мороженым"
       },
       {
         "src": "/catalog/soap/morozhenoe-v-kremanke-02.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAAAQAgCdASoQABAAA4BaJQBOgCHgVGk1AhKwAP72iKawX7bly42T3/glW96RnhhMC4edf85sWuEIigOwNL+6//KXYb3ifRYcAAA=",
-        "alt": "Мороженое в креманке — ракурс 2"
+        "alt": "Креманка на ножке с мороженым — ракурс 2"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Стеклянная креманка с шариками мороженого и долькой шоколада.",
+    "description": "Стеклянная креманка с шариками мороженого и долькой шоколада. Креманка настоящая, стеклянная, и остаётся после мыла.",
     "specs": {},
     "tones": [
       "#F9C1A8",
@@ -8944,12 +8932,13 @@
   {
     "id": "soap-zmeya",
     "slug": "zmeya",
-    "title": "Змея",
+    "title": "Змея на круге",
     "article": "МЛ-110",
     "category": "soap",
     "tags": [
       "gift",
-      "new-year"
+      "new-year",
+      "misc"
     ],
     "images": [
       {
@@ -8957,12 +8946,12 @@
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADwAQCdASoQABAAA4BaJaAAAudcZ8RHgPAA/vaO0OBbHauG47eWvdvEMKKqlg7QKp92huph47/iIu/lFfiQ3pvwFR7vNORFvbgHAAAA",
-        "alt": "Змея"
+        "alt": "Змея на круге"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Круглое мыло салатового цвета с серебряной змеёй в рельефе.",
+    "description": "Круглое мыло салатового цвета с серебряной змеёй в рельефе. Чешуя проработана до сегментов.",
     "specs": {},
     "tones": [
       "#F9E2BF",
@@ -8973,11 +8962,10 @@
   {
     "id": "soap-malina-v-kremanke",
     "slug": "malina-v-kremanke",
-    "title": "Малина в креманке",
+    "title": "Креманка с ягодами",
     "article": "МЛ-111",
     "category": "soap",
     "tags": [
-      "sweets",
       "food",
       "women"
     ],
@@ -8987,12 +8975,12 @@
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAABQAgCdASoQABAAA4BaJagCdAEPAv2pVcUegEAA/vaEXgJBBBWg7reiTbLqHzgiSiwYnH5VfUVXAtWiKd1E2K1g5zHAlCAA",
-        "alt": "Малина в креманке"
+        "alt": "Креманка с ягодами"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Креманка, полная малины, с розовым градиентом стенок.",
+    "description": "Креманка, полная малины: ягоды лепятся по одной, стенки уходят от розового к прозрачному. Ставится в ванной как маленький десерт.",
     "specs": {},
     "tones": [
       "#F9BDAC",
@@ -9028,7 +9016,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Сердце с фактурой мотка пряжи, серо-голубое, на гипсовом блюде.",
+    "description": "Сердце с фактурой мотка пряжи: нити идут виток к витку, серо-голубой тон. Подаётся на гипсовом блюде.",
     "specs": {},
     "tones": [
       "#F9E1C4",
@@ -9057,7 +9045,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Сердце с ягодной фактурой в гипсовом блюде с бусинами.",
+    "description": "Сердце с ягодной фактурой — поверхность собрана из мелких зёрен, как малина. Подаётся в гипсовом блюде с бусинным краем.",
     "specs": {},
     "tones": [
       "#F9DBCD",
@@ -9906,7 +9894,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Глубокие чаши в форме морской раковины с волнистым краем: графитовая и бирюзовая.",
+    "description": "Глубокие чаши в форме морской раковины с волнистым краем: графитовая и бирюзовая. Ставятся как отдельный предмет или под свечу.",
     "specs": {},
     "tones": [
       "#F9DBC5",
@@ -9941,7 +9929,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Овальные подносы с бортиком: терракотовый, серый в мраморных разводах, красный с золотой крошкой и белый.",
+    "description": "Овальные подносы с невысоким бортиком: терракотовый, серый в мраморных разводах, красный с золотой крошкой и белый. Разводы получаются при заливке и не повторяются.",
     "specs": {},
     "tones": [
       "#F9DCD2",
@@ -9984,7 +9972,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Круглые блюда с бусинным краем и золотыми звёздами по белому полю, в двух размерах.",
+    "description": "Круглые блюда с бусинным краем и золотыми звёздами по белому полю, в двух размерах. Звёзды наносятся вручную, поэтому рассыпаны по-разному.",
     "specs": {},
     "tones": [
       "#F9E4D7",
@@ -10027,7 +10015,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Блюда в форме створки гребешка: графитовые, бирюзовое и белое.",
+    "description": "Блюда в форме створки гребешка: рёбра идут веером от основания к краю. Отливаются графитовыми, бирюзовым и белым.",
     "specs": {},
     "tones": [
       "#EBE8E3",
@@ -10055,7 +10043,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Круглые плитки с концентрическим орнаментом, оливковая и пудровая.",
+    "description": "Круглые плитки с концентрическим орнаментом, оливковая и пудровая. Кладутся под чашку или под свечу.",
     "specs": {},
     "tones": [
       "#F9E1CC",
@@ -10084,7 +10072,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Квадратное блюдо в лепной раме с завитками по углам.",
+    "description": "Квадратное блюдо в лепной раме с завитками по углам. Похоже на старую картинную раму, положенную плашмя.",
     "specs": {},
     "tones": [
       "#F1E7E1",
@@ -10119,7 +10107,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Узкие вытянутые блюда с приподнятыми краями, гладкое и с драпировкой внутри.",
+    "description": "Узкие вытянутые блюда с приподнятыми краями: одно гладкое, второе с драпировкой внутри. Ставятся под свечи в ряд.",
     "specs": {},
     "tones": [
       "#ECE8DE",
@@ -10148,7 +10136,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Белое кашпо с гранёными боками и рваным верхним краем.",
+    "description": "Белое кашпо с гранёными боками и рваным верхним краем. Грани ловят свет по-разному, поэтому в сумерках форма читается объёмнее.",
     "specs": {},
     "tones": [
       "#F7E5DB",
@@ -10177,7 +10165,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Кашпо с фактурой вязаного полотна: косы и резинка по кругу.",
+    "description": "Кашпо с фактурой вязаного полотна: по кругу идут косы, снизу резинка. Рельеф глубокий, тень ложится крупно.",
     "specs": {},
     "tones": [
       "#F6E6DB",
@@ -10207,7 +10195,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Кашпо с ребристым корпусом и венком объёмных цветов по верхнему краю.",
+    "description": "Кашпо с ребристым корпусом и венком объёмных цветов по верхнему краю. Цветы лепятся по одному и садятся вручную.",
     "specs": {},
     "tones": [
       "#F6E6DC",
@@ -10243,7 +10231,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Кашпо в малиновых мраморных разводах с белым нутром.",
+    "description": "Кашпо в малиновых мраморных разводах с белым нутром. Разводы получаются при заливке — двух одинаковых не бывает.",
     "specs": {},
     "tones": [
       "#F4E7D7",
@@ -10258,9 +10246,9 @@
     "article": "МЛ-07",
     "category": "soap",
     "tags": [
-      "sweets",
       "gift",
-      "women"
+      "women",
+      "food"
     ],
     "images": [
       {
