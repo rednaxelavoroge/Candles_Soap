@@ -50,6 +50,16 @@
     "group": "occasion"
   },
   {
+    "slug": "march8",
+    "title": "8 Марта",
+    "group": "occasion"
+  },
+  {
+    "slug": "easter",
+    "title": "Пасха",
+    "group": "occasion"
+  },
+  {
     "slug": "men",
     "title": "Мужчинам",
     "group": "recipient"

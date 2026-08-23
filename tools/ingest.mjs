@@ -376,50 +376,78 @@ export function groupIntoProducts(images, groupSize = 4) {
  * остаётся механическая часть: разложить обработанные кадры по src/data/*.json.
  * Характеристики скрипт не выдумывает: их проставит заказчица. Цену не пишем
  * совсем — заказчица просила убрать цены с сайта, поле остаётся пустым.
+ *
+ * Данные правятся с двух сторон: план — у разработчика, админка /admin — у
+ * заказчицы. Поэтому перенос идёт слиянием, а не заменой. Кадры — за планом:
+ * их нарезает этот скрипт. Тексты, теги, характеристики и обложки категорий —
+ * за тем, что уже лежит в src/data: там правки заказчицы. Товары, заведённые
+ * прямо в админке, в плане не описаны и остаются нетронутыми.
  */
 async function writeContent(manifest, plan, config) {
   const planned = manifest.flatMap((entry) => entry.products.filter((product) => product.slug));
 
-  const products = planned.map((product) => ({
-    id: `${product.category}-${product.slug}`,
-    slug: product.slug,
-    title: product.title,
-    article: product.article,
-    category: product.category,
-    tags: product.tags ?? [],
-    images: product.images.map(({ src, width, height, blurDataURL, alt }) => ({
-      src,
-      width,
-      height,
-      blurDataURL,
-      alt,
-    })),
-    video: product.video ? { ...product.video, poster: posterFor(product) } : null,
-    price: null,
-    description: product.description,
-    specs: product.specs ?? {},
-  }));
+  const existing = JSON.parse(await readFile(join(DATA_DIR, "products.json"), "utf8"));
+  // Ключ — категория со слагом, а не слаг и не id: один слаг живёт в разных
+  // категориях («Глобус» есть и среди свечей, и среди мыла), а id у части
+  // товаров остался от прежних категорий (holders-, boxes-, plates-).
+  const key = (product) => `${product.category}/${product.slug}`;
+  const liveByKey = new Map(existing.map((product) => [key(product), product]));
+
+  const fromPlan = planned.map((product) => {
+    const live = liveByKey.get(key(product));
+    return {
+      id: `${product.category}-${product.slug}`,
+      slug: product.slug,
+      title: live?.title ?? product.title,
+      article: live?.article ?? product.article,
+      category: product.category,
+      tags: live?.tags ?? product.tags ?? [],
+      images: product.images.map(({ src, width, height, blurDataURL, alt }) => ({
+        src,
+        width,
+        height,
+        blurDataURL,
+        alt,
+      })),
+      video: product.video ? { ...product.video, poster: posterFor(product) } : null,
+      price: null,
+      description: live?.description ?? product.description,
+      specs: live?.specs ?? product.specs ?? {},
+    };
+  });
+
+  // Заведённое в админке: этих слагов в плане нет, их кадры лежат в public
+  // отдельно от нарезки. Сохраняем как есть, иначе добор их удалит.
+  const planKeys = new Set(planned.map(key));
+  const handmade = existing.filter((product) => !planKeys.has(key(product)));
+  const products = [...fromPlan, ...handmade];
 
   assertUnique(products, "article");
   assertUnique(products, "id");
 
   await writeJson(join(DATA_DIR, "products.json"), products);
   console.log(`\nsrc/data/products.json: ${products.length} товаров`);
+  if (handmade.length > 0) {
+    console.log(`  из них заведено в админке и сохранено как есть: ${handmade.length}`);
+  }
 
   // Обложка категории — первый кадр товара, помеченного в плане как cover.
-  // Категории вне плана обнуляются: их файлов в public/catalog нет, и оставить
-  // на них ссылку значит получить битую картинку на главной.
+  // Ставится только там, где обложки ещё нет: заказчица загружает свои через
+  // админку, и подменять их товарным кадром нельзя.
   const covers = new Map();
   for (const product of planned) {
     if (product.cover) covers.set(product.category, product.images[0]);
   }
   const categories = JSON.parse(await readFile(join(DATA_DIR, "categories.json"), "utf8"));
+  let filled = 0;
   for (const category of categories) {
+    if (category.cover) continue;
     const cover = covers.get(category.slug);
     category.cover = cover ? { ...imageOf(cover), alt: category.title } : null;
+    if (cover) filled += 1;
   }
   await writeJson(join(DATA_DIR, "categories.json"), categories);
-  console.log(`src/data/categories.json: обложек ${covers.size}`);
+  console.log(`src/data/categories.json: проставлено обложек ${filled}`);
 
   const site = JSON.parse(await readFile(join(DATA_DIR, "site.json"), "utf8"));
   if (plan.portrait) {
@@ -428,9 +456,9 @@ async function writeContent(manifest, plan, config) {
     const image = await processBuffer(buffer, "portrait", "portrait.webp", config);
     site.portrait = { ...image, alt: plan.portrait.alt };
     console.log("src/data/site.json: портрет для первого экрана");
-  } else {
-    site.portrait = null;
   }
+  // Портрета в плане нет — значит его загрузили через админку. Обнулять нельзя:
+  // первый экран останется без Анны.
   await writeJson(join(DATA_DIR, "site.json"), site);
 }
 

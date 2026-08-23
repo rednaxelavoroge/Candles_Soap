@@ -14,7 +14,14 @@
         "candle-8.jpg",
         "candle-11.jpg",
         "candle-9.jpg",
-        "candle-6.jpg"
+        "candle-6.jpg",
+        "candle-1.jpg",
+        "candle-2.jpg",
+        "candle-3.jpg",
+        "candle-4.jpg",
+        "candle-5.jpg",
+        "candle-7.jpg",
+        "candle-10.jpg"
       ],
       "alts": [
         "Свеча-ванночка из чёрного гипса с колотым восковым льдом",
@@ -41,7 +48,10 @@
         "candle-189.jpg",
         "candle-187.jpg",
         "candle-186.jpg",
-        "candle-191.jpg"
+        "candle-191.jpg",
+        "candle-185.jpg",
+        "candle-188.jpg",
+        "candle-190.jpg"
       ],
       "alts": [
         "Две свечи-соты, розовая и синяя, рядом",
@@ -108,7 +118,11 @@
         "candle-79.jpg",
         "candle-78.jpg",
         "candle-81.jpg",
-        "candle-80.jpg"
+        "candle-80.jpg",
+        "candle-226.jpg",
+        "candle-227.jpg",
+        "candle-313.jpg",
+        "candle-314.jpg"
       ],
       "alts": [
         "Три свечи-мандарина на белом гипсовом подносе",
@@ -130,7 +144,8 @@
       "files": [
         "candle-196.jpg",
         "candle-197.jpg",
-        "candle-198.jpg"
+        "candle-198.jpg",
+        "candle-195.jpg"
       ],
       "alts": [
         "Сливовая свеча-цилиндр с рельефом из тюльпанов",
@@ -353,7 +368,9 @@
       "title": "Подносы с бусинами",
       "article": "ГП-03",
       "description": "Плоские подносы с бортиком из крупных бусин: круглые и овальные, от мелких — под кольца — до больших, куда встанет свеча и флакон. Поверхность матовая, слегка шершавая на ощупь. Белые и графитовые собираются в одну стопку и смотрятся как набор.",
-      "tags": [],
+      "tags": [
+        "podnosy"
+      ],
       "files": [
         "gypsum-30.jpg",
         "gypsum-29.jpg",
@@ -374,7 +391,10 @@
       "title": "Аромадиски",
       "article": "СШ-01",
       "description": "Круглые гипсовые диски с рельефом: волна, галька, спираль, мелкая мозаика. Гипс пористый и держит аромамасло неделями — три-четыре капли на тыльную сторону, и диск уходит в шкаф, в машину или в ящик с бельём. Зелёный крап набрызган кистью, поэтому рисунок у каждого свой.",
-      "tags": [],
+      "tags": [
+        "women",
+        "gift"
+      ],
       "files": [
         "gypsum-50.jpg",
         "gypsum-51.jpg",
@@ -414,7 +434,7 @@
     },
     {
       "slug": "riflenye-podsvechniki",
-      "category": "holders",
+      "category": "gypsum",
       "source": "gypsum",
       "title": "Рифлёные подсвечники",
       "article": "ПС-01",
@@ -436,7 +456,7 @@
     },
     {
       "slug": "granenyy-kamen",
-      "category": "holders",
+      "category": "gypsum",
       "source": "gypsum",
       "title": "Гранёный камень",
       "article": "ПС-02",
@@ -455,7 +475,7 @@
     },
     {
       "slug": "shary",
-      "category": "holders",
+      "category": "gypsum",
       "source": "gypsum",
       "title": "Шары",
       "article": "ПС-03",
@@ -476,7 +496,7 @@
     },
     {
       "slug": "meshochek",
-      "category": "holders",
+      "category": "gypsum",
       "source": "candles",
       "title": "Мешочек",
       "article": "ПС-04",
@@ -488,7 +508,11 @@
         "candle-295-2.jpg",
         "candle-299-2.jpg",
         "candle-301-2.jpg",
-        "candle-302-2.jpg"
+        "candle-302-2.jpg",
+        "candle-296-2.jpg",
+        "candle-297-2.jpg",
+        "candle-298-2.jpg",
+        "candle-300-2.jpg"
       ],
       "alts": [
         "Белый гипсовый подсвечник-мешок со снежинками",
@@ -499,7 +523,7 @@
     },
     {
       "slug": "botinochki",
-      "category": "holders",
+      "category": "gypsum",
       "source": "candles",
       "title": "Ботиночки",
       "article": "ПС-05",
@@ -512,7 +536,8 @@
         "candle-290.jpg",
         "candle-291.jpg",
         "candle-292-2.jpg",
-        "candle-293-2.jpg"
+        "candle-293-2.jpg",
+        "candle-294-2.jpg"
       ],
       "alts": [
         "Белый ботинок-подсвечник с золотой подошвой",
@@ -523,7 +548,7 @@
     },
     {
       "slug": "riflenaya-shkatulka",
-      "category": "boxes",
+      "category": "gypsum",
       "source": "gypsum",
       "title": "Рифлёная шкатулка",
       "article": "ШК-01",
@@ -542,7 +567,7 @@
     },
     {
       "slug": "yashchichki",
-      "category": "boxes",
+      "category": "gypsum",
       "source": "gypsum",
       "title": "Ящички",
       "article": "ШК-02",
@@ -561,7 +586,7 @@
     },
     {
       "slug": "azhurnaya-shkatulka",
-      "category": "boxes",
+      "category": "gypsum",
       "source": "gypsum",
       "title": "Ажурная шкатулка",
       "article": "ШК-03",
@@ -582,7 +607,7 @@
     },
     {
       "slug": "paskhalnoe-yaytso",
-      "category": "boxes",
+      "category": "gypsum",
       "source": "gypsum",
       "title": "Пасхальное яйцо",
       "article": "ШК-04",
@@ -599,7 +624,7 @@
     },
     {
       "slug": "shestigranniki",
-      "category": "plates",
+      "category": "gypsum",
       "source": "gypsum",
       "title": "Шестигранники",
       "article": "ПД-01",
@@ -616,7 +641,7 @@
     },
     {
       "slug": "spil-dereva",
-      "category": "plates",
+      "category": "gypsum",
       "source": "gypsum",
       "title": "Спил дерева",
       "article": "ПД-02",
@@ -633,7 +658,7 @@
     },
     {
       "slug": "volna",
-      "category": "plates",
+      "category": "gypsum",
       "source": "gypsum",
       "title": "Волна",
       "article": "ПД-03",
@@ -651,7 +676,7 @@
     },
     {
       "slug": "drapirovka",
-      "category": "plates",
+      "category": "gypsum",
       "source": "gypsum",
       "title": "Драпировка",
       "article": "ПД-04",
@@ -670,7 +695,7 @@
     },
     {
       "slug": "serdtse-i-zvezda",
-      "category": "plates",
+      "category": "gypsum",
       "source": "gypsum",
       "title": "Сердце и звезда",
       "article": "ПД-05",
@@ -747,6 +772,3263 @@
       "alts": [
         "Гипсовая лодка с канатом по борту",
         "Гипсовая ванночка на низких ножках"
+      ]
+    },
+    {
+      "slug": "kniga-s-kristallami",
+      "category": "candles",
+      "title": "Книга с кристаллами",
+      "article": "СВ-08",
+      "description": "Свеча-книга: раскрытые страницы отлиты из воска, в углублении правой страницы — россыпь восковых кристаллов. Отливается в двух цветах, пудровом и каменно-сером.",
+      "tags": [
+        "women",
+        "gift"
+      ],
+      "files": [
+        "candle-12.jpg",
+        "candle-13.jpg",
+        "candle-14.jpg",
+        "candle-15.jpg"
+      ]
+    },
+    {
+      "slug": "malinovyy-kapkeyk",
+      "category": "candles",
+      "title": "Малиновый капкейк",
+      "article": "СВ-09",
+      "description": "Пирожное с шапкой розового крема, малиной и зёрнами граната сверху. Помещается в ладони.",
+      "tags": [
+        "sweets",
+        "food",
+        "women"
+      ],
+      "files": [
+        "candle-16.jpg",
+        "candle-17.jpg",
+        "candle-18.jpg"
+      ]
+    },
+    {
+      "slug": "ponchiki-s-posypkoy",
+      "category": "candles",
+      "title": "Пончики с посыпкой",
+      "article": "СВ-10",
+      "description": "Свечи-пончики со сливочной шапкой, цветной посыпкой и ягодами, снятые на кружевной салфетке.",
+      "tags": [
+        "sweets",
+        "food",
+        "kids"
+      ],
+      "files": [
+        "candle-19.jpg",
+        "candle-20.jpg",
+        "candle-21.jpg"
+      ]
+    },
+    {
+      "slug": "klubnika-na-pechene",
+      "category": "candles",
+      "title": "Клубника на печенье",
+      "article": "СВ-11",
+      "description": "Крупная клубника на шоколадном печенье со сливочной прослойкой.",
+      "tags": [
+        "sweets",
+        "food",
+        "new-year"
+      ],
+      "files": [
+        "candle-22.jpg",
+        "candle-23.jpg",
+        "candle-24.jpg"
+      ]
+    },
+    {
+      "slug": "desertnaya-doska",
+      "category": "candles",
+      "title": "Десертная доска",
+      "article": "СВ-12",
+      "description": "Набор пирожных на круглой деревянной доске: кусок торта, капкейки, эклеры, дольки апельсина.",
+      "tags": [
+        "sweets",
+        "food",
+        "gift"
+      ],
+      "files": [
+        "candle-25.jpg",
+        "candle-29.jpg",
+        "candle-30.jpg",
+        "candle-31.jpg"
+      ]
+    },
+    {
+      "slug": "desertnyy-nabor-v-podstavke",
+      "category": "candles",
+      "title": "Десертный набор в подставке",
+      "article": "СВ-13",
+      "description": "Три десертные свечи в деревянной подставке с гнёздами: клубника, малиновое пирожное, капкейк.",
+      "tags": [
+        "sweets",
+        "food",
+        "gift"
+      ],
+      "files": [
+        "candle-26.jpg",
+        "candle-27.jpg",
+        "candle-28.jpg"
+      ]
+    },
+    {
+      "slug": "makaruny-na-doske",
+      "category": "candles",
+      "title": "Макаруны на доске",
+      "article": "СВ-14",
+      "description": "Круглая доска с шестью полусферами разных цветов — от белого и сливочного до сиреневого.",
+      "tags": [
+        "sweets",
+        "food",
+        "women"
+      ],
+      "files": [
+        "candle-32.jpg",
+        "candle-35.jpg"
+      ]
+    },
+    {
+      "slug": "polusfery-na-blyude",
+      "category": "candles",
+      "title": "Полусферы на блюде",
+      "article": "СВ-15",
+      "description": "Две десертные полусферы, шоколадная и глазированная, на гипсовом блюде с бусинами.",
+      "tags": [
+        "sweets",
+        "food"
+      ],
+      "files": [
+        "candle-33.jpg",
+        "candle-34.jpg",
+        "candle-36.jpg",
+        "candle-37.jpg"
+      ]
+    },
+    {
+      "slug": "yagody-v-banke",
+      "category": "candles",
+      "title": "Ягоды в банке",
+      "article": "СВ-16",
+      "description": "Свеча в стеклянной банке: восковые ягоды залиты прозрачным гелем, будто варенье в собственном соку.",
+      "tags": [
+        "food",
+        "women",
+        "gift"
+      ],
+      "files": [
+        "candle-38.jpg",
+        "candle-39.jpg",
+        "candle-40.jpg",
+        "candle-41.jpg",
+        "candle-42.jpg"
+      ]
+    },
+    {
+      "slug": "yabloko",
+      "category": "candles",
+      "title": "Яблоко",
+      "article": "СВ-17",
+      "description": "Тёмно-красное яблоко в натуральную величину, фитиль выходит из черенка.",
+      "tags": [
+        "food",
+        "women"
+      ],
+      "files": [
+        "candle-43.jpg"
+      ]
+    },
+    {
+      "slug": "granat",
+      "category": "candles",
+      "title": "Гранат",
+      "article": "СВ-18",
+      "description": "Гранат: целый плод с короной-чашечкой и разрезанный, с проработанными зёрнами на срезе.",
+      "tags": [
+        "food",
+        "women",
+        "gift"
+      ],
+      "files": [
+        "candle-45.jpg",
+        "candle-46.jpg",
+        "candle-47.jpg",
+        "candle-48.jpg",
+        "candle-50.jpg",
+        "candle-51.jpg",
+        "candle-52.jpg"
+      ]
+    },
+    {
+      "slug": "granat-v-ladonyakh",
+      "category": "candles",
+      "title": "Гранат в ладонях",
+      "article": "СВ-19",
+      "description": "Гранатовая свеча в гипсовых ладонях: подставка держит плод, как в горсти.",
+      "tags": [
+        "food",
+        "gift",
+        "wedding"
+      ],
+      "files": [
+        "candle-44.jpg",
+        "candle-49.jpg"
+      ]
+    },
+    {
+      "slug": "plate",
+      "category": "candles",
+      "title": "Платье",
+      "article": "СВ-20",
+      "description": "Бальное платье с пышной юбкой и корсетом, отлитое с золотым напылением по складкам.",
+      "tags": [
+        "women",
+        "wedding"
+      ],
+      "files": [
+        "candle-53.jpg",
+        "candle-54.jpg",
+        "candle-55.jpg"
+      ]
+    },
+    {
+      "slug": "kintsugi",
+      "category": "candles",
+      "title": "Кинцуги",
+      "article": "СВ-21",
+      "description": "Цилиндр бирюзового тона, разбитый на осколки и собранный обратно золотыми швами.",
+      "tags": [
+        "men",
+        "geometric"
+      ],
+      "files": [
+        "candle-56.jpg"
+      ]
+    },
+    {
+      "slug": "aysberg",
+      "category": "candles",
+      "title": "Айсберг",
+      "article": "СВ-22",
+      "description": "Свеча-глыба: синие и белые слои воска сходятся острой вершиной, поверхность будто скол льда.",
+      "tags": [
+        "sea",
+        "women"
+      ],
+      "files": [
+        "candle-57.jpg",
+        "candle-58.jpg",
+        "candle-59.jpg"
+      ]
+    },
+    {
+      "slug": "vulkan",
+      "category": "candles",
+      "title": "Вулкан",
+      "article": "СВ-23",
+      "description": "Чёрный конус с красными потёками лавы по склонам.",
+      "tags": [
+        "men",
+        "kids"
+      ],
+      "files": [
+        "candle-58-2.jpg",
+        "candle-217.jpg",
+        "candle-217v.jpg",
+        "candle-278.jpg",
+        "candle-279.jpg"
+      ]
+    },
+    {
+      "slug": "vulkan-bordo",
+      "category": "candles",
+      "title": "Вулкан бордовый",
+      "article": "СВ-24",
+      "description": "Тот же конус в бордово-серой гамме: тёмное основание и винные потёки.",
+      "tags": [
+        "men"
+      ],
+      "files": [
+        "candle-257.jpg",
+        "candle-258.jpg",
+        "candle-307.jpg",
+        "candle-308.jpg"
+      ]
+    },
+    {
+      "slug": "serdtse-karibskoe",
+      "category": "candles",
+      "title": "Сердце «Карибы»",
+      "article": "СВ-25",
+      "description": "Сердце-подсвечник: внутри бирюзовая вода, по краю пена, на дне ракушки и морская звезда.",
+      "tags": [
+        "sea",
+        "heart",
+        "women"
+      ],
+      "files": [
+        "candle-60.jpg",
+        "candle-61.jpg"
+      ]
+    },
+    {
+      "slug": "rakushka-rapan",
+      "category": "candles",
+      "title": "Ракушка рапан",
+      "article": "СВ-26",
+      "description": "Крупная витая раковина, залитая морской водой с ракушками внутри.",
+      "tags": [
+        "sea",
+        "women"
+      ],
+      "files": [
+        "candle-62.jpg",
+        "candle-63.jpg",
+        "candle-64.jpg",
+        "candle-65.jpg"
+      ]
+    },
+    {
+      "slug": "more-v-ladonyakh",
+      "category": "candles",
+      "title": "Море в ладонях",
+      "article": "СВ-27",
+      "description": "Гипсовые ладони держат бирюзовую воду с ракушками; по воде выложена надпись.",
+      "tags": [
+        "sea",
+        "gift",
+        "women"
+      ],
+      "files": [
+        "candle-66.jpg",
+        "candle-67.jpg",
+        "candle-239.jpg"
+      ]
+    },
+    {
+      "slug": "mishka-v-vannochke",
+      "category": "candles",
+      "title": "Мишка в ванночке",
+      "article": "СВ-28",
+      "description": "Медвежонок сидит в ребристой гипсовой ванночке с водой и ракушками.",
+      "tags": [
+        "kids",
+        "newborn"
+      ],
+      "files": [
+        "candle-68.jpg"
+      ]
+    },
+    {
+      "slug": "kristally-v-blyude",
+      "category": "candles",
+      "title": "Кристаллы в блюде",
+      "article": "СВ-29",
+      "description": "Крупные фиолетовые кристаллы с блёстками в гипсовом блюде с бусинами, фитилей несколько.",
+      "tags": [
+        "women",
+        "geometric"
+      ],
+      "files": [
+        "candle-69.jpg",
+        "candle-70.jpg",
+        "candle-71.jpg"
+      ]
+    },
+    {
+      "slug": "kukuruza",
+      "category": "candles",
+      "title": "Кукуруза",
+      "article": "СВ-30",
+      "description": "Початок кукурузы с проработанными зёрнами, на гипсовой подставке и без неё.",
+      "tags": [
+        "food"
+      ],
+      "files": [
+        "candle-75.jpg",
+        "candle-84.jpg"
+      ]
+    },
+    {
+      "slug": "tykva-i-apelsin",
+      "category": "candles",
+      "title": "Тыква и апельсин",
+      "article": "СВ-31",
+      "description": "Две свечи на овальном гипсовом блюде: ребристая тыква и апельсин.",
+      "tags": [
+        "food",
+        "new-year"
+      ],
+      "files": [
+        "candle-77.jpg"
+      ]
+    },
+    {
+      "slug": "uzelok",
+      "category": "candles",
+      "title": "Узелок",
+      "article": "СВ-32",
+      "description": "Белая свеча в форме завязанного мешочка, с перламутровым отливом.",
+      "tags": [
+        "women",
+        "wedding"
+      ],
+      "files": [
+        "candle-82.jpg",
+        "candle-83.jpg"
+      ]
+    },
+    {
+      "slug": "perets",
+      "category": "candles",
+      "title": "Болгарский перец",
+      "article": "СВ-33",
+      "description": "Зелёный перец в натуральную величину, фитиль спрятан в плодоножке.",
+      "tags": [
+        "food"
+      ],
+      "files": [
+        "candle-85.jpg",
+        "candle-86.jpg"
+      ]
+    },
+    {
+      "slug": "limon",
+      "category": "candles",
+      "title": "Лимон",
+      "article": "СВ-34",
+      "description": "Лимон с пористой кожурой, отлит в натуральную величину.",
+      "tags": [
+        "food",
+        "women"
+      ],
+      "files": [
+        "candle-87.jpg",
+        "candle-88.jpg"
+      ]
+    },
+    {
+      "slug": "elka",
+      "category": "candles",
+      "title": "Ёлка",
+      "article": "СВ-35",
+      "description": "Ярусная ёлка с проработанной хвоей. Отливается в нескольких размерах и оттенках — от бирюзового до салатового.",
+      "tags": [
+        "new-year",
+        "kids",
+        "gift"
+      ],
+      "files": [
+        "candle-89.jpg",
+        "candle-90.jpg",
+        "candle-91.jpg",
+        "candle-92.jpg",
+        "candle-93.jpg",
+        "candle-97.jpg",
+        "candle-98.jpg",
+        "candle-100.jpg"
+      ]
+    },
+    {
+      "slug": "elka-v-ladonyakh",
+      "category": "candles",
+      "title": "Ёлка в ладонях",
+      "article": "СВ-36",
+      "description": "Ёлка стоит в гипсовых ладонях-подставке.",
+      "tags": [
+        "new-year",
+        "gift"
+      ],
+      "files": [
+        "candle-94.jpg"
+      ]
+    },
+    {
+      "slug": "elka-zvezda",
+      "category": "candles",
+      "title": "Ёлка-звезда",
+      "article": "СВ-37",
+      "description": "Та же ёлка сверху: ярусы хвои складываются в звезду, фитиль в центре.",
+      "tags": [
+        "new-year",
+        "women"
+      ],
+      "files": [
+        "candle-95.jpg",
+        "candle-96.jpg",
+        "candle-99.jpg"
+      ]
+    },
+    {
+      "slug": "elochnye-shary",
+      "category": "candles",
+      "title": "Ёлочные шары",
+      "article": "СВ-38",
+      "description": "Шары-шишки с чешуйчатой поверхностью и подвесом-навершием, фиолетовые и синие.",
+      "tags": [
+        "new-year",
+        "gift"
+      ],
+      "files": [
+        "candle-103.jpg",
+        "candle-104.jpg",
+        "candle-105.jpg",
+        "candle-106.jpg",
+        "candle-107.jpg",
+        "candle-108.jpg"
+      ]
+    },
+    {
+      "slug": "kolpak",
+      "category": "candles",
+      "title": "Колпак",
+      "article": "СВ-39",
+      "description": "Красный колпак с загнутым кончиком, весь в снежных блёстках.",
+      "tags": [
+        "new-year",
+        "kids"
+      ],
+      "files": [
+        "candle-109.jpg",
+        "candle-110.jpg",
+        "candle-111.jpg"
+      ]
+    },
+    {
+      "slug": "shar-krasnyy",
+      "category": "candles",
+      "title": "Красный шар",
+      "article": "СВ-40",
+      "description": "Гладкий красный шар с инеем из блёсток по верху.",
+      "tags": [
+        "new-year",
+        "gift"
+      ],
+      "files": [
+        "candle-112.jpg",
+        "candle-113.jpg",
+        "candle-114.jpg"
+      ]
+    },
+    {
+      "slug": "novogodniy-nabor",
+      "category": "candles",
+      "title": "Новогодний набор",
+      "article": "СВ-41",
+      "description": "Композиция на овальном гипсовом блюде: шар, шишка и колпак вместе.",
+      "tags": [
+        "new-year",
+        "gift"
+      ],
+      "files": [
+        "candle-115.jpg",
+        "candle-116.jpg",
+        "candle-117.jpg",
+        "candle-123.jpg",
+        "candle-124.jpg"
+      ]
+    },
+    {
+      "slug": "chashka-kakao",
+      "category": "candles",
+      "title": "Чашка какао",
+      "article": "СВ-42",
+      "description": "Чашка в «вязаном» свитере на блюдце, внутри какао со сливочной шапкой и посыпкой. Красная и сиреневая.",
+      "tags": [
+        "new-year",
+        "sweets",
+        "women"
+      ],
+      "files": [
+        "candle-118.jpg",
+        "candle-119.jpg",
+        "candle-120.jpg",
+        "candle-121.jpg",
+        "candle-122.jpg"
+      ]
+    },
+    {
+      "slug": "nabor-na-doske",
+      "category": "candles",
+      "title": "Набор на доске",
+      "article": "СВ-43",
+      "description": "Деревянная доска с тремя свечами: две шишки и груша.",
+      "tags": [
+        "new-year",
+        "gift"
+      ],
+      "files": [
+        "candle-125.jpg"
+      ]
+    },
+    {
+      "slug": "banka-s-gnomami",
+      "category": "candles",
+      "title": "Банка с гномами",
+      "article": "СВ-44",
+      "description": "Свечи в стеклянных банках: внутри гномы и снеговики на снежной поверхности.",
+      "tags": [
+        "new-year",
+        "kids",
+        "gift"
+      ],
+      "files": [
+        "candle-126.jpg",
+        "candle-127.jpg",
+        "candle-128.jpg",
+        "candle-129.jpg",
+        "candle-130.jpg"
+      ]
+    },
+    {
+      "slug": "otkrytka-merry-christmas",
+      "category": "candles",
+      "title": "Открытка Merry Christmas",
+      "article": "СВ-45",
+      "description": "Плоская свеча-открытка с рождественским венком и надписью, на гипсовой подставке, с двумя фитилями.",
+      "tags": [
+        "new-year",
+        "gift"
+      ],
+      "files": [
+        "candle-131.jpg",
+        "candle-132.jpg"
+      ]
+    },
+    {
+      "slug": "zimnyaya-kartina",
+      "category": "candles",
+      "title": "Зимняя картина",
+      "article": "СВ-46",
+      "description": "Свеча-панно с рваным краем: заснеженное поле в блёстках, снизу еловая ветка с ягодами. Держится на гипсовой подставке.",
+      "tags": [
+        "new-year",
+        "gift"
+      ],
+      "files": [
+        "candle-133.jpg",
+        "candle-134.jpg",
+        "candle-135.jpg",
+        "candle-136.jpg",
+        "candle-137.jpg",
+        "candle-138.jpg",
+        "candle-139.jpg"
+      ]
+    },
+    {
+      "slug": "vinogradnyy-shar",
+      "category": "candles",
+      "title": "Виноградный шар",
+      "article": "СВ-47",
+      "description": "Шар, собранный из мелких ягод, на круглом гипсовом блюде.",
+      "tags": [
+        "new-year",
+        "women"
+      ],
+      "files": [
+        "candle-143.jpg",
+        "candle-144.jpg"
+      ]
+    },
+    {
+      "slug": "shar-i-snezhinki",
+      "category": "candles",
+      "title": "Шар и снежинки",
+      "article": "СВ-48",
+      "description": "Набор на гипсовом блюде: крупный шар и две снежинки. Собирается в синем, сиреневом и бирюзовом.",
+      "tags": [
+        "new-year",
+        "gift"
+      ],
+      "files": [
+        "candle-145.jpg",
+        "candle-146.jpg",
+        "candle-147.jpg",
+        "candle-148.jpg",
+        "candle-149.jpg",
+        "candle-150.jpg",
+        "candle-151.jpg",
+        "candle-152.jpg"
+      ]
+    },
+    {
+      "slug": "chernaya-rakushka",
+      "category": "candles",
+      "title": "Чёрная ракушка",
+      "article": "СВ-49",
+      "description": "Витая раковина тёмного тона, залитая воском с синим глиттером.",
+      "tags": [
+        "sea",
+        "men"
+      ],
+      "files": [
+        "candle-153.jpg",
+        "candle-154.jpg"
+      ]
+    },
+    {
+      "slug": "vyazanaya-svecha",
+      "category": "candles",
+      "title": "Вязаная свеча",
+      "article": "СВ-50",
+      "description": "Цилиндр с фактурой вязаного полотна и косой по кругу, верх в серебряной крошке.",
+      "tags": [
+        "new-year",
+        "women"
+      ],
+      "files": [
+        "candle-155.jpg",
+        "candle-156.jpg"
+      ]
+    },
+    {
+      "slug": "vitaya-svecha",
+      "category": "candles",
+      "title": "Витая свеча",
+      "article": "СВ-51",
+      "description": "Высокая витая свеча из красного воска, вся в снежных блёстках, на гипсовой подставке.",
+      "tags": [
+        "new-year",
+        "women"
+      ],
+      "files": [
+        "candle-157.jpg",
+        "candle-158.jpg"
+      ]
+    },
+    {
+      "slug": "tsifry-goda",
+      "category": "candles",
+      "title": "Цифры года",
+      "article": "СВ-52",
+      "description": "Свечи-цифры на блюде-раковине, рядом сердце. Год отливается под заказ.",
+      "tags": [
+        "new-year",
+        "gift"
+      ],
+      "files": [
+        "candle-159.jpg",
+        "candle-160.jpg",
+        "candle-161.jpg"
+      ]
+    },
+    {
+      "slug": "rusalka",
+      "category": "candles",
+      "title": "Русалка",
+      "article": "СВ-53",
+      "description": "Русалка с распущенными волосами, синий воск с золотой проводкой по хвосту.",
+      "tags": [
+        "sea",
+        "women"
+      ],
+      "files": [
+        "candle-170.jpg",
+        "candle-171.jpg"
+      ]
+    },
+    {
+      "slug": "oblaka",
+      "category": "candles",
+      "title": "Облака",
+      "article": "СВ-54",
+      "description": "Ребристая гипсовая ванночка с синей водой, по которой плывут белые облака.",
+      "tags": [
+        "kids",
+        "newborn"
+      ],
+      "files": [
+        "candle-172.jpg",
+        "candle-173.jpg",
+        "candle-174.jpg",
+        "candle-175.jpg"
+      ]
+    },
+    {
+      "slug": "kovboyskie-sapogi",
+      "category": "candles",
+      "title": "Ковбойские сапоги",
+      "article": "СВ-55",
+      "description": "Сапог с тиснёным узором и медным отливом; отливается парой и поодиночке.",
+      "tags": [
+        "men",
+        "gift"
+      ],
+      "files": [
+        "candle-176.jpg",
+        "candle-177.jpg",
+        "candle-178.jpg",
+        "candle-179.jpg"
+      ]
+    },
+    {
+      "slug": "angel-v-kolybeli",
+      "category": "candles",
+      "title": "Ангел в колыбели",
+      "article": "СВ-56",
+      "description": "Спящий младенец с крыльями в плетёной колыбели.",
+      "tags": [
+        "newborn",
+        "christening"
+      ],
+      "files": [
+        "candle-180.jpg",
+        "candle-181.jpg"
+      ]
+    },
+    {
+      "slug": "karusel",
+      "category": "candles",
+      "title": "Карусель",
+      "article": "СВ-57",
+      "description": "Карусель с лошадками: гипсовый корпус с крышей, внутри свеча. Есть белая с серебром, розовая и фиолетовая.",
+      "tags": [
+        "kids",
+        "gift",
+        "women"
+      ],
+      "files": [
+        "candle-182.jpg",
+        "candle-205.jpg",
+        "candle-206.jpg",
+        "candle-207.jpg",
+        "candle-208.jpg",
+        "candle-209.jpg",
+        "candle-312.jpg"
+      ]
+    },
+    {
+      "slug": "medalon-s-tsvetami",
+      "category": "candles",
+      "title": "Медальон с цветами",
+      "article": "СВ-58",
+      "description": "Овальный медальон: серебряные цветы на синем фоне.",
+      "tags": [
+        "women",
+        "flowers"
+      ],
+      "files": [
+        "candle-183.jpg",
+        "candle-184.jpg"
+      ]
+    },
+    {
+      "slug": "tsilindr-s-tyulpanami",
+      "category": "candles",
+      "title": "Цилиндр с тюльпанами",
+      "article": "СВ-59",
+      "description": "Пудровый цилиндр, по кругу расписанные тюльпаны с зелёными листьями.",
+      "tags": [
+        "flowers",
+        "women",
+        "march8"
+      ],
+      "files": [
+        "candle-199.jpg",
+        "candle-200.jpg"
+      ]
+    },
+    {
+      "slug": "morskaya-zvezda",
+      "category": "candles",
+      "title": "Морская звезда",
+      "article": "СВ-60",
+      "description": "Пятиконечная звезда-подсвечник: бирюзовая вода внутри, по краю рельефный борт, фитилей пять.",
+      "tags": [
+        "sea",
+        "women"
+      ],
+      "files": [
+        "candle-201.jpg",
+        "candle-202.jpg",
+        "candle-203.jpg",
+        "candle-204.jpg"
+      ]
+    },
+    {
+      "slug": "medvezhonok-s-podarkom",
+      "category": "candles",
+      "title": "Медвежонок с подарком",
+      "article": "СВ-61",
+      "description": "Медвежонок сидит на подарочной коробке с бантом.",
+      "tags": [
+        "kids",
+        "new-year",
+        "gift"
+      ],
+      "files": [
+        "candle-213.jpg",
+        "candle-214.jpg"
+      ]
+    },
+    {
+      "slug": "medvezhonok-s-karandashami",
+      "category": "candles",
+      "title": "Медвежонок с карандашами",
+      "article": "СВ-62",
+      "description": "Медвежонок с охапкой цветных карандашей, на шоколадной подставке.",
+      "tags": [
+        "kids",
+        "school"
+      ],
+      "files": [
+        "candle-215.jpg",
+        "candle-216.jpg"
+      ]
+    },
+    {
+      "slug": "utyata-v-vannochke",
+      "category": "candles",
+      "title": "Утята в ванночке",
+      "article": "СВ-63",
+      "description": "Гипсовая ванночка с водой, в ней плавают жёлтые утята.",
+      "tags": [
+        "kids",
+        "newborn"
+      ],
+      "files": [
+        "candle-218.jpg",
+        "candle-219.jpg",
+        "candle-220.jpg"
+      ]
+    },
+    {
+      "slug": "shokoladnyy-shar",
+      "category": "candles",
+      "title": "Шоколадный шар",
+      "article": "СВ-64",
+      "description": "Шар из тёмного воска на шестигранном гипсовом блюде, вокруг рассыпаны шоколадные капли.",
+      "tags": [
+        "sweets",
+        "food"
+      ],
+      "files": [
+        "candle-221.jpg",
+        "candle-222.jpg"
+      ]
+    },
+    {
+      "slug": "serdtse-nyudovoe",
+      "category": "candles",
+      "title": "Сердце нюдовое",
+      "article": "СВ-65",
+      "description": "Сердце тёплого телесного тона с золотой прожилкой по краю.",
+      "tags": [
+        "heart",
+        "women",
+        "wedding"
+      ],
+      "files": [
+        "candle-223.jpg",
+        "candle-224.jpg",
+        "candle-225.jpg"
+      ]
+    },
+    {
+      "slug": "stakan-s-tsvetami",
+      "category": "candles",
+      "title": "Стакан с цветами",
+      "article": "СВ-66",
+      "description": "Гипсовый стакан с лепестками по краю и свечой внутри; во втором варианте — с сухоцветами.",
+      "tags": [
+        "flowers",
+        "women"
+      ],
+      "files": [
+        "candle-232.jpg",
+        "candle-233.jpg"
+      ]
+    },
+    {
+      "slug": "tartaletki",
+      "category": "candles",
+      "title": "Тарталетки",
+      "article": "СВ-67",
+      "description": "Корзиночки с кремом, малиной и шоколадной крошкой, по несколько штук.",
+      "tags": [
+        "sweets",
+        "food",
+        "women"
+      ],
+      "files": [
+        "candle-234.jpg",
+        "candle-235.jpg",
+        "candle-236.jpg",
+        "candle-237.jpg"
+      ]
+    },
+    {
+      "slug": "serdtse-malinovoe",
+      "category": "candles",
+      "title": "Сердце малиновое",
+      "article": "СВ-68",
+      "description": "Сердце с ягодной фактурой в гипсовом блюде с бусинами.",
+      "tags": [
+        "heart",
+        "women"
+      ],
+      "files": [
+        "candle-238.jpg"
+      ]
+    },
+    {
+      "slug": "klubok-pryazhi",
+      "category": "candles",
+      "title": "Клубок пряжи",
+      "article": "СВ-69",
+      "description": "Свеча-моток пряжи с проработанными нитями.",
+      "tags": [
+        "women",
+        "gift"
+      ],
+      "files": [
+        "candle-240.jpg"
+      ]
+    },
+    {
+      "slug": "shkatulka-s-bantom",
+      "category": "candles",
+      "title": "Шкатулка с бантом",
+      "article": "СВ-70",
+      "description": "Свеча-шкатулка с крупным бантом, внутри — монеты. Отливается в золоте, серебре, розовом и голубом.",
+      "tags": [
+        "gift",
+        "women",
+        "new-year"
+      ],
+      "files": [
+        "candle-242.jpg",
+        "candle-243.jpg",
+        "candle-244.jpg",
+        "candle-245.jpg",
+        "candle-246.jpg",
+        "candle-246-2.jpg",
+        "candle-247.jpg",
+        "candle-248.jpg",
+        "candle-249.jpg",
+        "candle-250.jpg"
+      ]
+    },
+    {
+      "slug": "roza-v-kashpo",
+      "category": "candles",
+      "title": "Роза в кашпо",
+      "article": "СВ-71",
+      "description": "Крупный бутон розы в гипсовом кашпо. Кашпо разной фактуры: ребристое, в пузырьках, в чешуе.",
+      "tags": [
+        "flowers",
+        "women",
+        "march8"
+      ],
+      "files": [
+        "candle-251.jpg",
+        "candle-252.jpg",
+        "candle-253.jpg",
+        "candle-254.jpg",
+        "candle-255.jpg",
+        "candle-256.jpg",
+        "candle-299.jpg",
+        "candle-300.jpg",
+        "candle-301.jpg",
+        "candle-302.jpg",
+        "candle-303.jpg",
+        "candle-304.jpg",
+        "candle-305.jpg",
+        "candle-306.jpg"
+      ]
+    },
+    {
+      "slug": "sushi-set",
+      "category": "candles",
+      "title": "Суши-сет",
+      "article": "СВ-72",
+      "description": "Роллы и нигири на круглых гипсовых тарелочках.",
+      "tags": [
+        "food",
+        "men",
+        "gift"
+      ],
+      "files": [
+        "candle-259.jpg",
+        "candle-260.jpg",
+        "candle-261.jpg",
+        "candle-309.jpg",
+        "candle-310.jpg",
+        "candle-311.jpg"
+      ]
+    },
+    {
+      "slug": "yabloko-so-zmeey",
+      "category": "candles",
+      "title": "Яблоко со змеёй",
+      "article": "СВ-73",
+      "description": "Яблоко, обвитое змеёй с чешуёй под медь. Чёрное и красное.",
+      "tags": [
+        "men",
+        "gift"
+      ],
+      "files": [
+        "candle-270.jpg",
+        "candle-271.jpg",
+        "candle-272.jpg"
+      ]
+    },
+    {
+      "slug": "rusalka-v-rakushke",
+      "category": "candles",
+      "title": "Русалка в ракушке",
+      "article": "СВ-74",
+      "description": "Русалка, лежащая в раскрытой раковине; голубой воск с золотой проводкой.",
+      "tags": [
+        "sea",
+        "women"
+      ],
+      "files": [
+        "candle-273.jpg",
+        "candle-274.jpg"
+      ]
+    },
+    {
+      "slug": "banka-so-zvezdami",
+      "category": "candles",
+      "title": "Банка со звёздами",
+      "article": "СВ-75",
+      "description": "Стеклянная банка с янтарным гелем, внутри плавают восковые звёзды.",
+      "tags": [
+        "new-year",
+        "kids"
+      ],
+      "files": [
+        "candle-275.jpg",
+        "candle-276.jpg",
+        "candle-277.jpg"
+      ]
+    },
+    {
+      "slug": "knizhnaya-stopka",
+      "category": "candles",
+      "title": "Книжная стопка",
+      "article": "СВ-76",
+      "description": "Стопка книг с обрезами и корешками, отлитая целиком.",
+      "tags": [
+        "men",
+        "gift"
+      ],
+      "files": [
+        "candle-280.jpg",
+        "candle-281.jpg"
+      ]
+    },
+    {
+      "slug": "barelef-oval",
+      "category": "candles",
+      "title": "Барельеф овальный",
+      "article": "СВ-77",
+      "description": "Овальный барельеф с фигурами и золотой патиной по рельефу. Бежевый, розовый и сиреневый.",
+      "tags": [
+        "women",
+        "gift"
+      ],
+      "files": [
+        "candle-282.jpg",
+        "candle-283.jpg",
+        "candle-284.jpg",
+        "candle-285.jpg"
+      ]
+    },
+    {
+      "slug": "butylka-vina",
+      "category": "candles",
+      "title": "Бутылка вина",
+      "article": "СВ-78",
+      "description": "Бутылка с этикеткой и фольгой на горлышке, фитиль выходит из пробки.",
+      "tags": [
+        "men",
+        "gift"
+      ],
+      "files": [
+        "candle-286.jpg",
+        "candle-287.jpg"
+      ]
+    },
+    {
+      "slug": "serdtse-iz-tyulpanov",
+      "category": "candles",
+      "title": "Сердце из тюльпанов",
+      "article": "СВ-79",
+      "description": "Сердце, собранное из бутонов тюльпанов на листьях. Розовое и салатовое.",
+      "tags": [
+        "flowers",
+        "heart",
+        "march8"
+      ],
+      "files": [
+        "candle-288.jpg",
+        "candle-289.jpg"
+      ]
+    },
+    {
+      "slug": "chasha-s-shokoladom",
+      "category": "candles",
+      "title": "Чаша с шоколадом",
+      "article": "СВ-80",
+      "description": "Свеча в керамической чаше: поверх воска — плитка шоколада, орехи и сухие лепестки.",
+      "tags": [
+        "sweets",
+        "food",
+        "women"
+      ],
+      "files": [
+        "candle-292.jpg",
+        "candle-293.jpg",
+        "candle-294.jpg",
+        "candle-295.jpg",
+        "candle-296.jpg"
+      ]
+    },
+    {
+      "slug": "elka-zasnezhennaya",
+      "category": "candles",
+      "title": "Ёлка заснеженная",
+      "article": "СВ-81",
+      "description": "Тёмно-зелёная ёлка со снежными шапками на ветвях и звездой на макушке.",
+      "tags": [
+        "new-year",
+        "kids"
+      ],
+      "files": [
+        "candle-303-2.jpg"
+      ]
+    },
+    {
+      "slug": "elka-zolotaya",
+      "category": "candles",
+      "title": "Ёлка золотая",
+      "article": "СВ-82",
+      "description": "Ярусная ёлка с медно-золотым напылением; отливается в двух размерах. Есть светлая версия.",
+      "tags": [
+        "new-year",
+        "gift"
+      ],
+      "files": [
+        "candle-305-2.jpg",
+        "candle-306-2.jpg",
+        "candle-308-2.jpg"
+      ]
+    },
+    {
+      "slug": "malinovyy-shar",
+      "category": "candles",
+      "title": "Малиновый шар",
+      "article": "СВ-83",
+      "description": "Шар, собранный из ягод малины, на круглом гипсовом блюде.",
+      "tags": [
+        "food",
+        "new-year",
+        "women"
+      ],
+      "files": [
+        "candle-309-2.jpg",
+        "candle-310-2.jpg",
+        "candle-311-2.jpg"
+      ]
+    },
+    {
+      "slug": "mandariny-na-blyude",
+      "category": "candles",
+      "title": "Мандарины на блюде",
+      "article": "СВ-84",
+      "description": "Две мандариновые свечи на гипсовом блюде с веткой хвои. Блюда разной формы — овальное, круглое, с бусинами.",
+      "tags": [
+        "new-year",
+        "food",
+        "gift"
+      ],
+      "files": [
+        "candle-315.jpg",
+        "candle-316.jpg",
+        "candle-317.jpg",
+        "candle-318.jpg"
+      ]
+    },
+    {
+      "slug": "medalony-s-loshadkami",
+      "category": "sachet",
+      "title": "Медальоны с лошадками",
+      "article": "СШ-03",
+      "description": "Овальные аромамедальоны с рельефной лошадкой в ажурной рамке, с отверстием под ленту.",
+      "tags": [
+        "gift",
+        "kids"
+      ],
+      "files": [
+        "candle-162.jpg",
+        "candle-163.jpg",
+        "candle-164.jpg",
+        "candle-167.jpg"
+      ],
+      "source": "candles"
+    },
+    {
+      "slug": "medalon-tsvetochnyy",
+      "category": "sachet",
+      "title": "Медальон цветочный",
+      "article": "СШ-04",
+      "description": "Овальный медальон с рельефным букетом на гладком поле, тёплого терракотового тона.",
+      "tags": [
+        "flowers",
+        "women"
+      ],
+      "files": [
+        "candle-165.jpg",
+        "candle-166.jpg"
+      ],
+      "source": "candles"
+    },
+    {
+      "slug": "diski-s-sukhotsvetami",
+      "category": "sachet",
+      "title": "Диски с сухоцветами",
+      "article": "СШ-05",
+      "description": "Круглые и овальные диски с вплавленными сухими соцветиями.",
+      "tags": [
+        "flowers",
+        "women"
+      ],
+      "files": [
+        "candle-168.jpg",
+        "candle-169.jpg"
+      ],
+      "source": "candles"
+    },
+    {
+      "slug": "elochki-na-lente",
+      "category": "sachet",
+      "title": "Ёлочки на ленте",
+      "article": "СШ-06",
+      "description": "Плоские ёлочки с подвесом из красной ленты: зелёная с надписью и голубая со звёздами.",
+      "tags": [
+        "new-year",
+        "kids"
+      ],
+      "files": [
+        "candle-101.jpg",
+        "candle-102.jpg"
+      ],
+      "source": "candles"
+    },
+    {
+      "slug": "plitka-s-tsvetkom",
+      "category": "sachet",
+      "title": "Плитка с цветком",
+      "article": "СШ-07",
+      "description": "Круглая плитка с рельефным цветком в центре и надписью по краю.",
+      "tags": [
+        "flowers",
+        "women"
+      ],
+      "files": [
+        "candle-228.jpg"
+      ],
+      "source": "candles"
+    },
+    {
+      "slug": "vazochki-skorlupki",
+      "category": "decor",
+      "title": "Вазочки-скорлупки",
+      "article": "ДК-04",
+      "description": "Гипсовые вазочки с рваным краем, будто скорлупа, расписанные мелкими цветами.",
+      "tags": [
+        "flowers",
+        "women"
+      ],
+      "files": [
+        "candle-210.jpg",
+        "candle-211.jpg",
+        "candle-212.jpg"
+      ],
+      "source": "candles"
+    },
+    {
+      "slug": "chashi-rakoviny",
+      "category": "decor",
+      "title": "Чаши-раковины",
+      "article": "ДК-05",
+      "description": "Глубокие чаши в форме морской раковины с волнистым краем: графитовая и бирюзовая.",
+      "tags": [
+        "sea",
+        "women"
+      ],
+      "files": [
+        "gypsum-41.jpg",
+        "gypsum-42.jpg",
+        "gypsum-44.jpg"
+      ],
+      "source": "gypsum"
+    },
+    {
+      "slug": "blyudo-s-butonami",
+      "category": "gypsum",
+      "title": "Блюдо с бутонами",
+      "article": "ПД-06",
+      "description": "Овальное блюдо с зелёной поляной и бутонами тюльпанов по всей длине.",
+      "tags": [
+        "flowers",
+        "podnosy",
+        "march8"
+      ],
+      "files": [
+        "candle-297.jpg",
+        "candle-298.jpg"
+      ],
+      "source": "candles"
+    },
+    {
+      "slug": "kashpo-meshochki",
+      "category": "gypsum",
+      "title": "Кашпо-мешочки",
+      "article": "ПС-06",
+      "description": "Кашпо в форме завязанного мешочка, светлые и с новогодней росписью.",
+      "tags": [
+        "podsvechniki",
+        "new-year"
+      ],
+      "files": [
+        "candle-304-2.jpg"
+      ],
+      "source": "candles"
+    },
+    {
+      "slug": "podsvechniki-tsvetki",
+      "category": "gypsum",
+      "title": "Подсвечники-цветки",
+      "article": "ПС-07",
+      "description": "Набор подсвечников с лепестковым краем под медь: два низких и один высокий.",
+      "tags": [
+        "podsvechniki",
+        "new-year"
+      ],
+      "files": [
+        "candle-307-2.jpg"
+      ],
+      "source": "candles"
+    },
+    {
+      "slug": "ovalnye-podnosy",
+      "category": "gypsum",
+      "title": "Овальные подносы",
+      "article": "ПД-07",
+      "description": "Овальные подносы с бортиком: терракотовый, серый в мраморных разводах, красный с золотой крошкой и белый.",
+      "tags": [
+        "podnosy"
+      ],
+      "files": [
+        "gypsum-13.jpg",
+        "gypsum-14.jpg"
+      ]
+    },
+    {
+      "slug": "blyuda-so-zvezdami",
+      "category": "gypsum",
+      "title": "Блюда со звёздами",
+      "article": "ПД-08",
+      "description": "Круглые блюда с бусинным краем и золотыми звёздами по белому полю, в двух размерах.",
+      "tags": [
+        "podnosy",
+        "new-year"
+      ],
+      "files": [
+        "gypsum-27.jpg",
+        "gypsum-28.jpg",
+        "gypsum-31.jpg"
+      ]
+    },
+    {
+      "slug": "blyuda-rakushki",
+      "category": "gypsum",
+      "title": "Блюда-ракушки",
+      "article": "ПД-09",
+      "description": "Блюда в форме створки гребешка: графитовые, бирюзовое и белое.",
+      "tags": [
+        "podnosy",
+        "sea"
+      ],
+      "files": [
+        "gypsum-33.jpg",
+        "gypsum-34.jpg",
+        "gypsum-35.jpg"
+      ]
+    },
+    {
+      "slug": "plitki-s-ornamentom",
+      "category": "gypsum",
+      "title": "Плитки с орнаментом",
+      "article": "ПД-10",
+      "description": "Круглые плитки с концентрическим орнаментом, оливковая и пудровая.",
+      "tags": [
+        "podnosy"
+      ],
+      "files": [
+        "gypsum-47.jpg"
+      ]
+    },
+    {
+      "slug": "rama-blyudo",
+      "category": "gypsum",
+      "title": "Рама-блюдо",
+      "article": "ПД-11",
+      "description": "Квадратное блюдо в лепной раме с завитками по углам.",
+      "tags": [
+        "podnosy",
+        "wedding"
+      ],
+      "files": [
+        "gypsum-60.jpg"
+      ]
+    },
+    {
+      "slug": "blyuda-lodochki",
+      "category": "gypsum",
+      "title": "Блюда-лодочки",
+      "article": "ПД-12",
+      "description": "Узкие вытянутые блюда с приподнятыми краями, гладкое и с драпировкой внутри.",
+      "tags": [
+        "podnosy"
+      ],
+      "files": [
+        "gypsum-68.jpg",
+        "gypsum-70.jpg"
+      ]
+    },
+    {
+      "slug": "granenoe-kashpo",
+      "category": "gypsum",
+      "title": "Гранёное кашпо",
+      "article": "ПС-08",
+      "description": "Белое кашпо с гранёными боками и рваным верхним краем.",
+      "tags": [
+        "podsvechniki",
+        "geometric"
+      ],
+      "files": [
+        "gypsum-32.jpg"
+      ]
+    },
+    {
+      "slug": "vyazanoe-kashpo",
+      "category": "gypsum",
+      "title": "Вязаное кашпо",
+      "article": "ПС-09",
+      "description": "Кашпо с фактурой вязаного полотна: косы и резинка по кругу.",
+      "tags": [
+        "podsvechniki",
+        "new-year"
+      ],
+      "files": [
+        "gypsum-49.jpg"
+      ]
+    },
+    {
+      "slug": "kashpo-s-tsvetami",
+      "category": "gypsum",
+      "title": "Кашпо с цветами",
+      "article": "ПС-10",
+      "description": "Кашпо с ребристым корпусом и венком объёмных цветов по верхнему краю.",
+      "tags": [
+        "podsvechniki",
+        "flowers",
+        "wedding"
+      ],
+      "files": [
+        "gypsum-69.jpg"
+      ]
+    },
+    {
+      "slug": "kashpo-malinovoe",
+      "category": "gypsum",
+      "title": "Кашпо малиновое",
+      "article": "ПС-11",
+      "description": "Кашпо в малиновых мраморных разводах с белым нутром.",
+      "tags": [
+        "podsvechniki",
+        "women"
+      ],
+      "files": [
+        "gypsum-73.jpg",
+        "gypsum-74.jpg"
+      ]
+    },
+    {
+      "slug": "morskie-kruglyshi",
+      "category": "soap",
+      "title": "Морские круги",
+      "article": "МЛ-08",
+      "description": "Круглое мыло с прозрачной синей толщей, внутри — ракушки, будто смотришь в воду сверху.",
+      "tags": [
+        "sea",
+        "women"
+      ],
+      "files": [
+        "soap-3.jpg",
+        "soap-8.jpg",
+        "soap-9.jpg"
+      ]
+    },
+    {
+      "slug": "morskoy-brusok",
+      "category": "soap",
+      "title": "Морской брусок",
+      "article": "МЛ-09",
+      "description": "Прямоугольный брусок из прозрачной синей основы с вплавленными ракушками и створками.",
+      "tags": [
+        "sea",
+        "men"
+      ],
+      "files": [
+        "soap-5.jpg",
+        "soap-6.jpg",
+        "soap-7.jpg",
+        "soap-14.jpg"
+      ]
+    },
+    {
+      "slug": "morskaya-zvezda",
+      "category": "soap",
+      "title": "Морская звезда",
+      "article": "МЛ-10",
+      "description": "Крупная морская звезда с зернистой поверхностью, отдельно и в подарочной коробке.",
+      "tags": [
+        "sea",
+        "kids"
+      ],
+      "files": [
+        "soap-10.jpg",
+        "soap-11.jpg",
+        "soap-12.jpg"
+      ]
+    },
+    {
+      "slug": "desertnyy-nabor-na-doske",
+      "category": "soap",
+      "title": "Десертный набор на доске",
+      "article": "МЛ-11",
+      "description": "Деревянная доска с гнёздами, в них — тарталетки с ягодами, кремом и шоколадной крошкой.",
+      "tags": [
+        "sweets",
+        "food",
+        "gift"
+      ],
+      "files": [
+        "soap-15.jpg",
+        "soap-16.jpg",
+        "soap-19.jpg",
+        "soap-20.jpg",
+        "soap-21.jpg"
+      ]
+    },
+    {
+      "slug": "vafelnyy-nabor",
+      "category": "soap",
+      "title": "Вафельный набор",
+      "article": "МЛ-12",
+      "description": "Набор в деревянной подставке: вафли, дольки шоколада и печенье.",
+      "tags": [
+        "sweets",
+        "food",
+        "gift"
+      ],
+      "files": [
+        "soap-17.jpg",
+        "soap-18.jpg",
+        "soap-22.jpg",
+        "soap-23.jpg",
+        "soap-24.jpg",
+        "soap-25.jpg",
+        "soap-26.jpg"
+      ]
+    },
+    {
+      "slug": "morozhenoe-rozhki",
+      "category": "soap",
+      "title": "Мороженое-рожки",
+      "article": "МЛ-13",
+      "description": "Рожки с шариками мороженого и эскимо на палочке.",
+      "tags": [
+        "sweets",
+        "food",
+        "kids"
+      ],
+      "files": [
+        "soap-27.jpg",
+        "soap-28.jpg",
+        "soap-29.jpg"
+      ]
+    },
+    {
+      "slug": "tartaletki",
+      "category": "soap",
+      "title": "Тарталетки",
+      "article": "МЛ-14",
+      "description": "Корзиночки с кремом, ягодами и шоколадными шариками на круглой доске.",
+      "tags": [
+        "sweets",
+        "food",
+        "women"
+      ],
+      "files": [
+        "soap-30.jpg",
+        "soap-31.jpg"
+      ]
+    },
+    {
+      "slug": "kusok-torta",
+      "category": "soap",
+      "title": "Кусок торта",
+      "article": "МЛ-15",
+      "description": "Кусок слоёного торта с карамельной глазурью и гроздью ягод сверху.",
+      "tags": [
+        "sweets",
+        "food"
+      ],
+      "files": [
+        "soap-32.jpg"
+      ]
+    },
+    {
+      "slug": "zayka-s-serdtsem",
+      "category": "soap",
+      "title": "Зайка с сердцем",
+      "article": "МЛ-16",
+      "description": "Пушистый зайчонок с красным сердечком в лапах, в подарочной коробке и на блюдце.",
+      "tags": [
+        "kids",
+        "newborn",
+        "gift"
+      ],
+      "files": [
+        "soap-33.jpg",
+        "soap-39.jpg"
+      ]
+    },
+    {
+      "slug": "konfety",
+      "category": "soap",
+      "title": "Конфеты",
+      "article": "МЛ-17",
+      "description": "Мыло-конфета в скрученном фантике, в прозрачной упаковке. Розовое, голубое и сине-фиолетовое.",
+      "tags": [
+        "kids",
+        "sweets",
+        "gift"
+      ],
+      "files": [
+        "soap-34.jpg",
+        "soap-35.jpg",
+        "soap-73.jpg"
+      ]
+    },
+    {
+      "slug": "banka-s-varenem",
+      "category": "soap",
+      "title": "Банка с вареньем",
+      "article": "МЛ-18",
+      "description": "Баночка с ягодами под кружевной крышкой, перевязанная бечёвкой.",
+      "tags": [
+        "food",
+        "women"
+      ],
+      "files": [
+        "soap-36.jpg",
+        "soap-37.jpg",
+        "soap-38.jpg"
+      ]
+    },
+    {
+      "slug": "laym",
+      "category": "soap",
+      "title": "Лайм",
+      "article": "МЛ-19",
+      "description": "Полупрозрачные дольки лайма на стеклянной тарелке.",
+      "tags": [
+        "food",
+        "women"
+      ],
+      "files": [
+        "soap-40.jpg"
+      ]
+    },
+    {
+      "slug": "tsvetochnoe-panno",
+      "category": "soap",
+      "title": "Цветочное панно",
+      "article": "МЛ-20",
+      "description": "Плитка на мешковине, засаженная объёмными цветами: сиреневые пионы и красные маки.",
+      "tags": [
+        "flowers",
+        "women",
+        "march8"
+      ],
+      "files": [
+        "soap-41.jpg",
+        "soap-42.jpg",
+        "soap-43.jpg",
+        "soap-44.jpg"
+      ]
+    },
+    {
+      "slug": "beze-s-yagodami",
+      "category": "soap",
+      "title": "Безе с ягодами",
+      "article": "МЛ-21",
+      "description": "Меренга с завитком и ягодой на верхушке, подаётся на деревянной и гипсовой подставке.",
+      "tags": [
+        "sweets",
+        "food",
+        "women"
+      ],
+      "files": [
+        "soap-45.jpg",
+        "soap-46.jpg",
+        "soap-47.jpg",
+        "soap-48.jpg",
+        "soap-49.jpg",
+        "soap-50.jpg",
+        "soap-51.jpg"
+      ]
+    },
+    {
+      "slug": "beze-v-kashpo",
+      "category": "soap",
+      "title": "Безе в кашпо",
+      "article": "МЛ-22",
+      "description": "Белая меренга в ребристом гипсовом кашпо.",
+      "tags": [
+        "sweets",
+        "women"
+      ],
+      "files": [
+        "soap-52.jpg",
+        "soap-53.jpg",
+        "soap-54.jpg"
+      ]
+    },
+    {
+      "slug": "chashka-kakao",
+      "category": "soap",
+      "title": "Чашка какао",
+      "article": "МЛ-23",
+      "description": "Чашка в «вязаном» свитере с блюдцем, внутри какао с зефиром.",
+      "tags": [
+        "sweets",
+        "new-year",
+        "women"
+      ],
+      "files": [
+        "soap-55.jpg",
+        "soap-56.jpg",
+        "soap-57.jpg",
+        "soap-58.jpg"
+      ]
+    },
+    {
+      "slug": "mandarin",
+      "category": "soap",
+      "title": "Мандарин",
+      "article": "МЛ-24",
+      "description": "Наполовину очищенный мандарин: дольки под снятой кожурой.",
+      "tags": [
+        "food",
+        "new-year"
+      ],
+      "files": [
+        "soap-59.jpg",
+        "soap-60.jpg"
+      ]
+    },
+    {
+      "slug": "prozrachnoe-s-tsvetami",
+      "category": "soap",
+      "title": "Прозрачное с цветами",
+      "article": "МЛ-25",
+      "description": "Брусок из прозрачной основы, внутри — цветы и листья, будто в стекле.",
+      "tags": [
+        "flowers",
+        "women"
+      ],
+      "files": [
+        "soap-61.jpg",
+        "soap-62.jpg",
+        "soap-67.jpg",
+        "soap-70.jpg"
+      ]
+    },
+    {
+      "slug": "kniga-s-tyulpanami",
+      "category": "soap",
+      "title": "Книга с тюльпанами",
+      "article": "МЛ-26",
+      "description": "Раскрытая книга с букетом тюльпанов на страницах.",
+      "tags": [
+        "flowers",
+        "women",
+        "march8"
+      ],
+      "files": [
+        "soap-63.jpg"
+      ]
+    },
+    {
+      "slug": "chasy",
+      "category": "soap",
+      "title": "Часы",
+      "article": "МЛ-27",
+      "description": "Наручные часы с проработанным ремешком и циферблатом. Мужские стальные и женские цветные.",
+      "tags": [
+        "men",
+        "gift"
+      ],
+      "files": [
+        "soap-64.jpg",
+        "soap-74.jpg",
+        "soap-75.jpg",
+        "soap-93.jpg",
+        "soap-94.jpg",
+        "soap-95.jpg"
+      ]
+    },
+    {
+      "slug": "tabletki",
+      "category": "soap",
+      "title": "Таблетки",
+      "article": "МЛ-28",
+      "description": "Мыло-блистер: серебристая подложка с белыми таблетками.",
+      "tags": [
+        "men",
+        "gift"
+      ],
+      "files": [
+        "soap-65.jpg",
+        "soap-66.jpg"
+      ]
+    },
+    {
+      "slug": "buterbrod-s-ikroy",
+      "category": "soap",
+      "title": "Бутерброд с икрой",
+      "article": "МЛ-29",
+      "description": "Кусок хлеба с маслом и красной икрой, каждая икринка отлита отдельно.",
+      "tags": [
+        "food",
+        "men"
+      ],
+      "files": [
+        "soap-68.jpg",
+        "soap-69.jpg"
+      ]
+    },
+    {
+      "slug": "globus",
+      "category": "soap",
+      "title": "Глобус",
+      "article": "МЛ-30",
+      "description": "Глобус на подставке с прорисованными материками.",
+      "tags": [
+        "school",
+        "men"
+      ],
+      "files": [
+        "soap-71.jpg",
+        "soap-76.jpg"
+      ]
+    },
+    {
+      "slug": "planeta-zemlya",
+      "category": "soap",
+      "title": "Планета Земля",
+      "article": "МЛ-31",
+      "description": "Полусфера-планета из прозрачной основы: океаны на просвет, материки светлее.",
+      "tags": [
+        "school",
+        "kids"
+      ],
+      "files": [
+        "soap-85.jpg",
+        "soap-86.jpg"
+      ]
+    },
+    {
+      "slug": "rakushka-yantarnaya",
+      "category": "soap",
+      "title": "Ракушка янтарная",
+      "article": "МЛ-32",
+      "description": "Витая раковина из медовой прозрачной основы.",
+      "tags": [
+        "sea",
+        "women"
+      ],
+      "files": [
+        "soap-72.jpg"
+      ]
+    },
+    {
+      "slug": "lavanda",
+      "category": "soap",
+      "title": "Лаванда",
+      "article": "МЛ-33",
+      "description": "Связка лавандовых соцветий на стебле, сиреневая с зелёным.",
+      "tags": [
+        "flowers",
+        "women"
+      ],
+      "files": [
+        "soap-77.jpg"
+      ]
+    },
+    {
+      "slug": "meduzy",
+      "category": "soap",
+      "title": "Медузы",
+      "article": "МЛ-34",
+      "description": "Овал из прозрачной синей основы, внутри две медузы с длинными щупальцами.",
+      "tags": [
+        "sea",
+        "kids"
+      ],
+      "files": [
+        "soap-78.jpg"
+      ]
+    },
+    {
+      "slug": "lotosy",
+      "category": "soap",
+      "title": "Лотосы",
+      "article": "МЛ-35",
+      "description": "Круглое мыло с розовыми лотосами на синей воде.",
+      "tags": [
+        "flowers",
+        "women"
+      ],
+      "files": [
+        "soap-79.jpg"
+      ]
+    },
+    {
+      "slug": "zvezda-s-korallom",
+      "category": "soap",
+      "title": "Звезда с кораллом",
+      "article": "МЛ-36",
+      "description": "Овал бирюзового тона с морской звездой, кораллом и ракушками в рельефе.",
+      "tags": [
+        "sea",
+        "women"
+      ],
+      "files": [
+        "soap-80.jpg"
+      ]
+    },
+    {
+      "slug": "tyulpany",
+      "category": "soap",
+      "title": "Тюльпаны",
+      "article": "МЛ-37",
+      "description": "Три тюльпана с листьями на сиреневом поле.",
+      "tags": [
+        "flowers",
+        "women",
+        "march8"
+      ],
+      "files": [
+        "soap-81.jpg"
+      ]
+    },
+    {
+      "slug": "serdechki",
+      "category": "soap",
+      "title": "Сердечки",
+      "article": "МЛ-38",
+      "description": "Жёлтый прозрачный брусок с двумя сердцами внутри.",
+      "tags": [
+        "heart",
+        "kids"
+      ],
+      "files": [
+        "soap-82.jpg"
+      ]
+    },
+    {
+      "slug": "vaflya-s-yagodoy",
+      "category": "soap",
+      "title": "Вафля с ягодой",
+      "article": "МЛ-39",
+      "description": "Вафля с шоколадной прослойкой и ягодой сверху.",
+      "tags": [
+        "sweets",
+        "food"
+      ],
+      "files": [
+        "soap-83.jpg",
+        "soap-168.jpg"
+      ]
+    },
+    {
+      "slug": "tsvety-v-kashpo",
+      "category": "soap",
+      "title": "Цветы в кашпо",
+      "article": "МЛ-40",
+      "description": "Букет объёмных цветов в вязаном кашпо.",
+      "tags": [
+        "flowers",
+        "women",
+        "march8"
+      ],
+      "files": [
+        "soap-84.jpg",
+        "soap-214.jpg"
+      ]
+    },
+    {
+      "slug": "mishka-s-sharami",
+      "category": "soap",
+      "title": "Мишка с шарами",
+      "article": "МЛ-41",
+      "description": "Медвежонок с охапкой воздушных шаров, на подставке.",
+      "tags": [
+        "kids",
+        "gift"
+      ],
+      "files": [
+        "soap-87.jpg",
+        "soap-89.jpg"
+      ]
+    },
+    {
+      "slug": "zaytsy",
+      "category": "soap",
+      "title": "Зайцы",
+      "article": "МЛ-42",
+      "description": "Пара зайцев, прижавшихся друг к другу, и зайчонок отдельно.",
+      "tags": [
+        "kids",
+        "newborn"
+      ],
+      "files": [
+        "soap-88.jpg",
+        "soap-280.jpg",
+        "soap-281.jpg"
+      ]
+    },
+    {
+      "slug": "buket-v-pakete",
+      "category": "soap",
+      "title": "Букет в пакете",
+      "article": "МЛ-43",
+      "description": "Букет мыльных цветов, упакованный в прозрачный пакет с цветочной бумагой.",
+      "tags": [
+        "flowers",
+        "women",
+        "gift"
+      ],
+      "files": [
+        "soap-90.jpg"
+      ]
+    },
+    {
+      "slug": "shlepanets",
+      "category": "soap",
+      "title": "Шлёпанец",
+      "article": "МЛ-44",
+      "description": "Пляжный шлёпанец с цветами на ремешке.",
+      "tags": [
+        "sea",
+        "kids"
+      ],
+      "files": [
+        "soap-91.jpg"
+      ]
+    },
+    {
+      "slug": "koshelek",
+      "category": "soap",
+      "title": "Кошелёк",
+      "article": "МЛ-45",
+      "description": "Кожаный кошелёк с прошивкой и клапаном, отлитый до мелочей.",
+      "tags": [
+        "men",
+        "gift"
+      ],
+      "files": [
+        "soap-92.jpg"
+      ]
+    },
+    {
+      "slug": "ryby",
+      "category": "soap",
+      "title": "Рыбы",
+      "article": "МЛ-46",
+      "description": "Рыба с чешуёй и плавниками на овальном блюде, серебристая и медная.",
+      "tags": [
+        "men",
+        "sea"
+      ],
+      "files": [
+        "soap-96.jpg",
+        "soap-97.jpg"
+      ]
+    },
+    {
+      "slug": "rozy-v-shkatulke",
+      "category": "soap",
+      "title": "Розы в шкатулке",
+      "article": "МЛ-47",
+      "description": "Гипсовая шкатулка с крышкой, внутри — розы и пионы из мыла.",
+      "tags": [
+        "flowers",
+        "women",
+        "gift"
+      ],
+      "files": [
+        "soap-98.jpg",
+        "soap-99.jpg",
+        "soap-100.jpg"
+      ]
+    },
+    {
+      "slug": "pivnoy-nabor",
+      "category": "soap",
+      "title": "Пивной набор",
+      "article": "МЛ-48",
+      "description": "Бутылка с этикеткой, бокал с пенной шапкой и раки. Собирается в круглой коробке и деревянном ящике.",
+      "tags": [
+        "men",
+        "gift"
+      ],
+      "files": [
+        "soap-101.jpg",
+        "soap-102.jpg",
+        "soap-103.jpg",
+        "soap-104.jpg",
+        "soap-105.jpg",
+        "soap-106.jpg",
+        "soap-107.jpg",
+        "soap-108.jpg",
+        "soap-109.jpg"
+      ]
+    },
+    {
+      "slug": "yaichnitsa",
+      "category": "soap",
+      "title": "Яичница",
+      "article": "МЛ-49",
+      "description": "Глазунья с растёкшимся белком и жёлтым желтком, на тарелке.",
+      "tags": [
+        "food",
+        "kids"
+      ],
+      "files": [
+        "soap-110.jpg",
+        "soap-181.jpg"
+      ]
+    },
+    {
+      "slug": "raki",
+      "category": "soap",
+      "title": "Раки",
+      "article": "МЛ-50",
+      "description": "Пара варёных раков на овальном блюде.",
+      "tags": [
+        "men",
+        "food"
+      ],
+      "files": [
+        "soap-111.jpg"
+      ]
+    },
+    {
+      "slug": "utyata",
+      "category": "soap",
+      "title": "Утята",
+      "article": "МЛ-51",
+      "description": "Спящие утята на блюдце-сердце и в деревянном ящичке.",
+      "tags": [
+        "kids",
+        "newborn"
+      ],
+      "files": [
+        "soap-112.jpg",
+        "soap-113.jpg",
+        "soap-114.jpg"
+      ]
+    },
+    {
+      "slug": "tsyplenok-v-skorlupe",
+      "category": "soap",
+      "title": "Цыплёнок в скорлупе",
+      "article": "МЛ-52",
+      "description": "Цыплёнок, вылупляющийся из скорлупы.",
+      "tags": [
+        "kids",
+        "newborn",
+        "easter"
+      ],
+      "files": [
+        "soap-127.jpg"
+      ]
+    },
+    {
+      "slug": "tsvety-v-korobke",
+      "category": "soap",
+      "title": "Цветы в коробке",
+      "article": "МЛ-53",
+      "description": "Кашпо-коробка с растительным рисунком, полное объёмных цветов.",
+      "tags": [
+        "flowers",
+        "women",
+        "gift"
+      ],
+      "files": [
+        "soap-115.jpg",
+        "soap-116.jpg",
+        "soap-117.jpg"
+      ]
+    },
+    {
+      "slug": "desert-s-malinoy",
+      "category": "soap",
+      "title": "Десерт с малиной",
+      "article": "МЛ-54",
+      "description": "Сиреневая чаша с малиной и муссовый торт с ягодами на подарочной коробке.",
+      "tags": [
+        "sweets",
+        "women"
+      ],
+      "files": [
+        "soap-118.jpg",
+        "soap-119.jpg",
+        "soap-120.jpg",
+        "soap-121.jpg"
+      ]
+    },
+    {
+      "slug": "elka-s-gusenitsey",
+      "category": "soap",
+      "title": "Ёлка с гусеницей",
+      "article": "МЛ-55",
+      "description": "Зелёная ёлка с цветными шарами, у подножия — гусеница.",
+      "tags": [
+        "new-year",
+        "kids"
+      ],
+      "files": [
+        "soap-124.jpg",
+        "soap-125.jpg",
+        "soap-126.jpg",
+        "soap-279.jpg"
+      ]
+    },
+    {
+      "slug": "plate",
+      "category": "soap",
+      "title": "Платье",
+      "article": "МЛ-56",
+      "description": "Платье с драпированным лифом и пышной юбкой, розовое и сиреневое; отдельно — цветок.",
+      "tags": [
+        "women",
+        "wedding"
+      ],
+      "files": [
+        "soap-128.jpg",
+        "soap-129.jpg",
+        "soap-130.jpg",
+        "soap-131.jpg"
+      ]
+    },
+    {
+      "slug": "pryaniki-novogodnie",
+      "category": "soap",
+      "title": "Пряники новогодние",
+      "article": "МЛ-57",
+      "description": "Набор плоских фигур с белой росписью: сердце, варежка, домик, сапожок, звёзды.",
+      "tags": [
+        "new-year",
+        "gift"
+      ],
+      "files": [
+        "soap-132.jpg",
+        "soap-133.jpg",
+        "soap-134.jpg",
+        "soap-135.jpg",
+        "soap-136.jpg"
+      ]
+    },
+    {
+      "slug": "serdtse-i-varezhka",
+      "category": "soap",
+      "title": "Сердце и варежка",
+      "article": "МЛ-58",
+      "description": "Бирюзовые фигуры с белым узором: сердце, варежка, сапожок, снежинки.",
+      "tags": [
+        "new-year",
+        "gift"
+      ],
+      "files": [
+        "soap-137.jpg",
+        "soap-138.jpg",
+        "soap-139.jpg",
+        "soap-140.jpg",
+        "soap-141.jpg"
+      ]
+    },
+    {
+      "slug": "snezhinki-pechene",
+      "category": "soap",
+      "title": "Снежинки-печенье",
+      "article": "МЛ-59",
+      "description": "Снежинки песочного цвета с белой глазурью по рельефу.",
+      "tags": [
+        "new-year",
+        "sweets"
+      ],
+      "files": [
+        "soap-144.jpg"
+      ]
+    },
+    {
+      "slug": "vaflya-s-dzhemom",
+      "category": "soap",
+      "title": "Вафля с джемом",
+      "article": "МЛ-60",
+      "description": "Толстая вафля с ягодным джемом в клетках, на деревянном блюде.",
+      "tags": [
+        "sweets",
+        "food"
+      ],
+      "files": [
+        "soap-147.jpg",
+        "soap-148.jpg"
+      ]
+    },
+    {
+      "slug": "soska",
+      "category": "soap",
+      "title": "Соска",
+      "article": "МЛ-61",
+      "description": "Детская соска голубого цвета на рифлёном блюдце.",
+      "tags": [
+        "newborn",
+        "christening"
+      ],
+      "files": [
+        "soap-152.jpg"
+      ]
+    },
+    {
+      "slug": "barelef-materinstvo",
+      "category": "soap",
+      "title": "Барельеф «Материнство»",
+      "article": "МЛ-62",
+      "description": "Овальный барельеф: женский силуэт в ожидании ребёнка, сине-белый.",
+      "tags": [
+        "newborn",
+        "women"
+      ],
+      "files": [
+        "soap-154.jpg"
+      ]
+    },
+    {
+      "slug": "butylka-i-ryumka",
+      "category": "soap",
+      "title": "Бутылка и рюмка",
+      "article": "МЛ-63",
+      "description": "Бутылка с этикеткой и гранёная рюмка в деревянном ящичке.",
+      "tags": [
+        "men",
+        "gift"
+      ],
+      "files": [
+        "soap-157.jpg",
+        "soap-158.jpg"
+      ]
+    },
+    {
+      "slug": "pivo-i-stopka",
+      "category": "soap",
+      "title": "Пиво и стопка",
+      "article": "МЛ-64",
+      "description": "Бутылка пива и стопка на стружке.",
+      "tags": [
+        "men",
+        "gift"
+      ],
+      "files": [
+        "soap-161.jpg",
+        "soap-162.jpg"
+      ]
+    },
+    {
+      "slug": "tsvetok-na-tarelke",
+      "category": "soap",
+      "title": "Цветок на тарелке",
+      "article": "МЛ-65",
+      "description": "Крупный сиреневый цветок с раскрытыми лепестками на белой тарелке.",
+      "tags": [
+        "flowers",
+        "women"
+      ],
+      "files": [
+        "soap-163.jpg"
+      ]
+    },
+    {
+      "slug": "balerina",
+      "category": "soap",
+      "title": "Балерина",
+      "article": "МЛ-66",
+      "description": "Балерина в красной пачке, вылепленная поверх белой основы.",
+      "tags": [
+        "women",
+        "kids"
+      ],
+      "files": [
+        "soap-164.jpg"
+      ]
+    },
+    {
+      "slug": "avtomobil",
+      "category": "soap",
+      "title": "Автомобиль",
+      "article": "МЛ-67",
+      "description": "Спортивная машина с прорисованными фарами и дисками. Красная и фиолетовая.",
+      "tags": [
+        "men",
+        "kids"
+      ],
+      "files": [
+        "soap-165.jpg",
+        "soap-166.jpg",
+        "soap-184.jpg"
+      ]
+    },
+    {
+      "slug": "serdtse-kristall",
+      "category": "soap",
+      "title": "Сердце-кристалл",
+      "article": "МЛ-68",
+      "description": "Гранёное сердце, как обработанный камень. Сине-фиолетовое и синее.",
+      "tags": [
+        "heart",
+        "women"
+      ],
+      "files": [
+        "soap-167.jpg",
+        "soap-241.jpg"
+      ]
+    },
+    {
+      "slug": "mishki-v-korobke",
+      "category": "soap",
+      "title": "Мишки в коробке",
+      "article": "МЛ-69",
+      "description": "Мишки и сердца, разложенные по ячейкам белой коробки-витрины.",
+      "tags": [
+        "kids",
+        "gift"
+      ],
+      "files": [
+        "soap-169.jpg",
+        "soap-170.jpg"
+      ]
+    },
+    {
+      "slug": "figurki-na-podstavke",
+      "category": "soap",
+      "title": "Фигурки на подставке",
+      "article": "МЛ-70",
+      "description": "Фигурки на деревянных блюдцах: слонёнок с шарами, пингвин, снеговик, мишка в шапке.",
+      "tags": [
+        "kids",
+        "new-year"
+      ],
+      "files": [
+        "soap-171.jpg",
+        "soap-172.jpg",
+        "soap-173.jpg",
+        "soap-174.jpg"
+      ]
+    },
+    {
+      "slug": "mashinka-s-elkoy",
+      "category": "soap",
+      "title": "Машинка с ёлкой",
+      "article": "МЛ-71",
+      "description": "Красный автомобиль с ёлкой на крыше.",
+      "tags": [
+        "new-year",
+        "kids",
+        "gift"
+      ],
+      "files": [
+        "soap-175.jpg",
+        "soap-187.jpg",
+        "soap-188.jpg"
+      ]
+    },
+    {
+      "slug": "rakushka-s-zhemchuzhinami",
+      "category": "soap",
+      "title": "Ракушка с жемчужинами",
+      "article": "МЛ-72",
+      "description": "Раскрытая створка гребешка с жемчужинами внутри, синяя с перламутром.",
+      "tags": [
+        "sea",
+        "women",
+        "wedding"
+      ],
+      "files": [
+        "soap-176.jpg",
+        "soap-177.jpg",
+        "soap-178.jpg",
+        "soap-179.jpg",
+        "soap-189.jpg"
+      ]
+    },
+    {
+      "slug": "kosmetika",
+      "category": "soap",
+      "title": "Косметика",
+      "article": "МЛ-73",
+      "description": "Набор косметики: помада, флакон духов, тени и кисти.",
+      "tags": [
+        "women",
+        "gift"
+      ],
+      "files": [
+        "soap-180.jpg",
+        "soap-182.jpg"
+      ]
+    },
+    {
+      "slug": "tyulpany-v-korobke",
+      "category": "soap",
+      "title": "Тюльпаны в коробке",
+      "article": "МЛ-74",
+      "description": "Коробка-витрина с букетом тюльпанов и пионов под прозрачной крышкой.",
+      "tags": [
+        "flowers",
+        "women",
+        "march8"
+      ],
+      "files": [
+        "soap-183.jpg",
+        "soap-201.jpg",
+        "soap-202.jpg",
+        "soap-203.jpg"
+      ]
+    },
+    {
+      "slug": "pryanichnyy-domik",
+      "category": "soap",
+      "title": "Пряничный домик",
+      "article": "МЛ-75",
+      "description": "Домик с белой росписью и снежинками в подарочной коробке.",
+      "tags": [
+        "new-year",
+        "gift"
+      ],
+      "files": [
+        "soap-185.jpg",
+        "soap-186.jpg"
+      ]
+    },
+    {
+      "slug": "assorti-figurok",
+      "category": "soap",
+      "title": "Ассорти фигурок",
+      "article": "МЛ-76",
+      "description": "Раскладка мелких фигур одной партии: пирожные, пингвины, ёлки, варежки, помада, машинки.",
+      "tags": [
+        "gift",
+        "kids"
+      ],
+      "files": [
+        "soap-190.jpg",
+        "soap-191.jpg"
+      ]
+    },
+    {
+      "slug": "serdtsa-v-korobke",
+      "category": "soap",
+      "title": "Сердца в коробке",
+      "article": "МЛ-77",
+      "description": "Два красных сердца в белой коробке: одно с потёком, второе с кардиограммой и надписью.",
+      "tags": [
+        "heart",
+        "gift",
+        "women"
+      ],
+      "files": [
+        "soap-192.jpg",
+        "soap-193.jpg",
+        "soap-194.jpg"
+      ]
+    },
+    {
+      "slug": "rybki-v-more",
+      "category": "soap",
+      "title": "Рыбки в море",
+      "article": "МЛ-78",
+      "description": "Овал с рыбами и водорослями на синем фоне, в белой рамке.",
+      "tags": [
+        "sea",
+        "kids"
+      ],
+      "files": [
+        "soap-195.jpg"
+      ]
+    },
+    {
+      "slug": "elochnye-shary",
+      "category": "soap",
+      "title": "Ёлочные шары",
+      "article": "МЛ-79",
+      "description": "Шары с блеском в деревянном ящичке с ячейками.",
+      "tags": [
+        "new-year",
+        "gift"
+      ],
+      "files": [
+        "soap-196.jpg"
+      ]
+    },
+    {
+      "slug": "tsvetochnaya-kartina",
+      "category": "soap",
+      "title": "Цветочная картина",
+      "article": "МЛ-80",
+      "description": "Квадратное панно, сплошь засаженное объёмными цветами.",
+      "tags": [
+        "flowers",
+        "women",
+        "march8"
+      ],
+      "files": [
+        "soap-198.jpg"
+      ]
+    },
+    {
+      "slug": "shar-iz-sharikov",
+      "category": "soap",
+      "title": "Шар из шариков",
+      "article": "МЛ-81",
+      "description": "Шар, собранный из мелких шариков, розово-голубой, на гипсовом блюде.",
+      "tags": [
+        "kids",
+        "gift"
+      ],
+      "files": [
+        "soap-204.jpg",
+        "soap-205.jpg"
+      ]
+    },
+    {
+      "slug": "dinozavriki",
+      "category": "soap",
+      "title": "Динозаврики",
+      "article": "МЛ-82",
+      "description": "Зелёные динозаврики с длинной шеей, поодиночке и в стеклянной чаше.",
+      "tags": [
+        "kids"
+      ],
+      "files": [
+        "soap-206.jpg",
+        "soap-207.jpg"
+      ]
+    },
+    {
+      "slug": "mishka-s-karandashami",
+      "category": "soap",
+      "title": "Мишка с карандашами",
+      "article": "МЛ-83",
+      "description": "Медвежонок с цветными карандашами, отдельно и в подарочной коробке.",
+      "tags": [
+        "kids",
+        "school"
+      ],
+      "files": [
+        "soap-208.jpg",
+        "soap-209.jpg",
+        "soap-210.jpg"
+      ]
+    },
+    {
+      "slug": "delfiny",
+      "category": "soap",
+      "title": "Дельфины",
+      "article": "МЛ-84",
+      "description": "Круглое мыло с дельфинами, выпрыгивающими из волны.",
+      "tags": [
+        "sea",
+        "kids"
+      ],
+      "files": [
+        "soap-211.jpg",
+        "soap-212.jpg",
+        "soap-213.jpg"
+      ]
+    },
+    {
+      "slug": "kniga-s-kristallami",
+      "category": "soap",
+      "title": "Книга с кристаллами",
+      "article": "МЛ-85",
+      "description": "Раскрытая книга, на правой странице — россыпь кристаллов.",
+      "tags": [
+        "men",
+        "gift"
+      ],
+      "files": [
+        "soap-227.jpg",
+        "soap-228.jpg",
+        "soap-229.jpg",
+        "soap-230.jpg"
+      ]
+    },
+    {
+      "slug": "mesyats",
+      "category": "soap",
+      "title": "Месяц",
+      "article": "МЛ-86",
+      "description": "Месяц с профилем лица, серебряный с золотым.",
+      "tags": [
+        "kids",
+        "women"
+      ],
+      "files": [
+        "soap-231.jpg",
+        "soap-232.jpg"
+      ]
+    },
+    {
+      "slug": "kristally",
+      "category": "soap",
+      "title": "Кристаллы",
+      "article": "МЛ-87",
+      "description": "Сросшиеся кристаллы сиреневого тона с прозрачными гранями.",
+      "tags": [
+        "geometric",
+        "women"
+      ],
+      "files": [
+        "soap-233.jpg"
+      ]
+    },
+    {
+      "slug": "konvert-s-serdechkami",
+      "category": "soap",
+      "title": "Конверт с сердечками",
+      "article": "МЛ-88",
+      "description": "Прямоугольник из прозрачной основы с россыпью цветных сердец и одним крупным в центре.",
+      "tags": [
+        "heart",
+        "gift"
+      ],
+      "files": [
+        "soap-234.jpg",
+        "soap-235.jpg"
+      ]
+    },
+    {
+      "slug": "kolyaska",
+      "category": "soap",
+      "title": "Коляска",
+      "article": "МЛ-89",
+      "description": "Детская коляска с рельефными колёсами и капюшоном, синяя.",
+      "tags": [
+        "newborn",
+        "christening"
+      ],
+      "files": [
+        "soap-236.jpg"
+      ]
+    },
+    {
+      "slug": "serdtse-s-serdechkami",
+      "category": "soap",
+      "title": "Сердце с сердечками",
+      "article": "МЛ-90",
+      "description": "Сердце из прозрачной основы, внутри — цветные сердечки. Розовое и жёлто-оранжевое.",
+      "tags": [
+        "heart",
+        "women"
+      ],
+      "files": [
+        "soap-237.jpg",
+        "soap-238.jpg"
+      ]
+    },
+    {
+      "slug": "panno-s-serdtsem",
+      "category": "soap",
+      "title": "Панно с сердцем",
+      "article": "МЛ-91",
+      "description": "Розовая доска с сердцем из цветов и бусин.",
+      "tags": [
+        "heart",
+        "flowers",
+        "women"
+      ],
+      "files": [
+        "soap-239.jpg",
+        "soap-240.jpg"
+      ]
+    },
+    {
+      "slug": "guby",
+      "category": "soap",
+      "title": "Губы",
+      "article": "МЛ-92",
+      "description": "Красные губы с глянцевой поверхностью, на рифлёном блюдце.",
+      "tags": [
+        "women",
+        "gift"
+      ],
+      "files": [
+        "soap-242.jpg",
+        "soap-243.jpg",
+        "soap-244.jpg",
+        "soap-245.jpg",
+        "soap-246.jpg",
+        "soap-261.jpg"
+      ]
+    },
+    {
+      "slug": "kryshka-banki",
+      "category": "soap",
+      "title": "Крышка банки",
+      "article": "МЛ-93",
+      "description": "Крышка жестяной банки с ключом-открывашкой, отлитая в сером.",
+      "tags": [
+        "men"
+      ],
+      "files": [
+        "soap-247.jpg",
+        "soap-248.jpg"
+      ]
+    },
+    {
+      "slug": "elochki-s-sharikami",
+      "category": "soap",
+      "title": "Ёлочки с шариками",
+      "article": "МЛ-94",
+      "description": "Плоские ёлочки с цветными шарами и звёздами, по нескольку штук.",
+      "tags": [
+        "new-year",
+        "kids"
+      ],
+      "files": [
+        "soap-249.jpg",
+        "soap-250.jpg"
+      ]
+    },
+    {
+      "slug": "elka-s-sharami-bezhevaya",
+      "category": "soap",
+      "title": "Ёлка бежевая",
+      "article": "МЛ-95",
+      "description": "Бежевая ёлка с перламутровыми шарами, рядом ёлочные шары.",
+      "tags": [
+        "new-year",
+        "gift"
+      ],
+      "files": [
+        "soap-251.jpg",
+        "soap-252.jpg"
+      ]
+    },
+    {
+      "slug": "novogodnie-barelefy",
+      "category": "soap",
+      "title": "Новогодние барельефы",
+      "article": "МЛ-96",
+      "description": "Плоские фигуры с золотой и белой росписью: ёлка, сердце с ключом, паровоз, машинка с ёлкой.",
+      "tags": [
+        "new-year",
+        "gift"
+      ],
+      "files": [
+        "soap-253.jpg",
+        "soap-254.jpg",
+        "soap-255.jpg",
+        "soap-256.jpg",
+        "soap-257.jpg",
+        "soap-258.jpg"
+      ]
+    },
+    {
+      "slug": "shapki-i-varezhki",
+      "category": "soap",
+      "title": "Шапки и варежки",
+      "article": "МЛ-97",
+      "description": "Вязаные шапки с помпоном и варежки с росписью: бирюзовые, персиковые, красные.",
+      "tags": [
+        "new-year",
+        "kids",
+        "gift"
+      ],
+      "files": [
+        "soap-259.jpg",
+        "soap-268.jpg",
+        "soap-269.jpg",
+        "soap-270.jpg",
+        "soap-271.jpg",
+        "soap-272.jpg",
+        "soap-273.jpg",
+        "soap-276.jpg",
+        "soap-277.jpg"
+      ]
+    },
+    {
+      "slug": "snezhinki",
+      "category": "soap",
+      "title": "Снежинки",
+      "article": "МЛ-98",
+      "description": "Тонкие снежинки разного рисунка, бирюзовые и перламутровые.",
+      "tags": [
+        "new-year"
+      ],
+      "files": [
+        "soap-260.jpg",
+        "soap-275.jpg"
+      ]
+    },
+    {
+      "slug": "novogodniy-nabor-krasnyy",
+      "category": "soap",
+      "title": "Новогодний набор красный",
+      "article": "МЛ-99",
+      "description": "Красные фигуры с золотым узором: сапожок, варежка, шапка, шарф и надпись «С Новым годом».",
+      "tags": [
+        "new-year",
+        "gift"
+      ],
+      "files": [
+        "soap-262.jpg",
+        "soap-263.jpg",
+        "soap-264.jpg",
+        "soap-265.jpg",
+        "soap-266.jpg",
+        "soap-274.jpg"
+      ]
+    },
+    {
+      "slug": "ded-moroz",
+      "category": "soap",
+      "title": "Дед Мороз",
+      "article": "МЛ-100",
+      "description": "Круглое мыло с Дедом Морозом и годом на белом поле.",
+      "tags": [
+        "new-year",
+        "kids"
+      ],
+      "files": [
+        "soap-267.jpg"
+      ]
+    },
+    {
+      "slug": "mandarin-i-tykva",
+      "category": "soap",
+      "title": "Мандарин и тыква",
+      "article": "МЛ-101",
+      "description": "Мандарин и ребристая тыква на овальном блюде с хвоей.",
+      "tags": [
+        "new-year",
+        "food"
+      ],
+      "files": [
+        "soap-278.jpg"
+      ]
+    },
+    {
+      "slug": "ammonit",
+      "category": "soap",
+      "title": "Аммонит",
+      "article": "МЛ-102",
+      "description": "Спираль аммонита с медным напылением по рельефу.",
+      "tags": [
+        "sea",
+        "men"
+      ],
+      "files": [
+        "soap-282.jpg",
+        "soap-283.jpg"
+      ]
+    },
+    {
+      "slug": "ananas",
+      "category": "soap",
+      "title": "Ананас",
+      "article": "МЛ-103",
+      "description": "Ананас с чешуйчатым телом и зелёной короной.",
+      "tags": [
+        "food",
+        "women"
+      ],
+      "files": [
+        "soap-284.jpg"
+      ]
+    },
+    {
+      "slug": "ponchik",
+      "category": "soap",
+      "title": "Пончик",
+      "article": "МЛ-104",
+      "description": "Пончик с шоколадной глазурью и сахарной струйкой.",
+      "tags": [
+        "sweets",
+        "kids"
+      ],
+      "files": [
+        "soap-285.jpg"
+      ]
+    },
+    {
+      "slug": "kusok-piroga",
+      "category": "soap",
+      "title": "Кусок пирога",
+      "article": "МЛ-105",
+      "description": "Треугольный кусок пирога с ягодами и фисташками на глазури.",
+      "tags": [
+        "sweets",
+        "food"
+      ],
+      "files": [
+        "soap-286.jpg",
+        "soap-287.jpg"
+      ]
+    },
+    {
+      "slug": "arbuz",
+      "category": "soap",
+      "title": "Арбуз",
+      "article": "МЛ-106",
+      "description": "Долька арбуза с косточками и зелёной коркой.",
+      "tags": [
+        "food",
+        "kids"
+      ],
+      "files": [
+        "soap-288.jpg",
+        "soap-289.jpg"
+      ]
+    },
+    {
+      "slug": "banka-varenya",
+      "category": "soap",
+      "title": "Банка варенья",
+      "article": "МЛ-107",
+      "description": "Баночка с ягодами и надписью, под кружевной крышкой.",
+      "tags": [
+        "food",
+        "women"
+      ],
+      "files": [
+        "soap-290.jpg"
+      ]
+    },
+    {
+      "slug": "vosmoe-marta",
+      "category": "soap",
+      "title": "Восьмое марта",
+      "article": "МЛ-108",
+      "description": "Восьмёрка с объёмными цветами: гиацинты и ландыши на сиреневом поле.",
+      "tags": [
+        "flowers",
+        "women",
+        "march8"
+      ],
+      "files": [
+        "soap-291.jpg",
+        "soap-292.jpg",
+        "soap-293.jpg",
+        "soap-294.jpg"
+      ]
+    },
+    {
+      "slug": "morozhenoe-v-kremanke",
+      "category": "soap",
+      "title": "Мороженое в креманке",
+      "article": "МЛ-109",
+      "description": "Стеклянная креманка с шариками мороженого и долькой шоколада.",
+      "tags": [
+        "sweets",
+        "food"
+      ],
+      "files": [
+        "soap-295.jpg",
+        "soap-296.jpg"
+      ]
+    },
+    {
+      "slug": "zmeya",
+      "category": "soap",
+      "title": "Змея",
+      "article": "МЛ-110",
+      "description": "Круглое мыло салатового цвета с серебряной змеёй в рельефе.",
+      "tags": [
+        "gift",
+        "new-year"
+      ],
+      "files": [
+        "soap-297.jpg"
+      ]
+    },
+    {
+      "slug": "malina-v-kremanke",
+      "category": "soap",
+      "title": "Малина в креманке",
+      "article": "МЛ-111",
+      "description": "Креманка, полная малины, с розовым градиентом стенок.",
+      "tags": [
+        "sweets",
+        "food",
+        "women"
+      ],
+      "files": [
+        "soap-298.jpg"
+      ]
+    },
+    {
+      "slug": "serdtse-klubok",
+      "category": "soap",
+      "title": "Сердце-клубок",
+      "article": "МЛ-112",
+      "description": "Сердце с фактурой мотка пряжи, серо-голубое, на гипсовом блюде.",
+      "tags": [
+        "heart",
+        "women"
+      ],
+      "files": [
+        "soap-300.jpg",
+        "soap-301.jpg"
+      ]
+    },
+    {
+      "slug": "serdtse-malinovoe",
+      "category": "soap",
+      "title": "Сердце малиновое",
+      "article": "МЛ-113",
+      "description": "Сердце с ягодной фактурой в гипсовом блюде с бусинами.",
+      "tags": [
+        "heart",
+        "women"
+      ],
+      "files": [
+        "soap-302.jpg"
       ]
     }
   ]
