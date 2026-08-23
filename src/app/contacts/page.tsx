@@ -43,25 +43,25 @@ export default function ContactsPage() {
         <div className="mt-12 max-w-2xl">
           <ul className="divide-y divide-sand border-y border-sand">
             {contacts.whatsapp ? (
-              <li className="flex justify-between items-center py-5">
+              <li className="flex flex-col sm:flex-row sm:justify-between sm:items-center py-4 sm:py-5 gap-1 sm:gap-4">
                 <span className="eyebrow">WhatsApp</span>
                 <a
                   href={whatsappBase ?? "#"}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="link-underline text-lg font-medium text-ink md:text-xl"
+                  className="link-underline text-base sm:text-lg md:text-xl font-medium text-ink whitespace-nowrap"
                 >
-                  {contacts.whatsapp} (Армения)
+                  {contacts.whatsapp} <span className="text-xs text-muted font-normal">(Армения)</span>
                 </a>
               </li>
             ) : null}
 
             {contacts.phone ? (
-              <li className="flex justify-between items-center py-5">
+              <li className="flex flex-col sm:flex-row sm:justify-between sm:items-center py-4 sm:py-5 gap-1 sm:gap-4">
                 <span className="eyebrow">Телефон (Армения)</span>
                 <a
                   href={telHref(contacts.phone)}
-                  className="link-underline text-lg font-medium text-ink md:text-xl"
+                  className="link-underline text-base sm:text-lg md:text-xl font-medium text-ink whitespace-nowrap"
                 >
                   {contacts.phone}
                 </a>
@@ -69,25 +69,37 @@ export default function ContactsPage() {
             ) : null}
 
             {contacts.phoneRussia ? (
-              <li className="flex justify-between items-center py-5">
+              <li className="flex flex-col sm:flex-row sm:justify-between sm:items-center py-4 sm:py-5 gap-1 sm:gap-4">
                 <span className="eyebrow">Телефон (Россия)</span>
                 <a
                   href={telHref(contacts.phoneRussia)}
-                  className="link-underline text-lg font-medium text-ink md:text-xl"
+                  className="link-underline text-base sm:text-lg md:text-xl font-medium text-ink whitespace-nowrap"
                 >
                   {contacts.phoneRussia}
                 </a>
               </li>
             ) : null}
 
+            {contacts.email ? (
+              <li className="flex flex-col sm:flex-row sm:justify-between sm:items-center py-4 sm:py-5 gap-1 sm:gap-4">
+                <span className="eyebrow">Email</span>
+                <a
+                  href={`mailto:${contacts.email}`}
+                  className="link-underline text-base sm:text-lg md:text-xl font-medium text-ink whitespace-nowrap"
+                >
+                  {contacts.email}
+                </a>
+              </li>
+            ) : null}
+
             {contacts.instagram ? (
-              <li className="flex justify-between items-center py-5">
+              <li className="flex flex-col sm:flex-row sm:justify-between sm:items-center py-4 sm:py-5 gap-1 sm:gap-4">
                 <span className="eyebrow">Instagram</span>
                 <a
                   href={`https://instagram.com/${contacts.instagram}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="link-underline text-lg font-medium text-ink md:text-xl"
+                  className="link-underline text-base sm:text-lg md:text-xl font-medium text-ink"
                 >
                   @{contacts.instagram}
                 </a>

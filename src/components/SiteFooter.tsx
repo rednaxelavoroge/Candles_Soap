@@ -33,13 +33,18 @@ export function SiteFooter() {
         <div className="flex flex-col gap-2 text-xs">
           <span className="font-semibold uppercase tracking-wider text-ink mb-1">Связь с мастером</span>
           {site.contacts.phone ? (
-            <a href={telHref(site.contacts.phone)} className="text-muted hover:text-ink transition-colors">
-              🇦🇲 {site.contacts.phone} (WhatsApp)
+            <a href={telHref(site.contacts.phone)} className="text-muted hover:text-ink transition-colors whitespace-nowrap">
+              🇦🇲 {site.contacts.phone} <span className="text-[0.7rem] text-accent font-medium">(WhatsApp)</span>
             </a>
           ) : null}
           {site.contacts.phoneRussia ? (
-            <a href={telHref(site.contacts.phoneRussia)} className="text-muted hover:text-ink transition-colors">
+            <a href={telHref(site.contacts.phoneRussia)} className="text-muted hover:text-ink transition-colors whitespace-nowrap">
               🇷🇺 {site.contacts.phoneRussia}
+            </a>
+          ) : null}
+          {site.contacts.email ? (
+            <a href={`mailto:${site.contacts.email}`} className="text-muted hover:text-ink transition-colors whitespace-nowrap">
+              ✉ {site.contacts.email}
             </a>
           ) : null}
           <div className="mt-2 flex gap-4">
