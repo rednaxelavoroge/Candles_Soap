@@ -1,5 +1,11 @@
-import { CategorySections } from "@/components/catalog/CategorySections";
-import { getCategories, getCategory, getSectionsForCategory } from "@/lib/content";
+import { CategoryView } from "@/components/catalog/CategoryView";
+import {
+  getCategories,
+  getCategory,
+  getProductsByCategory,
+  getSectionsForCategory,
+  getTagsForCategory,
+} from "@/lib/content";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -23,20 +29,18 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   };
 }
 
-/**
- * Второй уровень: нажали «Мыло» — увидели разделы, а не сразу все фотографии.
- * Матрица изделий живёт уровнем ниже, в /catalog/<категория>/razdel/<раздел>.
- */
 export default async function CategoryPage({ params }: { params: Promise<Params> }) {
   const { category: slug } = await params;
   const category = getCategory(slug);
   if (!category) notFound();
 
   const sections = getSectionsForCategory(slug);
+  const products = getProductsByCategory(slug);
+  const tags = getTagsForCategory(slug);
 
   return (
     <div className="pt-24 md:pt-32">
-      <header className="relative overflow-hidden px-5 pt-4 pb-10 md:px-8 md:pb-12">
+      <header className="relative overflow-hidden px-5 pt-4 pb-8 md:px-8 md:pb-10">
         <Link href="/catalog" className="link-underline eyebrow relative">
           Каталог
         </Link>
@@ -51,10 +55,11 @@ export default async function CategoryPage({ params }: { params: Promise<Params>
       {sections.length === 0 ? (
         <p className="px-5 pb-16 text-sm text-muted md:px-8">В этом разделе пока нет изделий.</p>
       ) : (
-        <CategorySections
-          categorySlug={category.slug}
-          categoryTitle={category.title}
+        <CategoryView
+          category={category}
+          products={products}
           sections={sections}
+          tags={tags}
         />
       )}
     </div>

@@ -57,47 +57,22 @@ function ShowcaseSection({
 
   const isEven = index % 2 === 0;
 
+  // На четных: текст выезжает слева (-55px), картинка справа (+55px)
+  // На нечетных: картинка выезжает слева (-55px), текст справа (+55px)
+  // Они динамично движутся навстречу друг другу при скролле
+  const textInitialX = isEven ? -55 : 55;
+  const mediaInitialX = isEven ? 55 : -55;
+
   return (
-    <div className="relative overflow-hidden py-6 md:py-12 border-t border-sand/40">
+    <div className="relative overflow-hidden py-8 md:py-14 border-t border-sand/40">
       <div className="mx-auto grid w-full max-w-[1400px] items-center gap-8 px-5 md:grid-cols-2 md:gap-12 md:px-8">
         
-        {/* Картинка раздела */}
+        {/* Текстовый блок */}
         <motion.div
-          initial={reduced ? undefined : { opacity: 0, y: 25 }}
-          whileInView={reduced ? undefined : { opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.05, margin: "100px 0px" }}
-          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          className={`relative flex items-center justify-center p-2 will-change-transform md:p-4 ${
-            isEven ? "md:order-2" : "md:order-1"
-          }`}
-        >
-          <div className="relative w-full max-w-[480px] overflow-hidden rounded-2xl transition-transform duration-500 hover:scale-[1.02]">
-            <Link
-              href={`/catalog/${item.category.slug}`}
-              className="group relative block aspect-square w-full overflow-hidden"
-            >
-              <div className="tile-zoom absolute inset-0">
-                <Media
-                  image={item.category.cover}
-                  sizes="(min-width: 1024px) 40vw, (min-width: 768px) 50vw, 100vw"
-                  priority={index === 0}
-                />
-              </div>
-              <div className="absolute inset-0 flex items-center justify-center bg-ink/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100 backdrop-blur-[1px]">
-                <span className="rounded-full bg-white/95 px-6 py-2.5 text-xs font-semibold tracking-widest text-ink uppercase shadow-md backdrop-blur-sm">
-                  Открыть раздел →
-                </span>
-              </div>
-            </Link>
-          </div>
-        </motion.div>
-
-        {/* Текстовое описание раздела */}
-        <motion.div
-          initial={reduced ? undefined : { opacity: 0, y: 25 }}
-          whileInView={reduced ? undefined : { opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.05, margin: "100px 0px" }}
-          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          initial={reduced ? undefined : { opacity: 0, x: textInitialX, y: 15 }}
+          whileInView={reduced ? undefined : { opacity: 1, x: 0, y: 0 }}
+          viewport={{ once: true, amount: 0.1, margin: "0px 0px -40px 0px" }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className={`flex w-full flex-col justify-center px-2 py-4 will-change-transform md:px-8 lg:px-12 ${
             isEven ? "md:order-1" : "md:order-2"
           }`}
@@ -127,6 +102,37 @@ function ShowcaseSection({
                 {count} {count === 1 ? "изделие" : count < 5 ? "изделия" : "изделий"}
               </span>
             ) : null}
+          </div>
+        </motion.div>
+
+        {/* Блок изображения */}
+        <motion.div
+          initial={reduced ? undefined : { opacity: 0, x: mediaInitialX, y: 15, scale: 0.96 }}
+          whileInView={reduced ? undefined : { opacity: 1, x: 0, y: 0, scale: 1 }}
+          viewport={{ once: true, amount: 0.1, margin: "0px 0px -40px 0px" }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          className={`relative flex items-center justify-center p-2 will-change-transform md:p-4 ${
+            isEven ? "md:order-2" : "md:order-1"
+          }`}
+        >
+          <div className="relative w-full max-w-[480px] overflow-hidden rounded-2xl transition-transform duration-500 hover:scale-[1.02]">
+            <Link
+              href={`/catalog/${item.category.slug}`}
+              className="group relative block aspect-square w-full overflow-hidden"
+            >
+              <div className="tile-zoom absolute inset-0">
+                <Media
+                  image={item.category.cover}
+                  sizes="(min-width: 1024px) 40vw, (min-width: 768px) 50vw, 100vw"
+                  priority={index === 0}
+                />
+              </div>
+              <div className="absolute inset-0 flex items-center justify-center bg-ink/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100 backdrop-blur-[1px]">
+                <span className="rounded-full bg-white/95 px-6 py-2.5 text-xs font-semibold tracking-widest text-ink uppercase shadow-md backdrop-blur-sm">
+                  Открыть раздел →
+                </span>
+              </div>
+            </Link>
           </div>
         </motion.div>
 
