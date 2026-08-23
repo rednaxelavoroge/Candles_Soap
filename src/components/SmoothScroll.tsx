@@ -9,29 +9,36 @@ import { useEffect } from "react";
  */
 export function SmoothScroll() {
   useEffect(() => {
+    if (typeof window === "undefined") return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    // На мобильных устройствах оставляем нативный быстрый скролл без перехвата событий
+    if (!window.matchMedia("(pointer: fine)").matches) return;
 
     let lenis: { raf: (time: number) => void; destroy: () => void } | null = null;
     let frame = 0;
     let cancelled = false;
 
     const start = async () => {
-      const { default: Lenis } = await import("lenis");
-      if (cancelled) return;
+      try {
+        const { default: Lenis } = await import("lenis");
+        if (cancelled) return;
 
-      lenis = new Lenis({
-        duration: 1.2,
-        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-        smoothWheel: true,
-        wheelMultiplier: 0.95,
-        syncTouch: false,
-      });
+        lenis = new Lenis({
+          duration: 1.2,
+          easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+          smoothWheel: true,
+          wheelMultiplier: 0.95,
+          syncTouch: false,
+        });
 
-      const raf = (time: number) => {
-        lenis?.raf(time);
+        const raf = (time: number) => {
+          lenis?.raf(time);
+          frame = requestAnimationFrame(raf);
+        };
         frame = requestAnimationFrame(raf);
-      };
-      frame = requestAnimationFrame(raf);
+      } catch (e) {
+        console.warn("Lenis smooth scroll disabled", e);
+      }
     };
 
     const idle = window.requestIdleCallback

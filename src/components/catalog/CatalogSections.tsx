@@ -57,8 +57,8 @@ function CatalogSectionItem({
         <motion.div
           initial={reduced ? undefined : { opacity: 0, x: textInitialX, y: 15 }}
           whileInView={reduced ? undefined : { opacity: 1, x: 0, y: 0 }}
-          viewport={{ once: true, amount: 0.1, margin: "0px 0px -40px 0px" }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          viewport={{ once: true, amount: 0, margin: "150px 0px 150px 0px" }}
+          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           className={`flex w-full flex-col justify-center px-2 py-4 will-change-transform md:px-8 lg:px-12 ${
             isEven ? "md:order-1" : "md:order-2"
           }`}
@@ -92,8 +92,8 @@ function CatalogSectionItem({
         <motion.div
           initial={reduced ? undefined : { opacity: 0, x: mediaInitialX, y: 15, scale: 0.96 }}
           whileInView={reduced ? undefined : { opacity: 1, x: 0, y: 0, scale: 1 }}
-          viewport={{ once: true, amount: 0.1, margin: "0px 0px -40px 0px" }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          viewport={{ once: true, amount: 0, margin: "150px 0px 150px 0px" }}
+          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           className={`relative flex items-center justify-center p-2 will-change-transform md:p-4 ${
             isEven ? "md:order-2" : "md:order-1"
           }`}
