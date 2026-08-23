@@ -5,11 +5,6 @@ import type { Section } from "@/lib/content";
 import { motion, useReducedMotion } from "framer-motion";
 import Link from "next/link";
 
-/**
- * Разделы внутри категории — второй уровень каталога. Раскладка та же, что у
- * макросекций каталога: экран пополам, стороны чередуются, половины съезжаются
- * из-за краёв. Заказчица показывала именно такой черновик.
- */
 export function CategorySections({
   categorySlug,
   categoryTitle,
@@ -35,7 +30,6 @@ export function CategorySections({
   );
 }
 
-/** Счётная форма: 1 изделие, 2 изделия, 5 изделий. */
 function plural(count: number): string {
   const tail = count % 100;
   if (tail >= 11 && tail <= 14) return "изделий";
@@ -67,84 +61,72 @@ function SectionItem({
   const reduced = useReducedMotion();
   const href = `/catalog/${categorySlug}/razdel/${section.slug}`;
   const num = `${String(index + 1).padStart(2, "0")} / ${String(total).padStart(2, "0")}`;
-  const textFrom = index % 2 === 0 ? -1 : 1;
-
-  const text = (
-    <motion.div
-      initial={reduced ? undefined : { opacity: 0, x: textFrom * 45 }}
-      whileInView={reduced ? undefined : { opacity: 1, x: 0 }}
-      viewport={{ once: false, amount: 0.25 }}
-      transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-      className="flex w-full flex-col justify-center px-4 py-4 will-change-transform md:px-8 lg:px-12"
-    >
-      <span className="text-xs font-medium tracking-[0.22em] text-accent uppercase">{num}</span>
-      <h2 className="mt-3 font-display text-3xl leading-tight text-ink sm:text-4xl md:text-5xl">
-        {section.title}
-      </h2>
-      <p className="mt-4 max-w-lg text-base leading-relaxed text-muted md:text-lg">
-        {categoryTitle} — {section.count} {plural(section.count)} в разделе.
-      </p>
-      <div className="mt-7 flex items-center gap-5">
-        <Link
-          href={href}
-          className="group btn-brown-outline inline-flex items-center gap-2.5 rounded-full px-7 py-3 text-xs font-semibold tracking-[0.18em] uppercase"
-        >
-          <span>Смотреть изделия</span>
-          <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
-        </Link>
-      </div>
-    </motion.div>
-  );
-
-  const media = (
-    <motion.div
-      initial={reduced ? undefined : { opacity: 0, x: -textFrom * 45, scale: 0.98 }}
-      whileInView={reduced ? undefined : { opacity: 1, x: 0, scale: 1 }}
-      viewport={{ once: false, amount: 0.25 }}
-      transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-      className="relative flex items-center justify-center p-2 will-change-transform md:p-4"
-    >
-      <div className="relative w-full max-w-[480px] overflow-hidden rounded-2xl transition-transform duration-500 hover:scale-[1.02]">
-        <Link
-          href={href}
-          aria-label={`Смотреть раздел «${section.title}»`}
-          className="group relative block aspect-square w-full overflow-hidden"
-        >
-          <div className="tile-zoom absolute inset-0">
-            <Media
-              image={section.cover}
-              sizes="(min-width: 1024px) 40vw, (min-width: 768px) 50vw, 100vw"
-              priority={index === 0}
-            />
-          </div>
-          <div className="absolute inset-0 flex items-center justify-center bg-ink/20 opacity-0 backdrop-blur-[1px] transition-opacity duration-300 group-hover:opacity-100">
-            <span className="rounded-full bg-white/95 px-6 py-2.5 text-xs font-semibold tracking-widest text-ink uppercase shadow-md backdrop-blur-sm">
-              Открыть раздел →
-            </span>
-          </div>
-        </Link>
-      </div>
-    </motion.div>
-  );
+  const isEven = index % 2 === 0;
 
   return (
-    <div className="relative overflow-hidden border-t border-sand/40 py-8 md:py-14">
+    <div className="relative overflow-hidden border-t border-sand/40 py-6 md:py-12">
       <div className="mx-auto grid w-full max-w-[1400px] items-center gap-8 px-5 md:grid-cols-2 md:gap-12 md:px-8">
-        <div className="contents md:hidden">{media}</div>
+        
+        {/* Картинка подраздела */}
+        <motion.div
+          initial={reduced ? undefined : { opacity: 0, y: 25 }}
+          whileInView={reduced ? undefined : { opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.05, margin: "100px 0px" }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          className={`relative flex items-center justify-center p-2 will-change-transform md:p-4 ${
+            isEven ? "md:order-2" : "md:order-1"
+          }`}
+        >
+          <div className="relative w-full max-w-[480px] overflow-hidden rounded-2xl transition-transform duration-500 hover:scale-[1.02]">
+            <Link
+              href={href}
+              aria-label={`Смотреть раздел «${section.title}»`}
+              className="group relative block aspect-square w-full overflow-hidden"
+            >
+              <div className="tile-zoom absolute inset-0">
+                <Media
+                  image={section.cover}
+                  sizes="(min-width: 1024px) 40vw, (min-width: 768px) 50vw, 100vw"
+                  priority={index === 0}
+                />
+              </div>
+              <div className="absolute inset-0 flex items-center justify-center bg-ink/20 opacity-0 backdrop-blur-[1px] transition-opacity duration-300 group-hover:opacity-100">
+                <span className="rounded-full bg-white/95 px-6 py-2.5 text-xs font-semibold tracking-widest text-ink uppercase shadow-md backdrop-blur-sm">
+                  Открыть раздел →
+                </span>
+              </div>
+            </Link>
+          </div>
+        </motion.div>
 
-        {index % 2 === 0 ? (
-          <>
-            <div className="hidden md:block">{text}</div>
-            <div className="hidden md:block">{media}</div>
-          </>
-        ) : (
-          <>
-            <div className="hidden md:block">{media}</div>
-            <div className="hidden md:block">{text}</div>
-          </>
-        )}
+        {/* Текст подраздела */}
+        <motion.div
+          initial={reduced ? undefined : { opacity: 0, y: 25 }}
+          whileInView={reduced ? undefined : { opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.05, margin: "100px 0px" }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          className={`flex w-full flex-col justify-center px-2 py-4 will-change-transform md:px-8 lg:px-12 ${
+            isEven ? "md:order-1" : "md:order-2"
+          }`}
+        >
+          <span className="text-xs font-medium tracking-[0.22em] text-accent uppercase">{num}</span>
+          <h2 className="mt-3 font-display text-3xl leading-tight text-ink sm:text-4xl md:text-5xl">
+            {section.title}
+          </h2>
+          <p className="mt-4 max-w-lg text-base leading-relaxed text-muted md:text-lg">
+            {categoryTitle} — {section.count} {plural(section.count)} в разделе.
+          </p>
+          <div className="mt-7 flex items-center gap-5">
+            <Link
+              href={href}
+              className="group btn-brown-outline inline-flex items-center gap-2.5 rounded-full px-7 py-3 text-xs font-semibold tracking-[0.18em] uppercase"
+            >
+              <span>Смотреть изделия</span>
+              <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+            </Link>
+          </div>
+        </motion.div>
 
-        <div className="contents md:hidden">{text}</div>
       </div>
     </div>
   );
