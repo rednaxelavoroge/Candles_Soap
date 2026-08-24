@@ -18,6 +18,24 @@ const nextConfig: NextConfig = {
   // не найдёт — откроется только главная. С ним каждая страница становится
   // папкой с index.html, и сервер отдаёт её сам, без всяких правил.
   ...(isExport ? { output: "export" as const, trailingSlash: true } : {}),
+  // Поддомен admin.annamanasaryan.art заведён ради одной страницы — панели.
+  // Его корень уводит прямо в неё, чтобы не помнить хвост /admin.
+  // В статической выгрузке правил перенаправления нет и быть не может:
+  // там сервера нет, поэтому блок добавляется только для Vercel.
+  ...(isExport
+    ? {}
+    : {
+        async redirects() {
+          return [
+            {
+              source: "/",
+              has: [{ type: "host" as const, value: "admin.annamanasaryan.art" }],
+              destination: "/admin",
+              permanent: false,
+            },
+          ];
+        },
+      }),
   images: {
     unoptimized: isExport,
     formats: ["image/webp"],

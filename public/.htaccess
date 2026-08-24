@@ -33,5 +33,5 @@ ErrorDocument 404 /404.html
 # переедет, браузеры не будут держать старый адрес в памяти.
 <IfModule mod_rewrite.c>
   RewriteEngine On
-  RewriteRule ^admin(/.*)?$ https://candles-soap.vercel.app/admin$1 [R=302,L]
+  RewriteRule ^admin(/.*)?$ https://admin.annamanasaryan.art/admin$1 [R=302,L]
 </IfModule>
