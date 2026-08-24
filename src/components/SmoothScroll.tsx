@@ -13,6 +13,9 @@ export function SmoothScroll() {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     // На мобильных устройствах оставляем нативный быстрый скролл без перехвата событий
     if (!window.matchMedia("(pointer: fine)").matches) return;
+    // Админка — рабочая панель, а не витрина. Lenis перехватывает колесо мыши на всей
+    // странице, и тогда не прокручиваются ни модальное окно, ни список тегов, ни textarea.
+    if (window.location.pathname.startsWith("/admin")) return;
 
     let lenis: { raf: (time: number) => void; destroy: () => void } | null = null;
     let frame = 0;

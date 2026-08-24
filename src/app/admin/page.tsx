@@ -969,9 +969,9 @@ export default function AdminPage() {
 
       {/* МОДАЛЬНОЕ ОКНО ДОБАВЛЕНИЯ / РЕДАКТИРОВАНИЯ РАЗДЕЛА КАТАЛОГА */}
       {isCategoryModalOpen && editCategory ? (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-ink/50 p-4 backdrop-blur-sm overflow-y-auto">
-          <div className="relative my-8 w-full max-w-xl rounded-3xl border border-sand bg-surface p-6 shadow-2xl md:p-8">
-            <div className="flex items-center justify-between border-b border-sand pb-4">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-ink/50 p-4 backdrop-blur-sm">
+          <div className="relative flex max-h-[90dvh] w-full max-w-xl flex-col rounded-3xl border border-sand bg-surface shadow-2xl">
+            <div className="flex items-center justify-between border-b border-sand px-6 py-4 md:px-8">
               <h2 className="font-display text-xl text-ink">
                 {editCategory.slug ? "Редактирование раздела" : "Новый раздел каталога"}
               </h2>
@@ -984,7 +984,11 @@ export default function AdminPage() {
               </button>
             </div>
 
-            <form onSubmit={handleSaveCategory} className="mt-6 flex flex-col gap-4">
+            <form onSubmit={handleSaveCategory} className="flex min-h-0 flex-1 flex-col">
+              <div
+                data-lenis-prevent
+                className="flex min-h-0 flex-1 flex-col gap-4 overflow-y-auto overscroll-contain px-6 py-6 md:px-8"
+              >
               <div>
                 <label className="block text-xs font-semibold uppercase tracking-wider text-muted mb-1">
                   Название раздела *
@@ -1049,7 +1053,9 @@ export default function AdminPage() {
                 />
               </div>
 
-              <div className="mt-4 flex justify-end gap-3 border-t border-sand pt-4">
+              </div>
+
+              <div className="flex justify-end gap-3 border-t border-sand px-6 py-4 md:px-8">
                 <button
                   type="button"
                   onClick={() => setIsCategoryModalOpen(false)}
@@ -1071,9 +1077,9 @@ export default function AdminPage() {
 
       {/* МОДАЛЬНОЕ ОКНО ДОБАВЛЕНИЯ / РЕДАКТИРОВАНИЯ ТОВАРА */}
       {isModalOpen && editProduct ? (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-ink/50 p-4 backdrop-blur-sm overflow-y-auto">
-          <div className="relative my-8 w-full max-w-2xl rounded-3xl border border-sand bg-surface p-6 shadow-2xl md:p-8 max-h-[90vh] overflow-y-auto">
-            <div className="flex items-center justify-between border-b border-sand pb-4">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-ink/50 p-4 backdrop-blur-sm">
+          <div className="relative flex max-h-[90dvh] w-full max-w-2xl flex-col rounded-3xl border border-sand bg-surface shadow-2xl">
+            <div className="flex items-center justify-between border-b border-sand px-6 py-4 md:px-8">
               <h2 className="font-display text-xl text-ink">
                 {editProduct.id ? "Редактирование изделия" : "Новое изделие"}
               </h2>
@@ -1086,7 +1092,11 @@ export default function AdminPage() {
               </button>
             </div>
 
-            <form onSubmit={handleSaveProduct} className="mt-6 flex flex-col gap-4">
+            <form onSubmit={handleSaveProduct} className="flex min-h-0 flex-1 flex-col">
+              <div
+                data-lenis-prevent
+                className="flex min-h-0 flex-1 flex-col gap-4 overflow-y-auto overscroll-contain px-6 py-6 md:px-8"
+              >
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <div>
                   <label className="block text-xs font-semibold uppercase tracking-wider text-muted mb-1">
@@ -1151,7 +1161,7 @@ export default function AdminPage() {
                 <label className="block text-xs font-semibold uppercase tracking-wider text-muted mb-1.5">
                   Подразделы и темы (отметьте подходящие)
                 </label>
-                <div className="flex flex-wrap gap-2 p-3 bg-bg/50 rounded-2xl border border-sand max-h-48 overflow-y-auto">
+                <div data-lenis-prevent className="flex flex-wrap gap-2 p-3 bg-bg/50 rounded-2xl border border-sand max-h-48 overflow-y-auto overscroll-contain">
                   {tags.map((t) => {
                     const isChecked = (editProduct.tags || []).includes(t.slug);
                     return (
@@ -1358,7 +1368,9 @@ export default function AdminPage() {
                 </div>
               </div>
 
-              <div className="mt-4 flex justify-end gap-3 border-t border-sand pt-4">
+              </div>
+
+              <div className="flex justify-end gap-3 border-t border-sand px-6 py-4 md:px-8">
                 <button
                   type="button"
                   onClick={() => setIsModalOpen(false)}
