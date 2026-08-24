@@ -68,7 +68,13 @@ export async function POST(req: Request) {
         .replace(/-+/g, "-")
         .replace(/^-|-$/g, "");
 
+    // Поля, которых нет в форме админки, берутся из прежней записи и не теряются.
+    // Так сохранилось `tones` — три цвета акварели, снятые с самой обложки
+    // командой `npm run tones`: заново их взять неоткуда, а форма о них не знает.
+    const existing = currentProducts.find((p) => p.id === product.id);
+
     const finalProduct: Product = {
+      ...existing,
       id: product.id || `p-${Date.now()}`,
       category: product.category,
       slug: newSlug,
