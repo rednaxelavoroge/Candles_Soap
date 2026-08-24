@@ -5,7 +5,7 @@ import { getCategories, getProductsByCategory } from "@/lib/content";
 import type { Category } from "@/lib/schemas";
 import { motion, useReducedMotion } from "framer-motion";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useAnimationsReady } from "@/lib/use-animations-ready";
 
 export function CatalogSections() {
   const categories = getCategories();
@@ -41,12 +41,10 @@ function CatalogSectionItem({
   index: number;
   total: number;
 }) {
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
   const reduced = useReducedMotion();
+  // Анимация включается только на клиенте, зато включается по-настоящему:
+  // блок пересоздаётся по `key`, и `initial` применяется как положено.
+  const animated = useAnimationsReady() && !reduced;
   const count = getProductsByCategory(category.slug).length;
   const num = `0${index + 1} / 0${total}`;
   const isEven = index % 2 === 0;
@@ -61,8 +59,9 @@ function CatalogSectionItem({
         
         {/* Текст раздела */}
         <motion.div
-          initial={mounted && !reduced ? { opacity: 0, x: textInitialX, y: 15 } : false}
-          whileInView={mounted && !reduced ? { opacity: 1, x: 0, y: 0 } : undefined}
+          key={animated ? "animated" : "static"}
+          initial={animated ? { opacity: 0, x: textInitialX, y: 15 } : false}
+          whileInView={animated ? { opacity: 1, x: 0, y: 0 } : undefined}
           viewport={{ once: true, amount: 0, margin: "150px 0px 150px 0px" }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           className={`flex w-full flex-col justify-center px-2 py-4 will-change-transform md:px-8 lg:px-12 ${
@@ -96,8 +95,9 @@ function CatalogSectionItem({
 
         {/* Картинка раздела */}
         <motion.div
-          initial={mounted && !reduced ? { opacity: 0, x: mediaInitialX, y: 15, scale: 0.96 } : false}
-          whileInView={mounted && !reduced ? { opacity: 1, x: 0, y: 0, scale: 1 } : undefined}
+          key={animated ? "animated" : "static"}
+          initial={animated ? { opacity: 0, x: mediaInitialX, y: 15, scale: 0.96 } : false}
+          whileInView={animated ? { opacity: 1, x: 0, y: 0, scale: 1 } : undefined}
           viewport={{ once: true, amount: 0, margin: "150px 0px 150px 0px" }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           className={`relative flex items-center justify-center p-2 will-change-transform md:p-4 ${
