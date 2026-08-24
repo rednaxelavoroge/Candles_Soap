@@ -48,8 +48,25 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="ru" className={comfortaa.variable}>
+    // Класс `js` дописывает скрипт ниже — до того, как React разберётся с
+    // разметкой. Предупреждение о расхождении здесь ожидаемо и не значит ошибки.
+    <html lang="ru" className={comfortaa.variable} suppressHydrationWarning>
       <body>
+        {/*
+          Половины секций выезжают из-за краёв, а значит стартуют невидимыми.
+          Если скрипты не отработают — как это случалось в Яндекс Старте и в
+          Яндексе с Алисой, — показывать было бы нечего.
+
+          Эта строка выполняется первой на странице и вешает класс `js` на
+          <html>. Пока класса нет, стиль в globals.css силой возвращает
+          половины на место: страница читается целиком, просто без движения.
+          Не отработали скрипты — не появился и класс, и запас сработал сам.
+        */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `document.documentElement.classList.add("js")`,
+          }}
+        />
         <SmoothScroll />
         <a
           href="#main"

@@ -68,6 +68,17 @@
     max-width: 100%;
   }
 
+  /*
+   * Запас на случай, когда скрипты не отработали (Яндекс Старт, Яндекс с
+   * Алисой). Класс `js` вешает первая же строка скрипта в layout.tsx; пока
+   * его нет, выезжающие половины показываются на месте и во весь цвет,
+   * иначе от них остался бы пустой экран.
+   */
+  html:not(.js) .will-change-transform {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
   ::selection {
     background-color: var(--color-sand);
     color: var(--color-ink);
