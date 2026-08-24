@@ -23,3 +23,15 @@ ErrorDocument 404 /404.html
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/html text/css application/javascript image/svg+xml
 </IfModule>
+
+# Админка не может работать на обычном хостинге: ей нужен сервер, который
+# исполняет код, а здесь лежат готовые файлы. Поэтому она осталась на Vercel,
+# а этот адрес просто уводит туда — чтобы Анне было достаточно помнить
+# annamanasaryan.art/admin, как было раньше.
+#
+# Переадресация временная (302), а не постоянная: если однажды админка
+# переедет, браузеры не будут держать старый адрес в памяти.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^admin(/.*)?$ https://candles-soap.vercel.app/admin$1 [R=302,L]
+</IfModule>
