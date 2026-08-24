@@ -503,6 +503,12 @@ export default function AdminPage() {
 
           <div className="flex items-center gap-3">
             <Link
+              href="/admin/instrukciya"
+              className="rounded-full border border-sand bg-surface px-4 py-2 text-xs font-medium text-ink transition-colors hover:bg-sand/30"
+            >
+              Инструкция
+            </Link>
+            <Link
               href="/"
               target="_blank"
               className="rounded-full border border-sand bg-surface px-4 py-2 text-xs font-medium text-ink transition-colors hover:bg-sand/30"
