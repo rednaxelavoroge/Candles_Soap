@@ -24,6 +24,14 @@ export default function AdminPage() {
     tagline: "",
     intro: "",
     portrait: { src: "" },
+    // Лента «Избранного» на главной: своё название, своя подпись, свой состав.
+    featured: {
+      enabled: true,
+      eyebrow: "Избранное мастерской",
+      title: "Коллекция сезона",
+      subtitle: "",
+      ids: [] as string[],
+    },
     contacts: {
       phone: "",
       phoneRussia: "",
@@ -37,6 +45,8 @@ export default function AdminPage() {
 
   // Фильтр
   const [search, setSearch] = useState("");
+  // Поиск изделий для ленты «Избранного»
+  const [featuredSearch, setFeaturedSearch] = useState("");
   const [catFilter, setCatFilter] = useState("all");
 
   // Модалка товара
@@ -116,7 +126,20 @@ export default function AdminPage() {
         }
         if (siteRes.ok) {
           const s = await siteRes.json();
-          if (s.site) setSiteData(s.site);
+          if (s.site) {
+            // В данных, сохранённых до появления ленты, поля featured нет.
+            setSiteData({
+              ...s.site,
+              featured: {
+                enabled: true,
+                eyebrow: "Избранное мастерской",
+                title: "Коллекция сезона",
+                subtitle: "",
+                ids: [],
+                ...(s.site.featured || {}),
+              },
+            });
+          }
         }
       } catch (err) {
         console.error("Failed to load admin data:", err);
@@ -288,6 +311,30 @@ export default function AdminPage() {
   };
 
   // Сохранение текстов и Обо мне
+  /** Переставляет изделие в ленте «Избранного» на позицию выше или ниже. */
+  const moveFeatured = (index: number, shift: number) => {
+    const ids = [...siteData.featured.ids];
+    const target = index + shift;
+    if (target < 0 || target >= ids.length) return;
+    [ids[index], ids[target]] = [ids[target], ids[index]];
+    setSiteData({ ...siteData, featured: { ...siteData.featured, ids } });
+  };
+
+  /**
+   * Что предложить для ленты: то, что ещё не выбрано. Без поиска показываем
+   * первые два десятка, иначе список в 239 изделий листать невозможно.
+   */
+  const featuredQuery = featuredSearch.trim().toLowerCase();
+  const featuredCandidates = products
+    .filter((p) => !siteData.featured.ids.includes(p.id))
+    .filter(
+      (p) =>
+        featuredQuery === "" ||
+        p.title.toLowerCase().includes(featuredQuery) ||
+        p.article.toLowerCase().includes(featuredQuery),
+    )
+    .slice(0, featuredQuery === "" ? 20 : 40);
+
   const handleSaveTexts = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
@@ -298,6 +345,7 @@ export default function AdminPage() {
           owner: siteData.owner,
           tagline: siteData.tagline,
           intro: siteData.intro,
+          featured: siteData.featured,
           portraitData: newPortraitData,
         }),
       });
@@ -736,6 +784,190 @@ export default function AdminPage() {
                   }}
                   className="text-xs text-muted file:mr-3 file:rounded-full file:border-0 file:btn-brown file:px-4 file:py-2 file:text-xs file:font-semibold"
                 />
+              </div>
+
+              {/* ЛЕНТА «ИЗБРАННОГО» НА ГЛАВНОЙ */}
+              <div className="rounded-2xl border border-sand/60 bg-bg/40 p-4">
+                <div className="flex flex-wrap items-center justify-between gap-3">
+                  <span className="text-xs font-semibold uppercase tracking-wider text-muted">
+                    Лента избранного на главной
+                  </span>
+                  <label className="flex items-center gap-2 text-xs text-ink">
+                    <input
+                      type="checkbox"
+                      checked={siteData.featured.enabled}
+                      onChange={(e) =>
+                        setSiteData({
+                          ...siteData,
+                          featured: { ...siteData.featured, enabled: e.target.checked },
+                        })
+                      }
+                      className="h-4 w-4 accent-[color:var(--color-btn-brown,#7a5c50)]"
+                    />
+                    Показывать на сайте
+                  </label>
+                </div>
+
+                <p className="mt-2 text-xs leading-relaxed text-muted">
+                  Название и подпись пишете сами: «Хиты продаж», «К Новому году» — что нужно.
+                  Изделия тоже выбираете сами, в том порядке, в котором они встанут в ленте.
+                  Если не выбрать ни одного, лента соберётся сама — по одному изделию из
+                  каждого раздела.
+                </p>
+
+                <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                  <div>
+                    <label className="block text-[0.7rem] font-semibold uppercase tracking-wider text-muted mb-1">
+                      Надпись сверху
+                    </label>
+                    <input
+                      type="text"
+                      value={siteData.featured.eyebrow}
+                      onChange={(e) =>
+                        setSiteData({
+                          ...siteData,
+                          featured: { ...siteData.featured, eyebrow: e.target.value },
+                        })
+                      }
+                      placeholder="Например: Избранное мастерской"
+                      className="w-full rounded-xl border border-sand bg-surface px-3 py-2 text-xs text-ink focus:border-btn-brown focus:outline-none"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-[0.7rem] font-semibold uppercase tracking-wider text-muted mb-1">
+                      Заголовок
+                    </label>
+                    <input
+                      type="text"
+                      value={siteData.featured.title}
+                      onChange={(e) =>
+                        setSiteData({
+                          ...siteData,
+                          featured: { ...siteData.featured, title: e.target.value },
+                        })
+                      }
+                      placeholder="Например: Хиты продаж"
+                      className="w-full rounded-xl border border-sand bg-surface px-3 py-2 text-xs text-ink focus:border-btn-brown focus:outline-none"
+                    />
+                  </div>
+                </div>
+
+                <div className="mt-3">
+                  <label className="block text-[0.7rem] font-semibold uppercase tracking-wider text-muted mb-1">
+                    Подпись под заголовком
+                  </label>
+                  <input
+                    type="text"
+                    value={siteData.featured.subtitle}
+                    onChange={(e) =>
+                      setSiteData({
+                        ...siteData,
+                        featured: { ...siteData.featured, subtitle: e.target.value },
+                      })
+                    }
+                    placeholder="Например: то, что чаще всего заказывают к празднику"
+                    className="w-full rounded-xl border border-sand bg-surface px-3 py-2 text-xs text-ink focus:border-btn-brown focus:outline-none"
+                  />
+                </div>
+
+                <div className="mt-4">
+                  <span className="block text-[0.7rem] font-semibold uppercase tracking-wider text-muted mb-1.5">
+                    Выбранные изделия ({siteData.featured.ids.length})
+                  </span>
+
+                  {siteData.featured.ids.length === 0 ? (
+                    <p className="rounded-xl border border-dashed border-sand px-3 py-2.5 text-xs text-muted">
+                      Пока ничего не выбрано — на сайте лента собирается сама.
+                    </p>
+                  ) : (
+                    <div className="flex flex-col gap-1.5">
+                      {siteData.featured.ids.map((id, index) => {
+                        const item = products.find((p) => p.id === id);
+                        return (
+                          <div
+                            key={id}
+                            className="flex items-center gap-2 rounded-xl border border-sand bg-surface px-3 py-2"
+                          >
+                            <span className="text-[0.7rem] text-muted">{index + 1}</span>
+                            <span className="flex-1 truncate text-xs text-ink">
+                              {item ? `${item.title} · ${item.article}` : `Изделие удалено (${id})`}
+                            </span>
+                            <button
+                              type="button"
+                              onClick={() => moveFeatured(index, -1)}
+                              disabled={index === 0}
+                              aria-label="Выше"
+                              className="rounded-full px-2 py-1 text-xs text-muted hover:text-ink disabled:opacity-30"
+                            >
+                              ↑
+                            </button>
+                            <button
+                              type="button"
+                              onClick={() => moveFeatured(index, 1)}
+                              disabled={index === siteData.featured.ids.length - 1}
+                              aria-label="Ниже"
+                              className="rounded-full px-2 py-1 text-xs text-muted hover:text-ink disabled:opacity-30"
+                            >
+                              ↓
+                            </button>
+                            <button
+                              type="button"
+                              onClick={() =>
+                                setSiteData({
+                                  ...siteData,
+                                  featured: {
+                                    ...siteData.featured,
+                                    ids: siteData.featured.ids.filter((x) => x !== id),
+                                  },
+                                })
+                              }
+                              aria-label="Убрать из ленты"
+                              className="rounded-full px-2 py-1 text-xs text-muted hover:text-ink"
+                            >
+                              ✕
+                            </button>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  )}
+                </div>
+
+                <div className="mt-4">
+                  <input
+                    type="text"
+                    value={featuredSearch}
+                    onChange={(e) => setFeaturedSearch(e.target.value)}
+                    placeholder="Найти изделие по названию или артикулу..."
+                    className="w-full rounded-xl border border-sand bg-surface px-3 py-2 text-xs text-ink placeholder:text-muted/50 focus:border-btn-brown focus:outline-none"
+                  />
+
+                  <div className="mt-2 flex max-h-56 flex-col gap-1 overflow-y-auto overscroll-contain rounded-xl border border-sand bg-surface p-2">
+                    {featuredCandidates.length === 0 ? (
+                      <p className="px-2 py-3 text-xs text-muted">Ничего не нашлось.</p>
+                    ) : (
+                      featuredCandidates.map((p) => (
+                        <button
+                          key={p.id}
+                          type="button"
+                          onClick={() =>
+                            setSiteData({
+                              ...siteData,
+                              featured: {
+                                ...siteData.featured,
+                                ids: [...siteData.featured.ids, p.id],
+                              },
+                            })
+                          }
+                          className="flex items-center justify-between gap-3 rounded-lg px-2 py-1.5 text-left text-xs text-ink hover:bg-bg/60"
+                        >
+                          <span className="truncate">{p.title}</span>
+                          <span className="flex-none text-[0.7rem] text-muted">{p.article}</span>
+                        </button>
+                      ))
+                    )}
+                  </div>
+                </div>
               </div>
 
               <button

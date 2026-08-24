@@ -1,12 +1,14 @@
 "use client";
 
 import { Media } from "@/components/ui/Media";
-import { getCover, getProducts } from "@/lib/content";
+import { getCover, getFeatured } from "@/lib/content";
 import Link from "next/link";
 import { useRef } from "react";
 
 export function FeaturedCarousel() {
-  const products = getProducts().slice(0, 10);
+  // Название, подпись и состав ленты задаёт заказчица в админке.
+  const featured = getFeatured();
+  const products = featured.products;
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const scroll = (direction: "left" | "right") => {
@@ -15,18 +17,21 @@ export function FeaturedCarousel() {
     scrollRef.current.scrollBy({ left: offset, behavior: "smooth" });
   };
 
+  // Блок выключен в админке или показывать нечего — секции просто нет.
+  if (!featured.enabled || products.length === 0) return null;
+
   return (
     <section className="relative overflow-hidden bg-surface py-16 md:py-24 border-y border-sand/40">
       <div className="mx-auto max-w-[1500px] px-5 md:px-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-10">
           <div>
-            <span className="eyebrow">Избранное мастерской</span>
+            {featured.eyebrow ? <span className="eyebrow">{featured.eyebrow}</span> : null}
             <h2 className="mt-2 font-display text-3xl leading-tight text-ink sm:text-4xl md:text-5xl">
-              Коллекция сезона
+              {featured.title}
             </h2>
-            <p className="mt-2 text-sm text-muted md:text-base">
-              Популярные авторские работы: от свечей с деревянным фитилём до мыльных букетов
-            </p>
+            {featured.subtitle ? (
+              <p className="mt-2 text-sm text-muted md:text-base">{featured.subtitle}</p>
+            ) : null}
           </div>
 
           <div className="flex items-center gap-3">

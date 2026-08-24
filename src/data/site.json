@@ -63,5 +63,12 @@
       "blurDataURL": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAQAgCdASoMABAAA4BaJZACdAECwOCQM2sAAP7rgihawNqKQ+C8/eOtHDQ45h3Zy0A7GxJ0re7xJEakOaETT9LVRvvyuKr295+zaBCygYigVJcrgw97AAAA",
       "alt": "Анна Манасарян с изделием в руках, профиль"
     }
-  ]
+  ],
+  "featured": {
+    "enabled": true,
+    "eyebrow": "Избранное мастерской",
+    "title": "Коллекция сезона",
+    "subtitle": "Популярные авторские работы: от свечей с деревянным фитилём до мыльных букетов",
+    "ids": []
+  }
 }

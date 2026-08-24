@@ -123,6 +123,28 @@ export function getCover(product: Product) {
 }
 
 /**
+ * Лента «Избранного» на главной: тексты и состав задаёт заказчица в админке.
+ *
+ * Пустой список изделий значит «не выбрано» — тогда лента собирается сама,
+ * по одному изделию из каждой категории. Так на странице всегда что-то есть,
+ * даже пока до выбора не дошли руки.
+ */
+export function getFeatured() {
+  const settings = site.featured;
+  const chosen = (settings?.ids ?? [])
+    .map((id) => products.find((product) => product.id === id))
+    .filter((product): product is Product => product !== undefined);
+
+  return {
+    enabled: settings?.enabled ?? true,
+    eyebrow: settings?.eyebrow || "Избранное мастерской",
+    title: settings?.title || "Коллекция сезона",
+    subtitle: settings?.subtitle || "",
+    products: chosen.length > 0 ? chosen : getFeaturedProducts(10),
+  };
+}
+
+/**
  * Витрина на главной. Берём по одному товару из каждой категории, затем
  * добираем до восьми — так лента не превращается в восемь одинаковых свечей.
  */

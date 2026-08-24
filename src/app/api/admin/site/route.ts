@@ -15,7 +15,7 @@ export async function POST(req: Request) {
 
   try {
     const body = await req.json();
-    const { owner, tagline, intro, contacts, portraitData } = body;
+    const { owner, tagline, intro, contacts, portraitData, featured } = body;
     const current = getSite();
 
     let portrait = current.portrait;
@@ -40,6 +40,9 @@ export async function POST(req: Request) {
       tagline: tagline ?? current.tagline,
       intro: intro ?? current.intro,
       portrait,
+      // Лента «Избранного» на главной: заказчица правит её целиком, поэтому
+      // блок либо приходит из формы, либо остаётся прежним.
+      featured: featured ?? current.featured,
       contacts: {
         ...current.contacts,
         ...(contacts || {}),

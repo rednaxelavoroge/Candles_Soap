@@ -100,6 +100,21 @@ export const siteSchema = z.object({
    * в руках у мастера, а не на предметной съёмке.
    */
   gallery: z.array(imageSchema).optional(),
+  /**
+   * Лента на главной. Заказчица сама решает, что там стоит: своё название
+   * («Хиты продаж», «К Новому году»), своя подпись и свой список изделий.
+   * Пустой `ids` означает «выбери сама» — тогда лента собирается из каталога
+   * по одному изделию на категорию. `enabled: false` убирает блок со страницы.
+   */
+  featured: z
+    .object({
+      enabled: z.boolean(),
+      eyebrow: z.string(),
+      title: z.string(),
+      subtitle: z.string(),
+      ids: z.array(z.string()),
+    })
+    .optional(),
   contacts: z.object({
     /** Номер для кнопки «Написать в WhatsApp» и звонков (Армения). */
     whatsapp: z.string().nullable(),
