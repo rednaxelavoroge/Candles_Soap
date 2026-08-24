@@ -47,6 +47,9 @@ export default function AdminPage() {
   const [search, setSearch] = useState("");
   // Поиск изделий для ленты «Избранного»
   const [featuredSearch, setFeaturedSearch] = useState("");
+  // Создание нового подраздела прямо из карточки изделия
+  const [newTagTitle, setNewTagTitle] = useState("");
+  const [creatingTag, setCreatingTag] = useState(false);
   const [catFilter, setCatFilter] = useState("all");
 
   // Модалка товара
@@ -311,6 +314,46 @@ export default function AdminPage() {
   };
 
   // Сохранение текстов и Обо мне
+  /**
+   * Заводит новый подраздел и сразу отмечает его у открытого изделия.
+   * На сайте подраздел появится вместе с этим изделием: пустых разделов
+   * в каталоге не бывает.
+   */
+  const handleCreateTag = async () => {
+    const title = newTagTitle.trim();
+    if (!title || !editProduct) return;
+
+    setCreatingTag(true);
+    try {
+      const res = await fetch("/api/admin/tags", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ title }),
+      });
+      const data = await res.json();
+      if (!res.ok || !data.tag) {
+        alert(data.error || "Не удалось создать подраздел");
+        return;
+      }
+
+      setTags(data.tags || []);
+      const currentTags = editProduct.tags || [];
+      if (!currentTags.includes(data.tag.slug)) {
+        setEditProduct({ ...editProduct, tags: [...currentTags, data.tag.slug] });
+      }
+      setNewTagTitle("");
+      showToast(
+        data.existed
+          ? `Подраздел «${data.tag.title}» уже был — отметили его`
+          : `✓ Подраздел «${data.tag.title}» создан и отмечен`,
+      );
+    } catch {
+      alert("Ошибка создания подраздела");
+    } finally {
+      setCreatingTag(false);
+    }
+  };
+
   /** Переставляет изделие в ленте «Избранного» на позицию выше или ниже. */
   const moveFeatured = (index: number, shift: number) => {
     const ids = [...siteData.featured.ids];
@@ -1419,6 +1462,42 @@ export default function AdminPage() {
                   })}
                 </div>
               </div>
+              {/* Новый подраздел заводится прямо отсюда */}
+              <div>
+                <label className="block text-xs font-semibold uppercase tracking-wider text-muted mb-1.5">
+                  Нет нужного подраздела? Создайте свой
+                </label>
+                <div className="flex flex-col gap-2 sm:flex-row">
+                  <input
+                    type="text"
+                    value={newTagTitle}
+                    onChange={(e) => setNewTagTitle(e.target.value)}
+                    onKeyDown={(e) => {
+                      // Enter внутри формы иначе сохранил бы изделие целиком.
+                      if (e.key === "Enter") {
+                        e.preventDefault();
+                        handleCreateTag();
+                      }
+                    }}
+                    placeholder="Например: Свадьба или Мужчинам в подарок"
+                    className="flex-1 rounded-xl border border-sand bg-bg/50 px-4 py-2.5 text-xs text-ink placeholder:text-muted/50 focus:border-btn-brown focus:outline-none"
+                  />
+                  <button
+                    type="button"
+                    onClick={handleCreateTag}
+                    disabled={creatingTag || newTagTitle.trim() === ""}
+                    className="rounded-full btn-brown px-6 py-2.5 text-xs font-semibold uppercase tracking-wider shadow-md disabled:opacity-40"
+                  >
+                    {creatingTag ? "Создаю..." : "+ Создать подраздел"}
+                  </button>
+                </div>
+                <p className="mt-1.5 text-[0.7rem] leading-relaxed text-muted">
+                  Подраздел появится на сайте вместе с этим изделием — внутри того
+                  раздела каталога, к которому изделие относится. Пустых подразделов
+                  в каталоге не бывает.
+                </p>
+              </div>
+
 
               {/* 5 характеристик изделия */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
