@@ -90,8 +90,16 @@ export function getProducts(): Product[] {
   return products;
 }
 
+/**
+ * Изделия категории в том порядке, в каком их расставила заказчица.
+ *
+ * `order` проставляется из панели и не обязан быть у всех сразу: у кого его
+ * нет, тот держит своё место в конце, а не улетает в начало списка.
+ */
 export function getProductsByCategory(slug: string): Product[] {
-  return products.filter((product) => product.category === slug);
+  return products
+    .filter((product) => product.category === slug)
+    .sort((a, b) => (a.order ?? Number.MAX_SAFE_INTEGER) - (b.order ?? Number.MAX_SAFE_INTEGER));
 }
 
 export function getProduct(category: string, slug: string): Product | undefined {
