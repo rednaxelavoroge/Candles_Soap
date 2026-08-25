@@ -13,18 +13,6 @@
   },
   {
     "kind": "video",
-    "src": "/catalog/video/kniga-s-pionami.mp4",
-    "poster": {
-      "src": "/catalog/soap/kniga-s-pionami-01.webp",
-      "width": 1600,
-      "height": 1600,
-      "blurDataURL": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAQAgCdASoQABAAA4BaJQBOgB5yvee2+JmAAP7xgZmx93D1yuh1poQDv8SKgSD2KslLmWHDvQO+ISH2tZ+ysc68InCHH3jETPjYDZtUhCIu7Zj9GWbvQHIiQ/K1wAAA",
-      "alt": "Книга с пионами — короткий ролик"
-    },
-    "caption": ""
-  },
-  {
-    "kind": "video",
     "src": "/catalog/video/serdtse-v-ladonyakh.mp4",
     "poster": {
       "src": "/catalog/gypsum/serdtse-v-ladonyakh-01.webp",
@@ -381,18 +369,6 @@
   },
   {
     "kind": "video",
-    "src": "/catalog/video/candle-process-22.mp4",
-    "poster": {
-      "src": "/catalog/video/candle-process-22-poster.webp",
-      "width": 720,
-      "height": 1280,
-      "blurDataURL": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAADQAwCdASoQABwAPu1kqk2ppaQiMAgBMB2JQBOgBDuOtQ0TX7U54EAA/riiszlw2sGysYHG4AxXuZFZPj+KINu9OHUShHXJpE+YyV+3iFoewq9/O3rrjmSyeg6rOda6ULITdqWuWeYfYUEu6g7Pun8kqIpYHYzJu2fCkRiigDc2AAAA",
-      "alt": "Кадр из мастерской"
-    },
-    "caption": ""
-  },
-  {
-    "kind": "video",
     "src": "/catalog/video/candle-process-23.mp4",
     "poster": {
       "src": "/catalog/video/candle-process-23-poster.webp",
@@ -483,6 +459,18 @@
       "width": 720,
       "height": 1280,
       "blurDataURL": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAAAwBACdASoQABwAPu1iqU2ppaOiMAgBMB2JZAC7ABmBDI06LSUsJi4b6YAA8DFIl3OGWwViQnklpGMx8iPOa96eBzY9ZKlOitJo9yZfxl4QPMTF/zixA9WNpNjSrIfEmoaP4qlAAAA=",
+      "alt": "Кадр из мастерской"
+    },
+    "caption": ""
+  },
+  {
+    "kind": "video",
+    "src": "/catalog/video/soap-process-8.mp4",
+    "poster": {
+      "src": "/catalog/video/soap-process-8-poster.webp",
+      "width": 720,
+      "height": 1280,
+      "blurDataURL": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAABQAwCdASoQABwAPu1iqU2ppaOiMAgBMB2JagC7AC0LHwmL0ADM+6XlX45/BRvu0QJ/jfKnquuXmjO9gPioqKOs5k30JohLTpwa7v5aekTbRJXd9zV94d6p3v5gAA==",
       "alt": "Кадр из мастерской"
     },
     "caption": ""
