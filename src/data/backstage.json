@@ -13,6 +13,18 @@
   },
   {
     "kind": "video",
+    "src": "/catalog/video/kniga-s-pionami.mp4",
+    "poster": {
+      "src": "/catalog/soap/kniga-s-pionami-01.webp",
+      "width": 1600,
+      "height": 1600,
+      "blurDataURL": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAQAgCdASoQABAAA4BaJQBOgB5yvee2+JmAAP7xgZmx93D1yuh1poQDv8SKgSD2KslLmWHDvQO+ISH2tZ+ysc68InCHH3jETPjYDZtUhCIu7Zj9GWbvQHIiQ/K1wAAA",
+      "alt": "Книга с пионами — короткий ролик"
+    },
+    "caption": ""
+  },
+  {
+    "kind": "video",
     "src": "/catalog/video/serdtse-v-ladonyakh.mp4",
     "poster": {
       "src": "/catalog/gypsum/serdtse-v-ladonyakh-01.webp",
@@ -471,18 +483,6 @@
       "width": 720,
       "height": 1280,
       "blurDataURL": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAAAwBACdASoQABwAPu1iqU2ppaOiMAgBMB2JZAC7ABmBDI06LSUsJi4b6YAA8DFIl3OGWwViQnklpGMx8iPOa96eBzY9ZKlOitJo9yZfxl4QPMTF/zixA9WNpNjSrIfEmoaP4qlAAAA=",
-      "alt": "Кадр из мастерской"
-    },
-    "caption": ""
-  },
-  {
-    "kind": "video",
-    "src": "/catalog/video/soap-process-8.mp4",
-    "poster": {
-      "src": "/catalog/video/soap-process-8-poster.webp",
-      "width": 720,
-      "height": 1280,
-      "blurDataURL": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAABQAwCdASoQABwAPu1iqU2ppaOiMAgBMB2JagC7AC0LHwmL0ADM+6XlX45/BRvu0QJ/jfKnquuXmjO9gPioqKOs5k30JohLTpwa7v5aekTbRJXd9zV94d6p3v5gAA==",
       "alt": "Кадр из мастерской"
     },
     "caption": ""
