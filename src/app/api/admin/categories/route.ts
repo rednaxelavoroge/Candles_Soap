@@ -1,13 +1,19 @@
 import { checkAdminAuth } from "@/lib/admin-auth";
-import { saveJsonData, saveMediaFile } from "@/lib/data-storage";
+import { loadJsonData, saveJsonData, saveMediaFile } from "@/lib/data-storage";
 import { getCategories } from "@/lib/content";
 import type { Category } from "@/lib/schemas";
 import { NextResponse } from "next/server";
 
+const FILE = "src/data/categories.json";
+
+function currentCategories(): Promise<Category[]> {
+  return loadJsonData<Category[]>(FILE, getCategories());
+}
+
 export async function GET() {
   const isAuth = await checkAdminAuth();
   if (!isAuth) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-  return NextResponse.json({ categories: getCategories() });
+  return NextResponse.json({ categories: await currentCategories() });
 }
 
 export async function POST(req: Request) {
@@ -40,7 +46,7 @@ export async function POST(req: Request) {
         .replace(/^-+|-+$/g, "");
     }
 
-    const current = getCategories();
+    const current = await currentCategories();
     let finalCover = category.cover || null;
 
     if (coverData && coverData.base64) {
@@ -76,7 +82,7 @@ export async function POST(req: Request) {
       updated = [...current, targetCategory];
     }
 
-    await saveJsonData("src/data/categories.json", updated);
+    await saveJsonData(FILE, updated);
     return NextResponse.json({ ok: true, category: targetCategory, categories: updated });
   } catch (err) {
     console.error("Categories API error:", err);
@@ -93,10 +99,10 @@ export async function DELETE(req: Request) {
     const slug = searchParams.get("slug");
     if (!slug) return NextResponse.json({ error: "Slug не указан" }, { status: 400 });
 
-    const current = getCategories();
+    const current = await currentCategories();
     const updated = current.filter((c) => c.slug !== slug);
 
-    await saveJsonData("src/data/categories.json", updated);
+    await saveJsonData(FILE, updated);
     return NextResponse.json({ ok: true, categories: updated });
   } catch (err) {
     console.error("Delete category API error:", err);

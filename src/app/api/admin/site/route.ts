@@ -1,12 +1,19 @@
 import { checkAdminAuth } from "@/lib/admin-auth";
-import { saveJsonData, saveMediaFile } from "@/lib/data-storage";
+import { loadJsonData, saveJsonData, saveMediaFile } from "@/lib/data-storage";
 import { getSite } from "@/lib/content";
+import type { Site } from "@/lib/schemas";
 import { NextResponse } from "next/server";
+
+const FILE = "src/data/site.json";
+
+function currentSite(): Promise<Site> {
+  return loadJsonData<Site>(FILE, getSite());
+}
 
 export async function GET() {
   const isAuth = await checkAdminAuth();
   if (!isAuth) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-  return NextResponse.json({ site: getSite() });
+  return NextResponse.json({ site: await currentSite() });
 }
 
 export async function POST(req: Request) {
@@ -16,7 +23,7 @@ export async function POST(req: Request) {
   try {
     const body = await req.json();
     const { owner, tagline, intro, contacts, portraitData, featured } = body;
-    const current = getSite();
+    const current = await currentSite();
 
     let portrait = current.portrait;
     if (portraitData && portraitData.base64) {
@@ -49,7 +56,7 @@ export async function POST(req: Request) {
       },
     };
 
-    await saveJsonData("src/data/site.json", updated);
+    await saveJsonData(FILE, updated);
     return NextResponse.json({ ok: true, site: updated });
   } catch (err) {
     console.error("Site API error:", err);
