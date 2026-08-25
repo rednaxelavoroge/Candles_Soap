@@ -1,6 +1,18 @@
 [
   {
     "kind": "video",
+    "src": "/catalog/video/ledyanaya-kupel.mp4",
+    "poster": {
+      "src": "/catalog/candles/ledyanaya-kupel-01.webp",
+      "width": 1600,
+      "height": 1200,
+      "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAAAQAgCdASoQAAwAA4BaJYwCsAEKQonkllsAAP7NxITFdJeC0QlihEzm1AJ5a3YAMlYaxjLnIy9lhQQhnPo62W9tnRvhAAAA",
+      "alt": "Ледяная купель — короткий ролик"
+    },
+    "caption": ""
+  },
+  {
+    "kind": "video",
     "src": "/catalog/video/kniga-s-pionami.mp4",
     "poster": {
       "src": "/catalog/soap/kniga-s-pionami-01.webp",
@@ -152,18 +164,6 @@
       "height": 1280,
       "blurDataURL": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAABQBACdASoQABwAPu1iqU2ppaQiMAgBMB2JZQCsAdwA9FDS19+AfjzVz5kAAP6V0QUCoAjDpTcXa+3lgf+uofe8vgt+wekAr6mhdvLk2+DsxskwhcYGqQwffk5FUgTod5BMqcTFyTYkQlUxN2f9Cu4h0HMgd94ofii7ZgDHaE0psEGiUVuTOXYAAAA=",
       "alt": "Формовые свечи мастерской — процесс создания"
-    },
-    "caption": ""
-  },
-  {
-    "kind": "video",
-    "src": "/catalog/video/candle-process-7.mp4",
-    "poster": {
-      "src": "/catalog/posters/candle-process-7.webp",
-      "width": 720,
-      "height": 406,
-      "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAAAQAgCdASoQABAAA4BaJYwCsADHk/SoRNOAAP72k4x6UdZcIM/djc3aCMEX4G3skFBwGDAmd5t9cLlQ8XMAsGY97vJnJVcC0g0DRPAA",
-      "alt": "Атмосфера вечерней мастерской — процесс создания"
     },
     "caption": ""
   },
