@@ -144,17 +144,6 @@
     "caption": ""
   },
   {
-    "kind": "image",
-    "image": {
-      "src": "/about/podarok-1.webp",
-      "width": 1600,
-      "height": 1200,
-      "blurDataURL": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADwAQCdASoQAAwAA4BaJaAAD43vuchNrUgA/qNnwz2ZzU20AkWnBwbbwClaallyvrR+zMo3UGGF8F65882bUL2ES8qzyQkvvtGC1URoV2r8/99KGrX8UAAA",
-      "alt": "Мыло-книга с пионами как подарок"
-    },
-    "caption": ""
-  },
-  {
     "kind": "video",
     "src": "/catalog/video/candle-process-8.mp4",
     "poster": {
