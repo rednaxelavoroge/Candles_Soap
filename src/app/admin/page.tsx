@@ -7,7 +7,10 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
-type Tab = "products" | "categories" | "texts" | "backstage" | "settings";
+type Tab = "products" | "categories" | "sections" | "texts" | "backstage" | "settings";
+
+/** Ролик из библиотеки мастерской: то, что уже загружено в проект. */
+type LibraryVideo = { src: string; name: string; poster: string | null; caption: string | null };
 
 export default function AdminPage() {
   const router = useRouter();
@@ -88,6 +91,19 @@ export default function AdminPage() {
     blurDataURL: string;
   } | null>(null);
 
+  // Библиотека роликов мастерской для карточки изделия
+  const [videoLibrary, setVideoLibrary] = useState<LibraryVideo[]>([]);
+  const [videoPickerOpen, setVideoPickerOpen] = useState(false);
+  const [uploadingVideo, setUploadingVideo] = useState(false);
+
+  // Переименование подраздела на вкладке «Подразделы»
+  const [editingTagSlug, setEditingTagSlug] = useState<string | null>(null);
+  const [editingTagTitle, setEditingTagTitle] = useState("");
+
+  // Пока порядок уезжает на сервер, стрелки заблокированы: два быстрых нажатия
+  // подряд ушли бы от одного и того же исходного списка и затёрли друг друга.
+  const [savingOrder, setSavingOrder] = useState(false);
+
   // Уведомления
   const [toast, setToast] = useState<string | null>(null);
 
@@ -107,11 +123,12 @@ export default function AdminPage() {
           return;
         }
 
-        const [prodRes, backRes, siteRes, catRes] = await Promise.all([
+        const [prodRes, backRes, siteRes, catRes, vidRes] = await Promise.all([
           fetch("/api/admin/products"),
           fetch("/api/admin/backstage"),
           fetch("/api/admin/site"),
           fetch("/api/admin/categories"),
+          fetch("/api/admin/videos"),
         ]);
 
         if (prodRes.ok) {
@@ -126,6 +143,10 @@ export default function AdminPage() {
         if (backRes.ok) {
           const b = await backRes.json();
           setBackstage(b.backstage || []);
+        }
+        if (vidRes.ok) {
+          const v = await vidRes.json();
+          setVideoLibrary(v.videos || []);
         }
         if (siteRes.ok) {
           const s = await siteRes.json();
@@ -209,6 +230,10 @@ export default function AdminPage() {
       alert("Укажите название и категорию изделия");
       return;
     }
+    if ((editProduct.images?.length ?? 0) + newImagesData.length === 0) {
+      alert("Добавьте хотя бы одну фотографию изделия");
+      return;
+    }
 
     try {
       const res = await fetch("/api/admin/products", {
@@ -235,7 +260,8 @@ export default function AdminPage() {
         setEditProduct(null);
         setNewImagesData([]);
         setImageStats(null);
-        showToast("✓ Изделие успешно сохранено!");
+        setVideoPickerOpen(false);
+        showToast("✓ Сохранено. На сайте обновится через несколько минут");
       } else {
         alert(data.error || "Ошибка сохранения");
       }
@@ -354,6 +380,235 @@ export default function AdminPage() {
     }
   };
 
+  /**
+   * Переименование подраздела. Адрес раздела (слаг) остаётся прежним: он стоит
+   * в ссылке, а ссылку заказчица могла уже кому-то отправить.
+   */
+  const handleRenameTag = async (slug: string) => {
+    const title = editingTagTitle.trim();
+    if (!title) return;
+
+    try {
+      const res = await fetch("/api/admin/tags", {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ slug, title }),
+      });
+      const data = await res.json();
+      if (res.ok && data.ok) {
+        setTags(data.tags);
+        setEditingTagSlug(null);
+        setEditingTagTitle("");
+        showToast("✓ Название подраздела изменено");
+      } else {
+        alert(data.error || "Не удалось переименовать подраздел");
+      }
+    } catch {
+      alert("Ошибка сети при переименовании");
+    }
+  };
+
+  /** Удаление подраздела: метка снимается и со всех изделий, где стояла. */
+  const handleDeleteTag = async (slug: string, title: string) => {
+    const used = products.filter((p) => p.tags.includes(slug)).length;
+    const warning = used > 0 ? `\n\nОн отмечен у ${used} изд. — метка снимется, сами изделия останутся.` : "";
+    if (!confirm(`Удалить подраздел «${title}»?${warning}`)) return;
+
+    try {
+      const res = await fetch(`/api/admin/tags?slug=${encodeURIComponent(slug)}`, {
+        method: "DELETE",
+      });
+      const data = await res.json();
+      if (res.ok && data.ok) {
+        setTags(data.tags);
+        setProducts((prev) =>
+          prev.map((p) =>
+            p.tags.includes(slug) ? { ...p, tags: p.tags.filter((t) => t !== slug) } : p,
+          ),
+        );
+        showToast(`Подраздел «${title}» удалён`);
+      } else {
+        alert(data.error || "Не удалось удалить подраздел");
+      }
+    } catch {
+      alert("Ошибка сети при удалении");
+    }
+  };
+
+  /** Порядок подразделов в каталоге: в нём они и покажутся на сайте. */
+  const moveTag = async (index: number, shift: number) => {
+    const target = index + shift;
+    if (target < 0 || target >= tags.length || savingOrder) return;
+
+    const next = [...tags];
+    [next[index], next[target]] = [next[target], next[index]];
+    setTags(next);
+
+    setSavingOrder(true);
+    try {
+      const res = await fetch("/api/admin/tags", {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ order: next.map((t) => t.slug) }),
+      });
+      const data = await res.json();
+      if (res.ok && data.ok) setTags(data.tags);
+      else {
+        setTags(tags);
+        alert(data.error || "Не удалось сохранить порядок");
+      }
+    } catch {
+      setTags(tags);
+      alert("Ошибка сети при сохранении порядка");
+    } finally {
+      setSavingOrder(false);
+    }
+  };
+
+  /** Порядок кадров в бэкстейдже. */
+  const moveBackstage = async (index: number, shift: number) => {
+    const target = index + shift;
+    if (target < 0 || target >= backstage.length || savingOrder) return;
+
+    const next = [...backstage];
+    [next[index], next[target]] = [next[target], next[index]];
+    setBackstage(next);
+
+    setSavingOrder(true);
+    try {
+      const res = await fetch("/api/admin/backstage", {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          order: next.map((item) => (item.kind === "image" ? item.image.src : item.src)),
+        }),
+      });
+      const data = await res.json();
+      if (res.ok && data.ok) setBackstage(data.backstage);
+      else {
+        setBackstage(backstage);
+        alert(data.error || "Не удалось сохранить порядок");
+      }
+    } catch {
+      setBackstage(backstage);
+      alert("Ошибка сети при сохранении порядка");
+    } finally {
+      setSavingOrder(false);
+    }
+  };
+
+  /**
+   * Порядок изделий внутри раздела каталога. Работает по видимому списку,
+   * поэтому доступен только когда выбран один раздел и не задан поиск —
+   * иначе «выше» означало бы позицию в отфильтрованной выборке, а не в разделе.
+   */
+  const moveProduct = async (visible: Product[], index: number, shift: number) => {
+    const target = index + shift;
+    if (target < 0 || target >= visible.length || savingOrder) return;
+
+    const next = [...visible];
+    [next[index], next[target]] = [next[target], next[index]];
+
+    const position = new Map(next.map((p, i) => [p.id, (i + 1) * 10]));
+    const before = products;
+    setProducts((prev) =>
+      prev.map((p) => (position.has(p.id) ? { ...p, order: position.get(p.id) } : p)),
+    );
+
+    setSavingOrder(true);
+    try {
+      const res = await fetch("/api/admin/products", {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ order: next.map((p) => p.id) }),
+      });
+      const data = await res.json();
+      if (!res.ok || !data.ok) {
+        setProducts(before);
+        alert(data.error || "Не удалось сохранить порядок");
+      }
+    } catch {
+      setProducts(before);
+      alert("Ошибка сети при сохранении порядка");
+    } finally {
+      setSavingOrder(false);
+    }
+  };
+
+  /** Убирает фотографию из открытого изделия. Сохранится при нажатии «Сохранить». */
+  const removeProductImage = (index: number) => {
+    if (!editProduct) return;
+    const images = [...(editProduct.images || [])];
+    images.splice(index, 1);
+    setEditProduct({ ...editProduct, images });
+  };
+
+  /** Переставляет фотографию: первая в ряду — обложка изделия в каталоге. */
+  const moveProductImage = (index: number, shift: number) => {
+    if (!editProduct) return;
+    const images = [...(editProduct.images || [])];
+    const target = index + shift;
+    if (target < 0 || target >= images.length) return;
+    [images[index], images[target]] = [images[target], images[index]];
+    setEditProduct({ ...editProduct, images });
+  };
+
+  /** Как ролик называется в библиотеке; если его там нет — имя файла. */
+  const videoTitle = (src: string) =>
+    videoLibrary.find((v) => v.src === src)?.name || src.split("/").pop() || src;
+
+  /** Прикрепляет ролик из библиотеки мастерской к открытому изделию. */
+  const attachVideo = (src: string) => {
+    if (!editProduct) return;
+    const poster = editProduct.images?.[0] || {
+      src: "/placeholder.jpg",
+      width: 800,
+      height: 800,
+      blurDataURL: "",
+      alt: editProduct.title || "",
+    };
+    setEditProduct({ ...editProduct, video: { kind: "file", src, poster } });
+    setVideoPickerOpen(false);
+    showToast("✓ Видео прикреплено к изделию");
+  };
+
+  /**
+   * Загрузка своего ролика. Тяжёлые файлы сюда не проходят — их место на
+   * YouTube, и об этом честно говорит сообщение с сервера.
+   */
+  const handleVideoFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    setUploadingVideo(true);
+    try {
+      const base64 = await new Promise<string>((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve(String(reader.result));
+        reader.onerror = () => reject(new Error("read"));
+        reader.readAsDataURL(file);
+      });
+
+      const res = await fetch("/api/admin/videos", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ base64, fileName: file.name }),
+      });
+      const data = await res.json();
+      if (res.ok && data.ok) {
+        setVideoLibrary((prev) => [{ src: data.src, name: file.name, poster: null, caption: null }, ...prev]);
+        attachVideo(data.src);
+      } else {
+        alert(data.error || "Не удалось загрузить видео");
+      }
+    } catch {
+      alert("Ошибка загрузки видео");
+    } finally {
+      setUploadingVideo(false);
+      e.target.value = "";
+    }
+  };
+
   /** Переставляет изделие в ленте «Избранного» на позицию выше или ниже. */
   const moveFeatured = (index: number, shift: number) => {
     const ids = [...siteData.featured.ids];
@@ -449,13 +704,25 @@ export default function AdminPage() {
   };
 
   // Удаление из бэкстейджа
-  const handleDeleteBackstage = async (index: number) => {
+  /**
+   * Удаление кадра — по пути к файлу, а не по позиции.
+   *
+   * Позиция в панели и позиция в файле расходятся, стоит один раз что-то
+   * переставить или удалить: удалялся не тот кадр, а исчезнувший возвращался
+   * следующим сохранением. Путь к файлу такой подмены не допускает.
+   */
+  const handleDeleteBackstage = async (src: string) => {
     if (!confirm("Удалить этот кадр из бэкстейджа?")) return;
     try {
-      const res = await fetch(`/api/admin/backstage?index=${index}`, { method: "DELETE" });
-      if (res.ok) {
-        setBackstage((prev) => prev.filter((_, idx) => idx !== index));
-        showToast("Кадр удален");
+      const res = await fetch(`/api/admin/backstage?src=${encodeURIComponent(src)}`, {
+        method: "DELETE",
+      });
+      const data = await res.json();
+      if (res.ok && data.ok) {
+        setBackstage(data.backstage);
+        showToast("Кадр удалён — на сайте пропадёт через несколько минут");
+      } else {
+        alert(data.error || "Не удалось удалить кадр");
       }
     } catch {
       alert("Ошибка удаления");
@@ -470,14 +737,24 @@ export default function AdminPage() {
     );
   }
 
-  const filteredProducts = products.filter((p) => {
-    const matchCat = catFilter === "all" || p.category === catFilter;
-    const matchSearch =
-      search === "" ||
-      p.title.toLowerCase().includes(search.toLowerCase()) ||
-      p.article.toLowerCase().includes(search.toLowerCase());
-    return matchCat && matchSearch;
-  });
+  const filteredProducts = products
+    .filter((p) => {
+      const matchCat = catFilter === "all" || p.category === catFilter;
+      const matchSearch =
+        search === "" ||
+        p.title.toLowerCase().includes(search.toLowerCase()) ||
+        p.article.toLowerCase().includes(search.toLowerCase());
+      return matchCat && matchSearch;
+    })
+    // Тот же порядок, что и на сайте: у кого позиция не задана — в конец.
+    .sort((a, b) => (a.order ?? Number.MAX_SAFE_INTEGER) - (b.order ?? Number.MAX_SAFE_INTEGER));
+
+  /**
+   * Стрелки порядка показываем только внутри одного раздела и без поиска:
+   * иначе «выше» означало бы позицию в отфильтрованной выборке, а не в разделе,
+   * и на сайте изделие оказалось бы совсем не там, куда его подняли.
+   */
+  const canReorderProducts = catFilter !== "all" && search.trim() === "";
 
   return (
     <div className="min-h-screen bg-bg pb-20 pt-20 md:pt-28">
@@ -548,6 +825,17 @@ export default function AdminPage() {
             }`}
           >
             Разделы каталога ({categories.length})
+          </button>
+          <button
+            onClick={() => setTab("sections")}
+            type="button"
+            className={`rounded-full px-5 py-2 text-xs font-semibold uppercase tracking-wider transition-all ${
+              tab === "sections"
+                ? "btn-brown shadow-sm"
+                : "bg-surface/60 text-muted hover:text-ink"
+            }`}
+          >
+            Подразделы ({tags.length})
           </button>
           <button
             onClick={() => setTab("texts")}
@@ -623,6 +911,7 @@ export default function AdminPage() {
                   });
                   setNewImagesData([]);
                   setImageStats(null);
+                  setVideoPickerOpen(false);
                   setIsModalOpen(true);
                 }}
                 type="button"
@@ -632,8 +921,14 @@ export default function AdminPage() {
               </button>
             </div>
 
-            <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
-              {filteredProducts.map((p) => {
+            <p className="mt-6 text-[0.7rem] leading-relaxed text-muted">
+              {canReorderProducts
+                ? "Порядок карточек здесь — это порядок изделий в разделе на сайте. Стрелками ↑ ↓ поднимите к сезону нужное изделие."
+                : "Чтобы менять порядок изделий, выберите один раздел в списке слева и очистите поиск — тогда у карточек появятся стрелки ↑ ↓."}
+            </p>
+
+            <div className="mt-3 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+              {filteredProducts.map((p, index) => {
                 const cover = p.images?.[0]?.src || "/placeholder.jpg";
                 return (
                   <div
@@ -661,12 +956,37 @@ export default function AdminPage() {
                       </p>
                     </div>
 
+                    {canReorderProducts ? (
+                      <div className="mt-2.5 flex items-center gap-1 border-t border-sand/40 pt-2">
+                        <button
+                          type="button"
+                          onClick={() => moveProduct(filteredProducts, index, -1)}
+                          disabled={index === 0 || savingOrder}
+                          aria-label="Поднять выше в разделе"
+                          className="rounded-full px-2 py-1 text-xs text-muted hover:text-ink disabled:opacity-30"
+                        >
+                          ↑
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => moveProduct(filteredProducts, index, 1)}
+                          disabled={index === filteredProducts.length - 1 || savingOrder}
+                          aria-label="Опустить ниже в разделе"
+                          className="rounded-full px-2 py-1 text-xs text-muted hover:text-ink disabled:opacity-30"
+                        >
+                          ↓
+                        </button>
+                        <span className="ml-auto text-[0.65rem] text-muted">{index + 1}</span>
+                      </div>
+                    ) : null}
+
                     <div className="mt-3 flex items-center justify-between border-t border-sand/40 pt-2.5">
                       <button
                         onClick={() => {
                           setEditProduct(p);
                           setNewImagesData([]);
                           setImageStats(null);
+                          setVideoPickerOpen(false);
                           setIsModalOpen(true);
                         }}
                         type="button"
@@ -767,6 +1087,138 @@ export default function AdminPage() {
                 </div>
               ))}
             </div>
+          </div>
+        ) : null}
+
+        {/* 2б. ВКЛАДКА ПОДРАЗДЕЛЫ */}
+        {tab === "sections" ? (
+          <div className="mt-8 max-w-4xl">
+            <div>
+              <h2 className="font-display text-lg font-medium text-ink">
+                Подразделы каталога
+              </h2>
+              <p className="mt-1.5 max-w-2xl text-xs leading-relaxed text-muted">
+                Подраздел — это тема внутри раздела: «Свечи → Новый год». Порядок в
+                этом списке — это порядок, в котором подразделы стоят на странице
+                раздела. Подняли «Новый год» наверх — он встал первым; прошёл
+                праздник — опустили вниз. Подраздел показывается только там, где
+                есть отмеченные им изделия.
+              </p>
+            </div>
+
+            <div className="mt-6 flex flex-col gap-2">
+              {tags.length === 0 ? (
+                <p className="rounded-2xl border border-dashed border-sand p-6 text-xs text-muted">
+                  Подразделов пока нет. Новый заводится в карточке изделия — там же,
+                  где отмечают темы.
+                </p>
+              ) : (
+                tags.map((t, index) => {
+                  const used = products.filter((p) => p.tags.includes(t.slug)).length;
+                  const isEditing = editingTagSlug === t.slug;
+
+                  return (
+                    <div
+                      key={t.slug}
+                      className="flex flex-wrap items-center gap-3 rounded-2xl border border-sand/60 bg-surface px-4 py-3 shadow-sm"
+                    >
+                      <span className="w-6 shrink-0 text-xs text-muted">{index + 1}</span>
+
+                      <div className="flex shrink-0 items-center gap-1">
+                        <button
+                          type="button"
+                          onClick={() => moveTag(index, -1)}
+                          disabled={index === 0 || savingOrder}
+                          aria-label="Поднять выше"
+                          className="rounded-full px-2 py-1 text-xs text-muted hover:text-ink disabled:opacity-30"
+                        >
+                          ↑
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => moveTag(index, 1)}
+                          disabled={index === tags.length - 1 || savingOrder}
+                          aria-label="Опустить ниже"
+                          className="rounded-full px-2 py-1 text-xs text-muted hover:text-ink disabled:opacity-30"
+                        >
+                          ↓
+                        </button>
+                      </div>
+
+                      {isEditing ? (
+                        <input
+                          type="text"
+                          autoFocus
+                          value={editingTagTitle}
+                          onChange={(e) => setEditingTagTitle(e.target.value)}
+                          onKeyDown={(e) => {
+                            if (e.key === "Enter") {
+                              e.preventDefault();
+                              handleRenameTag(t.slug);
+                            }
+                            if (e.key === "Escape") setEditingTagSlug(null);
+                          }}
+                          className="min-w-0 flex-1 rounded-xl border border-sand bg-bg/50 px-3 py-2 text-xs text-ink focus:border-btn-brown focus:outline-none"
+                        />
+                      ) : (
+                        <span className="min-w-0 flex-1 truncate text-sm font-medium text-ink">
+                          {t.title}
+                        </span>
+                      )}
+
+                      <span className="shrink-0 rounded-full bg-sand/40 px-2.5 py-0.5 text-[0.65rem] text-muted">
+                        {used} изд.
+                      </span>
+
+                      {isEditing ? (
+                        <div className="flex shrink-0 items-center gap-2">
+                          <button
+                            type="button"
+                            onClick={() => handleRenameTag(t.slug)}
+                            className="rounded-full btn-brown px-4 py-1.5 text-[0.7rem] font-semibold"
+                          >
+                            Сохранить
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => setEditingTagSlug(null)}
+                            className="text-[0.7rem] text-muted hover:text-ink"
+                          >
+                            Отмена
+                          </button>
+                        </div>
+                      ) : (
+                        <div className="flex shrink-0 items-center gap-3">
+                          <button
+                            type="button"
+                            onClick={() => {
+                              setEditingTagSlug(t.slug);
+                              setEditingTagTitle(t.title);
+                            }}
+                            className="text-[0.7rem] font-medium text-btn-brown hover:underline"
+                          >
+                            Переименовать
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => handleDeleteTag(t.slug, t.title)}
+                            className="text-[0.7rem] text-red-500 hover:text-red-700"
+                          >
+                            Удалить
+                          </button>
+                        </div>
+                      )}
+                    </div>
+                  );
+                })
+              )}
+            </div>
+
+            <p className="mt-6 rounded-2xl border border-sand/60 bg-bg/40 p-4 text-[0.7rem] leading-relaxed text-muted">
+              Новый подраздел заводится там, где он нужен: откройте изделие на
+              вкладке «Изделия» и внизу списка тем нажмите «Создать подраздел» —
+              он сразу встанет и в этот список.
+            </p>
           </div>
         ) : null}
 
@@ -1082,25 +1534,62 @@ export default function AdminPage() {
               </form>
             </div>
 
-            <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
+            <p className="mt-6 text-[0.7rem] leading-relaxed text-muted">
+              Порядок кадров здесь — это порядок на странице «Бэкстейдж».
+              Стрелками ↑ ↓ можно поставить нужный кадр вперёд.
+            </p>
+
+            <div className="mt-3 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
               {backstage.map((b, idx) => {
-                const src = b.kind === "image" ? b.image.src : b.poster.src;
+                const poster = b.kind === "image" ? b.image.src : b.poster.src;
+                const mediaSrc = b.kind === "image" ? b.image.src : b.src;
                 return (
                   <div
-                    key={idx}
+                    key={mediaSrc}
                     className="relative overflow-hidden rounded-2xl border border-sand/60 bg-surface p-2.5 shadow-sm"
                   >
                     <div className="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-sand/30">
-                      <Image src={src} alt={b.caption} fill sizes="300px" className="object-cover" />
+                      <Image src={poster} alt={b.caption} fill sizes="300px" className="object-cover" />
+                      {b.kind === "video" ? (
+                        <span className="absolute top-2 left-2 rounded-full bg-ink/75 px-2 py-0.5 text-[0.6rem] font-semibold uppercase text-white backdrop-blur-sm">
+                          Видео
+                        </span>
+                      ) : null}
+                      <span className="absolute top-2 right-2 rounded-full bg-ink/75 px-2 py-0.5 text-[0.6rem] font-semibold text-white backdrop-blur-sm">
+                        {idx + 1}
+                      </span>
                     </div>
                     <p className="mt-2 text-xs font-medium text-ink line-clamp-1">{b.caption}</p>
-                    <button
-                      onClick={() => handleDeleteBackstage(idx)}
-                      type="button"
-                      className="mt-2 text-[0.7rem] text-red-500 hover:underline"
-                    >
-                      Удалить кадр
-                    </button>
+
+                    <div className="mt-2 flex items-center justify-between border-t border-sand/40 pt-2">
+                      <div className="flex items-center gap-1">
+                        <button
+                          type="button"
+                          onClick={() => moveBackstage(idx, -1)}
+                          disabled={idx === 0 || savingOrder}
+                          aria-label="Переставить раньше"
+                          className="rounded-full px-2 py-1 text-xs text-muted hover:text-ink disabled:opacity-30"
+                        >
+                          ↑
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => moveBackstage(idx, 1)}
+                          disabled={idx === backstage.length - 1 || savingOrder}
+                          aria-label="Переставить позже"
+                          className="rounded-full px-2 py-1 text-xs text-muted hover:text-ink disabled:opacity-30"
+                        >
+                          ↓
+                        </button>
+                      </div>
+                      <button
+                        onClick={() => handleDeleteBackstage(mediaSrc)}
+                        type="button"
+                        className="text-[0.7rem] text-red-500 hover:underline"
+                      >
+                        Удалить
+                      </button>
+                    </div>
                   </div>
                 );
               })}
@@ -1411,17 +1900,50 @@ export default function AdminPage() {
                 </div>
               </div>
 
-              <div>
-                <label className="block text-xs font-semibold uppercase tracking-wider text-muted mb-1">
-                  Артикул
-                </label>
-                <input
-                  type="text"
-                  value={editProduct.article || ""}
-                  onChange={(e) => setEditProduct({ ...editProduct, article: e.target.value })}
-                  placeholder="СВ-01"
-                  className="w-full rounded-xl border border-sand bg-bg/50 px-4 py-2.5 text-xs text-ink focus:border-btn-brown focus:outline-none"
-                />
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                <div>
+                  <label className="block text-xs font-semibold uppercase tracking-wider text-muted mb-1">
+                    Артикул
+                  </label>
+                  <input
+                    type="text"
+                    value={editProduct.article || ""}
+                    onChange={(e) => setEditProduct({ ...editProduct, article: e.target.value })}
+                    placeholder="СВ-01"
+                    className="w-full rounded-xl border border-sand bg-bg/50 px-4 py-2.5 text-xs text-ink focus:border-btn-brown focus:outline-none"
+                  />
+                </div>
+
+                {/*
+                  Адрес страницы. Название правится свободно и адрес за ним не
+                  тянется — ссылку, которую заказчица кому-то отправила, менять
+                  без спроса нельзя. Но если адрес и правда некрасивый, вот поле.
+                */}
+                <div>
+                  <label className="block text-xs font-semibold uppercase tracking-wider text-muted mb-1">
+                    Адрес страницы (в ссылке)
+                  </label>
+                  <input
+                    type="text"
+                    value={editProduct.slug || ""}
+                    onChange={(e) =>
+                      setEditProduct({
+                        ...editProduct,
+                        slug: e.target.value
+                          .toLowerCase()
+                          .replace(/[^a-z0-9-]+/g, "-")
+                          .replace(/-+/g, "-"),
+                      })
+                    }
+                    placeholder="svecha-soty"
+                    className="w-full rounded-xl border border-sand bg-bg/50 px-4 py-2.5 text-xs text-ink focus:border-btn-brown focus:outline-none"
+                  />
+                  <p className="mt-1 text-[0.7rem] leading-relaxed text-muted">
+                    Латиницей. Название можно менять как угодно — адрес от этого не
+                    меняется, старые ссылки продолжают работать. Меняйте его, только
+                    если сам адрес вам не нравится.
+                  </p>
+                </div>
               </div>
 
               <div>
@@ -1597,9 +2119,94 @@ export default function AdminPage() {
                   />
                 </div>
 
-                <div>
+              </div>
+
+              {/*
+                Видео изделия. Съёмка процесса уже лежит в проекте, поэтому
+                главный путь — выбрать готовый ролик, а не загружать заново:
+                тяжёлый файл с телефона в запрос всё равно не помещается.
+              */}
+              <div className="rounded-2xl border border-dashed border-sand p-4 bg-bg/30">
+                <label className="block text-xs font-semibold uppercase tracking-wider text-ink mb-1">
+                  🎬 Видео изделия
+                </label>
+
+                {editProduct.video ? (
+                  <div className="mt-2 flex flex-wrap items-center gap-3 rounded-xl border border-sand bg-surface px-3 py-2.5">
+                    <span className="min-w-0 flex-1 truncate text-xs text-ink">
+                      {editProduct.video.kind === "file"
+                        ? videoTitle(editProduct.video.src)
+                        : `Ролик ${editProduct.video.kind === "youtube" ? "YouTube" : "Vimeo"}: ${editProduct.video.id}`}
+                    </span>
+                    <button
+                      type="button"
+                      onClick={() => setEditProduct({ ...editProduct, video: null })}
+                      className="shrink-0 text-[0.7rem] text-red-500 hover:underline"
+                    >
+                      Убрать видео
+                    </button>
+                  </div>
+                ) : (
+                  <p className="mt-1 text-[0.7rem] text-muted">Видео пока не прикреплено.</p>
+                )}
+
+                <div className="mt-3 flex flex-wrap items-center gap-3">
+                  <button
+                    type="button"
+                    onClick={() => setVideoPickerOpen((open) => !open)}
+                    className="rounded-full border border-sand bg-surface px-4 py-2 text-[0.7rem] font-semibold text-ink hover:bg-sand/30"
+                  >
+                    {videoPickerOpen ? "Свернуть список" : `Выбрать из моих роликов (${videoLibrary.length})`}
+                  </button>
+
+                  <label className="cursor-pointer rounded-full border border-sand bg-surface px-4 py-2 text-[0.7rem] font-semibold text-ink hover:bg-sand/30">
+                    {uploadingVideo ? "Загружаю..." : "Загрузить короткий ролик"}
+                    <input
+                      type="file"
+                      accept="video/mp4,video/*"
+                      onChange={handleVideoFileChange}
+                      disabled={uploadingVideo}
+                      className="hidden"
+                    />
+                  </label>
+                </div>
+
+                {videoPickerOpen ? (
+                  <div
+                    data-lenis-prevent
+                    className="mt-3 max-h-56 overflow-y-auto overscroll-contain rounded-xl border border-sand bg-surface"
+                  >
+                    {videoLibrary.length === 0 ? (
+                      <p className="px-3 py-4 text-xs text-muted">Библиотека роликов пуста.</p>
+                    ) : (
+                      videoLibrary.map((v) => (
+                        <button
+                          key={v.src}
+                          type="button"
+                          onClick={() => attachVideo(v.src)}
+                          className={`flex w-full items-center gap-3 border-b border-sand/40 px-3 py-2 text-left last:border-0 hover:bg-sand/20 ${
+                            editProduct.video?.kind === "file" && editProduct.video.src === v.src
+                              ? "bg-sand/30"
+                              : ""
+                          }`}
+                        >
+                          <span className="relative h-10 w-8 shrink-0 overflow-hidden rounded-md bg-sand/40">
+                            {v.poster ? (
+                              <Image src={v.poster} alt="" fill sizes="32px" className="object-cover" />
+                            ) : null}
+                          </span>
+                          <span className="min-w-0 flex-1 truncate text-xs text-ink">
+                            {v.caption || v.name}
+                          </span>
+                        </button>
+                      ))
+                    )}
+                  </div>
+                ) : null}
+
+                <div className="mt-3">
                   <label className="block text-[0.7rem] font-semibold uppercase tracking-wider text-muted mb-1">
-                    Ссылка на видео YouTube / файл
+                    Или ссылка на YouTube
                   </label>
                   <input
                     type="text"
@@ -1609,40 +2216,40 @@ export default function AdminPage() {
                           ? `https://youtube.com/watch?v=${editProduct.video.id}`
                           : editProduct.video.kind === "vimeo"
                           ? `https://vimeo.com/${editProduct.video.id}`
-                          : editProduct.video.src
+                          : ""
                         : ""
                     }
                     onChange={(e) => {
                       const val = e.target.value.trim();
                       if (!val) {
                         setEditProduct({ ...editProduct, video: null });
-                      } else {
-                        const match = val.match(
-                          /(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([\w-]{11})/,
-                        );
-                        const fallbackPoster = editProduct.images?.[0] || {
-                          src: "/placeholder.jpg",
-                          width: 800,
-                          height: 800,
-                          blurDataURL: "",
-                          alt: editProduct.title || "",
-                        };
-                        if (match) {
-                          setEditProduct({
-                            ...editProduct,
-                            video: { kind: "youtube", id: match[1], poster: fallbackPoster },
-                          });
-                        } else {
-                          setEditProduct({
-                            ...editProduct,
-                            video: { kind: "file", src: val, poster: fallbackPoster },
-                          });
-                        }
+                        return;
                       }
+                      const match = val.match(
+                        /(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([\w-]{11})/,
+                      );
+                      const fallbackPoster = editProduct.images?.[0] || {
+                        src: "/placeholder.jpg",
+                        width: 800,
+                        height: 800,
+                        blurDataURL: "",
+                        alt: editProduct.title || "",
+                      };
+                      setEditProduct({
+                        ...editProduct,
+                        video: match
+                          ? { kind: "youtube", id: match[1], poster: fallbackPoster }
+                          : { kind: "file", src: val, poster: fallbackPoster },
+                      });
                     }}
                     placeholder="https://youtube.com/watch?v=..."
                     className="w-full rounded-xl border border-sand bg-bg/50 px-3 py-2 text-xs text-ink focus:border-btn-brown focus:outline-none"
                   />
+                  <p className="mt-1.5 text-[0.7rem] leading-relaxed text-muted">
+                    Ролик с телефона обычно слишком тяжёлый, чтобы загрузить его прямо
+                    отсюда. Выложите его на YouTube и вставьте ссылку — так он и
+                    открываться у покупателей будет быстрее.
+                  </p>
                 </div>
               </div>
 
@@ -1668,21 +2275,81 @@ export default function AdminPage() {
                   <p className="mt-2 text-xs font-medium text-emerald-700">{imageStats}</p>
                 ) : null}
 
-                <div className="mt-3 flex flex-wrap gap-2">
+                {/*
+                  Первое фото в ряду — обложка изделия в каталоге, поэтому
+                  порядок здесь не косметика. Крестик убирает кадр, стрелки
+                  двигают; всё это записывается кнопкой «Сохранить изделие».
+                */}
+                <div className="mt-3 flex flex-wrap gap-3">
                   {editProduct.images?.map((img, i) => (
-                    <div key={i} className="relative h-16 w-16 overflow-hidden rounded-lg border border-sand">
-                      <Image src={img.src} alt="" fill sizes="64px" className="object-cover" />
+                    <div key={`${img.src}-${i}`} className="w-20">
+                      <div className="relative h-20 w-20 overflow-hidden rounded-lg border border-sand">
+                        <Image src={img.src} alt="" fill sizes="80px" className="object-cover" />
+                        <button
+                          type="button"
+                          onClick={() => removeProductImage(i)}
+                          aria-label="Убрать фотографию"
+                          className="absolute top-0.5 right-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-ink/75 text-[0.7rem] leading-none text-white backdrop-blur-sm hover:bg-red-600"
+                        >
+                          ✕
+                        </button>
+                        {i === 0 ? (
+                          <span className="absolute bottom-0 left-0 right-0 bg-ink/70 px-1 py-0.5 text-center text-[0.5rem] font-semibold uppercase text-white">
+                            Обложка
+                          </span>
+                        ) : null}
+                      </div>
+                      <div className="mt-1 flex items-center justify-center gap-1">
+                        <button
+                          type="button"
+                          onClick={() => moveProductImage(i, -1)}
+                          disabled={i === 0}
+                          aria-label="Переставить левее"
+                          className="rounded px-1.5 py-0.5 text-[0.7rem] text-muted hover:text-ink disabled:opacity-30"
+                        >
+                          ←
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => moveProductImage(i, 1)}
+                          disabled={i === (editProduct.images?.length ?? 0) - 1}
+                          aria-label="Переставить правее"
+                          className="rounded px-1.5 py-0.5 text-[0.7rem] text-muted hover:text-ink disabled:opacity-30"
+                        >
+                          →
+                        </button>
+                      </div>
                     </div>
                   ))}
+
                   {newImagesData.map((img, i) => (
-                    <div key={i} className="relative h-16 w-16 overflow-hidden rounded-lg border-2 border-btn-brown">
-                      <img src={img.base64} alt="" className="h-full w-full object-cover" />
-                      <span className="absolute bottom-0 right-0 bg-btn-brown text-[0.55rem] text-white px-1">
-                        Новое
-                      </span>
+                    <div key={i} className="w-20">
+                      <div className="relative h-20 w-20 overflow-hidden rounded-lg border-2 border-btn-brown">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img src={img.base64} alt="" className="h-full w-full object-cover" />
+                        <button
+                          type="button"
+                          onClick={() =>
+                            setNewImagesData((prev) => prev.filter((_, idx) => idx !== i))
+                          }
+                          aria-label="Убрать новую фотографию"
+                          className="absolute top-0.5 right-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-ink/75 text-[0.7rem] leading-none text-white backdrop-blur-sm hover:bg-red-600"
+                        >
+                          ✕
+                        </button>
+                        <span className="absolute bottom-0 left-0 right-0 bg-btn-brown px-1 py-0.5 text-center text-[0.5rem] font-semibold uppercase text-white">
+                          Новое
+                        </span>
+                      </div>
                     </div>
                   ))}
                 </div>
+
+                {(editProduct.images?.length ?? 0) + newImagesData.length === 0 ? (
+                  <p className="mt-3 text-[0.7rem] text-red-500">
+                    У изделия должна остаться хотя бы одна фотография.
+                  </p>
+                ) : null}
               </div>
 
               </div>
