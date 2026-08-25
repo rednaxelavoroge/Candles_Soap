@@ -155,17 +155,6 @@
     "caption": ""
   },
   {
-    "kind": "image",
-    "image": {
-      "src": "/about/podarok-2.webp",
-      "width": 1600,
-      "height": 1200,
-      "blurDataURL": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAAAwAgCdASoQAAwAA4BaJaACdAYuRdQntS3ZLADfhUx8Wo1f3hSdQ36UZyelwD0aIwIkjSChQxy0lkDeFkEw8Wi4SLVvD8qcg+xkejrgemYL88hkgDB84502qdH79x5/LLW5Rk9CU20AAA==",
-      "alt": "Изделие Анны Манасарян в подарок"
-    },
-    "caption": ""
-  },
-  {
     "kind": "video",
     "src": "/catalog/video/candle-process-8.mp4",
     "poster": {
