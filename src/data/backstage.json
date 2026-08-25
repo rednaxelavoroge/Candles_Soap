@@ -13,18 +13,6 @@
   },
   {
     "kind": "video",
-    "src": "/catalog/video/serdtse-v-ladonyakh.mp4",
-    "poster": {
-      "src": "/catalog/gypsum/serdtse-v-ladonyakh-01.webp",
-      "width": 1600,
-      "height": 1600,
-      "blurDataURL": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAABQAgCdASoQABAAA4BaJZAC7AYv1vDXPZ+9tGAA/vKqmT7EL65s3Oi4rfLR7EJYaEsBMWYXbSc8/lszuqLFDnjzky/3DLXPhWGR+Cf8y67BtgpgRYOX1AQb7K/qfh2AApgeGgul98h8ttsGmT00Ar6AAAA=",
-      "alt": "Сердце в ладонях — короткий ролик"
-    },
-    "caption": ""
-  },
-  {
-    "kind": "video",
     "src": "/catalog/video/soap-process-1.mp4",
     "poster": {
       "src": "/catalog/posters/soap-process-1.webp",
@@ -152,6 +140,17 @@
       "height": 1280,
       "blurDataURL": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAABQBACdASoQABwAPu1iqU2ppaQiMAgBMB2JZQCsAdwA9FDS19+AfjzVz5kAAP6V0QUCoAjDpTcXa+3lgf+uofe8vgt+wekAr6mhdvLk2+DsxskwhcYGqQwffk5FUgTod5BMqcTFyTYkQlUxN2f9Cu4h0HMgd94ofii7ZgDHaE0psEGiUVuTOXYAAAA=",
       "alt": "Формовые свечи мастерской — процесс создания"
+    },
+    "caption": ""
+  },
+  {
+    "kind": "image",
+    "image": {
+      "src": "/about/podarok-1.webp",
+      "width": 1600,
+      "height": 1200,
+      "blurDataURL": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADwAQCdASoQAAwAA4BaJaAAD43vuchNrUgA/qNnwz2ZzU20AkWnBwbbwClaallyvrR+zMo3UGGF8F65882bUL2ES8qzyQkvvtGC1URoV2r8/99KGrX8UAAA",
+      "alt": "Мыло-книга с пионами как подарок"
     },
     "caption": ""
   },
