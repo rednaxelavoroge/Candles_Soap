@@ -39,12 +39,18 @@ export function BackstageTile({
       className="group relative w-full overflow-hidden rounded-xl md:rounded-2xl bg-ink shadow-[0_2px_12px_rgba(0,0,0,0.06)] transition-all duration-500 hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] hover:-translate-y-0.5"
     >
       {playing ? (
+        /*
+          Ролик включают кликом, поэтому запускаем его со звуком: беззвучное
+          видео в ленте про мастерскую бессмысленно, а кому звук не нужен —
+          выключит его в самом плеере. Зацикливания нет намеренно: кадры
+          крутились по кругу и накладывались друг на друга. После конца
+          возвращаемся к обложке — так видно, что ролик закончился.
+        */
         <video
           controls
           autoPlay
           playsInline
-          loop
-          muted
+          onEnded={() => setPlaying(false)}
           poster={item.poster.src}
           className="h-full w-full object-cover"
         >

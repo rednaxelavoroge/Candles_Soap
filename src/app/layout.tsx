@@ -1,6 +1,7 @@
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SmoothScroll } from "@/components/SmoothScroll";
+import { VideoFocus } from "@/components/ui/VideoFocus";
 import { getSite } from "@/lib/content";
 import { comfortaa } from "@/lib/fonts";
 import type { Metadata, Viewport } from "next";
@@ -68,6 +69,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
         <SmoothScroll />
+        <VideoFocus />
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:bg-surface focus:px-4 focus:py-2 focus:text-sm"

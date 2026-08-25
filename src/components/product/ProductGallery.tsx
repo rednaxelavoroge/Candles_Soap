@@ -191,25 +191,12 @@ function PlayBadge() {
 function VideoSlide({ video, title }: { video: Video; title: string }) {
   const [started, setStarted] = useState(false);
 
-  if (video.kind === "file") {
-    return (
-      <video
-        controls
-        autoPlay
-        playsInline
-        loop
-        muted
-        preload="none"
-        poster={video.poster.src}
-        className="h-full w-full object-cover"
-      >
-        <source src={video.src} type="video/mp4" />
-        <source src={video.src.replace(/\.mp4$/, ".webm")} type="video/webm" />
-        Ваш браузер не поддерживает видео.
-      </video>
-    );
-  }
-
+  /*
+    Ролик ждёт клика, в том числе загруженный файлом. Раньше он начинал играть
+    сам, едва открывался слайд, — и браузер за это отбирал звук: автозапуск со
+    звуком разрешён только после действия пользователя. Клик по обложке таким
+    действием как раз и является, поэтому дальше видео идёт со звуком.
+  */
   if (!started) {
     return (
       <button
@@ -238,6 +225,24 @@ function VideoSlide({ video, title }: { video: Video; title: string }) {
           </span>
         </span>
       </button>
+    );
+  }
+
+  if (video.kind === "file") {
+    return (
+      <video
+        controls
+        autoPlay
+        playsInline
+        preload="metadata"
+        poster={video.poster.src}
+        onEnded={() => setStarted(false)}
+        className="h-full w-full object-cover"
+      >
+        <source src={video.src} type="video/mp4" />
+        <source src={video.src.replace(/\.mp4$/, ".webm")} type="video/webm" />
+        Ваш браузер не поддерживает видео.
+      </video>
     );
   }
 
