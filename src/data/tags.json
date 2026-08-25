@@ -118,5 +118,11 @@
     "title": "Разное",
     "group": "occasion",
     "order": 200
+  },
+  {
+    "slug": "detyam",
+    "title": "+ Детям",
+    "group": "occasion",
+    "order": 210
   }
 ]
