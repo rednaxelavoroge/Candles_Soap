@@ -168,13 +168,14 @@
     "caption": ""
   },
   {
-    "kind": "image",
-    "image": {
-      "src": "/about/podarok-1.webp",
-      "width": 1600,
-      "height": 1200,
-      "blurDataURL": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADwAQCdASoQAAwAA4BaJaAAD43vuchNrUgA/qNnwz2ZzU20AkWnBwbbwClaallyvrR+zMo3UGGF8F65882bUL2ES8qzyQkvvtGC1URoV2r8/99KGrX8UAAA",
-      "alt": "Мыло-книга с пионами как подарок"
+    "kind": "video",
+    "src": "/catalog/video/candle-process-7.mp4",
+    "poster": {
+      "src": "/catalog/posters/candle-process-7.webp",
+      "width": 720,
+      "height": 406,
+      "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAAAQAgCdASoQABAAA4BaJYwCsADHk/SoRNOAAP72k4x6UdZcIM/djc3aCMEX4G3skFBwGDAmd5t9cLlQ8XMAsGY97vJnJVcC0g0DRPAA",
+      "alt": "Атмосфера вечерней мастерской — процесс создания"
     },
     "caption": ""
   },
