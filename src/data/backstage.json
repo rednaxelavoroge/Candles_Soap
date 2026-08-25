@@ -166,17 +166,6 @@
     "caption": ""
   },
   {
-    "kind": "image",
-    "image": {
-      "src": "/about/podarok-4.webp",
-      "width": 1600,
-      "height": 1200,
-      "blurDataURL": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAADwAQCdASoQAAwAA4BaJaACdACZepD/dcAA4BHselVZNRpuGPcmVuoTmQbEEp+xkwpVl7cWTSMbj6HnD6otA06AAvvMRTY9aXLOzyZdnhaGw+93RvouNwjNw0StD6uIdGAwz2N6CwAAAA==",
-      "alt": "Мыло ручной работы как подарок паре"
-    },
-    "caption": ""
-  },
-  {
     "kind": "video",
     "src": "/catalog/video/candle-process-8.mp4",
     "poster": {
