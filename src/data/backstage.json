@@ -168,17 +168,6 @@
   {
     "kind": "image",
     "image": {
-      "src": "/about/podarok-3.webp",
-      "width": 1600,
-      "height": 1200,
-      "blurDataURL": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAABQAgCdASoQAAwAA4BaJaACdAYvNWOo4BdURwAA38pIYA11B9070RS2MNbW2SohEyCSyb/zCNdspBxQW+LEqDqvKGzZ8ewMS1/yGqx/xTjDHGBUNnhllKDRsNnvOkta0zBaDIAA",
-      "alt": "Подарок из мастерской Анны Манасарян"
-    },
-    "caption": ""
-  },
-  {
-    "kind": "image",
-    "image": {
       "src": "/about/podarok-4.webp",
       "width": 1600,
       "height": 1200,
