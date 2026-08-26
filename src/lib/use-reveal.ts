@@ -34,11 +34,19 @@ export function useReveal<T extends HTMLElement = HTMLDivElement>() {
       setShown(true);
     };
 
-    // Блок виден, если его верх зашёл в экран, а низ ещё не ушёл вверх.
+    /*
+      Момент показа. Важно не поторопиться: если открывать блок, едва он
+      выглянул снизу, движение закончится до того, как человек до него
+      доскроллит, — и покажется, что анимации нет вовсе. Поэтому условие то же,
+      что было раньше у framer-motion: видно не меньше пятой части блока,
+      а низ экрана считаем на 60 px выше настоящего.
+    */
     const nearScreen = () => {
       const box = el.getBoundingClientRect();
-      const height = window.innerHeight || document.documentElement.clientHeight;
-      return box.top < height * 0.92 && box.bottom > 0;
+      if (box.height === 0) return false;
+      const bottomEdge = (window.innerHeight || document.documentElement.clientHeight) - 60;
+      const visible = Math.min(box.bottom, bottomEdge) - Math.max(box.top, 0);
+      return visible > 0 && visible >= box.height * 0.2;
     };
 
     const check = () => {
@@ -72,7 +80,7 @@ export function useReveal<T extends HTMLElement = HTMLDivElement>() {
             cleanup();
           }
         },
-        { rootMargin: "0px 0px -8% 0px", threshold: 0.15 },
+        { rootMargin: "0px 0px -60px 0px", threshold: 0.2 },
       );
       observer.observe(el);
     }

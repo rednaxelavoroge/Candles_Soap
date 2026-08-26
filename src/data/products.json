@@ -4793,17 +4793,7 @@
         "alt": "Размер мыла-книги виден по ладони"
       }
     ],
-    "video": {
-      "kind": "file",
-      "src": "/catalog/video/kniga-s-pionami.mp4",
-      "poster": {
-        "src": "/catalog/soap/kniga-s-pionami-01.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAQAgCdASoQABAAA4BaJQBOgB5yvee2+JmAAP7xgZmx93D1yuh1poQDv8SKgSD2KslLmWHDvQO+ISH2tZ+ysc68InCHH3jETPjYDZtUhCIu7Zj9GWbvQHIiQ/K1wAAA",
-        "alt": "Книга с пионами — короткий ролик"
-      }
-    },
+    "video": null,
     "price": null,
     "description": "Раскрытая книга, из которой растёт букет: пионы, хризантемы и мелкая зелень вылеплены отдельно и посажены в разворот. Страницы фисташковые, цветы пыльно-розовые. Тяжёлая, увесистая вещь — её обычно не пускают в дело, а ставят на полку.",
     "specs": {
@@ -9183,17 +9173,7 @@
         "alt": "Терракотовый вариант ладоней с красным сердцем"
       }
     ],
-    "video": {
-      "kind": "file",
-      "src": "/catalog/video/serdtse-v-ladonyakh.mp4",
-      "poster": {
-        "src": "/catalog/gypsum/serdtse-v-ladonyakh-01.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAABQAgCdASoQABAAA4BaJZAC7AYv1vDXPZ+9tGAA/vKqmT7EL65s3Oi4rfLR7EJYaEsBMWYXbSc8/lszuqLFDnjzky/3DLXPhWGR+Cf8y67BtgpgRYOX1AQb7K/qfh2AApgeGgul98h8ttsGmT00Ar6AAAA=",
-        "alt": "Сердце в ладонях — короткий ролик"
-      }
-    },
+    "video": null,
     "price": null,
     "description": "Две сложенные лодочкой ладони, отлитые из гипса, и гранёное сердце в них. Ладони делаются белыми или терракотовыми, сердце — красным. Сердце вынимается, так что чаша остаётся под кольца и серьги.",
     "specs": {

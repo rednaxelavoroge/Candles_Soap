@@ -101,7 +101,7 @@ function CatalogSectionItem({
             isEven ? "md:order-2" : "md:order-1"
           }`}
         >
-          <div className="relative w-full max-w-[760px] overflow-hidden rounded-2xl transition-transform duration-500 hover:scale-[1.02]">
+          <div className="relative w-full max-w-[min(760px,62vh)] overflow-hidden rounded-2xl transition-transform duration-500 hover:scale-[1.02]">
             <Link
               href={`/catalog/${category.slug}`}
               aria-label={`Смотреть раздел «${category.title}»`}
