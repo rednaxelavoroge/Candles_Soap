@@ -1,0 +1,111 @@
+# One-off: выложить фотосайт Anna_photo в document root .com (public_html).
+# Секреты FTP те же, что у .art. Папку annamanasaryan.art НЕ трогаем.
+#
+# Запуск только вручную. На push в main не вешается — иначе параллельный
+# FTP свечей забьёт лимит соединений.
+
+name: Deploy photo site to .com
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-photo-com
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - name: Checkout photographer site
+        uses: actions/checkout@v4
+        with:
+          repository: rednaxelavoroge/Anna_photo
+          ref: cursor/namecheap-static-f40b
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install and export
+        run: |
+          npm ci
+          npm run export:namecheap
+
+      - name: Upload to public_html and remove WordPress
+        env:
+          FTP_HOST: ${{ secrets.FTP_HOST }}
+          FTP_USER: ${{ secrets.FTP_USER }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        run: |
+          set -euo pipefail
+          if [ -z "${FTP_HOST:-}" ]; then
+            echo "FTP_HOST missing"
+            exit 1
+          fi
+          sudo apt-get update -qq && sudo apt-get install -y -qq lftp
+          test -f out/index.html
+          test -f out/.htaccess
+
+          echo "=== FTP listing (names only) ==="
+          LIST=$(lftp -u "$FTP_USER","$FTP_PASSWORD" "$FTP_HOST" <<'LFTP'
+          set ssl:verify-certificate no
+          set ftp:ssl-allow yes
+          set net:max-retries 3
+          pwd
+          cls -1
+          bye
+          LFTP
+          )
+          echo "$LIST"
+
+          TARGET=""
+          if echo "$LIST" | grep -qx 'public_html'; then
+            TARGET=public_html
+          elif echo "$LIST" | grep -qx 'wp-admin'; then
+            TARGET=.
+          else
+            echo "Cannot find .com document root in FTP listing"
+            exit 1
+          fi
+          echo "Using FTP target: $TARGET"
+
+          echo "=== upload static site ==="
+          lftp -u "$FTP_USER","$FTP_PASSWORD" "$FTP_HOST" <<LFTP
+          set ssl:verify-certificate no
+          set ftp:ssl-allow yes
+          set net:max-retries 3
+          set net:timeout 30
+          set cmd:fail-exit yes
+          cd $TARGET
+          pwd
+          mirror -R --parallel=4 --verbose --exclude-glob .DS_Store out .
+          rm -f index.php xmlrpc.php license.txt readme.html
+          glob -a rm wp-*.php
+          rm -r -f wp-admin
+          rm -r -f wp-includes
+          bye
+          LFTP
+
+          echo "=== remove wp-content/media if present ==="
+          lftp -u "$FTP_USER","$FTP_PASSWORD" "$FTP_HOST" <<LFTP || true
+          set ssl:verify-certificate no
+          set ftp:ssl-allow yes
+          set net:max-retries 2
+          set net:timeout 60
+          cd $TARGET
+          rm -r -f wp-content
+          rm -r -f media
+          bye
+          LFTP
+
+          echo "=== remaining top-level names ==="
+          lftp -u "$FTP_USER","$FTP_PASSWORD" "$FTP_HOST" <<LFTP
+          set ssl:verify-certificate no
+          set ftp:ssl-allow yes
+          cd $TARGET
+          cls -1
+          bye
+          LFTP
