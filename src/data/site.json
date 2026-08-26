@@ -20,50 +20,6 @@
     "email": "Annamanasaryan.art@gmail.com",
     "city": "Ереван / Москва"
   },
-  "gallery": [
-    {
-      "src": "/about/anna-1.webp",
-      "width": 1200,
-      "height": 1600,
-      "blurDataURL": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAABwAgCdASoMABAAA4BaJaACdAE3AQ1MLrBC415AAOATyxxNuR2bKztSgKdTgfGGB/yz82Bb7p9vTbZYX+Dgou9ngpOv9GVkX++WyiTVeHV1DH/okZpwADSZMg9AAA==",
-      "alt": "Анна Манасарян с книгой-мылом в руках"
-    },
-    {
-      "src": "/about/anna-2.webp",
-      "width": 1200,
-      "height": 1600,
-      "blurDataURL": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAAAQAgCdASoMABAAA4BaJbACdAELGzelz9zAAP7EQJAuFkJRCr/pvkAVNbPgbK93vzKlgXrLIcWgct50niIvJmd7ps41JPgLXsNZiEevwAA=",
-      "alt": "Анна Манасарян в саду с изделием"
-    },
-    {
-      "src": "/about/anna-3.webp",
-      "width": 1200,
-      "height": 1600,
-      "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAAAwAgCdASoMABAAA4BaJYgCdAEWN+OsbgbRwAD33qE/CLG8kexIKBmyRQ+zrETtkh8nrf7+Yn4xTzBU2aLu7eBHRF1JS5URGbIAAA==",
-      "alt": "Анна Манасарян показывает мыло-книгу с пионами"
-    },
-    {
-      "src": "/about/anna-4.webp",
-      "width": 1200,
-      "height": 1600,
-      "blurDataURL": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADwAQCdASoMABAAA4BaJbACdAC8QHOLCAAA/plno17phOOcElytD3Kya9rLMZ9tDaq7+twnTUkSrrpY7nv1O6IZASA74Sksxs5NHjhHNsZP+flWxCHZR+hIgAA=",
-      "alt": "Анна Манасарян с изделием у окна"
-    },
-    {
-      "src": "/about/anna-5.webp",
-      "width": 1200,
-      "height": 1600,
-      "blurDataURL": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAADwAQCdASoMABAAA4BaJaACdAEQzS9SDPAA/tduCiPL5roRKvIJC3ddaMcWY0I06Qmyw4Xxe77cW/N2gpGjFITkcV66S1v45ct8+SsXC/4iHR8zt0hkc3wSpemocoQAAAA=",
-      "alt": "Анна Манасарян рассматривает мыло-книгу"
-    },
-    {
-      "src": "/about/anna-6.webp",
-      "width": 1200,
-      "height": 1600,
-      "blurDataURL": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAQAgCdASoMABAAA4BaJZACdAECwOCQM2sAAP7rgihawNqKQ+C8/eOtHDQ45h3Zy0A7GxJ0re7xJEakOaETT9LVRvvyuKr295+zaBCygYigVJcrgw97AAAA",
-      "alt": "Анна Манасарян с изделием в руках, профиль"
-    }
-  ],
   "featured": {
     "enabled": true,
     "eyebrow": "",
