@@ -200,30 +200,38 @@ export default async function InstrukciyaPage() {
 
         <Chapter id="gde" num="02" title="Что где лежит">
           <p className="text-[0.95rem] leading-relaxed text-ink">
-            Наверху панели пять кнопок. Это пять разных мест.
+            Наверху панели семь кнопок. Это семь разных мест.
           </p>
 
           <Figure caption="Так выглядит верх панели. Коричневая — та, что открыта сейчас.">
-            <svg viewBox="0 0 560 96" className="block h-auto w-full" role="img" aria-label="Ряд из пяти вкладок наверху панели">
+            <svg viewBox="0 0 560 136" className="block h-auto w-full" role="img" aria-label="Ряд вкладок наверху панели">
               <rect x="0" y="8" width="120" height="30" rx="15" fill="var(--color-sand)" />
               <text x="60" y="27" textAnchor="middle" fontSize="10.5" fontWeight="600" letterSpacing="0.7" fill="var(--color-ink)">ИЗДЕЛИЯ (239)</text>
               <rect x="130" y="8" width="180" height="30" rx="15" fill="var(--color-sand)" />
               <text x="220" y="27" textAnchor="middle" fontSize="10.5" fontWeight="600" letterSpacing="0.7" fill="var(--color-ink)">РАЗДЕЛЫ КАТАЛОГА (5)</text>
-              <rect x="320" y="8" width="170" height="30" rx="15" fill="var(--color-btn-brown)" />
-              <text x="405" y="27" textAnchor="middle" fontSize="10.5" fontWeight="600" letterSpacing="0.7" fill="#ffffff">ТЕКСТЫ И ОБО МНЕ</text>
-              <rect x="0" y="48" width="130" height="30" rx="15" fill="var(--color-sand)" />
-              <text x="65" y="67" textAnchor="middle" fontSize="10.5" fontWeight="600" letterSpacing="0.7" fill="var(--color-ink)">БЭКСТЕЙДЖ (54)</text>
-              <rect x="140" y="48" width="105" height="30" rx="15" fill="var(--color-sand)" />
-              <text x="192" y="67" textAnchor="middle" fontSize="10.5" fontWeight="600" letterSpacing="0.7" fill="var(--color-ink)">КОНТАКТЫ</text>
-              <text x="405" y="62" textAnchor="middle" fontSize="10" fill="var(--color-accent)">выбранная вкладка — коричневая</text>
+              <rect x="320" y="8" width="150" height="30" rx="15" fill="var(--color-sand)" />
+              <text x="395" y="27" textAnchor="middle" fontSize="10.5" fontWeight="600" letterSpacing="0.7" fill="var(--color-ink)">ПОДРАЗДЕЛЫ (21)</text>
+
+              <rect x="0" y="48" width="140" height="30" rx="15" fill="var(--color-sand)" />
+              <text x="70" y="67" textAnchor="middle" fontSize="10.5" fontWeight="600" letterSpacing="0.7" fill="var(--color-ink)">ИЗБРАННОЕ (0)</text>
+              <rect x="150" y="48" width="170" height="30" rx="15" fill="var(--color-btn-brown)" />
+              <text x="235" y="67" textAnchor="middle" fontSize="10.5" fontWeight="600" letterSpacing="0.7" fill="#ffffff">ТЕКСТЫ И ОБО МНЕ</text>
+              <rect x="330" y="48" width="130" height="30" rx="15" fill="var(--color-sand)" />
+              <text x="395" y="67" textAnchor="middle" fontSize="10.5" fontWeight="600" letterSpacing="0.7" fill="var(--color-ink)">БЭКСТЕЙДЖ (46)</text>
+
+              <rect x="0" y="88" width="105" height="30" rx="15" fill="var(--color-sand)" />
+              <text x="52" y="107" textAnchor="middle" fontSize="10.5" fontWeight="600" letterSpacing="0.7" fill="var(--color-ink)">КОНТАКТЫ</text>
+              <text x="300" y="107" fontSize="10" fill="var(--color-accent)">выбранная вкладка — коричневая</text>
             </svg>
           </Figure>
 
           <div className="flex flex-col gap-3">
             {[
-              ["Изделия", "Все свечи, мыло, гипс. Здесь их добавляют, правят и удаляют. Здесь же заводятся подразделы."],
+              ["Изделия", "Все свечи, мыло, гипс. Здесь их добавляют, правят и удаляют, здесь же — фотографии, видео и похожие."],
               ["Разделы каталога", "Пять больших разделов: Свечи, Мыло, Гипсовые изделия, Декор, Аромасаше. Их названия, описания и обложки."],
-              ["Тексты и обо мне", "Имя, слоган, рассказ о себе, портрет. И лента на главной странице."],
+              ["Подразделы", "Темы внутри разделов: «Новый год», «Свадьба», «Морская тема». Завести новый, переименовать, удалить, переставить."],
+              ["Избранное", "Полоса с карточками на главной: заголовок, подпись и то, какие изделия там стоят."],
+              ["Тексты и обо мне", "Имя, слоган, рассказ о себе, портрет."],
               ["Бэкстейдж", "Кадры и ролики из мастерской."],
               ["Контакты", "Телефоны, WhatsApp, Instagram."],
             ].map(([name, what]) => (
@@ -237,20 +245,22 @@ export default async function InstrukciyaPage() {
           </div>
         </Chapter>
 
-        <Chapter id="lenta" num="03" title="Лента на главной странице">
+        <Chapter id="lenta" num="03" title="Избранное на главной странице">
           <p className="text-[0.95rem] leading-relaxed text-ink">
-            Это широкая полоса с карточками на главной — сейчас она называется
-            «Коллекция сезона». Раньше и название, и состав были вписаны намертво.
-            Теперь они ваши.
+            Это широкая полоса с карточками на главной. Раньше и название, и состав
+            были вписаны намертво, теперь они ваши: и заголовок, и подпись, и то,
+            какие изделия там стоят и в каком порядке.
           </p>
 
           <h3 className="mt-2 font-display text-base font-semibold text-ink">Где она в панели</h3>
           <Steps
             items={[
               <>
-                Нажмите вкладку <Btn>ТЕКСТЫ И ОБО МНЕ</Btn>
+                Нажмите вкладку <Btn>ИЗБРАННОЕ</Btn> в верхней строке
               </>,
-              <>Пролистайте вниз до блока «Лента избранного на главной»</>,
+              <>
+                В скобках рядом с названием вкладки — сколько изделий выбрано сейчас
+              </>,
             ]}
           />
 
@@ -410,21 +420,38 @@ export default async function InstrukciyaPage() {
           <Steps
             items={[
               <>
-                Нажмите вкладку <Btn>ИЗДЕЛИЯ</Btn>
+                Нажмите вкладку <Btn>ПОДРАЗДЕЛЫ</Btn> в верхней строке
               </>,
               <>
-                Найдите через поиск наверху изделие, которое должно попасть в новый
-                подраздел
+                В самом верху, в поле «Новый подраздел», впишите название — например,
+                «Свадьба»
+              </>,
+              <>
+                Нажмите <Btn>+ СОЗДАТЬ ПОДРАЗДЕЛ</Btn>
+              </>,
+              <>Он тут же встанет в список ниже</>,
+            ]}
+          />
+          <Note label="В каталоге он появится не сразу">
+            Подраздел показывается там, где есть отмеченные им изделия. Пока ни одно
+            не отмечено, на сайте его не видно — и это правильно: пустых разделов
+            в каталоге не бывает.
+          </Note>
+
+          <h3 className="mt-2 font-display text-base font-semibold text-ink">
+            Тот же подраздел можно завести прямо из карточки изделия
+          </h3>
+          <Steps
+            items={[
+              <>
+                Вкладка <Btn>ИЗДЕЛИЯ</Btn>, найдите изделие через поиск наверху
               </>,
               <>
                 Нажмите под ним <Btn>Редактировать</Btn>
               </>,
               <>Пролистайте окно до блока «Подразделы и темы»</>,
               <>Под кругляшками найдите поле «Нет нужного подраздела? Создайте свой»</>,
-              <>Впишите название — например, «Свадьба»</>,
-              <>
-                Нажмите <Btn>+ СОЗДАТЬ ПОДРАЗДЕЛ</Btn>
-              </>,
+              <>Впишите название и нажмите <Btn>+ СОЗДАТЬ ПОДРАЗДЕЛ</Btn></>,
               <>Подраздел появится среди кругляшков — уже с галочкой</>,
               <>
                 Нажмите внизу окна <Btn>СОХРАНИТЬ ИЗДЕЛИЕ ✓</Btn>
@@ -580,6 +607,17 @@ export default async function InstrukciyaPage() {
               </>,
             ]}
           />
+          <h3 className="mt-2 font-display text-base font-semibold text-ink">
+            Похожие изделия внизу страницы
+          </h3>
+          <p className="text-[0.95rem] leading-relaxed text-ink">
+            Под изделием стоит небольшая полоса «Похожие». Пока в блоке{" "}
+            <Field>🔗 Похожие изделия</Field> ничего не выбрано, сайт подбирает
+            соседей сам — по общим темам внутри раздела. Выберете хоть одно —
+            будет показывать только ваш список и в вашем порядке; стрелки и крестик
+            работают там так же, как везде.
+          </p>
+
           <Note label="Как видео ведёт себя на сайте">
             Ролик стоит обложкой и ждёт нажатия. Нажали — играет со звуком, один раз,
             и останавливается. Включили другой — первый сам встаёт на паузу, две музыки
