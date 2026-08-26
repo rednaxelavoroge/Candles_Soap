@@ -177,10 +177,14 @@
     border-top: 1px solid var(--color-sand);
   }
 
+  /*
+   * Мелкая подпись над заголовком. Капсом вразрядку не набирается:
+   * заказчица прочла такие места как «шрифт не поменялся» — у Comfortaa
+   * вся узнаваемость в строчных буквах, а в капсе он выглядит чужим.
+   */
   .eyebrow {
-    font-size: 0.6875rem;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
     color: var(--color-muted);
     font-weight: 500;
   }

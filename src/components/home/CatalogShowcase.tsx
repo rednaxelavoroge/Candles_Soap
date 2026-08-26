@@ -3,6 +3,7 @@
 import { Media } from "@/components/ui/Media";
 import { getCategories, getProductsByCategory } from "@/lib/content";
 import type { Category } from "@/lib/schemas";
+import { useReveal } from "@/lib/use-reveal";
 import { motion, useReducedMotion } from "framer-motion";
 import Link from "next/link";
 
@@ -53,6 +54,8 @@ function ShowcaseSection({
   index: number;
 }) {
   const reduced = useReducedMotion();
+  const text = useReveal<HTMLDivElement>();
+  const media = useReveal<HTMLDivElement>();
   const count = getProductsByCategory(item.category.slug).length;
 
   const isEven = index % 2 === 0;
@@ -69,9 +72,9 @@ function ShowcaseSection({
         
         {/* Текстовый блок */}
         <motion.div
+          ref={text.ref}
           initial={reduced ? undefined : { opacity: 0, x: textInitialX, y: 20 }}
-          whileInView={reduced ? undefined : { opacity: 1, x: 0, y: 0 }}
-          viewport={{ once: true, amount: 0.2, margin: "0px 0px -60px 0px" }}
+          animate={reduced || text.shown ? { opacity: 1, x: 0, y: 0 } : undefined}
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
           className={`flex w-full flex-col justify-center px-2 py-4 will-change-transform md:px-8 lg:px-12 ${
             isEven ? "md:order-1" : "md:order-2"
@@ -107,9 +110,9 @@ function ShowcaseSection({
 
         {/* Блок изображения */}
         <motion.div
+          ref={media.ref}
           initial={reduced ? undefined : { opacity: 0, x: mediaInitialX, y: 20, scale: 0.94 }}
-          whileInView={reduced ? undefined : { opacity: 1, x: 0, y: 0, scale: 1 }}
-          viewport={{ once: true, amount: 0.2, margin: "0px 0px -60px 0px" }}
+          animate={reduced || media.shown ? { opacity: 1, x: 0, y: 0, scale: 1 } : undefined}
           transition={{ duration: 0.95, ease: [0.16, 1, 0.3, 1] }}
           className={`relative flex items-center justify-center p-2 will-change-transform md:p-4 ${
             isEven ? "md:order-2" : "md:order-1"

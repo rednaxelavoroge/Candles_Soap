@@ -3,6 +3,7 @@
 import { Media } from "@/components/ui/Media";
 import { getCategories, getProductsByCategory } from "@/lib/content";
 import type { Category } from "@/lib/schemas";
+import { useReveal } from "@/lib/use-reveal";
 import { motion, useReducedMotion } from "framer-motion";
 import Link from "next/link";
 
@@ -41,6 +42,8 @@ function CatalogSectionItem({
   total: number;
 }) {
   const reduced = useReducedMotion();
+  const text = useReveal<HTMLDivElement>();
+  const media = useReveal<HTMLDivElement>();
   const count = getProductsByCategory(category.slug).length;
   const num = `0${index + 1} / 0${total}`;
   const isEven = index % 2 === 0;
@@ -51,13 +54,13 @@ function CatalogSectionItem({
 
   return (
     <div className="relative overflow-hidden py-8 md:py-14 border-t border-sand/40">
-      <div className="mx-auto grid w-full max-w-[1400px] items-center gap-8 px-5 md:grid-cols-2 md:gap-12 md:px-8">
+      <div className="mx-auto grid w-full max-w-[1600px] items-center gap-8 px-5 md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] md:gap-12 md:px-8">
         
         {/* Текст раздела */}
         <motion.div
+          ref={text.ref}
           initial={reduced ? undefined : { opacity: 0, x: textInitialX, y: 20 }}
-          whileInView={reduced ? undefined : { opacity: 1, x: 0, y: 0 }}
-          viewport={{ once: true, amount: 0.2, margin: "0px 0px -60px 0px" }}
+          animate={reduced || text.shown ? { opacity: 1, x: 0, y: 0 } : undefined}
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
           className={`flex w-full flex-col justify-center px-2 py-4 will-change-transform md:px-8 lg:px-12 ${
             isEven ? "md:order-1" : "md:order-2"
@@ -90,15 +93,15 @@ function CatalogSectionItem({
 
         {/* Картинка раздела */}
         <motion.div
+          ref={media.ref}
           initial={reduced ? undefined : { opacity: 0, x: mediaInitialX, y: 20, scale: 0.94 }}
-          whileInView={reduced ? undefined : { opacity: 1, x: 0, y: 0, scale: 1 }}
-          viewport={{ once: true, amount: 0.2, margin: "0px 0px -60px 0px" }}
+          animate={reduced || media.shown ? { opacity: 1, x: 0, y: 0, scale: 1 } : undefined}
           transition={{ duration: 0.95, ease: [0.16, 1, 0.3, 1] }}
           className={`relative flex items-center justify-center p-2 will-change-transform md:p-4 ${
             isEven ? "md:order-2" : "md:order-1"
           }`}
         >
-          <div className="relative w-full max-w-[480px] overflow-hidden rounded-2xl transition-transform duration-500 hover:scale-[1.02]">
+          <div className="relative w-full max-w-[760px] overflow-hidden rounded-2xl transition-transform duration-500 hover:scale-[1.02]">
             <Link
               href={`/catalog/${category.slug}`}
               aria-label={`Смотреть раздел «${category.title}»`}
@@ -107,7 +110,7 @@ function CatalogSectionItem({
               <div className="tile-zoom absolute inset-0">
                 <Media
                   image={category.cover}
-                  sizes="(min-width: 1024px) 40vw, (min-width: 768px) 50vw, 100vw"
+                  sizes="(min-width: 1024px) 55vw, (min-width: 768px) 58vw, 100vw"
                   priority={index === 0}
                 />
               </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { optimizeImageClient } from "@/lib/image-optimizer";
+import { useDragOrder, withMoved } from "@/lib/use-drag-order";
 import type { BackstageItem, Category, Product, Tag } from "@/lib/schemas";
 import Image from "next/image";
 import Link from "next/link";
@@ -11,6 +12,14 @@ type Tab = "products" | "categories" | "sections" | "featured" | "texts" | "back
 
 /** Ролик из библиотеки мастерской: то, что уже загружено в проект. */
 type LibraryVideo = { src: string; name: string; poster: string | null; caption: string | null };
+
+/**
+ * Предел на свой ролик. Тот же, что стоит на сервере: тело запроса к панели
+ * ограничено площадкой, и ролик с телефона в него не помещается. Проверяем
+ * ещё до отправки, чтобы сказать понятную причину, а не «ошибка загрузки».
+ */
+const MAX_VIDEO_UPLOAD_MB = 3.5;
+const MAX_VIDEO_UPLOAD_BYTES = MAX_VIDEO_UPLOAD_MB * 1024 * 1024;
 
 export default function AdminPage() {
   const router = useRouter();
@@ -477,12 +486,10 @@ export default function AdminPage() {
   };
 
   /** Порядок подразделов в каталоге: в нём они и покажутся на сайте. */
-  const moveTag = async (index: number, shift: number) => {
-    const target = index + shift;
-    if (target < 0 || target >= tags.length || savingOrder) return;
+  const moveTag = async (from: number, to: number) => {
+    if (to < 0 || to >= tags.length || from === to || savingOrder) return;
 
-    const next = [...tags];
-    [next[index], next[target]] = [next[target], next[index]];
+    const next = withMoved(tags, from, to);
     setTags(next);
 
     setSavingOrder(true);
@@ -507,12 +514,10 @@ export default function AdminPage() {
   };
 
   /** Порядок кадров в бэкстейдже. */
-  const moveBackstage = async (index: number, shift: number) => {
-    const target = index + shift;
-    if (target < 0 || target >= backstage.length || savingOrder) return;
+  const moveBackstage = async (from: number, to: number) => {
+    if (to < 0 || to >= backstage.length || from === to || savingOrder) return;
 
-    const next = [...backstage];
-    [next[index], next[target]] = [next[target], next[index]];
+    const next = withMoved(backstage, from, to);
     setBackstage(next);
 
     setSavingOrder(true);
@@ -543,12 +548,10 @@ export default function AdminPage() {
    * поэтому доступен только когда выбран один раздел и не задан поиск —
    * иначе «выше» означало бы позицию в отфильтрованной выборке, а не в разделе.
    */
-  const moveProduct = async (visible: Product[], index: number, shift: number) => {
-    const target = index + shift;
-    if (target < 0 || target >= visible.length || savingOrder) return;
+  const moveProduct = async (visible: Product[], from: number, to: number) => {
+    if (to < 0 || to >= visible.length || from === to || savingOrder) return;
 
-    const next = [...visible];
-    [next[index], next[target]] = [next[target], next[index]];
+    const next = withMoved(visible, from, to);
 
     const position = new Map(next.map((p, i) => [p.id, (i + 1) * 10]));
     const before = products;
@@ -594,13 +597,11 @@ export default function AdminPage() {
   };
 
   /** Порядок в блоке «Похожие» — это порядок показа на странице изделия. */
-  const moveRelated = (index: number, shift: number) => {
+  const moveRelated = (from: number, to: number) => {
     if (!editProduct) return;
-    const ids = [...(editProduct.related || [])];
-    const target = index + shift;
-    if (target < 0 || target >= ids.length) return;
-    [ids[index], ids[target]] = [ids[target], ids[index]];
-    setEditProduct({ ...editProduct, related: ids });
+    const ids = editProduct.related || [];
+    if (to < 0 || to >= ids.length || from === to) return;
+    setEditProduct({ ...editProduct, related: withMoved(ids, from, to) });
   };
 
   /** Убирает фотографию из открытого изделия. Сохранится при нажатии «Сохранить». */
@@ -612,13 +613,11 @@ export default function AdminPage() {
   };
 
   /** Переставляет фотографию: первая в ряду — обложка изделия в каталоге. */
-  const moveProductImage = (index: number, shift: number) => {
+  const moveProductImage = (from: number, to: number) => {
     if (!editProduct) return;
-    const images = [...(editProduct.images || [])];
-    const target = index + shift;
-    if (target < 0 || target >= images.length) return;
-    [images[index], images[target]] = [images[target], images[index]];
-    setEditProduct({ ...editProduct, images });
+    const images = editProduct.images || [];
+    if (to < 0 || to >= images.length || from === to) return;
+    setEditProduct({ ...editProduct, images: withMoved(images, from, to) });
   };
 
   /** Как ролик называется в библиотеке; если его там нет — имя файла. */
@@ -648,6 +647,24 @@ export default function AdminPage() {
     const file = e.target.files?.[0];
     if (!file) return;
 
+    /*
+      Тяжёлый файл отсекаем здесь, до отправки. Раньше он уходил на сервер,
+      тот обрывал запрос целиком — ещё до нашего кода, — и в ответ приходила
+      не наша ошибка, а страница сервера. Разбор её падал, и заказчица видела
+      единственное слово «Ошибка загрузки видео» без объяснения, почему.
+    */
+    const megabytes = file.size / (1024 * 1024);
+    if (file.size > MAX_VIDEO_UPLOAD_BYTES) {
+      alert(
+        `Этот ролик слишком тяжёлый: ${megabytes.toFixed(1)} МБ, а загрузить можно до ${MAX_VIDEO_UPLOAD_MB} МБ.\n\n` +
+          "Что можно сделать:\n" +
+          "• взять готовый ролик кнопкой «Выбрать из моих роликов» — там вся ваша съёмка;\n" +
+          "• прислать этот файл мне, я подготовлю его и добавлю в список.",
+      );
+      e.target.value = "";
+      return;
+    }
+
     setUploadingVideo(true);
     try {
       const base64 = await new Promise<string>((resolve, reject) => {
@@ -662,15 +679,32 @@ export default function AdminPage() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ base64, fileName: file.name }),
       });
-      const data = await res.json();
-      if (res.ok && data.ok) {
-        setVideoLibrary((prev) => [{ src: data.src, name: file.name, poster: null, caption: null }, ...prev]);
+
+      // Ответ может оказаться не нашим (обрыв на сервере) — тогда читаем как текст.
+      const raw = await res.text();
+      let data: { ok?: boolean; src?: string; error?: string } = {};
+      try {
+        data = JSON.parse(raw);
+      } catch {
+        data = {};
+      }
+
+      if (res.ok && data.ok && data.src) {
+        setVideoLibrary((prev) => [{ src: data.src!, name: file.name, poster: null, caption: null }, ...prev]);
         attachVideo(data.src);
+      } else if (res.status === 413) {
+        alert(
+          `Ролик не прошёл: ${megabytes.toFixed(1)} МБ — слишком тяжёлый для загрузки через панель.\n\n` +
+            "Возьмите готовый ролик кнопкой «Выбрать из моих роликов» или пришлите файл мне.",
+        );
       } else {
-        alert(data.error || "Не удалось загрузить видео");
+        alert(data.error || "Не удалось загрузить видео. Попробуйте ещё раз или пришлите файл мне.");
       }
     } catch {
-      alert("Ошибка загрузки видео");
+      alert(
+        "Видео не загрузилось: связь с сервером оборвалась.\n\n" +
+          "Попробуйте ещё раз. Если повторится — возьмите ролик кнопкой «Выбрать из моих роликов».",
+      );
     } finally {
       setUploadingVideo(false);
       e.target.value = "";
@@ -678,12 +712,10 @@ export default function AdminPage() {
   };
 
   /** Переставляет изделие в ленте «Избранного» на позицию выше или ниже. */
-  const moveFeatured = (index: number, shift: number) => {
-    const ids = [...siteData.featured.ids];
-    const target = index + shift;
-    if (target < 0 || target >= ids.length) return;
-    [ids[index], ids[target]] = [ids[target], ids[index]];
-    setSiteData({ ...siteData, featured: { ...siteData.featured, ids } });
+  const moveFeatured = (from: number, to: number) => {
+    const ids = siteData.featured.ids;
+    if (to < 0 || to >= ids.length || from === to) return;
+    setSiteData({ ...siteData, featured: { ...siteData.featured, ids: withMoved(ids, from, to) } });
   };
 
   /**
@@ -732,8 +764,16 @@ export default function AdminPage() {
         }),
       });
       if (res.ok) {
+        // Ответ приносит уже сохранённое состояние: без него превью портрета
+        // осталось бы показывать прежний снимок, и панель снова врала бы.
+        const saved = await res.json().catch(() => null);
+        if (saved?.site?.portrait) {
+          setSiteData((prev) => ({ ...prev, portrait: saved.site.portrait }));
+        }
         setNewPortraitData(null);
         showToast("✓ Тексты и фото автора успешно сохранены!");
+      } else {
+        alert("Не удалось сохранить. Попробуйте ещё раз.");
       }
     } catch {
       alert("Ошибка сохранения");
@@ -839,6 +879,20 @@ export default function AdminPage() {
    * и на сайте изделие оказалось бы совсем не там, куда его подняли.
    */
   const canReorderProducts = catFilter !== "all" && search.trim() === "";
+
+  /*
+    Перетаскивание мышью там, где раньше были только стрелки. Стрелки остаются
+    рядом: на телефоне перетаскивания нет, палец прокручивает страницу.
+  */
+  const imageDrag = useDragOrder(moveProductImage);
+  const relatedDrag = useDragOrder(moveRelated);
+  const tagDrag = useDragOrder(moveTag);
+  const featuredDrag = useDragOrder(moveFeatured);
+  const backstageDrag = useDragOrder(moveBackstage);
+  const productDrag = useDragOrder(
+    (from, to) => moveProduct(filteredProducts, from, to),
+    canReorderProducts,
+  );
 
   return (
     <div className="min-h-screen bg-bg pb-20 pt-20 md:pt-28">
@@ -1018,8 +1072,8 @@ export default function AdminPage() {
 
             <p className="mt-6 text-[0.7rem] leading-relaxed text-muted">
               {canReorderProducts
-                ? "Порядок карточек здесь — это порядок изделий в разделе на сайте. Стрелками ↑ ↓ поднимите к сезону нужное изделие."
-                : "Чтобы менять порядок изделий, выберите один раздел в списке слева и очистите поиск — тогда у карточек появятся стрелки ↑ ↓."}
+                ? "Порядок карточек здесь — это порядок изделий в разделе на сайте. Возьмите карточку мышью и перетащите на нужное место; на телефоне — стрелками ↑ ↓."
+                : "Чтобы менять порядок изделий, выберите один раздел в списке слева и очистите поиск — тогда карточки можно будет перетаскивать."}
             </p>
 
             <div className="mt-3 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
@@ -1028,7 +1082,10 @@ export default function AdminPage() {
                 return (
                   <div
                     key={p.id}
-                    className="flex flex-col justify-between overflow-hidden rounded-2xl border border-sand/60 bg-surface p-3 shadow-sm transition-all hover:shadow-md"
+                    {...productDrag.itemProps(index)}
+                    className={`flex flex-col justify-between overflow-hidden rounded-2xl border border-sand/60 bg-surface p-3 shadow-sm transition-all hover:shadow-md ${
+                      canReorderProducts ? "cursor-grab active:cursor-grabbing" : ""
+                    } ${productDrag.itemClass(index)}`}
                   >
                     <div>
                       <div className="relative aspect-square w-full overflow-hidden rounded-xl bg-sand/40">
@@ -1037,6 +1094,7 @@ export default function AdminPage() {
                           alt={p.title}
                           fill
                           sizes="200px"
+                          draggable={false}
                           className="object-cover"
                         />
                         <span className="absolute top-2 left-2 rounded-full bg-ink/75 px-2 py-0.5 text-[0.6rem] font-semibold uppercase text-white backdrop-blur-sm">
@@ -1055,7 +1113,7 @@ export default function AdminPage() {
                       <div className="mt-2.5 flex items-center gap-1 border-t border-sand/40 pt-2">
                         <button
                           type="button"
-                          onClick={() => moveProduct(filteredProducts, index, -1)}
+                          onClick={() => moveProduct(filteredProducts, index, index - 1)}
                           disabled={index === 0 || savingOrder}
                           aria-label="Поднять выше в разделе"
                           className="rounded-full px-2 py-1 text-xs text-muted hover:text-ink disabled:opacity-30"
@@ -1064,7 +1122,7 @@ export default function AdminPage() {
                         </button>
                         <button
                           type="button"
-                          onClick={() => moveProduct(filteredProducts, index, 1)}
+                          onClick={() => moveProduct(filteredProducts, index, index + 1)}
                           disabled={index === filteredProducts.length - 1 || savingOrder}
                           aria-label="Опустить ниже в разделе"
                           className="rounded-full px-2 py-1 text-xs text-muted hover:text-ink disabled:opacity-30"
@@ -1248,14 +1306,15 @@ export default function AdminPage() {
                   return (
                     <div
                       key={t.slug}
-                      className="flex flex-wrap items-center gap-3 rounded-2xl border border-sand/60 bg-surface px-4 py-3 shadow-sm"
+                      {...tagDrag.itemProps(index)}
+                      className={`flex flex-wrap items-center gap-3 rounded-2xl border border-sand/60 bg-surface px-4 py-3 shadow-sm cursor-grab active:cursor-grabbing transition-all ${tagDrag.itemClass(index)}`}
                     >
                       <span className="w-6 shrink-0 text-xs text-muted">{index + 1}</span>
 
                       <div className="flex shrink-0 items-center gap-1">
                         <button
                           type="button"
-                          onClick={() => moveTag(index, -1)}
+                          onClick={() => moveTag(index, index - 1)}
                           disabled={index === 0 || savingOrder}
                           aria-label="Поднять выше"
                           className="rounded-full px-2 py-1 text-xs text-muted hover:text-ink disabled:opacity-30"
@@ -1264,7 +1323,7 @@ export default function AdminPage() {
                         </button>
                         <button
                           type="button"
-                          onClick={() => moveTag(index, 1)}
+                          onClick={() => moveTag(index, index + 1)}
                           disabled={index === tags.length - 1 || savingOrder}
                           aria-label="Опустить ниже"
                           className="rounded-full px-2 py-1 text-xs text-muted hover:text-ink disabled:opacity-30"
@@ -1388,26 +1447,69 @@ export default function AdminPage() {
                 />
               </div>
 
+              {/*
+                Поле портрета. Раньше оно работало вслепую: не показывало, какое
+                фото стоит сейчас, не предупреждало, что снимок уходит на главную,
+                и не давало отменить выбранное. Заказчица вставила кадр «посмотреть
+                что будет» — и он молча заменил её портрет на первом экране.
+              */}
               <div>
                 <label className="block text-xs font-semibold uppercase tracking-wider text-muted mb-1">
                   Портретное фото автора
                 </label>
-                <input
-                  type="file"
-                  accept="image/*"
-                  onChange={async (e) => {
-                    const file = e.target.files?.[0];
-                    if (!file) return;
-                    const opt = await optimizeImageClient(file, 1400, 0.85);
-                    setNewPortraitData({
-                      base64: opt.dataUrl,
-                      width: opt.width,
-                      height: opt.height,
-                      blurDataURL: opt.blurDataURL,
-                    });
-                  }}
-                  className="text-xs text-muted file:mr-3 file:rounded-full file:border-0 file:btn-brown file:px-4 file:py-2 file:text-xs file:font-semibold"
-                />
+                <p className="mb-3 text-xs leading-relaxed text-muted">
+                  Это фото стоит на первом экране главной страницы и на странице
+                  «Обо мне». Выбранный снимок встанет на сайт после кнопки
+                  «Сохранить все тексты» внизу.
+                </p>
+
+                <div className="flex items-start gap-4">
+                  <div className="relative h-28 w-24 shrink-0 overflow-hidden rounded-xl border border-sand bg-bg">
+                    {newPortraitData?.base64 || siteData.portrait?.src ? (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img
+                        src={newPortraitData?.base64 || siteData.portrait.src}
+                        alt="Портрет автора"
+                        className="h-full w-full object-cover"
+                      />
+                    ) : (
+                      <span className="flex h-full w-full items-center justify-center text-[0.65rem] text-muted">
+                        нет фото
+                      </span>
+                    )}
+                  </div>
+
+                  <div className="flex flex-col gap-2">
+                    <span className="text-xs font-semibold text-ink">
+                      {newPortraitData ? "Новое фото — ещё не сохранено" : "Сейчас на сайте"}
+                    </span>
+                    <input
+                      type="file"
+                      accept="image/*"
+                      onChange={async (e) => {
+                        const file = e.target.files?.[0];
+                        if (!file) return;
+                        const opt = await optimizeImageClient(file, 1400, 0.85);
+                        setNewPortraitData({
+                          base64: opt.dataUrl,
+                          width: opt.width,
+                          height: opt.height,
+                          blurDataURL: opt.blurDataURL,
+                        });
+                      }}
+                      className="text-xs text-muted file:mr-3 file:rounded-full file:border-0 file:btn-brown file:px-4 file:py-2 file:text-xs file:font-semibold"
+                    />
+                    {newPortraitData ? (
+                      <button
+                        type="button"
+                        onClick={() => setNewPortraitData(null)}
+                        className="self-start text-xs font-semibold text-btn-brown hover:underline"
+                      >
+                        Убрать выбранное фото, оставить прежнее
+                      </button>
+                    ) : null}
+                  </div>
+                </div>
               </div>
 
               <button
@@ -1536,7 +1638,8 @@ export default function AdminPage() {
                       return (
                         <div
                           key={id}
-                          className="flex items-center gap-2 rounded-xl border border-sand bg-surface px-3 py-2"
+                          {...featuredDrag.itemProps(index)}
+                          className={`flex items-center gap-2 rounded-xl border border-sand bg-surface px-3 py-2 cursor-grab active:cursor-grabbing transition-all ${featuredDrag.itemClass(index)}`}
                         >
                           <span className="text-[0.7rem] text-muted">{index + 1}</span>
                           <span className="flex-1 truncate text-xs text-ink">
@@ -1544,7 +1647,7 @@ export default function AdminPage() {
                           </span>
                           <button
                             type="button"
-                            onClick={() => moveFeatured(index, -1)}
+                            onClick={() => moveFeatured(index, index - 1)}
                             disabled={index === 0}
                             aria-label="Выше"
                             className="rounded-full px-2 py-1 text-xs text-muted hover:text-ink disabled:opacity-30"
@@ -1553,7 +1656,7 @@ export default function AdminPage() {
                           </button>
                           <button
                             type="button"
-                            onClick={() => moveFeatured(index, 1)}
+                            onClick={() => moveFeatured(index, index + 1)}
                             disabled={index === siteData.featured.ids.length - 1}
                             aria-label="Ниже"
                             className="rounded-full px-2 py-1 text-xs text-muted hover:text-ink disabled:opacity-30"
@@ -1684,7 +1787,7 @@ export default function AdminPage() {
 
             <p className="mt-6 text-[0.7rem] leading-relaxed text-muted">
               Порядок кадров здесь — это порядок на странице «Бэкстейдж».
-              Стрелками ↑ ↓ можно поставить нужный кадр вперёд.
+              Возьмите кадр мышью и перетащите на нужное место; на телефоне — стрелками ↑ ↓.
             </p>
 
             <div className="mt-3 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
@@ -1694,10 +1797,18 @@ export default function AdminPage() {
                 return (
                   <div
                     key={mediaSrc}
-                    className="relative overflow-hidden rounded-2xl border border-sand/60 bg-surface p-2.5 shadow-sm"
+                    {...backstageDrag.itemProps(idx)}
+                    className={`relative overflow-hidden rounded-2xl border border-sand/60 bg-surface p-2.5 shadow-sm cursor-grab active:cursor-grabbing transition-all ${backstageDrag.itemClass(idx)}`}
                   >
                     <div className="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-sand/30">
-                      <Image src={poster} alt={b.caption} fill sizes="300px" className="object-cover" />
+                      <Image
+                        src={poster}
+                        alt={b.caption}
+                        fill
+                        sizes="300px"
+                        draggable={false}
+                        className="object-cover"
+                      />
                       {b.kind === "video" ? (
                         <span className="absolute top-2 left-2 rounded-full bg-ink/75 px-2 py-0.5 text-[0.6rem] font-semibold uppercase text-white backdrop-blur-sm">
                           Видео
@@ -1713,7 +1824,7 @@ export default function AdminPage() {
                       <div className="flex items-center gap-1">
                         <button
                           type="button"
-                          onClick={() => moveBackstage(idx, -1)}
+                          onClick={() => moveBackstage(idx, idx - 1)}
                           disabled={idx === 0 || savingOrder}
                           aria-label="Переставить раньше"
                           className="rounded-full px-2 py-1 text-xs text-muted hover:text-ink disabled:opacity-30"
@@ -1722,7 +1833,7 @@ export default function AdminPage() {
                         </button>
                         <button
                           type="button"
-                          onClick={() => moveBackstage(idx, 1)}
+                          onClick={() => moveBackstage(idx, idx + 1)}
                           disabled={idx === backstage.length - 1 || savingOrder}
                           aria-label="Переставить позже"
                           className="rounded-full px-2 py-1 text-xs text-muted hover:text-ink disabled:opacity-30"
@@ -2279,9 +2390,11 @@ export default function AdminPage() {
                 </p>
                 <p className="text-[0.7rem] leading-relaxed text-ink mb-3">
                   <strong className="font-semibold">✕ на снимке</strong> — убрать его.{" "}
-                  <strong className="font-semibold">Стрелки ← → под снимком</strong> —
-                  поменять местами. Первый в ряду помечен «Обложка»: именно он стоит в
-                  каталоге. Всё записывается кнопкой «Сохранить изделие» внизу.
+                  <strong className="font-semibold">Возьмите снимок мышью и перетащите</strong>{" "}
+                  на нужное место — так быстрее всего. На телефоне для этого{" "}
+                  <strong className="font-semibold">стрелки ← → под снимком</strong>. Первый в
+                  ряду помечен «Обложка»: именно он стоит в каталоге. Всё записывается
+                  кнопкой «Сохранить изделие» внизу.
                 </p>
 
                 <input
@@ -2305,9 +2418,20 @@ export default function AdminPage() {
                 */}
                 <div className="mt-3 flex flex-wrap gap-3">
                   {editProduct.images?.map((img, i) => (
-                    <div key={`${img.src}-${i}`} className="w-20">
+                    <div
+                      key={`${img.src}-${i}`}
+                      {...imageDrag.itemProps(i)}
+                      className={`w-20 cursor-grab active:cursor-grabbing rounded-lg transition-all ${imageDrag.itemClass(i)}`}
+                    >
                       <div className="relative h-20 w-20 overflow-hidden rounded-lg border border-sand">
-                        <Image src={img.src} alt="" fill sizes="80px" className="object-cover" />
+                        <Image
+                          src={img.src}
+                          alt=""
+                          fill
+                          sizes="80px"
+                          draggable={false}
+                          className="object-cover"
+                        />
                         <button
                           type="button"
                           onClick={() => removeProductImage(i)}
@@ -2325,7 +2449,7 @@ export default function AdminPage() {
                       <div className="mt-1 flex items-center justify-center gap-1">
                         <button
                           type="button"
-                          onClick={() => moveProductImage(i, -1)}
+                          onClick={() => moveProductImage(i, i - 1)}
                           disabled={i === 0}
                           aria-label="Переставить левее"
                           className="rounded px-1.5 py-0.5 text-[0.7rem] text-muted hover:text-ink disabled:opacity-30"
@@ -2334,7 +2458,7 @@ export default function AdminPage() {
                         </button>
                         <button
                           type="button"
-                          onClick={() => moveProductImage(i, 1)}
+                          onClick={() => moveProductImage(i, i + 1)}
                           disabled={i === (editProduct.images?.length ?? 0) - 1}
                           aria-label="Переставить правее"
                           className="rounded px-1.5 py-0.5 text-[0.7rem] text-muted hover:text-ink disabled:opacity-30"
@@ -2538,12 +2662,13 @@ export default function AdminPage() {
                       return (
                         <div
                           key={id}
-                          className="flex items-center gap-2 rounded-xl border border-sand bg-surface px-3 py-2"
+                          {...relatedDrag.itemProps(index)}
+                          className={`flex items-center gap-2 rounded-xl border border-sand bg-surface px-3 py-2 cursor-grab active:cursor-grabbing transition-all ${relatedDrag.itemClass(index)}`}
                         >
                           <span className="w-4 shrink-0 text-[0.7rem] text-muted">{index + 1}</span>
                           <button
                             type="button"
-                            onClick={() => moveRelated(index, -1)}
+                            onClick={() => moveRelated(index, index - 1)}
                             disabled={index === 0}
                             aria-label="Поднять выше"
                             className="rounded-full px-2 py-1 text-xs text-muted hover:text-ink disabled:opacity-30"
@@ -2552,7 +2677,7 @@ export default function AdminPage() {
                           </button>
                           <button
                             type="button"
-                            onClick={() => moveRelated(index, 1)}
+                            onClick={() => moveRelated(index, index + 1)}
                             disabled={index === (editProduct.related || []).length - 1}
                             aria-label="Опустить ниже"
                             className="rounded-full px-2 py-1 text-xs text-muted hover:text-ink disabled:opacity-30"

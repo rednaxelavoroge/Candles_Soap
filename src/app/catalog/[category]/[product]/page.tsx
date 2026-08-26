@@ -89,7 +89,7 @@ export default async function ProductPage({ params }: { params: Promise<Params> 
 
         {/* Описание изделия и характеристики */}
         <div className="flex flex-col justify-start md:pt-2">
-          <span className="text-xs font-medium tracking-[0.2em] text-accent uppercase">
+          <span className="text-sm font-medium tracking-[0.06em] text-accent">
             {category.title}
           </span>
           <h1 className="mt-2 font-display text-3xl leading-tight text-ink md:text-5xl">

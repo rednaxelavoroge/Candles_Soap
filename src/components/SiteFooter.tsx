@@ -22,7 +22,7 @@ export function SiteFooter() {
           <p className="mt-2 max-w-xs text-xs text-muted leading-relaxed">{site.tagline}</p>
         </div>
 
-        <nav aria-label="Навигация в подвале" className="flex flex-col gap-2.5 text-xs uppercase tracking-wider font-semibold">
+        <nav aria-label="Навигация в подвале" className="flex flex-col gap-2.5 text-sm tracking-[0.02em] font-medium">
           {NAV.map((item) => (
             <Link key={item.href} href={item.href} className="link-underline self-start text-muted hover:text-ink">
               {item.label}
@@ -31,7 +31,7 @@ export function SiteFooter() {
         </nav>
 
         <div className="flex flex-col gap-2 text-xs">
-          <span className="font-semibold uppercase tracking-wider text-ink mb-1">Связь с мастером</span>
+          <span className="text-sm font-medium text-ink mb-1">Связь с мастером</span>
           {site.contacts.phone ? (
             <a href={telHref(site.contacts.phone)} className="text-muted hover:text-ink transition-colors whitespace-nowrap">
               🇦🇲 {site.contacts.phone} <span className="text-[0.7rem] text-accent font-medium">(WhatsApp)</span>

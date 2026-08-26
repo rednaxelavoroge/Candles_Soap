@@ -190,60 +190,87 @@ function PlayBadge() {
 
 function VideoSlide({ video, title }: { video: Video; title: string }) {
   const [started, setStarted] = useState(false);
+  const videoRef = useRef<HTMLVideoElement | null>(null);
 
   /*
-    Ролик ждёт клика, в том числе загруженный файлом. Раньше он начинал играть
-    сам, едва открывался слайд, — и браузер за это отбирал звук: автозапуск со
-    звуком разрешён только после действия пользователя. Клик по обложке таким
-    действием как раз и является, поэтому дальше видео идёт со звуком.
+    Ролик ждёт нажатия. Дальше важна тонкость, из-за которой звук пропадал.
+
+    Раньше при нажатии на обложку элемент <video autoplay> только СОЗДАВАЛСЯ.
+    Разрешение на звук браузер выдаёт элементу, который был на странице в
+    момент нажатия, — а этот появлялся уже после, и включался приглушённым.
+
+    Поэтому теперь элемент висит на странице с самого начала, обложка лежит
+    поверх него картинкой, а нажатие вызывает play() прямо в обработчике.
+    Нажатие и запуск оказываются одним действием, и звук остаётся.
   */
-  if (!started) {
-    return (
-      <button
-        type="button"
-        onClick={() => setStarted(true)}
-        className="absolute inset-0 h-full w-full group"
-        aria-label={`Смотреть видео: ${title}`}
+  const startFile = () => {
+    setStarted(true);
+    const el = videoRef.current;
+    if (!el) return;
+    el.muted = false;
+    el.volume = 1;
+    const attempt = el.play();
+    // Если браузер всё же откажет со звуком — играем без него, но играем.
+    if (attempt && typeof attempt.catch === "function") {
+      attempt.catch(() => {
+        el.muted = true;
+        void el.play();
+      });
+    }
+  };
+
+  const cover = (onStart: () => void) => (
+    <button
+      type="button"
+      onClick={onStart}
+      className="absolute inset-0 z-10 h-full w-full group"
+      aria-label={`Смотреть видео: ${title}`}
+    >
+      <Image
+        src={video.poster.src}
+        alt={video.poster.alt}
+        fill
+        sizes="(min-width: 768px) 50vw, 100vw"
+        placeholder="blur"
+        blurDataURL={video.poster.blurDataURL}
+        className="object-cover"
+      />
+      <span
+        aria-hidden="true"
+        className="absolute inset-0 flex items-center justify-center bg-ink/25 group-hover:bg-ink/40 transition-colors"
       >
-        <Image
-          src={video.poster.src}
-          alt={video.poster.alt}
-          fill
-          sizes="(min-width: 768px) 50vw, 100vw"
-          placeholder="blur"
-          blurDataURL={video.poster.blurDataURL}
-          className="object-cover"
-        />
-        <span
-          aria-hidden="true"
-          className="absolute inset-0 flex items-center justify-center bg-ink/25 group-hover:bg-ink/40 transition-colors"
-        >
-          <span className="flex h-16 w-16 items-center justify-center rounded-full bg-white/95 shadow-xl transition-transform duration-300 group-hover:scale-110">
-            <svg viewBox="0 0 24 24" className="ml-1 h-7 w-7 fill-btn-brown">
-              <path d="M8 5v14l11-7z" />
-            </svg>
-          </span>
+        <span className="flex h-16 w-16 items-center justify-center rounded-full bg-white/95 shadow-xl transition-transform duration-300 group-hover:scale-110">
+          <svg viewBox="0 0 24 24" className="ml-1 h-7 w-7 fill-btn-brown">
+            <path d="M8 5v14l11-7z" />
+          </svg>
         </span>
-      </button>
-    );
-  }
+      </span>
+    </button>
+  );
 
   if (video.kind === "file") {
     return (
-      <video
-        controls
-        autoPlay
-        playsInline
-        preload="metadata"
-        poster={video.poster.src}
-        onEnded={() => setStarted(false)}
-        className="h-full w-full object-cover"
-      >
-        <source src={video.src} type="video/mp4" />
-        <source src={video.src.replace(/\.mp4$/, ".webm")} type="video/webm" />
-        Ваш браузер не поддерживает видео.
-      </video>
+      <>
+        <video
+          ref={videoRef}
+          controls={started}
+          playsInline
+          preload="metadata"
+          poster={video.poster.src}
+          onEnded={() => setStarted(false)}
+          className="h-full w-full object-cover"
+        >
+          <source src={video.src} type="video/mp4" />
+          <source src={video.src.replace(/\.mp4$/, ".webm")} type="video/webm" />
+          Ваш браузер не поддерживает видео.
+        </video>
+        {started ? null : cover(startFile)}
+      </>
     );
+  }
+
+  if (!started) {
+    return cover(() => setStarted(true));
   }
 
   const src =

@@ -17,7 +17,7 @@ export default function CatalogPage() {
     <div className="pt-24 md:pt-32">
       <header className="relative overflow-hidden px-5 pt-4 pb-8 md:px-8 md:pb-12">
         <h1 className="relative font-display text-4xl leading-tight text-ink md:text-6xl lg:text-7xl">
-          КАТАЛОГ
+          Каталог
         </h1>
       </header>
 

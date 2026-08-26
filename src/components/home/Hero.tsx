@@ -30,7 +30,7 @@ export function Hero() {
 
         {/* Текстовая колонка */}
         <div className="flex flex-col items-center text-center md:items-start md:text-left md:flex-1">
-          <span className="text-xs font-semibold tracking-[0.28em] text-accent uppercase">
+          <span className="text-sm font-medium tracking-[0.08em] text-accent">
             {site.brand}
           </span>
           <h1 className="mt-2.5 font-display text-3xl leading-[0.95] text-ink sm:text-5xl md:text-6xl lg:text-7xl tracking-tight">

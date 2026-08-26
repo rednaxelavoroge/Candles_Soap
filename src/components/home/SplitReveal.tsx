@@ -8,7 +8,7 @@ import {
   useSpring,
   useTransform,
 } from "framer-motion";
-import { useEffect, useRef, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 
 const PARALLAX_MAX = 8;
 
@@ -36,6 +36,29 @@ export function SplitReveal({ wordLeft, wordRight, children }: SplitRevealProps)
   const rightX = useTransform(scrollYProgress, [0.01, 0.35], ["0%", "102%"]);
   const revealOpacity = useTransform(scrollYProgress, [0.05, 0.25], [0, 1]);
   const revealScale = useTransform(scrollYProgress, [0.05, 0.35], [0.96, 1]);
+
+  /*
+    Страховка на случай, когда слежение за прокруткой молчит. Содержимое здесь
+    проявляется по мере прохода секции: пока прокрутки нет — прозрачность 0.
+    Если страница уже прокручена, а счётчик прохода так и остался на нуле,
+    значит сигнал не доходит, и блок остался бы невидимым. Тогда показываем
+    его как есть, без движения: лучше без анимации, чем пустой экран.
+  */
+  const [scrollBroken, setScrollBroken] = useState(false);
+
+  useEffect(() => {
+    if (reduced) return;
+    let checked = false;
+    const onScroll = () => {
+      if (checked || window.scrollY < 40) return;
+      checked = true;
+      window.setTimeout(() => {
+        if (scrollYProgress.get() === 0) setScrollBroken(true);
+      }, 900);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [reduced, scrollYProgress]);
 
   const pointerX = useMotionValue(0);
   const pointerY = useMotionValue(0);
@@ -81,7 +104,11 @@ export function SplitReveal({ wordLeft, wordRight, children }: SplitRevealProps)
     <section ref={sectionRef} className="relative h-[130vh] bg-surface">
       <div ref={stageRef} className="sticky top-0 flex h-svh items-center overflow-hidden">
         <motion.div
-          style={{ opacity: revealOpacity, scale: revealScale, x: parallaxX, y: parallaxY }}
+          style={
+            scrollBroken
+              ? { opacity: 1, scale: 1 }
+              : { opacity: revealOpacity, scale: revealScale, x: parallaxX, y: parallaxY }
+          }
           className="w-full will-change-transform"
         >
           {children}
@@ -90,7 +117,7 @@ export function SplitReveal({ wordLeft, wordRight, children }: SplitRevealProps)
         {/* Левая половина шторки */}
         <motion.div
           aria-hidden="true"
-          style={{ x: leftX }}
+          style={scrollBroken ? { x: "-102%" } : { x: leftX }}
           className="pointer-events-none absolute inset-y-0 left-0 flex w-1/2 items-center justify-end border-r border-sand bg-bg will-change-transform shadow-[4px_0_24px_rgba(62,43,32,0.06)]"
         >
           <span className="-translate-y-[0.42em] pr-[0.06em] font-display text-[15vw] leading-[0.8] text-ink/90 select-none md:text-[11vw]">
@@ -101,7 +128,7 @@ export function SplitReveal({ wordLeft, wordRight, children }: SplitRevealProps)
         {/* Правая половина шторки */}
         <motion.div
           aria-hidden="true"
-          style={{ x: rightX }}
+          style={scrollBroken ? { x: "102%" } : { x: rightX }}
           className="pointer-events-none absolute inset-y-0 right-0 flex w-1/2 items-center justify-start bg-bg will-change-transform shadow-[-4px_0_24px_rgba(62,43,32,0.06)]"
         >
           <span className="translate-y-[0.42em] pl-[0.06em] font-display text-[15vw] leading-[0.8] text-ink/90 select-none md:text-[11vw]">

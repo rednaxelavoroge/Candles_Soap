@@ -50,7 +50,7 @@ export function CategoryView({
     <div className="w-full">
       {/* Верхняя горизонтальная лента с кнопками-кругляшками (фильтрами) */}
       <div className="px-5 pb-6 md:px-8 md:pb-8">
-        <span className="eyebrow block mb-3 text-xs tracking-widest text-accent uppercase font-medium">
+        <span className="eyebrow block mb-3 text-accent">
           Рубрики и темы
         </span>
         <DragScroller className="-mx-5 px-5 md:-mx-8 md:px-8">
@@ -123,7 +123,7 @@ export function CategoryView({
           <button
             type="button"
             onClick={clearFilters}
-            className="text-xs font-medium text-accent hover:underline uppercase tracking-wider"
+            className="text-sm font-medium text-accent hover:underline"
           >
             Показать все ({products.length})
           </button>

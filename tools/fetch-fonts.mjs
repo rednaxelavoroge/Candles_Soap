@@ -50,10 +50,22 @@ const css = await fetch(url, { headers: { "user-agent": UA } }).then((r) => {
 
 await mkdir(OUT_DIR, { recursive: true });
 
-// Блоки идут с комментарием-подписью подмножества перед каждым @font-face.
+/**
+ * Comfortaa на Google Fonts — переменный шрифт: один файл на все начертания,
+ * вес внутри него задаётся осью wght. В CSS Google всё равно печатает
+ * отдельный @font-face на каждый запрошенный вес, и все они ссылаются на
+ * ОДИН И ТОТ ЖЕ файл.
+ *
+ * Если сохранить их как есть, каждое начертание окажется прибито к одному
+ * весу — и браузер нарисует весь сайт весом по умолчанию (400). Полужирные
+ * логотип, меню и подписи станут такими же тонкими, как основной текст:
+ * ровно это и выглядело как «шрифт применился не везде».
+ *
+ * Поэтому одинаковые файлы схлопываются в один @font-face с диапазоном
+ * `font-weight: 300 700`. Тогда ось работает, и вес меняется как задумано.
+ */
 const blocks = css.split("/*").slice(1);
-const out = [];
-let saved = 0;
+const faces = new Map();
 let skipped = 0;
 
 for (const raw of blocks) {
@@ -65,24 +77,42 @@ for (const raw of blocks) {
   }
 
   const family = body.match(/font-family:\s*'([^']+)'/)?.[1];
-  const weight = body.match(/font-weight:\s*(\d+)/)?.[1];
+  const weight = Number(body.match(/font-weight:\s*(\d+)/)?.[1]);
   const style = body.match(/font-style:\s*(\w+)/)?.[1] ?? "normal";
   const src = body.match(/url\((https:[^)]+)\)/)?.[1];
   const range = body.match(/unicode-range:\s*([^;]+);/)?.[1];
   if (!family || !weight || !src) continue;
 
-  const name = `${family.toLowerCase().replace(/\s+/g, "-")}-${weight}-${subset}.woff2`;
-  const bytes = Buffer.from(await fetch(src).then((r) => r.arrayBuffer()));
+  // Ключ — сам файл: одинаковый адрес значит одинаковое начертание.
+  const key = `${family}|${style}|${subset}|${src}`;
+  const face = faces.get(key);
+  if (face) {
+    face.min = Math.min(face.min, weight);
+    face.max = Math.max(face.max, weight);
+  } else {
+    faces.set(key, { family, style, subset, src, range, min: weight, max: weight });
+  }
+}
+
+const out = [];
+let saved = 0;
+
+for (const face of faces.values()) {
+  const slug = face.family.toLowerCase().replace(/\s+/g, "-");
+  // Один вес — так и называем файл; диапазон — значит файл переменный.
+  const tag = face.min === face.max ? String(face.min) : "var";
+  const name = `${slug}-${tag}-${face.subset}.woff2`;
+  const bytes = Buffer.from(await fetch(face.src).then((r) => r.arrayBuffer()));
   await writeFile(join(OUT_DIR, name), bytes);
   saved++;
 
   out.push(
     `@font-face {
-  font-family: "${family}";
-  font-style: ${style};
-  font-weight: ${weight};
+  font-family: "${face.family}";
+  font-style: ${face.style};
+  font-weight: ${face.min === face.max ? face.min : `${face.min} ${face.max}`};
   font-display: swap;
-  src: url("/fonts/${name}") format("woff2");${range ? `\n  unicode-range: ${range};` : ""}
+  src: url("/fonts/${name}") format("woff2");${face.range ? `\n  unicode-range: ${face.range};` : ""}
 }`,
   );
 }

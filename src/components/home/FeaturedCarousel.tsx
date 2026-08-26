@@ -78,7 +78,7 @@ export function FeaturedCarousel() {
                     </div>
 
                     <div className="absolute inset-0 flex flex-col justify-end p-4 bg-gradient-to-t from-ink/75 via-ink/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                      <span className="text-xs font-semibold tracking-widest text-white/80 uppercase">
+                      <span className="text-sm font-medium tracking-[0.04em] text-white/85">
                         {product.article}
                       </span>
                       <span className="font-display text-lg font-medium text-white">
@@ -102,7 +102,7 @@ export function FeaturedCarousel() {
                     </div>
                     <Link
                       href={`/catalog/${product.category}/${product.slug}`}
-                      className="text-xs font-medium tracking-wider text-accent uppercase hover:text-ink transition-colors"
+                      className="text-sm font-medium text-accent hover:text-ink transition-colors"
                     >
                       Обзор →
                     </Link>
