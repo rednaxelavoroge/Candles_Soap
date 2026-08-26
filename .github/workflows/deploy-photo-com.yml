@@ -1,8 +1,9 @@
-# One-off: выложить фотосайт Anna_photo в document root .com (public_html).
-# Секреты FTP те же, что у .art. Папку annamanasaryan.art НЕ трогаем.
+# Выложить фотосайт Anna_photo в document root .com.
+# FTP-секреты те же, что у .art, но логин почти всегда сразу в папке .art.
+# Папку annamanasaryan.art НЕ трогаем: если в цели есть catalog/ и brand/ — стоп.
 #
-# Запуск только вручную. На push в main не вешается — иначе параллельный
-# FTP свечей забьёт лимит соединений.
+# Только вручную (workflow_dispatch). В коммит пишите [skip ci], иначе
+# push в main запустит ещё и выкладку свечей и упрётся в лимит FTP.
 
 name: Deploy photo site to .com
 
@@ -34,7 +35,7 @@ jobs:
           npm ci
           npm run export:namecheap
 
-      - name: Upload to public_html and remove WordPress
+      - name: Upload to .com public_html and remove WordPress
         env:
           FTP_HOST: ${{ secrets.FTP_HOST }}
           FTP_USER: ${{ secrets.FTP_USER }}
@@ -49,25 +50,61 @@ jobs:
           test -f out/index.html
           test -f out/.htaccess
 
-          echo "=== FTP listing (names only) ==="
-          LIST=$(lftp -u "$FTP_USER","$FTP_PASSWORD" "$FTP_HOST" <<'LFTP'
+          lftp_script() {
+            lftp -u "$FTP_USER","$FTP_PASSWORD" "$FTP_HOST" <<LFTP
           set ssl:verify-certificate no
           set ftp:ssl-allow yes
           set net:max-retries 3
-          pwd
-          cls -1
+          set net:timeout 30
+          $1
           bye
           LFTP
-          )
-          echo "$LIST"
+          }
+
+          listing_of() {
+            local dest="$1"
+            lftp_script "set cmd:fail-exit yes
+          cd $dest
+          echo PWD_OK
+          cls -1" || true
+          }
+
+          is_art() {
+            echo "$1" | grep -E -q '^catalog/' && echo "$1" | grep -E -q '^brand/'
+          }
+
+          is_wp() {
+            echo "$1" | grep -E -q '^(wp-admin|wp-content|wp-includes)/' || echo "$1" | grep -q '^wp-config.php'
+          }
 
           TARGET=""
-          if echo "$LIST" | grep -qx 'public_html'; then
-            TARGET=public_html
-          elif echo "$LIST" | grep -qx 'wp-admin'; then
-            TARGET=.
-          else
-            echo "Cannot find .com document root in FTP listing"
+          for cand in "." ".." "../.." "../../public_html" "../public_html" "public_html" "/home/annaclvt/public_html"; do
+            echo "=== probe $cand ==="
+            LIST=$(listing_of "$cand")
+            echo "$LIST" | head -80
+            if ! echo "$LIST" | grep -q 'PWD_OK'; then
+              echo "skip $cand (cannot cd)"
+              continue
+            fi
+            if is_art "$LIST"; then
+              echo "skip $cand (this is .art candles tree)"
+              continue
+            fi
+            if is_wp "$LIST"; then
+              TARGET="$cand"
+              echo "FOUND .com WordPress at $cand"
+              break
+            fi
+          done
+
+          if [ -z "$TARGET" ]; then
+            echo "FTP account cannot see .com document root. Need main cPanel FTP or an account jailed to public_html of annamanasaryan.com."
+            exit 1
+          fi
+
+          GUARD=$(listing_of "$TARGET")
+          if is_art "$GUARD"; then
+            echo "Refusing to upload: $TARGET still looks like .art"
             exit 1
           fi
           echo "Using FTP target: $TARGET"
@@ -102,10 +139,4 @@ jobs:
           LFTP
 
           echo "=== remaining top-level names ==="
-          lftp -u "$FTP_USER","$FTP_PASSWORD" "$FTP_HOST" <<LFTP
-          set ssl:verify-certificate no
-          set ftp:ssl-allow yes
-          cd $TARGET
-          cls -1
-          bye
-          LFTP
+          listing_of "$TARGET"
