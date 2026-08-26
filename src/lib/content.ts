@@ -145,8 +145,11 @@ export function getFeatured() {
 
   return {
     enabled: settings?.enabled ?? true,
-    eyebrow: settings?.eyebrow || "Избранное мастерской",
-    title: settings?.title || "Коллекция сезона",
+    // Пустая надпись сверху — это выбор «не показывать её», а не «подставь
+    // своё»: заказчица стёрла строчку в панели, значит на странице её быть
+    // не должно.
+    eyebrow: settings?.eyebrow ?? "Избранное мастерской",
+    title: settings?.title || "Избранное",
     subtitle: settings?.subtitle || "",
     products: chosen.length > 0 ? chosen : getFeaturedProducts(10),
   };
@@ -243,8 +246,19 @@ export function getProductsBySection(categorySlug: string, sectionSlug: string):
   return inCategory.filter((product) => product.tags.includes(sectionSlug));
 }
 
-/** Похожие товары: сначала по совпадению тегов, затем просто соседи по категории. */
+/**
+ * Похожие товары.
+ *
+ * Если заказчица выбрала их руками — показываем ровно её список и в её
+ * порядке. Пустой список значит «подбери сам»: сначала по совпадению тем,
+ * затем просто соседи по разделу.
+ */
 export function getRelatedProducts(product: Product, limit = 4): Product[] {
+  const chosen = (product.related ?? [])
+    .map((id) => products.find((candidate) => candidate.id === id))
+    .filter((candidate): candidate is Product => candidate !== undefined && candidate.id !== product.id);
+  if (chosen.length > 0) return chosen.slice(0, limit);
+
   return getProductsByCategory(product.category)
     .filter((candidate) => candidate.id !== product.id)
     .map((candidate) => ({

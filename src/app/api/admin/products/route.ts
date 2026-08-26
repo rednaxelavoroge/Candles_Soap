@@ -121,6 +121,9 @@ export async function POST(req: Request) {
       price: product.price !== undefined ? product.price : null,
       specs: product.specs || {},
       tags: product.tags || [],
+      // Пустой список — это осознанный выбор «подбирай сам», поэтому поле
+      // берётся из формы всегда, а не только когда в нём что-то есть.
+      related: Array.isArray(product.related) ? product.related : [],
     };
 
     let updatedProducts: Product[];
