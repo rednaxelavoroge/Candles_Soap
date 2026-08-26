@@ -62,7 +62,7 @@ export default function AboutPage() {
                 href={whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 rounded-full btn-brown px-8 py-3.5 text-xs font-semibold tracking-[0.2em] uppercase shadow-md"
+                className="inline-flex items-center gap-3 rounded-full btn-brown px-8 py-3.5 text-xs font-semibold tracking-[0.04em] shadow-md"
               >
                 <span>Связаться в WhatsApp</span>
                 <span>→</span>
@@ -70,7 +70,7 @@ export default function AboutPage() {
             ) : null}
             <Link
               href="/catalog"
-              className="inline-flex items-center gap-2 rounded-full btn-brown-outline px-7 py-3.5 text-xs font-semibold tracking-[0.18em] uppercase"
+              className="inline-flex items-center gap-2 rounded-full btn-brown-outline px-7 py-3.5 text-xs font-semibold tracking-[0.03em]"
             >
               Перейти в каталог
             </Link>

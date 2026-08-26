@@ -62,13 +62,13 @@ export function Tile({
         {article ? (
           <>
             <span aria-hidden="true" className="my-1.5 sm:my-2.5 block h-px w-6 sm:w-8 bg-white/40" />
-            <span className="block text-[0.625rem] sm:text-xs font-semibold tracking-[0.2em] text-white/90 uppercase">
+            <span className="block text-[0.625rem] sm:text-xs font-semibold tracking-[0.04em] text-white/90">
               {article}
             </span>
           </>
         ) : null}
 
-        <span className="mt-2 sm:mt-3.5 inline-flex items-center gap-1 rounded-full bg-white/20 px-2.5 sm:px-3.5 py-0.5 sm:py-1 text-[0.5625rem] sm:text-[0.6875rem] font-medium tracking-wider text-white uppercase backdrop-blur-sm">
+        <span className="mt-2 sm:mt-3.5 inline-flex items-center gap-1 rounded-full bg-white/20 px-2.5 sm:px-3.5 py-0.5 sm:py-1 text-[0.5625rem] sm:text-[0.6875rem] font-medium tracking-[0.02em] text-white backdrop-blur-sm">
           <span>Смотреть</span>
           <span>→</span>
         </span>

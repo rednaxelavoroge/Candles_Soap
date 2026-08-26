@@ -43,14 +43,14 @@ export function Hero() {
           <div className="mt-6 flex flex-wrap justify-center md:justify-start items-center gap-3.5">
             <a
               href="#catalog"
-              className="inline-flex items-center gap-2.5 rounded-full btn-brown px-7 py-3 text-xs font-semibold tracking-[0.18em] uppercase shadow-md"
+              className="inline-flex items-center gap-2.5 rounded-full btn-brown px-7 py-3 text-xs font-semibold tracking-[0.03em] shadow-md"
             >
               <span>Смотреть каталог</span>
               <span>↓</span>
             </a>
             <Link
               href="/about"
-              className="inline-flex items-center gap-2 rounded-full btn-brown-outline px-6 py-3 text-xs font-semibold tracking-[0.18em] uppercase"
+              className="inline-flex items-center gap-2 rounded-full btn-brown-outline px-6 py-3 text-xs font-semibold tracking-[0.03em]"
             >
               О мастере
             </Link>

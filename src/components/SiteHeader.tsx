@@ -75,7 +75,7 @@ export function SiteHeader() {
             href="https://wa.me/37498033550"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full btn-brown px-5 py-2 text-xs font-semibold tracking-wider uppercase"
+            className="rounded-full btn-brown px-5 py-2 text-xs font-semibold tracking-[0.02em]"
           >
             WhatsApp
           </a>
@@ -133,7 +133,7 @@ export function SiteHeader() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setOpen(false)}
-                className="inline-flex w-full items-center justify-center rounded-full btn-brown py-4 text-center text-xs font-semibold tracking-widest uppercase shadow-md"
+                className="inline-flex w-full items-center justify-center rounded-full btn-brown py-4 text-center text-xs font-semibold tracking-[0.03em] shadow-md"
               >
                 Написать в WhatsApp →
               </a>

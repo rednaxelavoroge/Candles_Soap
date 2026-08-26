@@ -71,7 +71,7 @@ export function BackstageTile({
           
           {/* Плашка с бейджем видео */}
           <div className="absolute top-2.5 left-2.5 z-10">
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-ink/75 px-2.5 py-1 text-[0.625rem] font-medium tracking-wider text-white uppercase backdrop-blur-sm shadow-sm">
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-ink/75 px-2.5 py-1 text-[0.625rem] font-medium tracking-[0.02em] text-white backdrop-blur-sm shadow-sm">
               <span className="block h-1.5 w-1.5 rounded-full bg-accent animate-pulse" />
               <span>Видео</span>
             </span>

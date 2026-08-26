@@ -80,7 +80,7 @@ function ShowcaseSection({
             isEven ? "md:order-1" : "md:order-2"
           }`}
         >
-          <span className="text-xs font-medium tracking-[0.22em] text-accent uppercase">
+          <span className="text-xs font-medium tracking-[0.04em] text-accent">
             {item.number}
           </span>
           <h3 className="mt-3 font-display text-2xl leading-tight text-ink sm:text-3xl md:text-4xl lg:text-5xl">
@@ -95,7 +95,7 @@ function ShowcaseSection({
           <div className="mt-7 flex items-center gap-5">
             <Link
               href={`/catalog/${item.category.slug}`}
-              className="group inline-flex items-center gap-2.5 rounded-full btn-brown-outline px-7 py-3 text-xs font-semibold tracking-[0.18em] uppercase"
+              className="group inline-flex items-center gap-2.5 rounded-full btn-brown-outline px-7 py-3 text-xs font-semibold tracking-[0.03em]"
             >
               <span>Смотреть изделия</span>
               <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
@@ -131,7 +131,7 @@ function ShowcaseSection({
                 />
               </div>
               <div className="absolute inset-0 flex items-center justify-center bg-ink/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100 backdrop-blur-[1px]">
-                <span className="rounded-full bg-white/95 px-6 py-2.5 text-xs font-semibold tracking-widest text-ink uppercase shadow-md backdrop-blur-sm">
+                <span className="rounded-full bg-white/95 px-6 py-2.5 text-xs font-semibold tracking-[0.03em] text-ink shadow-md backdrop-blur-sm">
                   Открыть раздел →
                 </span>
               </div>

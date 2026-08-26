@@ -69,7 +69,7 @@ export function ContactBlock() {
               href={whatsapp}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex shrink-0 items-center justify-center gap-3 rounded-full btn-brown px-9 py-4 text-xs font-semibold tracking-[0.2em] uppercase shadow-md"
+              className="inline-flex shrink-0 items-center justify-center gap-3 rounded-full btn-brown px-9 py-4 text-xs font-semibold tracking-[0.04em] shadow-md"
             >
               <span>Написать в WhatsApp</span>
               <span>→</span>

@@ -84,7 +84,7 @@ function SectionItem({
             isEven ? "md:order-1" : "md:order-2"
           }`}
         >
-          <span className="text-xs font-medium tracking-[0.22em] text-accent uppercase">{num}</span>
+          <span className="text-xs font-medium tracking-[0.04em] text-accent">{num}</span>
           <h2 className="mt-3 font-display text-3xl leading-tight text-ink sm:text-4xl md:text-5xl">
             {section.title}
           </h2>
@@ -94,7 +94,7 @@ function SectionItem({
           <div className="mt-7 flex items-center gap-5">
             <Link
               href={href}
-              className="group btn-brown-outline inline-flex items-center gap-2.5 rounded-full px-7 py-3 text-xs font-semibold tracking-[0.18em] uppercase"
+              className="group btn-brown-outline inline-flex items-center gap-2.5 rounded-full px-7 py-3 text-xs font-semibold tracking-[0.03em]"
             >
               <span>Смотреть изделия</span>
               <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
@@ -126,7 +126,7 @@ function SectionItem({
                 />
               </div>
               <div className="absolute inset-0 flex items-center justify-center bg-ink/20 opacity-0 backdrop-blur-[1px] transition-opacity duration-300 group-hover:opacity-100">
-                <span className="rounded-full bg-white/95 px-6 py-2.5 text-xs font-semibold tracking-widest text-ink uppercase shadow-md backdrop-blur-sm">
+                <span className="rounded-full bg-white/95 px-6 py-2.5 text-xs font-semibold tracking-[0.03em] text-ink shadow-md backdrop-blur-sm">
                   Открыть раздел →
                 </span>
               </div>

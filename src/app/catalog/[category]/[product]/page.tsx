@@ -97,7 +97,7 @@ export default async function ProductPage({ params }: { params: Promise<Params> 
             {product.title}
           </h1>
 
-          <p className="mt-3 text-xs font-medium tracking-[0.16em] text-muted uppercase">
+          <p className="mt-3 text-xs font-medium tracking-[0.03em] text-muted">
             Артикул: {product.article}
           </p>
 
@@ -133,7 +133,7 @@ export default async function ProductPage({ params }: { params: Promise<Params> 
                 href={whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-3 rounded-full btn-brown px-9 py-4 text-xs font-semibold tracking-[0.2em] uppercase shadow-md"
+                className="inline-flex items-center justify-center gap-3 rounded-full btn-brown px-9 py-4 text-xs font-semibold tracking-[0.04em] shadow-md"
               >
                 <span>Написать в WhatsApp</span>
                 <span>→</span>

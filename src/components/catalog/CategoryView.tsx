@@ -59,7 +59,7 @@ export function CategoryView({
             <button
               type="button"
               onClick={clearFilters}
-              className={`rounded-full px-5 py-2.5 text-xs font-semibold tracking-wider uppercase whitespace-nowrap transition-all duration-300 ${
+              className={`rounded-full px-5 py-2.5 text-xs font-semibold tracking-[0.02em] whitespace-nowrap transition-all duration-300 ${
                 selectedTags.length === 0
                   ? "bg-btn-brown text-white shadow-md scale-105"
                   : "border border-sand bg-surface text-ink hover:border-clay hover:bg-bg"
@@ -79,7 +79,7 @@ export function CategoryView({
                   type="button"
                   onClick={() => toggleTag(tag.slug)}
                   aria-pressed={isSelected}
-                  className={`rounded-full px-5 py-2.5 text-xs font-semibold tracking-wider uppercase whitespace-nowrap transition-all duration-300 ${
+                  className={`rounded-full px-5 py-2.5 text-xs font-semibold tracking-[0.02em] whitespace-nowrap transition-all duration-300 ${
                     isSelected
                       ? "bg-btn-brown text-white shadow-md scale-105"
                       : "border border-sand bg-surface text-ink hover:border-clay hover:bg-bg"
@@ -147,7 +147,7 @@ export function CategoryView({
           <button
             type="button"
             onClick={clearFilters}
-            className="mt-4 rounded-full btn-brown px-6 py-2.5 text-xs font-semibold uppercase tracking-wider"
+            className="mt-4 rounded-full btn-brown px-6 py-2.5 text-xs font-semibold tracking-[0.02em]"
           >
             Сбросить фильтры
           </button>

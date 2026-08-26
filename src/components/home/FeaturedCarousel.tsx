@@ -84,7 +84,7 @@ export function FeaturedCarousel() {
                       <span className="font-display text-lg font-medium text-white">
                         {product.title}
                       </span>
-                      <span className="mt-2 inline-flex items-center gap-1.5 text-xs text-sand font-medium uppercase tracking-wider">
+                      <span className="mt-2 inline-flex items-center gap-1.5 text-xs text-sand font-medium tracking-[0.02em]">
                         <span>Подробнее</span>
                         <span>→</span>
                       </span>

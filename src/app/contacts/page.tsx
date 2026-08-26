@@ -33,7 +33,7 @@ export default function ContactsPage() {
             href={whatsappBase}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 rounded-full btn-brown px-9 py-4 text-xs font-semibold tracking-[0.2em] uppercase shadow-md"
+            className="inline-flex items-center gap-3 rounded-full btn-brown px-9 py-4 text-xs font-semibold tracking-[0.04em] shadow-md"
           >
             <span>Написать в WhatsApp</span>
             <span>→</span>

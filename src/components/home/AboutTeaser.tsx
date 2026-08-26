@@ -32,7 +32,7 @@ export function AboutTeaser() {
           <div className="mt-9 flex items-center gap-6">
             <Link
               href="/about"
-              className="inline-flex items-center gap-2.5 rounded-full btn-brown px-8 py-3.5 text-xs font-semibold tracking-[0.2em] uppercase shadow-md"
+              className="inline-flex items-center gap-2.5 rounded-full btn-brown px-8 py-3.5 text-xs font-semibold tracking-[0.04em] shadow-md"
             >
               <span>Подробнее обо мне</span>
               <span>→</span>
