@@ -1,18 +1,6 @@
 [
   {
     "kind": "video",
-    "src": "/catalog/video/serdtse-v-ladonyakh.mp4",
-    "poster": {
-      "src": "/catalog/gypsum/serdtse-v-ladonyakh-01.webp",
-      "width": 1600,
-      "height": 1600,
-      "blurDataURL": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAABQAgCdASoQABAAA4BaJZAC7AYv1vDXPZ+9tGAA/vKqmT7EL65s3Oi4rfLR7EJYaEsBMWYXbSc8/lszuqLFDnjzky/3DLXPhWGR+Cf8y67BtgpgRYOX1AQb7K/qfh2AApgeGgul98h8ttsGmT00Ar6AAAA=",
-      "alt": "Сердце в ладонях — короткий ролик"
-    },
-    "caption": ""
-  },
-  {
-    "kind": "video",
     "src": "/catalog/video/soap-process-1.mp4",
     "poster": {
       "src": "/catalog/posters/soap-process-1.webp",
