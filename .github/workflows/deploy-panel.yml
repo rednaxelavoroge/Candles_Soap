@@ -1,0 +1,133 @@
+# Выкладка панели на обычный хостинг заказчицы.
+#
+# Зачем. Панель живёт на Vercel, а он в России придушен: заказчица заходит
+# в неё только через ВПН и жалуется на тормоза. Сам сайт мы по этой же
+# причине давно перевезли на её хостинг — теперь туда же переезжает панель.
+# Заодно пропадает предел в 3,5 МБ на загружаемый ролик: он был ограничением
+# Vercel, а не нашим.
+#
+# Vercel при этом остаётся рабочим запасным входом. Если на хостинге
+# что-то пойдёт не так, заказчица заходит по-старому и ничего не теряет.
+#
+# Что уезжает. Сборка «standalone»: маленький сервер плюс ровно те
+# зависимости, которые нужны в работе. `npm install` на хостинге не нужен —
+# его там и не запустить.
+#
+# Чего НЕ уезжает: фотографии каталога. Это 236 МБ, они уже лежат на сайте,
+# и панель берёт их оттуда — адрес задан в NEXT_PUBLIC_MEDIA_BASE.
+
+name: Выложить панель на хостинг
+
+on:
+  # Только вручную кнопкой: панель обновляется реже сайта, и лишний раз
+  # дёргать её перезапуском во время работы заказчицы незачем.
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-panel
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Проверить, заданы ли доступы
+        id: check
+        run: |
+          if [ -z "${{ secrets.FTP_HOST }}" ]; then
+            echo "Секрет FTP_HOST не задан — выкладка пропущена."
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Установить зависимости
+        if: steps.check.outputs.ready == 'true'
+        run: npm ci
+
+      - name: Собрать панель
+        if: steps.check.outputs.ready == 'true'
+        env:
+          PANEL_BUILD: "1"
+          # Откуда панель берёт фотографии и ролики.
+          NEXT_PUBLIC_MEDIA_BASE: ${{ secrets.PANEL_MEDIA_BASE || 'https://annamanasaryan.art' }}
+        run: npm run build
+
+      - name: Собрать папку для отправки
+        if: steps.check.outputs.ready == 'true'
+        run: |
+          set -e
+          rm -rf panel-dist
+          cp -r .next/standalone panel-dist
+
+          # Статика сборки лежит отдельно — сервер ждёт её внутри.
+          mkdir -p panel-dist/.next
+          cp -r .next/static panel-dist/.next/static
+
+          # Из public оставляем только шрифты и значок: всё остальное —
+          # каталог на 236 МБ, он и так на сайте.
+          rm -rf panel-dist/public
+          mkdir -p panel-dist/public
+          cp -r public/fonts panel-dist/public/fonts
+          cp public/favicon.ico panel-dist/public/ 2>/dev/null || true
+
+          # Инструменты сборки в работе не нужны, а место занимают.
+          rm -rf panel-dist/node_modules/typescript panel-dist/node_modules/@types
+
+          # Хостинг запускает файл с этим именем — он просто зовёт сервер сборки.
+          cat > panel-dist/app.js <<'JS'
+          // Точка входа для хостинга: Passenger запускает именно этот файл.
+          // Порт он передаёт сам, сборке остаётся его прочитать.
+          process.env.HOSTNAME = process.env.HOSTNAME || "127.0.0.1";
+          require("./server.js");
+          JS
+
+          echo "Размер: $(du -sh panel-dist | cut -f1), файлов: $(find panel-dist -type f | wc -l)"
+
+      - name: Залить панель на хостинг
+        if: steps.check.outputs.ready == 'true'
+        env:
+          FTP_HOST: ${{ secrets.FTP_HOST }}
+          FTP_USER: ${{ secrets.FTP_USER }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          # Папка приложения на хостинге — та же, что вписана в cPanel
+          # в поле «Application root».
+          PANEL_DIR: ${{ secrets.FTP_PANEL_DIR || 'admin-panel' }}
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq lftp
+          echo "Заливаю панель в $PANEL_DIR на $FTP_HOST"
+          # --delete здесь можно и нужно: это наша собственная папка, чужого
+          # в ней нет, а старые куски сборки только мешают.
+          # Исключение — tmp: там хостинг держит свою служебную метку.
+          lftp -u "$FTP_USER","$FTP_PASSWORD" "$FTP_HOST" <<LFTP
+            set ssl:verify-certificate no
+            set ftp:ssl-allow yes
+            mirror -R --delete --parallel=4 --exclude-glob tmp/ panel-dist "$PANEL_DIR"
+            bye
+          LFTP
+
+      - name: Перезапустить панель
+        if: steps.check.outputs.ready == 'true'
+        env:
+          FTP_HOST: ${{ secrets.FTP_HOST }}
+          FTP_USER: ${{ secrets.FTP_USER }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          PANEL_DIR: ${{ secrets.FTP_PANEL_DIR || 'admin-panel' }}
+        run: |
+          # Хостинг перезапускает приложение, когда меняется этот файл.
+          date > restart.txt
+          lftp -u "$FTP_USER","$FTP_PASSWORD" "$FTP_HOST" <<LFTP
+            set ssl:verify-certificate no
+            set ftp:ssl-allow yes
+            mkdir -p "$PANEL_DIR/tmp"
+            put -O "$PANEL_DIR/tmp" restart.txt
+            bye
+          LFTP
+          echo "Панель перезапущена."

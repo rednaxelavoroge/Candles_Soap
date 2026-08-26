@@ -1,6 +1,7 @@
 "use client";
 
 import { optimizeImageClient } from "@/lib/image-optimizer";
+import { mediaUrl } from "@/lib/media-url";
 import { useDragOrder, withMoved } from "@/lib/use-drag-order";
 import type { BackstageItem, Category, Product, Tag, Video } from "@/lib/schemas";
 import Image from "next/image";
@@ -1123,7 +1124,7 @@ export default function AdminPage() {
                     <div>
                       <div className="relative aspect-square w-full overflow-hidden rounded-xl bg-sand/40">
                         <Image
-                          src={cover}
+                          src={mediaUrl(cover)}
                           alt={p.title}
                           fill
                           sizes="200px"
@@ -1235,7 +1236,7 @@ export default function AdminPage() {
                   <div className="flex items-start gap-4">
                     {cat.cover?.src ? (
                       <div className="relative h-16 w-16 flex-shrink-0 overflow-hidden rounded-xl bg-sand/40">
-                        <Image src={cat.cover.src} alt="" fill sizes="64px" className="object-cover" />
+                        <Image src={mediaUrl(cat.cover.src)} alt="" fill sizes="64px" className="object-cover" />
                       </div>
                     ) : null}
                     <div>
@@ -1501,7 +1502,7 @@ export default function AdminPage() {
                     {newPortraitData?.base64 || siteData.portrait?.src ? (
                       // eslint-disable-next-line @next/next/no-img-element
                       <img
-                        src={newPortraitData?.base64 || siteData.portrait.src}
+                        src={newPortraitData?.base64 || mediaUrl(siteData.portrait.src)}
                         alt="Портрет автора"
                         className="h-full w-full object-cover"
                       />
@@ -1835,7 +1836,7 @@ export default function AdminPage() {
                   >
                     <div className="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-sand/30">
                       <Image
-                        src={poster}
+                        src={mediaUrl(poster)}
                         alt={b.caption}
                         fill
                         sizes="300px"
@@ -2459,7 +2460,7 @@ export default function AdminPage() {
                     >
                       <div className="relative h-20 w-20 overflow-hidden rounded-lg border border-sand">
                         <Image
-                          src={img.src}
+                          src={mediaUrl(img.src)}
                           alt=""
                           fill
                           sizes="80px"
@@ -2637,7 +2638,7 @@ export default function AdminPage() {
                         >
                           <span className="relative h-10 w-8 shrink-0 overflow-hidden rounded-md bg-sand/40">
                             {v.poster ? (
-                              <Image src={v.poster} alt="" fill sizes="32px" className="object-cover" />
+                              <Image src={mediaUrl(v.poster)} alt="" fill sizes="32px" className="object-cover" />
                             ) : null}
                           </span>
                           <span className="min-w-0 flex-1 truncate text-xs text-ink">

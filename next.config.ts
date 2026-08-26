@@ -11,6 +11,20 @@ import type { NextConfig } from "next";
  */
 const isExport = process.env.STATIC_EXPORT === "1";
 
+/**
+ * PANEL_BUILD=1 собирает только панель — для переезда на обычный хостинг
+ * заказчицы, где она открывается без ВПН.
+ *
+ * `standalone` кладёт рядом со сборкой маленький сервер и ровно те
+ * зависимости, которые нужны в работе: на хостинг уезжает папка в десятки
+ * мегабайт вместо всего проекта, и `npm install` там не нужен.
+ *
+ * Оптимизатор картинок выключен намеренно. Фотографии каталога — это 236 МБ,
+ * везти их к панели незачем: она берёт их прямо с сайта, по адресу из
+ * NEXT_PUBLIC_MEDIA_BASE.
+ */
+const isPanel = process.env.PANEL_BUILD === "1";
+
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   // trailingSlash в выгрузке обязателен. Без него страницы ложатся файлами
@@ -18,6 +32,7 @@ const nextConfig: NextConfig = {
   // не найдёт — откроется только главная. С ним каждая страница становится
   // папкой с index.html, и сервер отдаёт её сам, без всяких правил.
   ...(isExport ? { output: "export" as const, trailingSlash: true } : {}),
+  ...(isPanel ? { output: "standalone" as const } : {}),
   // Поддомен admin.annamanasaryan.art заведён ради одной страницы — панели.
   // Его корень уводит прямо в неё, чтобы не помнить хвост /admin.
   // В статической выгрузке правил перенаправления нет и быть не может:
@@ -37,7 +52,7 @@ const nextConfig: NextConfig = {
         },
       }),
   images: {
-    unoptimized: isExport,
+    unoptimized: isExport || isPanel,
     formats: ["image/webp"],
     deviceSizes: [375, 640, 828, 1080, 1200, 1600],
     imageSizes: [96, 160, 256, 384],
