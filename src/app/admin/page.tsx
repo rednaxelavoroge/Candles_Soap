@@ -15,12 +15,18 @@ type Tab = "products" | "categories" | "sections" | "featured" | "texts" | "back
 type LibraryVideo = { src: string; name: string; poster: string | null; caption: string | null };
 
 /**
- * Предел на свой ролик. Тот же, что стоит на сервере: тело запроса к панели
- * ограничено площадкой, и ролик с телефона в него не помещается. Проверяем
- * ещё до отправки, чтобы сказать понятную причину, а не «ошибка загрузки».
+ * Предел на свой ролик. Тот же, что стоит на сервере.
+ *
+ * Раньше здесь стояло 3,5 МБ — столько пропускала площадка Vercel, и ролик
+ * с телефона в неё не помещался. Панель переехала на обычный хостинг, предел
+ * исчез, и файл берётся целиком. Двести мегабайт — с большим запасом к тому,
+ * что даёт айфон на коротком клипе.
  */
-const MAX_VIDEO_UPLOAD_MB = 3.5;
+const MAX_VIDEO_UPLOAD_MB = 200;
 const MAX_VIDEO_UPLOAD_BYTES = MAX_VIDEO_UPLOAD_MB * 1024 * 1024;
+
+/** Сколько ждать готовый ролик, прежде чем признать, что что-то пошло не так. */
+const VIDEO_WAIT_MS = 12 * 60 * 1000;
 
 export default function AdminPage() {
   const router = useRouter();
@@ -106,6 +112,12 @@ export default function AdminPage() {
   const [videoPickerOpen, setVideoPickerOpen] = useState(false);
   const [videoLink, setVideoLink] = useState("");
   const [uploadingVideo, setUploadingVideo] = useState(false);
+  /**
+   * Что показывать на кнопке, пока ролик едет и готовится. Сорок мегабайт с
+   * телефона уходят не мгновенно, а сжимаются ещё пару минут; без внятной
+   * надписи это выглядит как «панель зависла».
+   */
+  const [videoStage, setVideoStage] = useState("");
 
   // Переименование подраздела на вкладке «Подразделы»
   const [editingTagSlug, setEditingTagSlug] = useState<string | null>(null);
@@ -673,73 +685,112 @@ export default function AdminPage() {
   };
 
   /**
-   * Загрузка своего ролика. Тяжёлые файлы сюда не проходят — их место на
-   * YouTube, и об этом честно говорит сообщение с сервера.
+   * Отправка файла с показом, сколько уже ушло.
+   *
+   * Обычный `fetch` не умеет рассказывать о ходе отправки, а сорок мегабайт
+   * с телефона уходят не за секунду. Без процентов это выглядит как зависшая
+   * панель, и человек жмёт кнопку второй раз. Поэтому здесь старый XHR — он
+   * единственный, кто про ход отправки сообщает.
+   */
+  const sendVideoFile = (file: File): Promise<{ ok: boolean; job?: string; error?: string }> =>
+    new Promise((resolve) => {
+      const form = new FormData();
+      form.append("file", file);
+
+      const xhr = new XMLHttpRequest();
+      xhr.open("POST", "/api/admin/videos");
+      xhr.upload.onprogress = (ev) => {
+        if (!ev.lengthComputable) return;
+        setVideoStage(`Ролик загружается… ${Math.round((ev.loaded / ev.total) * 100)}%`);
+      };
+      xhr.onload = () => {
+        // Ответ может оказаться не нашим (обрыв по пути) — тогда это не JSON.
+        try {
+          resolve(JSON.parse(xhr.responseText));
+        } catch {
+          resolve({ ok: false, error: "Сервер ответил непонятно. Попробуйте ещё раз." });
+        }
+      };
+      xhr.onerror = () =>
+        resolve({ ok: false, error: "Связь с сервером оборвалась. Попробуйте ещё раз." });
+      xhr.send(form);
+    });
+
+  /**
+   * Загрузка своего ролика — целиком, как он снят на телефон.
+   *
+   * Сжать его прямо здесь браузер не может, а класть на сайт сорок мегабайт
+   * нельзя: остальные ролики весят по 1–2 МБ и потому открываются сразу.
+   * Поэтому файл уходит как есть, а пережимает его машина сборки — тем же
+   * способом, каким сделана вся нынешняя библиотека. Там же ролик и
+   * проверяется: длительность совпала с исходной, звук на месте. Не совпало —
+   * он не появится, и ниже будет сказано почему.
    */
   const handleVideoFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
 
-    /*
-      Тяжёлый файл отсекаем здесь, до отправки. Раньше он уходил на сервер,
-      тот обрывал запрос целиком — ещё до нашего кода, — и в ответ приходила
-      не наша ошибка, а страница сервера. Разбор её падал, и заказчица видела
-      единственное слово «Ошибка загрузки видео» без объяснения, почему.
-    */
     const megabytes = file.size / (1024 * 1024);
     if (file.size > MAX_VIDEO_UPLOAD_BYTES) {
       alert(
-        `Этот ролик слишком тяжёлый: ${megabytes.toFixed(1)} МБ, а загрузить можно до ${MAX_VIDEO_UPLOAD_MB} МБ.\n\n` +
-          "Что можно сделать:\n" +
-          "• взять готовый ролик кнопкой «Выбрать из моих роликов» — там вся ваша съёмка;\n" +
-          "• прислать этот файл мне, я подготовлю его и добавлю в список.",
+        `Этот ролик слишком длинный: ${megabytes.toFixed(0)} МБ, а принять можно до ${MAX_VIDEO_UPLOAD_MB} МБ.\n\n` +
+          "Снимите покороче или возьмите готовый кнопкой «Выбрать из моих роликов».",
       );
       e.target.value = "";
       return;
     }
 
     setUploadingVideo(true);
+    setVideoStage("Ролик загружается…");
     try {
-      const base64 = await new Promise<string>((resolve, reject) => {
-        const reader = new FileReader();
-        reader.onload = () => resolve(String(reader.result));
-        reader.onerror = () => reject(new Error("read"));
-        reader.readAsDataURL(file);
-      });
-
-      const res = await fetch("/api/admin/videos", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ base64, fileName: file.name }),
-      });
-
-      // Ответ может оказаться не нашим (обрыв на сервере) — тогда читаем как текст.
-      const raw = await res.text();
-      let data: { ok?: boolean; src?: string; error?: string } = {};
-      try {
-        data = JSON.parse(raw);
-      } catch {
-        data = {};
+      const sent = await sendVideoFile(file);
+      if (!sent.ok || !sent.job) {
+        alert(sent.error || "Не удалось загрузить видео. Попробуйте ещё раз.");
+        return;
       }
 
-      if (res.ok && data.ok && data.src) {
-        setVideoLibrary((prev) => [{ src: data.src!, name: file.name, poster: null, caption: null }, ...prev]);
-        attachVideo(data.src);
-      } else if (res.status === 413) {
-        alert(
-          `Ролик не прошёл: ${megabytes.toFixed(1)} МБ — слишком тяжёлый для загрузки через панель.\n\n` +
-            "Возьмите готовый ролик кнопкой «Выбрать из моих роликов» или пришлите файл мне.",
-        );
-      } else {
-        alert(data.error || "Не удалось загрузить видео. Попробуйте ещё раз или пришлите файл мне.");
+      /*
+        Дальше ролик живёт своей жизнью на машине сборки: она его пережимает и
+        проверяет. Спрашиваем, чем кончилось, раз в пять секунд. Минута съёмки
+        сжимается около минуты, поэтому ждём до двенадцати — с запасом на
+        очередь, если заказчица загрузила два ролика подряд.
+      */
+      setVideoStage("Готовим ролик…");
+      const until = Date.now() + VIDEO_WAIT_MS;
+      while (Date.now() < until) {
+        await new Promise((r) => setTimeout(r, 5000));
+        const res = await fetch(`/api/admin/videos?job=${encodeURIComponent(sent.job)}`);
+        const state = (await res.json().catch(() => ({}))) as {
+          state?: string;
+          src?: string;
+          sizeMb?: number;
+          error?: string;
+        };
+
+        if (state.state === "done" && state.src) {
+          setVideoLibrary((prev) => [
+            { src: state.src!, name: file.name, poster: null, caption: null },
+            ...prev,
+          ]);
+          attachVideo(state.src);
+          showToast(
+            `✓ Ролик готов${state.sizeMb ? ` — ${state.sizeMb} МБ вместо ${megabytes.toFixed(0)}` : ""}`,
+          );
+          return;
+        }
+        if (state.state === "failed") {
+          alert(`${state.error}\n\nПопробуйте другой ролик или пришлите этот мне.`);
+          return;
+        }
       }
-    } catch {
+
       alert(
-        "Видео не загрузилось: связь с сервером оборвалась.\n\n" +
-          "Попробуйте ещё раз. Если повторится — возьмите ролик кнопкой «Выбрать из моих роликов».",
+        "Ролик всё ещё готовится — это дольше обычного.\n\n" +
+          "Загружать заново не нужно: он появится в списке сам. Обновите страницу через несколько минут.",
       );
     } finally {
       setUploadingVideo(false);
+      setVideoStage("");
       e.target.value = "";
     }
   };
@@ -2606,7 +2657,7 @@ export default function AdminPage() {
                   </button>
 
                   <label className="cursor-pointer rounded-full border border-sand bg-surface px-4 py-2 text-[0.7rem] font-semibold text-ink hover:bg-sand/30">
-                    {uploadingVideo ? "Загружаю..." : "Загрузить короткий ролик"}
+                    {uploadingVideo ? videoStage || "Загружаю..." : "Загрузить свой ролик"}
                     <input
                       type="file"
                       accept="video/mp4,video/*"
@@ -2685,9 +2736,10 @@ export default function AdminPage() {
                     </button>
                   </div>
                   <p className="mt-1.5 text-[0.7rem] leading-relaxed text-muted">
-                    Ролик с телефона обычно слишком тяжёлый, чтобы загрузить его прямо
-                    отсюда. Выложите его на YouTube и вставьте ссылку — так он и
-                    открываться у покупателей будет быстрее.
+                    Ролик, снятый на телефон, можно загрузить прямо отсюда кнопкой
+                    «Загрузить свой ролик» — целиком, ничего заранее делать не надо.
+                    Он сам станет лёгким и появится в списке через пару минут.
+                    YouTube нужен только для чужих роликов или совсем длинных.
                   </p>
                 </div>
               </div>

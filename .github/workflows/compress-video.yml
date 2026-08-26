@@ -1,0 +1,209 @@
+# Сжатие ролика, загруженного через панель.
+#
+# Зачем. Заказчица снимает на айфон: 10–40 МБ на клип. Класть такое на сайт
+# нельзя — её нынешние 47 роликов весят по 1–2 МБ и поэтому открываются сразу,
+# а сорок мегабайт покупатель на мобильном интернете будет ждать минуту.
+# Пережать надо, а на общем хостинге нечем: ffmpeg там нет. Здесь он есть,
+# и все нынешние ролики сделаны ровно им — 720p, H.264, звук AAC.
+#
+# Как сюда попадает исходник. Панель кладёт его приложением к служебному
+# выпуску `video-inbox` — не коммитом. Коммит остался бы в истории навсегда,
+# даже если файл потом удалить; приложения к выпуску удаляются насовсем.
+#
+# Что обещано заказчику: никаких обрывков. Поэтому готовый ролик проверяется
+# до того, как попадёт на сайт: длительность должна совпасть с исходной, и
+# если в исходнике был звук — он должен остаться. Не совпало — ролик не
+# публикуется, а панели отправляется внятная причина.
+
+name: Сжать загруженный ролик
+
+on:
+  workflow_dispatch:
+    inputs:
+      target:
+        description: "Имя готового файла, оно же имя приложения с исходником"
+        required: true
+        type: string
+
+# Два ролика подряд — обычное дело. Пусть ждут очереди: иначе второй push
+# упрётся в первый, а две выкладки разом ссорятся на FTP.
+concurrency:
+  group: compress-video
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  compress:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Убедиться, что ffmpeg на месте
+        run: |
+          set -euo pipefail
+          if ! command -v ffmpeg >/dev/null || ! command -v ffprobe >/dev/null; then
+            sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+          fi
+          ffmpeg -version | sed -n 1p
+
+      - name: Забрать исходник из выпуска
+        id: fetch
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TARGET: ${{ inputs.target }}
+        run: |
+          set -euo pipefail
+
+          # Имя приходит от панели. Она его уже чистит, но доверять чужому
+          # имени файла нельзя: одна косая черта — и мы пишем не туда.
+          case "$TARGET" in
+            */*|*..*|"")
+              echo "Недопустимое имя: «$TARGET»"
+              exit 1
+              ;;
+          esac
+          if ! printf '%s' "$TARGET" | grep -Eq '^[a-z0-9][a-z0-9-]*\.mp4$'; then
+            echo "Недопустимое имя: «$TARGET»"
+            exit 1
+          fi
+
+          ASSET_ID=$(gh api "repos/${{ github.repository }}/releases/tags/video-inbox" \
+            --jq ".assets[] | select(.name == \"$TARGET\") | .id")
+          if [ -z "$ASSET_ID" ]; then
+            echo "Исходник «$TARGET» в выпуске не найден."
+            exit 1
+          fi
+
+          echo "asset_id=$ASSET_ID" >> "$GITHUB_OUTPUT"
+          gh api -H "Accept: application/octet-stream" \
+            "repos/${{ github.repository }}/releases/assets/$ASSET_ID" > raw-input
+          ls -lh raw-input
+
+      - name: Сжать и проверить
+        id: work
+        env:
+          TARGET: ${{ inputs.target }}
+        run: |
+          set -euo pipefail
+
+          fail() {
+            echo "reason=$1" >> "$GITHUB_OUTPUT"
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+            echo "ОТКАЗ: $1"
+            exit 0
+          }
+
+          probe() {
+            ffprobe -v error -show_entries format=duration -of csv=p=0 "$1" 2>/dev/null || echo ""
+          }
+          # Без `head`: он закрывает поток на первой строке, ffprobe получает
+          # сигнал, `pipefail` считает это провалом, и шаг падает на ровном месте.
+          has_audio() {
+            ffprobe -v error -select_streams a -show_entries stream=index -of csv=p=0 "$1" 2>/dev/null || true
+          }
+
+          SRC_DUR=$(probe raw-input)
+          if [ -z "$SRC_DUR" ]; then
+            fail "Это не похоже на видеофайл — не удалось его прочитать."
+          fi
+          SRC_AUDIO=$(has_audio raw-input)
+          echo "Исходник: ${SRC_DUR}с, звук: ${SRC_AUDIO:-нет}"
+
+          # Те же настройки, которыми сделаны нынешние 47 роликов: 720 по
+          # короткой стороне (съёмка вертикальная), H.264, звук AAC.
+          # -movflags +faststart — чтобы проигрывание начиналось до полной
+          # загрузки, иначе на телефоне ролик «думает» перед стартом.
+          # min() — чтобы маленький ролик не растягивало до 720: от этого он
+          # только потяжелеет, а чётче не станет.
+          ffmpeg -nostdin -v error -y -i raw-input \
+            -vf "scale='if(gt(iw,ih),-2,min(720,iw))':'if(gt(iw,ih),min(720,ih),-2)':flags=lanczos" \
+            -c:v libx264 -preset slow -crf 28 -pix_fmt yuv420p \
+            -c:a aac -b:a 96k -movflags +faststart \
+            ready.mp4 || fail "Ролик не удалось пережать."
+
+          OUT_DUR=$(probe ready.mp4)
+          if [ -z "$OUT_DUR" ]; then
+            fail "Готовый ролик не читается — публиковать такое нельзя."
+          fi
+          OUT_AUDIO=$(has_audio ready.mp4)
+
+          # Обрыв виден именно здесь: если ffmpeg споткнулся на середине,
+          # длительность выйдет короче исходной. Полсекунды расхождения
+          # допускаем — столько даёт округление длины последнего кадра.
+          DIFF=$(awk -v a="$SRC_DUR" -v b="$OUT_DUR" 'BEGIN{d=a-b; if(d<0)d=-d; printf "%.2f", d}')
+          echo "Готово: ${OUT_DUR}с, звук: ${OUT_AUDIO:-нет}, расхождение ${DIFF}с"
+          if awk -v d="$DIFF" 'BEGIN{exit !(d > 0.5)}'; then
+            fail "Ролик получился короче исходного (на ${DIFF}с) — публиковать не стали."
+          fi
+          if [ -n "$SRC_AUDIO" ] && [ -z "$OUT_AUDIO" ]; then
+            fail "У готового ролика пропал звук — публиковать не стали."
+          fi
+
+          SIZE_MB=$(awk -v b="$(stat -c%s ready.mp4)" 'BEGIN{printf "%.1f", b/1048576}')
+          echo "size_mb=$SIZE_MB" >> "$GITHUB_OUTPUT"
+          echo "ok=true" >> "$GITHUB_OUTPUT"
+
+      - name: Положить ролик в каталог
+        if: steps.work.outputs.ok == 'true'
+        env:
+          TARGET: ${{ inputs.target }}
+        run: |
+          set -euo pipefail
+          mkdir -p public/catalog/video
+          mv ready.mp4 "public/catalog/video/$TARGET"
+
+          git config user.name "Claude"
+          git config user.email "noreply@anthropic.com"
+          git add "public/catalog/video/$TARGET"
+          git commit -m "Ролик из панели: $TARGET"
+
+          # Заказчица правит сайт из панели каждый день, её сохранения уходят
+          # в main прямо сейчас. Без rebase мы откатили бы её работу.
+          git pull --rebase origin ${{ github.ref_name }}
+          git push origin HEAD:${{ github.ref_name }}
+
+      - name: Ответить панели и прибрать исходник
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TARGET: ${{ inputs.target }}
+          OK: ${{ steps.work.outputs.ok }}
+          REASON: ${{ steps.work.outputs.reason }}
+          SIZE_MB: ${{ steps.work.outputs.size_mb }}
+          ASSET_ID: ${{ steps.fetch.outputs.asset_id }}
+        run: |
+          set -uo pipefail
+
+          if [ "${OK:-}" = "true" ]; then
+            printf '{"ok":true,"src":"/catalog/video/%s","sizeMb":%s}\n' \
+              "$TARGET" "${SIZE_MB:-0}" > result.json
+          else
+            REASON="${REASON:-Ролик не удалось подготовить. Попробуйте ещё раз.}"
+            printf '{"ok":false,"error":%s}\n' \
+              "$(printf '%s' "$REASON" | python3 -c 'import json,sys; print(json.dumps(sys.stdin.read()))')" \
+              > result.json
+          fi
+          cat result.json
+
+          RELEASE_ID=$(gh api "repos/${{ github.repository }}/releases/tags/video-inbox" --jq .id)
+
+          # Прошлый ответ с тем же именем мог остаться, если панель его не
+          # забрала, — GitHub не разрешает два приложения с одним именем.
+          OLD=$(gh api "repos/${{ github.repository }}/releases/$RELEASE_ID" \
+            --jq ".assets[] | select(.name == \"$TARGET.result.json\") | .id" || true)
+          if [ -n "$OLD" ]; then
+            gh api -X DELETE "repos/${{ github.repository }}/releases/assets/$OLD" || true
+          fi
+
+          gh api --method POST \
+            -H "Content-Type: application/json" \
+            "https://uploads.github.com/repos/${{ github.repository }}/releases/$RELEASE_ID/assets?name=$TARGET.result.json" \
+            --input result.json || true
+
+          # Исходник своё отработал. Он тяжёлый, и держать его незачем.
+          if [ -n "${ASSET_ID:-}" ]; then
+            gh api -X DELETE "repos/${{ github.repository }}/releases/assets/$ASSET_ID" || true
+          fi
