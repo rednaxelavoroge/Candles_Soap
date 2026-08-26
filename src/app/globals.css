@@ -14,8 +14,13 @@
   --color-btn-brown: #7a3f30;
   --color-btn-brown-hover: #5f2e22;
 
+  /*
+   * Один шрифт на весь сайт — заголовки, тексты, кнопки, поля. Так у
+   * заказчицы на annamanasaryan.com, и она попросила так же здесь.
+   * Второго семейства в проекте больше нет: ни в стеке, ни в файлах.
+   */
   --font-display: "Comfortaa", system-ui, -apple-system, sans-serif;
-  --font-sans: "Montserrat", system-ui, -apple-system, sans-serif;
+  --font-sans: "Comfortaa", system-ui, -apple-system, sans-serif;
 
   /* Мягкие скругления карточек и кнопок */
   --radius-none: 0px;
@@ -47,6 +52,8 @@
     color: var(--color-ink);
     font-family: var(--font-sans);
     font-weight: 300;
+    line-height: 1.65;
+    letter-spacing: 0;
     font-synthesis-weight: none;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
@@ -61,6 +68,19 @@
     letter-spacing: -0.01em;
   }
 
+  /*
+   * Поля и кнопки браузер рисует своим шрифтом, а не наследует от страницы.
+   * Строка ниже не даёт им выпасть из общего набора: один шрифт — значит
+   * один везде, включая формы и админку.
+   */
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    font-family: inherit;
+  }
+
   img,
   video,
   svg {
@@ -69,12 +89,19 @@
   }
 
   /*
-   * Запас на случай, когда скрипты не отработали (Яндекс Старт, Яндекс с
-   * Алисой). Класс `js` вешает первая же строка скрипта в layout.tsx; пока
-   * его нет, выезжающие половины показываются на месте и во весь цвет,
-   * иначе от них остался бы пустой экран.
+   * Запас на случай, когда скрипты не отработали (Яндекс Браузер, Яндекс
+   * Старт, Яндекс с Алисой). Метку `data-js` ставит первая же строка скрипта
+   * в layout.tsx и снимает сторож, если React так и не ожил. Пока метки нет,
+   * выезжающие половины показываются на месте и во весь цвет, иначе от них
+   * остался бы пустой экран.
+   *
+   * Правило ловит и то, что framer-motion отдал в разметку с `opacity: 0`
+   * своим стилем: раньше сюда попадали не все блоки, и каталог на главной
+   * оставался невидимым даже со страховкой.
    */
-  html:not(.js) .will-change-transform {
+  html:not([data-js]) .will-change-transform,
+  html:not([data-js]) [style*="opacity:0"],
+  html:not([data-js]) [style*="opacity: 0"] {
     opacity: 1 !important;
     transform: none !important;
   }

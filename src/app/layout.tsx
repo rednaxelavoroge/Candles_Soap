@@ -1,6 +1,7 @@
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SmoothScroll } from "@/components/SmoothScroll";
+import { HydrationGuard } from "@/components/ui/HydrationGuard";
 import { VideoFocus } from "@/components/ui/VideoFocus";
 import { getSite } from "@/lib/content";
 import { comfortaa } from "@/lib/fonts";
@@ -58,16 +59,36 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           Если скрипты не отработают — как это случалось в Яндекс Старте и в
           Яндексе с Алисой, — показывать было бы нечего.
 
-          Эта строка выполняется первой на странице и вешает класс `js` на
-          <html>. Пока класса нет, стиль в globals.css силой возвращает
-          половины на место: страница читается целиком, просто без движения.
-          Не отработали скрипты — не появился и класс, и запас сработал сам.
+          Эта строка выполняется первой на странице и ставит на <html>
+          атрибут `data-js`. Пока его нет, стиль в globals.css силой
+          возвращает половины на место: страница читается целиком, просто
+          без движения.
+
+          Атрибут, а не класс: className корня — свойство, которым
+          распоряжается React, и при гидратации он возвращал его к тому, что
+          было на сервере, унося метку с собой. Незнакомые ему атрибуты React
+          не трогает.
+
+          Сразу за строкой — сторож. Метка, поставленная сразу, снимает
+          страховку ещё до того, как выяснится, доехал ли основной код: в
+          Яндекс Браузере он иногда не доезжал, и оставался пустой экран.
+          Сторож ждёт отметки от HydrationGuard и снимает метку, если её нет
+          четыре секунды. Время в скрытой вкладке не считается: браузер там
+          придерживает работу, и живая страница выглядела бы мёртвой.
         */}
         <script
           dangerouslySetInnerHTML={{
-            __html: `document.documentElement.classList.add("js")`,
+            __html:
+              'document.documentElement.setAttribute("data-js","1");' +
+              '(function(){var w=0,t=setInterval(function(){' +
+              'if(window.__siteHydrated){clearInterval(t);return}' +
+              'if(document.visibilityState==="hidden")return;' +
+              'if((w+=250)>=4000){clearInterval(t);' +
+              'document.documentElement.removeAttribute("data-js")}' +
+              '},250)})();',
           }}
         />
+        <HydrationGuard />
         <SmoothScroll />
         <VideoFocus />
         <a
