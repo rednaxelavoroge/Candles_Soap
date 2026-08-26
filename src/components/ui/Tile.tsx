@@ -51,9 +51,16 @@ export function Tile({
         <Media image={image} sizes={sizes} priority={priority} />
       </div>
 
-      {/* Мягкое затемнение в теплом шоколадном тоне: только по наведению / касанию */}
+      {/*
+        Затемнение при наведении. Тон берётся не от кнопок, а от основного
+        тёмного цвета сайта: кнопки заказчица сменила на светлый «кофе с
+        молоком», и плёнка того же тона стала слишком бледной — белое название
+        изделия на ней терялось. А ради названия эта плёнка и существует:
+        «люди часто не хотят открывать, увидели и название выписали».
+        Чистого чёрного здесь нет — это тёплый тёмно-коричневый с прозрачностью.
+      */}
       <div
-        className={`absolute inset-0 flex flex-col items-center justify-center bg-btn-brown/70 p-3 sm:p-5 text-center backdrop-blur-[3px] transition-opacity duration-300 ease-out ${overlayClass}`}
+        className={`absolute inset-0 flex flex-col items-center justify-center bg-ink/60 p-3 sm:p-5 text-center backdrop-blur-[3px] transition-opacity duration-300 ease-out ${overlayClass}`}
       >
         <span className="block font-display text-xs sm:text-base font-normal leading-snug text-white drop-shadow-sm">
           {title}
