@@ -24,11 +24,12 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const OUT_DIR = join(ROOT, "public", "fonts");
 const CSS_OUT = join(ROOT, "src", "app", "fonts.css");
 
-/** Только нужные начертания: каждое лишнее — лишние килобайты. */
-const FAMILIES = [
-  "Comfortaa:wght@300;400;500;600;700",
-  "Montserrat:wght@300;400;500;600",
-];
+/**
+ * Один шрифт на весь сайт, как на annamanasaryan.com — так попросила
+ * заказчица. Второе семейство здесь больше не нужно: каждое лишнее
+ * начертание — лишние килобайты на первой же странице.
+ */
+const FAMILIES = ["Comfortaa:wght@300;400;500;600;700"];
 
 // Современный user-agent нужен, чтобы Google отдал woff2, а не устаревшие форматы.
 const UA =

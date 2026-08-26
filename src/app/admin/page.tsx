@@ -7,7 +7,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
-type Tab = "products" | "categories" | "sections" | "texts" | "backstage" | "settings";
+type Tab = "products" | "categories" | "sections" | "featured" | "texts" | "backstage" | "settings";
 
 /** Ролик из библиотеки мастерской: то, что уже загружено в проект. */
 type LibraryVideo = { src: string; name: string; poster: string | null; caption: string | null };
@@ -31,7 +31,7 @@ export default function AdminPage() {
     featured: {
       enabled: true,
       eyebrow: "Избранное мастерской",
-      title: "Коллекция сезона",
+      title: "Избранное",
       subtitle: "",
       ids: [] as string[],
     },
@@ -99,6 +99,10 @@ export default function AdminPage() {
   // Переименование подраздела на вкладке «Подразделы»
   const [editingTagSlug, setEditingTagSlug] = useState<string | null>(null);
   const [editingTagTitle, setEditingTagTitle] = useState("");
+  // Создание подраздела там же, не открывая изделие
+  const [sectionTagTitle, setSectionTagTitle] = useState("");
+  // Поиск изделий для блока «Похожие» в карточке
+  const [relatedSearch, setRelatedSearch] = useState("");
 
   // Пока порядок уезжает на сервер, стрелки заблокированы: два быстрых нажатия
   // подряд ушли бы от одного и того же исходного списка и затёрли друг друга.
@@ -157,7 +161,7 @@ export default function AdminPage() {
               featured: {
                 enabled: true,
                 eyebrow: "Избранное мастерской",
-                title: "Коллекция сезона",
+                title: "Избранное",
                 subtitle: "",
                 ids: [],
                 ...(s.site.featured || {}),
@@ -381,6 +385,43 @@ export default function AdminPage() {
   };
 
   /**
+   * Новый подраздел прямо со вкладки «Подразделы».
+   *
+   * Раньше завести его можно было только изнутри карточки изделия, и заказчица
+   * искала кнопку там, где список — то есть здесь. Подраздел появляется в
+   * списке сразу, а в каталоге — когда им отметят хотя бы одно изделие.
+   */
+  const handleCreateSectionTag = async () => {
+    const title = sectionTagTitle.trim();
+    if (!title || creatingTag) return;
+
+    setCreatingTag(true);
+    try {
+      const res = await fetch("/api/admin/tags", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ title }),
+      });
+      const data = await res.json();
+      if (!res.ok || !data.tag) {
+        alert(data.error || "Не удалось создать подраздел");
+        return;
+      }
+      setTags(data.tags || []);
+      setSectionTagTitle("");
+      showToast(
+        data.existed
+          ? `Подраздел «${data.tag.title}» уже был в списке`
+          : `✓ Подраздел «${data.tag.title}» создан`,
+      );
+    } catch {
+      alert("Ошибка создания подраздела");
+    } finally {
+      setCreatingTag(false);
+    }
+  };
+
+  /**
    * Переименование подраздела. Адрес раздела (слаг) остаётся прежним: он стоит
    * в ссылке, а ссылку заказчица могла уже кому-то отправить.
    */
@@ -535,6 +576,33 @@ export default function AdminPage() {
     }
   };
 
+  /** Добавляет изделие в блок «Похожие» открытой карточки. */
+  const addRelated = (id: string) => {
+    if (!editProduct) return;
+    const current = editProduct.related || [];
+    if (current.includes(id) || id === editProduct.id) return;
+    setEditProduct({ ...editProduct, related: [...current, id] });
+    setRelatedSearch("");
+  };
+
+  const removeRelated = (id: string) => {
+    if (!editProduct) return;
+    setEditProduct({
+      ...editProduct,
+      related: (editProduct.related || []).filter((x) => x !== id),
+    });
+  };
+
+  /** Порядок в блоке «Похожие» — это порядок показа на странице изделия. */
+  const moveRelated = (index: number, shift: number) => {
+    if (!editProduct) return;
+    const ids = [...(editProduct.related || [])];
+    const target = index + shift;
+    if (target < 0 || target >= ids.length) return;
+    [ids[index], ids[target]] = [ids[target], ids[index]];
+    setEditProduct({ ...editProduct, related: ids });
+  };
+
   /** Убирает фотографию из открытого изделия. Сохранится при нажатии «Сохранить». */
   const removeProductImage = (index: number) => {
     if (!editProduct) return;
@@ -632,6 +700,22 @@ export default function AdminPage() {
         p.article.toLowerCase().includes(featuredQuery),
     )
     .slice(0, featuredQuery === "" ? 20 : 40);
+
+  /**
+   * Что предложить в «Похожие»: изделия того же раздела, кроме самого
+   * открытого и уже выбранных. Поиск снимает ограничение по разделу — иногда
+   * к свече просится подсвечник.
+   */
+  const relatedQuery = relatedSearch.trim().toLowerCase();
+  const relatedCandidates = products
+    .filter((p) => p.id !== editProduct?.id && !(editProduct?.related || []).includes(p.id))
+    .filter((p) =>
+      relatedQuery === ""
+        ? p.category === editProduct?.category
+        : p.title.toLowerCase().includes(relatedQuery) ||
+          p.article.toLowerCase().includes(relatedQuery),
+    )
+    .slice(0, relatedQuery === "" ? 20 : 40);
 
   const handleSaveTexts = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -836,6 +920,17 @@ export default function AdminPage() {
             }`}
           >
             Подразделы ({tags.length})
+          </button>
+          <button
+            onClick={() => setTab("featured")}
+            type="button"
+            className={`rounded-full px-5 py-2 text-xs font-semibold uppercase tracking-wider transition-all ${
+              tab === "featured"
+                ? "btn-brown shadow-sm"
+                : "bg-surface/60 text-muted hover:text-ink"
+            }`}
+          >
+            Избранное ({siteData.featured.ids.length})
           </button>
           <button
             onClick={() => setTab("texts")}
@@ -1055,7 +1150,7 @@ export default function AdminPage() {
                     <div>
                       <div className="flex items-center gap-2">
                         <h3 className="font-display text-base text-ink">{cat.title}</h3>
-                        <span className="text-[0.65rem] font-mono text-muted bg-sand/40 px-2 py-0.5 rounded">
+                        <span className="text-[0.65rem] tracking-wide text-muted bg-sand/40 px-2 py-0.5 rounded">
                           /{cat.slug}
                         </span>
                       </div>
@@ -1106,7 +1201,40 @@ export default function AdminPage() {
               </p>
             </div>
 
-            <div className="mt-6 flex flex-col gap-2">
+            <div className="mt-6 rounded-2xl border border-sand/60 bg-surface p-4 shadow-sm">
+              <label className="block text-xs font-semibold uppercase tracking-wider text-muted mb-1.5">
+                Новый подраздел
+              </label>
+              <div className="flex flex-col gap-2 sm:flex-row">
+                <input
+                  type="text"
+                  value={sectionTagTitle}
+                  onChange={(e) => setSectionTagTitle(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") {
+                      e.preventDefault();
+                      handleCreateSectionTag();
+                    }
+                  }}
+                  placeholder="Например: Свадьба или Мужчинам в подарок"
+                  className="flex-1 rounded-xl border border-sand bg-bg/50 px-4 py-2.5 text-xs text-ink placeholder:text-muted/50 focus:border-btn-brown focus:outline-none"
+                />
+                <button
+                  type="button"
+                  onClick={handleCreateSectionTag}
+                  disabled={creatingTag || sectionTagTitle.trim() === ""}
+                  className="rounded-full btn-brown px-6 py-2.5 text-xs font-semibold uppercase tracking-wider shadow-md disabled:opacity-40"
+                >
+                  {creatingTag ? "Создаю..." : "+ Создать подраздел"}
+                </button>
+              </div>
+              <p className="mt-1.5 text-[0.7rem] leading-relaxed text-muted">
+                Он появится в списке ниже сразу, а в каталоге — когда вы отметите им
+                хотя бы одно изделие. Отмечают на вкладке «Изделия», внутри карточки.
+              </p>
+            </div>
+
+            <div className="mt-4 flex flex-col gap-2">
               {tags.length === 0 ? (
                 <p className="rounded-2xl border border-dashed border-sand p-6 text-xs text-muted">
                   Подразделов пока нет. Новый заводится в карточке изделия — там же,
@@ -1214,11 +1342,6 @@ export default function AdminPage() {
               )}
             </div>
 
-            <p className="mt-6 rounded-2xl border border-sand/60 bg-bg/40 p-4 text-[0.7rem] leading-relaxed text-muted">
-              Новый подраздел заводится там, где он нужен: откройте изделие на
-              вкладке «Изделия» и внизу списка тем нажмите «Создать подраздел» —
-              он сразу встанет и в этот список.
-            </p>
           </div>
         ) : null}
 
@@ -1287,195 +1410,220 @@ export default function AdminPage() {
                 />
               </div>
 
-              {/* ЛЕНТА «ИЗБРАННОГО» НА ГЛАВНОЙ */}
-              <div className="rounded-2xl border border-sand/60 bg-bg/40 p-4">
-                <div className="flex flex-wrap items-center justify-between gap-3">
-                  <span className="text-xs font-semibold uppercase tracking-wider text-muted">
-                    Лента избранного на главной
-                  </span>
-                  <label className="flex items-center gap-2 text-xs text-ink">
-                    <input
-                      type="checkbox"
-                      checked={siteData.featured.enabled}
-                      onChange={(e) =>
-                        setSiteData({
-                          ...siteData,
-                          featured: { ...siteData.featured, enabled: e.target.checked },
-                        })
-                      }
-                      className="h-4 w-4 accent-[color:var(--color-btn-brown,#7a5c50)]"
-                    />
-                    Показывать на сайте
-                  </label>
-                </div>
-
-                <p className="mt-2 text-xs leading-relaxed text-muted">
-                  Название и подпись пишете сами: «Хиты продаж», «К Новому году» — что нужно.
-                  Изделия тоже выбираете сами, в том порядке, в котором они встанут в ленте.
-                  Если не выбрать ни одного, лента соберётся сама — по одному изделию из
-                  каждого раздела.
-                </p>
-
-                <div className="mt-4 grid gap-3 sm:grid-cols-2">
-                  <div>
-                    <label className="block text-[0.7rem] font-semibold uppercase tracking-wider text-muted mb-1">
-                      Надпись сверху
-                    </label>
-                    <input
-                      type="text"
-                      value={siteData.featured.eyebrow}
-                      onChange={(e) =>
-                        setSiteData({
-                          ...siteData,
-                          featured: { ...siteData.featured, eyebrow: e.target.value },
-                        })
-                      }
-                      placeholder="Например: Избранное мастерской"
-                      className="w-full rounded-xl border border-sand bg-surface px-3 py-2 text-xs text-ink focus:border-btn-brown focus:outline-none"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-[0.7rem] font-semibold uppercase tracking-wider text-muted mb-1">
-                      Заголовок
-                    </label>
-                    <input
-                      type="text"
-                      value={siteData.featured.title}
-                      onChange={(e) =>
-                        setSiteData({
-                          ...siteData,
-                          featured: { ...siteData.featured, title: e.target.value },
-                        })
-                      }
-                      placeholder="Например: Хиты продаж"
-                      className="w-full rounded-xl border border-sand bg-surface px-3 py-2 text-xs text-ink focus:border-btn-brown focus:outline-none"
-                    />
-                  </div>
-                </div>
-
-                <div className="mt-3">
-                  <label className="block text-[0.7rem] font-semibold uppercase tracking-wider text-muted mb-1">
-                    Подпись под заголовком
-                  </label>
-                  <input
-                    type="text"
-                    value={siteData.featured.subtitle}
-                    onChange={(e) =>
-                      setSiteData({
-                        ...siteData,
-                        featured: { ...siteData.featured, subtitle: e.target.value },
-                      })
-                    }
-                    placeholder="Например: то, что чаще всего заказывают к празднику"
-                    className="w-full rounded-xl border border-sand bg-surface px-3 py-2 text-xs text-ink focus:border-btn-brown focus:outline-none"
-                  />
-                </div>
-
-                <div className="mt-4">
-                  <span className="block text-[0.7rem] font-semibold uppercase tracking-wider text-muted mb-1.5">
-                    Выбранные изделия ({siteData.featured.ids.length})
-                  </span>
-
-                  {siteData.featured.ids.length === 0 ? (
-                    <p className="rounded-xl border border-dashed border-sand px-3 py-2.5 text-xs text-muted">
-                      Пока ничего не выбрано — на сайте лента собирается сама.
-                    </p>
-                  ) : (
-                    <div className="flex flex-col gap-1.5">
-                      {siteData.featured.ids.map((id, index) => {
-                        const item = products.find((p) => p.id === id);
-                        return (
-                          <div
-                            key={id}
-                            className="flex items-center gap-2 rounded-xl border border-sand bg-surface px-3 py-2"
-                          >
-                            <span className="text-[0.7rem] text-muted">{index + 1}</span>
-                            <span className="flex-1 truncate text-xs text-ink">
-                              {item ? `${item.title} · ${item.article}` : `Изделие удалено (${id})`}
-                            </span>
-                            <button
-                              type="button"
-                              onClick={() => moveFeatured(index, -1)}
-                              disabled={index === 0}
-                              aria-label="Выше"
-                              className="rounded-full px-2 py-1 text-xs text-muted hover:text-ink disabled:opacity-30"
-                            >
-                              ↑
-                            </button>
-                            <button
-                              type="button"
-                              onClick={() => moveFeatured(index, 1)}
-                              disabled={index === siteData.featured.ids.length - 1}
-                              aria-label="Ниже"
-                              className="rounded-full px-2 py-1 text-xs text-muted hover:text-ink disabled:opacity-30"
-                            >
-                              ↓
-                            </button>
-                            <button
-                              type="button"
-                              onClick={() =>
-                                setSiteData({
-                                  ...siteData,
-                                  featured: {
-                                    ...siteData.featured,
-                                    ids: siteData.featured.ids.filter((x) => x !== id),
-                                  },
-                                })
-                              }
-                              aria-label="Убрать из ленты"
-                              className="rounded-full px-2 py-1 text-xs text-muted hover:text-ink"
-                            >
-                              ✕
-                            </button>
-                          </div>
-                        );
-                      })}
-                    </div>
-                  )}
-                </div>
-
-                <div className="mt-4">
-                  <input
-                    type="text"
-                    value={featuredSearch}
-                    onChange={(e) => setFeaturedSearch(e.target.value)}
-                    placeholder="Найти изделие по названию или артикулу..."
-                    className="w-full rounded-xl border border-sand bg-surface px-3 py-2 text-xs text-ink placeholder:text-muted/50 focus:border-btn-brown focus:outline-none"
-                  />
-
-                  <div className="mt-2 flex max-h-56 flex-col gap-1 overflow-y-auto overscroll-contain rounded-xl border border-sand bg-surface p-2">
-                    {featuredCandidates.length === 0 ? (
-                      <p className="px-2 py-3 text-xs text-muted">Ничего не нашлось.</p>
-                    ) : (
-                      featuredCandidates.map((p) => (
-                        <button
-                          key={p.id}
-                          type="button"
-                          onClick={() =>
-                            setSiteData({
-                              ...siteData,
-                              featured: {
-                                ...siteData.featured,
-                                ids: [...siteData.featured.ids, p.id],
-                              },
-                            })
-                          }
-                          className="flex items-center justify-between gap-3 rounded-lg px-2 py-1.5 text-left text-xs text-ink hover:bg-bg/60"
-                        >
-                          <span className="truncate">{p.title}</span>
-                          <span className="flex-none text-[0.7rem] text-muted">{p.article}</span>
-                        </button>
-                      ))
-                    )}
-                  </div>
-                </div>
-              </div>
-
               <button
                 type="submit"
                 className="mt-2 rounded-full btn-brown py-3 text-xs font-semibold uppercase tracking-wider shadow-md"
               >
                 Сохранить все тексты →
+              </button>
+            </form>
+          </div>
+        ) : null}
+
+        {/* 3б. ВКЛАДКА ИЗБРАННОЕ */}
+        {tab === "featured" ? (
+          <div className="mt-8 max-w-3xl">
+            <div>
+              <h2 className="font-display text-lg font-medium text-ink">
+                Избранное на главной странице
+              </h2>
+              <p className="mt-1.5 max-w-2xl text-xs leading-relaxed text-muted">
+                Лента изделий на главной: свой заголовок, своя подпись и свой состав.
+                Пока ни одно изделие не выбрано, лента собирается сама — по одному
+                изделию из каждого раздела. Как только выберете первое, лента станет
+                показывать только выбранное, в том порядке, в каком вы его расставите.
+              </p>
+            </div>
+
+            <form onSubmit={handleSaveTexts} className="mt-6 flex flex-col gap-4">
+            {/* ЛЕНТА «ИЗБРАННОГО» НА ГЛАВНОЙ */}
+            <div className="rounded-2xl border border-sand/60 bg-bg/40 p-4">
+              <div className="flex flex-wrap items-center justify-between gap-3">
+                <span className="text-xs font-semibold uppercase tracking-wider text-muted">
+                  Лента избранного на главной
+                </span>
+                <label className="flex items-center gap-2 text-xs text-ink">
+                  <input
+                    type="checkbox"
+                    checked={siteData.featured.enabled}
+                    onChange={(e) =>
+                      setSiteData({
+                        ...siteData,
+                        featured: { ...siteData.featured, enabled: e.target.checked },
+                      })
+                    }
+                    className="h-4 w-4 accent-[color:var(--color-btn-brown,#7a5c50)]"
+                  />
+                  Показывать на сайте
+                </label>
+              </div>
+
+              <p className="mt-2 text-xs leading-relaxed text-muted">
+                Название и подпись пишете сами: «Хиты продаж», «К Новому году» — что нужно.
+                Изделия тоже выбираете сами, в том порядке, в котором они встанут в ленте.
+                Если не выбрать ни одного, лента соберётся сама — по одному изделию из
+                каждого раздела.
+              </p>
+
+              <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                <div>
+                  <label className="block text-[0.7rem] font-semibold uppercase tracking-wider text-muted mb-1">
+                    Надпись сверху
+                  </label>
+                  <input
+                    type="text"
+                    value={siteData.featured.eyebrow}
+                    onChange={(e) =>
+                      setSiteData({
+                        ...siteData,
+                        featured: { ...siteData.featured, eyebrow: e.target.value },
+                      })
+                    }
+                    placeholder="Например: Избранное мастерской"
+                    className="w-full rounded-xl border border-sand bg-surface px-3 py-2 text-xs text-ink focus:border-btn-brown focus:outline-none"
+                  />
+                </div>
+                <div>
+                  <label className="block text-[0.7rem] font-semibold uppercase tracking-wider text-muted mb-1">
+                    Заголовок
+                  </label>
+                  <input
+                    type="text"
+                    value={siteData.featured.title}
+                    onChange={(e) =>
+                      setSiteData({
+                        ...siteData,
+                        featured: { ...siteData.featured, title: e.target.value },
+                      })
+                    }
+                    placeholder="Например: Хиты продаж"
+                    className="w-full rounded-xl border border-sand bg-surface px-3 py-2 text-xs text-ink focus:border-btn-brown focus:outline-none"
+                  />
+                </div>
+              </div>
+
+              <div className="mt-3">
+                <label className="block text-[0.7rem] font-semibold uppercase tracking-wider text-muted mb-1">
+                  Подпись под заголовком
+                </label>
+                <input
+                  type="text"
+                  value={siteData.featured.subtitle}
+                  onChange={(e) =>
+                    setSiteData({
+                      ...siteData,
+                      featured: { ...siteData.featured, subtitle: e.target.value },
+                    })
+                  }
+                  placeholder="Например: то, что чаще всего заказывают к празднику"
+                  className="w-full rounded-xl border border-sand bg-surface px-3 py-2 text-xs text-ink focus:border-btn-brown focus:outline-none"
+                />
+              </div>
+
+              <div className="mt-4">
+                <span className="block text-[0.7rem] font-semibold uppercase tracking-wider text-muted mb-1.5">
+                  Выбранные изделия ({siteData.featured.ids.length})
+                </span>
+
+                {siteData.featured.ids.length === 0 ? (
+                  <p className="rounded-xl border border-dashed border-sand px-3 py-2.5 text-xs text-muted">
+                    Пока ничего не выбрано — на сайте лента собирается сама.
+                  </p>
+                ) : (
+                  <div className="flex flex-col gap-1.5">
+                    {siteData.featured.ids.map((id, index) => {
+                      const item = products.find((p) => p.id === id);
+                      return (
+                        <div
+                          key={id}
+                          className="flex items-center gap-2 rounded-xl border border-sand bg-surface px-3 py-2"
+                        >
+                          <span className="text-[0.7rem] text-muted">{index + 1}</span>
+                          <span className="flex-1 truncate text-xs text-ink">
+                            {item ? `${item.title} · ${item.article}` : `Изделие удалено (${id})`}
+                          </span>
+                          <button
+                            type="button"
+                            onClick={() => moveFeatured(index, -1)}
+                            disabled={index === 0}
+                            aria-label="Выше"
+                            className="rounded-full px-2 py-1 text-xs text-muted hover:text-ink disabled:opacity-30"
+                          >
+                            ↑
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => moveFeatured(index, 1)}
+                            disabled={index === siteData.featured.ids.length - 1}
+                            aria-label="Ниже"
+                            className="rounded-full px-2 py-1 text-xs text-muted hover:text-ink disabled:opacity-30"
+                          >
+                            ↓
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() =>
+                              setSiteData({
+                                ...siteData,
+                                featured: {
+                                  ...siteData.featured,
+                                  ids: siteData.featured.ids.filter((x) => x !== id),
+                                },
+                              })
+                            }
+                            aria-label="Убрать из ленты"
+                            className="rounded-full px-2 py-1 text-xs text-muted hover:text-ink"
+                          >
+                            ✕
+                          </button>
+                        </div>
+                      );
+                    })}
+                  </div>
+                )}
+              </div>
+
+              <div className="mt-4">
+                <input
+                  type="text"
+                  value={featuredSearch}
+                  onChange={(e) => setFeaturedSearch(e.target.value)}
+                  placeholder="Найти изделие по названию или артикулу..."
+                  className="w-full rounded-xl border border-sand bg-surface px-3 py-2 text-xs text-ink placeholder:text-muted/50 focus:border-btn-brown focus:outline-none"
+                />
+
+                <div className="mt-2 flex max-h-56 flex-col gap-1 overflow-y-auto overscroll-contain rounded-xl border border-sand bg-surface p-2">
+                  {featuredCandidates.length === 0 ? (
+                    <p className="px-2 py-3 text-xs text-muted">Ничего не нашлось.</p>
+                  ) : (
+                    featuredCandidates.map((p) => (
+                      <button
+                        key={p.id}
+                        type="button"
+                        onClick={() =>
+                          setSiteData({
+                            ...siteData,
+                            featured: {
+                              ...siteData.featured,
+                              ids: [...siteData.featured.ids, p.id],
+                            },
+                          })
+                        }
+                        className="flex items-center justify-between gap-3 rounded-lg px-2 py-1.5 text-left text-xs text-ink hover:bg-bg/60"
+                      >
+                        <span className="truncate">{p.title}</span>
+                        <span className="flex-none text-[0.7rem] text-muted">{p.article}</span>
+                      </button>
+                    ))
+                  )}
+                </div>
+              </div>
+            </div>
+              <button
+                type="submit"
+                className="mt-2 rounded-full btn-brown py-3 text-xs font-semibold uppercase tracking-wider shadow-md"
+              >
+                Сохранить избранное →
               </button>
             </form>
           </div>
@@ -2121,6 +2269,111 @@ export default function AdminPage() {
 
               </div>
 
+              <div className="rounded-2xl border border-dashed border-sand p-4 bg-bg/30">
+                <label className="block text-xs font-semibold uppercase tracking-wider text-ink mb-1">
+                  📷 Фотографии изделия (с авто-сжатием в WebP)
+                </label>
+                <p className="text-[0.7rem] text-muted mb-3">
+                  Выбирайте фото любого веса, прямо с телефона или камеры — панель сама
+                  сожмёт их без потери качества.
+                </p>
+                <p className="text-[0.7rem] leading-relaxed text-ink mb-3">
+                  <strong className="font-semibold">✕ на снимке</strong> — убрать его.{" "}
+                  <strong className="font-semibold">Стрелки ← → под снимком</strong> —
+                  поменять местами. Первый в ряду помечен «Обложка»: именно он стоит в
+                  каталоге. Всё записывается кнопкой «Сохранить изделие» внизу.
+                </p>
+
+                <input
+                  type="file"
+                  multiple
+                  accept="image/*"
+                  onChange={handleImageFileChange}
+                  className="text-xs text-muted file:mr-3 file:rounded-full file:border-0 file:btn-brown file:px-4 file:py-2 file:text-xs file:font-semibold"
+                />
+
+                {uploadingImage ? (
+                  <p className="mt-2 text-xs text-accent animate-pulse">Оптимизация изображений...</p>
+                ) : imageStats ? (
+                  <p className="mt-2 text-xs font-medium text-emerald-700">{imageStats}</p>
+                ) : null}
+
+                {/*
+                  Первое фото в ряду — обложка изделия в каталоге, поэтому
+                  порядок здесь не косметика. Крестик убирает кадр, стрелки
+                  двигают; всё это записывается кнопкой «Сохранить изделие».
+                */}
+                <div className="mt-3 flex flex-wrap gap-3">
+                  {editProduct.images?.map((img, i) => (
+                    <div key={`${img.src}-${i}`} className="w-20">
+                      <div className="relative h-20 w-20 overflow-hidden rounded-lg border border-sand">
+                        <Image src={img.src} alt="" fill sizes="80px" className="object-cover" />
+                        <button
+                          type="button"
+                          onClick={() => removeProductImage(i)}
+                          aria-label="Убрать фотографию"
+                          className="absolute top-0.5 right-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-ink/75 text-[0.7rem] leading-none text-white backdrop-blur-sm hover:bg-red-600"
+                        >
+                          ✕
+                        </button>
+                        {i === 0 ? (
+                          <span className="absolute bottom-0 left-0 right-0 bg-ink/70 px-1 py-0.5 text-center text-[0.5rem] font-semibold uppercase text-white">
+                            Обложка
+                          </span>
+                        ) : null}
+                      </div>
+                      <div className="mt-1 flex items-center justify-center gap-1">
+                        <button
+                          type="button"
+                          onClick={() => moveProductImage(i, -1)}
+                          disabled={i === 0}
+                          aria-label="Переставить левее"
+                          className="rounded px-1.5 py-0.5 text-[0.7rem] text-muted hover:text-ink disabled:opacity-30"
+                        >
+                          ←
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => moveProductImage(i, 1)}
+                          disabled={i === (editProduct.images?.length ?? 0) - 1}
+                          aria-label="Переставить правее"
+                          className="rounded px-1.5 py-0.5 text-[0.7rem] text-muted hover:text-ink disabled:opacity-30"
+                        >
+                          →
+                        </button>
+                      </div>
+                    </div>
+                  ))}
+
+                  {newImagesData.map((img, i) => (
+                    <div key={i} className="w-20">
+                      <div className="relative h-20 w-20 overflow-hidden rounded-lg border-2 border-btn-brown">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img src={img.base64} alt="" className="h-full w-full object-cover" />
+                        <button
+                          type="button"
+                          onClick={() =>
+                            setNewImagesData((prev) => prev.filter((_, idx) => idx !== i))
+                          }
+                          aria-label="Убрать новую фотографию"
+                          className="absolute top-0.5 right-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-ink/75 text-[0.7rem] leading-none text-white backdrop-blur-sm hover:bg-red-600"
+                        >
+                          ✕
+                        </button>
+                        <span className="absolute bottom-0 left-0 right-0 bg-btn-brown px-1 py-0.5 text-center text-[0.5rem] font-semibold uppercase text-white">
+                          Новое
+                        </span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                {(editProduct.images?.length ?? 0) + newImagesData.length === 0 ? (
+                  <p className="mt-3 text-[0.7rem] text-red-500">
+                    У изделия должна остаться хотя бы одна фотография.
+                  </p>
+                ) : null}
+              </div>
               {/*
                 Видео изделия. Съёмка процесса уже лежит в проекте, поэтому
                 главный путь — выбрать готовый ролик, а не загружать заново:
@@ -2130,6 +2383,11 @@ export default function AdminPage() {
                 <label className="block text-xs font-semibold uppercase tracking-wider text-ink mb-1">
                   🎬 Видео изделия
                 </label>
+
+                <p className="mt-1 text-[0.7rem] leading-relaxed text-muted">
+                  Ролик встанет последним в ряду маленьких фотографий на странице
+                  изделия — с треугольником «плей» на обложке.
+                </p>
 
                 {editProduct.video ? (
                   <div className="mt-2 flex flex-wrap items-center gap-3 rounded-xl border border-sand bg-surface px-3 py-2.5">
@@ -2253,103 +2511,104 @@ export default function AdminPage() {
                 </div>
               </div>
 
+
+              {/*
+                Блок «Похожие» внизу страницы изделия. Пока он пуст, соседи
+                подбираются сами — по совпадению тем внутри раздела. Как только
+                выбрано хотя бы одно, показывается ровно выбранное.
+              */}
               <div className="rounded-2xl border border-dashed border-sand p-4 bg-bg/30">
                 <label className="block text-xs font-semibold uppercase tracking-wider text-ink mb-1">
-                  📷 Фотографии изделия (с авто-сжатием в WebP)
+                  🔗 Похожие изделия (внизу страницы)
                 </label>
-                <p className="text-[0.7rem] text-muted mb-3">
-                  Вы можете выбрать фото любого веса с телефона или камеры — система сама сожмет его без потери качества.
+                <p className="text-[0.7rem] leading-relaxed text-muted mb-3">
+                  Пока ничего не выбрано, сайт подбирает соседей сам — по общим темам
+                  внутри раздела. Выберете хоть одно — будет показывать только ваш
+                  список и в вашем порядке.
                 </p>
 
+                {(editProduct.related || []).length === 0 ? (
+                  <p className="rounded-xl border border-dashed border-sand px-3 py-2.5 text-xs text-muted">
+                    Выбирает сайт.
+                  </p>
+                ) : (
+                  <div className="flex flex-col gap-1.5">
+                    {(editProduct.related || []).map((id, index) => {
+                      const item = products.find((x) => x.id === id);
+                      return (
+                        <div
+                          key={id}
+                          className="flex items-center gap-2 rounded-xl border border-sand bg-surface px-3 py-2"
+                        >
+                          <span className="w-4 shrink-0 text-[0.7rem] text-muted">{index + 1}</span>
+                          <button
+                            type="button"
+                            onClick={() => moveRelated(index, -1)}
+                            disabled={index === 0}
+                            aria-label="Поднять выше"
+                            className="rounded-full px-2 py-1 text-xs text-muted hover:text-ink disabled:opacity-30"
+                          >
+                            ↑
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => moveRelated(index, 1)}
+                            disabled={index === (editProduct.related || []).length - 1}
+                            aria-label="Опустить ниже"
+                            className="rounded-full px-2 py-1 text-xs text-muted hover:text-ink disabled:opacity-30"
+                          >
+                            ↓
+                          </button>
+                          <span className="min-w-0 flex-1 truncate text-xs text-ink">
+                            {item ? item.title : "Изделие удалено"}
+                          </span>
+                          <span className="shrink-0 text-[0.65rem] text-muted">{item?.article}</span>
+                          <button
+                            type="button"
+                            onClick={() => removeRelated(id)}
+                            aria-label="Убрать из похожих"
+                            className="shrink-0 rounded-full px-2 py-1 text-xs text-muted hover:text-red-600"
+                          >
+                            ✕
+                          </button>
+                        </div>
+                      );
+                    })}
+                  </div>
+                )}
+
                 <input
-                  type="file"
-                  multiple
-                  accept="image/*"
-                  onChange={handleImageFileChange}
-                  className="text-xs text-muted file:mr-3 file:rounded-full file:border-0 file:btn-brown file:px-4 file:py-2 file:text-xs file:font-semibold"
+                  type="text"
+                  value={relatedSearch}
+                  onChange={(e) => setRelatedSearch(e.target.value)}
+                  onKeyDown={(e) => {
+                    // Enter внутри формы иначе сохранил бы изделие целиком.
+                    if (e.key === "Enter") e.preventDefault();
+                  }}
+                  placeholder="Найти изделие по названию или артикулу…"
+                  className="mt-3 w-full rounded-xl border border-sand bg-surface px-3 py-2 text-xs text-ink placeholder:text-muted/50 focus:border-btn-brown focus:outline-none"
                 />
 
-                {uploadingImage ? (
-                  <p className="mt-2 text-xs text-accent animate-pulse">Оптимизация изображений...</p>
-                ) : imageStats ? (
-                  <p className="mt-2 text-xs font-medium text-emerald-700">{imageStats}</p>
-                ) : null}
-
-                {/*
-                  Первое фото в ряду — обложка изделия в каталоге, поэтому
-                  порядок здесь не косметика. Крестик убирает кадр, стрелки
-                  двигают; всё это записывается кнопкой «Сохранить изделие».
-                */}
-                <div className="mt-3 flex flex-wrap gap-3">
-                  {editProduct.images?.map((img, i) => (
-                    <div key={`${img.src}-${i}`} className="w-20">
-                      <div className="relative h-20 w-20 overflow-hidden rounded-lg border border-sand">
-                        <Image src={img.src} alt="" fill sizes="80px" className="object-cover" />
-                        <button
-                          type="button"
-                          onClick={() => removeProductImage(i)}
-                          aria-label="Убрать фотографию"
-                          className="absolute top-0.5 right-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-ink/75 text-[0.7rem] leading-none text-white backdrop-blur-sm hover:bg-red-600"
-                        >
-                          ✕
-                        </button>
-                        {i === 0 ? (
-                          <span className="absolute bottom-0 left-0 right-0 bg-ink/70 px-1 py-0.5 text-center text-[0.5rem] font-semibold uppercase text-white">
-                            Обложка
-                          </span>
-                        ) : null}
-                      </div>
-                      <div className="mt-1 flex items-center justify-center gap-1">
-                        <button
-                          type="button"
-                          onClick={() => moveProductImage(i, -1)}
-                          disabled={i === 0}
-                          aria-label="Переставить левее"
-                          className="rounded px-1.5 py-0.5 text-[0.7rem] text-muted hover:text-ink disabled:opacity-30"
-                        >
-                          ←
-                        </button>
-                        <button
-                          type="button"
-                          onClick={() => moveProductImage(i, 1)}
-                          disabled={i === (editProduct.images?.length ?? 0) - 1}
-                          aria-label="Переставить правее"
-                          className="rounded px-1.5 py-0.5 text-[0.7rem] text-muted hover:text-ink disabled:opacity-30"
-                        >
-                          →
-                        </button>
-                      </div>
-                    </div>
-                  ))}
-
-                  {newImagesData.map((img, i) => (
-                    <div key={i} className="w-20">
-                      <div className="relative h-20 w-20 overflow-hidden rounded-lg border-2 border-btn-brown">
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img src={img.base64} alt="" className="h-full w-full object-cover" />
-                        <button
-                          type="button"
-                          onClick={() =>
-                            setNewImagesData((prev) => prev.filter((_, idx) => idx !== i))
-                          }
-                          aria-label="Убрать новую фотографию"
-                          className="absolute top-0.5 right-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-ink/75 text-[0.7rem] leading-none text-white backdrop-blur-sm hover:bg-red-600"
-                        >
-                          ✕
-                        </button>
-                        <span className="absolute bottom-0 left-0 right-0 bg-btn-brown px-1 py-0.5 text-center text-[0.5rem] font-semibold uppercase text-white">
-                          Новое
-                        </span>
-                      </div>
-                    </div>
-                  ))}
+                <div
+                  data-lenis-prevent
+                  className="mt-2 max-h-40 overflow-y-auto overscroll-contain rounded-xl border border-sand bg-surface"
+                >
+                  {relatedCandidates.length === 0 ? (
+                    <p className="px-3 py-3 text-xs text-muted">Ничего не нашлось.</p>
+                  ) : (
+                    relatedCandidates.map((p) => (
+                      <button
+                        key={p.id}
+                        type="button"
+                        onClick={() => addRelated(p.id)}
+                        className="flex w-full items-center gap-2 border-b border-sand/40 px-3 py-2 text-left text-xs text-ink last:border-0 hover:bg-sand/20"
+                      >
+                        <span className="truncate">{p.title}</span>
+                        <span className="ml-auto flex-none text-[0.7rem] text-muted">{p.article}</span>
+                      </button>
+                    ))
+                  )}
                 </div>
-
-                {(editProduct.images?.length ?? 0) + newImagesData.length === 0 ? (
-                  <p className="mt-3 text-[0.7rem] text-red-500">
-                    У изделия должна остаться хотя бы одна фотография.
-                  </p>
-                ) : null}
               </div>
 
               </div>
