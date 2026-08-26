@@ -126,6 +126,18 @@ export function getHeroSlides() {
 }
 
 /** Первое изображение товара — обложка в сетках и в OpenGraph. */
+/**
+ * Ролики изделия одним списком.
+ *
+ * Раньше ролик был один, поле называлось `video`, и в данных оно так и лежит
+ * у части изделий. Новые записи кладут ролики в `videos`. Здесь оба вида
+ * приводятся к одному списку, чтобы страница не знала об этой разнице.
+ */
+export function productVideos(product: Product) {
+  if (product.videos && product.videos.length > 0) return product.videos;
+  return product.video ? [product.video] : [];
+}
+
 export function getCover(product: Product) {
   return product.images[0];
 }

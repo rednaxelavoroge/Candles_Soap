@@ -8,6 +8,7 @@ import {
   getProducts,
   getRelatedProducts,
   getSite,
+  productVideos,
 } from "@/lib/content";
 import { productEnquiry, whatsappHref } from "@/lib/contacts";
 import type { Product } from "@/lib/schemas";
@@ -85,7 +86,7 @@ export default async function ProductPage({ params }: { params: Promise<Params> 
 
       <div className="grid gap-10 px-5 md:grid-cols-2 md:gap-14 md:px-8">
         {/* Медиа-галерея (фото в ракурсах + видео) */}
-        <ProductGallery images={product.images} video={product.video} title={product.title} />
+        <ProductGallery images={product.images} videos={productVideos(product)} title={product.title} />
 
         {/* Описание изделия и характеристики */}
         <div className="flex flex-col justify-start md:pt-2">

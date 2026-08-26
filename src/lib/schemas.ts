@@ -74,6 +74,13 @@ export const productSchema = z.object({
   /** Тегов сколько угодно — по ним и работает фильтрация в разделе. */
   tags: z.array(z.string()),
   images: z.array(imageSchema).min(1),
+  /**
+   * Ролики изделия. Заказчица спросила, можно ли несколько, — можно.
+   * Прежнее одиночное поле `video` осталось: в данных оно есть у части
+   * изделий, и переписывать её живые данные ради переезда незачем.
+   * Читать надо через productVideos() из lib/content.
+   */
+  videos: z.array(videoSchema).optional(),
   video: videoSchema.nullable(),
   price: z.number().positive().nullable(),
   description: z.string().min(1),

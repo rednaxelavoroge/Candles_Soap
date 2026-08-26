@@ -1,20 +1,20 @@
 [
   {
-    "slug": "sea",
-    "title": "Морская тема",
-    "group": "occasion",
-    "order": 10
-  },
-  {
     "slug": "women",
     "title": "Девушкам",
     "group": "recipient",
-    "order": 20
+    "order": 10
   },
   {
     "slug": "men",
     "title": "Мужчинам",
     "group": "recipient",
+    "order": 20
+  },
+  {
+    "slug": "sea",
+    "title": "Морская тема",
+    "group": "occasion",
     "order": 30
   },
   {

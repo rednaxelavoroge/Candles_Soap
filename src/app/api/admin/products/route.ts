@@ -104,9 +104,21 @@ export async function POST(req: Request) {
 
     // Постер видео всегда держим на первой фотографии: сама она могла быть
     // удалена или переставлена, а ссылка на неё осталась бы в ролике.
-    const video = product.video
-      ? { ...product.video, poster: processedImages[0] }
-      : null;
+    // Роликов может быть несколько. Постер каждому держим на первой
+    // фотографии: сама она могла быть удалена или переставлена, а ссылка на
+    // неё осталась бы в ролике.
+    const incoming = Array.isArray(product.videos)
+      ? product.videos
+      : product.video
+        ? [product.video]
+        : [];
+    const videos = incoming.map((item: { poster?: unknown }) => ({
+      ...item,
+      poster: processedImages[0],
+    }));
+    // Прежнее одиночное поле держим в согласии со списком: по нему читают
+    // данные, сохранённые до этой правки.
+    const video = videos[0] ?? null;
 
     const finalProduct: Product = {
       ...existing,
@@ -117,6 +129,7 @@ export async function POST(req: Request) {
       article: product.article || `АРТ-${Math.floor(100 + Math.random() * 900)}`,
       description: product.description || "",
       images: processedImages,
+      videos,
       video,
       price: product.price !== undefined ? product.price : null,
       specs: product.specs || {},

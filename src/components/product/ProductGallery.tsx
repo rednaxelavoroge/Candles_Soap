@@ -19,16 +19,17 @@ const SWIPE_THRESHOLD = 40;
  */
 export function ProductGallery({
   images,
-  video,
+  videos,
   title,
 }: {
   images: ContentImage[];
-  video: Video | null;
+  /** Роликов может быть несколько — они идут в ряду после фотографий. */
+  videos: Video[];
   title: string;
 }) {
   const slides: Slide[] = [
     ...images.map((image) => ({ kind: "image" as const, image })),
-    ...(video ? [{ kind: "video" as const, video, poster: video.poster }] : []),
+    ...videos.map((video) => ({ kind: "video" as const, video, poster: video.poster })),
   ];
 
   const [index, setIndex] = useState(0);

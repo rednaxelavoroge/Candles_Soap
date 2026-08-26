@@ -2,7 +2,7 @@
 
 import { optimizeImageClient } from "@/lib/image-optimizer";
 import { useDragOrder, withMoved } from "@/lib/use-drag-order";
-import type { BackstageItem, Category, Product, Tag } from "@/lib/schemas";
+import type { BackstageItem, Category, Product, Tag, Video } from "@/lib/schemas";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -103,6 +103,7 @@ export default function AdminPage() {
   // Библиотека роликов мастерской для карточки изделия
   const [videoLibrary, setVideoLibrary] = useState<LibraryVideo[]>([]);
   const [videoPickerOpen, setVideoPickerOpen] = useState(false);
+  const [videoLink, setVideoLink] = useState("");
   const [uploadingVideo, setUploadingVideo] = useState(false);
 
   // Переименование подраздела на вкладке «Подразделы»
@@ -624,19 +625,50 @@ export default function AdminPage() {
   const videoTitle = (src: string) =>
     videoLibrary.find((v) => v.src === src)?.name || src.split("/").pop() || src;
 
-  /** Прикрепляет ролик из библиотеки мастерской к открытому изделию. */
-  const attachVideo = (src: string) => {
+  /**
+   * Ролики открытого изделия одним списком. Раньше поле было одно (`video`),
+   * и у части изделий данные так и лежат; здесь оба вида приводятся к списку.
+   */
+  const editVideos: Video[] = editProduct
+    ? editProduct.videos && editProduct.videos.length > 0
+      ? editProduct.videos
+      : editProduct.video
+        ? [editProduct.video]
+        : []
+    : [];
+
+  /** Записывает список роликов, держа прежнее одиночное поле в согласии с ним. */
+  const setVideos = (next: Video[]) => {
     if (!editProduct) return;
-    const poster = editProduct.images?.[0] || {
+    setEditProduct({ ...editProduct, videos: next, video: next[0] ?? null });
+  };
+
+  /** Обложка ролика — первая фотография изделия. */
+  const videoPoster = () =>
+    editProduct?.images?.[0] || {
       src: "/placeholder.jpg",
       width: 800,
       height: 800,
       blurDataURL: "",
-      alt: editProduct.title || "",
+      alt: editProduct?.title || "",
     };
-    setEditProduct({ ...editProduct, video: { kind: "file", src, poster } });
-    setVideoPickerOpen(false);
+
+  /** Добавляет ролик из библиотеки мастерской. Роликов может быть несколько. */
+  const attachVideo = (src: string) => {
+    if (!editProduct) return;
+    if (editVideos.some((v) => v.kind === "file" && v.src === src)) {
+      showToast("Этот ролик уже прикреплён");
+      return;
+    }
+    setVideos([...editVideos, { kind: "file", src, poster: videoPoster() }]);
     showToast("✓ Видео прикреплено к изделию");
+  };
+
+  const removeVideo = (index: number) => setVideos(editVideos.filter((_, i) => i !== index));
+
+  const moveVideo = (from: number, to: number) => {
+    if (to < 0 || to >= editVideos.length || from === to) return;
+    setVideos(withMoved(editVideos, from, to));
   };
 
   /**
@@ -853,6 +885,28 @@ export default function AdminPage() {
     }
   };
 
+  /**
+   * Стрелки порядка показываем только внутри одного раздела и без поиска:
+   * иначе «выше» означало бы позицию в отфильтрованной выборке, а не в разделе,
+   * и на сайте изделие оказалось бы совсем не там, куда его подняли.
+   */
+  const canReorderProducts = catFilter !== "all" && search.trim() === "";
+
+  /*
+    Перетаскивание мышью там, где раньше были только стрелки. Стрелки остаются
+    рядом: на телефоне перетаскивания нет, палец прокручивает страницу.
+  */
+  const imageDrag = useDragOrder(moveProductImage);
+  const relatedDrag = useDragOrder(moveRelated);
+  const videoDrag = useDragOrder(moveVideo);
+  const tagDrag = useDragOrder(moveTag);
+  const featuredDrag = useDragOrder(moveFeatured);
+  const backstageDrag = useDragOrder(moveBackstage);
+  const productDrag = useDragOrder(
+    (from, to) => moveProduct(filteredProducts, from, to),
+    canReorderProducts,
+  );
+
   if (loading) {
     return (
       <div className="flex min-h-screen items-center justify-center bg-bg">
@@ -872,27 +926,6 @@ export default function AdminPage() {
     })
     // Тот же порядок, что и на сайте: у кого позиция не задана — в конец.
     .sort((a, b) => (a.order ?? Number.MAX_SAFE_INTEGER) - (b.order ?? Number.MAX_SAFE_INTEGER));
-
-  /**
-   * Стрелки порядка показываем только внутри одного раздела и без поиска:
-   * иначе «выше» означало бы позицию в отфильтрованной выборке, а не в разделе,
-   * и на сайте изделие оказалось бы совсем не там, куда его подняли.
-   */
-  const canReorderProducts = catFilter !== "all" && search.trim() === "";
-
-  /*
-    Перетаскивание мышью там, где раньше были только стрелки. Стрелки остаются
-    рядом: на телефоне перетаскивания нет, палец прокручивает страницу.
-  */
-  const imageDrag = useDragOrder(moveProductImage);
-  const relatedDrag = useDragOrder(moveRelated);
-  const tagDrag = useDragOrder(moveTag);
-  const featuredDrag = useDragOrder(moveFeatured);
-  const backstageDrag = useDragOrder(moveBackstage);
-  const productDrag = useDragOrder(
-    (from, to) => moveProduct(filteredProducts, from, to),
-    canReorderProducts,
-  );
 
   return (
     <div className="min-h-screen bg-bg pb-20 pt-20 md:pt-28">
@@ -2509,24 +2542,53 @@ export default function AdminPage() {
                 </label>
 
                 <p className="mt-1 text-[0.7rem] leading-relaxed text-muted">
-                  Ролик встанет последним в ряду маленьких фотографий на странице
-                  изделия — с треугольником «плей» на обложке.
+                  Роликов может быть несколько. Они встанут в ряду маленьких
+                  фотографий после снимков — каждый с треугольником «плей» на
+                  обложке, в том порядке, в каком стоят здесь. Порядок меняется
+                  перетаскиванием мышью.
                 </p>
 
-                {editProduct.video ? (
-                  <div className="mt-2 flex flex-wrap items-center gap-3 rounded-xl border border-sand bg-surface px-3 py-2.5">
-                    <span className="min-w-0 flex-1 truncate text-xs text-ink">
-                      {editProduct.video.kind === "file"
-                        ? videoTitle(editProduct.video.src)
-                        : `Ролик ${editProduct.video.kind === "youtube" ? "YouTube" : "Vimeo"}: ${editProduct.video.id}`}
-                    </span>
-                    <button
-                      type="button"
-                      onClick={() => setEditProduct({ ...editProduct, video: null })}
-                      className="shrink-0 text-[0.7rem] text-red-500 hover:underline"
-                    >
-                      Убрать видео
-                    </button>
+                {editVideos.length > 0 ? (
+                  <div className="mt-2 flex flex-col gap-1.5">
+                    {editVideos.map((v, i) => (
+                      <div
+                        key={`${v.kind === "file" ? v.src : v.id}-${i}`}
+                        {...videoDrag.itemProps(i)}
+                        className={`flex flex-wrap items-center gap-3 rounded-xl border border-sand bg-surface px-3 py-2.5 cursor-grab active:cursor-grabbing transition-all ${videoDrag.itemClass(i)}`}
+                      >
+                        <span className="w-4 shrink-0 text-[0.7rem] text-muted">{i + 1}</span>
+                        <span className="min-w-0 flex-1 truncate text-xs text-ink">
+                          {v.kind === "file"
+                            ? videoTitle(v.src)
+                            : `Ролик ${v.kind === "youtube" ? "YouTube" : "Vimeo"}: ${v.id}`}
+                        </span>
+                        <button
+                          type="button"
+                          onClick={() => moveVideo(i, i - 1)}
+                          disabled={i === 0}
+                          aria-label="Поднять выше"
+                          className="rounded-full px-2 py-1 text-xs text-muted hover:text-ink disabled:opacity-30"
+                        >
+                          ↑
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => moveVideo(i, i + 1)}
+                          disabled={i === editVideos.length - 1}
+                          aria-label="Опустить ниже"
+                          className="rounded-full px-2 py-1 text-xs text-muted hover:text-ink disabled:opacity-30"
+                        >
+                          ↓
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => removeVideo(i)}
+                          className="shrink-0 text-[0.7rem] text-red-500 hover:underline"
+                        >
+                          Убрать
+                        </button>
+                      </div>
+                    ))}
                   </div>
                 ) : (
                   <p className="mt-1 text-[0.7rem] text-muted">Видео пока не прикреплено.</p>
@@ -2567,7 +2629,7 @@ export default function AdminPage() {
                           type="button"
                           onClick={() => attachVideo(v.src)}
                           className={`flex w-full items-center gap-3 border-b border-sand/40 px-3 py-2 text-left last:border-0 hover:bg-sand/20 ${
-                            editProduct.video?.kind === "file" && editProduct.video.src === v.src
+                            editVideos.some((x) => x.kind === "file" && x.src === v.src)
                               ? "bg-sand/30"
                               : ""
                           }`}
@@ -2588,45 +2650,38 @@ export default function AdminPage() {
 
                 <div className="mt-3">
                   <label className="block text-[0.7rem] font-semibold uppercase tracking-wider text-muted mb-1">
-                    Или ссылка на YouTube
+                    Или добавить ссылкой на YouTube
                   </label>
-                  <input
-                    type="text"
-                    value={
-                      editProduct.video
-                        ? editProduct.video.kind === "youtube"
-                          ? `https://youtube.com/watch?v=${editProduct.video.id}`
-                          : editProduct.video.kind === "vimeo"
-                          ? `https://vimeo.com/${editProduct.video.id}`
-                          : ""
-                        : ""
-                    }
-                    onChange={(e) => {
-                      const val = e.target.value.trim();
-                      if (!val) {
-                        setEditProduct({ ...editProduct, video: null });
-                        return;
-                      }
-                      const match = val.match(
-                        /(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([\w-]{11})/,
-                      );
-                      const fallbackPoster = editProduct.images?.[0] || {
-                        src: "/placeholder.jpg",
-                        width: 800,
-                        height: 800,
-                        blurDataURL: "",
-                        alt: editProduct.title || "",
-                      };
-                      setEditProduct({
-                        ...editProduct,
-                        video: match
-                          ? { kind: "youtube", id: match[1], poster: fallbackPoster }
-                          : { kind: "file", src: val, poster: fallbackPoster },
-                      });
-                    }}
-                    placeholder="https://youtube.com/watch?v=..."
-                    className="w-full rounded-xl border border-sand bg-bg/50 px-3 py-2 text-xs text-ink focus:border-btn-brown focus:outline-none"
-                  />
+                  <div className="flex flex-wrap items-center gap-2">
+                    <input
+                      type="text"
+                      value={videoLink}
+                      onChange={(e) => setVideoLink(e.target.value)}
+                      placeholder="https://youtube.com/watch?v=..."
+                      className="min-w-0 flex-1 rounded-xl border border-sand bg-bg/50 px-3 py-2 text-xs text-ink focus:border-btn-brown focus:outline-none"
+                    />
+                    <button
+                      type="button"
+                      onClick={() => {
+                        const val = videoLink.trim();
+                        if (!val) return;
+                        const match = val.match(
+                          /(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([\w-]{11})/,
+                        );
+                        setVideos([
+                          ...editVideos,
+                          match
+                            ? { kind: "youtube", id: match[1], poster: videoPoster() }
+                            : { kind: "file", src: val, poster: videoPoster() },
+                        ]);
+                        setVideoLink("");
+                        showToast("✓ Видео прикреплено к изделию");
+                      }}
+                      className="shrink-0 rounded-full btn-brown px-4 py-2 text-[0.7rem] font-semibold"
+                    >
+                      Добавить
+                    </button>
+                  </div>
                   <p className="mt-1.5 text-[0.7rem] leading-relaxed text-muted">
                     Ролик с телефона обычно слишком тяжёлый, чтобы загрузить его прямо
                     отсюда. Выложите его на YouTube и вставьте ссылку — так он и
