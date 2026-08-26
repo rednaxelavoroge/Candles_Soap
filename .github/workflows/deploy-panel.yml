@@ -89,14 +89,23 @@ jobs:
           require("./server.js");
           JS
 
+          # Если папка панели окажется внутри папки сайта, её содержимое
+          # иначе отдавалось бы в интернет. Приложение запускает хостинг —
+          # ему этот запрет не мешает, а посторонним закрывает всё.
+          cat > panel-dist/.htaccess <<'HT'
+          Require all denied
+          HT
+
           echo "Размер: $(du -sh panel-dist | cut -f1), файлов: $(find panel-dist -type f | wc -l)"
 
       - name: Залить панель на хостинг
         if: steps.check.outputs.ready == 'true'
         env:
           FTP_HOST: ${{ secrets.FTP_HOST }}
-          FTP_USER: ${{ secrets.FTP_USER }}
-          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          # Отдельный доступ, если заведён: у FTP сайта нет выхода из папки
+          # домена, а панели лучше лежать рядом с ней, а не внутри.
+          FTP_USER: ${{ secrets.PANEL_FTP_USER || secrets.FTP_USER }}
+          FTP_PASSWORD: ${{ secrets.PANEL_FTP_PASSWORD || secrets.FTP_PASSWORD }}
           # Папка приложения на хостинге — та же, что вписана в cPanel
           # в поле «Application root».
           PANEL_DIR: ${{ secrets.FTP_PANEL_DIR || 'admin-panel' }}
@@ -117,8 +126,8 @@ jobs:
         if: steps.check.outputs.ready == 'true'
         env:
           FTP_HOST: ${{ secrets.FTP_HOST }}
-          FTP_USER: ${{ secrets.FTP_USER }}
-          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          FTP_USER: ${{ secrets.PANEL_FTP_USER || secrets.FTP_USER }}
+          FTP_PASSWORD: ${{ secrets.PANEL_FTP_PASSWORD || secrets.FTP_PASSWORD }}
           PANEL_DIR: ${{ secrets.FTP_PANEL_DIR || 'admin-panel' }}
         run: |
           # Хостинг перезапускает приложение, когда меняется этот файл.
