@@ -236,8 +236,21 @@ export async function POST(req: Request) {
     if (!(file instanceof File)) {
       return NextResponse.json({ error: "Файл не пришёл" }, { status: 400 });
     }
-    if (file.type && !file.type.startsWith("video/")) {
-      return NextResponse.json({ error: "Это не видеофайл" }, { status: 400 });
+    /*
+      Тип файла проверяем мягко. Браузер сообщает его сам, но не всегда:
+      с айфона `.mov` приходит как `video/quicktime`, а иногда тип пустой или
+      обезличенный — тогда браузер просто не взялся его угадывать. Отвергать
+      такое нельзя: человек выбрал ролик, он у него есть. Смотрим на расширение,
+      а окончательно судит уже машина сборки — она пробует его прочитать
+      и говорит внятно, если это не видео.
+    */
+    const looksLikeVideo =
+      file.type.startsWith("video/") || /\.(mp4|mov|m4v|webm|avi|mkv|3gp)$/i.test(file.name || "");
+    if (!looksLikeVideo) {
+      return NextResponse.json(
+        { error: "Похоже, это не видеофайл. Выберите ролик — mp4 или mov." },
+        { status: 400 },
+      );
     }
     if (file.size > MAX_UPLOAD_BYTES) {
       const mb = Math.round(file.size / (1024 * 1024));
@@ -276,8 +289,9 @@ export async function POST(req: Request) {
         headers: {
           Authorization: `Bearer ${GITHUB_TOKEN}`,
           Accept: "application/vnd.github+json",
+          // Длину не выставляем руками: fetch считает её сам, а поставленная
+          // вручную в Node либо игнорируется, либо роняет запрос.
           "Content-Type": "application/octet-stream",
-          "Content-Length": String(bytes.byteLength),
         },
         body: new Uint8Array(bytes),
       },
