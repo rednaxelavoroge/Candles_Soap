@@ -107,7 +107,8 @@
       "#EDDDC6",
       "#CAD6D3"
     ],
-    "related": []
+    "related": [],
+    "order": 20
   },
   {
     "id": "candles-soty",
@@ -183,7 +184,8 @@
       "#F9DDE2",
       "#E4C7F0",
       "#DDCFE9"
-    ]
+    ],
+    "order": 10
   },
   {
     "id": "candles-globus",
@@ -232,7 +234,8 @@
       "#F4E6E1",
       "#AACDF0",
       "#CAD5E3"
-    ]
+    ],
+    "order": 30
   },
   {
     "id": "candles-elka-na-kryshe",
@@ -286,7 +289,8 @@
       "#F9D0C4",
       "#F1DAD3",
       "#D2D4D3"
-    ]
+    ],
+    "order": 40
   },
   {
     "id": "candles-mandariny",
@@ -369,7 +373,8 @@
       "#D1F599",
       "#F9B69A",
       "#EECEBE"
-    ]
+    ],
+    "order": 50
   },
   {
     "id": "candles-tyulpany",
@@ -424,7 +429,8 @@
       "#F9DCD2",
       "#F9AFC2",
       "#F9ADBD"
-    ]
+    ],
+    "order": 60
   },
   {
     "id": "candles-geksagon",
@@ -467,7 +473,8 @@
       "#DFF48E",
       "#F9CFB4",
       "#F9A79A"
-    ]
+    ],
+    "order": 70
   },
   {
     "id": "sachet-medalony",
@@ -702,7 +709,8 @@
       "#D3E3F0",
       "#E6DDDC",
       "#DFD1CA"
-    ]
+    ],
+    "order": 80
   },
   {
     "id": "candles-malinovyy-kapkeyk",
@@ -745,7 +753,8 @@
       "#F9B4AB",
       "#F9C0AD",
       "#E4D1BA"
-    ]
+    ],
+    "order": 90
   },
   {
     "id": "candles-ponchiki-s-posypkoy",
@@ -788,7 +797,8 @@
       "#F9CAA6",
       "#F9D8B1",
       "#E1D1C1"
-    ]
+    ],
+    "order": 100
   },
   {
     "id": "candles-klubnika-na-pechene",
@@ -831,7 +841,8 @@
       "#EBF099",
       "#F9BDA4",
       "#E7D0B9"
-    ]
+    ],
+    "order": 110
   },
   {
     "id": "candles-desertnaya-doska",
@@ -881,7 +892,8 @@
       "#F9B7A2",
       "#F9C6AD",
       "#F2CDBB"
-    ]
+    ],
+    "order": 120
   },
   {
     "id": "candles-desertnyy-nabor-v-podstavke",
@@ -924,7 +936,8 @@
       "#F9B7A1",
       "#F9C1A5",
       "#F0CDBC"
-    ]
+    ],
+    "order": 130
   },
   {
     "id": "candles-makaruny-na-doske",
@@ -960,7 +973,8 @@
       "#F9BDA2",
       "#F9C0A2",
       "#EBCEBE"
-    ]
+    ],
+    "order": 140
   },
   {
     "id": "candles-polusfery-na-blyude",
@@ -1009,7 +1023,8 @@
       "#F9C0AD",
       "#F9D3C0",
       "#E5CFC9"
-    ]
+    ],
+    "order": 150
   },
   {
     "id": "candles-yagody-v-banke",
@@ -1067,7 +1082,8 @@
       "#F9DFBA",
       "#F2DBCD",
       "#F9A5A0"
-    ]
+    ],
+    "order": 160
   },
   {
     "id": "candles-yabloko",
@@ -1096,7 +1112,8 @@
       "#F9BBA5",
       "#F9B5A3",
       "#F9A8AB"
-    ]
+    ],
+    "order": 170
   },
   {
     "id": "candles-granat",
@@ -1168,7 +1185,8 @@
       "#F9B6B8",
       "#F9ADAE",
       "#F9AFA9"
-    ]
+    ],
+    "order": 180
   },
   {
     "id": "candles-granat-v-ladonyakh",
@@ -1205,7 +1223,8 @@
       "#DCEDE1",
       "#F9BEBB",
       "#DFD1C7"
-    ]
+    ],
+    "order": 190
   },
   {
     "id": "candles-plate",
@@ -1248,7 +1267,8 @@
       "#BBEAF0",
       "#DDE0D8",
       "#DBD2C8"
-    ]
+    ],
+    "order": 200
   },
   {
     "id": "candles-kintsugi",
@@ -1278,7 +1298,8 @@
       "#D9F597",
       "#E1E2BA",
       "#C8D7D3"
-    ]
+    ],
+    "order": 210
   },
   {
     "id": "candles-aysberg",
@@ -1321,7 +1342,8 @@
       "#DEEDDF",
       "#CDE4DC",
       "#A5CDF0"
-    ]
+    ],
+    "order": 220
   },
   {
     "id": "candles-vulkan",
@@ -1378,7 +1400,8 @@
       "#F9D3D3",
       "#E2DFD6",
       "#D6D3CE"
-    ]
+    ],
+    "order": 230
   },
   {
     "id": "candles-vulkan-bordo",
@@ -1427,7 +1450,8 @@
       "#F3E7DD",
       "#EDDCD3",
       "#F9B0B2"
-    ]
+    ],
+    "order": 240
   },
   {
     "id": "candles-serdtse-karibskoe",
@@ -1464,7 +1488,8 @@
       "#D3E7F0",
       "#E2DEDF",
       "#D7D2D4"
-    ]
+    ],
+    "order": 250
   },
   {
     "id": "candles-rakushka-rapan",
@@ -1514,7 +1539,8 @@
       "#F6E5DF",
       "#E6DDDB",
       "#DAD2D0"
-    ]
+    ],
+    "order": 260
   },
   {
     "id": "candles-more-v-ladonyakh",
@@ -1558,7 +1584,8 @@
       "#E7E8EC",
       "#E4DDDC",
       "#E4D0C4"
-    ]
+    ],
+    "order": 270
   },
   {
     "id": "candles-mishka-v-vannochke",
@@ -1587,7 +1614,8 @@
       "#F9CEC2",
       "#E7DDDB",
       "#D9D2D1"
-    ]
+    ],
+    "order": 280
   },
   {
     "id": "candles-kristally-v-blyude",
@@ -1630,7 +1658,8 @@
       "#D6BAF0",
       "#EDD9E8",
       "#DAD2D0"
-    ]
+    ],
+    "order": 290
   },
   {
     "id": "candles-kukuruza",
@@ -1665,7 +1694,8 @@
       "#F9CCBF",
       "#EFDBD3",
       "#D2D4D3"
-    ]
+    ],
+    "order": 300
   },
   {
     "id": "candles-tykva-i-apelsin",
@@ -1694,7 +1724,8 @@
       "#DAF598",
       "#F9B497",
       "#E7CFC3"
-    ]
+    ],
+    "order": 310
   },
   {
     "id": "candles-uzelok",
@@ -1730,7 +1761,8 @@
       "#F9C0A6",
       "#F9D4C9",
       "#E7CFC7"
-    ]
+    ],
+    "order": 320
   },
   {
     "id": "candles-perets",
@@ -1765,7 +1797,8 @@
       "#E5ECCC",
       "#8DF593",
       "#B8DEBC"
-    ]
+    ],
+    "order": 330
   },
   {
     "id": "candles-limon",
@@ -1801,7 +1834,8 @@
       "#F9DFBF",
       "#F9DB69",
       "#F0D664"
-    ]
+    ],
+    "order": 340
   },
   {
     "id": "candles-elka",
@@ -1880,7 +1914,8 @@
       "#F9D3C3",
       "#F9D1C1",
       "#A3E2D3"
-    ]
+    ],
+    "order": 350
   },
   {
     "id": "candles-elka-v-ladonyakh",
@@ -1909,7 +1944,8 @@
       "#E0ECD8",
       "#CDE7BC",
       "#DED2C3"
-    ]
+    ],
+    "order": 360
   },
   {
     "id": "candles-elka-zvezda",
@@ -1952,7 +1988,8 @@
       "#CEF58B",
       "#CAED90",
       "#C6DDA2"
-    ]
+    ],
+    "order": 370
   },
   {
     "id": "candles-elochnye-shary",
@@ -2016,7 +2053,8 @@
       "#E5EBDD",
       "#EADAE7",
       "#EDACF0"
-    ]
+    ],
+    "order": 380
   },
   {
     "id": "candles-kolpak",
@@ -2059,7 +2097,8 @@
       "#DAF58E",
       "#DAE892",
       "#F9A5A0"
-    ]
+    ],
+    "order": 390
   },
   {
     "id": "candles-shar-krasnyy",
@@ -2102,7 +2141,8 @@
       "#DCF58D",
       "#D9E890",
       "#F9A59D"
-    ]
+    ],
+    "order": 400
   },
   {
     "id": "candles-novogodniy-nabor",
@@ -2159,7 +2199,8 @@
       "#E2F29A",
       "#F7C2F0",
       "#E5CFC7"
-    ]
+    ],
+    "order": 410
   },
   {
     "id": "candles-chashka-kakao",
@@ -2217,7 +2258,8 @@
       "#E0F58B",
       "#DBE88F",
       "#F9A59B"
-    ]
+    ],
+    "order": 420
   },
   {
     "id": "candles-nabor-na-doske",
@@ -2246,7 +2288,8 @@
       "#F9DFDA",
       "#F9B79A",
       "#E0B0F0"
-    ]
+    ],
+    "order": 430
   },
   {
     "id": "candles-banka-s-gnomami",
@@ -2304,7 +2347,8 @@
       "#D9F590",
       "#E9E0B1",
       "#DED2C2"
-    ]
+    ],
+    "order": 440
   },
   {
     "id": "candles-otkrytka-merry-christmas",
@@ -2340,7 +2384,8 @@
       "#CEF5BE",
       "#E3DFCD",
       "#D3D4CF"
-    ]
+    ],
+    "order": 450
   },
   {
     "id": "candles-zimnyaya-kartina",
@@ -2411,7 +2456,8 @@
       "#CBF596",
       "#C9E6D7",
       "#C9D6D5"
-    ]
+    ],
+    "order": 460
   },
   {
     "id": "candles-vinogradnyy-shar",
@@ -2447,7 +2493,8 @@
       "#C1F5A7",
       "#B2EBE7",
       "#D5D4CC"
-    ]
+    ],
+    "order": 470
   },
   {
     "id": "candles-shar-i-snezhinki",
@@ -2525,7 +2572,8 @@
       "#BED0F0",
       "#D9E0E5",
       "#CDD5DB"
-    ]
+    ],
+    "order": 480
   },
   {
     "id": "candles-chernaya-rakushka",
@@ -2561,7 +2609,8 @@
       "#D1EAF0",
       "#D0E2EE",
       "#C9D5DE"
-    ]
+    ],
+    "order": 490
   },
   {
     "id": "candles-vyazanaya-svecha",
@@ -2598,7 +2647,8 @@
       "#F9E4D4",
       "#E8DDD0",
       "#D6D3CF"
-    ]
+    ],
+    "order": 500
   },
   {
     "id": "candles-vitaya-svecha",
@@ -2634,7 +2684,8 @@
       "#E1F48D",
       "#F9AEA3",
       "#EBCEC1"
-    ]
+    ],
+    "order": 510
   },
   {
     "id": "candles-tsifry-goda",
@@ -2677,7 +2728,8 @@
       "#C3F5A5",
       "#F9D1C8",
       "#D8D3CD"
-    ]
+    ],
+    "order": 520
   },
   {
     "id": "candles-rusalka",
@@ -2713,7 +2765,8 @@
       "#EFE6E7",
       "#C0DAF0",
       "#A1CAF0"
-    ]
+    ],
+    "order": 530
   },
   {
     "id": "candles-oblaka",
@@ -2763,7 +2816,8 @@
       "#D6D9F0",
       "#CED3F0",
       "#D7D3D3"
-    ]
+    ],
+    "order": 540
   },
   {
     "id": "candles-kovboyskie-sapogi",
@@ -2813,7 +2867,8 @@
       "#F9BCAC",
       "#F0DBD2",
       "#E2D0CB"
-    ]
+    ],
+    "order": 550
   },
   {
     "id": "candles-angel-v-kolybeli",
@@ -2849,7 +2904,8 @@
       "#F9D9CA",
       "#F9B59D",
       "#F9C2B3"
-    ]
+    ],
+    "order": 560
   },
   {
     "id": "candles-karusel",
@@ -2921,7 +2977,8 @@
       "#F9E5DC",
       "#F1DADA",
       "#F9B5CE"
-    ]
+    ],
+    "order": 570
   },
   {
     "id": "candles-medalon-s-tsvetami",
@@ -2957,7 +3014,8 @@
       "#EAE7F0",
       "#B7C6F0",
       "#CFD2EA"
-    ]
+    ],
+    "order": 580
   },
   {
     "id": "candles-tsilindr-s-tyulpanami",
@@ -2994,7 +3052,8 @@
       "#F9E2CE",
       "#F9B5AA",
       "#F6CBC3"
-    ]
+    ],
+    "order": 590
   },
   {
     "id": "candles-morskaya-zvezda",
@@ -3044,7 +3103,8 @@
       "#E9E9E7",
       "#BADEF0",
       "#D5D3D4"
-    ]
+    ],
+    "order": 600
   },
   {
     "id": "candles-medvezhonok-s-podarkom",
@@ -3081,7 +3141,8 @@
       "#F9B8A3",
       "#F9AF9D",
       "#F9AA92"
-    ]
+    ],
+    "order": 610
   },
   {
     "id": "candles-medvezhonok-s-karandashami",
@@ -3117,7 +3178,8 @@
       "#F1EABD",
       "#F9B094",
       "#F9AE7A"
-    ]
+    ],
+    "order": 620
   },
   {
     "id": "candles-utyata-v-vannochke",
@@ -3160,7 +3222,8 @@
       "#E5EBD9",
       "#F4DCB7",
       "#E1D1C2"
-    ]
+    ],
+    "order": 630
   },
   {
     "id": "candles-shokoladnyy-shar",
@@ -3195,7 +3258,8 @@
       "#F9C3AD",
       "#F9D2B6",
       "#EACFBA"
-    ]
+    ],
+    "order": 640
   },
   {
     "id": "candles-serdtse-nyudovoe",
@@ -3239,7 +3303,8 @@
       "#F9C1A3",
       "#F9D1B6",
       "#EBCFB9"
-    ]
+    ],
+    "order": 650
   },
   {
     "id": "candles-stakan-s-tsvetami",
@@ -3275,7 +3340,8 @@
       "#DAF1C1",
       "#BCEDB8",
       "#EBCDCA"
-    ]
+    ],
+    "order": 660
   },
   {
     "id": "candles-tartaletki",
@@ -3325,7 +3391,8 @@
       "#F9DDC4",
       "#F9AEA8",
       "#F9C3B0"
-    ]
+    ],
+    "order": 670
   },
   {
     "id": "candles-serdtse-malinovoe",
@@ -3354,7 +3421,8 @@
       "#F9DBD1",
       "#F9B3B4",
       "#DFD1C8"
-    ]
+    ],
+    "order": 680
   },
   {
     "id": "candles-klubok-pryazhi",
@@ -3384,7 +3452,8 @@
       "#F9DCC8",
       "#F9D9BE",
       "#D3D4D2"
-    ]
+    ],
+    "order": 690
   },
   {
     "id": "candles-shkatulka-s-bantom",
@@ -3477,7 +3546,8 @@
       "#F8E6D6",
       "#F9C0A1",
       "#F5CEAA"
-    ]
+    ],
+    "order": 700
   },
   {
     "id": "candles-roza-v-kashpo",
@@ -3598,7 +3668,8 @@
       "#F9E5DA",
       "#ECDCD3",
       "#F9B5C6"
-    ]
+    ],
+    "order": 710
   },
   {
     "id": "candles-sushi-set",
@@ -3663,7 +3734,8 @@
       "#EFE7E2",
       "#F9BC9E",
       "#EACFBE"
-    ]
+    ],
+    "order": 720
   },
   {
     "id": "candles-yabloko-so-zmeey",
@@ -3706,7 +3778,8 @@
       "#F9DAD0",
       "#F9C6AD",
       "#F4CDB7"
-    ]
+    ],
+    "order": 730
   },
   {
     "id": "candles-rusalka-v-rakushke",
@@ -3742,7 +3815,8 @@
       "#F4E7D4",
       "#C5E2F0",
       "#C1D8E1"
-    ]
+    ],
+    "order": 740
   },
   {
     "id": "candles-banka-so-zvezdami",
@@ -3785,7 +3859,8 @@
       "#F9D9CA",
       "#F9AF96",
       "#F9B496"
-    ]
+    ],
+    "order": 750
   },
   {
     "id": "candles-knizhnaya-stopka",
@@ -3822,7 +3897,8 @@
       "#F1E8D3",
       "#F9B994",
       "#F9C094"
-    ]
+    ],
+    "order": 760
   },
   {
     "id": "candles-barelef-oval",
@@ -3872,7 +3948,8 @@
       "#F9CEC0",
       "#F9B5A3",
       "#F9B5A3"
-    ]
+    ],
+    "order": 770
   },
   {
     "id": "candles-butylka-vina",
@@ -3908,7 +3985,8 @@
       "#F2E7DD",
       "#F9BFAE",
       "#F9BAA9"
-    ]
+    ],
+    "order": 780
   },
   {
     "id": "candles-serdtse-iz-tyulpanov",
@@ -3945,7 +4023,8 @@
       "#F5E9BF",
       "#F9B7A6",
       "#F9ABA3"
-    ]
+    ],
+    "order": 790
   },
   {
     "id": "candles-chasha-s-shokoladom",
@@ -4002,7 +4081,8 @@
       "#F9D4C3",
       "#F9AF99",
       "#F9B8A0"
-    ]
+    ],
+    "order": 800
   },
   {
     "id": "candles-elka-zasnezhennaya",
@@ -4031,7 +4111,8 @@
       "#D1F5B3",
       "#E3E0C4",
       "#D6D4C8"
-    ]
+    ],
+    "order": 810
   },
   {
     "id": "candles-elka-zolotaya",
@@ -4074,7 +4155,8 @@
       "#E1F0B5",
       "#E5E0BE",
       "#DAD4BA"
-    ]
+    ],
+    "order": 820
   },
   {
     "id": "candles-malinovyy-shar",
@@ -4118,7 +4200,8 @@
       "#E5F387",
       "#E5E49A",
       "#F9AFA6"
-    ]
+    ],
+    "order": 830
   },
   {
     "id": "candles-mandariny-na-blyude",
@@ -4169,7 +4252,8 @@
       "#EBECBE",
       "#E9E0B4",
       "#F9C1B3"
-    ]
+    ],
+    "order": 840
   },
   {
     "id": "sachet-medalony-s-loshadkami",
