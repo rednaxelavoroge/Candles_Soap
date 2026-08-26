@@ -445,24 +445,24 @@
   },
   {
     "kind": "video",
-    "src": "/catalog/video/soap-process-12.mp4",
-    "poster": {
-      "src": "/catalog/video/soap-process-12-poster.webp",
-      "width": 1280,
-      "height": 720,
-      "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAABQAgCdASoQAAkAA4BaJbACdH8AFd5b9EZEpgAA317QtiH/YFgIDDzINq9wJ5Uq+kGL7PYHaLk6qnVAJnNbN5Xw24tc2NlYgAA=",
-      "alt": "Кадр из мастерской"
-    },
-    "caption": ""
-  },
-  {
-    "kind": "video",
     "src": "/catalog/video/soap-process-13.mp4",
     "poster": {
       "src": "/catalog/video/soap-process-13-poster.webp",
       "width": 1280,
       "height": 720,
       "blurDataURL": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAACwAQCdASoQAAkAA4BaJZQAAn/e9tvAAP72k+eUYz3+l0glHZW07cwh+/MqyWjvRvS0EVSdYAA=",
+      "alt": "Кадр из мастерской"
+    },
+    "caption": ""
+  },
+  {
+    "kind": "video",
+    "src": "/catalog/video/soap-process-12.mp4",
+    "poster": {
+      "src": "/catalog/video/soap-process-12-poster.webp",
+      "width": 1280,
+      "height": 720,
+      "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAABQAgCdASoQAAkAA4BaJbACdH8AFd5b9EZEpgAA317QtiH/YFgIDDzINq9wJ5Uq+kGL7PYHaLk6qnVAJnNbN5Xw24tc2NlYgAA=",
       "alt": "Кадр из мастерской"
     },
     "caption": ""
