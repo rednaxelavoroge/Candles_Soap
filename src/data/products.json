@@ -846,8 +846,8 @@
   },
   {
     "id": "candles-desertnaya-doska",
-    "slug": "desertnaya-doska",
-    "title": "Десертная доска",
+    "slug": "cake",
+    "title": "Пироженое круглое",
     "article": "СВ-12",
     "category": "candles",
     "tags": [
@@ -893,7 +893,9 @@
       "#F9C6AD",
       "#F2CDBB"
     ],
-    "order": 110
+    "order": 110,
+    "videos": [],
+    "related": []
   },
   {
     "id": "candles-polusfery-na-blyude",
