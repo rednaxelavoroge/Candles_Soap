@@ -896,43 +896,6 @@
     "order": 110
   },
   {
-    "id": "candles-makaruny-na-doske",
-    "slug": "makaruny-na-doske",
-    "title": "Макаруны на доске",
-    "article": "СВ-14",
-    "category": "candles",
-    "tags": [
-      "food",
-      "women"
-    ],
-    "images": [
-      {
-        "src": "/catalog/candles/makaruny-na-doske-01.webp",
-        "width": 1600,
-        "height": 1067,
-        "blurDataURL": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAwAgCdASoQAAsAA4BaJagCdAECvbhwXYJuAAD+kJImhPXVdG02oStOWFnUKaq/u0wmEpuGBPh1CuEmgC2p/dNlnVuxOQ0y7It6XchXm94AAA==",
-        "alt": "Макаруны на доске"
-      },
-      {
-        "src": "/catalog/candles/makaruny-na-doske-02.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAwAgCdASoQABAAA4BaJbACdAEN+QzfzMCIAAD+9DBo5wE1bhieL1004nfGZoLnhiBfxqqr/AxM0W8DxOJUXJxXVr23jo3TD+iFpaC3tMrcyvWmNNcL9GNiowAAAA==",
-        "alt": "Макаруны на доске — ракурс 2"
-      }
-    ],
-    "video": null,
-    "price": null,
-    "description": "Круглая доска с шестью полусферами: белая, сливочная, розовая, сиреневая, шоколадная. Похоже на витрину кондитерской в миниатюре. Цвета набираются вручную, поэтому оттенки в каждом наборе чуть разные.",
-    "specs": {},
-    "tones": [
-      "#F9BDA2",
-      "#F9C0A2",
-      "#EBCEBE"
-    ],
-    "order": 130
-  },
-  {
     "id": "candles-polusfery-na-blyude",
     "slug": "icecream",
     "title": "Шарик мороженного",
