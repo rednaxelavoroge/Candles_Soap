@@ -1541,14 +1541,15 @@
   },
   {
     "id": "candles-more-v-ladonyakh",
-    "slug": "more-v-ladonyakh",
-    "title": "Морская в руке",
-    "article": "СВ-27",
+    "slug": "more-v-ruke",
+    "title": "Море в руке",
+    "article": "2005",
     "category": "candles",
     "tags": [
       "sea",
       "gift",
-      "women"
+      "women",
+      "men"
     ],
     "images": [
       {
@@ -1575,14 +1576,23 @@
     ],
     "video": null,
     "price": null,
-    "description": "Гипсовые ладони держат бирюзовую воду с ракушками — будто зачерпнули у берега. По воде выложена надпись из мелких раковин. Ладони гипсовые и остаются после того, как воск выгорит.",
+    "description": "Руки из гипсы внутри прозрачный свечной гель в виде море, в котором ракушки. Можно написать короткое слово. Вместо моря могут быть ягоды, цветы...",
     "specs": {},
     "tones": [
       "#E7E8EC",
       "#E4DDDC",
       "#E4D0C4"
     ],
-    "order": 40
+    "order": 40,
+    "videos": [],
+    "related": [
+      "candles-serdtse-karibskoe",
+      "candles-rakushka-rapan",
+      "candles-rusalka-v-rakushke",
+      "candles-chernaya-rakushka",
+      "soap-morskoy-brusok",
+      "soap-morskie-kruglyshi"
+    ]
   },
   {
     "id": "candles-mishka-v-vannochke",
