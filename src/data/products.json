@@ -1469,12 +1469,13 @@
   {
     "id": "candles-rakushka-rapan",
     "slug": "rakushka-rapan",
-    "title": "Морская в ракушке",
-    "article": "СВ-26",
+    "title": "Большая морская ракушка",
+    "article": "2002",
     "category": "candles",
     "tags": [
       "sea",
-      "women"
+      "women",
+      "men"
     ],
     "images": [
       {
@@ -1492,30 +1493,51 @@
         "alt": "Морская в ракушке — ракурс 2"
       },
       {
-        "src": "/catalog/candles/rakushka-rapan-03.webp",
-        "width": 1600,
-        "height": 1200,
-        "blurDataURL": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAADwAQCdASoQAAwAA4BaJZwAAuW6aD5CLgAA/c5Z1DOuJtZiGMHYJ6pDhul8dgAA",
-        "alt": "Морская в ракушке — ракурс 3"
-      },
-      {
-        "src": "/catalog/candles/rakushka-rapan-04.webp",
-        "width": 1600,
-        "height": 1200,
-        "blurDataURL": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAADwAQCdASoQAAwAA4BaJZwAAu06h4GSK4AA/rFJ/f+0VUJe6lGZl7xMQAAAAA==",
-        "alt": "Морская в ракушке — ракурс 4"
+        "src": "/catalog/candles/rakushka-rapan-1788247815801-1.webp",
+        "width": 1400,
+        "height": 1400,
+        "blurDataURL": "data:image/webp;base64,UklGRmQCAABXRUJQVlA4WAoAAAAgAAAADwAADwAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggdgAAAHACAJ0BKhAAEAADgFolnAAPgY7UmbgjAAcblwAA/vhWTiwuT55uk5RQvoa/TWLLu7UDkPiqLlKm87P2f8MPwsAWOpNlyuV0PpnaPtNTDmEey+LTJ0YmfFu4Jn0SV2b6kUAbhcZwJN1Qu28bT3Jt4y7kgBIAAAA=",
+        "alt": "Большая морская ракушка"
       }
     ],
-    "video": null,
+    "video": {
+      "kind": "file",
+      "src": "/catalog/video/candle-process-8.mp4",
+      "poster": {
+        "src": "/catalog/candles/rakushka-rapan-01.webp",
+        "width": 1600,
+        "height": 1200,
+        "blurDataURL": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAACwAQCdASoQAAwAA4BaJZwAAuMdBV6AAP3eAzYgTys2TcZ9MSbDj82OcEo58Y2AUAA=",
+        "alt": "Морская в ракушке"
+      }
+    },
     "price": null,
-    "description": "Крупная витая раковина, залитая внутри морской водой — по дну лежат ракушки, у края собирается пена. Витки прорисованы до самого острия. Раковина остаётся целой и после того, как воск выгорит.",
+    "description": "Большая гипсовая ракушка, наполненная прозрачным свечным гелем, внутри мелкие ракушки. Можно написать внутри короткое пожелание",
     "specs": {},
     "tones": [
       "#F6E5DF",
       "#E6DDDB",
       "#DAD2D0"
     ],
-    "order": 30
+    "order": 30,
+    "videos": [
+      {
+        "kind": "file",
+        "src": "/catalog/video/candle-process-8.mp4",
+        "poster": {
+          "src": "/catalog/candles/rakushka-rapan-01.webp",
+          "width": 1600,
+          "height": 1200,
+          "blurDataURL": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAACwAQCdASoQAAwAA4BaJZwAAuMdBV6AAP3eAzYgTys2TcZ9MSbDj82OcEo58Y2AUAA=",
+          "alt": "Морская в ракушке"
+        }
+      }
+    ],
+    "related": [
+      "candles-more-v-ladonyakh",
+      "candles-serdtse-karibskoe",
+      "soap-morskoe-dno"
+    ]
   },
   {
     "id": "candles-more-v-ladonyakh",
