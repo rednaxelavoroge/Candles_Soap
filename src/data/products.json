@@ -177,7 +177,7 @@
       "#E4C7F0",
       "#DDCFE9"
     ],
-    "order": 30
+    "order": 40
   },
   {
     "id": "candles-globus",
@@ -286,7 +286,7 @@
       "#F1DAD3",
       "#D2D4D3"
     ],
-    "order": 40
+    "order": 50
   },
   {
     "id": "candles-mandariny",
@@ -370,7 +370,7 @@
       "#F9B69A",
       "#EECEBE"
     ],
-    "order": 50
+    "order": 60
   },
   {
     "id": "candles-tyulpany",
@@ -426,7 +426,7 @@
       "#F9AFC2",
       "#F9ADBD"
     ],
-    "order": 60
+    "order": 70
   },
   {
     "id": "candles-geksagon",
@@ -470,7 +470,7 @@
       "#F9CFB4",
       "#F9A79A"
     ],
-    "order": 70
+    "order": 80
   },
   {
     "id": "sachet-medalony",
@@ -1515,7 +1515,7 @@
       "#E6DDDB",
       "#DAD2D0"
     ],
-    "order": 80
+    "order": 30
   },
   {
     "id": "candles-more-v-ladonyakh",
