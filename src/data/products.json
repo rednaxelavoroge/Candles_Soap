@@ -1243,7 +1243,7 @@
       "#DDE0D8",
       "#DBD2C8"
     ],
-    "order": 190
+    "order": 200
   },
   {
     "id": "candles-kintsugi",
@@ -1274,7 +1274,7 @@
       "#E1E2BA",
       "#C8D7D3"
     ],
-    "order": 200
+    "order": 210
   },
   {
     "id": "candles-aysberg",
@@ -1318,7 +1318,7 @@
       "#CDE4DC",
       "#A5CDF0"
     ],
-    "order": 210
+    "order": 220
   },
   {
     "id": "candles-vulkan",
@@ -1376,7 +1376,7 @@
       "#E2DFD6",
       "#D6D3CE"
     ],
-    "order": 220
+    "order": 230
   },
   {
     "id": "candles-vulkan-bordo",
@@ -1426,7 +1426,7 @@
       "#EDDCD3",
       "#F9B0B2"
     ],
-    "order": 230
+    "order": 240
   },
   {
     "id": "candles-serdtse-karibskoe",
@@ -1464,7 +1464,7 @@
       "#E2DEDF",
       "#D7D2D4"
     ],
-    "order": 240
+    "order": 190
   },
   {
     "id": "candles-rakushka-rapan",
