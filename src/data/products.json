@@ -13,25 +13,11 @@
     ],
     "images": [
       {
-        "src": "/catalog/candles/ledyanaya-kupel-01.webp",
+        "src": "/catalog/candles/ledyanaya-kupel-07.webp",
         "width": 1600,
         "height": 1200,
-        "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAAAQAgCdASoQAAwAA4BaJYwCsAEKQonkllsAAP7NxITFdJeC0QlihEzm1AJ5a3YAMlYaxjLnIy9lhQQhnPo62W9tnRvhAAAA",
-        "alt": "Ванна со льдом"
-      },
-      {
-        "src": "/catalog/candles/ledyanaya-kupel-02.webp",
-        "width": 1600,
-        "height": 1200,
-        "blurDataURL": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAAAQAgCdASoQAAwAA4BaJZQC7AEPSn1He0gAAP7o2Lg23Asl7yJuDvlS44bVJixEBamlrV5SDXgHq4I8AAA=",
-        "alt": "Ванна со льдом — ракурс 2"
-      },
-      {
-        "src": "/catalog/candles/ledyanaya-kupel-04.webp",
-        "width": 1600,
-        "height": 1200,
-        "blurDataURL": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAADwAQCdASoQAAwAA4BaJZQCsAEObpm0z4AA/s3k/yyMRad6Kd21NrQPqlBkLHHyZRUREH6hXRgVWgJGAAA=",
-        "alt": "Ванна со льдом — ракурс 4"
+        "blurDataURL": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAACwAQCdASoQAAwAA4BaJZwAAudVhC4AAP73fOjZsl8ThhzTEV1SapFX3hCYAA==",
+        "alt": "Ванна со льдом — ракурс 7"
       },
       {
         "src": "/catalog/candles/ledyanaya-kupel-05.webp",
@@ -41,18 +27,18 @@
         "alt": "Ванна со льдом — ракурс 5"
       },
       {
-        "src": "/catalog/candles/ledyanaya-kupel-06.webp",
+        "src": "/catalog/candles/ledyanaya-kupel-04.webp",
         "width": 1600,
         "height": 1200,
-        "blurDataURL": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAACwAQCdASoQAAwAA4BaJZwAAudU7iSAAP71Z570W+78yp8VhDUaXu5w6zAAAA==",
-        "alt": "Ванна со льдом — ракурс 6"
+        "blurDataURL": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAADwAQCdASoQAAwAA4BaJZQCsAEObpm0z4AA/s3k/yyMRad6Kd21NrQPqlBkLHHyZRUREH6hXRgVWgJGAAA=",
+        "alt": "Ванна со льдом — ракурс 4"
       },
       {
-        "src": "/catalog/candles/ledyanaya-kupel-07.webp",
+        "src": "/catalog/candles/ledyanaya-kupel-01.webp",
         "width": 1600,
         "height": 1200,
-        "blurDataURL": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAACwAQCdASoQAAwAA4BaJZwAAudVhC4AAP73fOjZsl8ThhzTEV1SapFX3hCYAA==",
-        "alt": "Ванна со льдом — ракурс 7"
+        "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAAAQAgCdASoQAAwAA4BaJYwCsAEKQonkllsAAP7NxITFdJeC0QlihEzm1AJ5a3YAMlYaxjLnIy9lhQQhnPo62W9tnRvhAAAA",
+        "alt": "Ванна со льдом"
       },
       {
         "src": "/catalog/candles/ledyanaya-kupel-08.webp",
@@ -69,13 +55,6 @@
         "alt": "Ванна со льдом — ракурс 9"
       },
       {
-        "src": "/catalog/candles/ledyanaya-kupel-10.webp",
-        "width": 1600,
-        "height": 1200,
-        "blurDataURL": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAACwAQCdASoQAAwAA4BaJYwCdADa4JpAAP52nErfoiWOV39ubyNC/tPGqIoyKJZQAnoD8hdvDMvd5R7AAAA=",
-        "alt": "Ванна со льдом — ракурс 10"
-      },
-      {
         "src": "/catalog/candles/ledyanaya-kupel-11.webp",
         "width": 1600,
         "height": 1200,
@@ -85,13 +64,13 @@
     ],
     "video": {
       "kind": "file",
-      "src": "/catalog/video/candle-process-4.mp4",
+      "src": "/catalog/video/inshot-20241110-190408354-1788246434278.mp4",
       "poster": {
-        "src": "/catalog/candles/ledyanaya-kupel-01.webp",
+        "src": "/catalog/candles/ledyanaya-kupel-07.webp",
         "width": 1600,
         "height": 1200,
-        "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAAAQAgCdASoQAAwAA4BaJYwCsAEKQonkllsAAP7NxITFdJeC0QlihEzm1AJ5a3YAMlYaxjLnIy9lhQQhnPo62W9tnRvhAAAA",
-        "alt": "Ванна со льдом"
+        "blurDataURL": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAACwAQCdASoQAAwAA4BaJZwAAudVhC4AAP73fOjZsl8ThhzTEV1SapFX3hCYAA==",
+        "alt": "Ванна со льдом — ракурс 7"
       }
     },
     "price": null,
@@ -108,7 +87,20 @@
       "#CAD6D3"
     ],
     "related": [],
-    "order": 20
+    "order": 20,
+    "videos": [
+      {
+        "kind": "file",
+        "src": "/catalog/video/inshot-20241110-190408354-1788246434278.mp4",
+        "poster": {
+          "src": "/catalog/candles/ledyanaya-kupel-07.webp",
+          "width": 1600,
+          "height": 1200,
+          "blurDataURL": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAACwAQCdASoQAAwAA4BaJZwAAudVhC4AAP73fOjZsl8ThhzTEV1SapFX3hCYAA==",
+          "alt": "Ванна со льдом — ракурс 7"
+        }
+      }
+    ]
   },
   {
     "id": "candles-soty",
