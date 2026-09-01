@@ -183,12 +183,14 @@
     "id": "candles-globus",
     "slug": "globus",
     "title": "Земной шар",
-    "article": "СВ-03",
+    "article": "2056",
     "category": "candles",
     "tags": [
       "men",
       "school",
-      "geometric"
+      "women",
+      "kids",
+      "misc"
     ],
     "images": [
       {
@@ -227,7 +229,9 @@
       "#AACDF0",
       "#CAD5E3"
     ],
-    "order": 20
+    "order": 20,
+    "videos": [],
+    "related": []
   },
   {
     "id": "candles-elka-na-kryshe",
