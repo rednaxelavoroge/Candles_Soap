@@ -177,7 +177,7 @@
       "#E4C7F0",
       "#DDCFE9"
     ],
-    "order": 50
+    "order": 60
   },
   {
     "id": "candles-globus",
@@ -286,7 +286,7 @@
       "#F1DAD3",
       "#D2D4D3"
     ],
-    "order": 60
+    "order": 70
   },
   {
     "id": "candles-mandariny",
@@ -370,7 +370,7 @@
       "#F9B69A",
       "#EECEBE"
     ],
-    "order": 70
+    "order": 80
   },
   {
     "id": "candles-tyulpany",
@@ -426,7 +426,7 @@
       "#F9AFC2",
       "#F9ADBD"
     ],
-    "order": 80
+    "order": 90
   },
   {
     "id": "candles-geksagon",
@@ -1464,7 +1464,7 @@
       "#E2DEDF",
       "#D7D2D4"
     ],
-    "order": 90
+    "order": 50
   },
   {
     "id": "candles-rakushka-rapan",
