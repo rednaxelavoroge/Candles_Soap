@@ -706,7 +706,7 @@
       "#E6DDDC",
       "#DFD1CA"
     ],
-    "order": 80
+    "order": 90
   },
   {
     "id": "candles-malinovyy-kapkeyk",
@@ -750,7 +750,7 @@
       "#F9C0AD",
       "#E4D1BA"
     ],
-    "order": 130
+    "order": 140
   },
   {
     "id": "candles-ponchiki-s-posypkoy",
@@ -794,7 +794,7 @@
       "#F9D8B1",
       "#E1D1C1"
     ],
-    "order": 90
+    "order": 100
   },
   {
     "id": "candles-klubnika-na-pechene",
@@ -838,7 +838,7 @@
       "#F9BDA4",
       "#E7D0B9"
     ],
-    "order": 100
+    "order": 110
   },
   {
     "id": "candles-desertnaya-doska",
@@ -931,7 +931,7 @@
       "#F9C6AD",
       "#F2CDBB"
     ],
-    "order": 110,
+    "order": 120,
     "videos": [],
     "related": []
   },
@@ -997,7 +997,7 @@
       "#F9D3C0",
       "#E5CFC9"
     ],
-    "order": 120,
+    "order": 130,
     "videos": [],
     "related": []
   },
@@ -1058,7 +1058,7 @@
       "#F2DBCD",
       "#F9A5A0"
     ],
-    "order": 140
+    "order": 150
   },
   {
     "id": "candles-yabloko",
@@ -1088,7 +1088,7 @@
       "#F9B5A3",
       "#F9A8AB"
     ],
-    "order": 150
+    "order": 160
   },
   {
     "id": "candles-granat",
@@ -1161,7 +1161,7 @@
       "#F9ADAE",
       "#F9AFA9"
     ],
-    "order": 160
+    "order": 170
   },
   {
     "id": "candles-granat-v-ladonyakh",
@@ -1199,7 +1199,7 @@
       "#F9BEBB",
       "#DFD1C7"
     ],
-    "order": 170
+    "order": 180
   },
   {
     "id": "candles-plate",
@@ -1515,7 +1515,7 @@
       "#E6DDDB",
       "#DAD2D0"
     ],
-    "order": 180
+    "order": 80
   },
   {
     "id": "candles-more-v-ladonyakh",
