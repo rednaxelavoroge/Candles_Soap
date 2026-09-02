@@ -1402,9 +1402,9 @@
   },
   {
     "id": "candles-serdtse-karibskoe",
-    "slug": "serdtse-karibskoe",
-    "title": "Морская в сердце",
-    "article": "СВ-25",
+    "slug": "more-v-serdtse",
+    "title": "Море в сердце",
+    "article": "2001",
     "category": "candles",
     "tags": [
       "sea",
@@ -1436,7 +1436,9 @@
       "#E2DEDF",
       "#D7D2D4"
     ],
-    "order": 50
+    "order": 50,
+    "videos": [],
+    "related": []
   },
   {
     "id": "candles-rakushka-rapan",
