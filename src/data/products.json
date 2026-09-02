@@ -246,9 +246,9 @@
   },
   {
     "id": "candles-elka-na-kryshe",
-    "slug": "elka-na-kryshe",
-    "title": "Ёлка на крыше",
-    "article": "СВ-04",
+    "slug": "retro-mashina-elkoy",
+    "title": "Ретро машина с елкой 3d",
+    "article": "2029",
     "category": "candles",
     "tags": [
       "new-year"
@@ -267,13 +267,6 @@
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAQAgCdASoQAAwAA4BaJYwCdAEJvjzLx8pAAP7v4Ij777SiYNGIeVTsfvbzFfR1LXMzT6gT2XLaMBbi3vRxpoTBFFSnj2QBouHrqgs8d0m7B1xp3u+ZByqAAAA=",
         "alt": "Свеча-машинка с ёлкой на гипсовом подносе"
-      },
-      {
-        "src": "/catalog/candles/elka-na-kryshe-03.webp",
-        "width": 1600,
-        "height": 1200,
-        "blurDataURL": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAAAQAgCdASoQAAwAA4BaJQBOgCFgBVYiYZGYAP7x0bSpBE/dTW1E8dlzSu+FbrEfEOE1kU9vxMb5DWNSccYB/N9dhlaRmuH6fiL6fsx/VQumORqxxbmchIXnHTxfL6QwAAA=",
-        "alt": "Свеча-машинка с ёлкой в руке, виден размер"
       },
       {
         "src": "/catalog/candles/elka-na-kryshe-04.webp",
@@ -297,7 +290,9 @@
       "#F1DAD3",
       "#D2D4D3"
     ],
-    "order": 70
+    "order": 70,
+    "videos": [],
+    "related": []
   },
   {
     "id": "candles-mandariny",
