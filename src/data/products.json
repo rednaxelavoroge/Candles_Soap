@@ -3989,7 +3989,7 @@
     "slug": "serdtse-iz-tyulpanov",
     "title": "Сердце из тюльпанов",
     "article": "СВ-79",
-    "category": "candles",
+    "category": "soap",
     "tags": [
       "flowers",
       "heart",
@@ -4020,7 +4020,9 @@
       "#F9B7A6",
       "#F9ABA3"
     ],
-    "order": 770
+    "order": 770,
+    "videos": [],
+    "related": []
   },
   {
     "id": "candles-chasha-s-shokoladom",
