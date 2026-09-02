@@ -1390,56 +1390,6 @@
     "order": 240
   },
   {
-    "id": "candles-vulkan-bordo",
-    "slug": "vulkan-bordo",
-    "title": "Вулкан бордовый",
-    "article": "СВ-24",
-    "category": "candles",
-    "tags": [
-      "men"
-    ],
-    "images": [
-      {
-        "src": "/catalog/candles/vulkan-bordo-01.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAADQAQCdASoQABAAA4BaJZwAAudfNn+8SAD+9B1c/Y6PHU2jVax9zB3AsZsRMnUPlv8wMQAA",
-        "alt": "Вулкан бордовый"
-      },
-      {
-        "src": "/catalog/candles/vulkan-bordo-02.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACwAQCdASoQABAAA4BaJZwAAudfJP2AAP70HWn1B6hzQLWot5RxbMMAipqJXAAA",
-        "alt": "Вулкан бордовый — ракурс 2"
-      },
-      {
-        "src": "/catalog/candles/vulkan-bordo-03.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAADQAQCdASoQABAAA4BaJZwAAudfNn+8SAD+9B1c/Y6PHU2jVax9zB3AsZsRMnUPlv8wMQAA",
-        "alt": "Вулкан бордовый — ракурс 3"
-      },
-      {
-        "src": "/catalog/candles/vulkan-bordo-04.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACwAQCdASoQABAAA4BaJZwAAudfJP2AAP70HWn1B6hzQLWot5RxbMMAipqJXAAA",
-        "alt": "Вулкан бордовый — ракурс 4"
-      }
-    ],
-    "video": null,
-    "price": null,
-    "description": "Тот же конус в бордово-серой гамме: тёмное каменное основание и винные потёки по склонам. Спокойнее чёрно-красного, ставится в интерьер, где яркий цвет был бы лишним.",
-    "specs": {},
-    "tones": [
-      "#F3E7DD",
-      "#EDDCD3",
-      "#F9B0B2"
-    ],
-    "order": 250
-  },
-  {
     "id": "candles-serdtse-karibskoe",
     "slug": "serdtse-karibskoe",
     "title": "Морская в сердце",
