@@ -1813,9 +1813,9 @@
   },
   {
     "id": "candles-elka",
-    "slug": "elka",
+    "slug": "elka-plise",
     "title": "Ёлка-плиссе",
-    "article": "СВ-35",
+    "article": "2020",
     "category": "candles",
     "tags": [
       "new-year",
@@ -1824,11 +1824,11 @@
     ],
     "images": [
       {
-        "src": "/catalog/candles/elka-01.webp",
+        "src": "/catalog/candles/elka-03.webp",
         "width": 1200,
         "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAACwAQCdASoMABAAA4BaJYwAAuddOLGgAP7ypOvuQKFb43iAsw71FrbGwwxlro4kyex517hnAAA=",
-        "alt": "Ёлка-плиссе"
+        "blurDataURL": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAAAwAgCdASoMABAAA4BaJYgCdAEQ/hrRQTAJAAD+3Fv48yioC4neVflPBZxh7vYYTByQZP5S3gA=",
+        "alt": "Ёлка-плиссе — ракурс 3"
       },
       {
         "src": "/catalog/candles/elka-02.webp",
@@ -1838,46 +1838,11 @@
         "alt": "Ёлка-плиссе — ракурс 2"
       },
       {
-        "src": "/catalog/candles/elka-03.webp",
-        "width": 1200,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAAAwAgCdASoMABAAA4BaJYgCdAEQ/hrRQTAJAAD+3Fv48yioC4neVflPBZxh7vYYTByQZP5S3gA=",
-        "alt": "Ёлка-плиссе — ракурс 3"
-      },
-      {
-        "src": "/catalog/candles/elka-04.webp",
-        "width": 1200,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAADwAQCdASoMABAAA4BaJQBOgCHfaN/tgAAA/vLUuVZKDBo47t+FPb49rQdtFQVJCE6Hj5IwGJGJxO6mNKWoIAAA",
-        "alt": "Ёлка-плиссе — ракурс 4"
-      },
-      {
         "src": "/catalog/candles/elka-05.webp",
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAAAQAgCdASoQAAwAA4BaJQBOgB6R7dlgxccAAP7uoTrT6wePE8L1ss3QhRvdeUF1qxnwS8B3tho1DD7w7mxAAA==",
         "alt": "Ёлка-плиссе — ракурс 5"
-      },
-      {
-        "src": "/catalog/candles/elka-06.webp",
-        "width": 1600,
-        "height": 1200,
-        "blurDataURL": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADwAQCdASoQAAwAA4BaJZQCw7EOby47ukAA/vQl0PUy9xW8OrPOjD0mT5bRAOYVaT+ghcr7H+6lg8QwUoiRG84nFgAAAA==",
-        "alt": "Ёлка-плиссе — ракурс 6"
-      },
-      {
-        "src": "/catalog/candles/elka-07.webp",
-        "width": 1600,
-        "height": 1200,
-        "blurDataURL": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAADwAQCdASoQAAwAA4BaJZQCdAEPAIEufsAA/vKbNnhWFaesgE2nn+ayN01HxW5673DuVTwgtGo6hbwA",
-        "alt": "Ёлка-плиссе — ракурс 7"
-      },
-      {
-        "src": "/catalog/candles/elka-08.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAABQAgCdASoQABAAA4BaJYwCw7EPAm17jcoq+QAA/vaJoaec/aHraBlmey0cOJUp5C9N2Zi4uBtTLX+3irEl1RXWVYomZ2vyFZ3P5LQA",
-        "alt": "Ёлка-плиссе — ракурс 8"
       }
     ],
     "video": null,
@@ -1889,7 +1854,9 @@
       "#F9D1C1",
       "#A3E2D3"
     ],
-    "order": 330
+    "order": 330,
+    "videos": [],
+    "related": []
   },
   {
     "id": "candles-elka-v-ladonyakh",
