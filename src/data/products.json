@@ -2331,8 +2331,8 @@
   {
     "id": "candles-shar-i-snezhinki",
     "slug": "shar-i-snezhinki",
-    "title": "Набор из ёлочной игрушки и снежинок",
-    "article": "СВ-48",
+    "title": "Набор из елочной игрушки 3 и снежинок",
+    "article": "2026",
     "category": "candles",
     "tags": [
       "new-year",
@@ -2354,20 +2354,6 @@
         "alt": "Набор из ёлочной игрушки и снежинок — ракурс 2"
       },
       {
-        "src": "/catalog/candles/shar-i-snezhinki-03.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADwAQCdASoQABAAA4BaJQBOgBQxx2+QugAA/t7fi5dOSCD2XHzWYR8TPO2Aepp779RRQgXMMFCG5Hfy3fct2Oe/6CNxnnYTKmAQVtu7TcwnAAAA",
-        "alt": "Набор из ёлочной игрушки и снежинок — ракурс 3"
-      },
-      {
-        "src": "/catalog/candles/shar-i-snezhinki-04.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADQAQCdASoQABAAA4BaJYwCdAEDHynkcAD+04ii7Tz2OlMvKfzEyCKIzhB2cJ3jM6PXdlSwoSfUpha6636/joucguSg66PAAAA=",
-        "alt": "Набор из ёлочной игрушки и снежинок — ракурс 4"
-      },
-      {
         "src": "/catalog/candles/shar-i-snezhinki-05.webp",
         "width": 1600,
         "height": 1067,
@@ -2380,32 +2366,20 @@
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAQCdASoQABAAA4BaJZQC7AEPEK2XzAAA/vR9fFEf+lo2NXDcfoZ9C+nGw5WsafWVtfqnV8egPekaTI9oDctjsnE5JR5OMNXqWoYAAAA=",
         "alt": "Набор из ёлочной игрушки и снежинок — ракурс 6"
-      },
-      {
-        "src": "/catalog/candles/shar-i-snezhinki-07.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADQAQCdASoQABAAA4BaJZQAAuaUl2GgAAD+8zTbRNnW0aMJgKSVknSDoMOTdm0SCPJvCjMPHNYiW7jqRYJMuOHqQw7wZvuCeEAAAA==",
-        "alt": "Набор из ёлочной игрушки и снежинок — ракурс 7"
-      },
-      {
-        "src": "/catalog/candles/shar-i-snezhinki-08.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADwAQCdASoQABAAA4BaJZQC7AEPTB2x5AAA/vR9fFEf+lo1R70gxbn5SUwUG2yGDbTmWNenP49iJfAR2iJ9IXKizk0xrcW5AAA=",
-        "alt": "Набор из ёлочной игрушки и снежинок — ракурс 8"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Набор на гипсовом блюде: крупный шар и две снежинки рядом. Собирается в синем, сиреневом и бирюзовом. Блюдо с бусинным краем входит в набор.",
+    "description": "В набор входит гипсовое блюдо, елочная игрушка-свеча и снежинки восковые декоративные",
     "specs": {},
     "tones": [
       "#BED0F0",
       "#D9E0E5",
       "#CDD5DB"
     ],
-    "order": 460
+    "order": 460,
+    "videos": [],
+    "related": []
   },
   {
     "id": "candles-chernaya-rakushka",
