@@ -1508,7 +1508,7 @@
     "id": "candles-mishka-v-vannochke",
     "slug": "mishka-v-vannochke",
     "title": "Медвежонок в подсвечнике",
-    "article": "СВ-28",
+    "article": "2013",
     "category": "candles",
     "tags": [
       "kids",
@@ -1532,7 +1532,9 @@
       "#E7DDDB",
       "#D9D2D1"
     ],
-    "order": 260
+    "order": 260,
+    "videos": [],
+    "related": []
   },
   {
     "id": "candles-kristally-v-blyude",
