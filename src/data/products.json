@@ -3182,42 +3182,6 @@
     "order": 610
   },
   {
-    "id": "candles-shokoladnyy-shar",
-    "slug": "shokoladnyy-shar",
-    "title": "Шоколадный шар",
-    "article": "СВ-64",
-    "category": "candles",
-    "tags": [
-      "food"
-    ],
-    "images": [
-      {
-        "src": "/catalog/candles/shokoladnyy-shar-01.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAABwAgCdASoQABAAA4BaJaACdAYstvoQ0qBUfi8AAP6xNjZNoymKhNfaH2zLJmwOaD2j+DwzpAOKTqrcn94siIPSEsElTdmNaRdK+pY170ssCdWWn2JAAA==",
-        "alt": "Шоколадный шар"
-      },
-      {
-        "src": "/catalog/candles/shokoladnyy-shar-02.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAABQAgCdASoQABAAA4BaJZQCdAEPAivlMyo1SQAA/vaEX94YTnWG0Wozl+EZOJVIEnhgTszk8ENUR6Wn2vZ27BljpU5uc/9UlfmgqwLvG1D+tWOAc7bWTcxQspw/Q0krFX/sYAAA",
-        "alt": "Шоколадный шар — ракурс 2"
-      }
-    ],
-    "video": null,
-    "price": null,
-    "description": "Шар из тёмного воска на шестигранном гипсовом блюде, вокруг рассыпаны шоколадные капли. Капли отливаются отдельно и раскладываются вручную.",
-    "specs": {},
-    "tones": [
-      "#F9C3AD",
-      "#F9D2B6",
-      "#EACFBA"
-    ],
-    "order": 620
-  },
-  {
     "id": "candles-serdtse-nyudovoe",
     "slug": "serdtse-nyudovoe",
     "title": "Сердце нюдовое",
