@@ -730,13 +730,14 @@
   },
   {
     "id": "candles-ponchiki-s-posypkoy",
-    "slug": "ponchiki-s-posypkoy",
-    "title": "Пончики с посыпкой",
-    "article": "СВ-10",
+    "slug": "bentotort",
+    "title": "Бенто торт",
+    "article": "2037",
     "category": "candles",
     "tags": [
       "food",
-      "kids"
+      "kids",
+      "den-rozhdeniya"
     ],
     "images": [
       {
@@ -770,7 +771,9 @@
       "#F9D8B1",
       "#E1D1C1"
     ],
-    "order": 120
+    "order": 120,
+    "videos": [],
+    "related": []
   },
   {
     "id": "candles-klubnika-na-pechene",
