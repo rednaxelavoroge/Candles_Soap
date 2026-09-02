@@ -1219,7 +1219,7 @@
     "id": "candles-plate",
     "slug": "plate",
     "title": "Платье",
-    "article": "СВ-20",
+    "article": "2006",
     "category": "candles",
     "tags": [
       "women",
@@ -1250,14 +1250,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Платье с драпированным лифом и пышной юбкой: складки идут от талии к подолу. Отливается розовым и сиреневым, отдельно кладётся цветок.",
+    "description": "Платье свадебное",
     "specs": {},
     "tones": [
       "#BBEAF0",
       "#DDE0D8",
       "#DBD2C8"
     ],
-    "order": 210
+    "order": 210,
+    "videos": [],
+    "related": []
   },
   {
     "id": "candles-kintsugi",
