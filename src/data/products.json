@@ -320,9 +320,9 @@
   },
   {
     "id": "candles-mandariny",
-    "slug": "mandariny",
-    "title": "Мандарины",
-    "article": "СВ-05",
+    "slug": "mandarin-s-kozuroy",
+    "title": "Мандарин с кожурой",
+    "article": "2087",
     "category": "candles",
     "tags": [
       "new-year",
@@ -330,32 +330,11 @@
     ],
     "images": [
       {
-        "src": "/catalog/candles/mandariny-01.webp",
+        "src": "/catalog/candles/mandariny-06.webp",
         "width": 1600,
-        "height": 1200,
-        "blurDataURL": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAABwAgCdASoQAAwAA4BaJbACdH8Agny/rT9R+bAAAP7ufTdNdjIMfRD06tx2KaLXMYB1UDDCBGdS5KCl7baRGpZIMU/9hjTq3uZ8OCKdNyBHzAfZPDSAAA==",
-        "alt": "Три свечи-мандарина на белом гипсовом подносе"
-      },
-      {
-        "src": "/catalog/candles/mandariny-02.webp",
-        "width": 1600,
-        "height": 1200,
-        "blurDataURL": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAQAgCdASoQAAwAA4BaJagCdH8AFe9i845kAP72v+8S1M9O+XDi/jVB083DzaoaQ0eTHbyu2/SsR/2YHpGGJ402kpod93TyyMC+GuuGYTci7kfh1KpUEJAOwoAAAA==",
-        "alt": "Набор свечей-мандаринов на зелёном фоне"
-      },
-      {
-        "src": "/catalog/candles/mandariny-03.webp",
-        "width": 1600,
-        "height": 1200,
-        "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADQAQCdASoQAAwAA4BaJbACdADvMPemAAD+8N+nigQVENUG/V3/bhT+vEk+4Gg563VMG5EQHDp4mXKBN+wd5++UE5t30KhMdsi3Sw+z9go0AAAA",
-        "alt": "Целый и очищенный мандарин на подносе, тёмный фон"
-      },
-      {
-        "src": "/catalog/candles/mandariny-04.webp",
-        "width": 1600,
-        "height": 1067,
-        "blurDataURL": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAACwAQCdASoQAAsAA4BaJaACdACovlhAAPce1xOej6V3qcSQ24zpLEoBK7+Kgx3IeOEyA3kawbAomm9dxpKAAA==",
-        "alt": "Пара свечей-мандаринов на песочном фоне"
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAwAgCdASoQABAAA4BaJbACdAEO+R0babcIQAD+935YfQYLMzbvBcg01ChKwD/EtEPnoMuhQW9N3C7kKtrOBzM/AKufHuyLNdLSigLPm7RtwYfYhHQuVoAA",
+        "alt": "Мандарины — ракурс 6"
       },
       {
         "src": "/catalog/candles/mandariny-05.webp",
@@ -363,13 +342,6 @@
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAQAgCdASoQABAAA4BaJbACdAEO//KF6WGAAP73e/a95fz0RzrQ+275mNMFS5dPIyTSm7ZRX6qApz+VI/34KAAqSzn9a0LpbF/ahiVh3higAA==",
         "alt": "Мандарины — ракурс 5"
-      },
-      {
-        "src": "/catalog/candles/mandariny-06.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAwAgCdASoQABAAA4BaJbACdAEO+R0babcIQAD+935YfQYLMzbvBcg01ChKwD/EtEPnoMuhQW9N3C7kKtrOBzM/AKufHuyLNdLSigLPm7RtwYfYhHQuVoAA",
-        "alt": "Мандарины — ракурс 6"
       },
       {
         "src": "/catalog/candles/mandariny-07.webp",
@@ -388,7 +360,7 @@
     ],
     "video": null,
     "price": null,
-    "description": "Свечи-мандарины: гладкая кожура у целого плода и разобранные дольки у очищенного. Цвет набирается слоями, поэтому оранжевый получается неоднородным, как у настоящего фрукта. Набирается по два-три плода на гипсовый поднос — и весь Новый год пахнет цитрусом ещё до того, как свечу зажгли.",
+    "description": "Мандарин наполовину очищенный",
     "specs": {
       "size": "10 × 8 см",
       "scent": "Мандарин",
@@ -400,7 +372,9 @@
       "#F9B69A",
       "#EECEBE"
     ],
-    "order": 80
+    "order": 80,
+    "videos": [],
+    "related": []
   },
   {
     "id": "candles-tyulpany",
