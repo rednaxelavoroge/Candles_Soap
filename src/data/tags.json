@@ -124,5 +124,11 @@
     "title": "Профессиональные праздники",
     "group": "occasion",
     "order": 210
+  },
+  {
+    "slug": "den-rozhdeniya",
+    "title": "День Рождения",
+    "group": "occasion",
+    "order": 220
   }
 ]
