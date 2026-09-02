@@ -1696,13 +1696,14 @@
   },
   {
     "id": "candles-uzelok",
-    "slug": "uzelok",
-    "title": "Узелок",
-    "article": "СВ-32",
+    "slug": "xinkali",
+    "title": "Хинкали",
+    "article": "2047",
     "category": "candles",
     "tags": [
       "women",
-      "wedding"
+      "food",
+      "men"
     ],
     "images": [
       {
@@ -1722,14 +1723,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Белая свеча в форме завязанного мешочка: складки собираются к узлу, поверхность с перламутровым отливом. Простая форма, которая хорошо стоит рядом с посудой и не спорит с ней.",
+    "description": "Хинкали в натуральную величину. Украсит любой грузинский стол",
     "specs": {},
     "tones": [
       "#F9C0A6",
       "#F9D4C9",
       "#E7CFC7"
     ],
-    "order": 300
+    "order": 300,
+    "videos": [],
+    "related": []
   },
   {
     "id": "candles-perets",
