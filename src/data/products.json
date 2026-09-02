@@ -634,11 +634,15 @@
     "id": "candles-kniga-s-kristallami",
     "slug": "kniga-s-kristallami",
     "title": "Кристаллы в книге гипсовой",
-    "article": "СВ-08",
+    "article": "2058",
     "category": "candles",
     "tags": [
       "women",
-      "gift"
+      "gift",
+      "school",
+      "wedding",
+      "march8",
+      "flowers"
     ],
     "images": [
       {
@@ -672,14 +676,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Раскрытая книга, отлитая целиком: страницы с прорисованным обрезом, а в углублении правой — россыпь восковых кристаллов с гранями. Фитиль стоит между ними, и огонь просвечивает камни насквозь. Отливается в двух цветах — пудровом и каменно-сером.",
+    "description": "Раскрытая книга с кристаллами, вместо кристаллов могут быть цветы",
     "specs": {},
     "tones": [
       "#D3E3F0",
       "#E6DDDC",
       "#DFD1CA"
     ],
-    "order": 110
+    "order": 110,
+    "videos": [],
+    "related": []
   },
   {
     "id": "candles-malinovyy-kapkeyk",
