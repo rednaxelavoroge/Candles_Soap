@@ -11,7 +11,7 @@
  */
 import { execFileSync } from "node:child_process";
 import { createRequire } from "node:module";
-import { mkdtempSync, mkdirSync } from "node:fs";
+import { mkdtempSync, mkdirSync, writeFileSync, existsSync } from "node:fs";
 import { tmpdir } from "node:os";
 import path from "node:path";
 
@@ -57,6 +57,7 @@ execFileSync(
   [
     "src/lib/github-commit.ts",
     "src/lib/data-storage.ts",
+    "src/lib/site-media.ts",
     "--outDir", outDir,
     "--module", "commonjs",
     "--moduleResolution", "node",
@@ -137,6 +138,7 @@ try {
   const require = createRequire(path.join(outDir, "x.cjs"));
   const { saveJsonData, saveMediaFile, loadJsonData } = require(path.join(outDir, "data-storage.js"));
   const { commitFiles } = require(path.join(outDir, "github-commit.js"));
+  const { writeToSite } = require(path.join(outDir, "site-media.js"));
 
   const stamp = Date.now();
 
@@ -237,6 +239,53 @@ try {
   // Ж. Панель показывает только что сохранённое, не дожидаясь выкладки.
   const fresh = await loadJsonData("src/data/site.json", null);
   check("чтение отдаёт свежие данные", fresh?.owner === `o-${stamp}`);
+
+  /*
+    З. Панель рядом с сайтом: фотография пишется прямо в папку сайта и в
+    репозиторий не попадает вовсе. В коммите обязан оказаться только
+    products.json — иначе кадры продолжат ехать через git.
+  */
+  const fakeSite = path.join(workdir, "site");
+  mkdirSync(path.join(fakeSite, "catalog"), { recursive: true });
+  writeFileSync(path.join(fakeSite, "index.html"), "<!doctype html>");
+  process.env.SITE_PUBLIC_DIR = fakeSite;
+  try {
+    base = await head();
+    const local = [];
+    for (let i = 1; i <= 2; i++) {
+      local.push(await saveMediaFile(`catalog/candles/ryadom-${stamp}-${i}.webp`, frame(i)));
+    }
+    await saveJsonData("src/data/products.json", [{ id: `ryadom-${stamp}`, images: local }]);
+    made = await commitsSince(base);
+    check("рядом с сайтом: 1 коммит на сохранение", made.length === 1, `коммитов: ${made.length}`);
+    if (made.length === 1) {
+      const files = await filesOf(made[0].sha);
+      check(
+        "рядом с сайтом: фото в репозиторий не поехали",
+        files.length === 1 && files[0] === "src/data/products.json",
+        files.join(", "),
+      );
+    }
+    check(
+      "рядом с сайтом: файлы легли в папку сайта",
+      existsSync(path.join(fakeSite, `catalog/candles/ryadom-${stamp}-1.webp`)) &&
+        existsSync(path.join(fakeSite, `catalog/candles/ryadom-${stamp}-2.webp`)),
+    );
+    check("рядом с сайтом: адрес кадра прежний", local[0] === `/catalog/candles/ryadom-${stamp}-1.webp`, local[0]);
+
+    /*
+      И. За пределы папки сайта запись не выпускается. Проверяем сам writeToSite,
+      а не saveMediaFile: у второго на такой случай есть запасной путь через
+      репозиторий, и он бы утащил в коммит мусорный файл.
+    */
+    const escaped = writeToSite(`catalog/../../chuzhoe-${stamp}.webp`, frame(9));
+    check(
+      "выход за пределы папки сайта не разрешён",
+      escaped === false && !existsSync(path.join(workdir, `chuzhoe-${stamp}.webp`)),
+    );
+  } finally {
+    delete process.env.SITE_PUBLIC_DIR;
+  }
 } finally {
   await api(`/repos/${REPO}/git/refs/heads/${branch}`, { method: "DELETE" }).catch(() => {});
   console.log(`\nВременная ветка ${branch} удалена.`);

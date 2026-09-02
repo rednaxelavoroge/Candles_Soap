@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { commitFiles, type CommitFile } from "./github-commit";
+import { writeToSite } from "./site-media";
 
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN || process.env.GITHUB_PAT;
 const GITHUB_REPO = process.env.GITHUB_REPO || "rednaxelavoroge/Candles_Soap";
@@ -280,6 +281,19 @@ export async function saveMediaFile(
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   mimeType = "image/webp",
 ): Promise<string> {
+  const url = `/${publicRelativePath.replace(/^\//, "")}`;
+
+  /*
+    Панель стоит на том же хостинге, что и сайт, и её папка лежит внутри папки
+    домена. Тогда фотографию кладём прямо туда: кадр виден на сайте сразу,
+    репозиторий не растёт, и загрузка не стоит ни коммита, ни выкладки.
+    Подробности и оговорки — в src/lib/site-media.ts.
+  */
+  if (writeToSite(publicRelativePath, buffer)) {
+    return url;
+  }
+
+  // Сайта рядом нет (разработка, Vercel) — везём файл через репозиторий.
   const fullRelativePath = path.join("public", publicRelativePath);
   writeLocal(fullRelativePath, buffer);
 
@@ -292,5 +306,5 @@ export async function saveMediaFile(
     });
   }
 
-  return `/${publicRelativePath.replace(/^\//, "")}`;
+  return url;
 }

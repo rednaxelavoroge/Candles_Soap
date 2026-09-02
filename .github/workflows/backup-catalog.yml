@@ -1,0 +1,117 @@
+# Резервная копия фотографий каталога.
+#
+# Зачем. С 03.09.2026 панель кладёт загруженный кадр прямо в папку сайта на
+# хостинге, а не коммитом в репозиторий: так загрузка фотографии не стоит ни
+# коммита, ни выкладки, и кадр виден на сайте сразу. Обратная сторона — новые
+# фотографии больше не лежат в git, и хостинг остаётся их единственным местом.
+#
+# Этот воркфлоу раз в неделю снимает с хостинга весь каталог и кладёт архив
+# в приложения к служебному выпуску. Почему туда, а не коммитом: приложения к
+# выпуску не попадают в историю репозитория и удаляются насовсем — иначе
+# четверть гигабайта фотографий еженедельно оседали бы в истории навсегда.
+# Тем же способом сюда ездят исходники роликов, глава про них в docs/handoff.md.
+#
+# Что попадает в копию: catalog (изделия и обложки разделов), backstage
+# (кадры мастерской) и портрет заказчицы в корне сайта — ровно то, что
+# записывает панель.
+#
+# Хранятся четыре последних архива, старые удаляются.
+
+name: Резервная копия каталога
+
+on:
+  schedule:
+    # Ночь с воскресенья на понедельник, 03:00 UTC.
+    - cron: "0 3 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: backup-catalog
+  cancel-in-progress: false
+
+env:
+  RELEASE_TAG: catalog-backup
+  KEEP: 4
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Проверить, заданы ли доступы
+        id: check
+        run: |
+          if [ -z "${{ secrets.FTP_HOST }}" ]; then
+            echo "Секрет FTP_HOST не задан — копию снять неоткуда."
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Снять каталог с хостинга
+        if: steps.check.outputs.ready == 'true'
+        env:
+          FTP_HOST: ${{ secrets.FTP_HOST }}
+          FTP_USER: ${{ secrets.FTP_USER }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          FTP_DIR: ${{ secrets.FTP_DIR }}
+        run: |
+          set -e
+          sudo apt-get update -qq && sudo apt-get install -y -qq lftp
+          TARGET="${FTP_DIR:-public_html}"
+          mkdir -p snapshot
+          # Только чтение: mirror без -R тянет с сервера к нам.
+          # --parallel: иначе несколько тысяч файлов качаются очень долго.
+          lftp -u "$FTP_USER","$FTP_PASSWORD" "$FTP_HOST" <<LFTP
+            set ssl:verify-certificate no
+            set ftp:ssl-allow yes
+            cd "$TARGET"
+            mirror --parallel=4 catalog snapshot/catalog
+            mirror --parallel=4 backstage snapshot/backstage
+            lcd snapshot
+            mget -c portrait-*.webp
+            bye
+          LFTP
+          echo "Файлов: $(find snapshot -type f | wc -l), размер: $(du -sh snapshot | cut -f1)"
+
+      - name: Сложить архив
+        if: steps.check.outputs.ready == 'true'
+        id: pack
+        run: |
+          set -e
+          # Пустой снимок — это не «копия за неделю ничего не набрала», это
+          # оборванная закачка. Класть такое поверх настоящих копий нельзя.
+          COUNT=$(find snapshot -type f | wc -l)
+          if [ "$COUNT" -lt 100 ]; then
+            echo "В снимке всего $COUNT файлов — похоже, закачка не удалась. Копию не сохраняю."
+            exit 1
+          fi
+          NAME="catalog-$(date -u +%Y-%m-%d).tar.gz"
+          tar -czf "$NAME" -C snapshot .
+          echo "name=$NAME" >> "$GITHUB_OUTPUT"
+          echo "Архив $NAME, $(du -h "$NAME" | cut -f1)"
+
+      - name: Положить копию в служебный выпуск
+        if: steps.check.outputs.ready == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NAME: ${{ steps.pack.outputs.name }}
+        run: |
+          set -e
+          if ! gh release view "$RELEASE_TAG" >/dev/null 2>&1; then
+            gh release create "$RELEASE_TAG" \
+              --prerelease \
+              --title "Резервные копии каталога" \
+              --notes "Служебный выпуск. Сюда раз в неделю кладётся архив фотографий каталога, снятый с хостинга. В историю репозитория эти файлы не попадают. Хранятся четыре последних архива."
+          fi
+          gh release upload "$RELEASE_TAG" "$NAME" --clobber
+
+          # Прибираем старые: имена вида catalog-ГГГГ-ММ-ДД сортируются по дате.
+          gh release view "$RELEASE_TAG" --json assets --jq '.assets[].name' \
+            | grep '^catalog-' | sort -r | tail -n +$((KEEP + 1)) \
+            | while read -r old; do
+                echo "Удаляю старую копию: $old"
+                gh release delete-asset "$RELEASE_TAG" "$old" -y
+              done
