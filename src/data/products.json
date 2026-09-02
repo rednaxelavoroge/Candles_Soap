@@ -1358,7 +1358,7 @@
     "id": "candles-vulkan",
     "slug": "vulkan",
     "title": "Вулкан",
-    "article": "СВ-23",
+    "article": "2088",
     "category": "candles",
     "tags": [
       "men",
@@ -1366,25 +1366,11 @@
     ],
     "images": [
       {
-        "src": "/catalog/candles/vulkan-01.webp",
-        "width": 1200,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAADwAQCdASoMABAAA4BaJaQAAlLuS6527gAA/UWOIVLVpaycWkXue1sBLr+Yf1aMW2fIGpotuqnwAA==",
-        "alt": "Вулкан"
-      },
-      {
-        "src": "/catalog/candles/vulkan-02.webp",
+        "src": "/catalog/candles/vulkan-05.webp",
         "width": 1600,
-        "height": 1200,
-        "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADwAQCdASoQAAwAA4BaJZwAAi7VR9T2G4QA/ZgFVJsU82yJO8BRBOhvXLmvrl+qCT4OI48HElEyoblDzfIsLj6ZTwCIz4NtACKw3MnVoZvLwAAA",
-        "alt": "Вулкан — ракурс 2"
-      },
-      {
-        "src": "/catalog/candles/vulkan-03.webp",
-        "width": 1200,
         "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAADwAQCdASoMABAAA4BaJaQAAlLuS6527gAA/UWOIVLVpaycWkXue1sBLr+Yf1aMW2fIGpotuqnwAA==",
-        "alt": "Вулкан — ракурс 3"
+        "blurDataURL": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAADwAQCdASoQABAAA4BaJZwAAud+zSOt/QAA/vd7PM5DaDMQ/ovyaK6ARwp7AAAA",
+        "alt": "Вулкан — ракурс 5"
       },
       {
         "src": "/catalog/candles/vulkan-04.webp",
@@ -1392,13 +1378,6 @@
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAADwAQCdASoQAAwAA4BaJZwAAudmdE3wLIAA/vVviTyv8V4pJajt2uHCAH9Z57qqRuH29weAAAA=",
         "alt": "Вулкан — ракурс 4"
-      },
-      {
-        "src": "/catalog/candles/vulkan-05.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAADwAQCdASoQABAAA4BaJZwAAud+zSOt/QAA/vd7PM5DaDMQ/ovyaK6ARwp7AAAA",
-        "alt": "Вулкан — ракурс 5"
       }
     ],
     "video": null,
@@ -1410,7 +1389,9 @@
       "#E2DFD6",
       "#D6D3CE"
     ],
-    "order": 240
+    "order": 240,
+    "videos": [],
+    "related": []
   },
   {
     "id": "candles-serdtse-karibskoe",
