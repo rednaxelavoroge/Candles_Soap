@@ -1735,7 +1735,7 @@
     "id": "candles-perets",
     "slug": "perets",
     "title": "Перец",
-    "article": "СВ-33",
+    "article": "2068",
     "category": "candles",
     "tags": [
       "food"
@@ -1765,7 +1765,9 @@
       "#8DF593",
       "#B8DEBC"
     ],
-    "order": 310
+    "order": 310,
+    "videos": [],
+    "related": []
   },
   {
     "id": "candles-limon",
