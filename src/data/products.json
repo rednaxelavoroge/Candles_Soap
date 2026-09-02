@@ -978,14 +978,29 @@
     "id": "candles-yagody-v-banke",
     "slug": "yagody-v-banke",
     "title": "Банка варенья",
-    "article": "СВ-16",
+    "article": "2038",
     "category": "candles",
     "tags": [
       "food",
       "women",
-      "gift"
+      "gift",
+      "kids"
     ],
     "images": [
+      {
+        "src": "/catalog/candles/yagody-v-banke-04.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAQCdASoQABAAA4BaJQBOgCKUgT+6bAwA/tSP2/a/v+/+qXypMkOwk+VXcyrd6zeKW2Xxxvhk41J2XHCIG0qex/SDUVvoYw1M2+MYMAA=",
+        "alt": "Банка варенья — ракурс 4"
+      },
+      {
+        "src": "/catalog/candles/yagody-v-banke-05.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAAAQAgCdASoQABAAA4BaJbACdADdEWdowCLgAP7uoVcLbPfVCi/3UQIZr2iAdCEbHzyExLN2eKZhF2KRdsMJgnVQAFSjumkh0+z9YQ/M1v0r8agAAAA=",
+        "alt": "Банка варенья — ракурс 5"
+      },
       {
         "src": "/catalog/candles/yagody-v-banke-01.webp",
         "width": 1600,
@@ -1006,20 +1021,6 @@
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAAAQAgCdASoQABAAA4BaJZgCdAEO0p7tIlrgAP6QS76W2H0Yud+lZT1ZL31KbQIa1W69XPL7XHQF8lZbctdGgNZ+Vs7r8IAA",
         "alt": "Банка варенья — ракурс 3"
-      },
-      {
-        "src": "/catalog/candles/yagody-v-banke-04.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAQCdASoQABAAA4BaJQBOgCKUgT+6bAwA/tSP2/a/v+/+qXypMkOwk+VXcyrd6zeKW2Xxxvhk41J2XHCIG0qex/SDUVvoYw1M2+MYMAA=",
-        "alt": "Банка варенья — ракурс 4"
-      },
-      {
-        "src": "/catalog/candles/yagody-v-banke-05.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAAAQAgCdASoQABAAA4BaJbACdADdEWdowCLgAP7uoVcLbPfVCi/3UQIZr2iAdCEbHzyExLN2eKZhF2KRdsMJgnVQAFSjumkh0+z9YQ/M1v0r8agAAAA=",
-        "alt": "Банка варенья — ракурс 5"
       }
     ],
     "video": null,
@@ -1031,7 +1032,9 @@
       "#F2DBCD",
       "#F9A5A0"
     ],
-    "order": 170
+    "order": 170,
+    "videos": [],
+    "related": []
   },
   {
     "id": "candles-yabloko",
