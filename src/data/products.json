@@ -3076,18 +3076,18 @@
     ],
     "images": [
       {
-        "src": "/catalog/candles/tsilindr-s-tyulpanami-01.webp",
-        "width": 1200,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAAAQAgCdASoMABAAA4BaJQBOgCIj92tb/bQAAP71dIY2fxmN5HIRLVC8YdSY453J07lR2eq8Hl+a+ijnezpNjk1Fv/KxQUfwAAA=",
-        "alt": "Свеча цилиндрическая с тюльпанами"
-      },
-      {
         "src": "/catalog/candles/tsilindr-s-tyulpanami-02.webp",
         "width": 1200,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAwAgCdASoMABAAA4BaJYgCdAELZH3HxZGogAD+9DAJEqJ477b/nSRod1x+M/n8owolUUrOQ5c+DXS9xvp7z2ELGJmZBTS4zFA7eorQhqAAAA==",
         "alt": "Свеча цилиндрическая с тюльпанами — ракурс 2"
+      },
+      {
+        "src": "/catalog/candles/tsilindr-s-tyulpanami-01.webp",
+        "width": 1200,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAAAQAgCdASoMABAAA4BaJQBOgCIj92tb/bQAAP71dIY2fxmN5HIRLVC8YdSY453J07lR2eq8Hl+a+ijnezpNjk1Fv/KxQUfwAAA=",
+        "alt": "Свеча цилиндрическая с тюльпанами"
       }
     ],
     "video": null,
@@ -3099,7 +3099,9 @@
       "#F9B5AA",
       "#F6CBC3"
     ],
-    "order": 570
+    "order": 570,
+    "videos": [],
+    "related": []
   },
   {
     "id": "candles-morskaya-zvezda",
