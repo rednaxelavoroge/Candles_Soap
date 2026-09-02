@@ -35,6 +35,10 @@ concurrency:
 env:
   RELEASE_TAG: catalog-backup
   KEEP: 4
+  # Репозиторий для gh: исходников здесь нет — этот воркфлоу ничего не собирает
+  # и не делает checkout, — а без них gh ищет репозиторий в текущей папке
+  # и падает с «not a git repository».
+  GH_REPO: ${{ github.repository }}
 
 jobs:
   backup:
