@@ -414,27 +414,6 @@
     ],
     "images": [
       {
-        "src": "/catalog/candles/tyulpany-01.webp",
-        "width": 1200,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADQAQCdASoMABAAA4BaJQAAW6HEF3tLgAD+9XSVgPwNpeCMcsaSRlFP3iCS6Fx6zRU7CFGuoSxA59d7StnlimYoEdAAAA==",
-        "alt": "Букет тюльпанов"
-      },
-      {
-        "src": "/catalog/candles/tyulpany-02.webp",
-        "width": 1200,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAADQAQCdASoMABAAA4BaJYwAAud+ldRkVAD+9CXlDnFqW1tWVCARsfJsGnUhxzPkj33I7C1Kji5G/DYEsBBKD5B4AAA=",
-        "alt": "Букет тюльпанов — ракурс 2"
-      },
-      {
-        "src": "/catalog/candles/tyulpany-03.webp",
-        "width": 1200,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAACwAQCdASoMABAAA4BaJQAAW6ETIJgAAP70MAesY8lf11Bf/AT64Y9Qctbh6IqeKOHO4iwGwAYtwfUwSP7hO/+nJehWrLUAAAA=",
-        "alt": "Букет тюльпанов — ракурс 3"
-      },
-      {
         "src": "/catalog/candles/tyulpany-04.webp",
         "width": 1200,
         "height": 1600,
@@ -456,7 +435,9 @@
       "#F9AFC2",
       "#F9ADBD"
     ],
-    "order": 90
+    "order": 90,
+    "videos": [],
+    "related": []
   },
   {
     "id": "candles-geksagon",
