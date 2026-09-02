@@ -4110,50 +4110,6 @@
     "related": []
   },
   {
-    "id": "candles-elka-zolotaya",
-    "slug": "elka-zolotaya",
-    "title": "Ёлка золотая",
-    "article": "СВ-82",
-    "category": "candles",
-    "tags": [
-      "new-year",
-      "gift"
-    ],
-    "images": [
-      {
-        "src": "/catalog/candles/elka-zolotaya-01.webp",
-        "width": 1200,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADwAQCdASoMABAAA4BaJQAAU46Oq45r6lAA/vV7qnY+Vwy6rXGwfq+BnLZmvNMVI/htLfuIgrB+oT7xzwB59HNqnGCmw9UdPeUfFRJWb55w8N5Jsvh8YqtgAAA=",
-        "alt": "Ёлка золотая"
-      },
-      {
-        "src": "/catalog/candles/elka-zolotaya-02.webp",
-        "width": 1200,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADQAQCdASoMABAAA4BaJQBOgB5AjFdjQAD+9pPmsd0XJHcE9RKtq94DlZUmW7zoPR3wIp2rJrJC3HT/dUBIsyIAFIMzvVb0Bx3KxcMZ2J6FWmYOnLWcJlTAAAA=",
-        "alt": "Ёлка золотая — ракурс 2"
-      },
-      {
-        "src": "/catalog/candles/elka-zolotaya-03.webp",
-        "width": 1600,
-        "height": 1067,
-        "blurDataURL": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAQCdASoQAAsAA4BaJYwCdAEMip2TAAAA/vWdjMToKTCdV/tDV9wibst4gWk89Z4Ph8xC9a8aUEr+Lzs9milyPrkeCYpf98C3bYuAAAA=",
-        "alt": "Ёлка золотая — ракурс 3"
-      }
-    ],
-    "video": null,
-    "price": null,
-    "description": "Ярусная ёлка с медно-золотым напылением, в двух размерах — их ставят парой, большую и малую. Есть светлая версия, без золота.",
-    "specs": {},
-    "tones": [
-      "#E1F0B5",
-      "#E5E0BE",
-      "#DAD4BA"
-    ],
-    "order": 800
-  },
-  {
     "id": "candles-mandariny-na-blyude",
     "slug": "mandarin-ochishenni",
     "title": "Мандарин очищенный",
