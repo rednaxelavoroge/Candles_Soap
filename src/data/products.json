@@ -3909,13 +3909,14 @@
   },
   {
     "id": "candles-butylka-vina",
-    "slug": "butylka-vina",
-    "title": "Бутылка вина",
-    "article": "СВ-78",
+    "slug": "butylka",
+    "title": "Бутылка ",
+    "article": "2090",
     "category": "candles",
     "tags": [
       "men",
-      "gift"
+      "gift",
+      "new-year"
     ],
     "images": [
       {
@@ -3942,7 +3943,9 @@
       "#F9BFAE",
       "#F9BAA9"
     ],
-    "order": 760
+    "order": 760,
+    "videos": [],
+    "related": []
   },
   {
     "id": "candles-serdtse-iz-tyulpanov",
