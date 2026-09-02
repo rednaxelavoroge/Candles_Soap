@@ -62,18 +62,32 @@ jobs:
           sudo apt-get update -qq && sudo apt-get install -y -qq lftp
           TARGET="${FTP_DIR:-public_html}"
           mkdir -p snapshot
+
           # Только чтение: mirror без -R тянет с сервера к нам.
           # --parallel: иначе несколько тысяч файлов качаются очень долго.
+          #
+          # Каталог обязателен: без него копия бессмысленна, и шаг должен упасть.
           lftp -u "$FTP_USER","$FTP_PASSWORD" "$FTP_HOST" <<LFTP
             set ssl:verify-certificate no
             set ftp:ssl-allow yes
             cd "$TARGET"
             mirror --parallel=4 catalog snapshot/catalog
+            bye
+          LFTP
+
+          # Кадры мастерской и портрет — необязательные: папки может не быть
+          # вовсе, пока заказчица не загрузила ни одного такого файла. Их
+          # отсутствие не повод терять копию каталога.
+          lftp -u "$FTP_USER","$FTP_PASSWORD" "$FTP_HOST" <<LFTP || echo "Бэкстейджа и портрета в копии нет — их на сайте не оказалось."
+            set ssl:verify-certificate no
+            set ftp:ssl-allow yes
+            cd "$TARGET"
             mirror --parallel=4 backstage snapshot/backstage
             lcd snapshot
             mget -c portrait-*.webp
             bye
           LFTP
+
           echo "Файлов: $(find snapshot -type f | wc -l), размер: $(du -sh snapshot | cut -f1)"
 
       - name: Сложить архив
