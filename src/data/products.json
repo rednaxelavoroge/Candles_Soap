@@ -2409,9 +2409,9 @@
   },
   {
     "id": "candles-vinogradnyy-shar",
-    "slug": "vinogradnyy-shar",
-    "title": "Виноградный шар",
-    "article": "СВ-47",
+    "slug": "elochnaya-igrushka-2",
+    "title": "Елочная игрушка 2",
+    "article": "2024",
     "category": "candles",
     "tags": [
       "new-year",
@@ -2431,18 +2431,27 @@
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAAAwAgCdASoQABAAA4BaJYwCdAEO+arnYQXTAAD+8MAlLNkl/aFBcAAM9SI3xA5zwozAOUHNTznPWWpSAKk2KMMNRjQpgmHe03gEAA==",
         "alt": "Виноградный шар — ракурс 2"
+      },
+      {
+        "src": "/catalog/candles/elochnaya-igrushka-2-1788363625539-1.webp",
+        "width": 1050,
+        "height": 1400,
+        "blurDataURL": "data:image/webp;base64,UklGRqACAABXRUJQVlA4WAoAAAAgAAAADwAAFAAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggsgAAABAEAJ0BKhAAFQA+7WKpTamlo6IwCAEwHYlsAAPiO9JGqsP4KZq1qJVgAP7cmpoGaUlP6nLmd/fjNDDNlX8TLvTxjkRtihy/VwcVV6ek7aMe7Fdop+b4dpKIZwGHiVtNYO5kGTmx37hOp7/JH/xGDUZiTABlJi3+53AgnO03Vrwsvliv3tApI+H+8vnAm4DfClg4+Uo8dMlvsmuNOHYZn7OZ0+3dxiJYMn+p+ifZPfv8IAA=",
+        "alt": "Елочная игрушка 2"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Шар, собранный из мелких ягод, на круглом гипсовом блюде. Каждая ягода отливается отдельно и садится на основу вручную — поверхность получается живой, с неровностями.",
+    "description": "Елочная игрушка",
     "specs": {},
     "tones": [
       "#C1F5A7",
       "#B2EBE7",
       "#D5D4CC"
     ],
-    "order": 450
+    "order": 450,
+    "videos": [],
+    "related": []
   },
   {
     "id": "candles-shar-i-snezhinki",
