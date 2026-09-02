@@ -172,16 +172,23 @@ export async function DELETE(req: Request) {
 
     const products = await loadJsonData<Product[]>(PRODUCTS_FILE, getProducts());
     const touched = products.filter((product) => product.tags.includes(slug));
+
+    /*
+      Оба файла кладём в одну пачку и ждём их вместе. Удаление подраздела —
+      одно действие заказчицы, значит и коммит один. Если дождаться первой
+      записи, пачка уедет без второй, и получатся два коммита и две выкладки.
+    */
+    const writes: Promise<void>[] = [];
     if (touched.length > 0) {
       const cleaned = products.map((product) =>
         product.tags.includes(slug)
           ? { ...product, tags: product.tags.filter((tag) => tag !== slug) }
           : product,
       );
-      await saveJsonData(PRODUCTS_FILE, cleaned);
+      writes.push(saveJsonData(PRODUCTS_FILE, cleaned));
     }
-
-    await saveJsonData(FILE, updated);
+    writes.push(saveJsonData(FILE, updated));
+    await Promise.all(writes);
     return NextResponse.json({ ok: true, tags: updated, detached: touched.length });
   } catch (err) {
     console.error("Tags delete error:", err);
