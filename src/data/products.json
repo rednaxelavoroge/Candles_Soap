@@ -2076,29 +2076,32 @@
   },
   {
     "id": "candles-chashka-kakao",
-    "slug": "chashka-kakao",
+    "slug": "chashka-kofe",
     "title": "Чашка кофе",
-    "article": "СВ-42",
+    "article": "2031",
     "category": "candles",
     "tags": [
       "new-year",
       "women",
-      "food"
+      "food",
+      "men",
+      "march8",
+      "den-rozhdeniya"
     ],
     "images": [
-      {
-        "src": "/catalog/candles/chashka-kakao-01.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADQAQCdASoQABAAA4BaJZgC7AEfcEx00AD+8Z13RYXPzW/gsysYprH+wW5zUyyldceKMayDIHMLSNXdOGFoVlzPO2dYwsATiAA=",
-        "alt": "Чашка кофе"
-      },
       {
         "src": "/catalog/candles/chashka-kakao-02.webp",
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAAAwAgCdASoQAAwAA4BaJagCdH8AFxKvVU06AAD+7uUSX/BZiqWr9UK3C746GoixH0Ruh/hASZIBcvWivIpQlpU7vZKZFCuaeMAAAA==",
         "alt": "Чашка кофе — ракурс 2"
+      },
+      {
+        "src": "/catalog/candles/chashka-kakao-05.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAAAwAgCdASoQABAAA4BaJZAC7AEfZSF/sookAAD+qu88oeEzTOSfwcV0vR6qFYOQZFeAISCvYYOiLjXnqF+Ai3cjCEzP1SDy613h9RxqLW+lDLSYQzgR23hCuwX4BvhOAAA=",
+        "alt": "Чашка кофе — ракурс 5"
       },
       {
         "src": "/catalog/candles/chashka-kakao-03.webp",
@@ -2113,25 +2116,20 @@
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAAAQAgCdASoQAAwAA4BaJbACdAD6DJ3wfDMAAP7kXTuuGRw5KXHNQs+Ej5H1AdLeWRwLYtfK8818+bAuEGsBdYd9Ea9dydz30tKK0kvky28FMaAAAAA=",
         "alt": "Чашка кофе — ракурс 4"
-      },
-      {
-        "src": "/catalog/candles/chashka-kakao-05.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAAAwAgCdASoQABAAA4BaJZAC7AEfZSF/sookAAD+qu88oeEzTOSfwcV0vR6qFYOQZFeAISCvYYOiLjXnqF+Ai3cjCEzP1SDy613h9RxqLW+lDLSYQzgR23hCuwX4BvhOAAA=",
-        "alt": "Чашка кофе — ракурс 5"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Чашка в «вязаном» свитере на блюдце, внутри — кофе со сливочной шапкой и посыпкой. Рельеф вязки идёт по всей чашке, петля к петле. Отливается красной и сиреневой.",
+    "description": "Чашка кофе \"вязанная\"",
     "specs": {},
     "tones": [
       "#E0F58B",
       "#DBE88F",
       "#F9A59B"
     ],
-    "order": 400
+    "order": 400,
+    "videos": [],
+    "related": []
   },
   {
     "id": "candles-nabor-na-doske",
