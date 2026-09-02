@@ -3775,50 +3775,6 @@
     "order": 720
   },
   {
-    "id": "candles-banka-so-zvezdami",
-    "slug": "banka-so-zvezdami",
-    "title": "Банка со звёздами",
-    "article": "СВ-75",
-    "category": "candles",
-    "tags": [
-      "new-year",
-      "kids"
-    ],
-    "images": [
-      {
-        "src": "/catalog/candles/banka-so-zvezdami-01.webp",
-        "width": 1200,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAADwAQCdASoMABAAA4BaJaACdAELG5EE4AAA/vaNvzobeaqaLh5yVwH3qc5bd5pz13wF2P7Z3hqkAhG7X2QLkUkAAAA=",
-        "alt": "Банка со звёздами"
-      },
-      {
-        "src": "/catalog/candles/banka-so-zvezdami-02.webp",
-        "width": 1200,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADQAQCdASoMABAAA4BaJagCdAEOzm5gAAD+9opsPuOz8DzgcEySup81/6BW4ctLT6iF9bhfVHGKKz7Fm06sFKjOEZQeAA==",
-        "alt": "Банка со звёздами — ракурс 2"
-      },
-      {
-        "src": "/catalog/candles/banka-so-zvezdami-03.webp",
-        "width": 1200,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAADwAQCdASoMABAAA4BaJbACdAEO9ASbFqAA/vaGEGdUPhHgyN0wl4LZGLA5f+G0kogFXLr0X/jvtwn55LkKbSfUAAA=",
-        "alt": "Банка со звёздами — ракурс 3"
-      }
-    ],
-    "video": null,
-    "price": null,
-    "description": "Стеклянная банка с янтарным гелем, внутри плавают восковые звёзды. Гель прозрачный, поэтому звёзды видно со всех сторон, а огонь просвечивает их насквозь.",
-    "specs": {},
-    "tones": [
-      "#F9D9CA",
-      "#F9AF96",
-      "#F9B496"
-    ],
-    "order": 730
-  },
-  {
     "id": "candles-knizhnaya-stopka",
     "slug": "knizhnaya-stopka",
     "title": "Книжная стопка",
