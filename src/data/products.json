@@ -1940,50 +1940,6 @@
     "related": []
   },
   {
-    "id": "candles-elka-zvezda",
-    "slug": "elka-zvezda",
-    "title": "Ёлка-звезда",
-    "article": "СВ-37",
-    "category": "candles",
-    "tags": [
-      "new-year",
-      "women"
-    ],
-    "images": [
-      {
-        "src": "/catalog/candles/elka-zvezda-01.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAABQAgCdASoQABAAA4BaJYgCdAERHz98bhXBQwAA/vDUdgh+7zWTMB4p0BQ5IC8PWXqu1tk7EEBfrNRXuQCARxy8oYOSNbYYTBM/XAAA",
-        "alt": "Ёлка-звезда"
-      },
-      {
-        "src": "/catalog/candles/elka-zvezda-02.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAACQAQCdASoQABAAA4BaJYgCdADE4ZQA/vK00z954pOG+LetD6EaadKsBq3kETHo0vU6H7ndYAA=",
-        "alt": "Ёлка-звезда — ракурс 2"
-      },
-      {
-        "src": "/catalog/candles/elka-zvezda-03.webp",
-        "width": 1600,
-        "height": 1599,
-        "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAABQAgCdASoQABAAA4BaJYwC7AERH9qp1i362wAA/vhPn2LdbKYUY1TjA1NUIheIJTlpMdnuMZh4qPCKi7l5nf54JMOlo6zwAAA=",
-        "alt": "Ёлка-звезда — ракурс 3"
-      }
-    ],
-    "video": null,
-    "price": null,
-    "description": "Та же ёлка, снятая сверху: ярусы хвои складываются в звезду с фитилём в центре. Такой её видят, когда ставят на стол и смотрят сверху — рисунок читается лучше всего при боковом свете.",
-    "specs": {},
-    "tones": [
-      "#CEF58B",
-      "#CAED90",
-      "#C6DDA2"
-    ],
-    "order": 350
-  },
-  {
     "id": "candles-elochnye-shary",
     "slug": "elochnye-shary",
     "title": "Ёлочная игрушка",
