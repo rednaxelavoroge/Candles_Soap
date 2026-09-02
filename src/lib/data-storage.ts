@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import { commitFiles, type CommitFile } from "./github-commit";
 
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN || process.env.GITHUB_PAT;
 const GITHUB_REPO = process.env.GITHUB_REPO || "rednaxelavoroge/Candles_Soap";
@@ -63,115 +64,233 @@ export async function loadJsonData<T>(relativePath: string, fallback: T): Promis
   return fallback;
 }
 
-/**
- * Сохраняет JSON-файл либо в локальную файловую систему, либо через GitHub API в продакшене.
- */
-export async function saveJsonData(relativePath: string, data: unknown): Promise<void> {
-  const contentStr = JSON.stringify(data, null, 2);
+/* ------------------------------------------------------------------ *
+ * Пачка правок: одно действие заказчицы — один коммит                  *
+ * ------------------------------------------------------------------ */
 
-  // 1. Попытка записи в локальную ФС
+/**
+ * Одна правка в панели — один коммит, а значит одна выкладка.
+ *
+ * Раньше каждый файл уезжал отдельно: сохранение карточки с шестью
+ * фотографиями давало семь коммитов и семь выкладок. Вечером 02.09.2026 этого
+ * хватило, чтобы выбрать суточный предел бесплатного тарифа Vercel — сто
+ * выкладок на весь аккаунт — и остановить заодно другие проекты.
+ *
+ * Теперь фотографии не уезжают сразу: они копятся здесь и уходят вместе с
+ * `products.json` одним коммитом. Пачка держится открытой ещё короткое время
+ * после последней записи — правки, идущие подряд, склеиваются в один коммит.
+ * Тот, кто сохраняет данные, дожидается этой отправки: отказ GitHub обязан
+ * дойти до заказчицы сообщением об ошибке, а не потеряться в фоне.
+ */
+type PendingFile = CommitFile & {
+  /** Сообщение коммита, если файл в пачке окажется единственным. */
+  label: string;
+  kind: "data" | "media";
+};
+
+type Batch = {
+  files: Map<string, PendingFile>;
+  openedAt: number;
+  timer: ReturnType<typeof setTimeout> | null;
+  /** Дожидается отправки пачки; отказ приходит сюда же. */
+  settled: Promise<void>;
+  resolve: () => void;
+  reject: (err: unknown) => void;
+};
+
+function envMs(name: string, fallback: number): number {
+  const value = Number(process.env[name]);
+  return Number.isFinite(value) && value >= 0 ? value : fallback;
+}
+
+/** Сколько ждём следующую правку, прежде чем отправить пачку. */
+const LINGER_MS = envMs("COMMIT_BATCH_LINGER_MS", 1200);
+/** Предел ожидания для первой правки в пачке — чтобы сохранение не зависало. */
+const MAX_WAIT_MS = envMs("COMMIT_BATCH_MAX_WAIT_MS", 8000);
+
+let openBatch: Batch | null = null;
+/** Коммиты идут по очереди: два одновременных перевода ветки мешают друг другу. */
+let queue: Promise<unknown> = Promise.resolve();
+
+function openNewBatch(): Batch {
+  let resolve!: () => void;
+  let reject!: (err: unknown) => void;
+  const settled = new Promise<void>((res, rej) => {
+    resolve = res;
+    reject = rej;
+  });
+  // Фотографию кладут и идут дальше, не дожидаясь пачки. Без этой заглушки
+  // отказ GitHub стал бы необработанным отказом промиса и уронил бы процесс.
+  settled.catch(() => undefined);
+
+  const batch: Batch = {
+    files: new Map(),
+    openedAt: Date.now(),
+    timer: null,
+    settled,
+    resolve,
+    reject,
+  };
+  openBatch = batch;
+  return batch;
+}
+
+function arm(batch: Batch): void {
+  if (batch.timer) clearTimeout(batch.timer);
+  const deadline = batch.openedAt + MAX_WAIT_MS;
+  const delay = Math.max(0, Math.min(LINGER_MS, deadline - Date.now()));
+  batch.timer = setTimeout(() => void flush(batch), delay);
+}
+
+function enqueue(file: PendingFile): Promise<void> {
+  const batch = openBatch ?? openNewBatch();
+  batch.files.set(file.path, file);
+  arm(batch);
+  return batch.settled;
+}
+
+/** Русское склонение для сообщения коммита: 1 файл, 2 файла, 5 файлов. */
+function pluralFiles(count: number): string {
+  const mod10 = count % 10;
+  const mod100 = count % 100;
+  if (mod10 === 1 && mod100 !== 11) return "файл";
+  if (mod10 >= 2 && mod10 <= 4 && (mod100 < 12 || mod100 > 14)) return "файла";
+  return "файлов";
+}
+
+/**
+ * Сообщение коммита. Одиночная правка сохраняет прежнюю формулировку —
+ * по ней в истории репозитория узнаётся работа заказчицы.
+ */
+function composeMessage(files: PendingFile[]): string {
+  if (files.length === 1) return files[0].label;
+
+  const media = files.filter((file) => file.kind === "media").length;
+  const parts: string[] = [];
+  if (media > 0) parts.push(`${media} ${pluralFiles(media)} медиа`);
+  for (const file of files) {
+    if (file.kind === "data") parts.push(file.path);
+  }
+
+  return `Сохранение из панели: ${parts.join(", ")}\n\n${files.map((f) => f.path).join("\n")}`;
+}
+
+async function flush(batch: Batch): Promise<void> {
+  if (batch.timer) {
+    clearTimeout(batch.timer);
+    batch.timer = null;
+  }
+  if (openBatch === batch) openBatch = null;
+
+  const files = [...batch.files.values()];
+  if (files.length === 0 || !GITHUB_TOKEN) {
+    batch.resolve();
+    return;
+  }
+
+  const sent = queue.catch(() => undefined).then(() =>
+    commitFiles({
+      token: GITHUB_TOKEN,
+      repo: GITHUB_REPO,
+      branch: GITHUB_BRANCH,
+      files: files.map(({ path: filePath, base64 }) => ({ path: filePath, base64 })),
+      message: composeMessage(files),
+    }),
+  );
+  queue = sent.catch(() => undefined);
+
+  try {
+    await sent;
+    batch.resolve();
+  } catch (err) {
+    console.error("GitHub commit error:", err);
+    batch.reject(err);
+  }
+}
+
+/** Запись рядом с приложением: в разработке файл на диске и есть источник. */
+function writeLocal(relativePath: string, contents: Buffer | string): void {
   try {
     const fullPath = path.join(process.cwd(), relativePath);
     const dir = path.dirname(fullPath);
     if (!fs.existsSync(dir)) {
       fs.mkdirSync(dir, { recursive: true });
     }
-    fs.writeFileSync(fullPath, contentStr, "utf-8");
+    fs.writeFileSync(fullPath, contents);
   } catch {
-    // В serverless-среде ФС доступна только для чтения — используем GitHub API ниже
+    // На хостинге и в serverless папка только для чтения — данные уедут в GitHub.
   }
-
-  // 2. Если задан GITHUB_TOKEN — синхронизируем с GitHub репозиторием
-  if (GITHUB_TOKEN) {
-    await commitToGitHub(relativePath, Buffer.from(contentStr).toString("base64"), `Обновление данных: ${relativePath}`);
-  }
-
-  justWritten.set(relativePath, { data, at: Date.now() });
 }
 
 /**
- * Сохраняет бинарный файл (изображение/видео) в public/ либо в GitHub.
+ * Сохраняет JSON-файл на диск и — вместе со всей пачкой — в репозиторий.
+ *
+ * Дожидается отправки: вызывающий роут отвечает заказчице только тогда, когда
+ * правка действительно легла в ветку.
+ */
+export async function saveJsonData(relativePath: string, data: unknown): Promise<void> {
+  const contentStr = JSON.stringify(data, null, 2);
+  writeLocal(relativePath, contentStr);
+
+  if (!GITHUB_TOKEN) {
+    justWritten.set(relativePath, { data, at: Date.now() });
+    return;
+  }
+
+  /*
+    Свежие данные кладём до отправки, а не после. Пачка держится открытой
+    секунду-другую, и всё это время соседний запрос читал бы из репозитория
+    старый список — а потом сохранил бы его поверх этой правки. При отказе
+    GitHub запись возвращается назад: показывать несохранённое как сохранённое
+    нельзя.
+  */
+  const previous = justWritten.get(relativePath);
+  justWritten.set(relativePath, { data, at: Date.now() });
+
+  try {
+    await enqueue({
+      path: relativePath,
+      base64: Buffer.from(contentStr).toString("base64"),
+      label: `Обновление данных: ${relativePath}`,
+      kind: "data",
+    });
+  } catch (err) {
+    if (previous) {
+      justWritten.set(relativePath, previous);
+    } else {
+      justWritten.delete(relativePath);
+    }
+    throw err;
+  }
+}
+
+/**
+ * Кладёт фотографию или ролик в `public/` и в ту же пачку, что и данные.
+ *
+ * Отправки не дожидается намеренно: файл должен уехать одним коммитом вместе
+ * с `products.json`, который сохранится следом. Отказ увидит тот, кто пачку
+ * дожидается, — сохранение данных, и оно ответит заказчице ошибкой.
+ *
+ * `mimeType` не используется — тип файла виден по расширению; параметр оставлен
+ * прежним, чтобы не переписывать вызовы в роутах.
  */
 export async function saveMediaFile(
   publicRelativePath: string,
   buffer: Buffer,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   mimeType = "image/webp",
 ): Promise<string> {
   const fullRelativePath = path.join("public", publicRelativePath);
+  writeLocal(fullRelativePath, buffer);
 
-  // 1. Попытка локальной записи
-  try {
-    const fullPath = path.join(process.cwd(), fullRelativePath);
-    const dir = path.dirname(fullPath);
-    if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir, { recursive: true });
-    }
-    fs.writeFileSync(fullPath, buffer);
-  } catch {
-    // В Vercel используем GitHub API
-  }
-
-  // 2. Синхронизация с GitHub
   if (GITHUB_TOKEN) {
-    await commitToGitHub(
-      fullRelativePath,
-      buffer.toString("base64"),
-      `Загрузка медиафайла: ${publicRelativePath}`,
-    );
+    void enqueue({
+      path: fullRelativePath,
+      base64: buffer.toString("base64"),
+      label: `Загрузка медиафайла: ${publicRelativePath}`,
+      kind: "media",
+    });
   }
 
   return `/${publicRelativePath.replace(/^\//, "")}`;
-}
-
-/**
- * Запись файла в репозиторий.
- *
- * Два сохранения подряд — обычное дело: отметили тему, тут же переставили фото.
- * Второе приходит со ссылкой на версию, которой уже нет, и GitHub отвечает
- * отказом. Поэтому при конфликте берём свежую версию и пробуем ещё раз, а не
- * сообщаем заказчице об ошибке там, где всё поправимо.
- */
-async function commitToGitHub(filePath: string, base64Content: string, message: string): Promise<void> {
-  const url = `https://api.github.com/repos/${GITHUB_REPO}/contents/${filePath}`;
-
-  const currentSha = async (): Promise<string | undefined> => {
-    const res = await fetch(`${url}?ref=${GITHUB_BRANCH}`, {
-      headers: {
-        Authorization: `Bearer ${GITHUB_TOKEN}`,
-        Accept: "application/vnd.github+json",
-      },
-      cache: "no-store",
-    });
-    if (!res.ok) return undefined;
-    return (await res.json()).sha as string | undefined;
-  };
-
-  const put = async (sha: string | undefined) =>
-    fetch(url, {
-      method: "PUT",
-      headers: {
-        Authorization: `Bearer ${GITHUB_TOKEN}`,
-        Accept: "application/vnd.github+json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ message, content: base64Content, branch: GITHUB_BRANCH, sha }),
-    });
-
-  try {
-    let res = await put(await currentSha());
-
-    // 409 и 422 — «версия устарела». Перечитываем и повторяем ровно один раз.
-    if (res.status === 409 || res.status === 422) {
-      res = await put(await currentSha());
-    }
-
-    if (!res.ok) {
-      const err = await res.text();
-      console.error("GitHub API commit error:", err);
-      throw new Error(`GitHub commit failed: ${res.status}`);
-    }
-  } catch (err) {
-    console.error("Error committing to GitHub:", err);
-    throw err;
-  }
 }
