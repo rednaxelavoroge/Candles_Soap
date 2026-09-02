@@ -2370,20 +2370,6 @@
         "alt": "Панно новогоднее — ракурс 3"
       },
       {
-        "src": "/catalog/candles/zimnyaya-kartina-04.webp",
-        "width": 1200,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAwAgCdASoMABAAA4BaJYgCdADbfFh1dnnbAAD+8rSN9KwgzzL3q/zyM23sxms6UUftLAYOE06+aAO+zscqoQNJw07XdpdwiGarMUNMq3GfATU1cgniwAAA",
-        "alt": "Панно новогоднее — ракурс 4"
-      },
-      {
-        "src": "/catalog/candles/zimnyaya-kartina-05.webp",
-        "width": 1200,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAADwAQCdASoMABAAA4BaJQBOgCFKlSVNa4AA/u9kctaOt2to6SMrVoTb+Kc3bHCOW9TC/fSuNY2l/N8pSrFflVaiRMPvzUHN9974XP11bTFKfE9y42yB2AZ5BjzNhYAA",
-        "alt": "Панно новогоднее — ракурс 5"
-      },
-      {
         "src": "/catalog/candles/zimnyaya-kartina-06.webp",
         "width": 1600,
         "height": 1600,
@@ -2396,6 +2382,13 @@
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAwAgCdASoQABAAA4BaJQBOgB7H4wWl2QuYAAD+6/9GX4Zwu+7I+NmDHfeWTceP/aqullXS1RzQs3rck1Gvr1T+hr39IxgLSwAxjKGDhq7GOF9imYFgSVMsoaAAAA==",
         "alt": "Панно новогоднее — ракурс 7"
+      },
+      {
+        "src": "/catalog/candles/zimnyaya-kartina-1788366796786-1.webp",
+        "width": 1050,
+        "height": 1400,
+        "blurDataURL": "data:image/webp;base64,UklGRmoCAABXRUJQVlA4WAoAAAAgAAAADwAAFAAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggfAAAABAEAJ0BKhAAFQA+7WKpTamlpCIwCAEwHYloALsAId9QoBgk/Lf5bJa4AP7TGiMbjseW1kwWk9UruqnnbX4XAds1BMqAAX2Pn/Xdr9emJDZ7pXtawLZvgLuY3cjieD910UvGXnLKP1PXIo42atlP4PmJMjgOkx9mhLv68AA=",
+        "alt": "Панно новогоднее"
       }
     ],
     "video": null,
@@ -2407,7 +2400,9 @@
       "#C9E6D7",
       "#C9D6D5"
     ],
-    "order": 440
+    "order": 440,
+    "videos": [],
+    "related": []
   },
   {
     "id": "candles-vinogradnyy-shar",
