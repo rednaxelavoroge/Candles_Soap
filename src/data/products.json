@@ -2063,8 +2063,8 @@
   {
     "id": "candles-novogodniy-nabor",
     "slug": "novogodniy-nabor",
-    "title": "Новогодний набор",
-    "article": "СВ-41",
+    "title": "Елочная игрушка 3",
+    "article": "2025",
     "category": "candles",
     "tags": [
       "new-year",
@@ -2079,32 +2079,11 @@
         "alt": "Новогодний набор"
       },
       {
-        "src": "/catalog/candles/novogodniy-nabor-02.webp",
-        "width": 1600,
-        "height": 1200,
-        "blurDataURL": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAQAgCdASoQAAwAA4BaJZACdADwhaJITYAAAP70WBxuH81QeucySGL1YgArKYf4o8xExjwnQWmBSblI5lOMV54Mub7l97h+IkkBbd/3FeGXzj/RU0xuXNu8zPuNgAAA",
-        "alt": "Новогодний набор — ракурс 2"
-      },
-      {
-        "src": "/catalog/candles/novogodniy-nabor-03.webp",
-        "width": 1600,
-        "height": 1200,
-        "blurDataURL": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAAAwAgCdASoQAAwAA4BaJagCdAYtzgfwLD9OwAD+8rQh39zF8lREgK9ScY5v0ZZjv7aUCtuNSBC/jTGSkiwX11swYkGeWLWw37ql7SkRho0GwRIHPCgpGBihPqdiVSFcAAA=",
-        "alt": "Новогодний набор — ракурс 3"
-      },
-      {
-        "src": "/catalog/candles/novogodniy-nabor-04.webp",
-        "width": 1600,
-        "height": 1200,
-        "blurDataURL": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAADwAQCdASoQAAwAA4BaJZACdAYvq9vEY64A/ulM41/eaI6YwzaXXzd3uRRIg69EqJr02LcqejNEi84ZizfQCkTh8OG6nnLoKPzvRzIB5SsExzSJa2T94CBeWt229EwteAAAAA==",
-        "alt": "Новогодний набор — ракурс 4"
-      },
-      {
-        "src": "/catalog/candles/novogodniy-nabor-05.webp",
-        "width": 1600,
-        "height": 1200,
-        "blurDataURL": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAAAwAgCdASoQAAwAA4BaJagCdAYvDbVEbOuXgAD+8RURhJUr1hjLr0xgdKxBgtXyVuknE9Bex3YpJH5XVkyiih7ENgrb69ACW/V8yTSuyyS5zzcqkb1oshG8QIrs/1ty2FPtQZN7lwdhgAAA",
-        "alt": "Новогодний набор — ракурс 5"
+        "src": "/catalog/candles/novogodniy-nabor-1788383172630-1.webp",
+        "width": 1400,
+        "height": 1400,
+        "blurDataURL": "data:image/webp;base64,UklGRmoCAABXRUJQVlA4WAoAAAAgAAAADwAADwAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggfAAAAJACAJ0BKhAAEAADgFolkALsfwCCNKX5bjVCcFAAAP7xnbo6z+/kH1EgWjdDdmaTxCjvS4o5XyhxgF5+dgmCuXQ8JFfUTXFOTj1t0lyWr4LKrL4duM45mP2VFarcmseF60ku08OO+d+ZtKPn7ray9k1i8dFW+MZxyRSTAAA=",
+        "alt": "Елочная игрушка 3"
       }
     ],
     "video": null,
@@ -2116,7 +2095,9 @@
       "#F7C2F0",
       "#E5CFC7"
     ],
-    "order": 390
+    "order": 390,
+    "videos": [],
+    "related": []
   },
   {
     "id": "candles-chashka-kakao",
