@@ -2072,18 +2072,18 @@
     ],
     "images": [
       {
-        "src": "/catalog/candles/novogodniy-nabor-01.webp",
-        "width": 1600,
-        "height": 1200,
-        "blurDataURL": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAABQAgCdASoQAAwAA4BaJQBOkBswUxW/Pl9lV/AA/vMNzw6gi/aoibiCUgVxcdeUCgjtZAQSLysTsvAnJgfH6sDlM5NwHAitI8QprnGpGN4iyiYtFAAAAA==",
-        "alt": "Новогодний набор"
-      },
-      {
         "src": "/catalog/candles/novogodniy-nabor-1788383172630-1.webp",
         "width": 1400,
         "height": 1400,
         "blurDataURL": "data:image/webp;base64,UklGRmoCAABXRUJQVlA4WAoAAAAgAAAADwAADwAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggfAAAAJACAJ0BKhAAEAADgFolkALsfwCCNKX5bjVCcFAAAP7xnbo6z+/kH1EgWjdDdmaTxCjvS4o5XyhxgF5+dgmCuXQ8JFfUTXFOTj1t0lyWr4LKrL4duM45mP2VFarcmseF60ku08OO+d+ZtKPn7ray9k1i8dFW+MZxyRSTAAA=",
         "alt": "Елочная игрушка 3"
+      },
+      {
+        "src": "/catalog/candles/novogodniy-nabor-01.webp",
+        "width": 1600,
+        "height": 1200,
+        "blurDataURL": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAABQAgCdASoQAAwAA4BaJQBOkBswUxW/Pl9lV/AA/vMNzw6gi/aoibiCUgVxcdeUCgjtZAQSLysTsvAnJgfH6sDlM5NwHAitI8QprnGpGN4iyiYtFAAAAA==",
+        "alt": "Новогодний набор"
       }
     ],
     "video": null,
