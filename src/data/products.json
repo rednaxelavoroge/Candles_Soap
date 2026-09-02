@@ -1007,7 +1007,7 @@
     "id": "candles-yabloko",
     "slug": "yabloko",
     "title": "Яблоко",
-    "article": "СВ-17",
+    "article": "2041",
     "category": "candles",
     "tags": [
       "food",
@@ -1024,14 +1024,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Яблоко в натуральную величину, тёмно-красное с восковым налётом на боку. Фитиль выходит из черенка, и первые минуты горит будто сама плодоножка. Форма отлита вручную, поэтому бок у каждого яблока свой.",
+    "description": "Яблоко в натуральную величину",
     "specs": {},
     "tones": [
       "#F9BBA5",
       "#F9B5A3",
       "#F9A8AB"
     ],
-    "order": 180
+    "order": 180,
+    "videos": [],
+    "related": []
   },
   {
     "id": "candles-granat",
