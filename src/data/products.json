@@ -4117,51 +4117,6 @@
     "order": 800
   },
   {
-    "id": "candles-malinovyy-shar",
-    "slug": "malinovyy-shar",
-    "title": "Малиновый шар",
-    "article": "СВ-83",
-    "category": "candles",
-    "tags": [
-      "food",
-      "new-year",
-      "women"
-    ],
-    "images": [
-      {
-        "src": "/catalog/candles/malinovyy-shar-01.webp",
-        "width": 1200,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAwAgCdASoMABAAA4BaJagCdADz8XU5I66rQAD+8Ui9Mjlg/lcHJCcRlZhbehexxhoHMcmRz3B/EYuZkBMtb8bIyxCulNve9SqbVhje5HTNDMJ89fhu33z4AAA=",
-        "alt": "Малиновый шар"
-      },
-      {
-        "src": "/catalog/candles/malinovyy-shar-02.webp",
-        "width": 1200,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAABQAgCdASoMABAAA4BaJZgC7B2gAgQWkD8zUwAA/vLeZ3qZKsLBHpMv/lc1JTwKsaQUrGuy5v3gSmB1ChLprGnGqCnHW7o2cnqMU9mtqOMYMhVXMrs7dKdrXdg4ngAA",
-        "alt": "Малиновый шар — ракурс 2"
-      },
-      {
-        "src": "/catalog/candles/malinovyy-shar-03.webp",
-        "width": 1200,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAABQAgCdASoMABAAA4BaJbACdAYtzyAuNk+xx+AA/vaKfQmh4SM/CCzGFd0wvZuXAyKw2Cn+Z8G7iowo2sMp1j3b1hjjN1QqyqYazlkY8OTWkjgLmTqmZzJphdC0o5d5sSbcP3LwAAA=",
-        "alt": "Малиновый шар — ракурс 3"
-      }
-    ],
-    "video": null,
-    "price": null,
-    "description": "Шар, собранный из ягод малины, на круглом гипсовом блюде. Каждая ягода отливается отдельно, поэтому поверхность живая и чуть неровная.",
-    "specs": {},
-    "tones": [
-      "#E5F387",
-      "#E5E49A",
-      "#F9AFA6"
-    ],
-    "order": 820
-  },
-  {
     "id": "candles-mandariny-na-blyude",
     "slug": "mandarin-ochishenni",
     "title": "Мандарин очищенный",
