@@ -2301,43 +2301,6 @@
     "order": 420
   },
   {
-    "id": "candles-otkrytka-merry-christmas",
-    "slug": "otkrytka-merry-christmas",
-    "title": "Открытка Merry Christmas",
-    "article": "СВ-45",
-    "category": "candles",
-    "tags": [
-      "new-year",
-      "gift"
-    ],
-    "images": [
-      {
-        "src": "/catalog/candles/otkrytka-merry-christmas-01.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAQCdASoQABAAA4BaJZQAAvemBz+79lgA/tOU+dO8H09JebQW1yyfcZsMe2KOT226m8JSORxskTdwtPkhwvcKXTAmz3IWYBr2OaIU1AA=",
-        "alt": "Открытка Merry Christmas"
-      },
-      {
-        "src": "/catalog/candles/otkrytka-merry-christmas-02.webp",
-        "width": 1200,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAAAQAgCdASoMABAAA4BaJYgC7AEO64yYTxWgAP7qhYsmZqf3HqJm7d/Okj/MiveRxfw/romU9jUgWcIrOHAS4SAA",
-        "alt": "Открытка Merry Christmas — ракурс 2"
-      }
-    ],
-    "video": null,
-    "price": null,
-    "description": "Плоская свеча-открытка с рождественским венком и надписью, на гипсовой подставке. Два фитиля по верхнему краю — горит как настоящая свеча-панно, оставляя рисунок нетронутым дольше обычного.",
-    "specs": {},
-    "tones": [
-      "#CEF5BE",
-      "#E3DFCD",
-      "#D3D4CF"
-    ],
-    "order": 430
-  },
-  {
     "id": "candles-zimnyaya-kartina",
     "slug": "zimnyaya-kartina",
     "title": "Панно новогоднее",
