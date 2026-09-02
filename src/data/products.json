@@ -2144,36 +2144,6 @@
     "related": []
   },
   {
-    "id": "candles-nabor-na-doske",
-    "slug": "nabor-na-doske",
-    "title": "Набор на доске",
-    "article": "СВ-43",
-    "category": "candles",
-    "tags": [
-      "new-year",
-      "gift"
-    ],
-    "images": [
-      {
-        "src": "/catalog/candles/nabor-na-doske-01.webp",
-        "width": 1600,
-        "height": 1067,
-        "blurDataURL": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADQAQCdASoQAAsAA4BaJYwC7AEOirvKgAD+9XNjx7HIYx4nGhrotqWS2b0fwW69pfjoQ0C3G2EHjFAapEky86rpFEAAAA==",
-        "alt": "Набор на доске"
-      }
-    ],
-    "video": null,
-    "price": null,
-    "description": "Деревянная доска с тремя свечами: две шишки и груша. Ставится на стол как есть, доска входит в набор.",
-    "specs": {},
-    "tones": [
-      "#F9DFDA",
-      "#F9B79A",
-      "#E0B0F0"
-    ],
-    "order": 410
-  },
-  {
     "id": "candles-banka-s-gnomami",
     "slug": "banka-s-gnomami",
     "title": "Банка новогодняя детская",
