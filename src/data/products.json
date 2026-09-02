@@ -3180,9 +3180,9 @@
   },
   {
     "id": "candles-tartaletki",
-    "slug": "tartaletki",
-    "title": "Тарталетки",
-    "article": "СВ-67",
+    "slug": "vafli-yagodami",
+    "title": "Вафли с ягодами",
+    "article": "2091",
     "category": "candles",
     "tags": [
       "food",
@@ -3190,11 +3190,11 @@
     ],
     "images": [
       {
-        "src": "/catalog/candles/tartaletki-01.webp",
+        "src": "/catalog/candles/tartaletki-03.webp",
         "width": 1200,
         "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAAAQAgCdASoMABAAA4BaJZgCdAEDHsZqlGAAAP7vorvnmBPjl4c8IVQ101LDEJdXdHUK7VTbVhspUCSaDpSdzl69f273kuM2wdPc/kYw5ewtecHqiTnRlb5FcReRim3OeW8RQZETAAA=",
-        "alt": "Тарталетки"
+        "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADwAQCdASoMABAAA4BaJZgCdAYt9q8tMwAA/vNS/DNzGzvA7M7JepiN6xGXFg6vbSvSvmocOf5ZwDEjeIVLogkCKVw/+xhTELaiw7AA",
+        "alt": "Тарталетки — ракурс 3"
       },
       {
         "src": "/catalog/candles/tartaletki-02.webp",
@@ -3204,30 +3204,32 @@
         "alt": "Тарталетки — ракурс 2"
       },
       {
-        "src": "/catalog/candles/tartaletki-03.webp",
-        "width": 1200,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADwAQCdASoMABAAA4BaJZgCdAYt9q8tMwAA/vNS/DNzGzvA7M7JepiN6xGXFg6vbSvSvmocOf5ZwDEjeIVLogkCKVw/+xhTELaiw7AA",
-        "alt": "Тарталетки — ракурс 3"
-      },
-      {
         "src": "/catalog/candles/tartaletki-04.webp",
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAADwAQCdASoQAAwAA4BaJQBOgCHKIqn5fAAA/vaINHwmu+Nf0wLtYeYXfTia5f3Z2+lmkn+VnE5waw+wyzOocf+gAAA=",
         "alt": "Тарталетки — ракурс 4"
+      },
+      {
+        "src": "/catalog/candles/tartaletki-01.webp",
+        "width": 1200,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAAAQAgCdASoMABAAA4BaJZgCdAEDHsZqlGAAAP7vorvnmBPjl4c8IVQ101LDEJdXdHUK7VTbVhspUCSaDpSdzl69f273kuM2wdPc/kYw5ewtecHqiTnRlb5FcReRim3OeW8RQZETAAA=",
+        "alt": "Тарталетки"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Корзиночки с кремом, малиной и шоколадной крошкой — по несколько штук вместе. Тесто прорабатывается рельефом по борту, ягоды сажаются вручную. Хороши как маленькие подарки к чаю.",
+    "description": "Вафли с ягодами и мороженым",
     "specs": {},
     "tones": [
       "#F9DDC4",
       "#F9AEA8",
       "#F9C3B0"
     ],
-    "order": 650
+    "order": 650,
+    "videos": [],
+    "related": []
   },
   {
     "id": "candles-serdtse-malinovoe",
