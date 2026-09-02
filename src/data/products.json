@@ -1865,13 +1865,15 @@
   },
   {
     "id": "candles-elochnye-shary",
-    "slug": "elochnye-shary",
-    "title": "Ёлочная игрушка",
-    "article": "СВ-38",
+    "slug": "elochnye-shar-gelevi",
+    "title": "Ёлочный шар гелевый",
+    "article": "2023",
     "category": "candles",
     "tags": [
       "new-year",
-      "gift"
+      "gift",
+      "women",
+      "kids"
     ],
     "images": [
       {
@@ -1896,37 +1898,47 @@
         "alt": "Ёлочная игрушка — ракурс 3"
       },
       {
-        "src": "/catalog/candles/elochnye-shary-04.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAAAQAgCdASoQABAAA4BaJQAAYv+p4kw1gIpAAP7yzSvIZe1+v+izPjUMRJ2tlvfLI430Jg/kj+eznac1AgUwAA==",
-        "alt": "Ёлочная игрушка — ракурс 4"
-      },
-      {
-        "src": "/catalog/candles/elochnye-shary-05.webp",
-        "width": 1600,
-        "height": 1200,
-        "blurDataURL": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADwAQCdASoQAAwAA4BaJZACw7ED/vCOy0AA/vEU7cC2exxSTQgUxgs3mKf+X1fZelAUWanNJHYcKqu33JXijb0HCYYgAA==",
-        "alt": "Ёлочная игрушка — ракурс 5"
-      },
-      {
-        "src": "/catalog/candles/elochnye-shary-06.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAACQAgCdASoQABAAA4BaJYgC7H8AFx/2lN2/8KeCAAD+8Z3iogI3v/rq/ee5rEcnoPboyiJgLN+MNde6YYAmKey46EXwtRRuFTlWcNZqlbci+aEtOelaf+2XO3LjEJkDFBNlgAAA",
-        "alt": "Ёлочная игрушка — ракурс 6"
+        "src": "/catalog/candles/elochnye-shar-gelevi-1788381209251-1.webp",
+        "width": 1400,
+        "height": 1400,
+        "blurDataURL": "data:image/webp;base64,UklGRmoCAABXRUJQVlA4WAoAAAAgAAAADwAADwAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggfAAAAJACAJ0BKhAAEAADgFolkALsfwCCNKX5bjVCcFAAAP7xnbo6z+/kH1EgWjdDdmaTxCjvS4o5XyhxgF5+dgmCuXQ8JFfUTXFOTj1t0lyWr4LKrL4duM45mP2VFarcmseF60ku08OO+d+ZtKPn7ray9k1i8dFW+MZxyRSTAAA=",
+        "alt": "Ёлочный шар гелевый"
       }
     ],
-    "video": null,
+    "video": {
+      "kind": "file",
+      "src": "/catalog/video/inshot-20241110-005033706-1788380941087.mp4",
+      "poster": {
+        "src": "/catalog/candles/elochnye-shary-01.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAADwAQCdASoQABAAA4BaJYwAAp3LjYeTKWgA/vQy1/E86BHl2zqoDLtof/tMKK98YXHSaB2jcjYAAA==",
+        "alt": "Ёлочная игрушка"
+      }
+    },
     "price": null,
-    "description": "Шары с блеском, уложенные в деревянный ящичек с ячейками. Ящик входит в набор — его ставят под ёлку как есть.",
+    "description": "Гелевый елочный шар ",
     "specs": {},
     "tones": [
       "#E5EBDD",
       "#EADAE7",
       "#EDACF0"
     ],
-    "order": 360
+    "order": 360,
+    "videos": [
+      {
+        "kind": "file",
+        "src": "/catalog/video/inshot-20241110-005033706-1788380941087.mp4",
+        "poster": {
+          "src": "/catalog/candles/elochnye-shary-01.webp",
+          "width": 1600,
+          "height": 1600,
+          "blurDataURL": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAADwAQCdASoQABAAA4BaJYwAAp3LjYeTKWgA/vQy1/E86BHl2zqoDLtof/tMKK98YXHSaB2jcjYAAA==",
+          "alt": "Ёлочная игрушка"
+        }
+      }
+    ],
+    "related": []
   },
   {
     "id": "candles-kolpak",
