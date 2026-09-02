@@ -1644,13 +1644,6 @@
     ],
     "images": [
       {
-        "src": "/catalog/candles/kukuruza-01.webp",
-        "width": 1200,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADQAQCdASoMABAAA4BaJZQC7ADWyn0zAAD+79ize9NBSnp2xd4YVXzDjTd0QRIlO3k9v1LYcUFf9yD5aY7KlaBRzIHHvd+wMBoYSXt3rvRwAA==",
-        "alt": "Кукуруза"
-      },
-      {
         "src": "/catalog/candles/kukuruza-02.webp",
         "width": 1600,
         "height": 1600,
@@ -1667,7 +1660,9 @@
       "#EFDBD3",
       "#D2D4D3"
     ],
-    "order": 280
+    "order": 280,
+    "videos": [],
+    "related": []
   },
   {
     "id": "candles-tykva-i-apelsin",
