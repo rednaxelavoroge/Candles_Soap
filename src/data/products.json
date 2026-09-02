@@ -136,7 +136,7 @@
     "id": "candles-soty",
     "slug": "soty",
     "title": "Соты",
-    "article": "СВ-02",
+    "article": "2078",
     "category": "candles",
     "tags": [
       "men",
@@ -165,37 +165,16 @@
         "alt": "Свеча-соты глубокого синего цвета"
       },
       {
-        "src": "/catalog/candles/soty-04.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAAAwAgCdASoQABAAA4BaJZQAAven8raKljIbAAD+9C6+4h4w6VXMoSHhVjwhUvqSVxIMEN+0dNqAAA==",
-        "alt": "Розовая свеча-соты крупным планом"
-      },
-      {
-        "src": "/catalog/candles/soty-05.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAAAQAgCdASoQABAAA4BaJYwBTAA9D6XcJE98AP72hxH7kS23SxeKCfcl0G6cs28JS04i0niTSghjG76026ShAAAA",
-        "alt": "Соты — ракурс 5"
-      },
-      {
         "src": "/catalog/candles/soty-06.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAAAwAgCdASoQABAAA4BaJZQAD4SQcAgMna4wAAD++EwgNZbzDzNuJL0svm0DLLyIOOIFsdgvOYfUYyJB0XMYtR8/0rl1DhnAAAA=",
         "alt": "Соты — ракурс 6"
-      },
-      {
-        "src": "/catalog/candles/soty-07.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAAAwAgCdASoQABAAA4BaJZwC7AEO+5/TKZ5wAAD+9WlKKAF1ZG3vt4eR5jWLsiEvj9l7O7vQzQvxzt143jXC1bnFwAA=",
-        "alt": "Соты — ракурс 7"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Куб с сотовой гранью — рельеф идёт по всем четырём сторонам и ловит боковой свет. Отливается в двух цветах: пыльно-розовом и глубоком синем.",
+    "description": "Квадрат коралловый",
     "specs": {
       "size": "7 × 7 × 7 см",
       "scent": "Медовый воск",
@@ -207,7 +186,9 @@
       "#E4C7F0",
       "#DDCFE9"
     ],
-    "order": 60
+    "order": 60,
+    "videos": [],
+    "related": []
   },
   {
     "id": "candles-globus",
