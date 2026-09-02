@@ -1289,9 +1289,9 @@
   },
   {
     "id": "candles-aysberg",
-    "slug": "aysberg",
-    "title": "Айсберг",
-    "article": "СВ-22",
+    "slug": "gora",
+    "title": "Гора",
+    "article": "2055",
     "category": "candles",
     "tags": [
       "sea",
@@ -1318,18 +1318,34 @@
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAAAwAgCdASoQABAAA4BaJZQC7ADbbf2DJJenAAD+WgL5uhsK7lYYB4aUQj8OZ/QXp4z+nsBvoqjMSiQTfdXKUNwTNQiMe8yXD+2sAA==",
         "alt": "Айсберг — ракурс 3"
+      },
+      {
+        "src": "/catalog/candles/gora-1788362364944-1.webp",
+        "width": 1400,
+        "height": 1400,
+        "blurDataURL": "data:image/webp;base64,UklGRiwCAABXRUJQVlA4WAoAAAAgAAAADwAADwAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggPgAAAPABAJ0BKhAAEAADgFollAAPgBBvqL1B0AD+9B0167QXAWldKxk0Qv+D/TsU7HK4/V6TSqtDJP4E+9KzAAAA",
+        "alt": "Гора"
+      },
+      {
+        "src": "/catalog/candles/gora-1788362366580-2.webp",
+        "width": 1400,
+        "height": 1400,
+        "blurDataURL": "data:image/webp;base64,UklGRioCAABXRUJQVlA4WAoAAAAgAAAADwAADwAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggPAAAALABAJ0BKhAAEAADgFolnAAC501OGEAA/vQdbjhqy8m+zwKb8F/4GsEkO/TCBnDj3XeKOO/psZlnlcAAAA==",
+        "alt": "Гора"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Глыба со сколами: синие и белые слои воска сходятся острой вершиной, поверхность матовая, как настоящий лёд. Пока свеча горит, свет уходит в толщу и подсвечивает слои изнутри. Каждая заливка даёт свой рисунок сколов.",
+    "description": "Гора покрытая снегом или сочетание любых цветов",
     "specs": {},
     "tones": [
       "#DEEDDF",
       "#CDE4DC",
       "#A5CDF0"
     ],
-    "order": 230
+    "order": 230,
+    "videos": [],
+    "related": []
   },
   {
     "id": "candles-vulkan",
