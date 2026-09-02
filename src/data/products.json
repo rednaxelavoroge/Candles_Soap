@@ -685,50 +685,6 @@
     "related": []
   },
   {
-    "id": "candles-malinovyy-kapkeyk",
-    "slug": "malinovyy-kapkeyk",
-    "title": "Малиновый капкейк",
-    "article": "СВ-09",
-    "category": "candles",
-    "tags": [
-      "food",
-      "women"
-    ],
-    "images": [
-      {
-        "src": "/catalog/candles/malinovyy-kapkeyk-01.webp",
-        "width": 1600,
-        "height": 1200,
-        "blurDataURL": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAwAgCdASoQAAwAA4BaJbACdAYtBqpNFyfuQAD+6pWlsdEyjurcPr7pyIh20r3YW+AXrnlWDZ5X8YROx0MeKvPyE2+48TeJO9Ic4KRuFdGHRkHXfX7vVI94AAA=",
-        "alt": "Малиновый капкейк"
-      },
-      {
-        "src": "/catalog/candles/malinovyy-kapkeyk-02.webp",
-        "width": 1200,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAADwAQCdASoMABAAA4BaJbACdAEfQECZs/AA/NDiqCwnIJlyG/y86rMg/Om6xYhoExWgQZC5lM4Fw1HfsKWVbd66eI/O3YRsdg2ghkPOwXze+ODy8vQn2pYs5VO3jOItCrd4kbdAAAA=",
-        "alt": "Малиновый капкейк — ракурс 2"
-      },
-      {
-        "src": "/catalog/candles/malinovyy-kapkeyk-03.webp",
-        "width": 1200,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAAAQAgCdASoMABAAA4BaJbACdADyoEholpMQAP5mDcfXLvyO4Zya/9NFMHrGVRs9dR43j177QttbqaTWAlKmRyCXXwsHRkWce7F2Oc5LaQl+DcjOVmn3y8uQ9mtk2IvHXi8/zP2EAAA=",
-        "alt": "Малиновый капкейк — ракурс 3"
-      }
-    ],
-    "video": null,
-    "price": null,
-    "description": "Пирожное с высокой шапкой розового крема: сверху малина, зёрна граната и тонкая шоколадная стружка. Помещается в ладони целиком. Каждый ягодный элемент лепится отдельно и ставится вручную, поэтому шапка у каждого пирожного своя.",
-    "specs": {},
-    "tones": [
-      "#F9B4AB",
-      "#F9C0AD",
-      "#E4D1BA"
-    ],
-    "order": 160
-  },
-  {
     "id": "candles-ponchiki-s-posypkoy",
     "slug": "bentotort-crem",
     "title": "Бенто торт с кремом",
