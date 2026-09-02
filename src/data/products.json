@@ -1612,36 +1612,6 @@
     "related": []
   },
   {
-    "id": "candles-tykva-i-apelsin",
-    "slug": "tykva-i-apelsin",
-    "title": "Тыква и апельсин",
-    "article": "СВ-31",
-    "category": "candles",
-    "tags": [
-      "food",
-      "new-year"
-    ],
-    "images": [
-      {
-        "src": "/catalog/candles/tykva-i-apelsin-01.webp",
-        "width": 1600,
-        "height": 1200,
-        "blurDataURL": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADwAQCdASoQAAwAA4BaJaACsAELTxmFBUAA/vV0EDMLWArLAQAdSb+/7FUvJ35hgaCgLKt7U1VkBd6RGQieo4jfv1jwIF4211UxMpu5LIf06UNXjyZAAA==",
-        "alt": "Тыква и апельсин"
-      }
-    ],
-    "video": null,
-    "price": null,
-    "description": "Две свечи на овальном гипсовом блюде: ребристая тыква и апельсин с пористой кожурой. Осенняя пара — ставится на стол вместе, блюдо входит в набор.",
-    "specs": {},
-    "tones": [
-      "#DAF598",
-      "#F9B497",
-      "#E7CFC3"
-    ],
-    "order": 290
-  },
-  {
     "id": "candles-uzelok",
     "slug": "xinkali",
     "title": "Хинкали",
