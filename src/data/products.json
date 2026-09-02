@@ -1949,8 +1949,8 @@
   },
   {
     "id": "candles-kolpak",
-    "slug": "kolpak",
-    "title": "Колпак",
+    "slug": "konus",
+    "title": "Конус гелевый",
     "article": "СВ-39",
     "category": "candles",
     "tags": [
@@ -1982,14 +1982,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Красный колпак с загнутым кончиком, весь в снежных блёстках. Стоит сам, без подставки. Блёстки набираются в воск, а не насыпаются сверху, поэтому не осыпаются от рук.",
+    "description": "Красный колпак с загнутым кончиком, весь в снежных блёстках. ",
     "specs": {},
     "tones": [
       "#DAF58E",
       "#DAE892",
       "#F9A5A0"
     ],
-    "order": 370
+    "order": 370,
+    "videos": [],
+    "related": []
   },
   {
     "id": "candles-shar-krasnyy",
