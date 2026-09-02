@@ -11,7 +11,7 @@
  */
 import { execFileSync } from "node:child_process";
 import { createRequire } from "node:module";
-import { mkdtempSync, mkdirSync, writeFileSync, existsSync } from "node:fs";
+import { mkdtempSync, mkdirSync, writeFileSync, existsSync, realpathSync } from "node:fs";
 import { tmpdir } from "node:os";
 import path from "node:path";
 
@@ -138,7 +138,7 @@ try {
   const require = createRequire(path.join(outDir, "x.cjs"));
   const { saveJsonData, saveMediaFile, loadJsonData } = require(path.join(outDir, "data-storage.js"));
   const { commitFiles } = require(path.join(outDir, "github-commit.js"));
-  const { writeToSite } = require(path.join(outDir, "site-media.js"));
+  const { writeToSite, siteRoot } = require(path.join(outDir, "site-media.js"));
 
   const stamp = Date.now();
 
@@ -286,6 +286,31 @@ try {
   } finally {
     delete process.env.SITE_PUBLIC_DIR;
   }
+
+  /*
+    К. Автоопределение — то, как это работает на самом хостинге: переменных
+    там никто не задаёт, папка панели лежит внутри папки сайта, и standalone
+    сервер Next первой же строкой делает process.chdir в свою папку.
+    Воспроизводим ровно эту раскладку.
+  */
+  const hosting = path.join(workdir, "hosting");
+  mkdirSync(path.join(hosting, "catalog"), { recursive: true });
+  mkdirSync(path.join(hosting, "admin-panel"), { recursive: true });
+  writeFileSync(path.join(hosting, "index.html"), "<!doctype html>");
+  const back = process.cwd();
+  try {
+    process.chdir(path.join(hosting, "admin-panel"));
+    // realpath: на macOS /var — это ссылка на /private/var, и process.cwd()
+    // отдаёт уже развёрнутый путь. Сравнение «в лоб» падало бы на ровном месте.
+    check(
+      "папка сайта находится сама, без переменных",
+      siteRoot() === realpathSync(hosting),
+      String(siteRoot()),
+    );
+  } finally {
+    process.chdir(back);
+  }
+  check("вне хостинга папка сайта не находится", siteRoot() === null, String(siteRoot()));
 } finally {
   await api(`/repos/${REPO}/git/refs/heads/${branch}`, { method: "DELETE" }).catch(() => {});
   console.log(`\nВременная ветка ${branch} удалена.`);

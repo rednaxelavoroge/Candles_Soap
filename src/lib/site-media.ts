@@ -33,11 +33,15 @@ import path from "path";
 const CACHE_TTL = 60 * 1000;
 
 /*
-  Ответ помним вместе с тем, из чего он получен: SITE_PUBLIC_DIR читается на
-  каждом обращении, а не один раз при загрузке модуля. Так переменную можно
-  задать хостингу после старта, и так же её подменяет проверка.
+  Ответ помним вместе с тем, из чего он получен: и SITE_PUBLIC_DIR, и рабочая
+  папка читаются на каждом обращении, а не один раз при загрузке модуля. Так
+  переменную можно задать хостингу после старта, и так же её подменяет проверка.
 */
 let cached: { key: string; dir: string | null; at: number } | null = null;
+
+function cacheKey(): string {
+  return `${process.env.SITE_PUBLIC_DIR ?? ""}\u0000${process.cwd()}`;
+}
 
 /**
  * Похоже ли на корень сайта.
@@ -74,11 +78,11 @@ function detect(explicit: string | undefined): string | null {
 
 /** Папка сайта на хостинге или `null`, если панель стоит не рядом с ним. */
 export function siteRoot(): string | null {
-  const key = process.env.SITE_PUBLIC_DIR ?? "";
+  const key = cacheKey();
   if (cached && cached.key === key && Date.now() - cached.at < CACHE_TTL) return cached.dir;
   let dir: string | null = null;
   try {
-    dir = detect(key || undefined);
+    dir = detect(process.env.SITE_PUBLIC_DIR || undefined);
   } catch (err) {
     console.error("Не удалось определить папку сайта:", err);
   }
