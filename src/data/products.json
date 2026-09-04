@@ -1677,7 +1677,7 @@
       "#EDD9E8",
       "#DAD2D0"
     ],
-    "order": 250
+    "order": 300
   },
   {
     "id": "candles-kukuruza",
@@ -1706,7 +1706,7 @@
       "#EFDBD3",
       "#D2D4D3"
     ],
-    "order": 260,
+    "order": 250,
     "videos": [],
     "related": []
   },
@@ -1746,7 +1746,7 @@
       "#F9D4C9",
       "#E7CFC7"
     ],
-    "order": 270,
+    "order": 260,
     "videos": [],
     "related": []
   },
@@ -1784,7 +1784,7 @@
       "#8DF593",
       "#B8DEBC"
     ],
-    "order": 280,
+    "order": 270,
     "videos": [],
     "related": []
   },
@@ -1823,7 +1823,7 @@
       "#F9DB69",
       "#F0D664"
     ],
-    "order": 290,
+    "order": 280,
     "videos": [],
     "related": []
   },
@@ -1884,7 +1884,7 @@
       "#F9D1C1",
       "#A3E2D3"
     ],
-    "order": 300,
+    "order": 290,
     "videos": [],
     "related": []
   },
