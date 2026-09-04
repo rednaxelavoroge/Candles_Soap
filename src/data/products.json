@@ -2892,7 +2892,7 @@
     "slug": "medalon-s-tsvetami",
     "title": "Медальон с цветами",
     "article": "СВ-58",
-    "category": "candles",
+    "category": "sachet",
     "tags": [
       "women",
       "flowers"
@@ -2922,7 +2922,9 @@
       "#B7C6F0",
       "#CFD2EA"
     ],
-    "order": 630
+    "order": 630,
+    "videos": [],
+    "related": []
   },
   {
     "id": "candles-tsilindr-s-tyulpanami",
