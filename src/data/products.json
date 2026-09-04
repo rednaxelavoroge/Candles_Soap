@@ -360,7 +360,7 @@
       "#F1DAD3",
       "#D2D4D3"
     ],
-    "order": 130,
+    "order": 120,
     "videos": [],
     "related": []
   },
@@ -418,7 +418,7 @@
       "#F9B69A",
       "#EECEBE"
     ],
-    "order": 230,
+    "order": 220,
     "videos": [],
     "related": []
   },
@@ -508,7 +508,7 @@
       "#F9CFB4",
       "#F9A79A"
     ],
-    "order": 80,
+    "order": 380,
     "videos": [],
     "related": []
   },
@@ -750,7 +750,7 @@
       "#E6DDDC",
       "#DFD1CA"
     ],
-    "order": 90,
+    "order": 80,
     "videos": [],
     "related": []
   },
@@ -797,7 +797,7 @@
       "#F9D8B1",
       "#E1D1C1"
     ],
-    "order": 110,
+    "order": 100,
     "videos": [],
     "related": []
   },
@@ -860,7 +860,7 @@
       "#F9BDA4",
       "#E7D0B9"
     ],
-    "order": 120,
+    "order": 110,
     "videos": [],
     "related": []
   },
@@ -948,7 +948,7 @@
       "#F9C6AD",
       "#F2CDBB"
     ],
-    "order": 140,
+    "order": 130,
     "videos": [],
     "related": []
   },
@@ -1014,7 +1014,7 @@
       "#F9D3C0",
       "#E5CFC9"
     ],
-    "order": 150,
+    "order": 140,
     "videos": [],
     "related": []
   },
@@ -1076,7 +1076,7 @@
       "#F2DBCD",
       "#F9A5A0"
     ],
-    "order": 100,
+    "order": 90,
     "videos": [],
     "related": []
   },
@@ -1108,7 +1108,7 @@
       "#F9B5A3",
       "#F9A8AB"
     ],
-    "order": 160,
+    "order": 150,
     "videos": [],
     "related": []
   },
@@ -1148,7 +1148,7 @@
       "#F9ADAE",
       "#F9AFA9"
     ],
-    "order": 170,
+    "order": 160,
     "videos": [],
     "related": []
   },
@@ -1224,7 +1224,7 @@
       "#F9BEBB",
       "#DFD1C7"
     ],
-    "order": 210,
+    "order": 200,
     "videos": [],
     "related": []
   },
@@ -1270,7 +1270,7 @@
       "#DDE0D8",
       "#DBD2C8"
     ],
-    "order": 240,
+    "order": 230,
     "videos": [],
     "related": []
   },
@@ -1303,7 +1303,7 @@
       "#E1E2BA",
       "#C8D7D3"
     ],
-    "order": 250,
+    "order": 240,
     "videos": [],
     "related": []
   },
@@ -1370,7 +1370,7 @@
       "#CDE4DC",
       "#A5CDF0"
     ],
-    "order": 260,
+    "order": 250,
     "videos": [],
     "related": []
   },
@@ -1409,7 +1409,7 @@
       "#E2DFD6",
       "#D6D3CE"
     ],
-    "order": 270,
+    "order": 260,
     "videos": [],
     "related": []
   },
@@ -1631,7 +1631,7 @@
       "#E7DDDB",
       "#D9D2D1"
     ],
-    "order": 280,
+    "order": 270,
     "videos": [],
     "related": []
   },
@@ -1677,7 +1677,7 @@
       "#EDD9E8",
       "#DAD2D0"
     ],
-    "order": 310
+    "order": 300
   },
   {
     "id": "candles-kukuruza",
@@ -1706,7 +1706,7 @@
       "#EFDBD3",
       "#D2D4D3"
     ],
-    "order": 180,
+    "order": 170,
     "videos": [],
     "related": []
   },
@@ -1746,7 +1746,7 @@
       "#F9D4C9",
       "#E7CFC7"
     ],
-    "order": 290,
+    "order": 280,
     "videos": [],
     "related": []
   },
@@ -1784,7 +1784,7 @@
       "#8DF593",
       "#B8DEBC"
     ],
-    "order": 190,
+    "order": 180,
     "videos": [],
     "related": []
   },
@@ -1823,7 +1823,7 @@
       "#F9DB69",
       "#F0D664"
     ],
-    "order": 200,
+    "order": 190,
     "videos": [],
     "related": []
   },
@@ -1884,7 +1884,7 @@
       "#F9D1C1",
       "#A3E2D3"
     ],
-    "order": 300,
+    "order": 290,
     "videos": [],
     "related": []
   },
@@ -1951,7 +1951,7 @@
       "#CDE7BC",
       "#DED2C3"
     ],
-    "order": 320,
+    "order": 310,
     "videos": [],
     "related": []
   },
@@ -2023,7 +2023,7 @@
       "#EADAE7",
       "#EDACF0"
     ],
-    "order": 330,
+    "order": 320,
     "videos": [
       {
         "kind": "file",
@@ -2081,7 +2081,7 @@
       "#DAE892",
       "#F9A5A0"
     ],
-    "order": 340,
+    "order": 330,
     "videos": [],
     "related": []
   },
@@ -2148,7 +2148,7 @@
       "#D9E890",
       "#F9A59D"
     ],
-    "order": 350,
+    "order": 340,
     "videos": [],
     "related": []
   },
@@ -2187,7 +2187,7 @@
       "#F7C2F0",
       "#E5CFC7"
     ],
-    "order": 360,
+    "order": 350,
     "videos": [],
     "related": []
   },
@@ -2244,7 +2244,7 @@
       "#DBE88F",
       "#F9A59B"
     ],
-    "order": 370,
+    "order": 360,
     "videos": [],
     "related": []
   },
@@ -2305,7 +2305,7 @@
       "#E9E0B1",
       "#DED2C2"
     ],
-    "order": 380
+    "order": 370
   },
   {
     "id": "candles-zimnyaya-kartina",
@@ -4100,7 +4100,7 @@
       "#E9E0B4",
       "#F9C1B3"
     ],
-    "order": 220,
+    "order": 210,
     "videos": [],
     "related": []
   },
