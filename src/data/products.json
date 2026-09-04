@@ -360,7 +360,7 @@
       "#F1DAD3",
       "#D2D4D3"
     ],
-    "order": 300,
+    "order": 310,
     "videos": [],
     "related": []
   },
@@ -1270,7 +1270,7 @@
       "#DDE0D8",
       "#DBD2C8"
     ],
-    "order": 250,
+    "order": 260,
     "videos": [],
     "related": []
   },
@@ -1370,7 +1370,7 @@
       "#CDE4DC",
       "#A5CDF0"
     ],
-    "order": 280,
+    "order": 290,
     "videos": [],
     "related": []
   },
@@ -1409,7 +1409,7 @@
       "#E2DFD6",
       "#D6D3CE"
     ],
-    "order": 290,
+    "order": 300,
     "videos": [],
     "related": []
   },
@@ -1631,7 +1631,7 @@
       "#E7DDDB",
       "#D9D2D1"
     ],
-    "order": 240,
+    "order": 250,
     "videos": [],
     "related": []
   },
@@ -1884,7 +1884,7 @@
       "#F9D1C1",
       "#A3E2D3"
     ],
-    "order": 320,
+    "order": 330,
     "videos": [],
     "related": []
   },
@@ -1951,7 +1951,7 @@
       "#CDE7BC",
       "#DED2C3"
     ],
-    "order": 330,
+    "order": 340,
     "videos": [],
     "related": []
   },
@@ -2773,7 +2773,7 @@
       "#F0DBD2",
       "#E2D0CB"
     ],
-    "order": 260,
+    "order": 270,
     "videos": [],
     "related": []
   },
@@ -3638,7 +3638,7 @@
       "#F9BC9E",
       "#EACFBE"
     ],
-    "order": 340
+    "order": 240
   },
   {
     "id": "candles-yabloko-so-zmeey",
@@ -3682,7 +3682,7 @@
       "#F9C6AD",
       "#F4CDB7"
     ],
-    "order": 270
+    "order": 280
   },
   {
     "id": "candles-rusalka-v-rakushke",
@@ -4011,7 +4011,7 @@
       "#E3E0C4",
       "#D6D4C8"
     ],
-    "order": 310,
+    "order": 320,
     "videos": [],
     "related": []
   },
