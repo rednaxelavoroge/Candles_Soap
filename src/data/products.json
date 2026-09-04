@@ -1303,7 +1303,7 @@
       "#E1E2BA",
       "#C8D7D3"
     ],
-    "order": 640,
+    "order": 650,
     "videos": [],
     "related": []
   },
@@ -2583,7 +2583,7 @@
       "#F9AEA3",
       "#EBCEC1"
     ],
-    "order": 620
+    "order": 630
   },
   {
     "id": "candles-tsifry-goda",
@@ -2627,7 +2627,7 @@
       "#F9D1C8",
       "#D8D3CD"
     ],
-    "order": 610
+    "order": 620
   },
   {
     "id": "candles-rusalka",
@@ -2990,7 +2990,7 @@
       "#F9B5AA",
       "#F6CBC3"
     ],
-    "order": 630,
+    "order": 640,
     "videos": [],
     "related": []
   },
@@ -3043,7 +3043,7 @@
       "#BADEF0",
       "#D5D3D4"
     ],
-    "order": 650
+    "order": 660
   },
   {
     "id": "candles-medvezhonok-s-podarkom",
@@ -3327,7 +3327,7 @@
       "#F9B3B4",
       "#DFD1C8"
     ],
-    "order": 660
+    "order": 610
   },
   {
     "id": "candles-klubok-pryazhi",
