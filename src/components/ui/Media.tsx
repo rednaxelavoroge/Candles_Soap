@@ -16,8 +16,10 @@ type MediaProps = {
  */
 export function Media({ image, sizes, priority = false, className, fit = "cover" }: MediaProps) {
   if (!image) {
-    return <div className="absolute inset-0 bg-sand" aria-hidden="true" />;
+    return <div className="absolute inset-0 bg-transparent" aria-hidden="true" />;
   }
+
+  const isContain = fit === "contain";
 
   return (
     <Image
@@ -26,16 +28,10 @@ export function Media({ image, sizes, priority = false, className, fit = "cover"
       fill
       sizes={sizes}
       priority={priority}
-      placeholder="blur"
-      blurDataURL={image.blurDataURL}
-      /*
-        objectFit дублируется в style не случайно: размытую заглушку на время
-        загрузки next/image рисует фоном и берёт режим именно из style, а не из
-        класса. Без этого в карточке товара заглушка растягивалась «с обрезкой»,
-        а потом фото резко перескакивало в «целиком».
-      */
+      placeholder={isContain ? "empty" : "blur"}
+      blurDataURL={isContain ? undefined : image.blurDataURL}
       style={{ objectFit: fit }}
-      className={`${fit === "contain" ? "object-contain" : "object-cover"} ${className ?? ""}`}
+      className={`${isContain ? "object-contain" : "object-cover"} ${className ?? ""}`}
       draggable={false}
     />
   );

@@ -92,7 +92,7 @@ export function ProductGallery({
 
   return (
     <div className="flex flex-col gap-4">
-      {/* Главный крупный кадр в квадратном формате (без обрезки вертикальных и горизонтальных фото) */}
+      {/* Главный крупный кадр в квадратном формате (без обрезки вертикальных и горизонтальных фото, без рамок и теней) */}
       <div
         role="tabpanel"
         id={`slide-${index}`}
@@ -101,7 +101,7 @@ export function ProductGallery({
         onKeyDown={onKeyDown}
         onPointerDown={onPointerDown}
         onPointerUp={onPointerUp}
-        className="relative w-full aspect-square touch-pan-y overflow-hidden rounded-2xl bg-bg shadow-[0_4px_24px_rgba(62,43,32,0.06)] border border-sand/60 transition-all duration-500 flex items-center justify-center"
+        className="relative w-full aspect-square touch-pan-y transition-all duration-500 flex items-center justify-center"
       >
         {slides.map((slide, slideIndex) => (
           <div
@@ -146,10 +146,10 @@ export function ProductGallery({
                 aria-selected={selected}
                 aria-controls={`slide-${slideIndex}`}
                 onClick={() => go(slideIndex)}
-                className={`relative h-18 sm:h-20 aspect-square shrink-0 overflow-hidden rounded-xl bg-bg transition-all duration-300 p-0.5 ${
+                className={`relative h-18 sm:h-20 aspect-square shrink-0 overflow-hidden rounded-xl bg-transparent transition-all duration-300 p-0.5 ${
                   selected
-                    ? "ring-2 ring-btn-brown opacity-100 shadow-md scale-105"
-                    : "opacity-60 hover:opacity-100 hover:scale-102 border border-sand/60"
+                    ? "ring-2 ring-btn-brown opacity-100 shadow-sm scale-105"
+                    : "opacity-60 hover:opacity-100 hover:scale-102 border border-sand/40"
                 }`}
               >
                 <Media image={poster} fit="contain" sizes="120px" />
@@ -216,7 +216,7 @@ function VideoSlide({ video, title }: { video: Video; title: string }) {
     <button
       type="button"
       onClick={onStart}
-      className="absolute inset-0 z-10 h-full w-full group"
+      className="absolute inset-0 z-10 h-full w-full group cursor-pointer"
       aria-label={`Смотреть видео: ${title}`}
     >
       <Image
@@ -224,14 +224,12 @@ function VideoSlide({ video, title }: { video: Video; title: string }) {
         alt={video.poster.alt}
         fill
         sizes="(min-width: 768px) 50vw, 100vw"
-        placeholder="blur"
-        blurDataURL={video.poster.blurDataURL}
         style={{ objectFit: "contain" }}
         className="object-contain"
       />
       <span
         aria-hidden="true"
-        className="absolute inset-0 flex items-center justify-center bg-ink/25 group-hover:bg-ink/40 transition-colors"
+        className="absolute inset-0 flex items-center justify-center pointer-events-none"
       >
         <span className="flex h-16 w-16 items-center justify-center rounded-full bg-white/95 shadow-xl transition-transform duration-300 group-hover:scale-110">
           <svg viewBox="0 0 24 24" className="ml-1 h-7 w-7 fill-btn-brown">
@@ -253,6 +251,7 @@ function VideoSlide({ video, title }: { video: Video; title: string }) {
           poster={video.poster.src}
           onEnded={() => setStarted(false)}
           className="h-full w-full object-contain"
+          style={{ backgroundColor: "transparent" }}
         >
           <source src={video.src} type="video/mp4" />
           <source src={video.src.replace(/\.mp4$/, ".webm")} type="video/webm" />
