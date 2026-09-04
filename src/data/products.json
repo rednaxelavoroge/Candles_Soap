@@ -3242,7 +3242,7 @@
       "#BCEDB8",
       "#EBCDCA"
     ],
-    "order": 570
+    "order": 580
   },
   {
     "id": "candles-tartaletki",
@@ -3293,7 +3293,7 @@
       "#F9AEA8",
       "#F9C3B0"
     ],
-    "order": 580,
+    "order": 590,
     "videos": [],
     "related": []
   },
@@ -3325,7 +3325,7 @@
       "#F9B3B4",
       "#DFD1C8"
     ],
-    "order": 590
+    "order": 600
   },
   {
     "id": "candles-klubok-pryazhi",
@@ -3356,7 +3356,7 @@
       "#F9D9BE",
       "#D3D4D2"
     ],
-    "order": 600
+    "order": 610
   },
   {
     "id": "candles-shkatulka-s-bantom",
@@ -3450,7 +3450,7 @@
       "#F9C0A1",
       "#F5CEAA"
     ],
-    "order": 610
+    "order": 620
   },
   {
     "id": "candles-roza-v-kashpo",
@@ -3572,7 +3572,7 @@
       "#ECDCD3",
       "#F9B5C6"
     ],
-    "order": 620
+    "order": 630
   },
   {
     "id": "candles-sushi-set",
@@ -3638,7 +3638,7 @@
       "#F9BC9E",
       "#EACFBE"
     ],
-    "order": 630
+    "order": 640
   },
   {
     "id": "candles-yabloko-so-zmeey",
@@ -3682,7 +3682,7 @@
       "#F9C6AD",
       "#F4CDB7"
     ],
-    "order": 640
+    "order": 650
   },
   {
     "id": "candles-rusalka-v-rakushke",
@@ -3719,7 +3719,7 @@
       "#C5E2F0",
       "#C1D8E1"
     ],
-    "order": 650
+    "order": 660
   },
   {
     "id": "candles-knizhnaya-stopka",
@@ -3757,7 +3757,7 @@
       "#F9B994",
       "#F9C094"
     ],
-    "order": 660
+    "order": 670
   },
   {
     "id": "candles-barelef-oval",
@@ -4100,7 +4100,7 @@
       "#E9E0B4",
       "#F9C1B3"
     ],
-    "order": 670,
+    "order": 570,
     "videos": [],
     "related": []
   },
