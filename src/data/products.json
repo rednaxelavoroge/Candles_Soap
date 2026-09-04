@@ -1677,7 +1677,7 @@
       "#EDD9E8",
       "#DAD2D0"
     ],
-    "order": 500
+    "order": 510
   },
   {
     "id": "candles-kukuruza",
@@ -2508,7 +2508,7 @@
       "#D0E2EE",
       "#C9D5DE"
     ],
-    "order": 510
+    "order": 520
   },
   {
     "id": "candles-vyazanaya-svecha",
@@ -2546,7 +2546,7 @@
       "#E8DDD0",
       "#D6D3CF"
     ],
-    "order": 520
+    "order": 530
   },
   {
     "id": "candles-vitaya-svecha",
@@ -2583,7 +2583,7 @@
       "#F9AEA3",
       "#EBCEC1"
     ],
-    "order": 530
+    "order": 540
   },
   {
     "id": "candles-tsifry-goda",
@@ -2627,7 +2627,7 @@
       "#F9D1C8",
       "#D8D3CD"
     ],
-    "order": 540
+    "order": 550
   },
   {
     "id": "candles-rusalka",
@@ -3079,7 +3079,7 @@
       "#F9AF9D",
       "#F9AA92"
     ],
-    "order": 550
+    "order": 500
   },
   {
     "id": "candles-medvezhonok-s-karandashami",
