@@ -1303,7 +1303,7 @@
       "#E1E2BA",
       "#C8D7D3"
     ],
-    "order": 550,
+    "order": 560,
     "videos": [],
     "related": []
   },
@@ -2715,7 +2715,7 @@
       "#CED3F0",
       "#D7D3D3"
     ],
-    "order": 540
+    "order": 550
   },
   {
     "id": "candles-kovboyskie-sapogi",
@@ -2812,7 +2812,7 @@
       "#F9B59D",
       "#F9C2B3"
     ],
-    "order": 560
+    "order": 570
   },
   {
     "id": "candles-karusel",
@@ -2885,7 +2885,7 @@
       "#F1DADA",
       "#F9B5CE"
     ],
-    "order": 570
+    "order": 580
   },
   {
     "id": "candles-medalon-s-tsvetami",
@@ -2922,7 +2922,7 @@
       "#B7C6F0",
       "#CFD2EA"
     ],
-    "order": 580
+    "order": 590
   },
   {
     "id": "candles-tsilindr-s-tyulpanami",
@@ -2988,7 +2988,7 @@
       "#F9B5AA",
       "#F6CBC3"
     ],
-    "order": 590,
+    "order": 600,
     "videos": [],
     "related": []
   },
@@ -3041,7 +3041,7 @@
       "#BADEF0",
       "#D5D3D4"
     ],
-    "order": 600
+    "order": 610
   },
   {
     "id": "candles-medvezhonok-s-podarkom",
@@ -3079,7 +3079,7 @@
       "#F9AF9D",
       "#F9AA92"
     ],
-    "order": 610
+    "order": 540
   },
   {
     "id": "candles-medvezhonok-s-karandashami",
