@@ -42,19 +42,23 @@ export default function ContactsPage() {
 
         <div className="mt-12 max-w-2xl">
           <ul className="divide-y divide-sand border-y border-sand">
-            {contacts.whatsapp ? (
-              <li className="flex flex-col sm:flex-row sm:justify-between sm:items-center py-4 sm:py-5 gap-1 sm:gap-4">
-                <span className="eyebrow">WhatsApp</span>
-                <a
-                  href={whatsappBase ?? "#"}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="link-underline text-base sm:text-lg md:text-xl font-medium text-ink whitespace-nowrap"
-                >
-                  {contacts.whatsapp} <span className="text-xs text-muted font-normal">(Армения)</span>
-                </a>
-              </li>
-            ) : null}
+            {contacts.whatsapp ? (() => {
+              const d = (contacts.whatsapp || "").replace(/\D/g, "");
+              const country = d.startsWith("374") ? "(Армения)" : d.startsWith("7") ? "(Россия)" : "";
+              return (
+                <li className="flex flex-col sm:flex-row sm:justify-between sm:items-center py-4 sm:py-5 gap-1 sm:gap-4">
+                  <span className="eyebrow">WhatsApp</span>
+                  <a
+                    href={whatsappBase ?? "#"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="link-underline text-base sm:text-lg md:text-xl font-medium text-ink whitespace-nowrap"
+                  >
+                    {contacts.whatsapp} {country ? <span className="text-xs text-muted font-normal">{country}</span> : null}
+                  </a>
+                </li>
+              );
+            })() : null}
 
             {contacts.phone ? (
               <li className="flex flex-col sm:flex-row sm:justify-between sm:items-center py-4 sm:py-5 gap-1 sm:gap-4">

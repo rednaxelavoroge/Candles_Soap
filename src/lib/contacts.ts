@@ -29,7 +29,9 @@ export function getSocialLinks(): SocialLink[] {
 
   const whatsapp = whatsappHref();
   if (whatsapp && contacts.whatsapp) {
-    links.push({ label: "WhatsApp", href: whatsapp, value: `${contacts.whatsapp} (Армения)` });
+    const digits = toDigits(contacts.whatsapp);
+    const country = digits.startsWith("374") ? " (Армения)" : digits.startsWith("7") ? " (Россия)" : "";
+    links.push({ label: "WhatsApp", href: whatsapp, value: `${contacts.whatsapp}${country}` });
   }
   if (contacts.instagram) {
     links.push({

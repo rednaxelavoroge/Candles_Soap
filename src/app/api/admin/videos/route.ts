@@ -1,5 +1,6 @@
 import { checkAdminAuth } from "@/lib/admin-auth";
 import generatedVideos from "@/data/generated_videos.json";
+import { loadJsonData, saveJsonData } from "@/lib/data-storage";
 import { NextResponse } from "next/server";
 import fs from "fs";
 import path from "path";
@@ -24,6 +25,7 @@ import path from "path";
  */
 
 const VIDEO_DIR = "public/catalog/video";
+const TITLES_FILE = "src/data/video_titles.json";
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN || process.env.GITHUB_PAT;
 const GITHUB_REPO = process.env.GITHUB_REPO || "rednaxelavoroge/Candles_Soap";
 const GITHUB_BRANCH = process.env.GITHUB_BRANCH || "main";
@@ -69,6 +71,31 @@ const POSTERS = new Map(
     (item) => [item.src, { poster: item.poster.src, caption: item.caption }],
   ),
 );
+
+/**
+ * Находит постер для видеофайла:
+ * 1. В generated_videos.json
+ * 2. Файл <base>-poster.webp в public/catalog/video
+ * 3. Файл <base>.webp в public/catalog/posters
+ * 4. Запасной путь к постеру в папке video
+ */
+function getPosterForVideo(file: string, src: string): string | null {
+  const known = POSTERS.get(src);
+  if (known?.poster) return known.poster;
+
+  const base = file.replace(/\.(mp4|webm|mov)$/i, "");
+  const videoPosterPath = path.join(process.cwd(), "public", "catalog", "video", `${base}-poster.webp`);
+  if (fs.existsSync(videoPosterPath)) {
+    return `/catalog/video/${base}-poster.webp`;
+  }
+
+  const postersPath = path.join(process.cwd(), "public", "catalog", "posters", `${base}.webp`);
+  if (fs.existsSync(postersPath)) {
+    return `/catalog/posters/${base}.webp`;
+  }
+
+  return `/catalog/video/${base}-poster.webp`;
+}
 
 /** Читаемое имя из имени файла: «candle-process-12.mp4» → «Свечи — процесс 12». */
 function humanName(file: string): string {
@@ -198,16 +225,22 @@ export async function GET(req: Request) {
   let files = listFromDisk();
   if (files.length === 0) files = await listFromGitHub();
 
+  const customTitles = await loadJsonData<Record<string, { title?: string; caption?: string }>>(
+    TITLES_FILE,
+    {},
+  );
+
   const videos: LibraryVideo[] = files
     .sort((a, b) => a.localeCompare(b, "ru", { numeric: true, sensitivity: "base" }))
     .map((file) => {
       const src = `/catalog/video/${file}`;
       const known = POSTERS.get(src);
+      const custom = customTitles[src];
       return {
         src,
-        name: humanName(file),
-        poster: known?.poster ?? null,
-        caption: known?.caption ?? null,
+        name: custom?.title || known?.caption || humanName(file),
+        poster: getPosterForVideo(file, src),
+        caption: custom?.caption || known?.caption || null,
       };
     });
 
@@ -325,3 +358,35 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Ошибка загрузки видео" }, { status: 500 });
   }
 }
+
+export async function PUT(req: Request) {
+  const isAuth = await checkAdminAuth();
+  if (!isAuth) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+
+  try {
+    const { src, title, caption } = await req.json();
+    if (!src) {
+      return NextResponse.json({ error: "src не передан" }, { status: 400 });
+    }
+
+    const currentTitles = await loadJsonData<Record<string, { title?: string; caption?: string }>>(
+      TITLES_FILE,
+      {},
+    );
+
+    const updated = {
+      ...currentTitles,
+      [src]: {
+        title: title !== undefined ? title : currentTitles[src]?.title || "",
+        caption: caption !== undefined ? caption : currentTitles[src]?.caption || "",
+      },
+    };
+
+    await saveJsonData(TITLES_FILE, updated);
+    return NextResponse.json({ ok: true, titles: updated });
+  } catch (err) {
+    console.error("Video rename error:", err);
+    return NextResponse.json({ error: "Ошибка сохранения названия" }, { status: 500 });
+  }
+}
+

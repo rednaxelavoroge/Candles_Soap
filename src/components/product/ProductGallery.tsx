@@ -101,13 +101,13 @@ export function ProductGallery({
         onKeyDown={onKeyDown}
         onPointerDown={onPointerDown}
         onPointerUp={onPointerUp}
-        className="relative w-full aspect-square touch-pan-y overflow-hidden rounded-2xl bg-surface shadow-[0_4px_24px_rgba(62,43,32,0.06)] border border-sand/60 transition-all duration-500 flex items-center justify-center p-2 sm:p-4"
+        className="relative w-full aspect-square touch-pan-y overflow-hidden rounded-2xl bg-bg shadow-[0_4px_24px_rgba(62,43,32,0.06)] border border-sand/60 transition-all duration-500 flex items-center justify-center"
       >
         {slides.map((slide, slideIndex) => (
           <div
             key={slideIndex}
             aria-hidden={slideIndex !== index}
-            className={`absolute inset-2 sm:inset-4 transition-opacity duration-500 ease-out ${
+            className={`absolute inset-0 transition-opacity duration-500 ease-out ${
               slideIndex === index ? "opacity-100" : "pointer-events-none opacity-0"
             }`}
           >
@@ -146,7 +146,7 @@ export function ProductGallery({
                 aria-selected={selected}
                 aria-controls={`slide-${slideIndex}`}
                 onClick={() => go(slideIndex)}
-                className={`relative h-18 sm:h-20 aspect-square shrink-0 overflow-hidden rounded-xl bg-surface transition-all duration-300 p-1 ${
+                className={`relative h-18 sm:h-20 aspect-square shrink-0 overflow-hidden rounded-xl bg-bg transition-all duration-300 p-0.5 ${
                   selected
                     ? "ring-2 ring-btn-brown opacity-100 shadow-md scale-105"
                     : "opacity-60 hover:opacity-100 hover:scale-102 border border-sand/60"
@@ -226,6 +226,7 @@ function VideoSlide({ video, title }: { video: Video; title: string }) {
         sizes="(min-width: 768px) 50vw, 100vw"
         placeholder="blur"
         blurDataURL={video.poster.blurDataURL}
+        style={{ objectFit: "contain" }}
         className="object-contain"
       />
       <span

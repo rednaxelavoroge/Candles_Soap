@@ -1,5 +1,5 @@
 import { getSite } from "@/lib/content";
-import { getSocialLinks, telHref } from "@/lib/contacts";
+import { getSocialLinks, telHref, whatsappHref } from "@/lib/contacts";
 import Link from "next/link";
 
 const NAV = [
@@ -13,6 +13,9 @@ export function SiteFooter() {
   const site = getSite();
   const socials = getSocialLinks();
   const year = 2026;
+  const waDigits = (site.contacts.whatsapp || "").replace(/\D/g, "");
+  const armDigits = (site.contacts.phone || "").replace(/\D/g, "");
+  const ruDigits = (site.contacts.phoneRussia || "").replace(/\D/g, "");
 
   return (
     <footer className="border-t border-sand bg-surface/50 px-5 py-12 md:px-8 md:py-16">
@@ -34,12 +37,17 @@ export function SiteFooter() {
           <span className="text-sm font-medium text-ink mb-1">Связь с мастером</span>
           {site.contacts.phone ? (
             <a href={telHref(site.contacts.phone)} className="text-muted hover:text-ink transition-colors whitespace-nowrap">
-              🇦🇲 {site.contacts.phone} <span className="text-[0.7rem] text-accent font-medium">(WhatsApp)</span>
+              🇦🇲 {site.contacts.phone} {waDigits && waDigits === armDigits ? <span className="text-[0.7rem] text-accent font-medium">(WhatsApp)</span> : null}
             </a>
           ) : null}
           {site.contacts.phoneRussia ? (
             <a href={telHref(site.contacts.phoneRussia)} className="text-muted hover:text-ink transition-colors whitespace-nowrap">
-              🇷🇺 {site.contacts.phoneRussia}
+              🇷🇺 {site.contacts.phoneRussia} {waDigits && waDigits === ruDigits ? <span className="text-[0.7rem] text-accent font-medium">(WhatsApp)</span> : null}
+            </a>
+          ) : null}
+          {site.contacts.whatsapp && waDigits !== armDigits && waDigits !== ruDigits ? (
+            <a href={whatsappHref() || "#"} target="_blank" rel="noopener noreferrer" className="text-muted hover:text-ink transition-colors whitespace-nowrap">
+              💬 {site.contacts.whatsapp} <span className="text-[0.7rem] text-accent font-medium">(WhatsApp)</span>
             </a>
           ) : null}
           {site.contacts.email ? (

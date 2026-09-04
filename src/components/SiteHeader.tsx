@@ -1,6 +1,7 @@
 "use client";
 
 import { getSite } from "@/lib/content";
+import { whatsappHref } from "@/lib/contacts";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -13,6 +14,7 @@ const NAV = [
 
 export function SiteHeader() {
   const site = getSite();
+  const whatsapp = whatsappHref() || (site.contacts.whatsapp ? `https://wa.me/${site.contacts.whatsapp.replace(/\D/g, "")}` : "https://wa.me/37498033550");
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -72,7 +74,7 @@ export function SiteHeader() {
             </Link>
           ))}
           <a
-            href="https://wa.me/37498033550"
+            href={whatsapp}
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-full btn-brown px-5 py-2 text-xs font-semibold tracking-[0.02em]"
@@ -129,7 +131,7 @@ export function SiteHeader() {
             
             <div className="pt-6">
               <a
-                href="https://wa.me/37498033550"
+                href={whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setOpen(false)}

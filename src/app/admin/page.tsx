@@ -9,7 +9,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
-type Tab = "products" | "categories" | "sections" | "featured" | "texts" | "backstage" | "settings";
+type Tab = "products" | "categories" | "sections" | "featured" | "texts" | "backstage" | "videos" | "settings";
 
 /** Ролик из библиотеки мастерской: то, что уже загружено в проект. */
 type LibraryVideo = { src: string; name: string; poster: string | null; caption: string | null };
@@ -118,6 +118,15 @@ export default function AdminPage() {
    * надписи это выглядит как «панель зависла».
    */
   const [videoStage, setVideoStage] = useState("");
+  // Поиск и фильтры в библиотеке роликов
+  const [videoSearch, setVideoSearch] = useState("");
+  const [videoFilter, setVideoFilter] = useState<"all" | "candle" | "soap" | "other">("all");
+  // Просмотр ролика в модальном окне
+  const [previewVideo, setPreviewVideo] = useState<{ src: string; name: string } | null>(null);
+  // Переименование ролика
+  const [renamingVideo, setRenamingVideo] = useState<{ src: string; name: string } | null>(null);
+  const [renameValue, setRenameValue] = useState("");
+  const [savingRename, setSavingRename] = useState(false);
 
   // Переименование подраздела на вкладке «Подразделы»
   const [editingTagSlug, setEditingTagSlug] = useState<string | null>(null);
@@ -675,8 +684,53 @@ export default function AdminPage() {
       showToast("Этот ролик уже прикреплён");
       return;
     }
-    setVideos([...editVideos, { kind: "file", src, poster: videoPoster() }]);
+    const libEntry = videoLibrary.find((v) => v.src === src);
+    const posterObj = libEntry?.poster
+      ? {
+          src: libEntry.poster,
+          width: 720,
+          height: 1280,
+          blurDataURL: "",
+          alt: libEntry?.name || editProduct?.title || "",
+        }
+      : videoPoster();
+    setVideos([...editVideos, { kind: "file", src, poster: posterObj }]);
     showToast("✓ Видео прикреплено к изделию");
+  };
+
+  /** Сохранение нового названия видео в video_titles.json */
+  const handleSaveVideoRename = async (e?: React.FormEvent) => {
+    if (e) e.preventDefault();
+    if (!renamingVideo || !renameValue.trim()) return;
+    setSavingRename(true);
+    try {
+      const res = await fetch("/api/admin/videos", {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          src: renamingVideo.src,
+          title: renameValue.trim(),
+          caption: renameValue.trim(),
+        }),
+      });
+      if (res.ok) {
+        setVideoLibrary((prev) =>
+          prev.map((v) =>
+            v.src === renamingVideo.src
+              ? { ...v, name: renameValue.trim(), caption: renameValue.trim() }
+              : v,
+          ),
+        );
+        showToast("✓ Название ролика сохранено");
+        setRenamingVideo(null);
+      } else {
+        alert("Не удалось сохранить название ролика");
+      }
+    } catch {
+      alert("Ошибка сохранения названия ролика");
+    } finally {
+      setSavingRename(false);
+    }
   };
 
   const removeVideo = (index: number) => setVideos(editVideos.filter((_, i) => i !== index));
@@ -1096,6 +1150,17 @@ export default function AdminPage() {
             Бэкстейдж ({backstage.length})
           </button>
           <button
+            onClick={() => setTab("videos")}
+            type="button"
+            className={`rounded-full px-5 py-2 text-xs font-semibold uppercase tracking-wider transition-all ${
+              tab === "videos"
+                ? "btn-brown shadow-sm"
+                : "bg-surface/60 text-muted hover:text-ink"
+            }`}
+          >
+            🎬 Видео ({videoLibrary.length})
+          </button>
+          <button
             onClick={() => setTab("settings")}
             type="button"
             className={`rounded-full px-5 py-2 text-xs font-semibold uppercase tracking-wider transition-all ${
@@ -1104,7 +1169,7 @@ export default function AdminPage() {
                 : "bg-surface/60 text-muted hover:text-ink"
             }`}
           >
-            Контакты
+            💬 Контакты и WhatsApp
           </button>
         </div>
 
@@ -2009,140 +2074,419 @@ export default function AdminPage() {
           </div>
         ) : null}
 
-        {/* 5. ВКЛАДКА КОНТАКТЫ */}
+        {/* ВКЛАДКА ВИДЕОТЕКА */}
+        {tab === "videos" ? (
+          <div className="mt-8">
+            <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+              <div>
+                <h2 className="font-display text-2xl font-medium text-ink">
+                  Видеоархив мастерской ({videoLibrary.length})
+                </h2>
+                <p className="mt-1 text-xs text-muted max-w-2xl">
+                  Здесь собраны все видеоролики процесса создания свечей и мыла. Можно посмотреть любой ролик,
+                  задать понятное название или загрузить новое видео прямо с телефона.
+                </p>
+              </div>
+
+              <label className="cursor-pointer inline-flex items-center justify-center gap-2 rounded-full btn-brown px-5 py-2.5 text-xs font-semibold shadow-md shrink-0">
+                <span>➕ {uploadingVideo ? videoStage || "Загружаю..." : "Загрузить видео"}</span>
+                <input
+                  type="file"
+                  accept="video/mp4,video/*"
+                  onChange={handleVideoFileChange}
+                  disabled={uploadingVideo}
+                  className="hidden"
+                />
+              </label>
+            </div>
+
+            {/* Фильтры и поиск */}
+            <div className="mt-6 flex flex-wrap items-center gap-3">
+              <input
+                type="text"
+                placeholder="Поиск ролика по названию..."
+                value={videoSearch}
+                onChange={(e) => setVideoSearch(e.target.value)}
+                className="w-full sm:w-72 rounded-xl border border-sand bg-surface px-4 py-2.5 text-xs text-ink placeholder:text-muted/50 focus:border-btn-brown focus:outline-none"
+              />
+
+              <div className="flex flex-wrap items-center gap-1.5 bg-surface/60 p-1 rounded-xl border border-sand/60">
+                <button
+                  type="button"
+                  onClick={() => setVideoFilter("all")}
+                  className={`rounded-lg px-3 py-1.5 text-xs font-medium transition-all ${
+                    videoFilter === "all" ? "btn-brown shadow-xs" : "text-muted hover:text-ink"
+                  }`}
+                >
+                  Все ({videoLibrary.length})
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setVideoFilter("candle")}
+                  className={`rounded-lg px-3 py-1.5 text-xs font-medium transition-all ${
+                    videoFilter === "candle" ? "btn-brown shadow-xs" : "text-muted hover:text-ink"
+                  }`}
+                >
+                  Свечи ({videoLibrary.filter((v) => v.src.includes("candle") || v.name.toLowerCase().includes("свеч")).length})
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setVideoFilter("soap")}
+                  className={`rounded-lg px-3 py-1.5 text-xs font-medium transition-all ${
+                    videoFilter === "soap" ? "btn-brown shadow-xs" : "text-muted hover:text-ink"
+                  }`}
+                >
+                  Мыло ({videoLibrary.filter((v) => v.src.includes("soap") || v.name.toLowerCase().includes("мыл")).length})
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setVideoFilter("other")}
+                  className={`rounded-lg px-3 py-1.5 text-xs font-medium transition-all ${
+                    videoFilter === "other" ? "btn-brown shadow-xs" : "text-muted hover:text-ink"
+                  }`}
+                >
+                  Другие ({videoLibrary.filter((v) => !v.src.includes("candle") && !v.src.includes("soap") && !v.name.toLowerCase().includes("свеч") && !v.name.toLowerCase().includes("мыл")).length})
+                </button>
+              </div>
+            </div>
+
+            {/* Сетка роликов */}
+            <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
+              {videoLibrary
+                .filter((v) => {
+                  const match = !videoSearch || (v.name + " " + v.src).toLowerCase().includes(videoSearch.toLowerCase());
+                  if (!match) return false;
+                  if (videoFilter === "candle") return v.src.includes("candle") || v.name.toLowerCase().includes("свеч");
+                  if (videoFilter === "soap") return v.src.includes("soap") || v.name.toLowerCase().includes("мыл");
+                  if (videoFilter === "other") return !v.src.includes("candle") && !v.src.includes("soap") && !v.name.toLowerCase().includes("свеч") && !v.name.toLowerCase().includes("мыл");
+                  return true;
+                })
+                .map((v) => (
+                  <div
+                    key={v.src}
+                    className="group flex flex-col rounded-2xl border border-sand bg-surface overflow-hidden shadow-sm hover:shadow-md transition-all"
+                  >
+                    <div
+                      onClick={() => setPreviewVideo({ src: v.src, name: v.name })}
+                      className="relative aspect-[9/16] w-full bg-sand/30 cursor-pointer overflow-hidden"
+                    >
+                      {v.poster ? (
+                        <Image
+                          src={mediaUrl(v.poster)}
+                          alt={v.name}
+                          fill
+                          sizes="(min-width: 1024px) 220px, 160px"
+                          className="object-cover group-hover:scale-105 transition-transform duration-300"
+                        />
+                      ) : (
+                        <div className="flex h-full w-full items-center justify-center text-xs text-muted">
+                          Нет обложки
+                        </div>
+                      )}
+                      <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/35 transition-colors">
+                        <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white/90 shadow-md group-hover:scale-110 transition-transform">
+                          <svg viewBox="0 0 24 24" className="ml-0.5 h-5 w-5 fill-btn-brown">
+                            <path d="M8 5v14l11-7z" />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="p-3 flex flex-col flex-1 justify-between gap-2">
+                      <div>
+                        <p className="text-xs font-semibold text-ink line-clamp-2 leading-tight" title={v.name}>
+                          {v.name}
+                        </p>
+                        <p className="mt-1 text-[0.65rem] text-muted truncate" title={v.src}>
+                          {v.src.split("/").pop()}
+                        </p>
+                      </div>
+
+                      <div className="flex items-center gap-1.5 pt-2 border-t border-sand/40">
+                        <button
+                          type="button"
+                          onClick={() => setPreviewVideo({ src: v.src, name: v.name })}
+                          className="flex-1 rounded-lg bg-bg hover:bg-sand/30 px-2 py-1.5 text-center text-[0.7rem] font-medium text-ink transition-colors"
+                        >
+                          ▶ Смотреть
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setRenamingVideo({ src: v.src, name: v.name });
+                            setRenameValue(v.name);
+                          }}
+                          aria-label="Переименовать"
+                          title="Переименовать"
+                          className="rounded-lg bg-bg hover:bg-sand/30 p-1.5 text-xs text-ink transition-colors"
+                        >
+                          ✏️
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+            </div>
+          </div>
+        ) : null}
+
+        {/* 5. ВКЛАДКА КОНТАКТЫ И WHATSAPP */}
         {tab === "settings" ? (
-          <div className="mt-8 max-w-xl rounded-2xl border border-sand/60 bg-surface p-6 shadow-sm">
-            <h2 className="font-display text-lg font-medium text-ink">Настройка контактов</h2>
-            <form onSubmit={handleSaveContacts} className="mt-6 flex flex-col gap-4">
-              <div>
-                <label className="block text-xs font-semibold uppercase tracking-wider text-muted mb-1">
-                  Телефон (Армения) и WhatsApp
-                </label>
-                <input
-                  type="text"
-                  value={siteData.contacts.phone}
-                  onChange={(e) =>
-                    setSiteData({
-                      ...siteData,
-                      contacts: {
-                        ...siteData.contacts,
-                        phone: e.target.value,
-                        whatsapp: e.target.value,
-                      },
-                    })
-                  }
-                  className="w-full rounded-xl border border-sand bg-bg/50 px-4 py-2.5 text-xs text-ink focus:border-btn-brown focus:outline-none"
-                />
+          <div className="mt-8 max-w-2xl">
+            <h2 className="font-display text-2xl font-medium text-ink">
+              Контакты и кнопка WhatsApp
+            </h2>
+            <p className="mt-1 text-xs text-muted">
+              Здесь настраиваются все каналы связи с клиентами. Изменения сразу же вступают в силу на сайте.
+            </p>
+
+            <form onSubmit={handleSaveContacts} className="mt-6 flex flex-col gap-6">
+              {/* Выделенный блок WhatsApp */}
+              <div className="rounded-2xl border-2 border-emerald-300/80 bg-emerald-50/40 p-5 sm:p-6 shadow-sm">
+                <div className="flex items-center gap-3">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-600 text-white shadow-sm text-xl">
+                    💬
+                  </span>
+                  <div>
+                    <h3 className="font-display text-base font-semibold text-emerald-950">
+                      Кнопка WhatsApp на сайте
+                    </h3>
+                    <p className="text-[0.7rem] text-emerald-800 leading-snug">
+                      Главный номер для кнопки «WhatsApp» в шапке сайта, кнопок «Написать в WhatsApp» в карточках товаров и контактах.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="mt-4">
+                  <label className="block text-xs font-semibold uppercase tracking-wider text-emerald-950 mb-1">
+                    Активный номер WhatsApp
+                  </label>
+                  <input
+                    type="text"
+                    value={siteData.contacts.whatsapp || ""}
+                    onChange={(e) =>
+                      setSiteData({
+                        ...siteData,
+                        contacts: {
+                          ...siteData.contacts,
+                          whatsapp: e.target.value,
+                        },
+                      })
+                    }
+                    placeholder="+374 98 033 550"
+                    className="w-full rounded-xl border border-emerald-300 bg-white px-4 py-2.5 text-xs text-ink font-semibold focus:border-emerald-600 focus:outline-none shadow-sm"
+                  />
+                </div>
+
+                {/* Быстрые кнопки подстановки */}
+                <div className="mt-3 flex flex-wrap items-center gap-2">
+                  <span className="text-[0.7rem] text-emerald-800">Быстро подставить:</span>
+                  {siteData.contacts.phone ? (
+                    <button
+                      type="button"
+                      onClick={() =>
+                        setSiteData({
+                          ...siteData,
+                          contacts: {
+                            ...siteData.contacts,
+                            whatsapp: siteData.contacts.phone,
+                          },
+                        })
+                      }
+                      className="rounded-full border border-emerald-300 bg-white px-3 py-1 text-[0.7rem] font-medium text-emerald-900 hover:bg-emerald-100 transition-colors shadow-xs"
+                    >
+                      🇦🇲 Номер Армении ({siteData.contacts.phone})
+                    </button>
+                  ) : null}
+                  {siteData.contacts.phoneRussia ? (
+                    <button
+                      type="button"
+                      onClick={() =>
+                        setSiteData({
+                          ...siteData,
+                          contacts: {
+                            ...siteData.contacts,
+                            whatsapp: siteData.contacts.phoneRussia,
+                          },
+                        })
+                      }
+                      className="rounded-full border border-emerald-300 bg-white px-3 py-1 text-[0.7rem] font-medium text-emerald-900 hover:bg-emerald-100 transition-colors shadow-xs"
+                    >
+                      🇷🇺 Номер России ({siteData.contacts.phoneRussia})
+                    </button>
+                  ) : null}
+                </div>
+
+                {/* Проверка ссылки */}
+                {siteData.contacts.whatsapp ? (
+                  <div className="mt-4 flex flex-wrap items-center justify-between gap-3 rounded-xl bg-white border border-emerald-200 px-3.5 py-2 text-xs text-emerald-900 shadow-xs">
+                    <span className="truncate text-[0.75rem]">
+                      Прямая ссылка: <strong className="font-mono">https://wa.me/{(siteData.contacts.whatsapp || "").replace(/\D/g, "")}</strong>
+                    </span>
+                    <a
+                      href={`https://wa.me/${(siteData.contacts.whatsapp || "").replace(/\D/g, "")}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="shrink-0 rounded-full bg-emerald-600 hover:bg-emerald-700 px-3 py-1 text-[0.7rem] font-semibold text-white transition-colors"
+                    >
+                      Проверить переход ↗
+                    </a>
+                  </div>
+                ) : null}
               </div>
 
-              <div>
-                <label className="block text-xs font-semibold uppercase tracking-wider text-muted mb-1">
-                  Телефон (Россия)
-                </label>
-                <input
-                  type="text"
-                  value={siteData.contacts.phoneRussia}
-                  onChange={(e) =>
-                    setSiteData({
-                      ...siteData,
-                      contacts: {
-                        ...siteData.contacts,
-                        phoneRussia: e.target.value,
-                      },
-                    })
-                  }
-                  className="w-full rounded-xl border border-sand bg-bg/50 px-4 py-2.5 text-xs text-ink focus:border-btn-brown focus:outline-none"
-                />
+              {/* Блок телефонных номеров */}
+              <div className="rounded-2xl border border-sand/60 bg-surface p-5 sm:p-6 shadow-sm">
+                <h3 className="font-display text-base font-medium text-ink">
+                  Номера телефонов для звонков
+                </h3>
+                <p className="mt-0.5 text-[0.7rem] text-muted">
+                  Отображаются в подвале сайта и на странице контактов.
+                </p>
+
+                <div className="mt-4 grid gap-4 sm:grid-cols-2">
+                  <div>
+                    <label className="block text-xs font-semibold uppercase tracking-wider text-muted mb-1">
+                      🇦🇲 Телефон (Армения)
+                    </label>
+                    <input
+                      type="text"
+                      value={siteData.contacts.phone}
+                      onChange={(e) =>
+                        setSiteData({
+                          ...siteData,
+                          contacts: {
+                            ...siteData.contacts,
+                            phone: e.target.value,
+                          },
+                        })
+                      }
+                      placeholder="+374 98 033 550"
+                      className="w-full rounded-xl border border-sand bg-bg/50 px-4 py-2.5 text-xs text-ink focus:border-btn-brown focus:outline-none"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-semibold uppercase tracking-wider text-muted mb-1">
+                      🇷🇺 Телефон (Россия)
+                    </label>
+                    <input
+                      type="text"
+                      value={siteData.contacts.phoneRussia || ""}
+                      onChange={(e) =>
+                        setSiteData({
+                          ...siteData,
+                          contacts: {
+                            ...siteData.contacts,
+                            phoneRussia: e.target.value,
+                          },
+                        })
+                      }
+                      placeholder="+7 988 580 81 81"
+                      className="w-full rounded-xl border border-sand bg-bg/50 px-4 py-2.5 text-xs text-ink focus:border-btn-brown focus:outline-none"
+                    />
+                  </div>
+                </div>
               </div>
 
-              <div>
-                <label className="block text-xs font-semibold uppercase tracking-wider text-muted mb-1">
-                  Instagram (без @)
-                </label>
-                <input
-                  type="text"
-                  value={siteData.contacts.instagram || ""}
-                  onChange={(e) =>
-                    setSiteData({
-                      ...siteData,
-                      contacts: {
-                        ...siteData.contacts,
-                        instagram: e.target.value,
-                      },
-                    })
-                  }
-                  className="w-full rounded-xl border border-sand bg-bg/50 px-4 py-2.5 text-xs text-ink focus:border-btn-brown focus:outline-none"
-                />
-              </div>
+              {/* Соцсети и дополнительные контакты */}
+              <div className="rounded-2xl border border-sand/60 bg-surface p-5 sm:p-6 shadow-sm flex flex-col gap-4">
+                <h3 className="font-display text-base font-medium text-ink">
+                  Социальные сети и адрес
+                </h3>
 
-              <div>
-                <label className="block text-xs font-semibold uppercase tracking-wider text-muted mb-1">
-                  Facebook (ссылка на профиль / страницу)
-                </label>
-                <input
-                  type="text"
-                  placeholder="https://facebook.com/..."
-                  value={siteData.contacts.facebook || ""}
-                  onChange={(e) =>
-                    setSiteData({
-                      ...siteData,
-                      contacts: {
-                        ...siteData.contacts,
-                        facebook: e.target.value,
-                      },
-                    })
-                  }
-                  className="w-full rounded-xl border border-sand bg-bg/50 px-4 py-2.5 text-xs text-ink focus:border-btn-brown focus:outline-none"
-                />
-              </div>
+                <div>
+                  <label className="block text-xs font-semibold uppercase tracking-wider text-muted mb-1">
+                    Instagram (без @)
+                  </label>
+                  <input
+                    type="text"
+                    value={siteData.contacts.instagram || ""}
+                    onChange={(e) =>
+                      setSiteData({
+                        ...siteData,
+                        contacts: {
+                          ...siteData.contacts,
+                          instagram: e.target.value,
+                        },
+                      })
+                    }
+                    placeholder="anna.candles.soap"
+                    className="w-full rounded-xl border border-sand bg-bg/50 px-4 py-2.5 text-xs text-ink focus:border-btn-brown focus:outline-none"
+                  />
+                </div>
 
-              <div>
-                <label className="block text-xs font-semibold uppercase tracking-wider text-muted mb-1">
-                  Email для связи
-                </label>
-                <input
-                  type="email"
-                  placeholder="anna@example.com"
-                  value={siteData.contacts.email || ""}
-                  onChange={(e) =>
-                    setSiteData({
-                      ...siteData,
-                      contacts: {
-                        ...siteData.contacts,
-                        email: e.target.value,
-                      },
-                    })
-                  }
-                  className="w-full rounded-xl border border-sand bg-bg/50 px-4 py-2.5 text-xs text-ink focus:border-btn-brown focus:outline-none"
-                />
-              </div>
+                <div>
+                  <label className="block text-xs font-semibold uppercase tracking-wider text-muted mb-1">
+                    Facebook (ссылка на профиль / страницу)
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="https://facebook.com/..."
+                    value={siteData.contacts.facebook || ""}
+                    onChange={(e) =>
+                      setSiteData({
+                        ...siteData,
+                        contacts: {
+                          ...siteData.contacts,
+                          facebook: e.target.value,
+                        },
+                      })
+                    }
+                    className="w-full rounded-xl border border-sand bg-bg/50 px-4 py-2.5 text-xs text-ink focus:border-btn-brown focus:outline-none"
+                  />
+                </div>
 
-              <div>
-                <label className="block text-xs font-semibold uppercase tracking-wider text-muted mb-1">
-                  Город / Локация
-                </label>
-                <input
-                  type="text"
-                  placeholder="Ереван, Армения"
-                  value={siteData.contacts.city || ""}
-                  onChange={(e) =>
-                    setSiteData({
-                      ...siteData,
-                      contacts: {
-                        ...siteData.contacts,
-                        city: e.target.value,
-                      },
-                    })
-                  }
-                  className="w-full rounded-xl border border-sand bg-bg/50 px-4 py-2.5 text-xs text-ink focus:border-btn-brown focus:outline-none"
-                />
+                <div className="grid gap-4 sm:grid-cols-2">
+                  <div>
+                    <label className="block text-xs font-semibold uppercase tracking-wider text-muted mb-1">
+                      Email для связи
+                    </label>
+                    <input
+                      type="email"
+                      placeholder="anna@example.com"
+                      value={siteData.contacts.email || ""}
+                      onChange={(e) =>
+                        setSiteData({
+                          ...siteData,
+                          contacts: {
+                            ...siteData.contacts,
+                            email: e.target.value,
+                          },
+                        })
+                      }
+                      className="w-full rounded-xl border border-sand bg-bg/50 px-4 py-2.5 text-xs text-ink focus:border-btn-brown focus:outline-none"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-semibold uppercase tracking-wider text-muted mb-1">
+                      Город / Локация
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="Ереван, Армения"
+                      value={siteData.contacts.city || ""}
+                      onChange={(e) =>
+                        setSiteData({
+                          ...siteData,
+                          contacts: {
+                            ...siteData.contacts,
+                            city: e.target.value,
+                          },
+                        })
+                      }
+                      className="w-full rounded-xl border border-sand bg-bg/50 px-4 py-2.5 text-xs text-ink focus:border-btn-brown focus:outline-none"
+                    />
+                  </div>
+                </div>
               </div>
 
               <button
                 type="submit"
-                className="mt-4 rounded-full btn-brown py-3 text-xs font-semibold uppercase tracking-wider shadow-md"
+                className="mt-2 rounded-full btn-brown py-3.5 text-xs font-semibold uppercase tracking-wider shadow-md hover:shadow-lg transition-all"
               >
-                Сохранить контакты →
+                Сохранить контакты и номер WhatsApp →
               </button>
             </form>
           </div>
@@ -2670,41 +3014,81 @@ export default function AdminPage() {
                 </p>
 
                 {editVideos.length > 0 ? (
-                  <div className="mt-2 flex flex-col gap-1.5">
+                  <div className="mt-2 flex flex-col gap-2">
                     {editVideos.map((v, i) => (
                       <div
                         key={`${v.kind === "file" ? v.src : v.id}-${i}`}
                         {...videoDrag.itemProps(i)}
-                        className={`flex flex-wrap items-center gap-3 rounded-xl border border-sand bg-surface px-3 py-2.5 cursor-grab active:cursor-grabbing transition-all ${videoDrag.itemClass(i)}`}
+                        className={`flex flex-wrap items-center gap-3 rounded-xl border border-sand bg-surface p-2.5 cursor-grab active:cursor-grabbing transition-all ${videoDrag.itemClass(i)}`}
                       >
-                        <span className="w-4 shrink-0 text-[0.7rem] text-muted">{i + 1}</span>
-                        <span className="min-w-0 flex-1 truncate text-xs text-ink">
-                          {v.kind === "file"
-                            ? videoTitle(v.src)
-                            : `Ролик ${v.kind === "youtube" ? "YouTube" : "Vimeo"}: ${v.id}`}
-                        </span>
-                        <button
-                          type="button"
-                          onClick={() => moveVideo(i, i - 1)}
-                          disabled={i === 0}
-                          aria-label="Поднять выше"
-                          className="rounded-full px-2 py-1 text-xs text-muted hover:text-ink disabled:opacity-30"
+                        <span className="w-4 shrink-0 text-center text-[0.7rem] font-semibold text-muted">{i + 1}</span>
+
+                        {/* Миниатюра обложки прикреплённого видео */}
+                        <div
+                          onClick={() => {
+                            if (v.kind === "file") setPreviewVideo({ src: v.src, name: videoTitle(v.src) });
+                          }}
+                          className="relative h-12 w-9 shrink-0 overflow-hidden rounded-lg bg-sand/40 cursor-pointer group/thumb"
+                          title="Посмотреть ролик"
                         >
-                          ↑
-                        </button>
-                        <button
-                          type="button"
-                          onClick={() => moveVideo(i, i + 1)}
-                          disabled={i === editVideos.length - 1}
-                          aria-label="Опустить ниже"
-                          className="rounded-full px-2 py-1 text-xs text-muted hover:text-ink disabled:opacity-30"
-                        >
-                          ↓
-                        </button>
+                          {v.poster ? (
+                            <Image src={mediaUrl(v.poster.src)} alt="" fill sizes="36px" className="object-cover" />
+                          ) : null}
+                          <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover/thumb:bg-black/40 transition-colors">
+                            <span className="flex h-5 w-5 items-center justify-center rounded-full bg-white/90 shadow-xs">
+                              <svg viewBox="0 0 24 24" className="ml-0.5 h-2.5 w-2.5 fill-btn-brown">
+                                <path d="M8 5v14l11-7z" />
+                              </svg>
+                            </span>
+                          </div>
+                        </div>
+
+                        <div className="min-w-0 flex-1">
+                          <p className="truncate text-xs font-semibold text-ink">
+                            {v.kind === "file"
+                              ? videoTitle(v.src)
+                              : `Ролик ${v.kind === "youtube" ? "YouTube" : "Vimeo"}: ${v.id}`}
+                          </p>
+                          {v.kind === "file" ? (
+                            <p className="truncate text-[0.65rem] text-muted">{v.src.split("/").pop()}</p>
+                          ) : null}
+                        </div>
+
+                        {v.kind === "file" ? (
+                          <button
+                            type="button"
+                            onClick={() => setPreviewVideo({ src: v.src, name: videoTitle(v.src) })}
+                            className="rounded-lg bg-bg hover:bg-sand/30 px-2 py-1 text-[0.7rem] font-medium text-ink transition-colors"
+                          >
+                            ▶ Посмотреть
+                          </button>
+                        ) : null}
+
+                        <div className="flex items-center gap-1">
+                          <button
+                            type="button"
+                            onClick={() => moveVideo(i, i - 1)}
+                            disabled={i === 0}
+                            aria-label="Поднять выше"
+                            className="rounded-full px-2 py-1 text-xs text-muted hover:text-ink disabled:opacity-30"
+                          >
+                            ↑
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => moveVideo(i, i + 1)}
+                            disabled={i === editVideos.length - 1}
+                            aria-label="Опустить ниже"
+                            className="rounded-full px-2 py-1 text-xs text-muted hover:text-ink disabled:opacity-30"
+                          >
+                            ↓
+                          </button>
+                        </div>
+
                         <button
                           type="button"
                           onClick={() => removeVideo(i)}
-                          className="shrink-0 text-[0.7rem] text-red-500 hover:underline"
+                          className="shrink-0 text-[0.7rem] text-red-500 hover:underline px-1"
                         >
                           Убрать
                         </button>
@@ -2712,7 +3096,7 @@ export default function AdminPage() {
                     ))}
                   </div>
                 ) : (
-                  <p className="mt-1 text-[0.7rem] text-muted">Видео пока не прикреплено.</p>
+                  <p className="mt-1 text-[0.7rem] text-muted">Видео пока не прикреплено к изделию.</p>
                 )}
 
                 <div className="mt-3 flex flex-wrap items-center gap-3">
@@ -2721,11 +3105,11 @@ export default function AdminPage() {
                     onClick={() => setVideoPickerOpen((open) => !open)}
                     className="rounded-full border border-sand bg-surface px-4 py-2 text-[0.7rem] font-semibold text-ink hover:bg-sand/30"
                   >
-                    {videoPickerOpen ? "Свернуть список" : `Выбрать из моих роликов (${videoLibrary.length})`}
+                    {videoPickerOpen ? "Свернуть выбор роликов" : `🎬 Выбрать из архива роликов (${videoLibrary.length})`}
                   </button>
 
                   <label className="cursor-pointer rounded-full border border-sand bg-surface px-4 py-2 text-[0.7rem] font-semibold text-ink hover:bg-sand/30">
-                    {uploadingVideo ? videoStage || "Загружаю..." : "Загрузить свой ролик"}
+                    {uploadingVideo ? videoStage || "Загружаю..." : "➕ Загрузить свой ролик"}
                     <input
                       type="file"
                       accept="video/mp4,video/*"
@@ -2739,33 +3123,134 @@ export default function AdminPage() {
                 {videoPickerOpen ? (
                   <div
                     data-lenis-prevent
-                    className="mt-3 max-h-56 overflow-y-auto overscroll-contain rounded-xl border border-sand bg-surface"
+                    className="mt-3 rounded-2xl border border-sand bg-surface p-3 shadow-xs"
                   >
-                    {videoLibrary.length === 0 ? (
-                      <p className="px-3 py-4 text-xs text-muted">Библиотека роликов пуста.</p>
-                    ) : (
-                      videoLibrary.map((v) => (
+                    {/* Поиск и категории */}
+                    <div className="flex flex-wrap items-center gap-2 pb-3 border-b border-sand/40">
+                      <input
+                        type="text"
+                        placeholder="Поиск по названию ролика..."
+                        value={videoSearch}
+                        onChange={(e) => setVideoSearch(e.target.value)}
+                        className="min-w-0 flex-1 rounded-xl border border-sand bg-bg/50 px-3 py-1.5 text-xs text-ink focus:border-btn-brown focus:outline-none"
+                      />
+                      <div className="flex items-center gap-1">
                         <button
-                          key={v.src}
                           type="button"
-                          onClick={() => attachVideo(v.src)}
-                          className={`flex w-full items-center gap-3 border-b border-sand/40 px-3 py-2 text-left last:border-0 hover:bg-sand/20 ${
-                            editVideos.some((x) => x.kind === "file" && x.src === v.src)
-                              ? "bg-sand/30"
-                              : ""
+                          onClick={() => setVideoFilter("all")}
+                          className={`rounded-lg px-2.5 py-1 text-[0.7rem] font-medium transition-colors ${
+                            videoFilter === "all" ? "btn-brown shadow-xs" : "text-muted hover:text-ink"
                           }`}
                         >
-                          <span className="relative h-10 w-8 shrink-0 overflow-hidden rounded-md bg-sand/40">
-                            {v.poster ? (
-                              <Image src={mediaUrl(v.poster)} alt="" fill sizes="32px" className="object-cover" />
-                            ) : null}
-                          </span>
-                          <span className="min-w-0 flex-1 truncate text-xs text-ink">
-                            {v.caption || v.name}
-                          </span>
+                          Все ({videoLibrary.length})
                         </button>
-                      ))
-                    )}
+                        <button
+                          type="button"
+                          onClick={() => setVideoFilter("candle")}
+                          className={`rounded-lg px-2.5 py-1 text-[0.7rem] font-medium transition-colors ${
+                            videoFilter === "candle" ? "btn-brown shadow-xs" : "text-muted hover:text-ink"
+                          }`}
+                        >
+                          Свечи
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => setVideoFilter("soap")}
+                          className={`rounded-lg px-2.5 py-1 text-[0.7rem] font-medium transition-colors ${
+                            videoFilter === "soap" ? "btn-brown shadow-xs" : "text-muted hover:text-ink"
+                          }`}
+                        >
+                          Мыло
+                        </button>
+                      </div>
+                    </div>
+
+                    <div className="mt-2 max-h-72 overflow-y-auto overscroll-contain space-y-1.5">
+                      {videoLibrary.length === 0 ? (
+                        <p className="px-3 py-4 text-xs text-muted">Библиотека роликов пуста.</p>
+                      ) : (
+                        videoLibrary
+                          .filter((v) => {
+                            const match = !videoSearch || (v.name + " " + v.src).toLowerCase().includes(videoSearch.toLowerCase());
+                            if (!match) return false;
+                            if (videoFilter === "candle") return v.src.includes("candle") || v.name.toLowerCase().includes("свеч");
+                            if (videoFilter === "soap") return v.src.includes("soap") || v.name.toLowerCase().includes("мыл");
+                            if (videoFilter === "other") return !v.src.includes("candle") && !v.src.includes("soap") && !v.name.toLowerCase().includes("свеч") && !v.name.toLowerCase().includes("мыл");
+                            return true;
+                          })
+                          .map((v) => {
+                            const isAttached = editVideos.some((x) => x.kind === "file" && x.src === v.src);
+                            return (
+                              <div
+                                key={v.src}
+                                className={`flex items-center gap-3 rounded-xl border border-sand/30 p-2 transition-all ${
+                                  isAttached ? "bg-sand/20" : "hover:bg-sand/10"
+                                }`}
+                              >
+                                <div
+                                  onClick={() => setPreviewVideo({ src: v.src, name: v.name })}
+                                  className="relative h-14 w-10 shrink-0 overflow-hidden rounded-lg bg-sand/40 cursor-pointer group/thumb"
+                                  title="Нажмите для предпросмотра"
+                                >
+                                  {v.poster ? (
+                                    <Image src={mediaUrl(v.poster)} alt="" fill sizes="40px" className="object-cover" />
+                                  ) : null}
+                                  <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover/thumb:bg-black/40 transition-colors">
+                                    <span className="flex h-5 w-5 items-center justify-center rounded-full bg-white/90 shadow-xs">
+                                      <svg viewBox="0 0 24 24" className="ml-0.5 h-2.5 w-2.5 fill-btn-brown">
+                                        <path d="M8 5v14l11-7z" />
+                                      </svg>
+                                    </span>
+                                  </div>
+                                </div>
+
+                                <div className="min-w-0 flex-1">
+                                  <p className="truncate text-xs font-semibold text-ink" title={v.name}>
+                                    {v.name}
+                                  </p>
+                                  <p className="truncate text-[0.65rem] text-muted">
+                                    {v.src.split("/").pop()}
+                                  </p>
+                                </div>
+
+                                <div className="flex items-center gap-1.5 shrink-0">
+                                  <button
+                                    type="button"
+                                    onClick={() => setPreviewVideo({ src: v.src, name: v.name })}
+                                    className="rounded-lg bg-bg hover:bg-sand/30 px-2 py-1 text-[0.7rem] font-medium text-ink transition-colors"
+                                  >
+                                    ▶ Смотреть
+                                  </button>
+                                  <button
+                                    type="button"
+                                    onClick={() => {
+                                      setRenamingVideo({ src: v.src, name: v.name });
+                                      setRenameValue(v.name);
+                                    }}
+                                    title="Переименовать"
+                                    className="rounded-lg bg-bg hover:bg-sand/30 p-1 text-xs text-ink transition-colors"
+                                  >
+                                    ✏️
+                                  </button>
+                                  {isAttached ? (
+                                    <span className="rounded-lg bg-sand/40 px-2.5 py-1 text-[0.7rem] font-semibold text-ink">
+                                      ✓ Добавлен
+                                    </span>
+                                  ) : (
+                                    <button
+                                      type="button"
+                                      onClick={() => attachVideo(v.src)}
+                                      className="rounded-lg btn-brown px-2.5 py-1 text-[0.7rem] font-semibold transition-all shadow-xs"
+                                    >
+                                      + Выбрать
+                                    </button>
+                                  )}
+                                </div>
+                              </div>
+                            );
+                          })
+                      )}
+                    </div>
                   </div>
                 ) : null}
 
@@ -2928,6 +3413,122 @@ export default function AdminPage() {
                   className="rounded-full btn-brown px-8 py-2.5 text-xs font-semibold uppercase tracking-wider shadow-md"
                 >
                   Сохранить изделие ✓
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      ) : null}
+
+      {/* МОДАЛЬНОЕ ОКНО ПРОСМОТРА ВИДЕО С ПЛЕЕРОМ */}
+      {previewVideo ? (
+        <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/80 p-4 backdrop-blur-md">
+          <div className="relative flex max-h-[95dvh] w-full max-w-lg flex-col overflow-hidden rounded-3xl border border-sand/40 bg-surface shadow-2xl">
+            {/* Шапка модалки */}
+            <div className="flex items-center justify-between border-b border-sand px-5 py-3.5">
+              <div className="min-w-0 flex-1 pr-3">
+                <h3 className="truncate font-display text-base font-semibold text-ink" title={previewVideo.name}>
+                  {previewVideo.name}
+                </h3>
+                <p className="truncate text-[0.65rem] text-muted">{previewVideo.src.split("/").pop()}</p>
+              </div>
+              <button
+                type="button"
+                onClick={() => setPreviewVideo(null)}
+                className="flex h-8 w-8 items-center justify-center rounded-full border border-sand bg-bg/50 text-xs text-ink hover:bg-sand/30"
+              >
+                ✕
+              </button>
+            </div>
+
+            {/* Видеоплеер с элементами управления */}
+            <div className="relative flex items-center justify-center bg-black p-2">
+              <video
+                src={mediaUrl(previewVideo.src)}
+                controls
+                autoPlay
+                playsInline
+                className="max-h-[60vh] w-auto max-w-full rounded-xl"
+              />
+            </div>
+
+            {/* Подвал действий */}
+            <div className="flex items-center justify-between gap-3 border-t border-sand px-5 py-3">
+              <button
+                type="button"
+                onClick={() => {
+                  setRenamingVideo(previewVideo);
+                  setRenameValue(previewVideo.name);
+                }}
+                className="rounded-full border border-sand bg-bg px-4 py-2 text-xs font-semibold text-ink hover:bg-sand/30"
+              >
+                ✏️ Переименовать
+              </button>
+
+              <div className="flex items-center gap-2">
+                {isModalOpen && editProduct ? (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      attachVideo(previewVideo.src);
+                      setPreviewVideo(null);
+                    }}
+                    className="rounded-full btn-brown px-5 py-2 text-xs font-semibold shadow-sm"
+                  >
+                    + Прикрепить к товару
+                  </button>
+                ) : null}
+                <button
+                  type="button"
+                  onClick={() => setPreviewVideo(null)}
+                  className="rounded-full border border-sand px-4 py-2 text-xs font-semibold text-muted hover:text-ink"
+                >
+                  Закрыть
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      ) : null}
+
+      {/* МОДАЛЬНОЕ ОКНО ПЕРЕИМЕНОВАНИЯ ВИДЕО */}
+      {renamingVideo ? (
+        <div className="fixed inset-0 z-[70] flex items-center justify-center bg-black/60 p-4 backdrop-blur-sm">
+          <div className="relative w-full max-w-md rounded-3xl border border-sand bg-surface p-6 shadow-2xl">
+            <h3 className="font-display text-lg font-semibold text-ink">Переименовать ролик</h3>
+            <p className="mt-1 text-xs text-muted">
+              Задайте понятное название, чтобы легко находить этот ролик при оформлении товаров.
+            </p>
+
+            <form onSubmit={handleSaveVideoRename} className="mt-4 flex flex-col gap-4">
+              <div>
+                <label className="block text-xs font-semibold uppercase tracking-wider text-muted mb-1">
+                  Название ролика
+                </label>
+                <input
+                  type="text"
+                  value={renameValue}
+                  onChange={(e) => setRenameValue(e.target.value)}
+                  autoFocus
+                  placeholder="Например: Заливка новогодней свечи"
+                  className="w-full rounded-xl border border-sand bg-bg/50 px-4 py-2.5 text-xs text-ink focus:border-btn-brown focus:outline-none"
+                />
+              </div>
+
+              <div className="flex justify-end gap-2 pt-2">
+                <button
+                  type="button"
+                  onClick={() => setRenamingVideo(null)}
+                  className="rounded-full border border-sand px-4 py-2 text-xs font-semibold text-muted hover:text-ink"
+                >
+                  Отмена
+                </button>
+                <button
+                  type="submit"
+                  disabled={savingRename || !renameValue.trim()}
+                  className="rounded-full btn-brown px-6 py-2 text-xs font-semibold shadow-md disabled:opacity-50"
+                >
+                  {savingRename ? "Сохраняю..." : "Сохранить ✓"}
                 </button>
               </div>
             </form>
