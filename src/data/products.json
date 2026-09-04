@@ -1303,7 +1303,7 @@
       "#E1E2BA",
       "#C8D7D3"
     ],
-    "order": 650,
+    "order": 660,
     "videos": [],
     "related": []
   },
@@ -1677,7 +1677,7 @@
       "#EDD9E8",
       "#DAD2D0"
     ],
-    "order": 570
+    "order": 580
   },
   {
     "id": "candles-kukuruza",
@@ -2508,7 +2508,7 @@
       "#D0E2EE",
       "#C9D5DE"
     ],
-    "order": 580
+    "order": 590
   },
   {
     "id": "candles-vyazanaya-svecha",
@@ -2546,7 +2546,7 @@
       "#E8DDD0",
       "#D6D3CF"
     ],
-    "order": 590
+    "order": 600
   },
   {
     "id": "candles-vitaya-svecha",
@@ -2583,7 +2583,7 @@
       "#F9AEA3",
       "#EBCEC1"
     ],
-    "order": 600
+    "order": 610
   },
   {
     "id": "candles-tsifry-goda",
@@ -2627,7 +2627,7 @@
       "#F9D1C8",
       "#D8D3CD"
     ],
-    "order": 610
+    "order": 620
   },
   {
     "id": "candles-rusalka",
@@ -2715,7 +2715,7 @@
       "#CED3F0",
       "#D7D3D3"
     ],
-    "order": 540
+    "order": 550
   },
   {
     "id": "candles-kovboyskie-sapogi",
@@ -2812,7 +2812,7 @@
       "#F9B59D",
       "#F9C2B3"
     ],
-    "order": 550
+    "order": 560
   },
   {
     "id": "candles-karusel",
@@ -2885,7 +2885,7 @@
       "#F1DADA",
       "#F9B5CE"
     ],
-    "order": 530
+    "order": 540
   },
   {
     "id": "candles-medalon-s-tsvetami",
@@ -2922,7 +2922,7 @@
       "#B7C6F0",
       "#CFD2EA"
     ],
-    "order": 620
+    "order": 630
   },
   {
     "id": "candles-tsilindr-s-tyulpanami",
@@ -2988,7 +2988,7 @@
       "#F9B5AA",
       "#F6CBC3"
     ],
-    "order": 630,
+    "order": 640,
     "videos": [],
     "related": []
   },
@@ -3041,7 +3041,7 @@
       "#BADEF0",
       "#D5D3D4"
     ],
-    "order": 640
+    "order": 650
   },
   {
     "id": "candles-medvezhonok-s-podarkom",
@@ -3205,7 +3205,7 @@
       "#F9D1B6",
       "#EBCFB9"
     ],
-    "order": 560
+    "order": 570
   },
   {
     "id": "candles-stakan-s-tsvetami",
@@ -3242,7 +3242,7 @@
       "#BCEDB8",
       "#EBCDCA"
     ],
-    "order": 660
+    "order": 670
   },
   {
     "id": "candles-tartaletki",
@@ -3325,7 +3325,7 @@
       "#F9B3B4",
       "#DFD1C8"
     ],
-    "order": 670
+    "order": 680
   },
   {
     "id": "candles-klubok-pryazhi",
@@ -3757,7 +3757,7 @@
       "#F9B994",
       "#F9C094"
     ],
-    "order": 680
+    "order": 530
   },
   {
     "id": "candles-barelef-oval",
