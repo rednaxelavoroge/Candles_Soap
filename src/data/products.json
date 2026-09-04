@@ -1440,7 +1440,17 @@
         "alt": "Морская в сердце — ракурс 2"
       }
     ],
-    "video": null,
+    "video": {
+      "kind": "file",
+      "src": "/catalog/video/candle-process-20.mp4",
+      "poster": {
+        "src": "/catalog/candles/serdtse-karibskoe-01.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAACwAQCdASoQABAAA4BaJQBdgBwp+E4gAP5T9fUh3GrOUy5VzWhySm72isie9IqFvIMrLgyLBtAAAA==",
+        "alt": "Морская в сердце"
+      }
+    },
     "price": null,
     "description": "Сердце-подсвечник, налитое до краёв бирюзовой водой: по кромке поднимается белая пена, на дне лежат ракушки и морская звезда. Пока горит, вода светится изнутри и кажется прозрачной. Ракушки укладываются вручную, поэтому дно у каждого сердца своё.",
     "specs": {},
@@ -1450,7 +1460,19 @@
       "#D7D2D4"
     ],
     "order": 50,
-    "videos": [],
+    "videos": [
+      {
+        "kind": "file",
+        "src": "/catalog/video/candle-process-20.mp4",
+        "poster": {
+          "src": "/catalog/candles/serdtse-karibskoe-01.webp",
+          "width": 1600,
+          "height": 1600,
+          "blurDataURL": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAACwAQCdASoQABAAA4BaJQBdgBwp+E4gAP5T9fUh3GrOUy5VzWhySm72isie9IqFvIMrLgyLBtAAAA==",
+          "alt": "Морская в сердце"
+        }
+      }
+    ],
     "related": []
   },
   {
