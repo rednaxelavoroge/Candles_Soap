@@ -1677,7 +1677,7 @@
       "#EDD9E8",
       "#DAD2D0"
     ],
-    "order": 540
+    "order": 550
   },
   {
     "id": "candles-kukuruza",
@@ -2508,7 +2508,7 @@
       "#D0E2EE",
       "#C9D5DE"
     ],
-    "order": 550
+    "order": 560
   },
   {
     "id": "candles-vyazanaya-svecha",
@@ -2546,7 +2546,7 @@
       "#E8DDD0",
       "#D6D3CF"
     ],
-    "order": 560
+    "order": 570
   },
   {
     "id": "candles-vitaya-svecha",
@@ -2583,7 +2583,7 @@
       "#F9AEA3",
       "#EBCEC1"
     ],
-    "order": 570
+    "order": 580
   },
   {
     "id": "candles-tsifry-goda",
@@ -2715,7 +2715,7 @@
       "#CED3F0",
       "#D7D3D3"
     ],
-    "order": 580
+    "order": 540
   },
   {
     "id": "candles-kovboyskie-sapogi",
