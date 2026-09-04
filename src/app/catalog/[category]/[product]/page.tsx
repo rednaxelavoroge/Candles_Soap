@@ -65,7 +65,7 @@ export default async function ProductPage({ params }: { params: Promise<Params> 
   const specs = Object.entries(product.specs).filter(([, value]) => Boolean(value));
 
   return (
-    <article className="pt-24 md:pt-32">
+    <article className="pt-24 md:pt-32 w-full max-w-full overflow-x-clip">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(buildJsonLd(product, site.domain, site.owner)) }}
@@ -84,12 +84,14 @@ export default async function ProductPage({ params }: { params: Promise<Params> 
         <span className="eyebrow text-ink">{product.title}</span>
       </nav>
 
-      <div className="grid gap-10 px-5 md:grid-cols-2 md:gap-14 md:px-8">
+      <div className="grid grid-cols-1 gap-10 px-5 md:grid-cols-2 md:gap-14 md:px-8 w-full min-w-0 max-w-full">
         {/* Медиа-галерея (фото в ракурсах + видео) */}
-        <ProductGallery images={product.images} videos={productVideos(product)} title={product.title} />
+        <div className="w-full min-w-0 max-w-full">
+          <ProductGallery images={product.images} videos={productVideos(product)} title={product.title} />
+        </div>
 
         {/* Описание изделия и характеристики */}
-        <div className="flex flex-col justify-start md:pt-2">
+        <div className="flex flex-col justify-start md:pt-2 w-full min-w-0 max-w-full">
           <span className="text-sm font-medium tracking-[0.06em] text-accent">
             {category.title}
           </span>

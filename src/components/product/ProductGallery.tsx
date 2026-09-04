@@ -91,7 +91,7 @@ export function ProductGallery({
 
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 w-full min-w-0 max-w-full">
       {/* Главный крупный кадр в квадратном формате (без обрезки вертикальных и горизонтальных фото, без рамок и теней) */}
       <div
         role="tabpanel"
@@ -101,7 +101,7 @@ export function ProductGallery({
         onKeyDown={onKeyDown}
         onPointerDown={onPointerDown}
         onPointerUp={onPointerUp}
-        className="relative w-full aspect-square touch-pan-y transition-all duration-500 flex items-center justify-center"
+        className="relative w-full aspect-square touch-pan-y transition-all duration-500 flex items-center justify-center overflow-hidden max-w-full"
       >
         {slides.map((slide, slideIndex) => (
           <div
@@ -132,7 +132,7 @@ export function ProductGallery({
         <div
           role="tablist"
           aria-label="Ракурсы"
-          className="no-scrollbar flex items-center gap-3 overflow-x-auto pb-2 pt-1"
+          className="no-scrollbar flex items-center gap-2.5 sm:gap-3 overflow-x-auto pb-2 pt-1 w-full min-w-0 max-w-full overscroll-x-contain touch-pan-x"
         >
           {slides.map((slide, slideIndex) => {
             const selected = slideIndex === index;
@@ -146,7 +146,7 @@ export function ProductGallery({
                 aria-selected={selected}
                 aria-controls={`slide-${slideIndex}`}
                 onClick={() => go(slideIndex)}
-                className={`relative h-18 sm:h-20 aspect-square shrink-0 overflow-hidden rounded-xl bg-transparent transition-all duration-300 p-0.5 ${
+                className={`relative h-16 w-16 sm:h-20 sm:w-20 aspect-square shrink-0 overflow-hidden rounded-xl bg-transparent transition-all duration-300 p-0.5 ${
                   selected
                     ? "ring-2 ring-btn-brown opacity-100 shadow-sm scale-105"
                     : "opacity-60 hover:opacity-100 hover:scale-102 border border-sand/40"
