@@ -1303,7 +1303,7 @@
       "#E1E2BA",
       "#C8D7D3"
     ],
-    "order": 640,
+    "order": 630,
     "videos": [],
     "related": []
   },
@@ -2546,7 +2546,7 @@
       "#E8DDD0",
       "#D6D3CF"
     ],
-    "order": 600
+    "order": 680
   },
   {
     "id": "candles-vitaya-svecha",
@@ -2583,7 +2583,7 @@
       "#F9AEA3",
       "#EBCEC1"
     ],
-    "order": 610
+    "order": 600
   },
   {
     "id": "candles-tsifry-goda",
@@ -2627,7 +2627,7 @@
       "#F9D1C8",
       "#D8D3CD"
     ],
-    "order": 620
+    "order": 610
   },
   {
     "id": "candles-rusalka",
@@ -2990,7 +2990,7 @@
       "#F9B5AA",
       "#F6CBC3"
     ],
-    "order": 630,
+    "order": 620,
     "videos": [],
     "related": []
   },
@@ -3043,7 +3043,7 @@
       "#BADEF0",
       "#D5D3D4"
     ],
-    "order": 650
+    "order": 640
   },
   {
     "id": "candles-medvezhonok-s-podarkom",
@@ -3327,7 +3327,7 @@
       "#F9B3B4",
       "#DFD1C8"
     ],
-    "order": 660
+    "order": 650
   },
   {
     "id": "candles-klubok-pryazhi",
@@ -3358,7 +3358,7 @@
       "#F9D9BE",
       "#D3D4D2"
     ],
-    "order": 670
+    "order": 660
   },
   {
     "id": "candles-shkatulka-s-bantom",
@@ -3452,7 +3452,7 @@
       "#F9C0A1",
       "#F5CEAA"
     ],
-    "order": 680
+    "order": 670
   },
   {
     "id": "candles-roza-v-kashpo",
