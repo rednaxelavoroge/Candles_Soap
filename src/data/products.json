@@ -2885,7 +2885,7 @@
       "#F1DADA",
       "#F9B5CE"
     ],
-    "order": 530
+    "order": 540
   },
   {
     "id": "candles-medalon-s-tsvetami",
@@ -2922,7 +2922,7 @@
       "#B7C6F0",
       "#CFD2EA"
     ],
-    "order": 550
+    "order": 560
   },
   {
     "id": "candles-tsilindr-s-tyulpanami",
@@ -2988,7 +2988,7 @@
       "#F9B5AA",
       "#F6CBC3"
     ],
-    "order": 560,
+    "order": 570,
     "videos": [],
     "related": []
   },
@@ -3041,7 +3041,7 @@
       "#BADEF0",
       "#D5D3D4"
     ],
-    "order": 570
+    "order": 580
   },
   {
     "id": "candles-medvezhonok-s-podarkom",
@@ -3079,7 +3079,7 @@
       "#F9AF9D",
       "#F9AA92"
     ],
-    "order": 580
+    "order": 590
   },
   {
     "id": "candles-medvezhonok-s-karandashami",
@@ -3116,7 +3116,7 @@
       "#F9B094",
       "#F9AE7A"
     ],
-    "order": 590
+    "order": 600
   },
   {
     "id": "candles-utyata-v-vannochke",
@@ -3160,7 +3160,7 @@
       "#F4DCB7",
       "#E1D1C2"
     ],
-    "order": 600
+    "order": 610
   },
   {
     "id": "candles-serdtse-nyudovoe",
@@ -3205,7 +3205,7 @@
       "#F9D1B6",
       "#EBCFB9"
     ],
-    "order": 610
+    "order": 620
   },
   {
     "id": "candles-stakan-s-tsvetami",
@@ -3242,7 +3242,7 @@
       "#BCEDB8",
       "#EBCDCA"
     ],
-    "order": 620
+    "order": 630
   },
   {
     "id": "candles-tartaletki",
@@ -3293,7 +3293,7 @@
       "#F9AEA8",
       "#F9C3B0"
     ],
-    "order": 630,
+    "order": 640,
     "videos": [],
     "related": []
   },
@@ -3325,7 +3325,7 @@
       "#F9B3B4",
       "#DFD1C8"
     ],
-    "order": 640
+    "order": 650
   },
   {
     "id": "candles-klubok-pryazhi",
@@ -3682,7 +3682,7 @@
       "#F9C6AD",
       "#F4CDB7"
     ],
-    "order": 650
+    "order": 530
   },
   {
     "id": "candles-rusalka-v-rakushke",
@@ -3719,7 +3719,7 @@
       "#C5E2F0",
       "#C1D8E1"
     ],
-    "order": 540
+    "order": 550
   },
   {
     "id": "candles-knizhnaya-stopka",
