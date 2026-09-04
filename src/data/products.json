@@ -3242,7 +3242,7 @@
       "#BCEDB8",
       "#EBCDCA"
     ],
-    "order": 630
+    "order": 640
   },
   {
     "id": "candles-tartaletki",
@@ -3293,7 +3293,7 @@
       "#F9AEA8",
       "#F9C3B0"
     ],
-    "order": 640,
+    "order": 650,
     "videos": [],
     "related": []
   },
@@ -3325,7 +3325,7 @@
       "#F9B3B4",
       "#DFD1C8"
     ],
-    "order": 650
+    "order": 660
   },
   {
     "id": "candles-klubok-pryazhi",
@@ -3356,7 +3356,7 @@
       "#F9D9BE",
       "#D3D4D2"
     ],
-    "order": 660
+    "order": 670
   },
   {
     "id": "candles-shkatulka-s-bantom",
@@ -3450,7 +3450,7 @@
       "#F9C0A1",
       "#F5CEAA"
     ],
-    "order": 670
+    "order": 680
   },
   {
     "id": "candles-roza-v-kashpo",
@@ -3572,7 +3572,7 @@
       "#ECDCD3",
       "#F9B5C6"
     ],
-    "order": 680
+    "order": 690
   },
   {
     "id": "candles-sushi-set",
@@ -3638,7 +3638,7 @@
       "#F9BC9E",
       "#EACFBE"
     ],
-    "order": 690
+    "order": 630
   },
   {
     "id": "candles-yabloko-so-zmeey",
