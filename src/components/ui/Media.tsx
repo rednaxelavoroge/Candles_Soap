@@ -28,6 +28,13 @@ export function Media({ image, sizes, priority = false, className, fit = "cover"
       priority={priority}
       placeholder="blur"
       blurDataURL={image.blurDataURL}
+      /*
+        objectFit дублируется в style не случайно: размытую заглушку на время
+        загрузки next/image рисует фоном и берёт режим именно из style, а не из
+        класса. Без этого в карточке товара заглушка растягивалась «с обрезкой»,
+        а потом фото резко перескакивало в «целиком».
+      */
+      style={{ objectFit: fit }}
       className={`${fit === "contain" ? "object-contain" : "object-cover"} ${className ?? ""}`}
       draggable={false}
     />
