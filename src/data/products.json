@@ -3808,7 +3808,7 @@
       "#F9B5A3",
       "#F9B5A3"
     ],
-    "order": 670
+    "order": 680
   },
   {
     "id": "candles-butylka-vina",
@@ -3846,7 +3846,7 @@
       "#F9BFAE",
       "#F9BAA9"
     ],
-    "order": 680,
+    "order": 690,
     "videos": [],
     "related": []
   },
@@ -3946,7 +3946,7 @@
       "#F9AF99",
       "#F9B8A0"
     ],
-    "order": 690
+    "order": 700
   },
   {
     "id": "candles-elka-zasnezhennaya",
@@ -4011,7 +4011,7 @@
       "#E3E0C4",
       "#D6D4C8"
     ],
-    "order": 700,
+    "order": 710,
     "videos": [],
     "related": []
   },
@@ -4100,7 +4100,7 @@
       "#E9E0B4",
       "#F9C1B3"
     ],
-    "order": 710,
+    "order": 670,
     "videos": [],
     "related": []
   },
