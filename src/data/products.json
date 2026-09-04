@@ -3764,7 +3764,7 @@
     "slug": "barelef-oval",
     "title": "Барельеф овальный",
     "article": "СВ-77",
-    "category": "candles",
+    "category": "sachet",
     "tags": [
       "women",
       "gift"
@@ -3808,7 +3808,9 @@
       "#F9B5A3",
       "#F9B5A3"
     ],
-    "order": 720
+    "order": 720,
+    "videos": [],
+    "related": []
   },
   {
     "id": "candles-butylka-vina",
