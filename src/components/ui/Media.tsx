@@ -6,6 +6,7 @@ type MediaProps = {
   sizes: string;
   priority?: boolean;
   className?: string;
+  fit?: "cover" | "contain";
 };
 
 /**
@@ -13,7 +14,7 @@ type MediaProps = {
  * position: relative, снимок растягивается по нему. Пока категория без обложки,
  * плитка остаётся песочным прямоугольником — макет не разъезжает.
  */
-export function Media({ image, sizes, priority = false, className }: MediaProps) {
+export function Media({ image, sizes, priority = false, className, fit = "cover" }: MediaProps) {
   if (!image) {
     return <div className="absolute inset-0 bg-sand" aria-hidden="true" />;
   }
@@ -27,7 +28,7 @@ export function Media({ image, sizes, priority = false, className }: MediaProps)
       priority={priority}
       placeholder="blur"
       blurDataURL={image.blurDataURL}
-      className={`object-cover ${className ?? ""}`}
+      className={`${fit === "contain" ? "object-contain" : "object-cover"} ${className ?? ""}`}
       draggable={false}
     />
   );

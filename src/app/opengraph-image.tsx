@@ -29,8 +29,26 @@ async function loadFont(family: string, weight: number): Promise<ArrayBuffer | n
     ).then((response) => response.text());
 
     const url = css.match(/src: url\((https:\/\/[^)]+)\)/)?.[1];
-    if (!url) return null;
-    return await fetch(url).then((response) => response.arrayBuffer());
+    if (url) {
+      return await fetch(url).then((response) => response.arrayBuffer());
+    }
+  } catch {
+    // Fall through to local fallback
+  }
+
+  try {
+    const fallbackPath = join(
+      process.cwd(),
+      "node_modules",
+      "next",
+      "dist",
+      "compiled",
+      "@vercel",
+      "og",
+      "noto-sans-v27-latin-regular.ttf",
+    );
+    const buf = await readFile(fallbackPath);
+    return buf.buffer.slice(buf.byteOffset, buf.byteOffset + buf.byteLength);
   } catch {
     return null;
   }

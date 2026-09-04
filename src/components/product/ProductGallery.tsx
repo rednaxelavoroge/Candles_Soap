@@ -88,15 +88,11 @@ export function ProductGallery({
     go(delta < 0 ? index + 1 : index - 1);
   };
 
-  const currentSlide = slides[index];
-  const currentPoster = currentSlide.kind === "image" ? currentSlide.image : currentSlide.poster;
-  const mainAspect = currentPoster?.width && currentPoster?.height
-    ? `${currentPoster.width} / ${currentPoster.height}`
-    : "4 / 5";
+
 
   return (
     <div className="flex flex-col gap-4">
-      {/* Главный крупный кадр */}
+      {/* Главный крупный кадр в квадратном формате (без обрезки вертикальных и горизонтальных фото) */}
       <div
         role="tabpanel"
         id={`slide-${index}`}
@@ -105,14 +101,13 @@ export function ProductGallery({
         onKeyDown={onKeyDown}
         onPointerDown={onPointerDown}
         onPointerUp={onPointerUp}
-        style={{ aspectRatio: mainAspect }}
-        className="relative w-full max-h-[70vh] touch-pan-y overflow-hidden rounded-2xl bg-sand/30 shadow-[0_4px_24px_rgba(62,43,32,0.06)] border border-sand/60 transition-all duration-500"
+        className="relative w-full aspect-square touch-pan-y overflow-hidden rounded-2xl bg-surface shadow-[0_4px_24px_rgba(62,43,32,0.06)] border border-sand/60 transition-all duration-500 flex items-center justify-center p-2 sm:p-4"
       >
         {slides.map((slide, slideIndex) => (
           <div
             key={slideIndex}
             aria-hidden={slideIndex !== index}
-            className={`absolute inset-0 transition-opacity duration-500 ease-out ${
+            className={`absolute inset-2 sm:inset-4 transition-opacity duration-500 ease-out ${
               slideIndex === index ? "opacity-100" : "pointer-events-none opacity-0"
             }`}
           >
@@ -120,6 +115,7 @@ export function ProductGallery({
               mounted.has(slideIndex) ? (
                 <Media
                   image={slide.image}
+                  fit="contain"
                   priority={slideIndex === 0}
                   sizes="(min-width: 1024px) 50vw, 100vw"
                 />
@@ -131,7 +127,7 @@ export function ProductGallery({
         ))}
       </div>
 
-      {/* Лента миниатюр с естественными пропорциями и скруглениями */}
+      {/* Лента миниатюр в квадратном формате с заполнением фоном */}
       {slides.length > 1 ? (
         <div
           role="tablist"
@@ -141,9 +137,6 @@ export function ProductGallery({
           {slides.map((slide, slideIndex) => {
             const selected = slideIndex === index;
             const poster = slide.kind === "image" ? slide.image : slide.poster;
-            const thumbAspect = poster?.width && poster?.height
-              ? `${poster.width} / ${poster.height}`
-              : "4 / 5";
 
             return (
               <button
@@ -153,14 +146,13 @@ export function ProductGallery({
                 aria-selected={selected}
                 aria-controls={`slide-${slideIndex}`}
                 onClick={() => go(slideIndex)}
-                style={{ aspectRatio: thumbAspect }}
-                className={`relative h-18 sm:h-20 shrink-0 overflow-hidden rounded-xl bg-sand transition-all duration-300 ${
+                className={`relative h-18 sm:h-20 aspect-square shrink-0 overflow-hidden rounded-xl bg-surface transition-all duration-300 p-1 ${
                   selected
                     ? "ring-2 ring-btn-brown opacity-100 shadow-md scale-105"
                     : "opacity-60 hover:opacity-100 hover:scale-102 border border-sand/60"
                 }`}
               >
-                <Media image={poster} sizes="120px" />
+                <Media image={poster} fit="contain" sizes="120px" />
                 {slide.kind === "video" ? <PlayBadge /> : null}
                 <span className="sr-only">
                   {slide.kind === "video" ? "Видео" : `Кадр ${slideIndex + 1}`}
@@ -234,7 +226,7 @@ function VideoSlide({ video, title }: { video: Video; title: string }) {
         sizes="(min-width: 768px) 50vw, 100vw"
         placeholder="blur"
         blurDataURL={video.poster.blurDataURL}
-        className="object-cover"
+        className="object-contain"
       />
       <span
         aria-hidden="true"
@@ -259,7 +251,7 @@ function VideoSlide({ video, title }: { video: Video; title: string }) {
           preload="metadata"
           poster={video.poster.src}
           onEnded={() => setStarted(false)}
-          className="h-full w-full object-cover"
+          className="h-full w-full object-contain"
         >
           <source src={video.src} type="video/mp4" />
           <source src={video.src.replace(/\.mp4$/, ".webm")} type="video/webm" />

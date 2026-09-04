@@ -584,6 +584,8 @@ export default function AdminPage() {
       if (!res.ok || !data.ok) {
         setProducts(before);
         alert(data.error || "Не удалось сохранить порядок");
+      } else {
+        showToast("✓ Новый порядок сохранён");
       }
     } catch {
       setProducts(before);
@@ -1155,11 +1157,77 @@ export default function AdminPage() {
               </button>
             </div>
 
-            <p className="mt-6 text-[0.7rem] leading-relaxed text-muted">
-              {canReorderProducts
-                ? "Порядок карточек здесь — это порядок изделий в разделе на сайте. Перетащите карточку мышью; на телефоне нажмите и подержите, потом ведите пальцем."
-                : "Чтобы менять порядок изделий, выберите один раздел в списке слева и очистите поиск — тогда карточки можно будет перетаскивать."}
-            </p>
+            {/* Быстрые переключатели галерей категорий */}
+            <div className="mt-5 flex flex-wrap items-center gap-2">
+              <button
+                type="button"
+                onClick={() => setCatFilter("candles")}
+                className={`rounded-full px-4 py-2 text-xs font-semibold tracking-wide transition-all ${
+                  catFilter === "candles"
+                    ? "btn-brown shadow-sm scale-102"
+                    : "bg-surface text-muted hover:text-ink border border-sand"
+                }`}
+              >
+                Галерея «Свечи» ({products.filter((p) => p.category === "candles").length})
+              </button>
+              <button
+                type="button"
+                onClick={() => setCatFilter("soap")}
+                className={`rounded-full px-4 py-2 text-xs font-semibold tracking-wide transition-all ${
+                  catFilter === "soap"
+                    ? "btn-brown shadow-sm scale-102"
+                    : "bg-surface text-muted hover:text-ink border border-sand"
+                }`}
+              >
+                Галерея «Мыло» ({products.filter((p) => p.category === "soap").length})
+              </button>
+              {categories
+                .filter((c) => c.slug !== "candles" && c.slug !== "soap")
+                .map((c) => (
+                  <button
+                    key={c.slug}
+                    type="button"
+                    onClick={() => setCatFilter(c.slug)}
+                    className={`rounded-full px-4 py-2 text-xs font-semibold tracking-wide transition-all ${
+                      catFilter === c.slug
+                        ? "btn-brown shadow-sm scale-102"
+                        : "bg-surface text-muted hover:text-ink border border-sand"
+                    }`}
+                  >
+                    Галерея «{c.title}» ({products.filter((p) => p.category === c.slug).length})
+                  </button>
+                ))}
+              <button
+                type="button"
+                onClick={() => setCatFilter("all")}
+                className={`rounded-full px-4 py-2 text-xs font-semibold tracking-wide transition-all ${
+                  catFilter === "all"
+                    ? "btn-brown shadow-sm scale-102"
+                    : "bg-surface text-muted hover:text-ink border border-sand"
+                }`}
+              >
+                Все изделия ({products.length})
+              </button>
+            </div>
+
+            {/* Информационный блок порядка в галерее */}
+            <div className="mt-3 rounded-xl border border-sand/60 bg-surface/70 px-4 py-3">
+              <p className="text-xs leading-relaxed text-ink font-medium">
+                {canReorderProducts ? (
+                  <>
+                    <span className="font-semibold text-accent">
+                      Галерея «{categories.find((c) => c.slug === catFilter)?.title || catFilter}» ({filteredProducts.length}):
+                    </span>{" "}
+                    Порядок карточек здесь в точности задаёт порядок изделий в галерее на сайте.
+                    Перетаскивайте карточки мышью (на телефоне — нажмите и подержите треть секунды, затем ведите) или используйте стрелки ↑ ↓. Порядок сохраняется сразу.
+                  </>
+                ) : (
+                  <span className="text-muted">
+                    Чтобы настраивать порядок отображения в галерее, нажмите кнопку нужной галереи выше («Свечи», «Мыло» и др.) и убедитесь, что поиск пуст.
+                  </span>
+                )}
+              </p>
+            </div>
 
             <div className="mt-3 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
               {filteredProducts.map((p, index) => {
