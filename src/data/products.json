@@ -35,7 +35,7 @@
     "specs": {},
     "tags": [],
     "related": [],
-    "order": 420
+    "order": 430
   },
   {
     "id": "p-1788383857432",
@@ -508,7 +508,7 @@
       "#F9CFB4",
       "#F9A79A"
     ],
-    "order": 450,
+    "order": 460,
     "videos": [],
     "related": []
   },
@@ -1677,7 +1677,7 @@
       "#EDD9E8",
       "#DAD2D0"
     ],
-    "order": 470
+    "order": 480
   },
   {
     "id": "candles-kukuruza",
@@ -2244,7 +2244,7 @@
       "#DBE88F",
       "#F9A59B"
     ],
-    "order": 430,
+    "order": 440,
     "videos": [],
     "related": []
   },
@@ -2305,7 +2305,7 @@
       "#E9E0B1",
       "#DED2C2"
     ],
-    "order": 440
+    "order": 450
   },
   {
     "id": "candles-zimnyaya-kartina",
@@ -2370,7 +2370,7 @@
       "#C9E6D7",
       "#C9D6D5"
     ],
-    "order": 460,
+    "order": 470,
     "videos": [],
     "related": []
   },
@@ -2508,7 +2508,7 @@
       "#D0E2EE",
       "#C9D5DE"
     ],
-    "order": 480
+    "order": 490
   },
   {
     "id": "candles-vyazanaya-svecha",
@@ -2546,7 +2546,7 @@
       "#E8DDD0",
       "#D6D3CF"
     ],
-    "order": 490
+    "order": 500
   },
   {
     "id": "candles-vitaya-svecha",
@@ -2583,7 +2583,7 @@
       "#F9AEA3",
       "#EBCEC1"
     ],
-    "order": 500
+    "order": 510
   },
   {
     "id": "candles-tsifry-goda",
@@ -2627,7 +2627,7 @@
       "#F9D1C8",
       "#D8D3CD"
     ],
-    "order": 510
+    "order": 520
   },
   {
     "id": "candles-rusalka",
@@ -3846,7 +3846,7 @@
       "#F9BFAE",
       "#F9BAA9"
     ],
-    "order": 520,
+    "order": 420,
     "videos": [],
     "related": []
   },
