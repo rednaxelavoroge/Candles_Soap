@@ -35,7 +35,7 @@
     "specs": {},
     "tags": [],
     "related": [],
-    "order": 720
+    "order": 620
   },
   {
     "id": "p-1788383857432",
@@ -3450,7 +3450,7 @@
       "#F9C0A1",
       "#F5CEAA"
     ],
-    "order": 620
+    "order": 630
   },
   {
     "id": "candles-roza-v-kashpo",
@@ -3572,7 +3572,7 @@
       "#ECDCD3",
       "#F9B5C6"
     ],
-    "order": 630
+    "order": 640
   },
   {
     "id": "candles-sushi-set",
@@ -3638,7 +3638,7 @@
       "#F9BC9E",
       "#EACFBE"
     ],
-    "order": 640
+    "order": 650
   },
   {
     "id": "candles-yabloko-so-zmeey",
@@ -3682,7 +3682,7 @@
       "#F9C6AD",
       "#F4CDB7"
     ],
-    "order": 650
+    "order": 660
   },
   {
     "id": "candles-rusalka-v-rakushke",
@@ -3719,7 +3719,7 @@
       "#C5E2F0",
       "#C1D8E1"
     ],
-    "order": 660
+    "order": 670
   },
   {
     "id": "candles-knizhnaya-stopka",
@@ -3757,7 +3757,7 @@
       "#F9B994",
       "#F9C094"
     ],
-    "order": 670
+    "order": 680
   },
   {
     "id": "candles-barelef-oval",
@@ -3808,7 +3808,7 @@
       "#F9B5A3",
       "#F9B5A3"
     ],
-    "order": 680
+    "order": 690
   },
   {
     "id": "candles-butylka-vina",
@@ -3846,7 +3846,7 @@
       "#F9BFAE",
       "#F9BAA9"
     ],
-    "order": 690,
+    "order": 700,
     "videos": [],
     "related": []
   },
@@ -3946,7 +3946,7 @@
       "#F9AF99",
       "#F9B8A0"
     ],
-    "order": 700
+    "order": 710
   },
   {
     "id": "candles-elka-zasnezhennaya",
@@ -4011,7 +4011,7 @@
       "#E3E0C4",
       "#D6D4C8"
     ],
-    "order": 710,
+    "order": 720,
     "videos": [],
     "related": []
   },
