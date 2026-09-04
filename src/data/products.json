@@ -508,7 +508,7 @@
       "#F9CFB4",
       "#F9A79A"
     ],
-    "order": 380,
+    "order": 370,
     "videos": [],
     "related": []
   },
@@ -1677,7 +1677,7 @@
       "#EDD9E8",
       "#DAD2D0"
     ],
-    "order": 300
+    "order": 390
   },
   {
     "id": "candles-kukuruza",
@@ -1951,7 +1951,7 @@
       "#CDE7BC",
       "#DED2C3"
     ],
-    "order": 310,
+    "order": 300,
     "videos": [],
     "related": []
   },
@@ -2023,7 +2023,7 @@
       "#EADAE7",
       "#EDACF0"
     ],
-    "order": 330,
+    "order": 320,
     "videos": [
       {
         "kind": "file",
@@ -2081,7 +2081,7 @@
       "#DAE892",
       "#F9A5A0"
     ],
-    "order": 320,
+    "order": 310,
     "videos": [],
     "related": []
   },
@@ -2148,7 +2148,7 @@
       "#D9E890",
       "#F9A59D"
     ],
-    "order": 340,
+    "order": 330,
     "videos": [],
     "related": []
   },
@@ -2187,7 +2187,7 @@
       "#F7C2F0",
       "#E5CFC7"
     ],
-    "order": 350,
+    "order": 340,
     "videos": [],
     "related": []
   },
@@ -2244,7 +2244,7 @@
       "#DBE88F",
       "#F9A59B"
     ],
-    "order": 360,
+    "order": 350,
     "videos": [],
     "related": []
   },
@@ -2305,7 +2305,7 @@
       "#E9E0B1",
       "#DED2C2"
     ],
-    "order": 370
+    "order": 360
   },
   {
     "id": "candles-zimnyaya-kartina",
@@ -2370,7 +2370,7 @@
       "#C9E6D7",
       "#C9D6D5"
     ],
-    "order": 390,
+    "order": 380,
     "videos": [],
     "related": []
   },
