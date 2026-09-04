@@ -3864,7 +3864,7 @@
       "#F9B7A6",
       "#F9ABA3"
     ],
-    "order": 20,
+    "order": 30,
     "videos": [],
     "related": []
   },
@@ -4431,7 +4431,7 @@
       "#BFE0F0",
       "#C7D6DB"
     ],
-    "order": 10
+    "order": 20
   },
   {
     "id": "soap-pryanichnyy-nabor",
@@ -4486,7 +4486,7 @@
       "#F2DAD3",
       "#E1D0CD"
     ],
-    "order": 30
+    "order": 40
   },
   {
     "id": "soap-konyak-i-stopka",
@@ -4541,7 +4541,7 @@
       "#F9C29B",
       "#F9C7A8"
     ],
-    "order": 40
+    "order": 10
   },
   {
     "id": "soap-nabor-dlya-malysha",
