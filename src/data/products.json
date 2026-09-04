@@ -1303,7 +1303,7 @@
       "#E1E2BA",
       "#C8D7D3"
     ],
-    "order": 510,
+    "order": 520,
     "videos": [],
     "related": []
   },
@@ -2715,7 +2715,7 @@
       "#CED3F0",
       "#D7D3D3"
     ],
-    "order": 500
+    "order": 510
   },
   {
     "id": "candles-kovboyskie-sapogi",
@@ -2812,7 +2812,7 @@
       "#F9B59D",
       "#F9C2B3"
     ],
-    "order": 530
+    "order": 540
   },
   {
     "id": "candles-karusel",
@@ -2885,7 +2885,7 @@
       "#F1DADA",
       "#F9B5CE"
     ],
-    "order": 540
+    "order": 550
   },
   {
     "id": "candles-medalon-s-tsvetami",
@@ -3682,7 +3682,7 @@
       "#F9C6AD",
       "#F4CDB7"
     ],
-    "order": 520
+    "order": 530
   },
   {
     "id": "candles-rusalka-v-rakushke",
@@ -3719,7 +3719,7 @@
       "#C5E2F0",
       "#C1D8E1"
     ],
-    "order": 550
+    "order": 500
   },
   {
     "id": "candles-knizhnaya-stopka",
