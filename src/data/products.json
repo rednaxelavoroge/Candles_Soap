@@ -2773,7 +2773,7 @@
       "#F0DBD2",
       "#E2D0CB"
     ],
-    "order": 470,
+    "order": 480,
     "videos": [],
     "related": []
   },
@@ -2812,7 +2812,7 @@
       "#F9B59D",
       "#F9C2B3"
     ],
-    "order": 480
+    "order": 490
   },
   {
     "id": "candles-karusel",
@@ -2885,7 +2885,7 @@
       "#F1DADA",
       "#F9B5CE"
     ],
-    "order": 490
+    "order": 500
   },
   {
     "id": "candles-medalon-s-tsvetami",
@@ -2922,7 +2922,7 @@
       "#B7C6F0",
       "#CFD2EA"
     ],
-    "order": 500
+    "order": 510
   },
   {
     "id": "candles-tsilindr-s-tyulpanami",
@@ -2988,7 +2988,7 @@
       "#F9B5AA",
       "#F6CBC3"
     ],
-    "order": 510,
+    "order": 520,
     "videos": [],
     "related": []
   },
@@ -3041,7 +3041,7 @@
       "#BADEF0",
       "#D5D3D4"
     ],
-    "order": 520
+    "order": 530
   },
   {
     "id": "candles-medvezhonok-s-podarkom",
@@ -3079,7 +3079,7 @@
       "#F9AF9D",
       "#F9AA92"
     ],
-    "order": 530
+    "order": 540
   },
   {
     "id": "candles-medvezhonok-s-karandashami",
@@ -3116,7 +3116,7 @@
       "#F9B094",
       "#F9AE7A"
     ],
-    "order": 540
+    "order": 550
   },
   {
     "id": "candles-utyata-v-vannochke",
@@ -3160,7 +3160,7 @@
       "#F4DCB7",
       "#E1D1C2"
     ],
-    "order": 550
+    "order": 560
   },
   {
     "id": "candles-serdtse-nyudovoe",
@@ -3205,7 +3205,7 @@
       "#F9D1B6",
       "#EBCFB9"
     ],
-    "order": 560
+    "order": 570
   },
   {
     "id": "candles-stakan-s-tsvetami",
@@ -4100,7 +4100,7 @@
       "#E9E0B4",
       "#F9C1B3"
     ],
-    "order": 570,
+    "order": 470,
     "videos": [],
     "related": []
   },
