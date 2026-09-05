@@ -109,7 +109,12 @@ export async function PUT(req: Request) {
         return NextResponse.json({ error: "Кадр не найден" }, { status: 404 });
       }
       const text = caption.trim() || "Мастерская";
-      const updated = list.map((item) => (mediaSrc(item) === src ? { ...item, caption: text } : item));
+      // Подпись — она же текст для поисковиков у кадра или обложки ролика.
+      const updated = list.map((item) => {
+        if (mediaSrc(item) !== src) return item;
+        if (item.kind === "image") return { ...item, caption: text, image: { ...item.image, alt: text } };
+        return { ...item, caption: text, poster: { ...item.poster, alt: text } };
+      });
       await saveJsonData(FILE, updated);
       return NextResponse.json({ ok: true, backstage: updated });
     }

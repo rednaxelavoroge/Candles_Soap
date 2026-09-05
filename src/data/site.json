@@ -26,5 +26,14 @@
     "title": "Избранное",
     "subtitle": "Популярные авторские работы: от свечей с деревянным фитилём до мыльных букетов",
     "ids": []
-  }
+  },
+  "gallery": [
+    {
+      "src": "/portrait.webp?v=65807cfb",
+      "width": 1078,
+      "height": 1460,
+      "blurDataURL": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAADwAQCdASoMABAAA4BaJYgCdAEXxWb5SMwA/rC1maFHZWzBYLVVpcnIG2Sgi3nbMZrHV06mO+qnrIrzZsd8YAZzcBb0tepWHLx+3qnJZ66eTkn4C0u/Xd8VaIw4tSA7q1fFcgAA",
+      "alt": "Анна Манасарян — в мастерской"
+    }
+  ]
 }

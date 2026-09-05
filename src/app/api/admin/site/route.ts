@@ -7,6 +7,10 @@ import { NextResponse } from "next/server";
 
 const FILE = "src/data/site.json";
 
+/** Заглушка размытия, если её не посчитали: схема требует непустую строку. */
+const BLANK_BLUR =
+  "data:image/webp;base64,UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEADsD+JaQAA3AAAAAA";
+
 function currentSite(): Promise<Site> {
   return loadJsonData<Site>(FILE, getSite());
 }
@@ -23,7 +27,8 @@ export async function POST(req: Request) {
 
   try {
     const body = await req.json();
-    const { owner, brand, tagline, intro, contacts, portraitData, featured, texts } = body;
+    const { owner, brand, tagline, intro, contacts, portraitData, portraitAlt, featured, texts, gallery, galleryData } =
+      body;
     const current = await currentSite();
 
     // Название сайта стоит в шапке, подвале и заголовке вкладки: пустым быть не может.
@@ -48,8 +53,46 @@ export async function POST(req: Request) {
         width: portraitData.width || 1200,
         height: portraitData.height || 1600,
         blurDataURL: portraitData.blurDataURL || "",
-        alt: `${owner || current.owner} — портрет`,
+        alt: (typeof portraitAlt === "string" && portraitAlt.trim()) || `${owner || current.owner} — портрет`,
       };
+    } else if (portrait && typeof portraitAlt === "string" && portraitAlt.trim()) {
+      // Подпись к фото для поисковиков правится и без замены самого фото.
+      portrait = { ...portrait, alt: portraitAlt.trim() };
+    }
+
+    /*
+      Фотографии внизу страницы «Обо мне». Из формы приходит список уже
+      стоящих (с их подписями и порядком) и отдельно новые файлы. Список не
+      пришёл — галерея остаётся прежней; пришёл пустой — блок с сайта уходит.
+    */
+    let nextGallery = current.gallery;
+    if (Array.isArray(gallery)) {
+      const kept = gallery
+        .filter((image) => image && typeof image.src === "string" && image.src)
+        .map((image) => ({
+          src: image.src as string,
+          width: Number(image.width) || 1200,
+          height: Number(image.height) || 1600,
+          blurDataURL: (image.blurDataURL as string) || BLANK_BLUR,
+          alt: (typeof image.alt === "string" && image.alt.trim()) || `${owner || current.owner} — в мастерской`,
+        }));
+      const added: typeof kept = [];
+      if (Array.isArray(galleryData)) {
+        for (let i = 0; i < galleryData.length; i++) {
+          const item = galleryData[i];
+          if (!item?.base64 || typeof item.base64 !== "string") continue;
+          const buffer = Buffer.from(item.base64.replace(/^data:image\/\w+;base64,/, ""), "base64");
+          const savedPath = await saveMediaFile(`about/gallery-${Date.now()}-${i + 1}.webp`, buffer, "image/webp");
+          added.push({
+            src: savedPath,
+            width: Number(item.width) || 1200,
+            height: Number(item.height) || 1600,
+            blurDataURL: item.blurDataURL || BLANK_BLUR,
+            alt: (typeof item.alt === "string" && item.alt.trim()) || `${owner || current.owner} — в мастерской`,
+          });
+        }
+      }
+      nextGallery = [...kept, ...added];
     }
 
     /*
@@ -64,6 +107,7 @@ export async function POST(req: Request) {
       tagline: typeof tagline === "string" ? tagline : current.tagline,
       intro: typeof intro === "string" ? intro : current.intro,
       portrait,
+      gallery: nextGallery,
       featured: featured ?? current.featured,
       // В файле остаётся только то, что отличается от исходных текстов сайта.
       texts:
@@ -76,6 +120,7 @@ export async function POST(req: Request) {
       },
     };
     if (updated.texts && Object.keys(updated.texts).length === 0) delete updated.texts;
+    if (updated.gallery && updated.gallery.length === 0) delete updated.gallery;
 
     await saveJsonData(FILE, updated);
     return NextResponse.json({ ok: true, site: updated });

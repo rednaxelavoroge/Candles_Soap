@@ -4,7 +4,7 @@ import { SiteTextsEditor } from "@/app/admin/SiteTextsEditor";
 import { optimizeImageClient } from "@/lib/image-optimizer";
 import { mediaUrl } from "@/lib/media-url";
 import { useDragOrder, withMoved } from "@/lib/use-drag-order";
-import type { BackstageItem, Category, Product, Tag, Video } from "@/lib/schemas";
+import type { BackstageItem, Category, ContentImage, Product, Tag, Video } from "@/lib/schemas";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -45,7 +45,9 @@ export default function AdminPage() {
     brand: "",
     tagline: "",
     intro: "",
-    portrait: { src: "" },
+    portrait: { src: "", alt: "" },
+    // Фотографии внизу страницы «Обо мне».
+    gallery: [] as ContentImage[],
     // Изменённые тексты сайта (реестр — src/lib/site-texts.ts).
     texts: {} as Record<string, string>,
     // Лента «Избранного» на главной: своё название, своя подпись, свой состав.
@@ -82,7 +84,11 @@ export default function AdminPage() {
   const [uploadingImage, setUploadingImage] = useState(false);
   const [imageStats, setImageStats] = useState<string | null>(null);
   const [newImagesData, setNewImagesData] = useState<
-    Array<{ base64: string; width: number; height: number; blurDataURL: string }>
+    Array<{ base64: string; width: number; height: number; blurDataURL: string; alt?: string }>
+  >([]);
+  // Новые фотографии для галереи на странице «Обо мне» — до нажатия «Сохранить все тексты».
+  const [newGalleryData, setNewGalleryData] = useState<
+    Array<{ base64: string; width: number; height: number; blurDataURL: string; alt: string }>
   >([]);
 
   // Редактирование / Создание категории
@@ -146,6 +152,7 @@ export default function AdminPage() {
   const [editingCaption, setEditingCaption] = useState("");
   // Раздел каталога: снять обложку при сохранении
   const [removeCategoryCover, setRemoveCategoryCover] = useState(false);
+  const [categoryCoverAlt, setCategoryCoverAlt] = useState("");
   const [savingTexts, setSavingTexts] = useState(false);
   // Создание подраздела там же, не открывая изделие
   const [sectionTagTitle, setSectionTagTitle] = useState("");
@@ -207,6 +214,8 @@ export default function AdminPage() {
             setSiteData({
               ...s.site,
               brand: s.site.brand || "",
+              portrait: s.site.portrait || { src: "", alt: "" },
+              gallery: s.site.gallery || [],
               texts: s.site.texts || {},
               featured: {
                 enabled: true,
@@ -360,6 +369,7 @@ export default function AdminPage() {
           category: editCategory,
           coverData: newCategoryCover,
           removeCover: removeCategoryCover && !newCategoryCover,
+          coverAlt: categoryCoverAlt,
         }),
       });
       const data = await res.json();
@@ -988,6 +998,9 @@ export default function AdminPage() {
           intro: siteData.intro,
           texts: siteData.texts,
           portraitData: newPortraitData,
+          portraitAlt: siteData.portrait?.alt || "",
+          gallery: siteData.gallery,
+          galleryData: newGalleryData,
         }),
       });
       const saved = await res.json().catch(() => null);
@@ -998,10 +1011,12 @@ export default function AdminPage() {
           setSiteData((prev) => ({
             ...prev,
             portrait: saved.site.portrait ?? prev.portrait,
+            gallery: saved.site.gallery || [],
             texts: saved.site.texts || {},
           }));
         }
         setNewPortraitData(null);
+        setNewGalleryData([]);
         showToast("✓ Тексты сохранены. На сайте обновятся через несколько минут");
       } else {
         alert(saved?.error || "Не удалось сохранить. Попробуйте ещё раз.");
@@ -1591,6 +1606,7 @@ export default function AdminPage() {
                   });
                   setNewCategoryCover(null);
                   setRemoveCategoryCover(false);
+                  setCategoryCoverAlt("");
                   setIsCategoryModalOpen(true);
                 }}
                 type="button"
@@ -1654,6 +1670,7 @@ export default function AdminPage() {
                         setEditCategory(cat);
                         setNewCategoryCover(null);
                         setRemoveCategoryCover(false);
+                        setCategoryCoverAlt(cat.cover?.alt || "");
                         setIsCategoryModalOpen(true);
                       }}
                       className="rounded-full border border-sand px-4 py-1.5 text-xs font-medium text-btn-brown hover:bg-sand/30 transition-colors"
@@ -2014,6 +2031,147 @@ export default function AdminPage() {
                     ) : null}
                   </div>
                 </div>
+              </div>
+
+              <div>
+                <label className="block text-xs font-semibold uppercase tracking-wider text-muted mb-1">
+                  Подпись портрета для поисковиков
+                </label>
+                <input
+                  type="text"
+                  value={siteData.portrait?.alt || ""}
+                  onChange={(e) =>
+                    setSiteData({ ...siteData, portrait: { ...siteData.portrait, alt: e.target.value } })
+                  }
+                  placeholder={`${siteData.owner || "Анна Манасарян"} — портрет`}
+                  className="w-full rounded-xl border border-sand bg-bg/50 px-4 py-2.5 text-xs text-ink focus:border-btn-brown focus:outline-none"
+                />
+                <p className="mt-1 text-[0.7rem] text-muted">
+                  На странице не видна: её читают Google и Яндекс и те, кому картинки не показываются.
+                </p>
+              </div>
+
+              {/* Фотографии внизу страницы «Обо мне» */}
+              <div className="rounded-2xl border border-dashed border-sand bg-bg/30 p-4">
+                <label className="block text-xs font-semibold uppercase tracking-wider text-ink mb-1">
+                  Фотографии на странице «Обо мне»
+                </label>
+                <p className="mb-3 text-[0.7rem] leading-relaxed text-muted">
+                  Стоят внизу страницы «Обо мне» кладкой, под надписью «В мастерской и на съёмке»
+                  (саму надпись можно поменять в «Все надписи сайта»). Если фотографий нет, блока на
+                  странице нет. Всё записывается кнопкой «Сохранить все тексты» внизу.
+                </p>
+                <input
+                  type="file"
+                  multiple
+                  accept="image/*"
+                  onChange={async (e) => {
+                    const files = e.target.files;
+                    if (!files || files.length === 0) return;
+                    const added: typeof newGalleryData = [];
+                    for (let i = 0; i < files.length; i++) {
+                      const opt = await optimizeImageClient(files[i], 1600, 0.85);
+                      added.push({
+                        base64: opt.dataUrl,
+                        width: opt.width,
+                        height: opt.height,
+                        blurDataURL: opt.blurDataURL,
+                        alt: "",
+                      });
+                    }
+                    setNewGalleryData((prev) => [...prev, ...added]);
+                    e.target.value = "";
+                  }}
+                  className="text-xs text-muted file:mr-3 file:rounded-full file:border-0 file:btn-brown file:px-4 file:py-2 file:text-xs file:font-semibold"
+                />
+                <div className="mt-3 flex flex-wrap gap-3">
+                  {siteData.gallery.map((img, i) => (
+                    <div key={`${img.src}-${i}`} className="w-24">
+                      <div className="relative h-24 w-24 overflow-hidden rounded-lg border border-sand">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img src={mediaUrl(img.src)} alt="" className="h-full w-full object-cover" />
+                        <button
+                          type="button"
+                          onClick={() =>
+                            setSiteData({ ...siteData, gallery: siteData.gallery.filter((_, idx) => idx !== i) })
+                          }
+                          aria-label="Убрать фотографию"
+                          className="absolute top-0.5 right-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-ink/75 text-[0.7rem] leading-none text-white hover:bg-red-600"
+                        >
+                          ✕
+                        </button>
+                      </div>
+                      <div className="mt-1 flex items-center justify-center gap-1">
+                        <button
+                          type="button"
+                          onClick={() =>
+                            setSiteData({ ...siteData, gallery: withMoved(siteData.gallery, i, i - 1) })
+                          }
+                          disabled={i === 0}
+                          aria-label="Переставить левее"
+                          className="rounded px-1.5 py-0.5 text-[0.7rem] text-muted hover:text-ink disabled:opacity-30"
+                        >
+                          ←
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() =>
+                            setSiteData({ ...siteData, gallery: withMoved(siteData.gallery, i, i + 1) })
+                          }
+                          disabled={i === siteData.gallery.length - 1}
+                          aria-label="Переставить правее"
+                          className="rounded px-1.5 py-0.5 text-[0.7rem] text-muted hover:text-ink disabled:opacity-30"
+                        >
+                          →
+                        </button>
+                      </div>
+                      <input
+                        type="text"
+                        value={img.alt || ""}
+                        onChange={(e) => {
+                          const gallery = [...siteData.gallery];
+                          gallery[i] = { ...gallery[i], alt: e.target.value };
+                          setSiteData({ ...siteData, gallery });
+                        }}
+                        placeholder="подпись для поисковиков"
+                        className="mt-1 w-24 rounded border border-sand bg-bg/50 px-1 py-0.5 text-[0.6rem] text-ink focus:border-btn-brown focus:outline-none"
+                      />
+                    </div>
+                  ))}
+                  {newGalleryData.map((img, i) => (
+                    <div key={`new-${i}`} className="w-24">
+                      <div className="relative h-24 w-24 overflow-hidden rounded-lg border-2 border-btn-brown">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img src={img.base64} alt="" className="h-full w-full object-cover" />
+                        <button
+                          type="button"
+                          onClick={() => setNewGalleryData((prev) => prev.filter((_, idx) => idx !== i))}
+                          aria-label="Убрать новую фотографию"
+                          className="absolute top-0.5 right-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-ink/75 text-[0.7rem] leading-none text-white hover:bg-red-600"
+                        >
+                          ✕
+                        </button>
+                        <span className="absolute bottom-0 left-0 right-0 bg-btn-brown px-1 py-0.5 text-center text-[0.5rem] font-semibold uppercase text-white">
+                          Новое
+                        </span>
+                      </div>
+                      <input
+                        type="text"
+                        value={img.alt}
+                        onChange={(e) =>
+                          setNewGalleryData((prev) =>
+                            prev.map((item, idx) => (idx === i ? { ...item, alt: e.target.value } : item)),
+                          )
+                        }
+                        placeholder="подпись для поисковиков"
+                        className="mt-1 w-24 rounded border border-sand bg-bg/50 px-1 py-0.5 text-[0.6rem] text-ink focus:border-btn-brown focus:outline-none"
+                      />
+                    </div>
+                  ))}
+                </div>
+                {siteData.gallery.length + newGalleryData.length === 0 ? (
+                  <p className="mt-2 text-[0.7rem] text-muted">Фотографий пока нет — блока на странице «Обо мне» не будет.</p>
+                ) : null}
               </div>
 
               <div className="mt-2 border-t border-sand/60 pt-6">
@@ -3057,6 +3215,24 @@ export default function AdminPage() {
                     ) : null}
                   </div>
                 </div>
+                {(editCategory.cover?.src && !removeCategoryCover) || newCategoryCover ? (
+                  <div className="mt-3">
+                    <label className="block text-[0.7rem] font-semibold uppercase tracking-wider text-muted mb-1">
+                      Подпись обложки для поисковиков
+                    </label>
+                    <input
+                      type="text"
+                      value={categoryCoverAlt}
+                      onChange={(e) => setCategoryCoverAlt(e.target.value)}
+                      placeholder={editCategory.title || "Например: Свечи ручной работы"}
+                      className="w-full rounded-xl border border-sand bg-bg/50 px-4 py-2.5 text-xs text-ink focus:border-btn-brown focus:outline-none"
+                    />
+                    <p className="mt-1 text-[0.7rem] text-muted">
+                      На странице не видна: её читают Google и Яндекс и те, кому картинки не
+                      показываются. Пустое поле — подставится название раздела.
+                    </p>
+                  </div>
+                ) : null}
               </div>
 
               </div>
@@ -3444,6 +3620,19 @@ export default function AdminPage() {
                           →
                         </button>
                       </div>
+                      <input
+                        type="text"
+                        value={img.alt || ""}
+                        onChange={(e) => {
+                          const images = [...(editProduct.images || [])];
+                          images[i] = { ...images[i], alt: e.target.value };
+                          setEditProduct({ ...editProduct, images });
+                        }}
+                        onPointerDown={(e) => e.stopPropagation()}
+                        placeholder="подпись для поисковиков"
+                        title="Подпись фото для поисковиков. Пустая — подставится название изделия."
+                        className="mt-1 w-20 rounded border border-sand bg-bg/50 px-1 py-0.5 text-[0.6rem] text-ink focus:border-btn-brown focus:outline-none"
+                      />
                     </div>
                   ))}
 
@@ -3466,9 +3655,25 @@ export default function AdminPage() {
                           Новое
                         </span>
                       </div>
+                      <input
+                        type="text"
+                        value={img.alt || ""}
+                        onChange={(e) =>
+                          setNewImagesData((prev) =>
+                            prev.map((item, idx) => (idx === i ? { ...item, alt: e.target.value } : item)),
+                          )
+                        }
+                        placeholder="подпись для поисковиков"
+                        title="Подпись фото для поисковиков. Пустая — подставится название изделия."
+                        className="mt-1 w-20 rounded border border-sand bg-bg/50 px-1 py-0.5 text-[0.6rem] text-ink focus:border-btn-brown focus:outline-none"
+                      />
                     </div>
                   ))}
                 </div>
+                <p className="mt-2 text-[0.7rem] leading-relaxed text-muted">
+                  Поле под каждым снимком — подпись для поисковиков: на странице не видна, её
+                  читают Google и Яндекс. Пустая — подставится название изделия.
+                </p>
 
                 {(editProduct.images?.length ?? 0) + newImagesData.length === 0 ? (
                   <p className="mt-3 text-[0.7rem] text-red-500">

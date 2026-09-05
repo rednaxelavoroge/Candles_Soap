@@ -23,7 +23,8 @@ export async function POST(req: Request) {
 
   try {
     const body = await req.json();
-    const { category, coverData, removeCover } = body;
+    const { category, coverData, removeCover, coverAlt } = body;
+    const cleanCoverAlt = typeof coverAlt === "string" ? coverAlt.trim() : "";
 
     if (!category || !category.title) {
       return NextResponse.json({ error: "Не указано название раздела" }, { status: 400 });
@@ -64,8 +65,11 @@ export async function POST(req: Request) {
         width: coverData.width || 1200,
         height: coverData.height || 1200,
         blurDataURL: coverData.blurDataURL || "",
-        alt: category.title,
+        alt: cleanCoverAlt || category.title,
       };
+    } else if (finalCover && cleanCoverAlt) {
+      // Подпись к обложке для поисковиков — без замены самой обложки.
+      finalCover = { ...finalCover, alt: cleanCoverAlt };
     }
 
     const targetCategory: Category = {

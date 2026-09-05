@@ -20,6 +20,7 @@ export default function AboutPage() {
   const extra = getText("about.extra");
   const whatsappButton = getText("about.whatsappButton");
   const catalogButton = getText("about.catalogButton");
+  const galleryEyebrow = getText("about.galleryEyebrow");
 
   return (
     <div className="pt-24 md:pt-32">
@@ -87,7 +88,7 @@ export default function AboutPage() {
         // и горизонтальные вперемешку, и подгонять их под одну форму значит
         // обрезать то, ради чего кадр снят.
         <section className="mt-20 px-5 md:mt-28 md:px-8">
-          <span className="eyebrow">В мастерской и на съёмке</span>
+          {galleryEyebrow ? <span className="eyebrow">{galleryEyebrow}</span> : null}
           <div className="mt-6 columns-2 gap-3.5 md:columns-3 md:gap-6 [column-fill:_balance]">
             {site.gallery.map((image, index) => (
               <div
