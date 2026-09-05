@@ -1,7 +1,8 @@
 "use client";
 
 import { Media } from "@/components/ui/Media";
-import { getCategories, getProductsByCategory } from "@/lib/content";
+import { getCategories, getProductsByCategory, getText } from "@/lib/content";
+import { pluralItems } from "@/lib/plural";
 import type { Category } from "@/lib/schemas";
 import { useReveal } from "@/lib/use-reveal";
 import { motion, useReducedMotion } from "framer-motion";
@@ -75,12 +76,12 @@ function CatalogSectionItem({
               href={`/catalog/${category.slug}`}
               className="group inline-flex items-center gap-2.5 rounded-full btn-brown-outline px-7 py-3 text-xs font-semibold tracking-[0.03em]"
             >
-              <span>Смотреть изделия</span>
+              <span>{getText("catalog.viewButton")}</span>
               <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
             </Link>
             {count > 0 ? (
               <span className="text-xs tracking-wider text-muted">
-                {count} {count === 1 ? "изделие" : count < 5 ? "изделия" : "изделий"}
+                {count} {pluralItems(count)}
               </span>
             ) : null}
           </div>
@@ -111,7 +112,7 @@ function CatalogSectionItem({
               </div>
               <div className="absolute inset-0 flex items-center justify-center bg-ink/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100 backdrop-blur-[1px]">
                 <span className="rounded-full bg-white/95 px-6 py-2.5 text-xs font-semibold tracking-[0.03em] text-ink shadow-md backdrop-blur-sm">
-                  Открыть раздел →
+                  {getText("catalog.openOverlay")} →
                 </span>
               </div>
             </Link>

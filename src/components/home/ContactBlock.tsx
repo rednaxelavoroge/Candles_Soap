@@ -1,12 +1,15 @@
-import { getSite } from "@/lib/content";
-import { getSiteName, telHref, whatsappHref } from "@/lib/contacts";
+import { getSite, getText } from "@/lib/content";
+import { generalEnquiry, telHref, whatsappWith } from "@/lib/contacts";
 import Link from "next/link";
 
 export function ContactBlock() {
   const { contacts } = getSite();
-  const whatsapp = whatsappHref(
-    `Здравствуйте! Пишу с сайта ${getSiteName()} — хочу уточнить по поводу изделий ручной работы.`,
-  );
+  const whatsapp = whatsappWith(generalEnquiry());
+  const eyebrow = getText("home.contacts.eyebrow");
+  const title = getText("home.contacts.title");
+  const lead = getText("home.contacts.lead");
+  const allLink = getText("home.contacts.allLink");
+  const whatsappButton = getText("common.whatsappButton");
 
   return (
     <section
@@ -15,19 +18,23 @@ export function ContactBlock() {
       aria-labelledby="contacts-heading"
     >
       <div className="relative z-10 mx-auto max-w-[1500px]">
-        <span className="eyebrow">Контакты и заказ</span>
-        <h2 id="contacts-heading" className="mt-3 max-w-3xl font-display text-3xl leading-tight text-ink md:text-5xl lg:text-6xl">
-          Повторю любую вещь в вашем цвете и аромате
-        </h2>
-        <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted md:text-lg">
-          Напишите мне лично — обсудим детали заказа, подберём форму, цветовую гамму и ароматы.
-        </p>
+        {eyebrow ? <span className="eyebrow">{eyebrow}</span> : null}
+        {title ? (
+          <h2 id="contacts-heading" className="mt-3 max-w-3xl font-display text-3xl leading-tight text-ink md:text-5xl lg:text-6xl">
+            {title}
+          </h2>
+        ) : null}
+        {lead ? (
+          <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted md:text-lg">
+            {lead}
+          </p>
+        ) : null}
 
         <div className="mt-12 flex flex-col gap-10 md:mt-14 md:flex-row md:items-end md:justify-between">
           <ul className="flex flex-col gap-6 md:flex-row md:gap-12">
             {contacts.phone ? (
               <li>
-                <span className="eyebrow block">Телефон (Армения)</span>
+                <span className="eyebrow block">{getText("contacts.labelPhoneArmenia")}</span>
                 <a
                   href={telHref(contacts.phone)}
                   className="link-underline mt-1 inline-block text-lg font-medium text-ink md:text-xl"
@@ -39,7 +46,7 @@ export function ContactBlock() {
 
             {contacts.phoneRussia ? (
               <li>
-                <span className="eyebrow block">Телефон (Россия)</span>
+                <span className="eyebrow block">{getText("contacts.labelPhoneRussia")}</span>
                 <a
                   href={telHref(contacts.phoneRussia)}
                   className="link-underline mt-1 inline-block text-lg font-medium text-ink md:text-xl"
@@ -64,24 +71,26 @@ export function ContactBlock() {
             ) : null}
           </ul>
 
-          {whatsapp ? (
+          {whatsapp && whatsappButton ? (
             <a
               href={whatsapp}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex shrink-0 items-center justify-center gap-3 rounded-full btn-brown px-9 py-4 text-xs font-semibold tracking-[0.04em] shadow-md"
             >
-              <span>Написать в WhatsApp</span>
+              <span>{whatsappButton}</span>
               <span>→</span>
             </a>
           ) : null}
         </div>
 
-        <div className="mt-12 flex items-center gap-6">
-          <Link href="/contacts" className="link-underline text-sm font-medium text-muted hover:text-ink">
-            Все контактные данные →
-          </Link>
-        </div>
+        {allLink ? (
+          <div className="mt-12 flex items-center gap-6">
+            <Link href="/contacts" className="link-underline text-sm font-medium text-muted hover:text-ink">
+              {allLink} →
+            </Link>
+          </div>
+        ) : null}
       </div>
     </section>
   );

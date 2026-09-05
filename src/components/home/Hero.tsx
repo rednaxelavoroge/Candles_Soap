@@ -1,10 +1,12 @@
-import { getSite } from "@/lib/content";
+import { getSite, getText } from "@/lib/content";
 import Image from "next/image";
 import Link from "next/link";
 
 export function Hero() {
   const site = getSite();
   const portrait = site.portrait;
+  const catalogButton = getText("home.hero.catalogButton");
+  const aboutButton = getText("home.hero.aboutButton");
 
   return (
     <section className="relative flex min-h-svh w-full flex-col justify-center overflow-hidden bg-bg">
@@ -40,21 +42,27 @@ export function Hero() {
             {site.tagline}
           </p>
 
-          <div className="mt-6 flex flex-wrap justify-center md:justify-start items-center gap-3.5">
-            <a
-              href="#catalog"
-              className="inline-flex items-center gap-2.5 rounded-full btn-brown px-7 py-3 text-xs font-semibold tracking-[0.03em] shadow-md"
-            >
-              <span>Смотреть каталог</span>
-              <span>↓</span>
-            </a>
-            <Link
-              href="/about"
-              className="inline-flex items-center gap-2 rounded-full btn-brown-outline px-6 py-3 text-xs font-semibold tracking-[0.03em]"
-            >
-              О мастере
-            </Link>
-          </div>
+          {catalogButton || aboutButton ? (
+            <div className="mt-6 flex flex-wrap justify-center md:justify-start items-center gap-3.5">
+              {catalogButton ? (
+                <a
+                  href="#catalog"
+                  className="inline-flex items-center gap-2.5 rounded-full btn-brown px-7 py-3 text-xs font-semibold tracking-[0.03em] shadow-md"
+                >
+                  <span>{catalogButton}</span>
+                  <span>↓</span>
+                </a>
+              ) : null}
+              {aboutButton ? (
+                <Link
+                  href="/about"
+                  className="inline-flex items-center gap-2 rounded-full btn-brown-outline px-6 py-3 text-xs font-semibold tracking-[0.03em]"
+                >
+                  {aboutButton}
+                </Link>
+              ) : null}
+            </div>
+          ) : null}
         </div>
       </div>
     </section>

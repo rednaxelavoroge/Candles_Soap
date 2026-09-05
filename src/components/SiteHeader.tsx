@@ -1,20 +1,17 @@
 "use client";
 
-import { getSite } from "@/lib/content";
+import { getSite, getText } from "@/lib/content";
 import { whatsappHref } from "@/lib/contacts";
+import { getNav } from "@/lib/nav";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-const NAV = [
-  { href: "/catalog", label: "Каталог" },
-  { href: "/backstage", label: "Бэкстейдж" },
-  { href: "/about", label: "О мастере" },
-  { href: "/contacts", label: "Контакты" },
-];
-
 export function SiteHeader() {
   const site = getSite();
-  const whatsapp = whatsappHref() || (site.contacts.whatsapp ? `https://wa.me/${site.contacts.whatsapp.replace(/\D/g, "")}` : "https://wa.me/37498033550");
+  const NAV = getNav();
+  // Номера в коде нет: без WhatsApp в панели кнопки просто не будет.
+  const whatsapp = whatsappHref();
+  const whatsappButton = getText("common.whatsappButton");
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -73,14 +70,16 @@ export function SiteHeader() {
               {item.label}
             </Link>
           ))}
-          <a
-            href={whatsapp}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-full btn-brown px-5 py-2 text-xs font-semibold tracking-[0.02em]"
-          >
-            WhatsApp
-          </a>
+          {whatsapp ? (
+            <a
+              href={whatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full btn-brown px-5 py-2 text-xs font-semibold tracking-[0.02em]"
+            >
+              WhatsApp
+            </a>
+          ) : null}
         </nav>
 
         <button
@@ -129,17 +128,19 @@ export function SiteHeader() {
               </Link>
             ))}
             
-            <div className="pt-6">
-              <a
-                href={whatsapp}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => setOpen(false)}
-                className="inline-flex w-full items-center justify-center rounded-full btn-brown py-4 text-center text-xs font-semibold tracking-[0.03em] shadow-md"
-              >
-                Написать в WhatsApp →
-              </a>
-            </div>
+            {whatsapp && whatsappButton ? (
+              <div className="pt-6">
+                <a
+                  href={whatsapp}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setOpen(false)}
+                  className="inline-flex w-full items-center justify-center rounded-full btn-brown py-4 text-center text-xs font-semibold tracking-[0.03em] shadow-md"
+                >
+                  {whatsappButton} →
+                </a>
+              </div>
+            ) : null}
           </nav>
         </div>
       ) : null}

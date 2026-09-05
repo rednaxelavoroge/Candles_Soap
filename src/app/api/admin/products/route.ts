@@ -1,10 +1,28 @@
 import { checkAdminAuth } from "@/lib/admin-auth";
 import { loadJsonData, saveJsonData, saveMediaFile } from "@/lib/data-storage";
 import { getCategories, getProducts, getTags } from "@/lib/content";
-import type { Category, Product, Tag } from "@/lib/schemas";
+import type { Category, Product, Tag, Video } from "@/lib/schemas";
 import { NextResponse } from "next/server";
 
 const FILE = "src/data/products.json";
+
+const TRANSLIT: Record<string, string> = {
+  а: "a", б: "b", в: "v", г: "g", д: "d", е: "e", ё: "e", ж: "zh", з: "z",
+  и: "i", й: "y", к: "k", л: "l", м: "m", н: "n", о: "o", п: "p", р: "r",
+  с: "s", т: "t", у: "u", ф: "f", х: "h", ц: "ts", ч: "ch", ш: "sh", щ: "sch",
+  ъ: "", ы: "y", ь: "", э: "e", ю: "yu", я: "ya",
+};
+
+/** Адрес изделия из названия — латиницей, как делают панель и роут подразделов. */
+function toSlug(title: string): string {
+  return title
+    .toLowerCase()
+    .split("")
+    .map((ch) => TRANSLIT[ch] ?? ch)
+    .join("")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+}
 
 function currentProductsList(): Promise<Product[]> {
   return loadJsonData<Product[]>(FILE, getProducts());
@@ -77,13 +95,9 @@ export async function POST(req: Request) {
       );
     }
 
-    const newSlug =
-      product.slug ||
-      product.title
-        .toLowerCase()
-        .replace(/[^a-z0-9а-яё]/gi, "-")
-        .replace(/-+/g, "-")
-        .replace(/^-|-$/g, "");
+    // Адрес — латиницей: кириллица в ссылке превращается в проценты и не читается.
+    let newSlug = product.slug || toSlug(product.title);
+    if (!newSlug) newSlug = `izdelie-${Date.now()}`;
 
     // Адрес страницы правится вручную, поэтому проверяем, что он не занят
     // соседом по категории: два изделия по одному адресу открыть нельзя.
@@ -102,20 +116,25 @@ export async function POST(req: Request) {
     // командой `npm run tones`: заново их взять неоткуда, а форма о них не знает.
     const existing = currentProducts.find((p) => p.id === product.id);
 
-    // Постер видео всегда держим на первой фотографии: сама она могла быть
-    // удалена или переставлена, а ссылка на неё осталась бы в ролике.
-    // Роликов может быть несколько. Постер каждому держим на первой
-    // фотографии: сама она могла быть удалена или переставлена, а ссылка на
-    // неё осталась бы в ролике.
-    const incoming = Array.isArray(product.videos)
+    /*
+      Обложка ролика. Раньше её всегда подменяли первой фотографией — и
+      обложка, выбранная в панели из архива, молча терялась. Теперь своя
+      обложка остаётся; первая фотография подставляется только тем роликам,
+      у которых обложки нет или она указывает на удалённый кадр.
+    */
+    const incoming: Video[] = Array.isArray(product.videos)
       ? product.videos
       : product.video
         ? [product.video]
         : [];
-    const videos = incoming.map((item: { poster?: unknown }) => ({
-      ...item,
-      poster: processedImages[0],
-    }));
+    const stillPresent = new Set(processedImages.map((image) => image.src));
+    const videos: Video[] = incoming.map((item) => {
+      const own = item.poster;
+      const ownIsProductImage = own && stillPresent.has(own.src);
+      const ownIsExternal = own && own.src && !own.src.startsWith(`/catalog/${product.category}/`);
+      const poster = own && own.src && (ownIsProductImage || ownIsExternal) ? own : processedImages[0];
+      return { ...item, poster: { ...poster, blurDataURL: poster.blurDataURL || processedImages[0].blurDataURL } };
+    });
     // Прежнее одиночное поле держим в согласии со списком: по нему читают
     // данные, сохранённые до этой правки.
     const video = videos[0] ?? null;

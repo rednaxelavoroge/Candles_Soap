@@ -1,9 +1,11 @@
 import { Media } from "@/components/ui/Media";
-import { getHeroSlides, getSite } from "@/lib/content";
+import { getHeroSlides, getSite, getText } from "@/lib/content";
 import Link from "next/link";
 
 export function AboutTeaser() {
   const site = getSite();
+  const eyebrow = getText("home.about.eyebrow");
+  const button = getText("home.about.button");
 
   return (
     <section
@@ -22,22 +24,24 @@ export function AboutTeaser() {
         </div>
 
         <div className="flex flex-col items-start">
-          <span className="eyebrow">О мастере</span>
+          {eyebrow ? <span className="eyebrow">{eyebrow}</span> : null}
           <h2 id="about-heading" className="mt-3 font-display text-3xl leading-tight text-ink sm:text-4xl md:text-5xl lg:text-6xl">
             {site.owner}
           </h2>
           <p className="mt-6 max-w-prose text-base leading-relaxed text-muted md:text-lg">
             {site.intro}
           </p>
-          <div className="mt-9 flex items-center gap-6">
-            <Link
-              href="/about"
-              className="inline-flex items-center gap-2.5 rounded-full btn-brown px-8 py-3.5 text-xs font-semibold tracking-[0.04em] shadow-md"
-            >
-              <span>Подробнее обо мне</span>
-              <span>→</span>
-            </Link>
-          </div>
+          {button ? (
+            <div className="mt-9 flex items-center gap-6">
+              <Link
+                href="/about"
+                className="inline-flex items-center gap-2.5 rounded-full btn-brown px-8 py-3.5 text-xs font-semibold tracking-[0.04em] shadow-md"
+              >
+                <span>{button}</span>
+                <span>→</span>
+              </Link>
+            </div>
+          ) : null}
         </div>
       </div>
     </section>

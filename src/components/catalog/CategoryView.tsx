@@ -2,7 +2,7 @@
 
 import { ProductGrid } from "@/components/catalog/ProductGrid";
 import { DragScroller } from "@/components/ui/DragScroller";
-import type { Section } from "@/lib/content";
+import { getText, type Section } from "@/lib/content";
 import { pluralItems } from "@/lib/plural";
 import type { Category, Product, Tag } from "@/lib/schemas";
 import { motion } from "framer-motion";
@@ -46,13 +46,21 @@ export function CategoryView({
     .filter((t) => selectedTags.includes(t.slug))
     .map((t) => t.title);
 
+  // Описание подраздела из панели показываем, когда выбран ровно один.
+  const selectedDescription =
+    selectedTags.length === 1
+      ? sections.find((section) => section.slug === selectedTags[0])?.description
+      : undefined;
+  const filtersEyebrow = getText("category.filtersEyebrow");
+  const allLabel = getText("category.allSection") || "Все изделия";
+
   return (
     <div className="w-full">
       {/* Верхняя горизонтальная лента с кнопками-кругляшками (фильтрами) */}
       <div className="px-5 pb-6 md:px-8 md:pb-8">
-        <span className="eyebrow block mb-3 text-accent">
-          Рубрики и темы
-        </span>
+        {filtersEyebrow ? (
+          <span className="eyebrow block mb-3 text-accent">{filtersEyebrow}</span>
+        ) : null}
         <DragScroller className="-mx-5 px-5 md:-mx-8 md:px-8">
           <div className="flex w-max items-center gap-2.5 pb-2">
             {/* Кнопка "Все изделия" */}
@@ -65,7 +73,7 @@ export function CategoryView({
                   : "border border-sand bg-surface text-ink hover:border-clay hover:bg-bg"
               }`}
             >
-              Все изделия ({products.length})
+              {allLabel} ({products.length})
             </button>
 
             {/* Круглые кнопки-фильтры для каждого тега/рубрики */}
@@ -130,6 +138,12 @@ export function CategoryView({
         ) : null}
       </div>
 
+      {selectedDescription ? (
+        <p className="max-w-2xl px-5 pb-8 text-base leading-relaxed text-muted md:px-8 md:text-lg">
+          {selectedDescription}
+        </p>
+      ) : null}
+
       {/* Единая сплошная сетка изделий */}
       {filteredProducts.length > 0 ? (
         <motion.div
@@ -143,7 +157,7 @@ export function CategoryView({
         </motion.div>
       ) : (
         <div className="px-5 py-16 text-center text-sm text-muted md:px-8">
-          <p>По выбранным фильтрам не найдено изделий.</p>
+          <p>{getText("category.filterEmpty")}</p>
           <button
             type="button"
             onClick={clearFilters}

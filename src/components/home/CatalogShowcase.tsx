@@ -1,7 +1,8 @@
 "use client";
 
 import { Media } from "@/components/ui/Media";
-import { getCategories, getProductsByCategory } from "@/lib/content";
+import { getCategories, getProductsByCategory, getText } from "@/lib/content";
+import { pluralItems } from "@/lib/plural";
 import type { Category } from "@/lib/schemas";
 import { useReveal } from "@/lib/use-reveal";
 import { motion, useReducedMotion } from "framer-motion";
@@ -16,6 +17,8 @@ type ShowcaseItem = {
 
 export function CatalogShowcase() {
   const categories = getCategories();
+  const title = getText("home.catalog.title");
+  const lead = getText("home.catalog.lead");
 
   const showcaseItems: ShowcaseItem[] = categories.map((cat, idx) => {
     return {
@@ -28,14 +31,20 @@ export function CatalogShowcase() {
 
   return (
     <section id="catalog" className="relative overflow-hidden bg-bg py-16 md:py-24" aria-label="Каталог изделий">
-      <div className="mx-auto max-w-[1500px] px-5 pb-12 md:px-8">
-        <h2 className="font-display text-3xl leading-tight text-ink sm:text-4xl md:text-5xl lg:text-6xl">
-          Каталог
-        </h2>
-        <p className="mt-3 max-w-2xl text-base leading-relaxed text-muted md:text-lg">
-          Выберите раздел, чтобы посмотреть все доступные изделия, палитру оттенков и варианты ароматов.
-        </p>
-      </div>
+      {title || lead ? (
+        <div className="mx-auto max-w-[1500px] px-5 pb-12 md:px-8">
+          {title ? (
+            <h2 className="font-display text-3xl leading-tight text-ink sm:text-4xl md:text-5xl lg:text-6xl">
+              {title}
+            </h2>
+          ) : null}
+          {lead ? (
+            <p className="mt-3 max-w-2xl text-base leading-relaxed text-muted md:text-lg">
+              {lead}
+            </p>
+          ) : null}
+        </div>
+      ) : null}
 
       <div className="flex flex-col gap-12 md:gap-20">
         {showcaseItems.map((item, index) => (
@@ -101,12 +110,12 @@ function ShowcaseSection({
               href={`/catalog/${item.category.slug}`}
               className="group inline-flex items-center gap-2.5 rounded-full btn-brown-outline px-7 py-3 text-xs font-semibold tracking-[0.03em]"
             >
-              <span>Смотреть изделия</span>
+              <span>{getText("catalog.viewButton")}</span>
               <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
             </Link>
             {count > 0 ? (
               <span className="text-xs tracking-wider text-muted">
-                {count} {count === 1 ? "изделие" : count < 5 ? "изделия" : "изделий"}
+                {count} {pluralItems(count)}
               </span>
             ) : null}
           </div>
@@ -136,7 +145,7 @@ function ShowcaseSection({
               </div>
               <div className="absolute inset-0 flex items-center justify-center bg-ink/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100 backdrop-blur-[1px]">
                 <span className="rounded-full bg-white/95 px-6 py-2.5 text-xs font-semibold tracking-[0.03em] text-ink shadow-md backdrop-blur-sm">
-                  Открыть раздел →
+                  {getText("catalog.openOverlay")} →
                 </span>
               </div>
             </Link>

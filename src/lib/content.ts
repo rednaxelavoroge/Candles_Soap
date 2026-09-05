@@ -16,6 +16,7 @@ import {
   type Tag,
   type TagGroup,
 } from "@/lib/schemas";
+import { fillText, resolveText } from "@/lib/site-texts";
 import { z } from "zod";
 
 /**
@@ -59,6 +60,16 @@ export function getBackstage(): BackstageItem[] {
 
 export function getSite(): Site {
   return site;
+}
+
+/**
+ * Текст сайта по ключу из реестра src/lib/site-texts.ts: то, что заказчица
+ * сохранила в панели, иначе исходный. Пустая строка — осмысленное
+ * «не показывать», компонент в этом случае элемент не выводит.
+ */
+export function getText(key: string, values?: Record<string, string>): string {
+  const text = resolveText(site.texts, key);
+  return values ? fillText(text, values) : text;
 }
 
 export function getCategories(): Category[] {
@@ -218,6 +229,8 @@ export const ALL_SECTION = "vse";
 export type Section = {
   slug: string;
   title: string;
+  /** Описание подраздела из панели; у «Всех изделий» его нет. */
+  description?: string;
   count: number;
   cover: Product["images"][number] | null;
 };
@@ -229,7 +242,7 @@ export function getSectionsForCategory(categorySlug: string): Section[] {
   const sections: Section[] = [
     {
       slug: ALL_SECTION,
-      title: "Все изделия",
+      title: getText("category.allSection"),
       count: inCategory.length,
       cover: inCategory[0].images[0] ?? null,
     },
@@ -240,6 +253,7 @@ export function getSectionsForCategory(categorySlug: string): Section[] {
     sections.push({
       slug: tag.slug,
       title: tag.title,
+      description: tag.description?.trim() || undefined,
       count: products.length,
       cover: products[0]?.images[0] ?? null,
     });

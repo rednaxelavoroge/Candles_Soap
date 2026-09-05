@@ -5,6 +5,7 @@ import {
   getProductsByCategory,
   getSectionsForCategory,
   getTagsForCategory,
+  getText,
 } from "@/lib/content";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -42,7 +43,7 @@ export default async function CategoryPage({ params }: { params: Promise<Params>
     <div className="pt-24 md:pt-32">
       <header className="relative overflow-hidden px-5 pt-4 pb-8 md:px-8 md:pb-10">
         <Link href="/catalog" className="link-underline eyebrow relative">
-          Каталог
+          {getText("nav.catalog") || "Каталог"}
         </Link>
         <h1 className="relative mt-2 font-display text-4xl md:text-6xl">{category.title}</h1>
         {category.description ? (
@@ -53,7 +54,7 @@ export default async function CategoryPage({ params }: { params: Promise<Params>
       </header>
 
       {sections.length === 0 ? (
-        <p className="px-5 pb-16 text-sm text-muted md:px-8">В этом разделе пока нет изделий.</p>
+        <p className="px-5 pb-16 text-sm text-muted md:px-8">{getText("category.empty")}</p>
       ) : (
         <CategoryView
           category={category}

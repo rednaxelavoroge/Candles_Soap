@@ -3,12 +3,13 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SmoothScroll } from "@/components/SmoothScroll";
 import { HydrationGuard } from "@/components/ui/HydrationGuard";
 import { VideoFocus } from "@/components/ui/VideoFocus";
-import { getSite } from "@/lib/content";
+import { getSite, getText } from "@/lib/content";
 import { comfortaa } from "@/lib/fonts";
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 const site = getSite();
+const homeTitle = [site.owner, getText("seo.homeTitle")].filter(Boolean).join(" — ");
 
 /**
  * Абсолютный адрес сайта для og:image и canonical. Пока боевой домен не
@@ -31,7 +32,7 @@ function resolveBaseUrl(): URL {
 export const metadata: Metadata = {
   metadataBase: resolveBaseUrl(),
   title: {
-    default: `${site.owner} — изделия ручной работы`,
+    default: homeTitle,
     template: `%s — ${site.brand}`,
   },
   description: site.tagline,
@@ -39,7 +40,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "ru_RU",
     siteName: site.brand,
-    title: `${site.owner} — изделия ручной работы`,
+    title: homeTitle,
     description: site.tagline,
   },
 };

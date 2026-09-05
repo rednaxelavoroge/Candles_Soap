@@ -113,7 +113,7 @@ export async function PUT(req: Request) {
   if (!isAuth) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
   try {
-    const { slug, title, order } = await req.json();
+    const { slug, title, order, description } = await req.json();
     const list = await currentTags();
 
     // Целиком новый порядок: приходит список слагов в нужной последовательности.
@@ -135,14 +135,26 @@ export async function PUT(req: Request) {
     }
 
     const clean = typeof title === "string" ? title.trim() : "";
-    if (!slug || !clean) {
+    const hasDescription = typeof description === "string";
+    if (!slug || (!clean && !hasDescription)) {
       return NextResponse.json({ error: "Не указан подраздел или новое название" }, { status: 400 });
     }
     if (!list.some((tag) => tag.slug === slug)) {
       return NextResponse.json({ error: "Подраздел не найден" }, { status: 404 });
     }
 
-    const updated = list.map((tag) => (tag.slug === slug ? { ...tag, title: clean } : tag));
+    // Название и описание правятся по отдельности: пришло — меняем, нет — оставляем.
+    const updated = list.map((tag) => {
+      if (tag.slug !== slug) return tag;
+      const next: Tag = { ...tag };
+      if (clean) next.title = clean;
+      if (hasDescription) {
+        const text = (description as string).trim();
+        if (text) next.description = text;
+        else delete next.description;
+      }
+      return next;
+    });
     await saveJsonData(FILE, updated);
     return NextResponse.json({ ok: true, tags: updated });
   } catch (err) {

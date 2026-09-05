@@ -15,7 +15,8 @@ export const dynamic = "force-static";
  * Шрифты тянем в формате truetype — satori не понимает woff2, а Google
  * отдаёт ttf только клиентам со старым user-agent.
  */
-export const alt = "AnnaManasaryan.Art — свечи, мыло и предметы для дома ручной работы";
+// Подпись картинки собирается из данных панели: название сайта и слоган.
+export const alt = `${getSite().brand} — ${getSite().tagline}`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -56,6 +57,9 @@ async function loadFont(family: string, weight: number): Promise<ArrayBuffer | n
 
 export default async function OpengraphImage() {
   const site = getSite();
+  const dash = site.tagline.indexOf(" — ");
+  const taglineLines =
+    dash > 0 ? [site.tagline.slice(0, dash), site.tagline.slice(dash + 3)] : [site.tagline];
 
   const [display, sans, photo] = await Promise.all([
     loadFont("Cormorant+Garamond", 400),
@@ -107,12 +111,15 @@ export default async function OpengraphImage() {
             >
               {site.owner}
             </div>
+            {/* Слоган из панели; если в нём есть тире, вторая половина идёт отдельной строкой. */}
             <div style={{ marginTop: 24, fontSize: 30, lineHeight: 1.35, color: "#EADFCE" }}>
-              Свечи, мыло и предметы для дома
+              {taglineLines[0]}
             </div>
-            <div style={{ marginTop: 6, fontSize: 30, lineHeight: 1.35, color: "#C9B296" }}>
-              ручная работа, малые партии
-            </div>
+            {taglineLines[1] ? (
+              <div style={{ marginTop: 6, fontSize: 30, lineHeight: 1.35, color: "#C9B296" }}>
+                {taglineLines[1]}
+              </div>
+            ) : null}
           </div>
 
           <div style={{ fontSize: 24, color: "#C9B296" }}>

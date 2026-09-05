@@ -1,32 +1,30 @@
 import { Media } from "@/components/ui/Media";
-import { getFilledCategories, getProducts, getHeroSlides, getSite } from "@/lib/content";
-import { getSocialLinks, whatsappHref } from "@/lib/contacts";
-import { pluralItems } from "@/lib/plural";
+import { getHeroSlides, getSite, getText } from "@/lib/content";
+import { aboutEnquiry, whatsappWith } from "@/lib/contacts";
 import type { Metadata } from "next";
 import Link from "next/link";
 
-const DESCRIPTION =
-  "Анна Манасарян создаёт свечи, декоративное мыло и предметы интерьера вручную, малыми авторскими партиями.";
-
+// Название сайта дописывает шаблон из layout.tsx — здесь только имя страницы.
 export const metadata: Metadata = {
-  title: "Обо мне — AnnaManasaryan.Art",
-  description: DESCRIPTION,
-  openGraph: { title: "Обо мне — AnnaManasaryan.Art", description: DESCRIPTION },
+  title: "Обо мне",
+  description: getText("seo.about"),
+  openGraph: { title: "Обо мне", description: getText("seo.about") },
 };
 
 export default function AboutPage() {
   const site = getSite();
-  const categories = getFilledCategories();
-  const total = getProducts().length;
-  const socials = getSocialLinks();
-  const whatsapp = whatsappHref(
-    `Здравствуйте, Анна! Пишу с сайта ${site.domain.replace(/^https?:\/\//, "")} — хочу уточнить по изделиям.`,
-  );
+  const whatsapp = whatsappWith(aboutEnquiry());
+  const eyebrow = getText("about.eyebrow");
+  const philosophyEyebrow = getText("about.philosophyEyebrow");
+  const philosophyTitle = getText("about.philosophyTitle");
+  const extra = getText("about.extra");
+  const whatsappButton = getText("about.whatsappButton");
+  const catalogButton = getText("about.catalogButton");
 
   return (
     <div className="pt-24 md:pt-32">
       <header className="relative overflow-hidden px-5 pb-8 md:px-8 md:pb-12">
-        <span className="eyebrow relative">Автор и мастер</span>
+        {eyebrow ? <span className="eyebrow relative">{eyebrow}</span> : null}
         <h1 className="relative mt-2 max-w-3xl font-display text-4xl leading-tight text-ink md:text-6xl">
           {site.owner}
         </h1>
@@ -44,37 +42,43 @@ export default function AboutPage() {
         </div>
 
         <div className="flex flex-col justify-center">
-          <span className="eyebrow">Философия мастерской</span>
-          <h2 className="mt-2 font-display text-2xl leading-snug text-ink md:text-3xl lg:text-4xl">
-            Вещи, которые наполняют дом теплом и уютом
-          </h2>
+          {philosophyEyebrow ? <span className="eyebrow">{philosophyEyebrow}</span> : null}
+          {philosophyTitle ? (
+            <h2 className="mt-2 font-display text-2xl leading-snug text-ink md:text-3xl lg:text-4xl">
+              {philosophyTitle}
+            </h2>
+          ) : null}
           <p className="mt-6 max-w-prose text-base leading-relaxed text-muted md:text-lg">
             {site.intro}
           </p>
 
-          <p className="mt-4 max-w-prose text-base leading-relaxed text-muted">
-            Каждое изделие — результат ручного труда и внимания к деталям: от выбора натурального соевого воска и фитилей до подбора благородных ароматов и бархатистой фактуры скульптурного гипса.
-          </p>
+          {extra ? (
+            <p className="mt-4 max-w-prose text-base leading-relaxed text-muted">{extra}</p>
+          ) : null}
 
-          <div className="mt-10 flex flex-wrap items-center gap-4">
-            {whatsapp ? (
-              <a
-                href={whatsapp}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 rounded-full btn-brown px-8 py-3.5 text-xs font-semibold tracking-[0.04em] shadow-md"
-              >
-                <span>Связаться в WhatsApp</span>
-                <span>→</span>
-              </a>
-            ) : null}
-            <Link
-              href="/catalog"
-              className="inline-flex items-center gap-2 rounded-full btn-brown-outline px-7 py-3.5 text-xs font-semibold tracking-[0.03em]"
-            >
-              Перейти в каталог
-            </Link>
-          </div>
+          {(whatsapp && whatsappButton) || catalogButton ? (
+            <div className="mt-10 flex flex-wrap items-center gap-4">
+              {whatsapp && whatsappButton ? (
+                <a
+                  href={whatsapp}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 rounded-full btn-brown px-8 py-3.5 text-xs font-semibold tracking-[0.04em] shadow-md"
+                >
+                  <span>{whatsappButton}</span>
+                  <span>→</span>
+                </a>
+              ) : null}
+              {catalogButton ? (
+                <Link
+                  href="/catalog"
+                  className="inline-flex items-center gap-2 rounded-full btn-brown-outline px-7 py-3.5 text-xs font-semibold tracking-[0.03em]"
+                >
+                  {catalogButton}
+                </Link>
+              ) : null}
+            </div>
+          ) : null}
         </div>
       </div>
 

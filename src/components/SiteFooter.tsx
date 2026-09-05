@@ -1,18 +1,17 @@
-import { getSite } from "@/lib/content";
+import { getSite, getText } from "@/lib/content";
 import { getSocialLinks, telHref, whatsappHref } from "@/lib/contacts";
+import { getNav } from "@/lib/nav";
 import Link from "next/link";
-
-const NAV = [
-  { href: "/catalog", label: "Каталог" },
-  { href: "/backstage", label: "Бэкстейдж" },
-  { href: "/about", label: "О мастере" },
-  { href: "/contacts", label: "Контакты" },
-];
 
 export function SiteFooter() {
   const site = getSite();
   const socials = getSocialLinks();
-  const year = 2026;
+  const NAV = getNav();
+  // Год считается на сборке; сайт пересобирается при каждом сохранении в панели.
+  const year = new Date().getFullYear();
+  const contactsHeading = getText("footer.contactsHeading");
+  const rights = getText("footer.rights");
+  const legal = getText("footer.legal");
   const waDigits = (site.contacts.whatsapp || "").replace(/\D/g, "");
   const armDigits = (site.contacts.phone || "").replace(/\D/g, "");
   const ruDigits = (site.contacts.phoneRussia || "").replace(/\D/g, "");
@@ -34,7 +33,9 @@ export function SiteFooter() {
         </nav>
 
         <div className="flex flex-col gap-2 text-xs">
-          <span className="text-sm font-medium text-ink mb-1">Связь с мастером</span>
+          {contactsHeading ? (
+            <span className="text-sm font-medium text-ink mb-1">{contactsHeading}</span>
+          ) : null}
           {site.contacts.phone ? (
             <a href={telHref(site.contacts.phone)} className="text-muted hover:text-ink transition-colors whitespace-nowrap">
               🇦🇲 {site.contacts.phone} {waDigits && waDigits === armDigits ? <span className="text-[0.7rem] text-accent font-medium">(WhatsApp)</span> : null}
@@ -72,10 +73,10 @@ export function SiteFooter() {
       </div>
 
       <div className="mx-auto max-w-[1400px] mt-12 border-t border-sand/60 pt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-[0.7rem] text-muted">
-        <p>© {year} {site.owner}. Все права защищены.</p>
-        <p className="max-w-md">
-          Все изделия являются авторскими работами. Копирование и использование фотоматериалов без разрешения автора запрещено.
+        <p>
+          © {year} {site.owner}.{rights ? ` ${rights}` : ""}
         </p>
+        {legal ? <p className="max-w-md">{legal}</p> : null}
       </div>
     </footer>
   );

@@ -6,6 +6,10 @@ import { NextResponse } from "next/server";
 
 const FILE = "src/data/backstage.json";
 
+/** Заглушка размытия на случай, когда её не посчитали: схема требует непустую строку. */
+const BLANK_BLUR =
+  "data:image/webp;base64,UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEADsD+JaQAA3AAAAAA";
+
 /** Актуальная лента из репозитория; данные сборки — только запасной вариант. */
 function current(): Promise<BackstageItem[]> {
   return loadJsonData<BackstageItem[]>(FILE, getBackstage());
@@ -32,7 +36,27 @@ export async function POST(req: Request) {
 
     let finalItem: BackstageItem = item;
 
-    if (mediaData && mediaData.base64) {
+    /*
+      Ролик из архива мастерской. Лента бэкстейджа почти целиком из роликов,
+      а панель раньше умела добавлять только фотографии.
+    */
+    if (item?.kind === "video") {
+      if (!item.src || !item.poster?.src) {
+        return NextResponse.json({ error: "У ролика нет файла или обложки" }, { status: 400 });
+      }
+      finalItem = {
+        kind: "video",
+        src: item.src,
+        caption: (item.caption || "").trim() || "Мастерская",
+        poster: {
+          src: item.poster.src,
+          width: item.poster.width || 720,
+          height: item.poster.height || 1280,
+          blurDataURL: item.poster.blurDataURL || BLANK_BLUR,
+          alt: (item.caption || "").trim() || "Кадр мастерской",
+        },
+      };
+    } else if (mediaData && mediaData.base64) {
       const base64Data = mediaData.base64.replace(/^data:image\/\w+;base64,/, "");
       const buffer = Buffer.from(base64Data, "base64");
       const fileName = `backstage-${Date.now()}.webp`;
@@ -46,14 +70,18 @@ export async function POST(req: Request) {
             src: savedPath,
             width: mediaData.width || 1200,
             height: mediaData.height || 1200,
-            blurDataURL: mediaData.blurDataURL || "",
+            blurDataURL: mediaData.blurDataURL || BLANK_BLUR,
             alt: item.caption || "Кадр мастерской",
           },
         };
       }
     }
 
-    const updated = [finalItem, ...(await current())];
+    const list = await current();
+    if (list.some((existing) => mediaSrc(existing) === mediaSrc(finalItem))) {
+      return NextResponse.json({ error: "Этот кадр уже есть в ленте" }, { status: 400 });
+    }
+    const updated = [finalItem, ...list];
     await saveJsonData(FILE, updated);
 
     return NextResponse.json({ ok: true, item: finalItem, backstage: updated });
@@ -72,12 +100,24 @@ export async function PUT(req: Request) {
   if (!isAuth) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
   try {
-    const { order } = await req.json();
+    const { order, src, caption } = await req.json();
+    const list = await current();
+
+    // Правка подписи одного кадра.
+    if (typeof src === "string" && typeof caption === "string") {
+      if (!list.some((item) => mediaSrc(item) === src)) {
+        return NextResponse.json({ error: "Кадр не найден" }, { status: 404 });
+      }
+      const text = caption.trim() || "Мастерская";
+      const updated = list.map((item) => (mediaSrc(item) === src ? { ...item, caption: text } : item));
+      await saveJsonData(FILE, updated);
+      return NextResponse.json({ ok: true, backstage: updated });
+    }
+
     if (!Array.isArray(order)) {
       return NextResponse.json({ error: "Порядок не передан" }, { status: 400 });
     }
 
-    const list = await current();
     const bySrc = new Map(list.map((item) => [mediaSrc(item), item]));
 
     const reordered: BackstageItem[] = [];

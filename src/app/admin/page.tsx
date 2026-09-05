@@ -1,5 +1,6 @@
 "use client";
 
+import { SiteTextsEditor } from "@/app/admin/SiteTextsEditor";
 import { optimizeImageClient } from "@/lib/image-optimizer";
 import { mediaUrl } from "@/lib/media-url";
 import { useDragOrder, withMoved } from "@/lib/use-drag-order";
@@ -40,9 +41,13 @@ export default function AdminPage() {
   const [backstage, setBackstage] = useState<BackstageItem[]>([]);
   const [siteData, setSiteData] = useState({
     owner: "",
+    // Название сайта в шапке, подвале и заголовке вкладки браузера.
+    brand: "",
     tagline: "",
     intro: "",
     portrait: { src: "" },
+    // Изменённые тексты сайта (реестр — src/lib/site-texts.ts).
+    texts: {} as Record<string, string>,
     // Лента «Избранного» на главной: своё название, своя подпись, свой состав.
     featured: {
       enabled: true,
@@ -131,6 +136,17 @@ export default function AdminPage() {
   // Переименование подраздела на вкладке «Подразделы»
   const [editingTagSlug, setEditingTagSlug] = useState<string | null>(null);
   const [editingTagTitle, setEditingTagTitle] = useState("");
+  // Описание подраздела там же
+  const [editingTagDescSlug, setEditingTagDescSlug] = useState<string | null>(null);
+  const [editingTagDesc, setEditingTagDesc] = useState("");
+  // Бэкстейдж: ролик из архива и правка подписи
+  const [backstagePickerOpen, setBackstagePickerOpen] = useState(false);
+  const [backstagePickerSearch, setBackstagePickerSearch] = useState("");
+  const [editingCaptionSrc, setEditingCaptionSrc] = useState<string | null>(null);
+  const [editingCaption, setEditingCaption] = useState("");
+  // Раздел каталога: снять обложку при сохранении
+  const [removeCategoryCover, setRemoveCategoryCover] = useState(false);
+  const [savingTexts, setSavingTexts] = useState(false);
   // Создание подраздела там же, не открывая изделие
   const [sectionTagTitle, setSectionTagTitle] = useState("");
   // Поиск изделий для блока «Похожие» в карточке
@@ -190,6 +206,8 @@ export default function AdminPage() {
             // В данных, сохранённых до появления ленты, поля featured нет.
             setSiteData({
               ...s.site,
+              brand: s.site.brand || "",
+              texts: s.site.texts || {},
               featured: {
                 enabled: true,
                 eyebrow: "Избранное мастерской",
@@ -314,9 +332,12 @@ export default function AdminPage() {
       const res = await fetch(`/api/admin/products?id=${encodeURIComponent(id)}`, {
         method: "DELETE",
       });
+      const data = await res.json().catch(() => null);
       if (res.ok) {
         setProducts((prev) => prev.filter((p) => p.id !== id && p.slug !== id));
-        showToast("Изделие удалено");
+        showToast("Изделие удалено — с сайта пропадёт через несколько минут");
+      } else {
+        alert(data?.error || "Не удалось удалить изделие. Обновите страницу и попробуйте ещё раз.");
       }
     } catch {
       alert("Ошибка удаления");
@@ -338,6 +359,7 @@ export default function AdminPage() {
         body: JSON.stringify({
           category: editCategory,
           coverData: newCategoryCover,
+          removeCover: removeCategoryCover && !newCategoryCover,
         }),
       });
       const data = await res.json();
@@ -346,7 +368,8 @@ export default function AdminPage() {
         setIsCategoryModalOpen(false);
         setEditCategory(null);
         setNewCategoryCover(null);
-        showToast("✓ Раздел каталога успешно сохранен!");
+        setRemoveCategoryCover(false);
+        showToast("✓ Раздел сохранён. На сайте обновится через несколько минут");
       } else {
         alert(data.error || "Ошибка сохранения раздела");
       }
@@ -481,6 +504,31 @@ export default function AdminPage() {
     }
   };
 
+  /**
+   * Описание подраздела. Показывается на странице подраздела под заголовком и
+   * на странице раздела, когда выбран один этот подраздел. Пустое — абзаца нет.
+   */
+  const handleSaveTagDescription = async (slug: string) => {
+    try {
+      const res = await fetch("/api/admin/tags", {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ slug, description: editingTagDesc }),
+      });
+      const data = await res.json();
+      if (res.ok && data.ok) {
+        setTags(data.tags);
+        setEditingTagDescSlug(null);
+        setEditingTagDesc("");
+        showToast("✓ Описание подраздела сохранено. На сайте обновится через несколько минут");
+      } else {
+        alert(data.error || "Не удалось сохранить описание");
+      }
+    } catch {
+      alert("Ошибка сети при сохранении описания");
+    }
+  };
+
   /** Удаление подраздела: метка снимается и со всех изделий, где стояла. */
   const handleDeleteTag = async (slug: string, title: string) => {
     const used = products.filter((p) => p.tags.includes(slug)).length;
@@ -509,6 +557,34 @@ export default function AdminPage() {
   };
 
   /** Порядок подразделов в каталоге: в нём они и покажутся на сайте. */
+  /** Порядок разделов каталога: так они идут на главной и на странице «Каталог». */
+  const moveCategory = async (from: number, to: number) => {
+    if (to < 0 || to >= categories.length || from === to || savingOrder) return;
+
+    const next = withMoved(categories, from, to);
+    setCategories(next);
+
+    setSavingOrder(true);
+    try {
+      const res = await fetch("/api/admin/categories", {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ order: next.map((c) => c.slug) }),
+      });
+      const data = await res.json();
+      if (res.ok && data.ok) setCategories(data.categories);
+      else {
+        setCategories(categories);
+        alert(data.error || "Не удалось сохранить порядок разделов");
+      }
+    } catch {
+      setCategories(categories);
+      alert("Ошибка сети при сохранении порядка");
+    } finally {
+      setSavingOrder(false);
+    }
+  };
+
   const moveTag = async (from: number, to: number) => {
     if (to < 0 || to >= tags.length || from === to || savingOrder) return;
 
@@ -891,29 +967,66 @@ export default function AdminPage() {
 
   const handleSaveTexts = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!siteData.owner.trim()) {
+      alert("Имя автора не может быть пустым");
+      return;
+    }
+    if (!siteData.brand.trim()) {
+      alert("Название сайта не может быть пустым — оно стоит в шапке и подвале");
+      return;
+    }
+    setSavingTexts(true);
     try {
+      // Форма шлёт только свои поля: «Избранное» и контакты уезжают из своих форм.
       const res = await fetch("/api/admin/site", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           owner: siteData.owner,
+          brand: siteData.brand,
           tagline: siteData.tagline,
           intro: siteData.intro,
-          featured: siteData.featured,
+          texts: siteData.texts,
           portraitData: newPortraitData,
         }),
       });
-      if (res.ok) {
+      const saved = await res.json().catch(() => null);
+      if (res.ok && saved?.ok) {
         // Ответ приносит уже сохранённое состояние: без него превью портрета
         // осталось бы показывать прежний снимок, и панель снова врала бы.
-        const saved = await res.json().catch(() => null);
-        if (saved?.site?.portrait) {
-          setSiteData((prev) => ({ ...prev, portrait: saved.site.portrait }));
+        if (saved.site) {
+          setSiteData((prev) => ({
+            ...prev,
+            portrait: saved.site.portrait ?? prev.portrait,
+            texts: saved.site.texts || {},
+          }));
         }
         setNewPortraitData(null);
-        showToast("✓ Тексты и фото автора успешно сохранены!");
+        showToast("✓ Тексты сохранены. На сайте обновятся через несколько минут");
       } else {
-        alert("Не удалось сохранить. Попробуйте ещё раз.");
+        alert(saved?.error || "Не удалось сохранить. Попробуйте ещё раз.");
+      }
+    } catch {
+      alert("Ошибка сохранения");
+    } finally {
+      setSavingTexts(false);
+    }
+  };
+
+  // Лента «Избранного»: отдельная форма — отдельный запрос со своими полями.
+  const handleSaveFeatured = async (e: React.FormEvent) => {
+    e.preventDefault();
+    try {
+      const res = await fetch("/api/admin/site", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ featured: siteData.featured }),
+      });
+      const saved = await res.json().catch(() => null);
+      if (res.ok && saved?.ok) {
+        showToast("✓ Избранное сохранено. На сайте обновится через несколько минут");
+      } else {
+        alert(saved?.error || "Не удалось сохранить избранное. Попробуйте ещё раз.");
       }
     } catch {
       alert("Ошибка сохранения");
@@ -929,8 +1042,14 @@ export default function AdminPage() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ contacts: siteData.contacts }),
       });
-      if (res.ok) {
-        showToast("✓ Контакты успешно обновлены!");
+      const saved = await res.json().catch(() => null);
+      if (res.ok && saved?.ok) {
+        showToast("✓ Контакты сохранены. На сайте обновятся через несколько минут");
+      } else if (res.status === 401) {
+        alert("Вход в панель истёк. Войдите заново и повторите сохранение.");
+        router.push("/admin/login");
+      } else {
+        alert(saved?.error || "Не удалось сохранить контакты. Попробуйте ещё раз.");
       }
     } catch {
       alert("Ошибка сохранения");
@@ -960,10 +1079,76 @@ export default function AdminPage() {
         setBackstage((prev) => [data.item, ...prev]);
         setNewBackstageCaption("");
         setNewBackstageMedia(null);
-        showToast("✓ Фото добавлено в Бэкстейдж!");
+        showToast("✓ Фото добавлено в Бэкстейдж. На сайте появится через несколько минут");
+      } else {
+        alert(data.error || "Не удалось добавить кадр. Попробуйте ещё раз.");
       }
     } catch {
       alert("Ошибка добавления");
+    }
+  };
+
+  /**
+   * Ролик из архива мастерской — в ленту бэкстейджа. Лента почти целиком
+   * из роликов, а раньше панель умела добавлять туда только фотографии.
+   */
+  const handleAddBackstageVideo = async (src: string) => {
+    const entry = videoLibrary.find((v) => v.src === src);
+    if (!entry) return;
+    if (backstage.some((b) => b.kind === "video" && b.src === src)) {
+      showToast("Этот ролик уже есть в ленте");
+      return;
+    }
+    if (!entry.poster) {
+      alert("У этого ролика нет обложки, в ленту его добавить нельзя.");
+      return;
+    }
+    try {
+      const res = await fetch("/api/admin/backstage", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          item: {
+            kind: "video",
+            src,
+            caption: newBackstageCaption.trim() || entry.name,
+            poster: { src: entry.poster, width: 720, height: 1280, alt: entry.name },
+          },
+        }),
+      });
+      const data = await res.json();
+      if (res.ok && data.ok) {
+        setBackstage(data.backstage);
+        setBackstagePickerOpen(false);
+        setNewBackstageCaption("");
+        showToast("✓ Ролик добавлен в Бэкстейдж. На сайте появится через несколько минут");
+      } else {
+        alert(data.error || "Не удалось добавить ролик");
+      }
+    } catch {
+      alert("Ошибка сети при добавлении ролика");
+    }
+  };
+
+  /** Подпись кадра бэкстейджа. На сайте она не показывается — это подпись для себя. */
+  const handleSaveBackstageCaption = async (src: string) => {
+    try {
+      const res = await fetch("/api/admin/backstage", {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ src, caption: editingCaption }),
+      });
+      const data = await res.json();
+      if (res.ok && data.ok) {
+        setBackstage(data.backstage);
+        setEditingCaptionSrc(null);
+        setEditingCaption("");
+        showToast("✓ Подпись сохранена");
+      } else {
+        alert(data.error || "Не удалось сохранить подпись");
+      }
+    } catch {
+      alert("Ошибка сети при сохранении подписи");
     }
   };
 
@@ -1008,6 +1193,7 @@ export default function AdminPage() {
   const relatedDrag = useDragOrder(moveRelated);
   const videoDrag = useDragOrder(moveVideo);
   const tagDrag = useDragOrder(moveTag);
+  const categoryDrag = useDragOrder(moveCategory);
   const featuredDrag = useDragOrder(moveFeatured);
   const backstageDrag = useDragOrder(moveBackstage);
   const productDrag = useDragOrder(
@@ -1390,6 +1576,8 @@ export default function AdminPage() {
                 </h2>
                 <p className="mt-1 text-xs text-muted">
                   Вы можете добавлять новые направления (например, «Мастер-классы», «Картины»), менять названия и удалять ненужные.
+                  Порядок в этом списке — это порядок разделов на главной и на странице «Каталог»:
+                  стрелки ↑↓ или перетаскивание.
                 </p>
               </div>
 
@@ -1402,6 +1590,7 @@ export default function AdminPage() {
                     order: categories.length + 1,
                   });
                   setNewCategoryCover(null);
+                  setRemoveCategoryCover(false);
                   setIsCategoryModalOpen(true);
                 }}
                 type="button"
@@ -1412,12 +1601,34 @@ export default function AdminPage() {
             </div>
 
             <div className="mt-6 flex flex-col gap-4">
-              {categories.map((cat) => (
+              {categories.map((cat, index) => (
                 <div
                   key={cat.slug}
-                  className="rounded-2xl border border-sand/60 bg-surface p-5 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4"
+                  {...categoryDrag.itemProps(index)}
+                  className={`rounded-2xl border border-sand/60 bg-surface p-5 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4 cursor-grab active:cursor-grabbing transition-all ${categoryDrag.itemClass(index)}`}
                 >
                   <div className="flex items-start gap-4">
+                    <div className="flex shrink-0 flex-col items-center gap-1">
+                      <button
+                        type="button"
+                        onClick={() => moveCategory(index, index - 1)}
+                        disabled={index === 0 || savingOrder}
+                        aria-label="Поднять выше"
+                        className="rounded-full px-2 py-0.5 text-xs text-muted hover:text-ink disabled:opacity-30"
+                      >
+                        ↑
+                      </button>
+                      <span className="text-[0.65rem] text-muted">{index + 1}</span>
+                      <button
+                        type="button"
+                        onClick={() => moveCategory(index, index + 1)}
+                        disabled={index === categories.length - 1 || savingOrder}
+                        aria-label="Опустить ниже"
+                        className="rounded-full px-2 py-0.5 text-xs text-muted hover:text-ink disabled:opacity-30"
+                      >
+                        ↓
+                      </button>
+                    </div>
                     {cat.cover?.src ? (
                       <div className="relative h-16 w-16 flex-shrink-0 overflow-hidden rounded-xl bg-sand/40">
                         <Image src={mediaUrl(cat.cover.src)} alt="" fill sizes="64px" className="object-cover" />
@@ -1442,6 +1653,7 @@ export default function AdminPage() {
                       onClick={() => {
                         setEditCategory(cat);
                         setNewCategoryCover(null);
+                        setRemoveCategoryCover(false);
                         setIsCategoryModalOpen(true);
                       }}
                       className="rounded-full border border-sand px-4 py-1.5 text-xs font-medium text-btn-brown hover:bg-sand/30 transition-colors"
@@ -1575,6 +1787,46 @@ export default function AdminPage() {
                         {used} изд.
                       </span>
 
+                      {editingTagDescSlug === t.slug ? (
+                        <div className="order-last w-full basis-full pt-2">
+                          <label className="block text-[0.7rem] font-semibold uppercase tracking-wider text-muted mb-1">
+                            Описание подраздела
+                          </label>
+                          <textarea
+                            autoFocus
+                            rows={3}
+                            value={editingTagDesc}
+                            onChange={(e) => setEditingTagDesc(e.target.value)}
+                            placeholder="Текст под заголовком на странице подраздела. Пустое — абзаца нет."
+                            className="w-full rounded-xl border border-sand bg-bg/50 px-3 py-2 text-xs text-ink focus:border-btn-brown focus:outline-none"
+                          />
+                          <p className="mt-1 text-[0.7rem] leading-relaxed text-muted">
+                            Показывается на странице этого подраздела под названием и на странице
+                            раздела, когда нажата только эта кнопка.
+                          </p>
+                          <div className="mt-2 flex items-center gap-3">
+                            <button
+                              type="button"
+                              onClick={() => handleSaveTagDescription(t.slug)}
+                              className="rounded-full btn-brown px-4 py-1.5 text-[0.7rem] font-semibold"
+                            >
+                              Сохранить описание
+                            </button>
+                            <button
+                              type="button"
+                              onClick={() => setEditingTagDescSlug(null)}
+                              className="text-[0.7rem] text-muted hover:text-ink"
+                            >
+                              Отмена
+                            </button>
+                          </div>
+                        </div>
+                      ) : t.description ? (
+                        <p className="order-last w-full basis-full pt-1 text-[0.7rem] leading-relaxed text-muted line-clamp-2">
+                          {t.description}
+                        </p>
+                      ) : null}
+
                       {isEditing ? (
                         <div className="flex shrink-0 items-center gap-2">
                           <button
@@ -1606,6 +1858,16 @@ export default function AdminPage() {
                           </button>
                           <button
                             type="button"
+                            onClick={() => {
+                              setEditingTagDescSlug(t.slug);
+                              setEditingTagDesc(t.description || "");
+                            }}
+                            className="text-[0.7rem] font-medium text-btn-brown hover:underline"
+                          >
+                            {t.description ? "Описание" : "+ Описание"}
+                          </button>
+                          <button
+                            type="button"
                             onClick={() => handleDeleteTag(t.slug, t.title)}
                             className="text-[0.7rem] text-red-500 hover:text-red-700"
                           >
@@ -1624,10 +1886,15 @@ export default function AdminPage() {
 
         {/* 3. ВКЛАДКА ТЕКСТЫ И ОБО МНЕ */}
         {tab === "texts" ? (
-          <div className="mt-8 max-w-2xl rounded-2xl border border-sand/60 bg-surface p-6 shadow-sm">
+          <div className="mt-8 max-w-3xl rounded-2xl border border-sand/60 bg-surface p-6 shadow-sm">
             <h2 className="font-display text-lg font-medium text-ink">
               Тексты сайта и страница «Обо мне»
             </h2>
+            <p className="mt-1.5 text-xs leading-relaxed text-muted">
+              Сверху — главное: имя, название сайта, слоган, текст «Обо мне» и ваше фото.
+              Ниже, в разделе «Все надписи сайта», — каждый заголовок, подпись и кнопка
+              на каждой странице. Одна кнопка «Сохранить все тексты» внизу сохраняет всё.
+            </p>
             <form onSubmit={handleSaveTexts} className="mt-6 flex flex-col gap-5">
               <div>
                 <label className="block text-xs font-semibold uppercase tracking-wider text-muted mb-1">
@@ -1639,6 +1906,25 @@ export default function AdminPage() {
                   onChange={(e) => setSiteData({ ...siteData, owner: e.target.value })}
                   className="w-full rounded-xl border border-sand bg-bg/50 px-4 py-2.5 text-xs text-ink focus:border-btn-brown focus:outline-none"
                 />
+                <p className="mt-1 text-[0.7rem] text-muted">
+                  Стоит крупно на первом экране, на странице «Обо мне» и в подвале рядом с годом.
+                </p>
+              </div>
+
+              <div>
+                <label className="block text-xs font-semibold uppercase tracking-wider text-muted mb-1">
+                  Название сайта (в шапке и подвале)
+                </label>
+                <input
+                  type="text"
+                  value={siteData.brand}
+                  onChange={(e) => setSiteData({ ...siteData, brand: e.target.value })}
+                  className="w-full rounded-xl border border-sand bg-bg/50 px-4 py-2.5 text-xs text-ink focus:border-btn-brown focus:outline-none"
+                />
+                <p className="mt-1 text-[0.7rem] text-muted">
+                  Сейчас на сайте: <strong className="text-ink">{siteData.brand || "—"}</strong>.
+                  Это же слово стоит в заголовке вкладки браузера после названия страницы.
+                </p>
               </div>
 
               <div>
@@ -1730,11 +2016,22 @@ export default function AdminPage() {
                 </div>
               </div>
 
+              <div className="mt-2 border-t border-sand/60 pt-6">
+                <h3 className="font-display text-base font-semibold text-ink">Все надписи сайта</h3>
+                <div className="mt-3">
+                  <SiteTextsEditor
+                    value={siteData.texts}
+                    onChange={(texts) => setSiteData({ ...siteData, texts })}
+                  />
+                </div>
+              </div>
+
               <button
                 type="submit"
-                className="mt-2 rounded-full btn-brown py-3 text-xs font-semibold uppercase tracking-wider shadow-md"
+                disabled={savingTexts}
+                className="sticky bottom-4 mt-2 rounded-full btn-brown py-3 text-xs font-semibold uppercase tracking-wider shadow-md disabled:opacity-60"
               >
-                Сохранить все тексты →
+                {savingTexts ? "Сохраняю…" : "Сохранить все тексты →"}
               </button>
             </form>
           </div>
@@ -1755,7 +2052,7 @@ export default function AdminPage() {
               </p>
             </div>
 
-            <form onSubmit={handleSaveTexts} className="mt-6 flex flex-col gap-4">
+            <form onSubmit={handleSaveFeatured} className="mt-6 flex flex-col gap-4">
             {/* ЛЕНТА «ИЗБРАННОГО» НА ГЛАВНОЙ */}
             <div className="rounded-2xl border border-sand/60 bg-bg/40 p-4">
               <div className="flex flex-wrap items-center justify-between gap-3">
@@ -2001,6 +2298,22 @@ export default function AdminPage() {
                   Опубликовать
                 </button>
               </form>
+              <div className="mt-4 flex flex-wrap items-center gap-3 border-t border-sand/60 pt-4">
+                <button
+                  type="button"
+                  onClick={() => {
+                    setBackstagePickerSearch("");
+                    setBackstagePickerOpen(true);
+                  }}
+                  className="rounded-full btn-brown-outline px-5 py-2 text-xs font-semibold"
+                >
+                  🎬 Добавить ролик из архива ({videoLibrary.length})
+                </button>
+                <p className="text-[0.7rem] leading-relaxed text-muted">
+                  Подпись к кадру на сайте не показывается — она для вас, чтобы находить кадры
+                  в этом списке. Если написать её в поле выше и потом выбрать ролик, она достанется ему.
+                </p>
+              </div>
             </div>
 
             <p className="mt-6 text-[0.7rem] leading-relaxed text-muted">
@@ -2036,7 +2349,52 @@ export default function AdminPage() {
                         {idx + 1}
                       </span>
                     </div>
-                    <p className="mt-2 text-xs font-medium text-ink line-clamp-1">{b.caption}</p>
+                    {editingCaptionSrc === mediaSrc ? (
+                      <div className="mt-2 flex flex-col gap-1.5">
+                        <input
+                          type="text"
+                          autoFocus
+                          value={editingCaption}
+                          onChange={(e) => setEditingCaption(e.target.value)}
+                          onKeyDown={(e) => {
+                            if (e.key === "Enter") {
+                              e.preventDefault();
+                              handleSaveBackstageCaption(mediaSrc);
+                            }
+                            if (e.key === "Escape") setEditingCaptionSrc(null);
+                          }}
+                          className="w-full rounded-lg border border-sand bg-bg/50 px-2 py-1 text-xs text-ink focus:border-btn-brown focus:outline-none"
+                        />
+                        <div className="flex items-center gap-2">
+                          <button
+                            type="button"
+                            onClick={() => handleSaveBackstageCaption(mediaSrc)}
+                            className="rounded-full btn-brown px-3 py-1 text-[0.65rem] font-semibold"
+                          >
+                            Сохранить
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => setEditingCaptionSrc(null)}
+                            className="text-[0.65rem] text-muted hover:text-ink"
+                          >
+                            Отмена
+                          </button>
+                        </div>
+                      </div>
+                    ) : (
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setEditingCaptionSrc(mediaSrc);
+                          setEditingCaption(b.caption);
+                        }}
+                        title="Изменить подпись"
+                        className="mt-2 block w-full truncate text-left text-xs font-medium text-ink hover:text-btn-brown"
+                      >
+                        {b.caption} <span className="text-muted">✎</span>
+                      </button>
+                    )}
 
                     <div className="mt-2 flex items-center justify-between border-t border-sand/40 pt-2">
                       <div className="flex items-center gap-1">
@@ -2494,6 +2852,76 @@ export default function AdminPage() {
       </div>
 
       {/* МОДАЛЬНОЕ ОКНО ДОБАВЛЕНИЯ / РЕДАКТИРОВАНИЯ РАЗДЕЛА КАТАЛОГА */}
+      {/* Выбор ролика из архива для ленты бэкстейджа */}
+      {backstagePickerOpen ? (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-ink/50 p-4 backdrop-blur-sm">
+          <div className="relative flex max-h-[90dvh] w-full max-w-3xl flex-col rounded-3xl border border-sand bg-surface shadow-2xl">
+            <div className="flex items-center justify-between gap-4 border-b border-sand px-6 py-4">
+              <div>
+                <h2 className="font-display text-xl text-ink">Ролик в Бэкстейдж</h2>
+                <p className="mt-0.5 text-xs text-muted">
+                  Нажмите на ролик — он встанет первым в ленте. Ролики, которые уже в ленте, отмечены.
+                </p>
+              </div>
+              <button
+                type="button"
+                onClick={() => setBackstagePickerOpen(false)}
+                className="rounded-full p-2 text-muted hover:bg-sand/30"
+                aria-label="Закрыть"
+              >
+                ✕
+              </button>
+            </div>
+            <div className="px-6 pt-4">
+              <input
+                type="search"
+                value={backstagePickerSearch}
+                onChange={(e) => setBackstagePickerSearch(e.target.value)}
+                placeholder="Найти ролик по названию…"
+                className="w-full rounded-xl border border-sand bg-bg/50 px-4 py-2.5 text-xs text-ink focus:border-btn-brown focus:outline-none"
+              />
+            </div>
+            <div
+              data-lenis-prevent
+              className="grid min-h-0 flex-1 auto-rows-max content-start grid-cols-3 gap-3 overflow-y-auto overscroll-contain px-6 py-4 sm:grid-cols-4 md:grid-cols-5"
+            >
+              {videoLibrary
+                .filter((v) =>
+                  v.name.toLowerCase().includes(backstagePickerSearch.trim().toLowerCase()),
+                )
+                .map((v) => {
+                  const inFeed = backstage.some((b) => b.kind === "video" && b.src === v.src);
+                  return (
+                    <button
+                      key={v.src}
+                      type="button"
+                      disabled={inFeed}
+                      onClick={() => handleAddBackstageVideo(v.src)}
+                      className={`group flex flex-col overflow-hidden rounded-xl border text-left transition-all ${
+                        inFeed
+                          ? "cursor-default border-sand/40 opacity-50"
+                          : "border-sand/60 hover:border-btn-brown hover:shadow-md"
+                      }`}
+                    >
+                      <div className="relative aspect-[9/16] w-full bg-sand/30">
+                        {v.poster ? (
+                          <Image src={mediaUrl(v.poster)} alt="" fill sizes="200px" className="object-cover" />
+                        ) : null}
+                        {inFeed ? (
+                          <span className="absolute left-1.5 top-1.5 rounded-full bg-ink/75 px-2 py-0.5 text-[0.6rem] font-semibold text-white">
+                            уже в ленте
+                          </span>
+                        ) : null}
+                      </div>
+                      <span className="line-clamp-2 px-2 py-1.5 text-[0.7rem] font-medium text-ink">{v.name}</span>
+                    </button>
+                  );
+                })}
+            </div>
+          </div>
+        </div>
+      ) : null}
+
       {isCategoryModalOpen && editCategory ? (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-ink/50 p-4 backdrop-blur-sm">
           <div className="relative flex max-h-[90dvh] w-full max-w-xl flex-col rounded-3xl border border-sand bg-surface shadow-2xl">
@@ -2540,6 +2968,9 @@ export default function AdminPage() {
                   placeholder="Например: Обучение и творческие встречи"
                   className="w-full rounded-xl border border-sand bg-bg/50 px-4 py-2.5 text-xs text-ink focus:border-btn-brown focus:outline-none"
                 />
+                <p className="mt-1 text-[0.7rem] text-muted">
+                  Стоит на главной под названием раздела. Пустое поле — строки не будет.
+                </p>
               </div>
 
               <div>
@@ -2552,31 +2983,80 @@ export default function AdminPage() {
                   onChange={(e) =>
                     setEditCategory({ ...editCategory, description: e.target.value })
                   }
-                  placeholder="Текст, который будет отображаться на главной под названием раздела..."
+                  placeholder="Текст под названием раздела на главной, на странице «Каталог» и в шапке страницы раздела"
                   className="w-full rounded-xl border border-sand bg-bg/50 px-4 py-2.5 text-xs text-ink focus:border-btn-brown focus:outline-none"
                 />
+                <p className="mt-1 text-[0.7rem] text-muted">
+                  Показывается в трёх местах: на главной, на странице «Каталог» под названием
+                  раздела и в шапке самого раздела. Пустое поле — абзаца не будет.
+                </p>
               </div>
 
               <div>
                 <label className="block text-xs font-semibold uppercase tracking-wider text-muted mb-1">
                   Обложка раздела (фотография с авто-сжатием)
                 </label>
-                <input
-                  type="file"
-                  accept="image/*"
-                  onChange={async (e) => {
-                    const file = e.target.files?.[0];
-                    if (!file) return;
-                    const opt = await optimizeImageClient(file, 1400, 0.85);
-                    setNewCategoryCover({
-                      base64: opt.dataUrl,
-                      width: opt.width,
-                      height: opt.height,
-                      blurDataURL: opt.blurDataURL,
-                    });
-                  }}
-                  className="text-xs text-muted file:mr-3 file:rounded-full file:border-0 file:btn-brown file:px-4 file:py-2 file:text-xs file:font-semibold"
-                />
+                <div className="flex items-start gap-4">
+                  <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-xl border border-sand bg-bg">
+                    {newCategoryCover?.base64 || (editCategory.cover?.src && !removeCategoryCover) ? (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img
+                        src={newCategoryCover?.base64 || mediaUrl(editCategory.cover?.src)}
+                        alt=""
+                        className="h-full w-full object-cover"
+                      />
+                    ) : (
+                      <span className="flex h-full w-full items-center justify-center text-center text-[0.65rem] text-muted">
+                        без обложки
+                      </span>
+                    )}
+                  </div>
+                  <div className="flex min-w-0 flex-col gap-2">
+                    <span className="text-xs font-semibold text-ink">
+                      {newCategoryCover
+                        ? "Новое фото — ещё не сохранено"
+                        : removeCategoryCover
+                          ? "Обложка будет снята после сохранения"
+                          : editCategory.cover?.src
+                            ? "Сейчас на сайте"
+                            : "Обложки пока нет"}
+                    </span>
+                    <input
+                      type="file"
+                      accept="image/*"
+                      onChange={async (e) => {
+                        const file = e.target.files?.[0];
+                        if (!file) return;
+                        const opt = await optimizeImageClient(file, 1400, 0.85);
+                        setRemoveCategoryCover(false);
+                        setNewCategoryCover({
+                          base64: opt.dataUrl,
+                          width: opt.width,
+                          height: opt.height,
+                          blurDataURL: opt.blurDataURL,
+                        });
+                      }}
+                      className="text-xs text-muted file:mr-3 file:rounded-full file:border-0 file:btn-brown file:px-4 file:py-2 file:text-xs file:font-semibold"
+                    />
+                    {newCategoryCover ? (
+                      <button
+                        type="button"
+                        onClick={() => setNewCategoryCover(null)}
+                        className="self-start text-xs font-semibold text-btn-brown hover:underline"
+                      >
+                        Убрать выбранное фото, оставить прежнее
+                      </button>
+                    ) : editCategory.cover?.src ? (
+                      <button
+                        type="button"
+                        onClick={() => setRemoveCategoryCover((v) => !v)}
+                        className="self-start text-xs font-semibold text-btn-brown hover:underline"
+                      >
+                        {removeCategoryCover ? "Не снимать, оставить обложку" : "Снять обложку"}
+                      </button>
+                    ) : null}
+                  </div>
+                </div>
               </div>
 
               </div>
@@ -3256,7 +3736,7 @@ export default function AdminPage() {
 
                 <div className="mt-3">
                   <label className="block text-[0.7rem] font-semibold uppercase tracking-wider text-muted mb-1">
-                    Или добавить ссылкой на YouTube
+                    Или добавить ссылкой на YouTube или Vimeo
                   </label>
                   <div className="flex flex-wrap items-center gap-2">
                     <input
@@ -3271,14 +3751,26 @@ export default function AdminPage() {
                       onClick={() => {
                         const val = videoLink.trim();
                         if (!val) return;
-                        const match = val.match(
-                          /(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([\w-]{11})/,
+                        const youtube = val.match(
+                          /(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|shorts\/|live\/|watch\?v=|watch\?.+&v=))([\w-]{11})/,
                         );
+                        const vimeo = val.match(/vimeo\.com\/(?:video\/)?(\d+)/);
+                        const directFile = /^(https?:\/\/|\/)\S+\.(mp4|webm|mov)(\?.*)?$/i.test(val);
+                        if (!youtube && !vimeo && !directFile) {
+                          alert(
+                            "Не похоже на ссылку на видео. Подходит ссылка на YouTube (в том числе Shorts), " +
+                              "на Vimeo или прямая ссылка на файл .mp4. Свой ролик с телефона лучше загрузить " +
+                              "кнопкой «Загрузить свой ролик».",
+                          );
+                          return;
+                        }
                         setVideos([
                           ...editVideos,
-                          match
-                            ? { kind: "youtube", id: match[1], poster: videoPoster() }
-                            : { kind: "file", src: val, poster: videoPoster() },
+                          youtube
+                            ? { kind: "youtube", id: youtube[1], poster: videoPoster() }
+                            : vimeo
+                              ? { kind: "vimeo", id: vimeo[1], poster: videoPoster() }
+                              : { kind: "file", src: val, poster: videoPoster() },
                         ]);
                         setVideoLink("");
                         showToast("✓ Видео прикреплено к изделию");

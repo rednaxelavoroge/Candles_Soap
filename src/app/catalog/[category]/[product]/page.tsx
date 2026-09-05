@@ -1,6 +1,5 @@
 import { ProductGallery } from "@/components/product/ProductGallery";
 import { Tile } from "@/components/ui/Tile";
-import { Watercolor } from "@/components/ui/Watercolor";
 import {
   getCategory,
   getCover,
@@ -8,9 +7,10 @@ import {
   getProducts,
   getRelatedProducts,
   getSite,
+  getText,
   productVideos,
 } from "@/lib/content";
-import { productEnquiry, whatsappHref } from "@/lib/contacts";
+import { productEnquiry, whatsappWith } from "@/lib/contacts";
 import type { Product } from "@/lib/schemas";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -18,13 +18,11 @@ import { notFound } from "next/navigation";
 
 type Params = { category: string; product: string };
 
-const SPEC_LABELS: Record<string, string> = {
-  size: "Размер",
-  scent: "Аромат",
-  composition: "Состав и материалы",
-  burnTime: "Время горения",
-  weight: "Примерный вес",
-};
+/** Подписи характеристик правятся в панели («Карточка изделия»). */
+function specLabel(key: string): string {
+  const known = ["size", "scent", "composition", "burnTime", "weight"];
+  return known.includes(key) ? getText(`product.spec.${key}`) || key : key;
+}
 
 export function generateStaticParams(): Params[] {
   return getProducts().map((product) => ({
@@ -44,7 +42,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
     description: product.description,
     openGraph: {
       type: "article",
-      title: `${product.title} — AnnaManasaryan.Art`,
+      title: `${product.title} — ${getSite().brand}`,
       description: product.description,
       images: [{ url: cover.src, width: cover.width, height: cover.height, alt: cover.alt }],
     },
@@ -61,8 +59,17 @@ export default async function ProductPage({ params }: { params: Promise<Params> 
 
   const site = getSite();
   const related = getRelatedProducts(product);
-  const whatsapp = whatsappHref(productEnquiry(product.title));
+  const whatsapp = whatsappWith(productEnquiry(product.title));
   const specs = Object.entries(product.specs).filter(([, value]) => Boolean(value));
+  const articleLabel = getText("product.articleLabel");
+  const noteTitle = getText("product.noteTitle");
+  const noteText = getText("product.noteText");
+  const leadTime = getText("product.leadTime");
+  const whatsappButton = getText("common.whatsappButton");
+  const backButton = getText("product.backButton");
+  const relatedTitle = getText("product.relatedTitle");
+  const relatedAll = getText("product.relatedAll");
+  const catalogLabel = getText("nav.catalog") || "Каталог";
 
   return (
     <article className="pt-24 md:pt-32 w-full max-w-full overflow-x-clip">
@@ -74,7 +81,7 @@ export default async function ProductPage({ params }: { params: Promise<Params> 
       {/* Навигация / Хлебные крошки */}
       <nav aria-label="Хлебные крошки" className="px-5 pb-6 text-sm md:px-8">
         <Link href="/catalog" className="link-underline eyebrow">
-          Каталог
+          {catalogLabel}
         </Link>
         <span className="eyebrow mx-2">/</span>
         <Link href={`/catalog/${category.slug}`} className="link-underline eyebrow">
@@ -100,7 +107,7 @@ export default async function ProductPage({ params }: { params: Promise<Params> 
           </h1>
 
           <p className="mt-3 text-xs font-medium tracking-[0.03em] text-muted">
-            Артикул: {product.article}
+            {articleLabel ? `${articleLabel} ` : ""}{product.article}
           </p>
 
           <p className="mt-6 max-w-prose text-base leading-relaxed text-muted md:text-lg">
@@ -111,43 +118,49 @@ export default async function ProductPage({ params }: { params: Promise<Params> 
             <dl className="mt-8 divide-y divide-sand border-y border-sand">
               {specs.map(([key, value]) => (
                 <div key={key} className="flex justify-between gap-6 py-3.5 text-sm">
-                  <dt className="text-muted">{SPEC_LABELS[key] ?? key}</dt>
+                  <dt className="text-muted">{specLabel(key)}</dt>
                   <dd className="font-medium text-ink">{value}</dd>
                 </div>
               ))}
             </dl>
           ) : null}
 
-          {/* Информационный блок об индивидуальном заказе */}
-          <div className="mt-6 rounded-lg bg-surface p-4 text-xs leading-relaxed text-muted border border-sand/60">
-            <p>
-              ✨ <strong>Ручная работа:</strong> каждое изделие создаётся вручную. Оттенок, фактура и аромат могут быть индивидуально подобраны под ваши пожелания.
-            </p>
-            <p className="mt-2 text-muted/80">
-              Срок изготовления под заказ: 5–7 рабочих дней.
-            </p>
-          </div>
+          {/* Плашка о ручной работе и сроке — тексты из панели, пустые не выводятся */}
+          {noteTitle || noteText || leadTime ? (
+            <div className="mt-6 rounded-lg bg-surface p-4 text-xs leading-relaxed text-muted border border-sand/60">
+              {noteTitle || noteText ? (
+                <p>
+                  ✨ {noteTitle ? <strong>{noteTitle}</strong> : null}
+                  {noteTitle && noteText ? " " : ""}
+                  {noteText}
+                </p>
+              ) : null}
+              {leadTime ? <p className={noteTitle || noteText ? "mt-2 text-muted/80" : "text-muted/80"}>{leadTime}</p> : null}
+            </div>
+          ) : null}
 
           {/* Кнопка заказа в WhatsApp */}
           <div className="mt-8 flex flex-wrap items-center gap-4">
-            {whatsapp ? (
+            {whatsapp && whatsappButton ? (
               <a
                 href={whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-3 rounded-full btn-brown px-9 py-4 text-xs font-semibold tracking-[0.04em] shadow-md"
               >
-                <span>Написать в WhatsApp</span>
+                <span>{whatsappButton}</span>
                 <span>→</span>
               </a>
             ) : null}
 
-            <Link
-              href={`/catalog/${category.slug}`}
-              className="inline-flex items-center gap-2 border border-sand bg-surface px-6 py-4 text-sm tracking-wide text-ink transition-all duration-300 hover:border-ink"
-            >
-              Назад в раздел
-            </Link>
+            {backButton ? (
+              <Link
+                href={`/catalog/${category.slug}`}
+                className="inline-flex items-center gap-2 border border-sand bg-surface px-6 py-4 text-sm tracking-wide text-ink transition-all duration-300 hover:border-ink"
+              >
+                {backButton}
+              </Link>
+            ) : null}
           </div>
         </div>
       </div>
@@ -157,11 +170,13 @@ export default async function ProductPage({ params }: { params: Promise<Params> 
         <section className="mt-20 border-t border-sand pt-12 md:mt-28" aria-labelledby="related-heading">
           <div className="flex items-center justify-between px-5 md:px-8">
             <h2 id="related-heading" className="font-display text-2xl md:text-4xl">
-              Похожие изделия
+              {relatedTitle}
             </h2>
-            <Link href={`/catalog/${category.slug}`} className="link-underline text-sm text-muted hover:text-ink">
-              Все изделия раздела →
-            </Link>
+            {relatedAll ? (
+              <Link href={`/catalog/${category.slug}`} className="link-underline text-sm text-muted hover:text-ink">
+                {relatedAll} →
+              </Link>
+            ) : null}
           </div>
           <ul className="frame-grid mt-8 grid-cols-2 md:grid-cols-4">
             {related.map((item) => (

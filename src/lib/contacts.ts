@@ -1,4 +1,4 @@
-import { getSite } from "@/lib/content";
+import { getSite, getText } from "@/lib/content";
 
 /** wa.me принимает только цифры, поэтому из отображаемого номера чистим всё лишнее. */
 function toDigits(value: string): string {
@@ -58,7 +58,26 @@ export function getSiteName(): string {
 
 /**
  * Текст, который подставляется в WhatsApp при обращении из карточки товара.
+ * Сам текст заказчица правит в панели («Сообщения в WhatsApp»).
  */
 export function productEnquiry(title: string): string {
-  return `Здравствуйте! Пишу с сайта ${getSiteName()}. Интересует: ${title}. Подскажите, пожалуйста, по наличию и срокам.`;
+  return getText("whatsapp.product", { сайт: getSiteName(), изделие: title });
+}
+
+/** Текст для кнопок WhatsApp с главной и со страницы контактов. */
+export function generalEnquiry(): string {
+  return getText("whatsapp.general", { сайт: getSiteName() });
+}
+
+/** Текст для кнопки WhatsApp со страницы «Обо мне». */
+export function aboutEnquiry(): string {
+  return getText("whatsapp.about", { сайт: getSiteName() });
+}
+
+/**
+ * Ссылка на WhatsApp с текстом; пустой текст в панели значит «без текста»,
+ * а не «подставь свой».
+ */
+export function whatsappWith(message: string): string | null {
+  return whatsappHref(message.trim() ? message : undefined);
 }

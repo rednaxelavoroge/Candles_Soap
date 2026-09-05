@@ -111,14 +111,18 @@ function Figure({ caption, children }: { caption: string; children: React.ReactN
 const CHAPTERS = [
   { id: "vhod", num: "01", title: "Как войти в панель" },
   { id: "gde", num: "02", title: "Что где лежит" },
-  { id: "lenta", num: "03", title: "Лента на главной странице" },
-  { id: "podrazdely", num: "04", title: "Подразделы каталога" },
-  { id: "poryadok", num: "05", title: "Порядок: что за чем стоит" },
-  { id: "foto-video", num: "06", title: "Фотографии и видео в карточке" },
-  { id: "portret", num: "07", title: "Ваше фото на главной" },
-  { id: "sohranit", num: "08", title: "Что происходит после «Сохранить»" },
-  { id: "otkat", num: "09", title: "Если удалили лишнее" },
-  { id: "melochi", num: "10", title: "Мелочи, которые стоит знать" },
+  { id: "teksty", num: "03", title: "Любая надпись на сайте" },
+  { id: "razdely", num: "04", title: "Разделы каталога: Свечи, Мыло и другие" },
+  { id: "podrazdely", num: "05", title: "Подразделы каталога" },
+  { id: "lenta", num: "06", title: "Избранное на главной странице" },
+  { id: "poryadok", num: "07", title: "Порядок: что за чем стоит" },
+  { id: "foto-video", num: "08", title: "Фотографии и видео в карточке" },
+  { id: "portret", num: "09", title: "Ваше фото на главной" },
+  { id: "backstage", num: "10", title: "Бэкстейдж" },
+  { id: "kontakty", num: "11", title: "Контакты и WhatsApp" },
+  { id: "sohranit", num: "12", title: "Что происходит после «Сохранить»" },
+  { id: "otkat", num: "13", title: "Если удалили лишнее" },
+  { id: "melochi", num: "14", title: "Мелочи, которые стоит знать" },
 ];
 
 export default async function InstrukciyaPage() {
@@ -201,27 +205,29 @@ export default async function InstrukciyaPage() {
 
         <Chapter id="gde" num="02" title="Что где лежит">
           <p className="text-[0.95rem] leading-relaxed text-ink">
-            Наверху панели семь кнопок. Это семь разных мест.
+            Наверху панели восемь кнопок. Это восемь разных мест.
           </p>
 
           <Figure caption="Так выглядит верх панели. Коричневая — та, что открыта сейчас.">
             <svg viewBox="0 0 560 136" className="block h-auto w-full" role="img" aria-label="Ряд вкладок наверху панели">
               <rect x="0" y="8" width="120" height="30" rx="15" fill="var(--color-sand)" />
-              <text x="60" y="27" textAnchor="middle" fontSize="10.5" fontWeight="600" letterSpacing="0.7" fill="var(--color-ink)">ИЗДЕЛИЯ (239)</text>
+              <text x="60" y="27" textAnchor="middle" fontSize="10.5" fontWeight="600" letterSpacing="0.7" fill="var(--color-ink)">ИЗДЕЛИЯ</text>
               <rect x="130" y="8" width="180" height="30" rx="15" fill="var(--color-sand)" />
-              <text x="220" y="27" textAnchor="middle" fontSize="10.5" fontWeight="600" letterSpacing="0.7" fill="var(--color-ink)">РАЗДЕЛЫ КАТАЛОГА (5)</text>
+              <text x="220" y="27" textAnchor="middle" fontSize="10.5" fontWeight="600" letterSpacing="0.7" fill="var(--color-ink)">РАЗДЕЛЫ КАТАЛОГА</text>
               <rect x="320" y="8" width="150" height="30" rx="15" fill="var(--color-sand)" />
-              <text x="395" y="27" textAnchor="middle" fontSize="10.5" fontWeight="600" letterSpacing="0.7" fill="var(--color-ink)">ПОДРАЗДЕЛЫ (21)</text>
+              <text x="395" y="27" textAnchor="middle" fontSize="10.5" fontWeight="600" letterSpacing="0.7" fill="var(--color-ink)">ПОДРАЗДЕЛЫ</text>
 
               <rect x="0" y="48" width="140" height="30" rx="15" fill="var(--color-sand)" />
-              <text x="70" y="67" textAnchor="middle" fontSize="10.5" fontWeight="600" letterSpacing="0.7" fill="var(--color-ink)">ИЗБРАННОЕ (0)</text>
+              <text x="70" y="67" textAnchor="middle" fontSize="10.5" fontWeight="600" letterSpacing="0.7" fill="var(--color-ink)">ИЗБРАННОЕ</text>
               <rect x="150" y="48" width="170" height="30" rx="15" fill="var(--color-btn-brown)" />
               <text x="235" y="67" textAnchor="middle" fontSize="10.5" fontWeight="600" letterSpacing="0.7" fill="#ffffff">ТЕКСТЫ И ОБО МНЕ</text>
               <rect x="330" y="48" width="130" height="30" rx="15" fill="var(--color-sand)" />
-              <text x="395" y="67" textAnchor="middle" fontSize="10.5" fontWeight="600" letterSpacing="0.7" fill="var(--color-ink)">БЭКСТЕЙДЖ (46)</text>
+              <text x="395" y="67" textAnchor="middle" fontSize="10.5" fontWeight="600" letterSpacing="0.7" fill="var(--color-ink)">БЭКСТЕЙДЖ</text>
 
               <rect x="0" y="88" width="105" height="30" rx="15" fill="var(--color-sand)" />
-              <text x="52" y="107" textAnchor="middle" fontSize="10.5" fontWeight="600" letterSpacing="0.7" fill="var(--color-ink)">КОНТАКТЫ</text>
+              <text x="52" y="107" textAnchor="middle" fontSize="10.5" fontWeight="600" letterSpacing="0.7" fill="var(--color-ink)">🎬 ВИДЕО</text>
+              <rect x="115" y="88" width="105" height="30" rx="15" fill="var(--color-sand)" />
+              <text x="167" y="107" textAnchor="middle" fontSize="10.5" fontWeight="600" letterSpacing="0.7" fill="var(--color-ink)">КОНТАКТЫ</text>
               <text x="300" y="107" fontSize="10" fill="var(--color-accent)">выбранная вкладка — коричневая</text>
             </svg>
           </Figure>
@@ -229,12 +235,13 @@ export default async function InstrukciyaPage() {
           <div className="flex flex-col gap-3">
             {[
               ["Изделия", "Все свечи, мыло, гипс. Здесь их добавляют, правят и удаляют, здесь же — фотографии, видео и похожие."],
-              ["Разделы каталога", "Пять больших разделов: Свечи, Мыло, Гипсовые изделия, Декор, Аромасаше. Их названия, описания и обложки."],
+              ["Разделы каталога", "Пять больших разделов: Свечи, Мыло, Гипсовые изделия, Декор, Аромасаше. Их названия, подзаголовки, описания, обложки и порядок."],
               ["Подразделы", "Темы внутри разделов: «Новый год», «Свадьба», «Морская тема». Завести новый, переименовать, удалить, переставить."],
               ["Избранное", "Полоса с карточками на главной: заголовок, подпись и то, какие изделия там стоят."],
-              ["Тексты и обо мне", "Имя, слоган, рассказ о себе, портрет."],
-              ["Бэкстейдж", "Кадры и ролики из мастерской."],
-              ["Контакты", "Телефоны, WhatsApp, Instagram."],
+              ["Тексты и обо мне", "Имя, название сайта, слоган, рассказ о себе, портрет — и ниже все надписи сайта: заголовки, подписи, кнопки на каждой странице."],
+              ["Бэкстейдж", "Кадры и ролики из мастерской: добавить фото, добавить ролик из архива, переставить, удалить."],
+              ["Видео", "Архив всех роликов: посмотреть, переименовать, загрузить новый с телефона."],
+              ["Контакты", "Телефоны, WhatsApp, Instagram, Facebook, почта, город."],
             ].map(([name, what]) => (
               <div key={name} className="flex flex-col gap-0.5 border-b border-sand/50 pb-3 last:border-b-0 last:pb-0">
                 <span className="text-[0.73rem] font-semibold tracking-[0.1em] text-ink uppercase">
@@ -246,7 +253,129 @@ export default async function InstrukciyaPage() {
           </div>
         </Chapter>
 
-        <Chapter id="lenta" num="03" title="Избранное на главной странице">
+        <Chapter id="teksty" num="03" title="Любая надпись на сайте">
+          <p className="text-[0.95rem] leading-relaxed text-ink">
+            Каждый заголовок, подпись под ним, надпись на кнопке, строка в подвале и плашка
+            в карточке изделия правятся в одном месте. Раньше часть этих слов была
+            написана «намертво», и изменить их из панели было нельзя — теперь можно все.
+          </p>
+          <Steps
+            items={[
+              <>
+                Откройте вкладку <Btn>Тексты и обо мне</Btn>.
+              </>,
+              <>
+                Сверху — главные поля: <Field>Имя автора</Field>,{" "}
+                <Field>Название сайта (в шапке и подвале)</Field>, <Field>Краткий слоган</Field>,{" "}
+                <Field>История и философия</Field> и портрет. Под каждым полем написано,
+                где это стоит на сайте.
+              </>,
+              <>
+                Пролистайте ниже до заголовка <strong className="font-semibold">Все надписи сайта</strong>.
+                Там строка поиска и список страниц: «Главная страница», «Шапка и подвал»,
+                «Страница «Каталог»», «Карточка изделия», «Обо мне», «Контакты», «Бэкстейдж».
+              </>,
+              <>
+                Увидели на сайте фразу, которую хотите поменять, — впишите одно её слово в
+                строку поиска. Например, <strong className="font-semibold">повторю</strong> или{" "}
+                <strong className="font-semibold">срок</strong>. Останется только это поле.
+              </>,
+              <>
+                В поле стоит то, что на сайте сейчас. Сотрите и напишите своё.
+              </>,
+              <>
+                Хотите, чтобы надписи не было вовсе — оставьте поле пустым. Под ним появится
+                предупреждение «Поле пустое — на сайте этой надписи не будет». Это нормально:
+                своё вместо стёртого сайт не подставит.
+              </>,
+              <>
+                Передумали — нажмите <Btn>Вернуть исходный</Btn> справа над полем.
+              </>,
+              <>
+                Внизу нажмите <Btn>Сохранить все тексты</Btn>. Одна кнопка сохраняет и
+                главные поля, и все надписи разом.
+              </>,
+            ]}
+          />
+          <Note label="Что где">
+            Изменённые поля подсвечены коричневой рамкой, а у страницы в списке стоит
+            метка «изменено». Так видно, что вы уже переписали, а что стоит как было.
+          </Note>
+          <Note label="Подстановки в фигурных скобках">
+            В некоторых полях встречаются слова в фигурных скобках: {"{имя}"}, {"{сайт}"},{" "}
+            {"{изделие}"}. Их трогать не нужно — на сайте вместо них подставятся ваше имя,
+            адрес сайта или название изделия. Можно переставить их в другое место фразы
+            или убрать совсем.
+          </Note>
+          <Note label="Описания для поисковиков">
+            Последняя группа в списке — «Описания для поисковиков». На самих страницах
+            этих слов не видно, их читают Google и Яндекс и показывают под ссылкой на сайт.
+            Менять не обязательно.
+          </Note>
+        </Chapter>
+
+        <Chapter id="razdely" num="04" title="Разделы каталога: Свечи, Мыло и другие">
+          <p className="text-[0.95rem] leading-relaxed text-ink">
+            Вкладка <Btn>Разделы каталога</Btn>. Каждая строка — один большой раздел.
+            У раздела есть название, подзаголовок, описание и обложка.
+          </p>
+          <h3 className="mt-2 font-display text-base font-semibold text-ink">Где что видно на сайте</h3>
+          <Bullets
+            items={[
+              <>
+                <Field>Краткий подзаголовок</Field> — строка под названием раздела на главной
+                странице. Пустое поле — строки нет.
+              </>,
+              <>
+                <Field>Подробное описание раздела</Field> — абзац под названием раздела в трёх
+                местах: на главной, на странице «Каталог» и в шапке самого раздела. Раньше на
+                странице «Каталог» стоял другой, придуманный текст, и поле из панели туда не
+                попадало — исправлено, теперь везде ваш текст. Пустое поле — абзаца нет.
+              </>,
+              <>
+                <Field>Обложка раздела</Field> — фотография раздела на главной и на странице
+                «Каталог». В окне видно, какая стоит сейчас. <Btn>Choose File</Btn> выбирает
+                новую, <Btn>Снять обложку</Btn> убирает совсем. До кнопки{" "}
+                <Btn>Сохранить раздел</Btn> ничего не меняется.
+              </>,
+            ]}
+          />
+          <h3 className="mt-2 font-display text-base font-semibold text-ink">Как поменять описание раздела</h3>
+          <Steps
+            items={[
+              <>
+                Вкладка <Btn>Разделы каталога</Btn>.
+              </>,
+              <>
+                В строке нужного раздела нажмите <Btn>Редактировать</Btn>.
+              </>,
+              <>
+                Впишите текст в <Field>Подробное описание раздела</Field> или сотрите его.
+              </>,
+              <>
+                Нажмите <Btn>Сохранить раздел ✓</Btn>. Через несколько минут текст обновится на
+                сайте — сразу и на главной, и в каталоге.
+              </>,
+            ]}
+          />
+          <h3 className="mt-2 font-display text-base font-semibold text-ink">Порядок и удаление</h3>
+          <Bullets
+            items={[
+              <>
+                Порядок строк — это порядок разделов на главной и на странице «Каталог».
+                Стрелки ↑ ↓ слева от обложки или перетаскивание, сохраняется само.
+              </>,
+              <>
+                Удалить можно только пустой раздел. Если в нём есть изделия, панель откажет и
+                напишет, сколько их: сначала перенесите изделия в другой раздел (в карточке
+                изделия поле <Field>Категория</Field>) или удалите их. Иначе сайт перестал бы
+                собираться.
+              </>,
+            ]}
+          />
+        </Chapter>
+
+        <Chapter id="lenta" num="06" title="Избранное на главной странице">
           <p className="text-[0.95rem] leading-relaxed text-ink">
             Это широкая полоса с карточками на главной. Раньше и название, и состав
             были вписаны намертво, теперь они ваши: и заголовок, и подпись, и то,
@@ -370,7 +499,13 @@ export default async function InstrukciyaPage() {
           </Note>
         </Chapter>
 
-        <Chapter id="podrazdely" num="04" title="Подразделы каталога">
+        <Chapter id="podrazdely" num="05" title="Подразделы каталога">
+          <Note label="Новое: описание подраздела">
+            На вкладке <Btn>Подразделы</Btn> у каждой строки есть кнопка <Btn>+ Описание</Btn>.
+            Нажмите, впишите текст, нажмите <Btn>Сохранить описание</Btn>. Он встанет под
+            названием на странице этого подраздела и на странице раздела, когда нажата
+            только эта кнопка-фильтр. Пустое описание — абзаца нет.
+          </Note>
           <h3 className="font-display text-base font-semibold text-ink">Как устроен каталог</h3>
           <p className="text-[0.95rem] leading-relaxed text-ink">
             В каталоге три уровня. Сначала <strong className="font-semibold">раздел</strong> —
@@ -535,7 +670,7 @@ export default async function InstrukciyaPage() {
           </Note>
         </Chapter>
 
-        <Chapter id="poryadok" num="05" title="Порядок: что за чем стоит">
+        <Chapter id="poryadok" num="07" title="Порядок: что за чем стоит">
           <p className="text-[0.95rem] leading-relaxed text-ink">
             <strong className="font-semibold">Возьмите карточку мышью и перетащите</strong>{" "}
             туда, где ей место. Пока тащите, будущее место подсвечивается рамкой.
@@ -588,7 +723,7 @@ export default async function InstrukciyaPage() {
           </Note>
         </Chapter>
 
-        <Chapter id="foto-video" num="06" title="Фотографии и видео в карточке">
+        <Chapter id="foto-video" num="08" title="Фотографии и видео в карточке">
           <p className="text-[0.95rem] leading-relaxed text-ink">
             Всё это внизу окна <Field>Редактирование изделия</Field>.
           </p>
@@ -608,8 +743,8 @@ export default async function InstrukciyaPage() {
               </>,
               <>
                 <strong className="font-semibold">Видео.</strong> Блок{" "}
-                <Field>Видео изделия</Field>. Нажмите{" "}
-                <Btn>Выбрать из моих роликов</Btn> — там вся ваша съёмка процесса,
+                <Field>🎬 Видео изделия</Field>. Нажмите{" "}
+                <Btn>🎬 Выбрать из архива роликов</Btn> — там вся ваша съёмка процесса,
                 которая уже загружена на сайт. Выбрали нужный — он прицепился к изделию.
               </>,
               <>
@@ -623,12 +758,12 @@ export default async function InstrukciyaPage() {
                 в списке и его можно прицепить к другому изделию.
               </>,
               <>
-                Свой новый ролик: короткий пройдёт через{" "}
-                <Btn>Загрузить короткий ролик</Btn>. Если файл тяжелее 3,5 МБ, панель
-                скажет об этом сразу — сколько он весит и сколько можно, — и не станет
-                грузить его впустую. Снятый на телефон обычно тяжелее: такой выложите
-                на YouTube, вставьте ссылку в поле ниже и нажмите <Btn>Добавить</Btn>.
-                Так он и у покупателей будет открываться быстрее.
+                Свой новый ролик с телефона — кнопка <Btn>➕ Загрузить свой ролик</Btn>.
+                Файл берётся целиком, до 200 МБ, ничего заранее сжимать не нужно: панель
+                покажет, что ролик готовится, и через пару минут он появится в архиве. Ссылка
+                на YouTube или Vimeo нужна только для чужих или очень длинных роликов: вставьте
+                её в поле ниже и нажмите <Btn>Добавить</Btn>. Если это не ссылка на видео,
+                панель так и скажет и ничего не прицепит.
               </>,
             ]}
           />
@@ -650,7 +785,7 @@ export default async function InstrukciyaPage() {
           </Note>
         </Chapter>
 
-        <Chapter id="portret" num="07" title="Ваше фото на главной">
+        <Chapter id="portret" num="09" title="Ваше фото на главной">
           <p className="text-[0.95rem] leading-relaxed text-ink">
             Вкладка <Btn>Тексты и обо мне</Btn>, внизу — <Field>Портретное фото автора</Field>.
             Рядом с полем видно, какое фото стоит на сайте прямо сейчас.
@@ -676,7 +811,71 @@ export default async function InstrukciyaPage() {
           </Note>
         </Chapter>
 
-        <Chapter id="sohranit" num="08" title="Что происходит после «Сохранить»">
+        <Chapter id="backstage" num="10" title="Бэкстейдж">
+          <p className="text-[0.95rem] leading-relaxed text-ink">
+            Вкладка <Btn>Бэкстейдж</Btn> — лента кадров и роликов из мастерской на странице
+            «Бэкстейдж» сайта. Заголовок и абзац над лентой правятся в главе{" "}
+            <a href="#teksty" className="link-underline font-semibold text-ink">«Любая надпись на сайте»</a>,
+            группа «Страница «Бэкстейдж»».
+          </p>
+          <Bullets
+            items={[
+              <>
+                <strong className="font-semibold">Добавить фото.</strong> Впишите{" "}
+                <Field>Подпись к кадру</Field>, выберите файл, нажмите <Btn>Опубликовать</Btn>.
+                Кадр встанет первым.
+              </>,
+              <>
+                <strong className="font-semibold">Добавить ролик.</strong> Кнопка{" "}
+                <Btn>🎬 Добавить ролик из архива</Btn> под формой. Откроется архив — нажмите на
+                ролик, он встанет первым в ленте. Ролики, которые уже в ленте, отмечены и
+                второй раз не добавятся. Новый ролик с телефона сначала загружается на вкладке{" "}
+                <Btn>Видео</Btn>, потом появляется в этом архиве.
+              </>,
+              <>
+                <strong className="font-semibold">Подпись</strong> под кадром в панели — для вас,
+                на сайте она не показывается (в ленте только фотографии, без подписей — так
+                задумано). Нажмите на подпись с карандашом ✎, чтобы переписать.
+              </>,
+              <>
+                Порядок — перетаскиванием или стрелками, как везде. <Btn>Удалить</Btn> убирает
+                кадр из ленты; файл ролика в архиве остаётся.
+              </>,
+            ]}
+          />
+        </Chapter>
+
+        <Chapter id="kontakty" num="11" title="Контакты и WhatsApp">
+          <p className="text-[0.95rem] leading-relaxed text-ink">
+            Вкладка <Btn>Контакты</Btn>. Всё, что здесь вписано, показывается в подвале
+            сайта, в блоке контактов на главной и на странице «Контакты».
+          </p>
+          <Bullets
+            items={[
+              <>
+                <Field>Активный номер WhatsApp</Field> — на него ведут все кнопки «WhatsApp» и
+                «Написать в WhatsApp». Кнопки <Btn>Номер Армении</Btn> и <Btn>Номер России</Btn>{" "}
+                подставляют номер из полей ниже, чтобы не набирать руками. Ссылка «Проверить
+                переход» открывает WhatsApp так, как увидит покупатель.
+              </>,
+              <>
+                Телефоны, Instagram, Facebook, почта и город — по одному полю на каждое. Пустое
+                поле — строки на сайте нет.
+              </>,
+              <>
+                Текст, который покупатель увидит уже набранным в WhatsApp, правится в главе{" "}
+                <a href="#teksty" className="link-underline font-semibold text-ink">«Любая надпись на сайте»</a>,
+                группа «Сообщения в WhatsApp».
+              </>,
+              <>
+                Кнопка <Btn>Сохранить контакты и номер WhatsApp →</Btn> внизу. Если панель не смогла сохранить,
+                она скажет об этом прямо, а не промолчит.
+              </>,
+            ]}
+          />
+        </Chapter>
+
+        <Chapter id="sohranit" num="12" title="Что происходит после «Сохранить»">
           <p className="text-[0.95rem] leading-relaxed text-ink">
             Правка сохраняется сразу, но сайт обновляется не мгновенно: он собирается
             заново целиком. Это занимает{" "}
@@ -708,7 +907,7 @@ export default async function InstrukciyaPage() {
           </Note>
         </Chapter>
 
-        <Chapter id="otkat" num="09" title="Если удалили лишнее">
+        <Chapter id="otkat" num="13" title="Если удалили лишнее">
           <p className="text-[0.95rem] leading-relaxed text-ink">
             Вернуть можно всё и на любой день назад. Каждое ваше сохранение
             записывается отдельно и со временем — как страницы в тетради, которые
@@ -740,7 +939,7 @@ export default async function InstrukciyaPage() {
           </Note>
         </Chapter>
 
-        <Chapter id="melochi" num="10" title="Мелочи, которые стоит знать">
+        <Chapter id="melochi" num="14" title="Мелочи, которые стоит знать">
           <Bullets
             items={[
               <>

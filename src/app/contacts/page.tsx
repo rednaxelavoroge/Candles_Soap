@@ -1,41 +1,47 @@
-import { getSite } from "@/lib/content";
-import { getSocialLinks, telHref, whatsappHref } from "@/lib/contacts";
+import { getSite, getText } from "@/lib/content";
+import { generalEnquiry, getSocialLinks, telHref, whatsappHref, whatsappWith } from "@/lib/contacts";
 import type { Metadata } from "next";
 
-const DESCRIPTION = "WhatsApp, Instagram, Facebook и телефоны для заказа изделий ручной работы Анны Манасарян.";
-
 export const metadata: Metadata = {
-  title: "Контакты — AnnaManasaryan.Art",
-  description: DESCRIPTION,
-  openGraph: { title: "Контакты — AnnaManasaryan.Art", description: DESCRIPTION },
+  title: "Контакты",
+  description: getText("seo.contacts"),
+  openGraph: { title: "Контакты", description: getText("seo.contacts") },
 };
 
 export default function ContactsPage() {
   const { contacts, owner } = getSite();
-  const socials = getSocialLinks();
   const whatsappBase = whatsappHref();
+  const whatsappWithText = whatsappWith(generalEnquiry());
+  const facebook = getSocialLinks().find((link) => link.label === "Facebook");
+  const eyebrow = getText("contacts.eyebrow");
+  const title = getText("contacts.title");
+  const lead = getText("contacts.lead");
+  const signature = getText("contacts.signature", { имя: owner });
+  const whatsappButton = getText("common.whatsappButton");
 
   return (
     <div className="pt-24 md:pt-32">
       <header className="relative overflow-hidden px-5 pb-8 md:px-8 md:pb-12">
-        <span className="eyebrow relative">Связаться с автором</span>
+        {eyebrow ? <span className="eyebrow relative">{eyebrow}</span> : null}
         <h1 className="relative mt-2 max-w-2xl font-display text-4xl leading-tight text-ink md:text-6xl">
-          Напишите — отвечу лично
+          {title || "Контакты"}
         </h1>
-        <p className="relative mt-4 max-w-prose text-base leading-relaxed text-muted md:text-lg">
-          Расскажите, какое изделие вас заинтересовало, к какому событию или сроку. Почти каждую вещь можно повторить в другом цвете, аромате и размере.
-        </p>
+        {lead ? (
+          <p className="relative mt-4 max-w-prose text-base leading-relaxed text-muted md:text-lg">
+            {lead}
+          </p>
+        ) : null}
       </header>
 
       <div className="mt-6 px-5 pb-20 md:mt-10 md:px-8">
-        {whatsappBase ? (
+        {whatsappWithText && whatsappButton ? (
           <a
-            href={whatsappBase}
+            href={whatsappWithText}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 rounded-full btn-brown px-9 py-4 text-xs font-semibold tracking-[0.04em] shadow-md"
           >
-            <span>Написать в WhatsApp</span>
+            <span>{whatsappButton}</span>
             <span>→</span>
           </a>
         ) : null}
@@ -62,7 +68,7 @@ export default function ContactsPage() {
 
             {contacts.phone ? (
               <li className="flex flex-col sm:flex-row sm:justify-between sm:items-center py-4 sm:py-5 gap-1 sm:gap-4">
-                <span className="eyebrow">Телефон (Армения)</span>
+                <span className="eyebrow">{getText("contacts.labelPhoneArmenia")}</span>
                 <a
                   href={telHref(contacts.phone)}
                   className="link-underline text-base sm:text-lg md:text-xl font-medium text-ink whitespace-nowrap"
@@ -74,7 +80,7 @@ export default function ContactsPage() {
 
             {contacts.phoneRussia ? (
               <li className="flex flex-col sm:flex-row sm:justify-between sm:items-center py-4 sm:py-5 gap-1 sm:gap-4">
-                <span className="eyebrow">Телефон (Россия)</span>
+                <span className="eyebrow">{getText("contacts.labelPhoneRussia")}</span>
                 <a
                   href={telHref(contacts.phoneRussia)}
                   className="link-underline text-base sm:text-lg md:text-xl font-medium text-ink whitespace-nowrap"
@@ -109,9 +115,33 @@ export default function ContactsPage() {
                 </a>
               </li>
             ) : null}
+
+            {facebook ? (
+              <li className="flex flex-col sm:flex-row sm:justify-between sm:items-center py-4 sm:py-5 gap-1 sm:gap-4">
+                <span className="eyebrow">Facebook</span>
+                <a
+                  href={facebook.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="link-underline text-base sm:text-lg md:text-xl font-medium text-ink"
+                >
+                  {facebook.value}
+                </a>
+              </li>
+            ) : null}
+
+            {/* Поле «Город» из панели раньше сохранялось, но на сайте не показывалось. */}
+            {contacts.city ? (
+              <li className="flex flex-col sm:flex-row sm:justify-between sm:items-center py-4 sm:py-5 gap-1 sm:gap-4">
+                <span className="eyebrow">Город</span>
+                <span className="text-base sm:text-lg md:text-xl font-medium text-ink">{contacts.city}</span>
+              </li>
+            ) : null}
           </ul>
 
-          <p className="mt-8 text-sm font-medium text-muted">С уважением, {owner}</p>
+          {signature.trim() ? (
+            <p className="mt-8 text-sm font-medium text-muted">{signature}</p>
+          ) : null}
         </div>
       </div>
     </div>

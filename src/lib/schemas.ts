@@ -46,6 +46,12 @@ export const categorySchema = z.object({
 export const tagSchema = z.object({
   slug: z.string().min(1),
   title: z.string().min(1),
+  /**
+   * Описание подраздела её словами. Стоит под заголовком страницы подраздела
+   * и над сеткой, когда на странице раздела выбран один этот подраздел.
+   * Пустое или отсутствующее — абзаца нет.
+   */
+  description: z.string().optional(),
   group: z.enum(["occasion", "recipient", "form"]),
   /**
    * Порядок раздела на странице категории. Задан по её прайсам: сначала идут
@@ -135,6 +141,13 @@ export const siteSchema = z.object({
       ids: z.array(z.string()),
     })
     .optional(),
+  /**
+   * Тексты сайта, изменённые из панели: заголовки блоков, подписи, кнопки,
+   * служебные абзацы. Ключи и исходные значения — в src/lib/site-texts.ts.
+   * Здесь лежит только то, что заказчица переписала; пустая строка значит
+   * «не показывать».
+   */
+  texts: z.record(z.string(), z.string()).optional(),
   contacts: z.object({
     /** Номер для кнопки «Написать в WhatsApp» и звонков (Армения). */
     whatsapp: z.string().nullable(),

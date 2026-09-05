@@ -1,4 +1,5 @@
 import { Media } from "@/components/ui/Media";
+import { getText } from "@/lib/content";
 import type { ContentImage } from "@/lib/schemas";
 import Link from "next/link";
 
@@ -76,7 +77,7 @@ export function Tile({
         ) : null}
 
         <span className="mt-2 sm:mt-3.5 inline-flex items-center gap-1 rounded-full bg-white/20 px-2.5 sm:px-3.5 py-0.5 sm:py-1 text-[0.5625rem] sm:text-[0.6875rem] font-medium tracking-[0.02em] text-white backdrop-blur-sm">
-          <span>Смотреть</span>
+          <span>{getText("tile.view") || "Смотреть"}</span>
           <span>→</span>
         </span>
       </div>
