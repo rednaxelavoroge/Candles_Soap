@@ -24,14 +24,6 @@ export function CatalogSections() {
   );
 }
 
-const SHOWCASE_DESC: Record<string, string> = {
-  candles: "Интерьерные и формовые свечи из 100% натурального соевого воска с хлопковыми и деревянными фитилями.",
-  soap: "Мыло варится вручную небольшими партиями — с добавлением растительных масел и мягким, обволакивающим ароматом.",
-  gypsum: "Подсвечники, шкатулки, подносы, тарелки и вазы из высокопрочного скульптурного гипса с бархатистой текстурой.",
-  decor: "Интерьерные раковины, композиции цветочный луг, лодочки и ванночки для гармонии дома.",
-  sachet: "Аромасаше и флорентийские пластины для шкафов, гардеробных и спальни со стойким шлейфом.",
-};
-
 function CatalogSectionItem({
   category,
   index,
@@ -47,7 +39,8 @@ function CatalogSectionItem({
   const count = getProductsByCategory(category.slug).length;
   const num = `0${index + 1} / 0${total}`;
   const isEven = index % 2 === 0;
-  const description = SHOWCASE_DESC[category.slug] ?? "Авторские изделия ручной работы малых партий.";
+  // Описание раздела берётся из панели («Подробное описание раздела»); пустое поле — абзаца нет.
+  const description = category.description?.trim() ?? "";
 
   const textInitialX = isEven ? -90 : 90;
   const mediaInitialX = isEven ? 130 : -130;
@@ -72,9 +65,11 @@ function CatalogSectionItem({
           <h2 className="mt-3 font-display text-3xl leading-tight text-ink sm:text-4xl md:text-5xl">
             {category.title}
           </h2>
-          <p className="mt-4 max-w-lg text-base leading-relaxed text-muted md:text-lg">
-            {description}
-          </p>
+          {description ? (
+            <p className="mt-4 max-w-lg text-base leading-relaxed text-muted md:text-lg">
+              {description}
+            </p>
+          ) : null}
           <div className="mt-7 flex items-center gap-5">
             <Link
               href={`/catalog/${category.slug}`}

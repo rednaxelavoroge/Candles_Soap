@@ -21,8 +21,8 @@ export function CatalogShowcase() {
     return {
       category: cat,
       number: `0${idx + 1} / 0${categories.length}`,
-      subtitle: cat.subtitle || "Авторские изделия ручной работы",
-      description: cat.description || "Каждая партия небольшая, поэтому почти любую вещь можно повторить в вашем цвете и аромате.",
+      subtitle: cat.subtitle?.trim() ?? "",
+      description: cat.description?.trim() ?? "",
     };
   });
 
@@ -86,12 +86,16 @@ function ShowcaseSection({
           <h3 className="mt-3 font-display text-2xl leading-tight text-ink sm:text-3xl md:text-4xl lg:text-5xl">
             {item.category.title}
           </h3>
-          <p className="mt-2 text-sm font-medium tracking-wide text-clay md:text-base">
-            {item.subtitle}
-          </p>
-          <p className="mt-4 max-w-lg text-sm leading-relaxed text-muted md:text-base">
-            {item.description}
-          </p>
+          {item.subtitle ? (
+            <p className="mt-2 text-sm font-medium tracking-wide text-clay md:text-base">
+              {item.subtitle}
+            </p>
+          ) : null}
+          {item.description ? (
+            <p className="mt-4 max-w-lg text-sm leading-relaxed text-muted md:text-base">
+              {item.description}
+            </p>
+          ) : null}
           <div className="mt-7 flex items-center gap-5">
             <Link
               href={`/catalog/${item.category.slug}`}
