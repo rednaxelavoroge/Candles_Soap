@@ -1,8 +1,8 @@
 import { getSite, getText } from "@/lib/content";
 
 /** wa.me принимает только цифры, поэтому из отображаемого номера чистим всё лишнее. */
-function toDigits(value: string): string {
-  return value.replace(/\D/g, "");
+export function toDigits(value?: string | null): string {
+  return (value || "").replace(/\D/g, "");
 }
 
 /**

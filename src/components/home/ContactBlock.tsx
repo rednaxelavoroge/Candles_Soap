@@ -1,5 +1,5 @@
 import { getSite, getText } from "@/lib/content";
-import { generalEnquiry, telHref, whatsappWith } from "@/lib/contacts";
+import { generalEnquiry, toDigits, whatsappWith } from "@/lib/contacts";
 import Link from "next/link";
 
 export function ContactBlock() {
@@ -34,9 +34,11 @@ export function ContactBlock() {
           <ul className="flex flex-col gap-6 md:flex-row md:gap-12">
             {contacts.phone ? (
               <li>
-                <span className="eyebrow block">{getText("contacts.labelPhoneArmenia")}</span>
+                <span className="eyebrow block">WhatsApp / Армения</span>
                 <a
-                  href={telHref(contacts.phone)}
+                  href={`https://wa.me/${toDigits(contacts.phone)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="link-underline mt-1 inline-block text-lg font-medium text-ink md:text-xl"
                 >
                   {contacts.phone}
@@ -46,9 +48,11 @@ export function ContactBlock() {
 
             {contacts.phoneRussia ? (
               <li>
-                <span className="eyebrow block">{getText("contacts.labelPhoneRussia")}</span>
+                <span className="eyebrow block">WhatsApp / Россия</span>
                 <a
-                  href={telHref(contacts.phoneRussia)}
+                  href={`https://wa.me/${toDigits(contacts.phoneRussia)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="link-underline mt-1 inline-block text-lg font-medium text-ink md:text-xl"
                 >
                   {contacts.phoneRussia}

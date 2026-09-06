@@ -1,5 +1,5 @@
 import { getSite, getText } from "@/lib/content";
-import { getSocialLinks, telHref, whatsappHref } from "@/lib/contacts";
+import { getSocialLinks, whatsappHref } from "@/lib/contacts";
 import { getNav } from "@/lib/nav";
 import Link from "next/link";
 
@@ -37,13 +37,23 @@ export function SiteFooter() {
             <span className="text-sm font-medium text-ink mb-1">{contactsHeading}</span>
           ) : null}
           {site.contacts.phone ? (
-            <a href={telHref(site.contacts.phone)} className="text-muted hover:text-ink transition-colors whitespace-nowrap">
-              🇦🇲 {site.contacts.phone} {waDigits && waDigits === armDigits ? <span className="text-[0.7rem] text-accent font-medium">(WhatsApp)</span> : null}
+            <a
+              href={`https://wa.me/${armDigits || waDigits}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted hover:text-ink transition-colors whitespace-nowrap"
+            >
+              🇦🇲 {site.contacts.phone} <span className="text-[0.7rem] text-accent font-medium">(WhatsApp)</span>
             </a>
           ) : null}
           {site.contacts.phoneRussia ? (
-            <a href={telHref(site.contacts.phoneRussia)} className="text-muted hover:text-ink transition-colors whitespace-nowrap">
-              🇷🇺 {site.contacts.phoneRussia} {waDigits && waDigits === ruDigits ? <span className="text-[0.7rem] text-accent font-medium">(WhatsApp)</span> : null}
+            <a
+              href={`https://wa.me/${ruDigits}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted hover:text-ink transition-colors whitespace-nowrap"
+            >
+              🇷🇺 {site.contacts.phoneRussia} <span className="text-[0.7rem] text-accent font-medium">(WhatsApp)</span>
             </a>
           ) : null}
           {site.contacts.whatsapp && waDigits !== armDigits && waDigits !== ruDigits ? (
