@@ -2250,9 +2250,9 @@
   },
   {
     "id": "candles-banka-s-gnomami",
-    "slug": "banka-s-gnomami",
+    "slug": "banka-s-pingvinami",
     "title": "Банка новогодняя детская",
-    "article": "СВ-44",
+    "article": "2032",
     "category": "candles",
     "tags": [
       "new-year",
@@ -2298,14 +2298,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Стеклянная банка со снежной поверхностью, внутри — гномы и снеговики в колпаках. Детский сюжет, который можно рассматривать: фигурки лепятся отдельно и ставятся в банку по одной.",
+    "description": "Стеклянная банка по новогодней теме, внутри —пингвины, елка . ...",
     "specs": {},
     "tones": [
       "#D9F590",
       "#E9E0B1",
       "#DED2C2"
     ],
-    "order": 450
+    "order": 450,
+    "videos": [],
+    "related": []
   },
   {
     "id": "candles-zimnyaya-kartina",
