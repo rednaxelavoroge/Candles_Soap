@@ -3053,7 +3053,7 @@
     "id": "candles-medvezhonok-s-podarkom",
     "slug": "medvezhonok-s-podarkom",
     "title": "Медвежонок в подарке",
-    "article": "СВ-61",
+    "article": "2016",
     "category": "candles",
     "tags": [
       "kids",
@@ -3078,14 +3078,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Медвежонок сидит на подарочной коробке с бантом. Лапы, бант и коробка лепятся отдельно и собираются вручную — поза у каждого медвежонка получается чуть своя.",
+    "description": "Медвежонок сидит в подарочной коробке. удобно такую свечу расположить на тортике в День Рождения",
     "specs": {},
     "tones": [
       "#F9B8A3",
       "#F9AF9D",
       "#F9AA92"
     ],
-    "order": 500
+    "order": 500,
+    "videos": [],
+    "related": []
   },
   {
     "id": "candles-medvezhonok-s-karandashami",
