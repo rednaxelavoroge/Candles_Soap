@@ -3578,9 +3578,9 @@
   },
   {
     "id": "candles-sushi-set",
-    "slug": "sushi-set",
-    "title": "Суши-сет",
-    "article": "СВ-72",
+    "slug": "sushi",
+    "title": "Суши",
+    "article": "2093",
     "category": "candles",
     "tags": [
       "food",
@@ -3633,14 +3633,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Роллы и нигири на круглых гипсовых тарелочках: рис прорабатывается зерном, рыба наливается отдельным слоем. Тарелочки входят в набор.",
+    "description": "Роллы и суши. Сет располагается на гипсовом подносе ",
     "specs": {},
     "tones": [
       "#EFE7E2",
       "#F9BC9E",
       "#EACFBE"
     ],
-    "order": 140
+    "order": 140,
+    "videos": [],
+    "related": []
   },
   {
     "id": "candles-yabloko-so-zmeey",
