@@ -3742,13 +3742,15 @@
   {
     "id": "candles-knizhnaya-stopka",
     "slug": "knizhnaya-stopka",
-    "title": "Книжная стопка",
-    "article": "СВ-76",
+    "title": "Книги стопкой",
+    "article": "2064",
     "category": "candles",
     "tags": [
       "men",
       "gift",
-      "misc"
+      "misc",
+      "school",
+      "kids"
     ],
     "images": [
       {
@@ -3775,7 +3777,9 @@
       "#F9B994",
       "#F9C094"
     ],
-    "order": 530
+    "order": 530,
+    "videos": [],
+    "related": []
   },
   {
     "id": "candles-barelef-oval",
