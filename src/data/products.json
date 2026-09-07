@@ -3648,7 +3648,7 @@
     "id": "candles-yabloko-so-zmeey",
     "slug": "yabloko-so-zmeey",
     "title": "Яблоко со змеёй",
-    "article": "СВ-73",
+    "article": "2094",
     "category": "candles",
     "tags": [
       "men",
@@ -3686,7 +3686,9 @@
       "#F9C6AD",
       "#F4CDB7"
     ],
-    "order": 280
+    "order": 280,
+    "videos": [],
+    "related": []
   },
   {
     "id": "candles-rusalka-v-rakushke",
