@@ -3698,7 +3698,7 @@
     "id": "candles-rusalka-v-rakushke",
     "slug": "rusalka-v-rakushke",
     "title": "Русалка в ракушке",
-    "article": "СВ-74",
+    "article": "2095",
     "category": "candles",
     "tags": [
       "sea",
@@ -3722,14 +3722,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Русалка, лежащая в раскрытой раковине: створка поднимается за спиной веером. Голубой воск с золотой проводкой по хвосту и по краю створки.",
+    "description": "Русалка, лежащая в раскрытой раковине",
     "specs": {},
     "tones": [
       "#F4E7D4",
       "#C5E2F0",
       "#C1D8E1"
     ],
-    "order": 490
+    "order": 490,
+    "videos": [],
+    "related": []
   },
   {
     "id": "candles-knizhnaya-stopka",
