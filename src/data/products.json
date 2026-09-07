@@ -2635,7 +2635,7 @@
     "id": "candles-rusalka",
     "slug": "rusalka",
     "title": "Русалка",
-    "article": "СВ-53",
+    "article": "2074",
     "category": "candles",
     "tags": [
       "sea",
@@ -2659,14 +2659,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Русалка с распущенными волосами: хвост уходит кольцом, по чешуе пущена золотая проводка. Синий воск набран слоями, от светлого у хвоста к глубокому у плеч.",
+    "description": "Русалка, чешуйки и волосы переливаются",
     "specs": {},
     "tones": [
       "#EFE6E7",
       "#C0DAF0",
       "#A1CAF0"
     ],
-    "order": 480
+    "order": 480,
+    "videos": [],
+    "related": []
   },
   {
     "id": "candles-oblaka",
