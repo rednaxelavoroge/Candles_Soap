@@ -3093,7 +3093,7 @@
     "id": "candles-medvezhonok-s-karandashami",
     "slug": "medvezhonok-s-karandashami",
     "title": "Медвежонок с карандашами",
-    "article": "СВ-62",
+    "article": "2018",
     "category": "candles",
     "tags": [
       "kids",
@@ -3117,14 +3117,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Медвежонок с охапкой цветных карандашей на шоколадной подставке. Карандаши отливаются по одному, каждый своего цвета. Подарок к первому сентября или ко дню учителя.",
+    "description": "Медвежонок с цветными карандашами.  Подарок к первому сентября или ко дню учителя.",
     "specs": {},
     "tones": [
       "#F1EABD",
       "#F9B094",
       "#F9AE7A"
     ],
-    "order": 510
+    "order": 510,
+    "videos": [],
+    "related": []
   },
   {
     "id": "candles-utyata-v-vannochke",
