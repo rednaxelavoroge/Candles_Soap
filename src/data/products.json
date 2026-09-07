@@ -4871,10 +4871,10 @@
   },
   {
     "id": "soap-desertnyy-nabor-na-doske",
-    "slug": "desertnyy-nabor-na-doske",
-    "title": "Десертный набор на доске",
-    "article": "МЛ-11",
-    "category": "soap",
+    "slug": "tartaletki",
+    "title": "Тарталетки с ягодами",
+    "article": "2092",
+    "category": "candles",
     "tags": [
       "food",
       "gift"
@@ -4925,7 +4925,9 @@
       "#F9BC9C",
       "#F9B58D"
     ],
-    "order": 110
+    "order": 110,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-vafelnyy-nabor",
