@@ -3132,7 +3132,7 @@
     "id": "candles-utyata-v-vannochke",
     "slug": "utyata-v-vannochke",
     "title": "Ванна с утятами",
-    "article": "СВ-63",
+    "article": "2063",
     "category": "candles",
     "tags": [
       "kids",
@@ -3163,14 +3163,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Гипсовая ванночка с водой, в которой плавают жёлтые утята — сюжет для детской. Ванночка гипсовая: когда воск выгорит, в ней можно держать мелочи.",
+    "description": "Гипсовая ванночка с водой, в которой плавают утята — сюжет для детской. Ванночка гипсовая: когда воск выгорит, в ней можно держать мелочи.",
     "specs": {},
     "tones": [
       "#E5EBD9",
       "#F4DCB7",
       "#E1D1C2"
     ],
-    "order": 520
+    "order": 520,
+    "videos": [],
+    "related": []
   },
   {
     "id": "candles-serdtse-nyudovoe",
