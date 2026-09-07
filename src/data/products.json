@@ -2822,12 +2822,14 @@
     "id": "candles-karusel",
     "slug": "karusel",
     "title": "Карусель",
-    "article": "СВ-57",
+    "article": "2072",
     "category": "candles",
     "tags": [
       "kids",
       "gift",
-      "women"
+      "women",
+      "den-rozhdeniya",
+      "new-year"
     ],
     "images": [
       {
@@ -2836,41 +2838,6 @@
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAADwAQCdASoMABAAA4BaJYwAAudfNrwawtAA/vLWZHPAq3q1X3fL9kziRJrENqjHqtW9kbwtOAA=",
         "alt": "Карусель"
-      },
-      {
-        "src": "/catalog/candles/karusel-02.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAwAgCdASoQABAAA4BaJaQAD5MweGkkwBzWAAD+9qlmjwKN5lLOw9mkT6iKe+MWqwxGUUWtN/aGyINs0fKqTMOyfVhEL0kcE+t853UY+/fPrGM01NyKAAAA",
-        "alt": "Карусель — ракурс 2"
-      },
-      {
-        "src": "/catalog/candles/karusel-03.webp",
-        "width": 1600,
-        "height": 1200,
-        "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADQAQCdASoQAAwAA4BaJZwAArPhvwMZAAD+9pPmvlOQjn/zf+HzQHZqaElvPARNaS+qxsymjMR4Mv8Rlo5x81hoWNKx5dvj8OM9srLnkJZwAAAA",
-        "alt": "Карусель — ракурс 3"
-      },
-      {
-        "src": "/catalog/candles/karusel-04.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAAAQAwCdASoQABAAA4BaJQBOj+EEA2wAp8CuGsY6vCNJpAAA/veCFI6KXGJAKVp4ycLJpOUxlR5NlqAROzyxsbKkLll23OiwZ/fMfq5Pg5LrLmEJeZWDaZGud3img1zFrvvw5dRsTzVt6snS2WW0CjwA",
-        "alt": "Карусель — ракурс 4"
-      },
-      {
-        "src": "/catalog/candles/karusel-05.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADwAQCdASoQABAAA4BaJaQAAtq15YWewAAA/vVxhQ9ebHJBo9xhIwGurArf0bwzpGyqkcTmHuSl7D05JsirHrPlQqwQfNPTXWjFV8X51F0Vs1n+r9doKAAA",
-        "alt": "Карусель — ракурс 5"
-      },
-      {
-        "src": "/catalog/candles/karusel-06.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAACwAgCdASoQABAAA4BaJQBOj+DdACnlLcJH1pXFCAAA/vhVsia3yy9LWAVESeC69OlfwkFsaRiygi+SJPzfa/4daeJ0R+EryylrTDWmT5QvX/6gqUEu1jUsMeB+QA3KnB791FOPR344aC5QNAA=",
-        "alt": "Карусель — ракурс 6"
       },
       {
         "src": "/catalog/candles/karusel-07.webp",
@@ -2889,7 +2856,9 @@
       "#F1DADA",
       "#F9B5CE"
     ],
-    "order": 540
+    "order": 540,
+    "videos": [],
+    "related": []
   },
   {
     "id": "candles-medalon-s-tsvetami",
