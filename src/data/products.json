@@ -1438,6 +1438,13 @@
         "alt": "Банка варенья — ракурс 4"
       },
       {
+        "src": "/catalog/candles/yagody-v-banke-03.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAAAQAgCdASoQABAAA4BaJZgCdAEO0p7tIlrgAP6QS76W2H0Yud+lZT1ZL31KbQIa1W69XPL7XHQF8lZbctdGgNZ+Vs7r8IAA",
+        "alt": "Банка варенья — ракурс 3"
+      },
+      {
         "src": "/catalog/candles/yagody-v-banke-01.webp",
         "width": 1600,
         "height": 1200,
@@ -1450,13 +1457,6 @@
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAAAQAgCdASoQAAwAA4BaJbACdAEPhwHLMApQAP7s1gJ0KkNDrC7aqa8FBNaCAkHb4Ea3zJlTgGuPQ1EkecoUn/x/ha8+ATpjzfJp4AAA",
         "alt": "Банка варенья — ракурс 2"
-      },
-      {
-        "src": "/catalog/candles/yagody-v-banke-03.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAAAQAgCdASoQABAAA4BaJZgCdAEO0p7tIlrgAP6QS76W2H0Yud+lZT1ZL31KbQIa1W69XPL7XHQF8lZbctdGgNZ+Vs7r8IAA",
-        "alt": "Банка варенья — ракурс 3"
       },
       {
         "src": "/catalog/candles/yagody-v-banke-1788899064916-1.webp",
