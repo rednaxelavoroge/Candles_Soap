@@ -97,7 +97,7 @@
     "specs": {},
     "tags": [],
     "related": [],
-    "order": 680
+    "order": 690
   },
   {
     "id": "candles-ledyanaya-kupel",
@@ -1303,7 +1303,7 @@
       "#E1E2BA",
       "#C8D7D3"
     ],
-    "order": 670,
+    "order": 680,
     "videos": [],
     "related": []
   },
@@ -2567,7 +2567,7 @@
       "#E8DDD0",
       "#D6D3CF"
     ],
-    "order": 690,
+    "order": 700,
     "videos": [],
     "related": []
   },
@@ -3256,7 +3256,7 @@
       "#BCEDB8",
       "#EBCDCA"
     ],
-    "order": 710
+    "order": 720
   },
   {
     "id": "candles-tartaletki",
@@ -3468,7 +3468,7 @@
       "#F9C0A1",
       "#F5CEAA"
     ],
-    "order": 700
+    "order": 710
   },
   {
     "id": "candles-roza-v-kashpo",
@@ -3555,7 +3555,7 @@
       "#ECDCD3",
       "#F9B5C6"
     ],
-    "order": 720,
+    "order": 670,
     "videos": [],
     "related": []
   },
