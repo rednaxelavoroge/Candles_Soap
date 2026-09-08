@@ -1,6 +1,7 @@
 import { checkAdminAuth } from "@/lib/admin-auth";
 import { loadJsonData, saveJsonData, saveMediaFile } from "@/lib/data-storage";
 import { getCategories, getProducts, getTags } from "@/lib/content";
+import { otherBrokenText, productProblems, refusalText } from "@/lib/product-problems";
 import type { Category, Product, Tag, Video } from "@/lib/schemas";
 import { NextResponse } from "next/server";
 
@@ -165,9 +166,28 @@ export async function POST(req: Request) {
       updatedProducts = currentProducts.map((p) => (p.id === finalProduct.id ? finalProduct : p));
     }
 
+    /*
+      Проверка перед записью — той же схемой, на которой падает сборка сайта.
+      Раньше панель писала в репозиторий что дали, а разбиралась с этим уже
+      сборка: заказчица видела «Сохранено», ошибку — никто, и сайт молча
+      оставался вчерашним. Теперь отказ приходит сразу и словами.
+    */
+    const problems = productProblems(finalProduct);
+    if (problems.length > 0) {
+      return NextResponse.json(
+        { error: refusalText(finalProduct.title, problems) },
+        { status: 400 },
+      );
+    }
+
     await saveJsonData(FILE, updatedProducts);
 
-    return NextResponse.json({ ok: true, product: finalProduct });
+    // Сборка падает на первом же неполном изделии, чьим бы оно ни было:
+    // сохранить это можно безупречно и всё равно не увидеть сайт обновлённым.
+    // Поэтому вместе с «Сохранено» отдаём список тех, кто держит выкладку.
+    const warning = otherBrokenText(updatedProducts, finalProduct.id);
+
+    return NextResponse.json({ ok: true, product: finalProduct, warning });
   } catch (err) {
     console.error("Products API error:", err);
     return NextResponse.json({ error: "Ошибка сохранения товара" }, { status: 500 });

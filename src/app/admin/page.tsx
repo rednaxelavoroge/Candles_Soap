@@ -325,6 +325,9 @@ export default function AdminPage() {
         setImageStats(null);
         setVideoPickerOpen(false);
         showToast("✓ Сохранено. На сайте обновится через несколько минут");
+        // Сайт не соберётся, пока не дозаполнены другие изделия: об этом
+        // нужно сказать сразу, иначе правка «сохранилась», а сайт вчерашний.
+        if (data.warning) alert(data.warning);
       } else {
         alert(data.error || "Ошибка сохранения");
       }
