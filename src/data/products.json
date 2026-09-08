@@ -30,7 +30,7 @@
       "kids"
     ],
     "related": [],
-    "order": 470
+    "order": 480
   },
   {
     "id": "p-1788897790308",
@@ -70,7 +70,7 @@
       "men"
     ],
     "related": [],
-    "order": 450
+    "order": 460
   },
   {
     "id": "p-1788897626535",
@@ -434,7 +434,7 @@
     "specs": {},
     "tags": [],
     "related": [],
-    "order": 490
+    "order": 450
   },
   {
     "id": "candles-ledyanaya-kupel",
@@ -697,7 +697,7 @@
       "#F1DAD3",
       "#D2D4D3"
     ],
-    "order": 460,
+    "order": 470,
     "videos": [],
     "related": []
   },
@@ -1968,7 +1968,7 @@
       "#E7DDDB",
       "#D9D2D1"
     ],
-    "order": 480,
+    "order": 490,
     "videos": [],
     "related": []
   },
