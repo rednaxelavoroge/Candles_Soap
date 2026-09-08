@@ -1303,7 +1303,7 @@
       "#E1E2BA",
       "#C8D7D3"
     ],
-    "order": 650,
+    "order": 660,
     "videos": [],
     "related": []
   },
@@ -2604,7 +2604,7 @@
       "#F9AEA3",
       "#EBCEC1"
     ],
-    "order": 640,
+    "order": 650,
     "videos": [],
     "related": []
   },
@@ -2650,7 +2650,7 @@
       "#F9D1C8",
       "#D8D3CD"
     ],
-    "order": 660
+    "order": 670
   },
   {
     "id": "candles-rusalka",
@@ -3041,7 +3041,7 @@
       "#BADEF0",
       "#D5D3D4"
     ],
-    "order": 670,
+    "order": 620,
     "videos": [],
     "related": []
   },
@@ -3335,7 +3335,7 @@
       "#F9B3B4",
       "#DFD1C8"
     ],
-    "order": 630,
+    "order": 640,
     "videos": [],
     "related": []
   },
@@ -3368,7 +3368,7 @@
       "#F9D9BE",
       "#D3D4D2"
     ],
-    "order": 620,
+    "order": 630,
     "videos": [],
     "related": []
   },
