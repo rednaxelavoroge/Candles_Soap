@@ -3473,8 +3473,8 @@
   {
     "id": "candles-roza-v-kashpo",
     "slug": "roza-v-kashpo",
-    "title": "Роза в кашпо",
-    "article": "СВ-71",
+    "title": "Цветок в подсвечнике",
+    "article": "2083",
     "category": "candles",
     "tags": [
       "flowers",
@@ -3495,20 +3495,6 @@
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAQAgCdASoQABAAA4BaJQAAXPFsxm5yLKAAAP71cY86rp6Q0lp0KxL0Qt6oB0LXg8cejS4ebkNd3MPVGeAerGMRln+FtYqZmS5Jm1FadVHINMD8NgdMKpSgXA+k6IAA",
         "alt": "Роза в кашпо — ракурс 2"
-      },
-      {
-        "src": "/catalog/candles/roza-v-kashpo-03.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAABQAgCdASoQABAAA4BaJYwBTAA9j/NElcXmXQAA/vQl+LjaYodsvGwy1WeOiBdbRqdl+2IuXoSCYMzqn03+zY4uVOBq2t1yQuEbOcrEuYiAxKg2XO77vhsB+mFZWeAQAAA=",
-        "alt": "Роза в кашпо — ракурс 3"
-      },
-      {
-        "src": "/catalog/candles/roza-v-kashpo-04.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAAAwAgCdASoQABAAA4BaJZwAD4lwcAU6rH8ggAD+9Bv/I/wCiauIW+lN31JLSYOVMAY2b/P3Ed17CKyhTnZyFmeAAAA=",
-        "alt": "Роза в кашпо — ракурс 4"
       },
       {
         "src": "/catalog/candles/roza-v-kashpo-05.webp",
@@ -3539,20 +3525,6 @@
         "alt": "Роза в кашпо — ракурс 8"
       },
       {
-        "src": "/catalog/candles/roza-v-kashpo-09.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAAAwAgCdASoQABAAA4BaJYwBTAA9EJjCrUJyAAD+9oQRvq06Nigj8Q1GnIWIEmEdaptkkHcjap6PVd898KdatuR+HUjz5sTb9PGAAA==",
-        "alt": "Роза в кашпо — ракурс 9"
-      },
-      {
-        "src": "/catalog/candles/roza-v-kashpo-10.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAQAgCdASoQABAAA4BaJQAAXPDbj4NkIQgAAP71dT+UvQ1o1JHGlZ456kLJ5RIDYpF0NPHVGbh/qcp1vEb8gcGsmWAaar6dC6JzrTZ4WjWJtT/DYHTCqUoFxcePM7gA",
-        "alt": "Роза в кашпо — ракурс 10"
-      },
-      {
         "src": "/catalog/candles/roza-v-kashpo-11.webp",
         "width": 1600,
         "height": 1600,
@@ -3567,30 +3539,25 @@
         "alt": "Роза в кашпо — ракурс 12"
       },
       {
-        "src": "/catalog/candles/roza-v-kashpo-13.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADwAQCdASoQABAAA4BaJYwAAudf/u2DTYAA/vQhhPmvutdEeYLddF7mJ0GpHV5Z7+LnixSI3tXvRbfnLDsbrf5tgKzTft4kg4AAAA==",
-        "alt": "Роза в кашпо — ракурс 13"
-      },
-      {
-        "src": "/catalog/candles/roza-v-kashpo-14.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAADwAQCdASoQABAAA4BaJQAAXOztr054zcAA/vQlUbf5gKW+xLNuHCd06tko2kBZ4+aYFxRYobC3/3JYvmiSyQ3fhiXDLpAHag3KK5X934U0BfhsDofaKXMTexgAAA==",
-        "alt": "Роза в кашпо — ракурс 14"
+        "src": "/catalog/candles/roza-v-kashpo-1788894414379-1.webp",
+        "width": 1084,
+        "height": 1400,
+        "blurDataURL": "data:image/webp;base64,UklGRooCAABXRUJQVlA4WAoAAAAgAAAADwAAFAAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggnAAAADAEAJ0BKhAAFQA+7WKpTamlo6IwCAEwHYlAFh2xZFUD03XmGHjAyVPLAAD+sK4Va3jEz0SQi6HPnhefB9/n3mYtATCn0uF5TcfXz3z+avEmASeHjgRP7yq8tZRPnXiUNkfYsnQ2HWGd9ZUkR57isHlg2ywYkqjoxj6vDC7gVJukyllLeJiE/q4CTc//4GwD8OQ8cTCLX1PElgAAAA==",
+        "alt": "Цветок в подсвечнике"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Крупный бутон розы в гипсовом кашпо: лепестки идут слоями от середины к краю. Кашпо бывает ребристым, в пузырьках и в чешуе — выбирается под интерьер. Кашпо остаётся, свечу можно заменить.",
+    "description": "Цветок в подсвечнике",
     "specs": {},
     "tones": [
       "#F9E5DA",
       "#ECDCD3",
       "#F9B5C6"
     ],
-    "order": 720
+    "order": 720,
+    "videos": [],
+    "related": []
   },
   {
     "id": "candles-sushi-set",
