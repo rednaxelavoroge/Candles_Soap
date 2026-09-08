@@ -1,5 +1,30 @@
 [
   {
+    "id": "p-1788895455359",
+    "category": "candles",
+    "slug": "gubi",
+    "title": "Губы",
+    "article": "2007",
+    "description": "Свеча в форме губ",
+    "images": [
+      {
+        "src": "/catalog/candles/gubi-1788895455358-1.webp",
+        "width": 1019,
+        "height": 1033,
+        "blurDataURL": "data:image/webp;base64,UklGRlYCAABXRUJQVlA4WAoAAAAgAAAADwAADwAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggaAAAABACAJ0BKhAAEAADgFolkAJ0BioPH/oii7wA/vhWhVcEaXEyeHkCofivNKA8bE1EzoDxJ3dsXHiSp8ZhbOKQ0BUuK/5SXm49VYB4VT0y+l7s7pK7pR37UCSY3AJTpbpiA3H7fv5erAAA",
+        "alt": "Губы"
+      }
+    ],
+    "videos": [],
+    "video": null,
+    "price": null,
+    "specs": {},
+    "tags": [
+      "women"
+    ],
+    "related": []
+  },
+  {
     "id": "p-1788894689573",
     "category": "candles",
     "slug": "bento-tort",
