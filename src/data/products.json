@@ -3261,9 +3261,9 @@
   },
   {
     "id": "candles-stakan-s-tsvetami",
-    "slug": "stakan-s-tsvetami",
-    "title": "Стакан с цветами",
-    "article": "СВ-66",
+    "slug": "podsvechnik-s-tsvetami",
+    "title": "Подсвечник с цветами",
+    "article": "2099",
     "category": "candles",
     "tags": [
       "flowers",
@@ -3276,25 +3276,20 @@
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAABQAgCdASoMABAAA4BaJQBdgMXX3FZIsuYNzkAA/vaOEHk7Gzb9DkDdfbUrm37pcKVLO8abUSkMNOdOh99O3I0HQ5Ikx0pUW/9JaPvMiogAdgAA",
         "alt": "Стакан с цветами"
-      },
-      {
-        "src": "/catalog/candles/stakan-s-tsvetami-02.webp",
-        "width": 1200,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADQAQCdASoMABAAA4BaJbAC7AEOzlMuwAD+9oN3+2IcEXvAf5Efl0Ji5wGUwrQs98wiJnakEHJHwbu21GFjJIHDTcWPkg08wiXfVtkZ4pYJOAAA",
-        "alt": "Стакан с цветами — ракурс 2"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Гипсовый стакан с лепестками по верхнему краю, внутри свеча. Во втором варианте в воск вмешаны сухие соцветия — они просвечивают, пока свеча горит. Стакан остаётся после.",
+    "description": "Красивый гипсовый подсвечник с цветами",
     "specs": {},
     "tones": [
       "#DAF1C1",
       "#BCEDB8",
       "#EBCDCA"
     ],
-    "order": 730
+    "order": 730,
+    "videos": [],
+    "related": []
   },
   {
     "id": "candles-tartaletki",
