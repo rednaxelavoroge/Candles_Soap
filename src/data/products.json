@@ -2567,7 +2567,7 @@
       "#E8DDD0",
       "#D6D3CF"
     ],
-    "order": 700,
+    "order": 690,
     "videos": [],
     "related": []
   },
@@ -2652,7 +2652,7 @@
       "#F9D1C8",
       "#D8D3CD"
     ],
-    "order": 690,
+    "order": 730,
     "videos": [],
     "related": []
   },
@@ -3256,7 +3256,7 @@
       "#BCEDB8",
       "#EBCDCA"
     ],
-    "order": 720
+    "order": 710
   },
   {
     "id": "candles-tartaletki",
@@ -3468,7 +3468,7 @@
       "#F9C0A1",
       "#F5CEAA"
     ],
-    "order": 710
+    "order": 700
   },
   {
     "id": "candles-roza-v-kashpo",
@@ -3590,7 +3590,7 @@
       "#ECDCD3",
       "#F9B5C6"
     ],
-    "order": 730
+    "order": 720
   },
   {
     "id": "candles-sushi-set",
