@@ -2533,9 +2533,9 @@
   },
   {
     "id": "candles-vyazanaya-svecha",
-    "slug": "vyazanaya-svecha",
-    "title": "Вязаная свеча",
-    "article": "СВ-50",
+    "slug": "vyazani-podsvechnik",
+    "title": "Свеча в подсвечнике вязанном",
+    "article": "2052",
     "category": "candles",
     "tags": [
       "new-year",
@@ -2544,30 +2544,32 @@
     ],
     "images": [
       {
-        "src": "/catalog/candles/vyazanaya-svecha-01.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAADwAQCdASoQABAAA4BaJZwAAuW6901ArwAA/lILKN5bMBk5BDc1L6dg7mBEtj7R3k/yhcAAAAA=",
-        "alt": "Вязаная свеча"
-      },
-      {
         "src": "/catalog/candles/vyazanaya-svecha-02.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAADQAQCdASoQABAAA4BaJZwAAubdq/u+gAD+i6TTXOTCnV184/G841Ui8T55V3WOt1ThU8AA",
         "alt": "Вязаная свеча — ракурс 2"
+      },
+      {
+        "src": "/catalog/candles/vyazanaya-svecha-01.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAADwAQCdASoQABAAA4BaJZwAAuW6901ArwAA/lILKN5bMBk5BDc1L6dg7mBEtj7R3k/yhcAAAAA=",
+        "alt": "Вязаная свеча"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Цилиндр с фактурой вязаного полотна: по кругу идёт коса, верх присыпан серебряной крошкой. Рельеф глубокий, тень от него ложится крупно.",
+    "description": "Подсвечник гипсовый вязанный",
     "specs": {},
     "tones": [
       "#F9E4D4",
       "#E8DDD0",
       "#D6D3CF"
     ],
-    "order": 700
+    "order": 700,
+    "videos": [],
+    "related": []
   },
   {
     "id": "candles-vitaya-svecha",
