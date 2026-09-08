@@ -59,7 +59,8 @@
       "men",
       "women"
     ],
-    "related": []
+    "related": [],
+    "order": 730
   },
   {
     "id": "p-1788896826378",
@@ -285,7 +286,7 @@
     "specs": {},
     "tags": [],
     "related": [],
-    "order": 730
+    "order": 740
   },
   {
     "id": "candles-ledyanaya-kupel",
@@ -2755,7 +2756,7 @@
       "#E8DDD0",
       "#D6D3CF"
     ],
-    "order": 740,
+    "order": 750,
     "videos": [],
     "related": []
   },
@@ -2840,7 +2841,7 @@
       "#F9D1C8",
       "#D8D3CD"
     ],
-    "order": 770,
+    "order": 780,
     "videos": [],
     "related": []
   },
@@ -3437,7 +3438,7 @@
       "#BCEDB8",
       "#EBCDCA"
     ],
-    "order": 760,
+    "order": 770,
     "videos": [],
     "related": []
   },
@@ -3630,7 +3631,7 @@
       "#F9C0A1",
       "#F5CEAA"
     ],
-    "order": 750,
+    "order": 760,
     "videos": [],
     "related": []
   },
