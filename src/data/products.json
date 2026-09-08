@@ -210,7 +210,9 @@
     "video": null,
     "price": null,
     "specs": {},
-    "tags": [],
+    "tags": [
+      "den-rozhdeniya"
+    ],
     "related": [],
     "order": 170
   },
