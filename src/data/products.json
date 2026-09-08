@@ -3152,9 +3152,9 @@
   },
   {
     "id": "candles-serdtse-nyudovoe",
-    "slug": "serdtse-nyudovoe",
-    "title": "Сердце нюдовое",
-    "article": "СВ-65",
+    "slug": "ruki-vlyublenix",
+    "title": "Руки влюбленных",
+    "article": "2081",
     "category": "candles",
     "tags": [
       "heart",
@@ -3193,7 +3193,9 @@
       "#F9D1B6",
       "#EBCFB9"
     ],
-    "order": 570
+    "order": 570,
+    "videos": [],
+    "related": []
   },
   {
     "id": "candles-stakan-s-tsvetami",
