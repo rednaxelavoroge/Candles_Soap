@@ -2676,8 +2676,8 @@
   {
     "id": "candles-oblaka",
     "slug": "oblaka",
-    "title": "Облака, цветы в подсвечнике",
-    "article": "СВ-54",
+    "title": "Облака в подсвечнике",
+    "article": "2082",
     "category": "candles",
     "tags": [
       "kids",
@@ -2722,7 +2722,9 @@
       "#CED3F0",
       "#D7D3D3"
     ],
-    "order": 550
+    "order": 550,
+    "videos": [],
+    "related": []
   },
   {
     "id": "candles-kovboyskie-sapogi",
