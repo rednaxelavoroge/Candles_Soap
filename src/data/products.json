@@ -1,5 +1,28 @@
 [
   {
+    "id": "p-1788896826378",
+    "category": "candles",
+    "slug": "telefon",
+    "title": "Телефон",
+    "article": "2101",
+    "description": "Телефон с циферблатом",
+    "images": [
+      {
+        "src": "/catalog/candles/telefon-1788896826377-1.webp",
+        "width": 697,
+        "height": 787,
+        "blurDataURL": "data:image/webp;base64,UklGRnQCAABXRUJQVlA4WAoAAAAgAAAADwAAEQAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDgghgAAABAEAJ0BKhAAEgA+7WKpTamlo6IwCAEwHYloAJ0yhHAB0OhMX5Lvhr6AAM3bP5o0u2zcSPslpQIm2I9vviH81EE2Mx3DhrzlpGYPPSRo/EZ8JQLoPFcujml8JVEERFcMlTpdsHcTqZS82m+UzTFH6us+U9wpPhbdEIwTwdCdytXOS7oWAAAA",
+        "alt": "Телефон"
+      }
+    ],
+    "videos": [],
+    "video": null,
+    "price": null,
+    "specs": {},
+    "tags": [],
+    "related": []
+  },
+  {
     "id": "p-1788896054730",
     "category": "candles",
     "slug": "vinograd",
