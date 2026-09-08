@@ -3289,9 +3289,9 @@
   },
   {
     "id": "candles-serdtse-malinovoe",
-    "slug": "serdtse-malinovoe",
-    "title": "Сердце малиновое",
-    "article": "СВ-68",
+    "slug": "serdtse-pletenoe",
+    "title": "Сердце плетенное",
+    "article": "2086",
     "category": "candles",
     "tags": [
       "heart",
@@ -3308,14 +3308,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Сердце с ягодной фактурой — вся поверхность собрана из мелких зёрен, как малина. Подаётся в гипсовом блюде с бусинным краем, блюдо входит в набор.",
+    "description": "Сердце плетенное, бывает 3 размеров, Может быть комплектом из 3 различных сердец",
     "specs": {},
     "tones": [
       "#F9DBD1",
       "#F9B3B4",
       "#DFD1C8"
     ],
-    "order": 600
+    "order": 600,
+    "videos": [],
+    "related": []
   },
   {
     "id": "candles-klubok-pryazhi",
