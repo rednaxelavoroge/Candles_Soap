@@ -30,7 +30,7 @@
       "kids"
     ],
     "related": [],
-    "order": 680
+    "order": 580
   },
   {
     "id": "p-1788897790308",
@@ -365,7 +365,7 @@
     "specs": {},
     "tags": [],
     "related": [],
-    "order": 580
+    "order": 590
   },
   {
     "id": "p-1788383857432",
@@ -434,7 +434,7 @@
     "specs": {},
     "tags": [],
     "related": [],
-    "order": 670
+    "order": 680
   },
   {
     "id": "candles-ledyanaya-kupel",
@@ -845,7 +845,7 @@
       "#F9CFB4",
       "#F9A79A"
     ],
-    "order": 610,
+    "order": 620,
     "videos": [],
     "related": []
   },
@@ -2584,7 +2584,7 @@
       "#DBE88F",
       "#F9A59B"
     ],
-    "order": 590,
+    "order": 600,
     "videos": [],
     "related": []
   },
@@ -2645,7 +2645,7 @@
       "#E9E0B1",
       "#DED2C2"
     ],
-    "order": 600,
+    "order": 610,
     "videos": [],
     "related": []
   },
@@ -2712,7 +2712,7 @@
       "#C9E6D7",
       "#C9D6D5"
     ],
-    "order": 620,
+    "order": 630,
     "videos": [],
     "related": []
   },
@@ -3422,7 +3422,7 @@
       "#F9AF9D",
       "#F9AA92"
     ],
-    "order": 630,
+    "order": 640,
     "videos": [],
     "related": []
   },
@@ -3461,7 +3461,7 @@
       "#F9B094",
       "#F9AE7A"
     ],
-    "order": 640,
+    "order": 650,
     "videos": [],
     "related": []
   },
@@ -3507,7 +3507,7 @@
       "#F4DCB7",
       "#E1D1C2"
     ],
-    "order": 650,
+    "order": 660,
     "videos": [],
     "related": []
   },
@@ -4049,7 +4049,7 @@
       "#F9B994",
       "#F9C094"
     ],
-    "order": 660,
+    "order": 670,
     "videos": [],
     "related": []
   },
