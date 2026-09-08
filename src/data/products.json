@@ -3416,9 +3416,9 @@
   },
   {
     "id": "candles-shkatulka-s-bantom",
-    "slug": "shkatulka-s-bantom",
-    "title": "Шкатулка с бантом",
-    "article": "СВ-70",
+    "slug": "koshelyok-s-monetami",
+    "title": "Кошелек с монетами",
+    "article": "2098",
     "category": "candles",
     "tags": [
       "gift",
@@ -3462,32 +3462,11 @@
         "alt": "Шкатулка с бантом — ракурс 5"
       },
       {
-        "src": "/catalog/candles/shkatulka-s-bantom-06.webp",
-        "width": 1600,
-        "height": 1067,
-        "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAAAwAgCdASoQAAsAA4BaJYwCdH8AGDyP7L+AAAD+9Xlb2MDkL5X7/6rzLQFD56we0OnLW9dMeKhl8cEUqX7DJYXU9A+T3b5a12gwAA==",
-        "alt": "Шкатулка с бантом — ракурс 6"
-      },
-      {
-        "src": "/catalog/candles/shkatulka-s-bantom-07.webp",
-        "width": 1600,
-        "height": 1067,
-        "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAAAwAgCdASoQAAsAA4BaJYwCdH8AGDyP7L+AAAD+9Xlb2MDkL5X7/6rzLQFD56we0OnLW9dMeKhl8cEUqX7DJYXU9A+T3b5a12gwAA==",
-        "alt": "Шкатулка с бантом — ракурс 7"
-      },
-      {
         "src": "/catalog/candles/shkatulka-s-bantom-08.webp",
         "width": 1600,
         "height": 1067,
         "blurDataURL": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAADQAQCdASoQAAsAA4BaJZQCw7EOvAQQAAD+93ZOqG+/iGy6/zNDZibIL52HhGvAfMaAKNNAAAA=",
         "alt": "Шкатулка с бантом — ракурс 8"
-      },
-      {
-        "src": "/catalog/candles/shkatulka-s-bantom-09.webp",
-        "width": 1600,
-        "height": 1067,
-        "blurDataURL": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAACwAQCdASoQAAsAA4BaJZwAAxY/3tgAAP71glJD6qJlfTYe0uvjniEtto45pw6UPWYPRF5ADiAAAA==",
-        "alt": "Шкатулка с бантом — ракурс 9"
       },
       {
         "src": "/catalog/candles/shkatulka-s-bantom-10.webp",
@@ -3506,7 +3485,9 @@
       "#F9C0A1",
       "#F5CEAA"
     ],
-    "order": 720
+    "order": 720,
+    "videos": [],
+    "related": []
   },
   {
     "id": "candles-roza-v-kashpo",
