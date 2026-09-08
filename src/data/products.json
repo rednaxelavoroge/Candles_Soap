@@ -3918,9 +3918,9 @@
   },
   {
     "id": "candles-chasha-s-shokoladom",
-    "slug": "chasha-s-shokoladom",
-    "title": "Чаша с шоколадом",
-    "article": "СВ-80",
+    "slug": "shar-kameni",
+    "title": "Шар каменный",
+    "article": "2096",
     "category": "candles",
     "tags": [
       "food",
@@ -3965,14 +3965,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Свеча в керамической чаше: поверх воска лежит плитка шоколада, орехи и сухие лепестки. Чаша настоящая, керамическая, и остаётся после свечи.",
+    "description": "Шар из камней",
     "specs": {},
     "tones": [
       "#F9D4C3",
       "#F9AF99",
       "#F9B8A0"
     ],
-    "order": 730
+    "order": 730,
+    "videos": [],
+    "related": []
   },
   {
     "id": "candles-elka-zasnezhennaya",
