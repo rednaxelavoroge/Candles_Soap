@@ -115,7 +115,10 @@
     "video": null,
     "price": null,
     "specs": {},
-    "tags": [],
+    "tags": [
+      "women",
+      "men"
+    ],
     "related": [],
     "order": 410
   },
