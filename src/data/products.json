@@ -3664,25 +3664,11 @@
         "alt": "Суши-сет — ракурс 3"
       },
       {
-        "src": "/catalog/candles/sushi-set-04.webp",
-        "width": 1600,
-        "height": 1200,
-        "blurDataURL": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAABwAgCdASoQAAwAA4BaJQBYhiYwU5bsd6UCnNIYAP73gkb3XYO1JlYhzmhoB16PzX+mpJI9mefdrV1Lgm1OAnxR9af25ljKPnP6OI4MTUvNvgIFLrZb8AAA",
-        "alt": "Суши-сет — ракурс 4"
-      },
-      {
-        "src": "/catalog/candles/sushi-set-05.webp",
-        "width": 1600,
-        "height": 1200,
-        "blurDataURL": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAABwAgCdASoQAAwAA4BaJQBOgMWC4Pc/Inz5xzIgAP72ki1l+5epiHPCtoDekyrw4OC3vjnZbTsCCz8y4RvHd/2+6f2Zi4I+TgRqqXI0RnYv4CWxQDmnprfz8khrCZgvnlXISnkugAA=",
-        "alt": "Суши-сет — ракурс 5"
-      },
-      {
-        "src": "/catalog/candles/sushi-set-06.webp",
-        "width": 1600,
-        "height": 1200,
-        "blurDataURL": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAABwAgCdASoQAAwAA4BaJQBOhgl5EMl+JXMvvFBYAP718JZanvfLB2JamBD0xOYt93BGPeHzPb9tKe/Hk7W9YX4/2/nbaWcGU0m5//BYLhHDNOq0+tsPMaxQqFz4UxVoKG2caEnEMgAAAA==",
-        "alt": "Суши-сет — ракурс 6"
+        "src": "/catalog/candles/sushi-1788896353739-1.webp",
+        "width": 1400,
+        "height": 1050,
+        "blurDataURL": "data:image/webp;base64,UklGRlYCAABXRUJQVlA4WAoAAAAgAAAADwAACwAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggaAAAAHACAJ0BKhAADAADgFoliAJ0Bilu+58Kt13HCAAA/vQfxL+jC85B0lU+AePBCt4G9kOo3zu8uz2OTn3h0EcVA+6tTXj/2xPXm1nmPFe4kpUWsp5HUmtamd8iJ1m3wnVDMF9xAAdeDAAA",
+        "alt": "Суши"
       }
     ],
     "video": null,
