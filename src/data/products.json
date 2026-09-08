@@ -3319,9 +3319,9 @@
   },
   {
     "id": "candles-klubok-pryazhi",
-    "slug": "klubok-pryazhi",
-    "title": "Клубок пряжи",
-    "article": "СВ-69",
+    "slug": "serdce-vyazanoe",
+    "title": "Сердце вязанное",
+    "article": "2085",
     "category": "candles",
     "tags": [
       "women",
@@ -3339,14 +3339,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Свеча-моток пряжи: нити прорисованы по всему клубку, виток к витку. Подарок тому, кто вяжет.",
+    "description": "Сердце из мотка ниток",
     "specs": {},
     "tones": [
       "#F9DCC8",
       "#F9D9BE",
       "#D3D4D2"
     ],
-    "order": 590
+    "order": 590,
+    "videos": [],
+    "related": []
   },
   {
     "id": "candles-shkatulka-s-bantom",
