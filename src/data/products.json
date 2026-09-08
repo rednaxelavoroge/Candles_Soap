@@ -3928,39 +3928,11 @@
     ],
     "images": [
       {
-        "src": "/catalog/candles/chasha-s-shokoladom-01.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAAAQAgCdASoQABAAA4BaJQBOgCHfNRcXOyLAAP70IZ09GY0QMqVckEOj+a+mcDHszNgdD7Vfica4BAAA",
-        "alt": "Чаша с шоколадом"
-      },
-      {
-        "src": "/catalog/candles/chasha-s-shokoladom-02.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAAAwAgCdASoQABAAA4BaJagCdAEPAF0c12nWwAD+9Wefazzlu3rUNO+0gw8cGWNPxvdhNUgpcJQwait9DGJPHJSNwtgPgAAA",
-        "alt": "Чаша с шоколадом — ракурс 2"
-      },
-      {
-        "src": "/catalog/candles/chasha-s-shokoladom-03.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAABwAgCdASoQABAAA4BaJbACdH8IIABgal91OaNgAP71aBeNcTr3CYlFjrmvaoG3wlyrJtnPWm2GWegffX995ePuK0kDRoyuLtD6lF9KPIefKaV+RR8AAA==",
-        "alt": "Чаша с шоколадом — ракурс 3"
-      },
-      {
-        "src": "/catalog/candles/chasha-s-shokoladom-04.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADQAgCdASoQABAAA4BaJbACdH8IIBtgAOVtm45E53LAAP71Z6YNhp6ImoOqWAkNDt5/klSEXfG+9tBHkTA0iy5vluswWEN94gxWXFYwAAA=",
-        "alt": "Чаша с шоколадом — ракурс 4"
-      },
-      {
-        "src": "/catalog/candles/chasha-s-shokoladom-05.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAAAQAgCdASoQABAAA4BaJbACdAEO+4nM5GegAP73c6epG0kIv6L/vz6sQj5qWpTfJ6mYGe+ex9SOe2g4+orfQxiTxsM7QS6UAAA=",
-        "alt": "Чаша с шоколадом — ракурс 5"
+        "src": "/catalog/candles/shar-kameni-1788893415703-1.webp",
+        "width": 1120,
+        "height": 1400,
+        "blurDataURL": "data:image/webp;base64,UklGRpACAABXRUJQVlA4WAoAAAAgAAAADwAAEwAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggogAAADAEAJ0BKhAAFAA+7WKpTamlo6IwCAEwHYlAF2AxZZwXP5O2Lxw3TukRqAD+36eSR0oq18d1h+7gtFrhjtm2mkhxxfb16h0y2zEMXOBaQrbh6r+HR9Ubu7y6ZkNyj1L/Fl9/fhda1v9/eaWcimIXBRH4zUSIBv9Sm4JNu9XiGneMzP/W14HfJmN5/1utcGzaSfI6FfWihXC0PHAoNpiSQ2AAAA==",
+        "alt": "Шар каменный"
       }
     ],
     "video": null,
