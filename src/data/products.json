@@ -2612,9 +2612,9 @@
   },
   {
     "id": "candles-tsifry-goda",
-    "slug": "tsifry-goda",
-    "title": "Цифры для торта",
-    "article": "СВ-52",
+    "slug": "tsifry-granenie",
+    "title": "Цифры для торта граненные",
+    "article": "2053",
     "category": "candles",
     "tags": [
       "new-year",
@@ -2645,14 +2645,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Свечи-цифры на блюде-раковине, рядом сердце. Год или возраст отливаются под заказ — цифры делаются любые.",
+    "description": "Цифры для торта с гранями",
     "specs": {},
     "tones": [
       "#C3F5A5",
       "#F9D1C8",
       "#D8D3CD"
     ],
-    "order": 690
+    "order": 690,
+    "videos": [],
+    "related": []
   },
   {
     "id": "candles-rusalka",
