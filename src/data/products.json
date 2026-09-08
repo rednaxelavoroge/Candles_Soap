@@ -2790,7 +2790,7 @@
     "id": "candles-angel-v-kolybeli",
     "slug": "angel-v-kolybeli",
     "title": "Ангелочек",
-    "article": "СВ-56",
+    "article": "2080",
     "category": "candles",
     "tags": [
       "newborn",
@@ -2814,14 +2814,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Спящий младенец с крыльями в плетёной колыбели. Плетение прорисовано по всему борту, крылья лепятся отдельно. Подарок к рождению или крестинам.",
+    "description": "Ангелочек, хороший подарок на крестины или рождение",
     "specs": {},
     "tones": [
       "#F9D9CA",
       "#F9B59D",
       "#F9C2B3"
     ],
-    "order": 560
+    "order": 560,
+    "videos": [],
+    "related": []
   },
   {
     "id": "candles-karusel",
