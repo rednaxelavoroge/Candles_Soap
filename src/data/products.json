@@ -2996,7 +2996,7 @@
     "id": "candles-morskaya-zvezda",
     "slug": "morskaya-zvezda",
     "title": "Свеча в звезде",
-    "article": "СВ-60",
+    "article": "2084",
     "category": "candles",
     "tags": [
       "sea",
@@ -3034,14 +3034,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Пятиконечная звезда-подсвечник: внутри бирюзовая вода, по краю поднятый рельефный борт, на дне ракушки. Фитилей пять, по одному на луч — можно зажечь все или только те, что ближе.",
+    "description": "Гипсовая звезда",
     "specs": {},
     "tones": [
       "#E9E9E7",
       "#BADEF0",
       "#D5D3D4"
     ],
-    "order": 670
+    "order": 670,
+    "videos": [],
+    "related": []
   },
   {
     "id": "candles-medvezhonok-s-podarkom",
