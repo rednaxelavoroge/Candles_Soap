@@ -2555,9 +2555,9 @@
   },
   {
     "id": "candles-vitaya-svecha",
-    "slug": "vitaya-svecha",
-    "title": "Витая свеча",
-    "article": "СВ-51",
+    "slug": "serdza-v-stolbik",
+    "title": "Сердца в столбик",
+    "article": "2008",
     "category": "candles",
     "tags": [
       "new-year",
@@ -2581,14 +2581,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Высокая витая свеча красного воска, вся в снежных блёстках, на гипсовой подставке. Витки закручиваются вручную, пока воск тёплый, поэтому шаг витка у каждой свой.",
+    "description": "Сердца в столбике, может быть переход цветов",
     "specs": {},
     "tones": [
       "#E1F48D",
       "#F9AEA3",
       "#EBCEC1"
     ],
-    "order": 630
+    "order": 630,
+    "videos": [],
+    "related": []
   },
   {
     "id": "candles-tsifry-goda",
