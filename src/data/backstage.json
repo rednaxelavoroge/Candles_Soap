@@ -61,18 +61,6 @@
   },
   {
     "kind": "video",
-    "src": "/catalog/video/candle-process-3.mp4",
-    "poster": {
-      "src": "/catalog/posters/candle-process-3.webp",
-      "width": 720,
-      "height": 1280,
-      "blurDataURL": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAACwAwCdASoQABwAPu1iqU2ppaOiMAgBMB2JYgCw7AsP4/eWOml3QAD51qenj+95Ha48tBwjiCSQCWiQ9txTJMZP0gG92yeqNuFE4G/AAYZnlClH7gTHse6BgIRBQLwI7x8uB24KAAA=",
-      "alt": "Ароматические свечи в процессе — процесс создания"
-    },
-    "caption": ""
-  },
-  {
-    "kind": "video",
     "src": "/catalog/video/candle-process-8.mp4",
     "poster": {
       "src": "/catalog/video/candle-process-8-poster.webp",

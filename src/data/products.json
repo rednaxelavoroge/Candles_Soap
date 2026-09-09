@@ -2016,17 +2016,7 @@
         "alt": "Кристаллы в блюде — ракурс 3"
       }
     ],
-    "video": {
-      "kind": "file",
-      "src": "/catalog/video/candle-process-3.mp4",
-      "poster": {
-        "src": "/catalog/posters/candle-process-3.webp",
-        "width": 720,
-        "height": 1280,
-        "blurDataURL": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAAAQAgCdASoQABAAA4BaJYwC7ADxN5LN6NwAAP5TKJg1k3PSU3NAv19GWely3E4wFVgKm3GORjir3VcKtaS6LNpxL4nips9tiqpAdC7qHy3+YGsNAAA=",
-        "alt": "Кубики гелевые"
-      }
-    },
+    "video": null,
     "price": null,
     "description": "Разноцветные кубики с блёстками, выложенные в гипсовом блюдце. Фитилей несколько: можно зажечь один или все сразу. ",
     "specs": {},
@@ -2036,19 +2026,7 @@
       "#DAD2D0"
     ],
     "order": 790,
-    "videos": [
-      {
-        "kind": "file",
-        "src": "/catalog/video/candle-process-3.mp4",
-        "poster": {
-          "src": "/catalog/posters/candle-process-3.webp",
-          "width": 720,
-          "height": 1280,
-          "blurDataURL": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAAAQAgCdASoQABAAA4BaJYwC7ADxN5LN6NwAAP5TKJg1k3PSU3NAv19GWely3E4wFVgKm3GORjir3VcKtaS6LNpxL4nips9tiqpAdC7qHy3+YGsNAAA=",
-          "alt": "Кубики гелевые"
-        }
-      }
-    ],
+    "videos": [],
     "related": []
   },
   {
