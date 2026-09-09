@@ -1,18 +1,6 @@
 [
   {
     "kind": "video",
-    "src": "/catalog/video/soap-process-4.mp4",
-    "poster": {
-      "src": "/catalog/posters/soap-process-4.webp",
-      "width": 720,
-      "height": 1280,
-      "blurDataURL": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADwAwCdASoQABwAPu1iqU2ppaQiMAgBMB2JQBWABDEh6yVRo3H5gHAAAP7Y1dKqBkOvVRl1D2BjaaPF+zwOHAhcm1Cprnmqi9dW2G4yQQifhItlPPHVzOIAAAA=",
-      "alt": "Финальные штрихи мыльного набора — процесс создания"
-    },
-    "caption": ""
-  },
-  {
-    "kind": "video",
     "src": "/catalog/video/soap-process-5.mp4",
     "poster": {
       "src": "/catalog/posters/soap-process-5.webp",
