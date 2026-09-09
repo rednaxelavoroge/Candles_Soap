@@ -61,18 +61,6 @@
   },
   {
     "kind": "video",
-    "src": "/catalog/video/candle-process-1.mp4",
-    "poster": {
-      "src": "/catalog/posters/candle-process-1.webp",
-      "width": 720,
-      "height": 1280,
-      "blurDataURL": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAACQAwCdASoQABwAPu1qrU8ppiQiMAgBMB2JQAAj3WJrcDCTxInSAP6MHOz74fI7WBYjYSRdHzs3YVXAO5lPIwyLZ5b8T8/fs0ILHdN8X/DUG8699oWRFOFnAAA=",
-      "alt": "Заливка натурального соевого воска — процесс создания"
-    },
-    "caption": ""
-  },
-  {
-    "kind": "video",
     "src": "/catalog/video/candle-process-3.mp4",
     "poster": {
       "src": "/catalog/posters/candle-process-3.webp",
