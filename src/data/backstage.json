@@ -1,18 +1,6 @@
 [
   {
     "kind": "video",
-    "src": "/catalog/video/soap-process-5.mp4",
-    "poster": {
-      "src": "/catalog/posters/soap-process-5.webp",
-      "width": 720,
-      "height": 1280,
-      "blurDataURL": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAACwAwCdASoQABwAPu1kqk4ppaQiMAgBMB2JZwAAW6zBuQN+Dj+tgAD9y5rartcCYsvwUvjiZwzOsB0H2M4I9tPsx+ndNCTa2b2vtXjtigLqu4J7QrHgWF0AE33OyD+KQAA=",
-      "alt": "Сборка подарочной композиции — процесс создания"
-    },
-    "caption": ""
-  },
-  {
-    "kind": "video",
     "src": "/catalog/video/soap-process-7.mp4",
     "poster": {
       "src": "/catalog/video/soap-process-7-poster.webp",

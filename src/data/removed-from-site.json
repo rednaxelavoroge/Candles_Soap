@@ -730,5 +730,21 @@
   {
     "path": "/catalog/video/soap-process-4.webm",
     "at": "2026-09-09T21:29:48.770Z"
+  },
+  {
+    "path": "/catalog/video/soap-process-5.mp4",
+    "at": "2026-09-09T21:29:55.375Z"
+  },
+  {
+    "path": "/catalog/video/soap-process-5-poster.webp",
+    "at": "2026-09-09T21:29:55.375Z"
+  },
+  {
+    "path": "/catalog/posters/soap-process-5.webp",
+    "at": "2026-09-09T21:29:55.375Z"
+  },
+  {
+    "path": "/catalog/video/soap-process-5.webm",
+    "at": "2026-09-09T21:29:55.375Z"
   }
 ]
