@@ -133,18 +133,6 @@
   },
   {
     "kind": "video",
-    "src": "/catalog/video/candle-process-28.mp4",
-    "poster": {
-      "src": "/catalog/video/candle-process-28-poster.webp",
-      "width": 720,
-      "height": 960,
-      "blurDataURL": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAAAQBACdASoQABUAPu1iqU2ppaOiMAgBMB2JagCdABnlWHs6pQVXbS9jAAD+6dWjCzOIRMHHAXClVZ9slgvwBpWSa4U8pFWjFc3pmie9j7mqLX+ZiiY7aCB44MtUnOJUW3O995jWqTorHwASkeEMrcBp717fw4RamHb2LQAA",
-      "alt": "Кадр из мастерской"
-    },
-    "caption": ""
-  },
-  {
-    "kind": "video",
     "src": "/catalog/video/soap-process-7.mp4",
     "poster": {
       "src": "/catalog/video/soap-process-7-poster.webp",
