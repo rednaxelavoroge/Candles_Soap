@@ -58,17 +58,5 @@
       "alt": "Кадр из мастерской"
     },
     "caption": ""
-  },
-  {
-    "kind": "video",
-    "src": "/catalog/video/soap-process-19.mp4",
-    "poster": {
-      "src": "/catalog/video/soap-process-19-poster.webp",
-      "width": 720,
-      "height": 1280,
-      "blurDataURL": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAACwAwCdASoQABwAPu1iqU2ppaQiMAgBMB2JZAAAKwRU++gab9gfwAD96msRwL4Zr6OtdQ6g+FJXlR39iwQ/4Uxu7+FKk68RyQ+ewUJdCtAYwkmuENjCX54YUkrkcoAA",
-      "alt": "Кадр из мастерской"
-    },
-    "caption": ""
   }
 ]
