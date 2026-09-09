@@ -109,18 +109,6 @@
   },
   {
     "kind": "video",
-    "src": "/catalog/video/candle-process-6.mp4",
-    "poster": {
-      "src": "/catalog/posters/candle-process-6.webp",
-      "width": 720,
-      "height": 1280,
-      "blurDataURL": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAABQBACdASoQABwAPu1iqU2ppaQiMAgBMB2JZQCsAdwA9FDS19+AfjzVz5kAAP6V0QUCoAjDpTcXa+3lgf+uofe8vgt+wekAr6mhdvLk2+DsxskwhcYGqQwffk5FUgTod5BMqcTFyTYkQlUxN2f9Cu4h0HMgd94ofii7ZgDHaE0psEGiUVuTOXYAAAA=",
-      "alt": "Формовые свечи мастерской — процесс создания"
-    },
-    "caption": ""
-  },
-  {
-    "kind": "video",
     "src": "/catalog/video/candle-process-8.mp4",
     "poster": {
       "src": "/catalog/video/candle-process-8-poster.webp",
