@@ -133,18 +133,6 @@
   },
   {
     "kind": "video",
-    "src": "/catalog/video/candle-process-20.mp4",
-    "poster": {
-      "src": "/catalog/video/candle-process-20-poster.webp",
-      "width": 720,
-      "height": 1280,
-      "blurDataURL": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAADQAwCdASoQABwAPu1iqU2ppaOiMAgBMB2JQAAkIbzrHeR8fneFCAAAyuzEi7TITCzWEs3Q2/eOfaXWrYa4xDucxcMJUt4u6dhDLBV4I5NNn0XwGxSn7jYEQB5fxE19iAzOAgeU2xFaEIAA",
-      "alt": "Кадр из мастерской"
-    },
-    "caption": ""
-  },
-  {
-    "kind": "video",
     "src": "/catalog/video/candle-process-21.mp4",
     "poster": {
       "src": "/catalog/video/candle-process-21-poster.webp",
