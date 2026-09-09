@@ -97,18 +97,6 @@
   },
   {
     "kind": "video",
-    "src": "/catalog/video/candle-process-4.mp4",
-    "poster": {
-      "src": "/catalog/posters/candle-process-4.webp",
-      "width": 720,
-      "height": 540,
-      "blurDataURL": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADwAQCdASoQABAAA4BaJaAC7ADp+d0g4DgA/vF+/OLNvSd79SkgH/zysFT3YcjPszdtQikEL9nPwz+Zvtk3x5NxKGeO7BSjtonk0bD7DXXr7FzkAAA=",
-      "alt": "Свечи-мандарины ручной работы — процесс создания"
-    },
-    "caption": ""
-  },
-  {
-    "kind": "video",
     "src": "/catalog/video/candle-process-8.mp4",
     "poster": {
       "src": "/catalog/video/candle-process-8-poster.webp",
