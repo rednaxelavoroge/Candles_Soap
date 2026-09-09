@@ -73,18 +73,6 @@
   },
   {
     "kind": "video",
-    "src": "/catalog/video/candle-process-2.mp4",
-    "poster": {
-      "src": "/catalog/posters/candle-process-2.webp",
-      "width": 720,
-      "height": 1280,
-      "blurDataURL": "data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAADQBACdASoQABwAPu1iqU2ppaQiMAgBMB2JZAC7MoM20E5/0P5FVwmIDWi5n3iwAAD+wF17v5RAvCAMQbjESvu+/xd7+hUG0GHVQqUSWEvcierp0YmeNqli0KoaneLI7pOi1VpC6mnAyRqnc1rB0yv9dua8Vcztnlf9rCRsKcYzVo7NSLzMiUlGeoSPf1NoAAA=",
-      "alt": "Установка хлопковых фитилей — процесс создания"
-    },
-    "caption": ""
-  },
-  {
-    "kind": "video",
     "src": "/catalog/video/candle-process-3.mp4",
     "poster": {
       "src": "/catalog/posters/candle-process-3.webp",
