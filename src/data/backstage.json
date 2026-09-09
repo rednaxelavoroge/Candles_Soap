@@ -85,18 +85,6 @@
   },
   {
     "kind": "video",
-    "src": "/catalog/video/soap-process-11.mp4",
-    "poster": {
-      "src": "/catalog/video/soap-process-11-poster.webp",
-      "width": 720,
-      "height": 1280,
-      "blurDataURL": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAACwAwCdASoQABwAPu1kqk4ppaQiMAgBMB2JZAAAW3VLuTsBJTI4SAD+7z4E+RN2LzMSSfunb52J0DfTnf2GsWdF3v8kZzgHlQ3jfaFBoxa7ozXZ3XTCipjF7oMJqcJHcd3XYNvASYAAAA==",
-      "alt": "Кадр из мастерской"
-    },
-    "caption": ""
-  },
-  {
-    "kind": "video",
     "src": "/catalog/video/soap-process-12.mp4",
     "poster": {
       "src": "/catalog/video/soap-process-12-poster.webp",
