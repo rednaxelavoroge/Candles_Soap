@@ -1,18 +1,6 @@
 [
   {
     "kind": "video",
-    "src": "/catalog/video/soap-process-3.mp4",
-    "poster": {
-      "src": "/catalog/posters/soap-process-3.webp",
-      "width": 720,
-      "height": 1280,
-      "blurDataURL": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAAAQBACdASoQABwAPu1kqU2ppaOiMAgBMB2JZACdACP/wpplHN6P9AVVYAD9TjonLVzOMg861wob8YUZ6Le4tJdC9fDT6H4+TR+PhcRw9YDWywI4HixtUPPst/6BRxurlkajqa/55U1QAA==",
-      "alt": "Декорирование мыла ручной работы — процесс создания"
-    },
-    "caption": ""
-  },
-  {
-    "kind": "video",
     "src": "/catalog/video/soap-process-4.mp4",
     "poster": {
       "src": "/catalog/posters/soap-process-4.webp",
