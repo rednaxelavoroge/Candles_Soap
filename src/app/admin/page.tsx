@@ -18,12 +18,14 @@ type LibraryVideo = { src: string; name: string; poster: string | null; caption:
 /**
  * Предел на свой ролик. Тот же, что стоит на сервере.
  *
- * Раньше здесь стояло 3,5 МБ — столько пропускала площадка Vercel, и ролик
- * с телефона в неё не помещался. Панель переехала на обычный хостинг, предел
- * исчез, и файл берётся целиком. Двести мегабайт — с большим запасом к тому,
- * что даёт айфон на коротком клипе.
+ * Сначала здесь было 3,5 МБ — столько пропускала площадка Vercel. Потом
+ * 200 МБ — столько можно было взять в память приложения на общем хостинге.
+ * Теперь ролик переливается в хранилище на ходу, память под него не нужна,
+ * и остались два гигабайта: больше любой съёмки с телефона.
+ *
+ * По длине ролика ограничений нет — ни здесь, ни при сжатии.
  */
-const MAX_VIDEO_UPLOAD_MB = 200;
+const MAX_VIDEO_UPLOAD_MB = 2048;
 const MAX_VIDEO_UPLOAD_BYTES = MAX_VIDEO_UPLOAD_MB * 1024 * 1024;
 
 /** Сколько ждать готовый ролик, прежде чем признать, что что-то пошло не так. */
@@ -138,6 +140,9 @@ export default function AdminPage() {
   const [renamingVideo, setRenamingVideo] = useState<{ src: string; name: string } | null>(null);
   const [renameValue, setRenameValue] = useState("");
   const [savingRename, setSavingRename] = useState(false);
+  // Какой ролик сейчас удаляется: его карточка на это время заперта, чтобы
+  // не нажать «Удалить» дважды и не получить вторую попытку поверх первой.
+  const [deletingVideo, setDeletingVideo] = useState<string | null>(null);
 
   // Переименование подраздела на вкладке «Подразделы»
   const [editingTagSlug, setEditingTagSlug] = useState<string | null>(null);
@@ -822,6 +827,80 @@ export default function AdminPage() {
     }
   };
 
+  /**
+   * Удаление ролика из архива — насовсем, вместе с файлом.
+   *
+   * Кнопки не было вовсе: ролик можно было посмотреть и переименовать, а
+   * лишний — только терпеть. Спрашиваем до, а не после: ролик может стоять
+   * в карточках изделий и в ленте бэкстейджа, и оттуда он тоже исчезнет.
+   */
+  const handleDeleteVideo = async (video: LibraryVideo) => {
+    const inProducts = products.filter(
+      (product) =>
+        (product.videos ?? []).some((item) => item.kind === "file" && item.src === video.src) ||
+        (product.video?.kind === "file" && product.video.src === video.src),
+    );
+    const inBackstage = backstage.filter(
+      (item) => item.kind === "video" && item.src === video.src,
+    ).length;
+
+    const where: string[] = [];
+    if (inProducts.length > 0) {
+      const names = inProducts.slice(0, 3).map((product) => `«${product.title}»`).join(", ");
+      where.push(
+        inProducts.length > 3
+          ? `${names} и ещё ${inProducts.length - 3}`
+          : names,
+      );
+    }
+    if (inBackstage > 0) where.push("лента «Бэкстейдж»");
+
+    const question = where.length
+      ? `Удалить ролик «${video.name}» насовсем?\n\nОн сейчас стоит здесь: ${where.join("; ")}.\nОттуда он тоже пропадёт.\n\nВернуть удалённое можно только через разработчика.`
+      : `Удалить ролик «${video.name}» насовсем?\n\nНи к одному изделию он не прикреплён.\nВернуть удалённое можно только через разработчика.`;
+    if (!confirm(question)) return;
+
+    setDeletingVideo(video.src);
+    try {
+      const res = await fetch(`/api/admin/videos?src=${encodeURIComponent(video.src)}`, {
+        method: "DELETE",
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        alert(data.error || "Не удалось удалить ролик");
+        return;
+      }
+
+      setVideoLibrary((prev) => prev.filter((item) => item.src !== video.src));
+      // То же самое убираем из того, что панель уже держит на экране: иначе
+      // ролик остался бы в карточке изделия до перезагрузки страницы.
+      setProducts((prev) =>
+        prev.map((product) => {
+          const videos = (product.videos ?? []).filter(
+            (item) => !(item.kind === "file" && item.src === video.src),
+          );
+          const single =
+            product.video?.kind === "file" && product.video.src === video.src
+              ? null
+              : product.video ?? null;
+          if (videos.length === (product.videos ?? []).length && single === (product.video ?? null)) {
+            return product;
+          }
+          return { ...product, videos, video: single ?? videos[0] ?? null };
+        }),
+      );
+      setBackstage((prev) =>
+        prev.filter((item) => !(item.kind === "video" && item.src === video.src)),
+      );
+      if (previewVideo?.src === video.src) setPreviewVideo(null);
+      showToast("✓ Ролик удалён. С сайта он пропал сразу");
+    } catch {
+      alert("Ошибка сети при удалении ролика");
+    } finally {
+      setDeletingVideo(null);
+    }
+  };
+
   const removeVideo = (index: number) => setVideos(editVideos.filter((_, i) => i !== index));
 
   const moveVideo = (from: number, to: number) => {
@@ -839,11 +918,12 @@ export default function AdminPage() {
    */
   const sendVideoFile = (file: File): Promise<{ ok: boolean; job?: string; error?: string }> =>
     new Promise((resolve) => {
-      const form = new FormData();
-      form.append("file", file);
-
       const xhr = new XMLHttpRequest();
-      xhr.open("POST", "/api/admin/videos");
+      // Файл идёт телом запроса, а не полем формы: тогда сервер переливает его
+      // в хранилище на ходу и не держит в памяти целиком. Имя передаём в
+      // адресе — из тела его больше не достать.
+      xhr.open("POST", `/api/admin/videos?name=${encodeURIComponent(file.name || "video.mp4")}`);
+      xhr.setRequestHeader("Content-Type", file.type || "application/octet-stream");
       xhr.upload.onprogress = (ev) => {
         if (!ev.lengthComputable) return;
         setVideoStage(`Ролик загружается… ${Math.round((ev.loaded / ev.total) * 100)}%`);
@@ -858,8 +938,68 @@ export default function AdminPage() {
       };
       xhr.onerror = () =>
         resolve({ ok: false, error: "Связь с сервером оборвалась. Попробуйте ещё раз." });
-      xhr.send(form);
+      xhr.send(file);
     });
+
+  /**
+   * Снимает кадр с выбранного файла и кладёт его обложкой рядом с роликом.
+   *
+   * Кадр берём не с самого начала: у съёмки с телефона первые доли секунды
+   * часто тёмные или смазанные, и обложка выходила бы чёрным прямоугольником —
+   * тем самым, от которого уходили в панели фотосайта. Отматываем на десятую
+   * часть, но не дальше секунды.
+   *
+   * Не вышло — не беда: ролик уже в каталоге и работает, обложка появится,
+   * когда она загрузит его заново. Поэтому здесь нет ни одного `alert`.
+   */
+  const uploadPosterFor = async (file: File, src: string): Promise<string | null> => {
+    const url = URL.createObjectURL(file);
+    try {
+      const frame = await new Promise<Blob | null>((resolve) => {
+        const video = document.createElement("video");
+        video.muted = true;
+        video.playsInline = true;
+        video.preload = "metadata";
+        const give = (blob: Blob | null) => {
+          video.removeAttribute("src");
+          resolve(blob);
+        };
+        // Браузер может не уметь этот кодек (с айфона приходит .mov) — тогда
+        // ждать нечего, и висеть здесь мы не будем.
+        video.onerror = () => give(null);
+        const guard = setTimeout(() => give(null), 15000);
+        video.onloadedmetadata = () => {
+          video.currentTime = Math.min(1, (video.duration || 0) / 10) || 0;
+        };
+        video.onseeked = () => {
+          clearTimeout(guard);
+          const width = Math.min(720, video.videoWidth || 720);
+          const height = Math.round((video.videoHeight / (video.videoWidth || 1)) * width) || 1280;
+          const canvas = document.createElement("canvas");
+          canvas.width = width;
+          canvas.height = height;
+          const context = canvas.getContext("2d");
+          if (!context) return give(null);
+          context.drawImage(video, 0, 0, width, height);
+          canvas.toBlob((blob) => give(blob), "image/webp", 0.8);
+        };
+        video.src = url;
+      });
+
+      if (!frame) return null;
+      const res = await fetch(`/api/admin/videos?poster=${encodeURIComponent(src)}`, {
+        method: "POST",
+        headers: { "Content-Type": "image/webp" },
+        body: frame,
+      });
+      const data = (await res.json().catch(() => ({}))) as { poster?: string };
+      return res.ok ? data.poster ?? null : null;
+    } catch {
+      return null;
+    } finally {
+      URL.revokeObjectURL(url);
+    }
+  };
 
   /**
    * Загрузка своего ролика — целиком, как он снят на телефон.
@@ -878,8 +1018,8 @@ export default function AdminPage() {
     const megabytes = file.size / (1024 * 1024);
     if (file.size > MAX_VIDEO_UPLOAD_BYTES) {
       alert(
-        `Этот ролик слишком длинный: ${megabytes.toFixed(0)} МБ, а принять можно до ${MAX_VIDEO_UPLOAD_MB} МБ.\n\n` +
-          "Снимите покороче или возьмите готовый кнопкой «Выбрать из моих роликов».",
+        `Этот ролик слишком тяжёлый: ${megabytes.toFixed(0)} МБ, а взять можно до ${MAX_VIDEO_UPLOAD_MB} МБ.\n\n` +
+          "Дело в весе файла, а не в его длине: по времени ролики ничем не ограничены.",
       );
       e.target.value = "";
       return;
@@ -913,8 +1053,13 @@ export default function AdminPage() {
         };
 
         if (state.state === "done" && state.src) {
+          // Обложку снимаем с того же файла, что она выбрала: он ещё здесь,
+          // в браузере. Без неё в списке остаётся пустая клетка — заказчица
+          // писала «у новых загруженных нет превью» ровно про это.
+          setVideoStage("Делаю обложку…");
+          const poster = await uploadPosterFor(file, state.src);
           setVideoLibrary((prev) => [
-            { src: state.src!, name: file.name, poster: null, caption: null },
+            { src: state.src!, name: file.name, poster, caption: null },
             ...prev,
           ]);
           attachVideo(state.src);
@@ -2740,6 +2885,16 @@ export default function AdminPage() {
                           className="rounded-lg bg-bg hover:bg-sand/30 p-1.5 text-xs text-ink transition-colors"
                         >
                           ✏️
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => void handleDeleteVideo(v)}
+                          disabled={deletingVideo === v.src}
+                          aria-label="Удалить ролик"
+                          title="Удалить ролик насовсем"
+                          className="rounded-lg bg-bg hover:bg-red-50 p-1.5 text-xs text-ink transition-colors disabled:opacity-50"
+                        >
+                          {deletingVideo === v.src ? "…" : "🗑"}
                         </button>
                       </div>
                     </div>

@@ -98,13 +98,8 @@ export function writeToSite(publicRelativePath: string, buffer: Buffer): boolean
   const root = siteRoot();
   if (!root) return false;
 
-  const target = path.resolve(root, publicRelativePath.replace(/^\/+/, ""));
-  // Имя файла складывается из данных формы, поэтому за пределы папки сайта
-  // не выпускаем — даже если в названии изделия окажется «../».
-  if (target !== root && !target.startsWith(root + path.sep)) {
-    console.error("Путь ведёт за пределы папки сайта, файл не записан:", publicRelativePath);
-    return false;
-  }
+  const target = insideSite(root, publicRelativePath);
+  if (!target) return false;
 
   try {
     fs.mkdirSync(path.dirname(target), { recursive: true });
@@ -116,4 +111,41 @@ export function writeToSite(publicRelativePath: string, buffer: Buffer): boolean
     cached = null;
     return false;
   }
+}
+
+/**
+ * Убирает файл из папки сайта. Возвращает `true`, если после этого его там нет.
+ *
+ * Без этого удаление ролика было бы неполным: выкладка сайта идёт **без**
+ * `--delete` (в папке домена лежит чужой WordPress), поэтому файл, убранный
+ * из репозитория, остался бы на хостинге и продолжал открываться по прямой
+ * ссылке. Панель стоит рядом с сайтом — значит убрать может сама и сразу.
+ */
+export function deleteFromSite(publicRelativePath: string): boolean {
+  const root = siteRoot();
+  if (!root) return false;
+
+  const target = insideSite(root, publicRelativePath);
+  if (!target) return false;
+
+  try {
+    fs.rmSync(target, { force: true });
+    return true;
+  } catch (err) {
+    console.error("Не удалось убрать файл из папки сайта:", target, err);
+    cached = null;
+    return false;
+  }
+}
+
+/** Путь внутри папки сайта или `null`, если он ведёт наружу. */
+function insideSite(root: string, publicRelativePath: string): string | null {
+  const target = path.resolve(root, publicRelativePath.replace(/^\/+/, ""));
+  // Имя файла складывается из данных формы, поэтому за пределы папки сайта
+  // не выпускаем — даже если в названии изделия окажется «../».
+  if (target !== root && !target.startsWith(root + path.sep)) {
+    console.error("Путь ведёт за пределы папки сайта, файл не тронут:", publicRelativePath);
+    return null;
+  }
+  return target;
 }

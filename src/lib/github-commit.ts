@@ -18,8 +18,15 @@ const API = "https://api.github.com";
 export type CommitFile = {
   /** Путь от корня репозитория: `src/data/products.json`, `public/catalog/…`. */
   path: string;
-  /** Содержимое в base64 — так одинаково едут и JSON, и фотография. */
-  base64: string;
+  /**
+   * Содержимое в base64 — так одинаково едут и JSON, и фотография.
+   * `null` означает «убрать этот файл из репозитория»: в дереве коммита
+   * это запись с пустым адресом содержимого.
+   *
+   * Осторожно: GitHub отвергает **весь** коммит, если убрать просят путь,
+   * которого в дереве нет. Проверять существование обязан тот, кто просит.
+   */
+  base64: string | null;
 };
 
 export type CommitRequest = {
@@ -117,6 +124,8 @@ export async function commitFiles({
     заново собирается только дерево.
   */
   const blobs = await mapLimit(files, BLOB_CONCURRENCY, async (file) => {
+    // Удаление содержимого не имеет: пустой адрес в дереве и есть «убрать».
+    if (file.base64 === null) return { path: file.path, sha: null };
     const blob = await request<{ sha: string }>(token, `/repos/${repo}/git/blobs`, {
       method: "POST",
       body: JSON.stringify({ content: file.base64, encoding: "base64" }),
@@ -148,7 +157,7 @@ export async function commitFiles({
           path: blob.path,
           mode: "100644",
           type: "blob",
-          sha: blob.sha,
+          sha: blob.sha as string | null,
         })),
       }),
     });

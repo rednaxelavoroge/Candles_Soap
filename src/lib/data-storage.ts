@@ -89,6 +89,33 @@ type PendingFile = CommitFile & {
   kind: "data" | "media";
 };
 
+/**
+ * Есть ли такой файл в репозитории прямо сейчас.
+ *
+ * Нужно перед удалением: убрать файл — это запись в дереве коммита с пустым
+ * адресом содержимого, и GitHub отвергает **весь** коммит, если такого пути
+ * в дереве нет. То есть одна лишняя строка в списке на удаление уронила бы
+ * заодно и сохранение данных, которое едет тем же коммитом.
+ */
+export async function existsInRepo(relativePath: string): Promise<boolean> {
+  if (!GITHUB_TOKEN) return false;
+  try {
+    const url = `https://api.github.com/repos/${GITHUB_REPO}/contents/${relativePath}?ref=${GITHUB_BRANCH}`;
+    const res = await fetch(url, {
+      method: "HEAD",
+      headers: {
+        Authorization: `Bearer ${GITHUB_TOKEN}`,
+        Accept: "application/vnd.github+json",
+      },
+      cache: "no-store",
+    });
+    return res.ok;
+  } catch (err) {
+    console.error(`GitHub exists check failed for ${relativePath}:`, err);
+    return false;
+  }
+}
+
 type Batch = {
   files: Map<string, PendingFile>;
   openedAt: number;
@@ -263,6 +290,46 @@ export async function saveJsonData(relativePath: string, data: unknown): Promise
     }
     throw err;
   }
+}
+
+/**
+ * Убирает файлы из репозитория — тем же коммитом, что и правка данных рядом.
+ *
+ * Зачем отдельная дверь: `saveJsonData` умеет только класть. Пока удаления не
+ * было, ролик, убранный из панели, оставался в `public/catalog/video` навсегда
+ * и возвращался в список при следующем чтении папки — то есть «удаление»
+ * было бы обманом.
+ *
+ * Путей, которых в репозитории нет, здесь быть не должно: их отсеивает
+ * `existsInRepo`, иначе GitHub отвергнет весь коммит целиком.
+ */
+export async function deleteRepoFiles(relativePaths: string[], label: string): Promise<string[]> {
+  const paths = relativePaths.filter(Boolean);
+  if (paths.length === 0) return [];
+
+  for (const relativePath of paths) {
+    // Локальная разработка: файл на диске рядом.
+    try {
+      fs.rmSync(path.join(process.cwd(), relativePath), { force: true });
+    } catch {
+      // На хостинге папка приложения только для чтения — файл уйдёт коммитом.
+    }
+  }
+
+  if (!GITHUB_TOKEN) return [];
+
+  const present: string[] = [];
+  for (const relativePath of paths) {
+    if (await existsInRepo(relativePath)) present.push(relativePath);
+  }
+  if (present.length === 0) return [];
+
+  await Promise.all(
+    present.map((relativePath) =>
+      enqueue({ path: relativePath, base64: null, label, kind: "media" }),
+    ),
+  );
+  return present;
 }
 
 /**

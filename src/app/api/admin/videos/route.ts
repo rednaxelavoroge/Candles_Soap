@@ -1,6 +1,7 @@
 import { checkAdminAuth } from "@/lib/admin-auth";
 import generatedVideos from "@/data/generated_videos.json";
-import { loadJsonData, saveJsonData } from "@/lib/data-storage";
+import { deleteRepoFiles, loadJsonData, saveJsonData, saveMediaFile } from "@/lib/data-storage";
+import { deleteFromSite } from "@/lib/site-media";
 import { NextResponse } from "next/server";
 import fs from "fs";
 import path from "path";
@@ -26,6 +27,9 @@ import path from "path";
 
 const VIDEO_DIR = "public/catalog/video";
 const TITLES_FILE = "src/data/video_titles.json";
+/** Файлы, в которых ролик может быть упомянут: без них удаление неполное. */
+const PRODUCTS_FILE = "src/data/products.json";
+const BACKSTAGE_FILE = "src/data/backstage.json";
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN || process.env.GITHUB_PAT;
 const GITHUB_REPO = process.env.GITHUB_REPO || "rednaxelavoroge/Candles_Soap";
 const GITHUB_BRANCH = process.env.GITHUB_BRANCH || "main";
@@ -44,12 +48,25 @@ const INBOX_TAG = "video-inbox";
 const COMPRESS_WORKFLOW = "compress-video.yml";
 
 /**
- * Предел на загрузку. Взят с запасом к тому, что даёт айфон: минута съёмки
- * в 4K — около 350 МБ, но заказчица снимает короткие клипы на 10–40 МБ.
- * Предел нужен не ради площадки, а чтобы случайно выбранный часовой файл
- * не занял память приложения на общем хостинге.
+ * Предел на загрузку.
+ *
+ * Двести мегабайт стояли здесь не потому, что длинные ролики нельзя, а потому
+ * что файл брался в память целиком: на общем хостинге у панели её 150–250 МБ.
+ * Теперь ролик переливается в хранилище на ходу, память под него не нужна, и
+ * предел поднят до двух гигабайт — это заведомо больше любой съёмки с телефона
+ * (минута 4K — около 350 МБ). Он остался только затем, чтобы случайно выбранный
+ * фильм не занимал канал заказчицы полчаса впустую.
+ *
+ * Ограничения по длине ролика нет и не было ни здесь, ни в сжатии.
  */
-const MAX_UPLOAD_BYTES = 200 * 1024 * 1024;
+const MAX_UPLOAD_BYTES = 2 * 1024 * 1024 * 1024;
+
+/**
+ * До какого веса ролик уходит в хранилище прежним, проверенным способом —
+ * куском памяти. Ровно тот предел, что стоял здесь раньше: всё, что заказчица
+ * грузит обычно (10–40 МБ), идёт этой дорогой и не зависит от новой.
+ */
+const BUFFERED_BYTES = 200 * 1024 * 1024;
 
 type LibraryVideo = {
   src: string;
@@ -57,6 +74,24 @@ type LibraryVideo = {
   poster: string | null;
   caption: string | null;
 };
+
+/**
+ * Ровно то в изделии и в ленте бэкстейджа, что нужно удалению ролика.
+ *
+ * Не `Product` и не `BackstageItem` из схем нарочно: здесь файлы читаются как
+ * есть и записываются обратно целиком, поэтому лишние поля должны доехать
+ * нетронутыми, а не потеряться на разборе.
+ */
+type ProductRecord = {
+  id?: string;
+  slug?: string;
+  title?: string;
+  videos?: Array<{ src?: string } | null>;
+  video?: { src?: string } | null;
+  [key: string]: unknown;
+};
+
+type BackstageRecord = { src?: string; [key: string]: unknown };
 
 /** Чем кончилась обработка ролика — это же кладёт машина сборки. */
 type JobResult = {
@@ -247,9 +282,57 @@ export async function GET(req: Request) {
   return NextResponse.json({ videos, maxUploadBytes: MAX_UPLOAD_BYTES });
 }
 
+/** Сколько весит обложка. Кадр 720 px в webp — это 30–150 КБ, мегабайта хватает. */
+const MAX_POSTER_BYTES = 1024 * 1024;
+
+/**
+ * Кладёт обложку рядом с роликом: `<имя>-poster.webp` в той же папке.
+ *
+ * Имя выбрано не случайно: ровно его ищет `getPosterForVideo`, и по нему же
+ * панель показывает обложку, не заводя проигрывателя.
+ */
+async function savePoster(req: Request, src: string): Promise<NextResponse> {
+  if (!/^\/catalog\/video\/[A-Za-z0-9][A-Za-z0-9._-]*\.(mp4|webm|mov)$/i.test(src)) {
+    return NextResponse.json({ error: "Не тот адрес ролика" }, { status: 400 });
+  }
+
+  const image = Buffer.from(await req.arrayBuffer());
+  if (image.length === 0) {
+    return NextResponse.json({ error: "Обложка не пришла" }, { status: 400 });
+  }
+  if (image.length > MAX_POSTER_BYTES) {
+    return NextResponse.json({ error: "Обложка слишком тяжёлая" }, { status: 413 });
+  }
+
+  const poster = src.replace(/\.[^.]+$/, "-poster.webp");
+  try {
+    // Тот же путь, что у фотографий: рядом с сайтом — прямо в его папку,
+    // иначе через репозиторий.
+    await saveMediaFile(poster, image, "image/webp");
+    return NextResponse.json({ ok: true, poster });
+  } catch (err) {
+    console.error("Video poster save error:", err);
+    // Ролик уже в каталоге и работает — обложка без него не повод пугать.
+    return NextResponse.json({ error: "Обложку сохранить не удалось" }, { status: 500 });
+  }
+}
+
 export async function POST(req: Request) {
   const isAuth = await checkAdminAuth();
   if (!isAuth) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+
+  /*
+    Обложка загруженного ролика приходит сюда же, следом за ним.
+
+    Почему из браузера. Ролики, снятые прежними сессиями, обложку получили
+    от `tools/make-posters.mjs`, а загруженным через панель её не делал никто:
+    сжатие кладёт в каталог только сам ролик. Поэтому у новых роликов в панели
+    пустая клетка — заказчица про это и написала. Кадр снимает сам браузер с
+    файла, который она выбрала: он у него уже есть, ничего качать не нужно, а
+    на хостинге для этого не было бы ни ffmpeg, ни памяти.
+  */
+  const posterFor = new URL(req.url).searchParams.get("poster");
+  if (posterFor !== null) return savePoster(req, posterFor);
 
   if (!GITHUB_TOKEN) {
     return NextResponse.json(
@@ -260,15 +343,44 @@ export async function POST(req: Request) {
 
   try {
     /*
-      Файл приходит как есть, отдельным полем формы, а не строкой в base64.
-      Раньше было наоборот, и это стоило трети лишнего веса: base64 раздувает
-      файл на треть, а сорок мегабайт с телефона превращались в пятьдесят три.
+      Ролик приходит двумя способами, и оба здесь живые.
+
+      Основной — телом запроса, как есть (`?name=…` в адресе). Запасной —
+      полем формы: так шлёт панель, открытая до этой правки, и обрывать ей
+      загрузку из-за нашего обновления нельзя.
+
+      Дальше важнее другое — не как он пришёл, а как уходит в хранилище.
+      Пока ролик легче двухсот мегабайт, он уходит ровно тем же способом,
+      каким уходил всегда: куском памяти. Этот путь проверен на живой панели
+      настоящим файлом, и трогать его ради красоты незачем. Тяжелее — только
+      тогда включается перелив потоком: держать в памяти общего хостинга
+      полгигабайта нельзя, а раньше такой ролик просто отвергался.
     */
-    const form = await req.formData();
-    const file = form.get("file");
-    if (!(file instanceof File)) {
-      return NextResponse.json({ error: "Файл не пришёл" }, { status: 400 });
+    const rawName = new URL(req.url).searchParams.get("name");
+    const asBody = rawName !== null && req.body !== null;
+
+    let sourceName = "";
+    let size = 0;
+    let mime = "";
+    let body: BodyInit | null = null;
+
+    if (asBody) {
+      sourceName = rawName;
+      size = Number(req.headers.get("content-length") || 0);
+      mime = req.headers.get("content-type") || "";
+      body = req.body;
+    } else {
+      const form = await req.formData();
+      const file = form.get("file");
+      if (!(file instanceof File)) {
+        return NextResponse.json({ error: "Файл не пришёл" }, { status: 400 });
+      }
+      sourceName = file.name || "";
+      size = file.size;
+      mime = file.type;
+      body = new Uint8Array(await file.arrayBuffer());
     }
+
     /*
       Тип файла проверяем мягко. Браузер сообщает его сам, но не всегда:
       с айфона `.mov` приходит как `video/quicktime`, а иногда тип пустой или
@@ -278,23 +390,30 @@ export async function POST(req: Request) {
       и говорит внятно, если это не видео.
     */
     const looksLikeVideo =
-      file.type.startsWith("video/") || /\.(mp4|mov|m4v|webm|avi|mkv|3gp)$/i.test(file.name || "");
+      mime.startsWith("video/") || /\.(mp4|mov|m4v|webm|avi|mkv|3gp)$/i.test(sourceName);
     if (!looksLikeVideo) {
       return NextResponse.json(
         { error: "Похоже, это не видеофайл. Выберите ролик — mp4 или mov." },
         { status: 400 },
       );
     }
-    if (file.size > MAX_UPLOAD_BYTES) {
-      const mb = Math.round(file.size / (1024 * 1024));
+    const limit = asBody ? MAX_UPLOAD_BYTES : BUFFERED_BYTES;
+    if (size > limit) {
+      const mb = Math.round(size / (1024 * 1024));
+      const limitMb = Math.round(limit / (1024 * 1024));
       return NextResponse.json(
-        { error: `Ролик слишком длинный: ${mb} МБ. Панель принимает до 200 МБ.` },
+        {
+          // Прежняя строка говорила «ролик слишком длинный» про вес — и
+          // заказчица прочла это как запрет на длинные ролики. По времени
+          // ролики не ограничены ничем.
+          error: `Ролик слишком тяжёлый: ${mb} МБ, а взять можно до ${limitMb} МБ. Дело в весе файла, а не в его длине.`,
+        },
         { status: 413 },
       );
     }
 
     const safeName =
-      (file.name || "video")
+      (sourceName || "video")
         .replace(/\.[^.]+$/, "")
         .toLowerCase()
         .replace(/[^a-z0-9]+/g, "-")
@@ -314,20 +433,36 @@ export async function POST(req: Request) {
     const stale = release.assets.find((a) => a.name === target);
     if (stale) await deleteAsset(stale.id);
 
-    const bytes = Buffer.from(await file.arrayBuffer());
+    /*
+      Тяжёлый ролик переливаем потоком, лёгкий — как раньше, куском памяти.
+
+      Длина. Кусок памяти fetch измеряет сам. У потока измерять нечего, и без
+      заголовка запрос ушёл бы «по частям» (chunked), а хранилище GitHub такие
+      не принимает — поэтому здесь длина ставится руками, из того, что сообщил
+      браузер. Проверено на Node 22: с потоком заголовок доезжает как есть,
+      chunked не включается. (Прежнее замечание «Content-Length руками не
+      выставлять» осталось верным для куска памяти — там он и правда лишний.)
+    */
+    const streamed = asBody && size > BUFFERED_BYTES;
+    if (asBody && !streamed) {
+      body = new Uint8Array(await new Response(body as ReadableStream).arrayBuffer());
+    }
+
+    const upload: RequestInit & { duplex?: "half" } = {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${GITHUB_TOKEN}`,
+        Accept: "application/vnd.github+json",
+        "Content-Type": "application/octet-stream",
+        ...(streamed ? { "Content-Length": String(size) } : {}),
+      },
+      body,
+    };
+    if (streamed) upload.duplex = "half";
+
     const sent = await fetch(
       `https://uploads.github.com/repos/${GITHUB_REPO}/releases/${release.id}/assets?name=${encodeURIComponent(target)}`,
-      {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${GITHUB_TOKEN}`,
-          Accept: "application/vnd.github+json",
-          // Длину не выставляем руками: fetch считает её сам, а поставленная
-          // вручную в Node либо игнорируется, либо роняет запрос.
-          "Content-Type": "application/octet-stream",
-        },
-        body: new Uint8Array(bytes),
-      },
+      upload,
     );
     if (!sent.ok) {
       console.error("Video asset upload failed:", sent.status, await sent.text());
@@ -387,6 +522,105 @@ export async function PUT(req: Request) {
   } catch (err) {
     console.error("Video rename error:", err);
     return NextResponse.json({ error: "Ошибка сохранения названия" }, { status: 500 });
+  }
+}
+
+/**
+ * Удаление ролика из архива — насовсем.
+ *
+ * До сих пор ролик можно было только посмотреть и переименовать. Заказчица
+ * писала прямо: «Хочу удалить. Там есть повторы. Как?» — никак, кнопки не
+ * было. Убрать ролик «наполовину» здесь нельзя: он лежит в четырёх местах, и
+ * пропущенное вернёт его обратно.
+ *
+ * 1. Изделия (`products.json`) — ролик мог быть прикреплён к нескольким.
+ * 2. Лента бэкстейджа (`backstage.json`).
+ * 3. Название, данное заказчицей (`video_titles.json`).
+ * 4. Сами файлы: ролик и его обложка — и в репозитории, и в папке сайта на
+ *    хостинге. Одного репозитория мало: выкладка идёт без `--delete`, файл
+ *    остался бы на сайте и открывался по прямой ссылке.
+ *
+ * Порядок важен. Сначала данные и файлы сайта, потом коммит: если GitHub
+ * откажет, панель ответит ошибкой, а не «удалено» поверх неудачи.
+ */
+export async function DELETE(req: Request) {
+  const isAuth = await checkAdminAuth();
+  if (!isAuth) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+
+  const src = new URL(req.url).searchParams.get("src") || "";
+  // Имя приходит из браузера. Одна косая черта или «..» — и удаление ушло бы
+  // не туда: ниже это настоящее удаление файлов, а не запись в списке.
+  if (!/^\/catalog\/video\/[A-Za-z0-9][A-Za-z0-9._-]*\.(mp4|webm|mov)$/i.test(src)) {
+    return NextResponse.json({ error: "Такого ролика в архиве нет" }, { status: 400 });
+  }
+
+  try {
+    const [products, backstage, titles] = await Promise.all([
+      loadJsonData<ProductRecord[]>(PRODUCTS_FILE, []),
+      loadJsonData<BackstageRecord[]>(BACKSTAGE_FILE, []),
+      loadJsonData<Record<string, { title?: string; caption?: string }>>(TITLES_FILE, {}),
+    ]);
+
+    const usedBy: string[] = [];
+    const nextProducts = products.map((product) => {
+      const videos = (product.videos ?? []).filter((video) => video?.src !== src);
+      const single = product.video?.src === src ? null : product.video ?? null;
+      const changed =
+        videos.length !== (product.videos ?? []).length || single !== (product.video ?? null);
+      if (!changed) return product;
+      usedBy.push(product.title || product.slug || product.id || "изделие без названия");
+      // Прежнее одиночное поле держим в согласии со списком — так же, как это
+      // делает сама панель при правке карточки.
+      return { ...product, videos, video: single ?? videos[0] ?? null };
+    });
+
+    const nextBackstage = backstage.filter((item) => item?.src !== src);
+    const nextTitles = { ...titles };
+    delete nextTitles[src];
+
+    // Обложка лежит то рядом с роликом, то в общей папке постеров — зависит
+    // от того, чем ролик сделан. Убираем ту, которая вправду есть.
+    const base = src.replace(/^\/catalog\/video\//, "").replace(/\.[^.]+$/, "");
+    const companions = [
+      `/catalog/video/${base}-poster.webp`,
+      `/catalog/posters/${base}.webp`,
+      `/catalog/video/${base}.webm`,
+    ];
+
+    // Файлы сайта: сначала сам ролик, потом его обложки. Панель стоит рядом
+    // с сайтом, поэтому с сайта он исчезает сразу, не дожидаясь выкладки.
+    const gone = [src, ...companions].filter((item) => deleteFromSite(item));
+
+    const repoPaths = [src, ...companions].map((item) => `public${item}`);
+
+    if (nextBackstage.length !== backstage.length) {
+      await saveJsonData(BACKSTAGE_FILE, nextBackstage);
+    }
+    if (usedBy.length > 0) {
+      await saveJsonData(PRODUCTS_FILE, nextProducts);
+    }
+    if (titles[src]) {
+      await saveJsonData(TITLES_FILE, nextTitles);
+    }
+    const removedFromRepo = await deleteRepoFiles(
+      repoPaths,
+      `Удалён ролик: ${src.split("/").pop()}`,
+    );
+
+    return NextResponse.json({
+      ok: true,
+      src,
+      // Панели этого хватает, чтобы сказать заказчице, что именно изменилось.
+      detachedFrom: usedBy,
+      removedFromBackstage: backstage.length - nextBackstage.length,
+      files: { site: gone.length, repo: removedFromRepo.length },
+    });
+  } catch (err) {
+    console.error("Video delete error:", err);
+    return NextResponse.json(
+      { error: "Не удалось удалить ролик. Попробуйте ещё раз или напишите разработчику." },
+      { status: 500 },
+    );
   }
 }
 
