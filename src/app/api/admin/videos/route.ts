@@ -36,6 +36,12 @@ const TITLES_FILE = "src/data/video_titles.json";
 /** Файлы, в которых ролик может быть упомянут: без них удаление неполное. */
 const PRODUCTS_FILE = "src/data/products.json";
 const BACKSTAGE_FILE = "src/data/backstage.json";
+/**
+ * Что панель убрала с хостинга. По этому списку выкладка сайта проходит
+ * уборкой: сама она ничего не удаляет, а выкладка, начатая до удаления,
+ * успевает положить файл обратно.
+ */
+const REMOVED_FILE = "src/data/removed-from-site.json";
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN || process.env.GITHUB_PAT;
 const GITHUB_REPO = process.env.GITHUB_REPO || "rednaxelavoroge/Candles_Soap";
 const GITHUB_BRANCH = process.env.GITHUB_BRANCH || "main";
@@ -98,6 +104,9 @@ type ProductRecord = {
 };
 
 type BackstageRecord = { src?: string; [key: string]: unknown };
+
+/** Запись в списке убранного с хостинга. */
+type RemovedFromSite = { path: string; at: string };
 
 /** Чем кончилась обработка ролика — это же кладёт машина сборки. */
 type JobResult = {
@@ -598,6 +607,28 @@ export async function DELETE(req: Request) {
     const gone = [src, ...companions].filter((item) => deleteFromSite(item));
 
     /*
+      Стереть файл с хостинга мало.
+
+      Выкладка сайта идёт без `--delete`, и если в эту минуту уже шла выкладка,
+      начатая ДО удаления, она кладёт файл обратно — а из репозитория он к тому
+      времени уже пропал, и убрать его больше некому. Проверено на живой панели
+      09.09.2026: ролик, удалённый в 19:51, вернулся на хостинг в 19:52 и
+      остался там.
+
+      Поэтому путь записывается в список, по которому выкладка проходит уборкой
+      после каждой заливки. Список общий и растёт медленно; повторное удаление
+      несуществующего файла ничего не стоит.
+    */
+    const removedList = await loadJsonData<RemovedFromSite[]>(REMOVED_FILE, []);
+    const already = new Set(removedList.map((item) => item.path));
+    const nextRemoved = [
+      ...removedList,
+      ...[src, ...companions]
+        .filter((item) => !already.has(item))
+        .map((item) => ({ path: item, at: new Date().toISOString() })),
+    ];
+
+    /*
       Дальше всё уезжает одним коммитом, то есть одной выкладкой сайта.
       Пачка коммита держится открытой секунду-другую, и любое ожидание между
       постановками разрывает её надвое: первая проверка вживую дала на одно
@@ -618,6 +649,9 @@ export async function DELETE(req: Request) {
     }
     if (titles[src]) {
       writes.push(saveJsonData(TITLES_FILE, nextTitles));
+    }
+    if (nextRemoved.length !== removedList.length) {
+      writes.push(saveJsonData(REMOVED_FILE, nextRemoved));
     }
     writes.push(queueRepoDeletions(repoPaths, `Удалён ролик: ${src.split("/").pop()}`));
     await Promise.all(writes);

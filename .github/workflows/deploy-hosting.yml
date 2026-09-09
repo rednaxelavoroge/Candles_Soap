@@ -83,3 +83,71 @@ jobs:
             mirror -R --parallel=4 --verbose out "$TARGET"
             bye
           LFTP
+
+      # Убрать с хостинга то, что удалили из панели.
+      #
+      # Выкладка идёт без --delete (в папке домена чужой WordPress), поэтому
+      # сама она ничего не убирает. Панель, удаляя ролик, стирает файл с
+      # хостинга сразу — но если в эту минуту уже шла выкладка, начатая ДО
+      # удаления, она успевает положить файл обратно. Проверено 09.09.2026:
+      # ролик, удалённый в 19:51, вернулся на хостинг в 19:52 выкладкой,
+      # стартовавшей раньше, и остался там навсегда — из репозитория он к тому
+      # времени уже пропал, и убрать его было некому.
+      #
+      # Поэтому панель, кроме удаления файла, записывает путь в
+      # src/data/removed-from-site.json, а этот шаг проходит по списку после
+      # каждой выкладки. «Нет такого файла» — норма: значит, уже убрано.
+      - name: Убрать удалённое из панели
+        if: steps.check.outputs.ready == 'true'
+        env:
+          FTP_HOST: ${{ secrets.FTP_HOST }}
+          FTP_USER: ${{ secrets.FTP_USER }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          FTP_DIR: ${{ secrets.FTP_DIR }}
+        run: |
+          set -euo pipefail
+          LIST=src/data/removed-from-site.json
+          if [ ! -f "$LIST" ]; then
+            echo "Списка удалённого нет — убирать нечего."
+            exit 0
+          fi
+
+          TARGET="${FTP_DIR:-public_html}"
+
+          # Пути приходят из панели. Чужого и вышестоящего здесь быть не может:
+          # берём только то, что лежит внутри catalog, и отбрасываем «..».
+          python3 - "$LIST" > /tmp/remove-commands.txt <<'PY'
+          import json, sys
+          out = []
+          try:
+              items = json.load(open(sys.argv[1], encoding="utf-8"))
+          except Exception as err:
+              print(f"# список не прочитан: {err}", file=sys.stderr)
+              items = []
+          for item in items if isinstance(items, list) else []:
+              path = item.get("path") if isinstance(item, dict) else item
+              if not isinstance(path, str):
+                  continue
+              path = path.lstrip("/")
+              if not path.startswith("catalog/") or ".." in path:
+                  continue
+              out.append(f'rm -f "{path}"')
+          print("\n".join(out))
+          PY
+
+          COUNT=$(grep -c . /tmp/remove-commands.txt || true)
+          if [ "${COUNT:-0}" -eq 0 ]; then
+            echo "В списке нет ничего, что нужно убрать."
+            exit 0
+          fi
+          echo "Убираю с хостинга $COUNT файл(ов)."
+
+          {
+            echo "set ssl:verify-certificate no"
+            echo "set ftp:ssl-allow yes"
+            echo "set cmd:fail-exit no"
+            echo "cd \"$TARGET\""
+            cat /tmp/remove-commands.txt
+            echo "bye"
+          } | lftp -u "$FTP_USER","$FTP_PASSWORD" "$FTP_HOST" || true
+          echo "Готово."
