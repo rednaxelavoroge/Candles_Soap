@@ -109,18 +109,6 @@
   },
   {
     "kind": "video",
-    "src": "/catalog/video/candle-process-5.mp4",
-    "poster": {
-      "src": "/catalog/posters/candle-process-5.webp",
-      "width": 720,
-      "height": 1280,
-      "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAABQAwCdASoQABwALrV2u12jqampiYC0SgAAudQsd1Zl+V6fgAD9yT/08M2HlY82k7M/SVNfIVRJsbUXOZG72Ck6c14ElZEymo6bkTRM1AksqJAA",
-      "alt": "Тепло горящего пламени — процесс создания"
-    },
-    "caption": ""
-  },
-  {
-    "kind": "video",
     "src": "/catalog/video/candle-process-6.mp4",
     "poster": {
       "src": "/catalog/posters/candle-process-6.webp",
