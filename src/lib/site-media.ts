@@ -128,6 +128,11 @@ export function deleteFromSite(publicRelativePath: string): boolean {
   const target = insideSite(root, publicRelativePath);
   if (!target) return false;
 
+  // Отвечаем «убрали» только про то, что вправду лежало: у ролика проверяются
+  // три возможных места обложки, и двух из них обычно нет. Иначе панель
+  // отчитывалась бы об убранных файлах, которых никогда не было.
+  if (!fs.existsSync(target)) return false;
+
   try {
     fs.rmSync(target, { force: true });
     return true;

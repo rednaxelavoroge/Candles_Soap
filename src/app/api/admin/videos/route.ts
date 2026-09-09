@@ -1,6 +1,12 @@
 import { checkAdminAuth } from "@/lib/admin-auth";
 import generatedVideos from "@/data/generated_videos.json";
-import { deleteRepoFiles, loadJsonData, saveJsonData, saveMediaFile } from "@/lib/data-storage";
+import {
+  loadJsonData,
+  planRepoDeletions,
+  queueRepoDeletions,
+  saveJsonData,
+  saveMediaFile,
+} from "@/lib/data-storage";
 import { deleteFromSite } from "@/lib/site-media";
 import { NextResponse } from "next/server";
 import fs from "fs";
@@ -591,21 +597,30 @@ export async function DELETE(req: Request) {
     // с сайтом, поэтому с сайта он исчезает сразу, не дожидаясь выкладки.
     const gone = [src, ...companions].filter((item) => deleteFromSite(item));
 
-    const repoPaths = [src, ...companions].map((item) => `public${item}`);
+    /*
+      Дальше всё уезжает одним коммитом, то есть одной выкладкой сайта.
+      Пачка коммита держится открытой секунду-другую, и любое ожидание между
+      постановками разрывает её надвое: первая проверка вживую дала на одно
+      удаление два коммита и две выкладки. Поэтому сначала — всё, что требует
+      ожидания (проверка, какие файлы вправду есть в репозитории), и только
+      потом записи, разом.
+    */
+    const repoPaths = await planRepoDeletions(
+      [src, ...companions].map((item) => `public${item}`),
+    );
 
+    const writes: Promise<unknown>[] = [];
     if (nextBackstage.length !== backstage.length) {
-      await saveJsonData(BACKSTAGE_FILE, nextBackstage);
+      writes.push(saveJsonData(BACKSTAGE_FILE, nextBackstage));
     }
     if (usedBy.length > 0) {
-      await saveJsonData(PRODUCTS_FILE, nextProducts);
+      writes.push(saveJsonData(PRODUCTS_FILE, nextProducts));
     }
     if (titles[src]) {
-      await saveJsonData(TITLES_FILE, nextTitles);
+      writes.push(saveJsonData(TITLES_FILE, nextTitles));
     }
-    const removedFromRepo = await deleteRepoFiles(
-      repoPaths,
-      `Удалён ролик: ${src.split("/").pop()}`,
-    );
+    writes.push(queueRepoDeletions(repoPaths, `Удалён ролик: ${src.split("/").pop()}`));
+    await Promise.all(writes);
 
     return NextResponse.json({
       ok: true,
@@ -613,7 +628,7 @@ export async function DELETE(req: Request) {
       // Панели этого хватает, чтобы сказать заказчице, что именно изменилось.
       detachedFrom: usedBy,
       removedFromBackstage: backstage.length - nextBackstage.length,
-      files: { site: gone.length, repo: removedFromRepo.length },
+      files: { site: gone.length, repo: repoPaths.length },
     });
   } catch (err) {
     console.error("Video delete error:", err);

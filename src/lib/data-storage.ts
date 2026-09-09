@@ -303,7 +303,7 @@ export async function saveJsonData(relativePath: string, data: unknown): Promise
  * Путей, которых в репозитории нет, здесь быть не должно: их отсеивает
  * `existsInRepo`, иначе GitHub отвергнет весь коммит целиком.
  */
-export async function deleteRepoFiles(relativePaths: string[], label: string): Promise<string[]> {
+export async function planRepoDeletions(relativePaths: string[]): Promise<string[]> {
   const paths = relativePaths.filter(Boolean);
   if (paths.length === 0) return [];
 
@@ -322,14 +322,24 @@ export async function deleteRepoFiles(relativePaths: string[], label: string): P
   for (const relativePath of paths) {
     if (await existsInRepo(relativePath)) present.push(relativePath);
   }
-  if (present.length === 0) return [];
+  return present;
+}
 
-  await Promise.all(
-    present.map((relativePath) =>
+/**
+ * Ставит удаления в ту же пачку, что и правки данных рядом.
+ *
+ * Ждать здесь ничего нельзя: пачка держится открытой секунду-другую, и всякое
+ * ожидание между постановками разрывает её на два коммита — то есть на две
+ * выкладки сайта. Поэтому проверка существования вынесена в `planRepoDeletions`,
+ * а сюда приходят уже готовые пути.
+ */
+export function queueRepoDeletions(relativePaths: string[], label: string): Promise<void> {
+  if (relativePaths.length === 0 || !GITHUB_TOKEN) return Promise.resolve();
+  return Promise.all(
+    relativePaths.map((relativePath) =>
       enqueue({ path: relativePath, base64: null, label, kind: "media" }),
     ),
-  );
-  return present;
+  ).then(() => undefined);
 }
 
 /**
