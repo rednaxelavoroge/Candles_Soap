@@ -2638,7 +2638,17 @@
         "alt": "Новогодний набор"
       }
     ],
-    "video": null,
+    "video": {
+      "kind": "file",
+      "src": "/catalog/video/candle-process-8.mp4",
+      "poster": {
+        "src": "/catalog/video/candle-process-8-poster.webp",
+        "width": 720,
+        "height": 1280,
+        "blurDataURL": "data:image/webp;base64,UklGRmoCAABXRUJQVlA4WAoAAAAgAAAADwAADwAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggfAAAAJACAJ0BKhAAEAADgFolkALsfwCCNKX5bjVCcFAAAP7xnbo6z+/kH1EgWjdDdmaTxCjvS4o5XyhxgF5+dgmCuXQ8JFfUTXFOTj1t0lyWr4LKrL4duM45mP2VFarcmseF60ku08OO+d+ZtKPn7ray9k1i8dFW+MZxyRSTAAA=",
+        "alt": "гелевая игрушка новогодняя 1"
+      }
+    },
     "price": null,
     "description": "Композиция на овальном гипсовом блюде: шар, шишка и колпак вместе. Собирается как готовый подарок — блюдо входит в набор и остаётся после праздника.",
     "specs": {},
@@ -2648,7 +2658,19 @@
       "#E5CFC7"
     ],
     "order": 570,
-    "videos": [],
+    "videos": [
+      {
+        "kind": "file",
+        "src": "/catalog/video/candle-process-8.mp4",
+        "poster": {
+          "src": "/catalog/video/candle-process-8-poster.webp",
+          "width": 720,
+          "height": 1280,
+          "blurDataURL": "data:image/webp;base64,UklGRmoCAABXRUJQVlA4WAoAAAAgAAAADwAADwAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggfAAAAJACAJ0BKhAAEAADgFolkALsfwCCNKX5bjVCcFAAAP7xnbo6z+/kH1EgWjdDdmaTxCjvS4o5XyhxgF5+dgmCuXQ8JFfUTXFOTj1t0lyWr4LKrL4duM45mP2VFarcmseF60ku08OO+d+ZtKPn7ray9k1i8dFW+MZxyRSTAAA=",
+          "alt": "гелевая игрушка новогодняя 1"
+        }
+      }
+    ],
     "related": []
   },
   {
