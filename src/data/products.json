@@ -1849,17 +1849,7 @@
         "alt": "Большая морская ракушка"
       }
     ],
-    "video": {
-      "kind": "file",
-      "src": "/catalog/video/candle-process-8.mp4",
-      "poster": {
-        "src": "/catalog/candles/rakushka-rapan-01.webp",
-        "width": 1600,
-        "height": 1200,
-        "blurDataURL": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAACwAQCdASoQAAwAA4BaJZwAAuMdBV6AAP3eAzYgTys2TcZ9MSbDj82OcEo58Y2AUAA=",
-        "alt": "Морская в ракушке"
-      }
-    },
+    "video": null,
     "price": null,
     "description": "Большая гипсовая ракушка, наполненная прозрачным свечным гелем, внутри мелкие ракушки. Можно написать внутри короткое пожелание",
     "specs": {},
@@ -1869,19 +1859,7 @@
       "#DAD2D0"
     ],
     "order": 30,
-    "videos": [
-      {
-        "kind": "file",
-        "src": "/catalog/video/candle-process-8.mp4",
-        "poster": {
-          "src": "/catalog/candles/rakushka-rapan-01.webp",
-          "width": 1600,
-          "height": 1200,
-          "blurDataURL": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAACwAQCdASoQAAwAA4BaJZwAAuMdBV6AAP3eAzYgTys2TcZ9MSbDj82OcEo58Y2AUAA=",
-          "alt": "Морская в ракушке"
-        }
-      }
-    ],
+    "videos": [],
     "related": [
       "candles-more-v-ladonyakh",
       "candles-serdtse-karibskoe",
@@ -2506,17 +2484,7 @@
         "alt": "Новогодний набор"
       }
     ],
-    "video": {
-      "kind": "file",
-      "src": "/catalog/video/candle-process-8.mp4",
-      "poster": {
-        "src": "/catalog/video/candle-process-8-poster.webp",
-        "width": 720,
-        "height": 1280,
-        "blurDataURL": "data:image/webp;base64,UklGRmoCAABXRUJQVlA4WAoAAAAgAAAADwAADwAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggfAAAAJACAJ0BKhAAEAADgFolkALsfwCCNKX5bjVCcFAAAP7xnbo6z+/kH1EgWjdDdmaTxCjvS4o5XyhxgF5+dgmCuXQ8JFfUTXFOTj1t0lyWr4LKrL4duM45mP2VFarcmseF60ku08OO+d+ZtKPn7ray9k1i8dFW+MZxyRSTAAA=",
-        "alt": "гелевая игрушка новогодняя 1"
-      }
-    },
+    "video": null,
     "price": null,
     "description": "Композиция на овальном гипсовом блюде: шар, шишка и колпак вместе. Собирается как готовый подарок — блюдо входит в набор и остаётся после праздника.",
     "specs": {},
@@ -2526,19 +2494,7 @@
       "#E5CFC7"
     ],
     "order": 570,
-    "videos": [
-      {
-        "kind": "file",
-        "src": "/catalog/video/candle-process-8.mp4",
-        "poster": {
-          "src": "/catalog/video/candle-process-8-poster.webp",
-          "width": 720,
-          "height": 1280,
-          "blurDataURL": "data:image/webp;base64,UklGRmoCAABXRUJQVlA4WAoAAAAgAAAADwAADwAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggfAAAAJACAJ0BKhAAEAADgFolkALsfwCCNKX5bjVCcFAAAP7xnbo6z+/kH1EgWjdDdmaTxCjvS4o5XyhxgF5+dgmCuXQ8JFfUTXFOTj1t0lyWr4LKrL4duM45mP2VFarcmseF60ku08OO+d+ZtKPn7ray9k1i8dFW+MZxyRSTAAA=",
-          "alt": "гелевая игрушка новогодняя 1"
-        }
-      }
-    ],
+    "videos": [],
     "related": []
   },
   {
