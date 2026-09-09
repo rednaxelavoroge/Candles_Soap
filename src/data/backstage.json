@@ -1,18 +1,6 @@
 [
   {
     "kind": "video",
-    "src": "/catalog/video/soap-process-1.mp4",
-    "poster": {
-      "src": "/catalog/posters/soap-process-1.webp",
-      "width": 720,
-      "height": 1280,
-      "blurDataURL": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAADQAwCdASoQABwAPu1iqU2ppaQiMAgBMB2JQBOgA2PrwU0Q05lvBwAA/q+MpqpRBeZIuMso5AxLRYm5yy5kV0Y8Jw9vb0LaK0Y+qrkl+y2atSmPwSQNrwNawB1TsGhAWhwyQPfL40k5shGlVgp5lbibXBqqv0yfAAA=",
-      "alt": "Заливка мыльной композиции — процесс создания"
-    },
-    "caption": ""
-  },
-  {
-    "kind": "video",
     "src": "/catalog/video/soap-process-2.mp4",
     "poster": {
       "src": "/catalog/posters/soap-process-2.webp",
