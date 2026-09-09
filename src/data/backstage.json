@@ -1,18 +1,6 @@
 [
   {
     "kind": "video",
-    "src": "/catalog/video/soap-process-2.mp4",
-    "poster": {
-      "src": "/catalog/posters/soap-process-2.webp",
-      "width": 720,
-      "height": 1280,
-      "blurDataURL": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAADwAwCdASoQABwAPu1mq04ppaQiMAgBMB2JYwCdAB41K3/x/7QPxqWAAPbsAV1qVEgd8YLdGbJOCdz3FHStk/JwHMKD1L9NaPpWbFjj57bP6SW8J4eQ3jmtxIgtzkJbW7qQs8/dTyMmIVLHZwAAAA==",
-      "alt": "Создание мыльного букета — процесс создания"
-    },
-    "caption": ""
-  },
-  {
-    "kind": "video",
     "src": "/catalog/video/soap-process-3.mp4",
     "poster": {
       "src": "/catalog/posters/soap-process-3.webp",
