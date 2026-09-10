@@ -649,7 +649,17 @@
         "alt": "Ванна со льдом — ракурс 11"
       }
     ],
-    "video": null,
+    "video": {
+      "kind": "file",
+      "src": "/catalog/video/video-1789044879155.mp4",
+      "poster": {
+        "src": "/catalog/video/video-1789044879155-poster.webp",
+        "width": 720,
+        "height": 1280,
+        "blurDataURL": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAACwAQCdASoQAAwAA4BaJZwAAudVhC4AAP73fOjZsl8ThhzTEV1SapFX3hCYAA==",
+        "alt": "свечи - ванна со льдом.mp4"
+      }
+    },
     "price": null,
     "description": "Свеча льдинки в гипсовой ванне. Вместо льдинок могут быть облака, цветы, утята.... Два фитиля в ванночке. Когда горит свеча льдинки мерцают и переливаются от света фитиля.",
     "specs": {
@@ -665,7 +675,19 @@
     ],
     "related": [],
     "order": 10,
-    "videos": []
+    "videos": [
+      {
+        "kind": "file",
+        "src": "/catalog/video/video-1789044879155.mp4",
+        "poster": {
+          "src": "/catalog/video/video-1789044879155-poster.webp",
+          "width": 720,
+          "height": 1280,
+          "blurDataURL": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAACwAQCdASoQAAwAA4BaJZwAAudVhC4AAP73fOjZsl8ThhzTEV1SapFX3hCYAA==",
+          "alt": "свечи - ванна со льдом.mp4"
+        }
+      }
+    ]
   },
   {
     "id": "candles-soty",
