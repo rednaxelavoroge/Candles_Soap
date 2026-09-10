@@ -890,5 +890,21 @@
   {
     "path": "/catalog/video/2025-01-25-112755441-1788989973133.webm",
     "at": "2026-09-09T21:59:48.854Z"
+  },
+  {
+    "path": "/catalog/video/video-1788990722724.mp4",
+    "at": "2026-09-10T11:58:40.477Z"
+  },
+  {
+    "path": "/catalog/video/video-1788990722724-poster.webp",
+    "at": "2026-09-10T11:58:40.477Z"
+  },
+  {
+    "path": "/catalog/posters/video-1788990722724.webp",
+    "at": "2026-09-10T11:58:40.477Z"
+  },
+  {
+    "path": "/catalog/video/video-1788990722724.webm",
+    "at": "2026-09-10T11:58:40.477Z"
   }
 ]
