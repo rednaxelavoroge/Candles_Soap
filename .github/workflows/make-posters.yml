@@ -1,0 +1,98 @@
+# Обложки роликам, у которых их нет.
+#
+# Зачем. Обложку снимает браузер заказчицы из выбранного файла — и только
+# если она дождалась конца сжатия. Оборвалась связь, закрыла вкладку, встала
+# выкладка — обложки нет, а без неё и в панели, и на сайте чёрный прямоугольник.
+# 10.09.2026 так вышло сразу с четырьмя роликами.
+#
+# Здесь ffmpeg есть, поэтому кадр снимается машиной. Запускается кнопкой в
+# Actions, проходит по `public/catalog/video/*.mp4` и делает обложку только
+# тем, у кого её нет. Уже сделанные не трогает: обложка, снятая её браузером,
+# выбрана из того же файла и ничем не хуже.
+
+name: Сделать обложки роликам без обложки
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: compress-video
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  # Нужно, чтобы запустить выкладку: коммит от GITHUB_TOKEN сам её не поднимает.
+  actions: write
+
+jobs:
+  posters:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Убедиться, что ffmpeg на месте
+        run: |
+          set -euo pipefail
+          if ! command -v ffmpeg >/dev/null || ! command -v ffprobe >/dev/null; then
+            sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+          fi
+          ffmpeg -version | sed -n 1p
+
+      - name: Снять кадры
+        id: work
+        run: |
+          set -uo pipefail
+          DIR=public/catalog/video
+          MADE=0
+
+          for VIDEO in "$DIR"/*.mp4; do
+            [ -e "$VIDEO" ] || continue
+            BASE=$(basename "$VIDEO" .mp4)
+
+            # Те же два места, где обложку ищет getPosterForVideo в панели.
+            if [ -f "$DIR/$BASE-poster.webp" ] || [ -f "public/catalog/posters/$BASE.webp" ]; then
+              echo "$BASE — обложка уже есть"
+              continue
+            fi
+
+            # Секунда от начала, как в браузере у заказчицы: самое начало часто
+            # тёмное. У ролика короче секунды берём нулевой кадр.
+            DUR=$(ffprobe -v error -show_entries format=duration -of csv=p=0 "$VIDEO" 2>/dev/null || echo "")
+            AT=1
+            if [ -n "$DUR" ] && awk -v d="$DUR" 'BEGIN{exit !(d < 1.2)}'; then AT=0; fi
+
+            if ffmpeg -nostdin -v error -y -ss "$AT" -i "$VIDEO" -frames:v 1 \
+                 -vf "scale='min(720,iw)':-2" -c:v libwebp -quality 80 \
+                 "$DIR/$BASE-poster.webp"; then
+              echo "$BASE — обложка снята на ${AT}с"
+              MADE=$((MADE+1))
+            else
+              echo "$BASE — кадр снять не вышло, пропускаю"
+              rm -f "$DIR/$BASE-poster.webp"
+            fi
+          done
+
+          echo "made=$MADE" >> "$GITHUB_OUTPUT"
+          echo "Готово: $MADE обложек."
+
+      - name: Положить обложки в репозиторий
+        if: steps.work.outputs.made != '0'
+        run: |
+          set -euo pipefail
+          git config user.name "Claude"
+          git config user.email "noreply@anthropic.com"
+          git add public/catalog/video/*-poster.webp
+          git commit -m "Обложки роликам, у которых их не было"
+          # Заказчица правит сайт из панели прямо сейчас — без rebase мы
+          # откатили бы её работу.
+          git pull --rebase origin ${{ github.ref_name }}
+          git push origin HEAD:${{ github.ref_name }}
+
+      - name: Запустить выкладку сайта
+        if: steps.work.outputs.made != '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh workflow run deploy-hosting.yml --ref ${{ github.ref_name }} \
+            || echo "Выкладку запустить не вышло — обложки вынесет следующее сохранение из панели."

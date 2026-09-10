@@ -162,9 +162,32 @@ jobs:
           mkdir -p public/catalog/video
           mv ready.mp4 "public/catalog/video/$TARGET"
 
+          # Обложка — запасная, на случай, если браузер заказчицы её не снял.
+          #
+          # Обычно кадр снимает её браузер из выбранного файла, сразу после
+          # этого сжатия, и он лучше: тот же файл, её выбор. Но снимает он его
+          # только если она дождалась ответа. Оборвалась связь, закрыла
+          # вкладку, встала выкладка — обложки нет, а без неё и в панели, и на
+          # сайте чёрный прямоугольник. 10.09.2026 так вышло с четырьмя
+          # роликами разом.
+          #
+          # Поэтому кадр снимаем и здесь. Её кадр, если он придёт, ляжет
+          # поверх этого тем же именем — панель кладёт обложку по адресу
+          # <имя>-poster.webp, и он тут один.
+          BASE="${TARGET%.*}"
+          POSTER="public/catalog/video/$BASE-poster.webp"
+          DUR=$(ffprobe -v error -show_entries format=duration -of csv=p=0 \
+                  "public/catalog/video/$TARGET" 2>/dev/null || echo "")
+          AT=1
+          if [ -n "$DUR" ] && awk -v d="$DUR" 'BEGIN{exit !(d < 1.2)}'; then AT=0; fi
+          ffmpeg -nostdin -v error -y -ss "$AT" -i "public/catalog/video/$TARGET" \
+            -frames:v 1 -vf "scale='min(720,iw)':-2" -c:v libwebp -quality 80 \
+            "$POSTER" || { echo "Обложку снять не вышло — не беда."; rm -f "$POSTER"; }
+
           git config user.name "Claude"
           git config user.email "noreply@anthropic.com"
           git add "public/catalog/video/$TARGET"
+          if [ -f "$POSTER" ]; then git add "$POSTER"; fi
           git commit -m "Ролик из панели: $TARGET"
 
           # Заказчица правит сайт из панели каждый день, её сохранения уходят
