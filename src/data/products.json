@@ -2159,7 +2159,17 @@
         "alt": "Кристаллы в блюде — ракурс 3"
       }
     ],
-    "video": null,
+    "video": {
+      "kind": "file",
+      "src": "/catalog/video/video-1789043965983.mp4",
+      "poster": {
+        "src": "/catalog/video/video-1789043965983-poster.webp",
+        "width": 720,
+        "height": 1280,
+        "blurDataURL": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAAAQAgCdASoQABAAA4BaJYwC7ADxN5LN6NwAAP5TKJg1k3PSU3NAv19GWely3E4wFVgKm3GORjir3VcKtaS6LNpxL4nips9tiqpAdC7qHy3+YGsNAAA=",
+        "alt": "Свечи - гелевые кубики"
+      }
+    },
     "price": null,
     "description": "Разноцветные кубики с блёстками, выложенные в гипсовом блюдце. Фитилей несколько: можно зажечь один или все сразу. ",
     "specs": {},
@@ -2169,7 +2179,19 @@
       "#DAD2D0"
     ],
     "order": 790,
-    "videos": [],
+    "videos": [
+      {
+        "kind": "file",
+        "src": "/catalog/video/video-1789043965983.mp4",
+        "poster": {
+          "src": "/catalog/video/video-1789043965983-poster.webp",
+          "width": 720,
+          "height": 1280,
+          "blurDataURL": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAAAQAgCdASoQABAAA4BaJYwC7ADxN5LN6NwAAP5TKJg1k3PSU3NAv19GWely3E4wFVgKm3GORjir3VcKtaS6LNpxL4nips9tiqpAdC7qHy3+YGsNAAA=",
+          "alt": "Свечи - гелевые кубики"
+        }
+      }
+    ],
     "related": []
   },
   {
