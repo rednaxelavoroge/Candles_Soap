@@ -2811,7 +2811,17 @@
         "alt": "Банка новогодняя детская — ракурс 5"
       }
     ],
-    "video": null,
+    "video": {
+      "kind": "file",
+      "src": "/catalog/video/video-1789042264352.mp4",
+      "poster": {
+        "src": "/catalog/video/video-1789042264352-poster.webp",
+        "width": 720,
+        "height": 1280,
+        "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADQAQCdASoQAAwAA4BaJQBdgB5UmF/TAAD+8t0z+SbLSqtBKDGd3f7schgs1QYdbol7TzKXw+lDcwG5Do800P1rMtFhthysjD2liMM9wAAwLgAA",
+        "alt": "Свечи - баночка детская новогодняя"
+      }
+    },
     "price": null,
     "description": "Стеклянная банка по новогодней теме, внутри —пингвины, елка . ...",
     "specs": {},
@@ -2821,7 +2831,19 @@
       "#DED2C2"
     ],
     "order": 630,
-    "videos": [],
+    "videos": [
+      {
+        "kind": "file",
+        "src": "/catalog/video/video-1789042264352.mp4",
+        "poster": {
+          "src": "/catalog/video/video-1789042264352-poster.webp",
+          "width": 720,
+          "height": 1280,
+          "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADQAQCdASoQAAwAA4BaJQBdgB5UmF/TAAD+8t0z+SbLSqtBKDGd3f7schgs1QYdbol7TzKXw+lDcwG5Do800P1rMtFhthysjD2liMM9wAAwLgAA",
+          "alt": "Свечи - баночка детская новогодняя"
+        }
+      }
+    ],
     "related": []
   },
   {
