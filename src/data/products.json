@@ -2497,7 +2497,17 @@
         "alt": "Ёлочный шар гелевый"
       }
     ],
-    "video": null,
+    "video": {
+      "kind": "file",
+      "src": "/catalog/video/video-1789042834442.mp4",
+      "poster": {
+        "src": "/catalog/video/video-1789042834442-poster.webp",
+        "width": 720,
+        "height": 1280,
+        "blurDataURL": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAADwAQCdASoQABAAA4BaJYwAAp3LjYeTKWgA/vQy1/E86BHl2zqoDLtof/tMKK98YXHSaB2jcjYAAA==",
+        "alt": "Свечи - гелевая игрушка"
+      }
+    },
     "price": null,
     "description": "Ёлочная игрушка гелевая",
     "specs": {},
@@ -2507,7 +2517,19 @@
       "#EDACF0"
     ],
     "order": 550,
-    "videos": [],
+    "videos": [
+      {
+        "kind": "file",
+        "src": "/catalog/video/video-1789042834442.mp4",
+        "poster": {
+          "src": "/catalog/video/video-1789042834442-poster.webp",
+          "width": 720,
+          "height": 1280,
+          "blurDataURL": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAADwAQCdASoQABAAA4BaJYwAAp3LjYeTKWgA/vQy1/E86BHl2zqoDLtof/tMKK98YXHSaB2jcjYAAA==",
+          "alt": "Свечи - гелевая игрушка"
+        }
+      }
+    ],
     "related": []
   },
   {
