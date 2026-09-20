@@ -4975,7 +4975,7 @@
       "#BFE0F0",
       "#C7D6DB"
     ],
-    "order": 330
+    "order": 340
   },
   {
     "id": "soap-pryanichnyy-nabor",
@@ -5303,7 +5303,7 @@
       "#C4E5EF",
       "#D8D3C9"
     ],
-    "order": 340
+    "order": 350
   },
   {
     "id": "soap-morskoy-brusok",
@@ -6521,7 +6521,7 @@
       "#F0D8EC",
       "#DFD1CA"
     ],
-    "order": 350
+    "order": 360
   },
   {
     "id": "soap-zvezda-s-korallom",
@@ -6551,7 +6551,7 @@
       "#E7DDD4",
       "#DDD2CA"
     ],
-    "order": 360
+    "order": 370
   },
   {
     "id": "soap-tyulpany",
@@ -6582,7 +6582,7 @@
       "#F9D3C8",
       "#E1D1C9"
     ],
-    "order": 370
+    "order": 380
   },
   {
     "id": "soap-serdechki",
@@ -7026,7 +7026,7 @@
       "#F9D9C7",
       "#DDD1CB"
     ],
-    "order": 380
+    "order": 330
   },
   {
     "id": "soap-raki",
