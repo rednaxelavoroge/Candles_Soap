@@ -6144,13 +6144,14 @@
   },
   {
     "id": "soap-chasy",
-    "slug": "chasy",
+    "slug": "chasy-so-strelkami",
     "title": "Часы со стрелками",
-    "article": "МЛ-27",
+    "article": "1010",
     "category": "soap",
     "tags": [
       "men",
-      "gift"
+      "gift",
+      "women"
     ],
     "images": [
       {
@@ -6159,20 +6160,6 @@
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAACwAQCdASoQAAwAA4BaJZwAAi1bopwAAP6whNI+OpNOxtjMcVMJDubY0EGPWmwTi3yNNgWQ2ZcG4p4++IIY+/UlCgAAAA==",
         "alt": "Часы со стрелками"
-      },
-      {
-        "src": "/catalog/soap/chasy-02.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAABQAgCdASoQABAAA4BaJYgCdAEDH55kQeVEIAAA/tOWjf+eY2M1WVdrleD/BgG/QLXw6jULqtLO5LA8I8YkLSu1dQWZ2LAAAAA=",
-        "alt": "Часы со стрелками — ракурс 2"
-      },
-      {
-        "src": "/catalog/soap/chasy-03.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAAAQAgCdASoQABAAA4BaJZACdADRaJoWuNSAAP7TlfNkUm62BFDq+SY7z9PGhcYh3Qsk7RsNW1EFpdzt8TB//8YGRGAgyAAA",
-        "alt": "Часы со стрелками — ракурс 3"
       },
       {
         "src": "/catalog/soap/chasy-04.webp",
@@ -6198,14 +6185,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Наручные часы с прорисованным ремешком и циферблатом: видны стрелки и деления. Мужские — стальные, женские — цветные, с узким ремешком.",
+    "description": "Наручные часы со стрелками",
     "specs": {},
     "tones": [
       "#F2E5EC",
       "#E4DED5",
       "#D6D3CE"
     ],
-    "order": 290
+    "order": 290,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-tabletki",
