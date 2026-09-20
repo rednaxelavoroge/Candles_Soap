@@ -4434,7 +4434,7 @@
       "#F9B7A6",
       "#F9ABA3"
     ],
-    "order": 560,
+    "order": 570,
     "videos": [],
     "related": []
   },
@@ -6987,7 +6987,7 @@
       "#ECDCD5",
       "#F9C7B9"
     ],
-    "order": 530
+    "order": 540
   },
   {
     "id": "soap-pivnoy-nabor",
@@ -7163,7 +7163,7 @@
       "#F9D8C4",
       "#E8CFBF"
     ],
-    "order": 540
+    "order": 550
   },
   {
     "id": "soap-tsyplenok-v-skorlupe",
@@ -7194,7 +7194,7 @@
       "#F5DAC9",
       "#E6D0C0"
     ],
-    "order": 550
+    "order": 560
   },
   {
     "id": "soap-tsvety-v-korobke",
@@ -7239,7 +7239,7 @@
       "#F9C6C6",
       "#E1D0CA"
     ],
-    "order": 580
+    "order": 590
   },
   {
     "id": "soap-desert-s-malinoy",
@@ -7329,7 +7329,7 @@
       "#CAE9B1",
       "#D4D6B9"
     ],
-    "order": 590
+    "order": 600
   },
   {
     "id": "soap-plate",
@@ -7380,7 +7380,7 @@
       "#AFCCF0",
       "#EACCD8"
     ],
-    "order": 600
+    "order": 610
   },
   {
     "id": "soap-pryaniki-novogodnie",
@@ -7438,7 +7438,7 @@
       "#F1E09A",
       "#F2CBCC"
     ],
-    "order": 610
+    "order": 620
   },
   {
     "id": "soap-serdtse-i-varezhka",
@@ -7496,7 +7496,7 @@
       "#99F2E9",
       "#AADEE4"
     ],
-    "order": 620
+    "order": 630
   },
   {
     "id": "soap-snezhinki-pechene",
@@ -8061,7 +8061,7 @@
       "#CDE0F0",
       "#CBD5DE"
     ],
-    "order": 570,
+    "order": 580,
     "videos": [],
     "related": []
   },
@@ -8890,7 +8890,7 @@
       "#EEDCC8",
       "#DFD2C0"
     ],
-    "order": 630,
+    "order": 530,
     "videos": [],
     "related": []
   },
