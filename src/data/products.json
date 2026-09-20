@@ -7036,9 +7036,9 @@
   },
   {
     "id": "soap-raki",
-    "slug": "raki",
+    "slug": "rak",
     "title": "Рак",
-    "article": "МЛ-50",
+    "article": "1093",
     "category": "soap",
     "tags": [
       "men",
@@ -7051,18 +7051,27 @@
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAQCdASoQABAAA4BaJbACdADWkZo44wAA/dJEuRb257Q3syTtoGUL7NV6gbm/9Ol9NMre1w4Ya8o07tLXSawekUhHy0blMWV3D54QQAA=",
         "alt": "Рак"
+      },
+      {
+        "src": "/catalog/soap/rak-1789927731593-1.webp",
+        "width": 1400,
+        "height": 1400,
+        "blurDataURL": "data:image/webp;base64,UklGRnICAABXRUJQVlA4WAoAAAAgAAAADwAADwAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDgghAAAAFACAJ0BKhAAEAADgFolsAJ0BiwWagVXI9r04AD+jxR2VEWDd/XiMPwX9i9yxn2Pzyn5eyNbJUNoFOhWkli7k5DX4f4QZgADZg/IhrtmwgMaQIdld1rJzHGQ5YZtEt0NGR+AQR8WQ2fTtGe7MkmNGZEE0j8jDDx4umqm+stKtBJ9i84AAA==",
+        "alt": "Рак"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Пара варёных раков на овальном блюде: клешни и панцирь прорисованы до сегментов. Цвет набирается плотный, кирпичный.",
+    "description": "Рак . Отличный подарок для мужчин в наборе с пивом",
     "specs": {},
     "tones": [
       "#F9B5A2",
       "#F9D0BA",
       "#EACFBF"
     ],
-    "order": 260
+    "order": 260,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-utyata",
