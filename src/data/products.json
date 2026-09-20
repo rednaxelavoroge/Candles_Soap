@@ -6296,7 +6296,7 @@
     "id": "soap-buterbrod-s-ikroy",
     "slug": "buterbrod-s-ikroy",
     "title": "Бутерброд с красной икрой",
-    "article": "МЛ-29",
+    "article": "1100",
     "category": "soap",
     "tags": [
       "food",
@@ -6320,14 +6320,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Кусок хлеба с маслом и красной икрой: каждая икринка отливается отдельно и укладывается вручную. Мякиш прорисован по срезу.",
+    "description": "Кусок хлеба с маслом и красной икрой",
     "specs": {},
     "tones": [
       "#F9B69A",
       "#F8DAC0",
       "#D6D3CD"
     ],
-    "order": 240
+    "order": 240,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-globus",
