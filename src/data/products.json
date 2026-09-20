@@ -5259,7 +5259,7 @@
       "#DFDFD9",
       "#DAD2CC"
     ],
-    "order": 190
+    "order": 200
   },
   {
     "id": "soap-morskie-kruglyshi",
@@ -5303,7 +5303,7 @@
       "#C4E5EF",
       "#D8D3C9"
     ],
-    "order": 200
+    "order": 210
   },
   {
     "id": "soap-morskoy-brusok",
@@ -5354,7 +5354,7 @@
       "#D7E0E7",
       "#D0D4D6"
     ],
-    "order": 210
+    "order": 220
   },
   {
     "id": "soap-morskaya-zvezda",
@@ -5398,7 +5398,7 @@
       "#E3DEDB",
       "#DED1CA"
     ],
-    "order": 220
+    "order": 230
   },
   {
     "id": "soap-desertnyy-nabor-na-doske",
@@ -5700,7 +5700,7 @@
       "#F3DBC7",
       "#E4D1BC"
     ],
-    "order": 230
+    "order": 240
   },
   {
     "id": "soap-konfety",
@@ -5745,7 +5745,7 @@
       "#F3D9DA",
       "#DED1CF"
     ],
-    "order": 240,
+    "order": 190,
     "videos": [],
     "related": []
   },
