@@ -9440,7 +9440,7 @@
       "#EADCDA",
       "#D7D3CE"
     ],
-    "order": 1090
+    "order": 1100
   },
   {
     "id": "soap-vosmoe-marta",
@@ -9492,7 +9492,7 @@
       "#E7DDDB",
       "#D8D2CE"
     ],
-    "order": 1100
+    "order": 1110
   },
   {
     "id": "soap-morozhenoe-v-kremanke",
@@ -9561,7 +9561,7 @@
       "#E7E680",
       "#D5E14A"
     ],
-    "order": 1110
+    "order": 1120
   },
   {
     "id": "soap-malina-v-kremanke",
@@ -9630,7 +9630,7 @@
       "#F9D7B0",
       "#D6D3CF"
     ],
-    "order": 1120
+    "order": 1130
   },
   {
     "id": "soap-serdtse-malinovoe",
@@ -9660,7 +9660,7 @@
       "#F9B2B4",
       "#DFD1C8"
     ],
-    "order": 1130
+    "order": 1140
   },
   {
     "id": "gypsum-rakushka",
@@ -10878,7 +10878,7 @@
       "#F2DBCF",
       "#DDD2C9"
     ],
-    "order": 1140,
+    "order": 1090,
     "videos": [],
     "related": []
   }
