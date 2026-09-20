@@ -6471,7 +6471,7 @@
     "id": "soap-meduzy",
     "slug": "meduzy",
     "title": "Медузы",
-    "article": "МЛ-34",
+    "article": "1002",
     "category": "soap",
     "tags": [
       "sea",
@@ -6488,14 +6488,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Овал из прозрачной синей основы, внутри — две медузы с длинными щупальцами. Смотреть лучше на просвет: тогда видно, что щупальца уходят в глубину слоя.",
+    "description": "Медузы особенно эффектно смотрятся на прозрачном фоне",
     "specs": {},
     "tones": [
       "#ADD8F0",
       "#EADCD9",
       "#DCD2CB"
     ],
-    "order": 290
+    "order": 290,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-lotosy",
