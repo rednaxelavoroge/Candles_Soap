@@ -5736,7 +5736,7 @@
     "id": "soap-banka-s-varenem",
     "slug": "banka-s-varenem",
     "title": "Банка варенья",
-    "article": "МЛ-18",
+    "article": "1075",
     "category": "soap",
     "tags": [
       "food",
@@ -5744,18 +5744,18 @@
     ],
     "images": [
       {
-        "src": "/catalog/soap/banka-s-varenem-01.webp",
-        "width": 1600,
-        "height": 1200,
-        "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAACQAQCdASoQAAwAA4BaJagCdAEFlgAA/u6Dd/UOsUDuSu5PEnevMzwNw92h6m+Um+VcYxzCwiAEYWS1WDZY2LGE0k6O9Lqk09UQAA==",
-        "alt": "Банка варенья"
-      },
-      {
         "src": "/catalog/soap/banka-s-varenem-02.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAQAgCdASoQABAAA4BaJagCdADw2OWkxqAAAP7unw+NAHjS4t+ky5lnyApLg14HE7fOmmq5ipaMEjtRQnZUCB5+Y3H+5thEuACONVJj0aa4ElbdUEFAAA==",
         "alt": "Банка варенья — ракурс 2"
+      },
+      {
+        "src": "/catalog/soap/banka-s-varenem-01.webp",
+        "width": 1600,
+        "height": 1200,
+        "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAACQAQCdASoQAAwAA4BaJagCdAEFlgAA/u6Dd/UOsUDuSu5PEnevMzwNw92h6m+Um+VcYxzCwiAEYWS1WDZY2LGE0k6O9Lqk09UQAA==",
+        "alt": "Банка варенья"
       },
       {
         "src": "/catalog/soap/banka-s-varenem-03.webp",
@@ -5767,14 +5767,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Баночка с ягодами под кружевной крышкой, перевязанная бечёвкой — как заготовка из погреба. Ягоды видно сквозь стекло основы.",
+    "description": "Баночка с ягодами под кружевной крышкой, перевязанная бечёвкой — как заготовка из погреба. Ягоды видно сквозь стекло ",
     "specs": {},
     "tones": [
       "#F9BAA0",
       "#F9B399",
       "#F9CAB9"
     ],
-    "order": 170
+    "order": 170,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-laym",
