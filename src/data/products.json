@@ -8630,7 +8630,7 @@
       "#E9DDCD",
       "#E4D0C8"
     ],
-    "order": 890
+    "order": 900
   },
   {
     "id": "soap-konvert-s-serdechkami",
@@ -8667,7 +8667,7 @@
       "#E6DDDB",
       "#DFD1C9"
     ],
-    "order": 900
+    "order": 910
   },
   {
     "id": "soap-kolyaska",
@@ -8697,7 +8697,7 @@
       "#E1DEDB",
       "#D9D3C8"
     ],
-    "order": 910
+    "order": 920
   },
   {
     "id": "soap-serdtse-s-serdechkami",
@@ -8734,7 +8734,7 @@
       "#EFDBD3",
       "#E0D1C7"
     ],
-    "order": 920
+    "order": 930
   },
   {
     "id": "soap-panno-s-serdtsem",
@@ -8772,7 +8772,7 @@
       "#F9C2D7",
       "#E5CED4"
     ],
-    "order": 930
+    "order": 940
   },
   {
     "id": "soap-guby",
@@ -8837,7 +8837,7 @@
       "#F0DBD1",
       "#DAD3C9"
     ],
-    "order": 940
+    "order": 950
   },
   {
     "id": "soap-kryshka-banki",
@@ -8873,7 +8873,7 @@
       "#EEDCC8",
       "#DFD2C0"
     ],
-    "order": 950
+    "order": 960
   },
   {
     "id": "soap-elochki-s-sharikami",
@@ -8910,7 +8910,7 @@
       "#BFF093",
       "#DDD795"
     ],
-    "order": 960
+    "order": 970
   },
   {
     "id": "soap-elka-s-sharami-bezhevaya",
@@ -9267,7 +9267,7 @@
       "#E2DED8",
       "#D6D3CE"
     ],
-    "order": 980
+    "order": 890
   },
   {
     "id": "soap-ananas",
@@ -9327,7 +9327,7 @@
       "#E2DED9",
       "#D6D3CE"
     ],
-    "order": 970
+    "order": 980
   },
   {
     "id": "soap-kusok-piroga",
