@@ -6679,7 +6679,7 @@
       "#EFDBD3",
       "#DDD2C8"
     ],
-    "order": 450
+    "order": 460
   },
   {
     "id": "soap-mishka-s-sharami",
@@ -6716,7 +6716,7 @@
       "#EBDCD7",
       "#DBD2C9"
     ],
-    "order": 460
+    "order": 470
   },
   {
     "id": "soap-zaytsy",
@@ -6760,7 +6760,7 @@
       "#F0DBCC",
       "#DDD2C7"
     ],
-    "order": 470
+    "order": 480
   },
   {
     "id": "soap-buket-v-pakete",
@@ -6791,7 +6791,7 @@
       "#F9D9C4",
       "#E1D1C5"
     ],
-    "order": 480
+    "order": 490
   },
   {
     "id": "soap-shlepanets",
@@ -6821,7 +6821,7 @@
       "#E4DED3",
       "#CFD5D5"
     ],
-    "order": 490
+    "order": 500
   },
   {
     "id": "soap-koshelek",
@@ -6888,7 +6888,7 @@
       "#E9DDD5",
       "#E1D1C5"
     ],
-    "order": 440
+    "order": 450
   },
   {
     "id": "soap-rozy-v-shkatulke",
@@ -6933,7 +6933,7 @@
       "#ECDCD5",
       "#F9C7B9"
     ],
-    "order": 500
+    "order": 510
   },
   {
     "id": "soap-pivnoy-nabor",
@@ -7024,7 +7024,7 @@
       "#F9D9C7",
       "#DDD1CB"
     ],
-    "order": 510
+    "order": 520
   },
   {
     "id": "soap-raki",
@@ -7054,7 +7054,7 @@
       "#F9D0BA",
       "#EACFBF"
     ],
-    "order": 520
+    "order": 530
   },
   {
     "id": "soap-utyata",
@@ -7098,7 +7098,7 @@
       "#F9D8C4",
       "#E8CFBF"
     ],
-    "order": 530
+    "order": 540
   },
   {
     "id": "soap-tsyplenok-v-skorlupe",
@@ -9513,7 +9513,7 @@
       "#F9C3A6",
       "#EACFBF"
     ],
-    "order": 540
+    "order": 440
   },
   {
     "id": "soap-zmeya",
