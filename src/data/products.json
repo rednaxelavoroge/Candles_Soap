@@ -8719,7 +8719,7 @@
       "#E1DEDB",
       "#D9D3C8"
     ],
-    "order": 920
+    "order": 930
   },
   {
     "id": "soap-serdtse-s-serdechkami",
@@ -8756,7 +8756,7 @@
       "#EFDBD3",
       "#E0D1C7"
     ],
-    "order": 930
+    "order": 940
   },
   {
     "id": "soap-panno-s-serdtsem",
@@ -8794,7 +8794,7 @@
       "#F9C2D7",
       "#E5CED4"
     ],
-    "order": 940
+    "order": 950
   },
   {
     "id": "soap-guby",
@@ -8859,7 +8859,7 @@
       "#F0DBD1",
       "#DAD3C9"
     ],
-    "order": 950
+    "order": 960
   },
   {
     "id": "soap-kryshka-banki",
@@ -8895,7 +8895,7 @@
       "#EEDCC8",
       "#DFD2C0"
     ],
-    "order": 960,
+    "order": 920,
     "videos": [],
     "related": []
   },
