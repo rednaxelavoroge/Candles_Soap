@@ -4924,46 +4924,32 @@
   },
   {
     "id": "soap-morskoe-dno",
-    "slug": "morskoe-dno",
-    "title": "Морское дно",
-    "article": "МЛ-01",
+    "slug": "morskoy-nabor",
+    "title": "Набор морской",
+    "article": "1112",
     "category": "soap",
     "tags": [
       "sea"
     ],
     "images": [
       {
-        "src": "/catalog/soap/morskoe-dno-01.webp",
-        "width": 1600,
-        "height": 1200,
-        "blurDataURL": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAQCdASoQAAwAA4BaJZgCdAC9KvPzzIQA/e6y6A0C6l6U/O0BG6RK1XVPwRVyDkNXn2A0T3iR6PVXYwGwoGj+FWsyjKKAYj/GGtkIgAA=",
-        "alt": "Круглое синее мыло с раковинами внутри"
+        "src": "/catalog/soap/morskoy-nabor-1789929162027-1.webp",
+        "width": 1400,
+        "height": 1050,
+        "blurDataURL": "data:image/webp;base64,UklGRmoCAABXRUJQVlA4WAoAAAAgAAAADwAACwAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggfAAAAHACAJ0BKhAADAADgFolkAJ0Bps+bJnVGYfMxAAA/fAxFzXac/0Qa5Lon1mfWtTTWid27VlrV0+Wiec6fJnGX/JT6gq5Ya71rAZ0rvRroW3hqlRB7lq6fy4MKTWENbx+gNJ2RP+3eZZP+ZIwsyzUC6rhT5W7+C3LJvwhoAA=",
+        "alt": "Набор морской"
       },
       {
-        "src": "/catalog/soap/morskoe-dno-02.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAAAQAgCdASoQABAAA4BaJYgCdAENhA01VMAAAPxkxpSTL/eoaO7Ah94IxHJZwGBrhfGtDaLlv1EGozjuw/zmAQDTMdLVZyKdByEkSUryA2/DFuZFY5ctIf/q4NYP1fbxvNNAjDVsAAA=",
-        "alt": "Мыло «Морское дно» на голубой стружке"
-      },
-      {
-        "src": "/catalog/soap/morskoe-dno-03.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAABwAgCdASoQABAAA4BaJbACdH8AFwEpYvkaVzEAAP7e6Iwu08r2QH4M1r1MuOfNyEN08436blSHQUgx3FDmxcLqgXeU+Og26BFfqNydtwJXFjJjTsYvdAAA",
-        "alt": "Мыло «Морское дно», вид под углом"
-      },
-      {
-        "src": "/catalog/soap/morskoe-dno-04.webp",
-        "width": 1600,
-        "height": 1200,
-        "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAACQAQCdASoQAAwAA4BaJQBOgBm1EkgA/GDV3H5/zs3N1vJM0SUec5jM1V+wRIkqy/ZRCIM9rEY+RDNDxZbTyDDGxBeaOMQ9AyeAAA==",
-        "alt": "Мыло «Морское дно» с песчаными разводами"
+        "src": "/catalog/soap/morskoy-nabor-1789929162029-2.webp",
+        "width": 1400,
+        "height": 1050,
+        "blurDataURL": "data:image/webp;base64,UklGRmwCAABXRUJQVlA4WAoAAAAgAAAADwAACwAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggfgAAALACAJ0BKhAADAADgFoliAJ0B3At4zs8VGia4zymQAD43Oyu+VHsZ8rg322li0PhybCA5eILcEFBM6kydUxQwuuLkFWz68Hg8NJ9sJsn8jwZG/DR+AM9sTnyqa1hKfH8cjrpNZnFwABcjNt5GTyCW6aZFTHBjrZ1OMuDmtPAAA==",
+        "alt": "Набор морской"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Круглое мыло цвета глубокой воды: внутри прозрачного слоя — настоящие створки раковин и светлые песчаные разводы. Смотрится как заглянуть в воду сверху. Каждая заливка получается своей: раковины ложатся по-разному, и двух одинаковых кусков не бывает.",
+    "description": "Набор морской из 2 предметов",
     "specs": {
       "size": "8 см в диаметре",
       "scent": "Морская свежесть",
@@ -4975,7 +4961,9 @@
       "#BFE0F0",
       "#C7D6DB"
     ],
-    "order": 440
+    "order": 440,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-pryanichnyy-nabor",
