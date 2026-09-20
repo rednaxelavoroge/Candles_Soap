@@ -6301,7 +6301,7 @@
       "#E2DED8",
       "#D7D3CC"
     ],
-    "order": 330
+    "order": 340
   },
   {
     "id": "soap-buterbrod-s-ikroy",
@@ -6377,7 +6377,7 @@
       "#E0DFD8",
       "#D5D3CF"
     ],
-    "order": 340
+    "order": 350
   },
   {
     "id": "soap-planeta-zemlya",
@@ -6414,7 +6414,7 @@
       "#ECDCD0",
       "#DFD1C6"
     ],
-    "order": 350
+    "order": 360
   },
   {
     "id": "soap-rakushka-yantarnaya",
@@ -6444,7 +6444,7 @@
       "#E6DDD5",
       "#D6D3CC"
     ],
-    "order": 360
+    "order": 370
   },
   {
     "id": "soap-lavanda",
@@ -8500,7 +8500,7 @@
       "#E6DDD9",
       "#DBD2CB"
     ],
-    "order": 370
+    "order": 330
   },
   {
     "id": "soap-kniga-s-kristallami",
