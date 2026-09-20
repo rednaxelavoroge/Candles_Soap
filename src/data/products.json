@@ -5259,7 +5259,7 @@
       "#DFDFD9",
       "#DAD2CC"
     ],
-    "order": 610
+    "order": 620
   },
   {
     "id": "soap-morskie-kruglyshi",
@@ -5884,7 +5884,7 @@
       "#EDE290",
       "#F9C3B8"
     ],
-    "order": 620
+    "order": 630
   },
   {
     "id": "soap-beze-s-yagodami",
@@ -7349,7 +7349,7 @@
       "#AFCCF0",
       "#EACCD8"
     ],
-    "order": 570
+    "order": 580
   },
   {
     "id": "soap-pryaniki-novogodnie",
@@ -7407,7 +7407,7 @@
       "#F1E09A",
       "#F2CBCC"
     ],
-    "order": 580
+    "order": 590
   },
   {
     "id": "soap-serdtse-i-varezhka",
@@ -7465,7 +7465,7 @@
       "#99F2E9",
       "#AADEE4"
     ],
-    "order": 590
+    "order": 600
   },
   {
     "id": "soap-snezhinki-pechene",
@@ -7495,7 +7495,7 @@
       "#F4DAD0",
       "#E1D0CC"
     ],
-    "order": 600
+    "order": 610
   },
   {
     "id": "soap-vaflya-s-dzhemom",
@@ -7531,7 +7531,7 @@
       "#F9C6A6",
       "#E6CFCA"
     ],
-    "order": 630
+    "order": 640
   },
   {
     "id": "soap-soska",
@@ -7561,7 +7561,7 @@
       "#A9EAF0",
       "#D3D3D4"
     ],
-    "order": 640
+    "order": 650
   },
   {
     "id": "soap-barelef-materinstvo",
@@ -7591,7 +7591,7 @@
       "#E0DDEA",
       "#D6D2D9"
     ],
-    "order": 650
+    "order": 660
   },
   {
     "id": "soap-butylka-i-ryumka",
@@ -7734,7 +7734,7 @@
       "#F9CCE7",
       "#DCD1D4"
     ],
-    "order": 660
+    "order": 670
   },
   {
     "id": "soap-balerina",
@@ -8500,7 +8500,7 @@
       "#E6DDD9",
       "#DBD2CB"
     ],
-    "order": 670
+    "order": 570
   },
   {
     "id": "soap-kniga-s-kristallami",
