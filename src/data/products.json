@@ -5706,7 +5706,7 @@
     "id": "soap-konfety",
     "slug": "konfety",
     "title": "Конфета",
-    "article": "МЛ-17",
+    "article": "1090",
     "category": "soap",
     "tags": [
       "kids",
@@ -5738,14 +5738,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Мыло-конфета в скрученном фантике: складки фантика прорисованы по краям. Отливается розовой, голубой и сине-фиолетовой, упаковывается в прозрачную плёнку.",
+    "description": "Мыло конфета",
     "specs": {},
     "tones": [
       "#F9B1DF",
       "#F3D9DA",
       "#DED1CF"
     ],
-    "order": 240
+    "order": 240,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-banka-s-varenem",
