@@ -6086,7 +6086,7 @@
       "#F4DBC3",
       "#DDD2C3"
     ],
-    "order": 230
+    "order": 240
   },
   {
     "id": "soap-prozrachnoe-s-tsvetami",
@@ -6137,7 +6137,7 @@
       "#E2DED8",
       "#DCD2C9"
     ],
-    "order": 240
+    "order": 250
   },
   {
     "id": "soap-kniga-s-tyulpanami",
@@ -6290,7 +6290,7 @@
       "#E2DED8",
       "#D7D3CC"
     ],
-    "order": 250
+    "order": 260
   },
   {
     "id": "soap-buterbrod-s-ikroy",
@@ -6327,7 +6327,7 @@
       "#F8DAC0",
       "#D6D3CD"
     ],
-    "order": 260
+    "order": 230
   },
   {
     "id": "soap-globus",
