@@ -4975,7 +4975,7 @@
       "#BFE0F0",
       "#C7D6DB"
     ],
-    "order": 160
+    "order": 220
   },
   {
     "id": "soap-pryanichnyy-nabor",
@@ -5078,7 +5078,7 @@
       "#F9C29B",
       "#F9C7A8"
     ],
-    "order": 220,
+    "order": 210,
     "videos": [],
     "related": []
   },
@@ -5303,7 +5303,7 @@
       "#C4E5EF",
       "#D8D3C9"
     ],
-    "order": 170
+    "order": 160
   },
   {
     "id": "soap-morskoy-brusok",
@@ -5354,7 +5354,7 @@
       "#D7E0E7",
       "#D0D4D6"
     ],
-    "order": 180
+    "order": 170
   },
   {
     "id": "soap-morskaya-zvezda",
@@ -5398,7 +5398,7 @@
       "#E3DEDB",
       "#DED1CA"
     ],
-    "order": 190
+    "order": 180
   },
   {
     "id": "soap-desertnyy-nabor-na-doske",
@@ -5700,7 +5700,7 @@
       "#F3DBC7",
       "#E4D1BC"
     ],
-    "order": 200
+    "order": 190
   },
   {
     "id": "soap-konfety",
@@ -5823,7 +5823,7 @@
       "#EBDEC4",
       "#E0D1C5"
     ],
-    "order": 210
+    "order": 200
   },
   {
     "id": "soap-tsvetochnoe-panno",
