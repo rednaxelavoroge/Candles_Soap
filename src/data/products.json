@@ -6859,9 +6859,9 @@
   },
   {
     "id": "soap-ryby",
-    "slug": "ryby",
-    "title": "Рыбы",
-    "article": "МЛ-46",
+    "slug": "vobla",
+    "title": "Вобла",
+    "article": "1092",
     "category": "soap",
     "tags": [
       "men",
@@ -6885,14 +6885,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Рыба с прорисованной чешуёй и плавниками, лежит на овальном блюде. Отливается серебристой и медной — цвет набирается по чешуе, поэтому блеск идёт волной.",
+    "description": "Вобла отличное дополнение к набору мужскому с пивом",
     "specs": {},
     "tones": [
       "#F6E6D9",
       "#E9DDD5",
       "#E1D1C5"
     ],
-    "order": 250
+    "order": 250,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-rozy-v-shkatulke",
