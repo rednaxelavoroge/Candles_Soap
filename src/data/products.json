@@ -9396,7 +9396,7 @@
     "id": "soap-arbuz",
     "slug": "arbuz",
     "title": "Долька арбуза",
-    "article": "МЛ-106",
+    "article": "1146",
     "category": "soap",
     "tags": [
       "food",
@@ -9420,14 +9420,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Долька арбуза с чёрными косточками и зелёной коркой. Косточки ставятся по одной, поэтому рисунок у каждой дольки свой.",
+    "description": "Долька арбуза с чёрными косточками и зелёной коркой",
     "specs": {},
     "tones": [
       "#F9B6B0",
       "#F2DBCD",
       "#DAD3C9"
     ],
-    "order": 350
+    "order": 350,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-banka-varenya",
