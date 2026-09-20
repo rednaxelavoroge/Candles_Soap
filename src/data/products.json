@@ -9234,8 +9234,8 @@
   },
   {
     "id": "soap-ammonit",
-    "slug": "ammonit",
-    "title": "Аммонит",
+    "slug": "rakushka-spiralnaya",
+    "title": "Ракушка спиральная",
     "article": "МЛ-102",
     "category": "soap",
     "tags": [
@@ -9260,14 +9260,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Спираль аммонита с медным напылением по рельефу: витки уходят к центру и становятся мельче. Напыление наносится кистью.",
+    "description": "Ракушка спиральная",
     "specs": {},
     "tones": [
       "#F9BF9E",
       "#E2DED8",
       "#D6D3CE"
     ],
-    "order": 350
+    "order": 350,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-ananas",
