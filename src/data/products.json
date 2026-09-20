@@ -8992,7 +8992,7 @@
       "#F9D6BA",
       "#EDCEBC"
     ],
-    "order": 1000
+    "order": 1010
   },
   {
     "id": "soap-shapki-i-varezhki",
@@ -9079,7 +9079,7 @@
       "#E5DED4",
       "#DDD2C8"
     ],
-    "order": 1020
+    "order": 1030
   },
   {
     "id": "soap-snezhinki",
@@ -9115,7 +9115,7 @@
       "#C9E5E0",
       "#DED2C6"
     ],
-    "order": 1030
+    "order": 1040
   },
   {
     "id": "soap-novogodniy-nabor-krasnyy",
@@ -9180,7 +9180,7 @@
       "#F9B09C",
       "#F9A99C"
     ],
-    "order": 1040
+    "order": 1050
   },
   {
     "id": "soap-ded-moroz",
@@ -9210,7 +9210,7 @@
       "#F9B3A4",
       "#F4CCB9"
     ],
-    "order": 1050
+    "order": 1060
   },
   {
     "id": "soap-mandarin-i-tykva",
@@ -9240,7 +9240,7 @@
       "#E1E788",
       "#F9C4A4"
     ],
-    "order": 1060
+    "order": 1070
   },
   {
     "id": "soap-ammonit",
@@ -9277,7 +9277,7 @@
       "#E2DED8",
       "#D6D3CE"
     ],
-    "order": 1070
+    "order": 1080
   },
   {
     "id": "soap-ananas",
@@ -9307,7 +9307,7 @@
       "#E3DED9",
       "#D7D3CF"
     ],
-    "order": 1080
+    "order": 1090
   },
   {
     "id": "soap-ponchik",
@@ -9373,7 +9373,7 @@
       "#E9DCD6",
       "#D6D3CE"
     ],
-    "order": 1010
+    "order": 1020
   },
   {
     "id": "soap-arbuz",
@@ -9410,7 +9410,7 @@
       "#F2DBCD",
       "#DAD3C9"
     ],
-    "order": 1090
+    "order": 1100
   },
   {
     "id": "soap-banka-varenya",
@@ -9440,7 +9440,7 @@
       "#EADCDA",
       "#D7D3CE"
     ],
-    "order": 1100
+    "order": 1000
   },
   {
     "id": "soap-vosmoe-marta",
