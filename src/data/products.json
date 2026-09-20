@@ -6451,7 +6451,7 @@
       "#E6DDD5",
       "#D6D3CC"
     ],
-    "order": 380
+    "order": 390
   },
   {
     "id": "soap-lavanda",
@@ -6481,7 +6481,7 @@
       "#E6E0BC",
       "#DDD2C9"
     ],
-    "order": 390
+    "order": 400
   },
   {
     "id": "soap-meduzy",
@@ -6511,7 +6511,7 @@
       "#EADCD9",
       "#DCD2CB"
     ],
-    "order": 400
+    "order": 410
   },
   {
     "id": "soap-lotosy",
@@ -6541,7 +6541,7 @@
       "#F0D8EC",
       "#DFD1CA"
     ],
-    "order": 410
+    "order": 420
   },
   {
     "id": "soap-zvezda-s-korallom",
@@ -6571,7 +6571,7 @@
       "#E7DDD4",
       "#DDD2CA"
     ],
-    "order": 420
+    "order": 430
   },
   {
     "id": "soap-tyulpany",
@@ -6602,7 +6602,7 @@
       "#F9D3C8",
       "#E1D1C9"
     ],
-    "order": 430
+    "order": 440
   },
   {
     "id": "soap-serdechki",
@@ -6632,7 +6632,7 @@
       "#ECE764",
       "#F2D943"
     ],
-    "order": 440
+    "order": 450
   },
   {
     "id": "soap-vaflya-s-yagodoy",
@@ -6668,7 +6668,7 @@
       "#F9C4A5",
       "#E3D0C3"
     ],
-    "order": 460
+    "order": 470
   },
   {
     "id": "soap-tsvety-v-kashpo",
@@ -6706,7 +6706,7 @@
       "#EFDBD3",
       "#DDD2C8"
     ],
-    "order": 480
+    "order": 490
   },
   {
     "id": "soap-mishka-s-sharami",
@@ -6743,7 +6743,7 @@
       "#EBDCD7",
       "#DBD2C9"
     ],
-    "order": 490
+    "order": 500
   },
   {
     "id": "soap-zaytsy",
@@ -6787,7 +6787,7 @@
       "#F0DBCC",
       "#DDD2C7"
     ],
-    "order": 500
+    "order": 510
   },
   {
     "id": "soap-buket-v-pakete",
@@ -6818,7 +6818,7 @@
       "#F9D9C4",
       "#E1D1C5"
     ],
-    "order": 510
+    "order": 520
   },
   {
     "id": "soap-shlepanets",
@@ -6848,7 +6848,7 @@
       "#E4DED3",
       "#CFD5D5"
     ],
-    "order": 520
+    "order": 530
   },
   {
     "id": "soap-koshelek",
@@ -6878,7 +6878,7 @@
       "#F3DBC9",
       "#E2D1C5"
     ],
-    "order": 450
+    "order": 460
   },
   {
     "id": "soap-ryby",
@@ -6915,7 +6915,7 @@
       "#E9DDD5",
       "#E1D1C5"
     ],
-    "order": 470
+    "order": 480
   },
   {
     "id": "soap-rozy-v-shkatulke",
@@ -10878,7 +10878,7 @@
       "#F2DBCF",
       "#DDD2C9"
     ],
-    "order": 530,
+    "order": 380,
     "videos": [],
     "related": []
   }
