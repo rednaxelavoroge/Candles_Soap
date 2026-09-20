@@ -8244,7 +8244,7 @@
     "id": "soap-rybki-v-more",
     "slug": "rybki-v-more",
     "title": "Рыбки в море",
-    "article": "МЛ-78",
+    "article": "1003",
     "category": "soap",
     "tags": [
       "sea",
@@ -8261,14 +8261,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Овал с рыбами и водорослями на синем фоне, в белой рамке-борте. Рыбы раскрашиваются по рельефу, каждая своим цветом.",
+    "description": "Рыбки в море",
     "specs": {},
     "tones": [
       "#ABD7F0",
       "#EADEC7",
       "#C3D7E2"
     ],
-    "order": 740
+    "order": 740,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-elochnye-shary",
