@@ -8929,7 +8929,7 @@
       "#BFF093",
       "#DDD795"
     ],
-    "order": 970
+    "order": 980
   },
   {
     "id": "soap-elka-s-sharami-bezhevaya",
@@ -8966,7 +8966,7 @@
       "#F9C9AF",
       "#F2CEB1"
     ],
-    "order": 1000
+    "order": 1010
   },
   {
     "id": "soap-novogodnie-barelefy",
@@ -9031,7 +9031,7 @@
       "#F9D6BA",
       "#EDCEBC"
     ],
-    "order": 1010
+    "order": 1020
   },
   {
     "id": "soap-shapki-i-varezhki",
@@ -9348,7 +9348,7 @@
       "#E2DED9",
       "#D6D3CE"
     ],
-    "order": 980
+    "order": 990
   },
   {
     "id": "soap-kusok-piroga",
@@ -9384,7 +9384,7 @@
       "#E9DCD6",
       "#D6D3CE"
     ],
-    "order": 1020,
+    "order": 970,
     "videos": [],
     "related": []
   },
@@ -9423,7 +9423,7 @@
       "#F2DBCD",
       "#DAD3C9"
     ],
-    "order": 990
+    "order": 1000
   },
   {
     "id": "soap-banka-varenya",
