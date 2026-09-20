@@ -7000,7 +7000,7 @@
     "id": "soap-yaichnitsa",
     "slug": "yaichnitsa",
     "title": "Яичница",
-    "article": "МЛ-49",
+    "article": "1085",
     "category": "soap",
     "tags": [
       "food",
@@ -7025,14 +7025,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Глазунья с растёкшимся белком и выпуклым жёлтым желтком, на тарелке. Белок наливается свободно, поэтому форма у каждой своя.",
+    "description": "Глазунья с растёкшимся белком и выпуклым жёлтым желтком",
     "specs": {},
     "tones": [
       "#F9D1AC",
       "#F9D9C7",
       "#DDD1CB"
     ],
-    "order": 270
+    "order": 270,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-raki",
