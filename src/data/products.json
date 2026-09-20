@@ -5030,7 +5030,7 @@
       "#F2DAD3",
       "#E1D0CD"
     ],
-    "order": 1070
+    "order": 1060
   },
   {
     "id": "soap-konyak-i-stopka",
@@ -5136,7 +5136,7 @@
       "#A2E4F0",
       "#C9D6D8"
     ],
-    "order": 1120
+    "order": 1110
   },
   {
     "id": "soap-kniga-s-pionami",
@@ -8067,7 +8067,7 @@
       "#E9DDCF",
       "#D7D3C9"
     ],
-    "order": 740
+    "order": 750
   },
   {
     "id": "soap-tyulpany-v-korobke",
@@ -8119,7 +8119,7 @@
       "#F9D2DD",
       "#E3CFD3"
     ],
-    "order": 750
+    "order": 760
   },
   {
     "id": "soap-pryanichnyy-domik",
@@ -8156,7 +8156,7 @@
       "#F7D8D4",
       "#DCD1D2"
     ],
-    "order": 760
+    "order": 770
   },
   {
     "id": "soap-assorti-figurok",
@@ -8193,7 +8193,7 @@
       "#F7D9CB",
       "#DED1CA"
     ],
-    "order": 770
+    "order": 780
   },
   {
     "id": "soap-serdtsa-v-korobke",
@@ -8238,7 +8238,7 @@
       "#EDDEBF",
       "#D1D4D4"
     ],
-    "order": 780
+    "order": 790
   },
   {
     "id": "soap-rybki-v-more",
@@ -8268,7 +8268,7 @@
       "#EADEC7",
       "#C3D7E2"
     ],
-    "order": 790
+    "order": 740
   },
   {
     "id": "soap-elochnye-shary",
@@ -8927,7 +8927,7 @@
       "#F9C9AF",
       "#F2CEB1"
     ],
-    "order": 1000
+    "order": 990
   },
   {
     "id": "soap-novogodnie-barelefy",
@@ -8992,7 +8992,7 @@
       "#F9D6BA",
       "#EDCEBC"
     ],
-    "order": 1010
+    "order": 1000
   },
   {
     "id": "soap-shapki-i-varezhki",
@@ -9079,7 +9079,7 @@
       "#E5DED4",
       "#DDD2C8"
     ],
-    "order": 1030
+    "order": 1020
   },
   {
     "id": "soap-snezhinki",
@@ -9115,7 +9115,7 @@
       "#C9E5E0",
       "#DED2C6"
     ],
-    "order": 1040
+    "order": 1030
   },
   {
     "id": "soap-novogodniy-nabor-krasnyy",
@@ -9180,7 +9180,7 @@
       "#F9B09C",
       "#F9A99C"
     ],
-    "order": 1050
+    "order": 1040
   },
   {
     "id": "soap-ded-moroz",
@@ -9210,7 +9210,7 @@
       "#F9B3A4",
       "#F4CCB9"
     ],
-    "order": 1060
+    "order": 1050
   },
   {
     "id": "soap-ammonit",
@@ -9247,7 +9247,7 @@
       "#E2DED8",
       "#D6D3CE"
     ],
-    "order": 1080
+    "order": 1070
   },
   {
     "id": "soap-ananas",
@@ -9277,7 +9277,7 @@
       "#E3DED9",
       "#D7D3CF"
     ],
-    "order": 1090
+    "order": 1080
   },
   {
     "id": "soap-ponchik",
@@ -9307,7 +9307,7 @@
       "#E2DED9",
       "#D6D3CE"
     ],
-    "order": 980
+    "order": 970
   },
   {
     "id": "soap-kusok-piroga",
@@ -9343,7 +9343,7 @@
       "#E9DCD6",
       "#D6D3CE"
     ],
-    "order": 1020
+    "order": 1010
   },
   {
     "id": "soap-arbuz",
@@ -9380,7 +9380,7 @@
       "#F2DBCD",
       "#DAD3C9"
     ],
-    "order": 990
+    "order": 980
   },
   {
     "id": "soap-banka-varenya",
@@ -9462,7 +9462,7 @@
       "#E7DDDB",
       "#D8D2CE"
     ],
-    "order": 1100
+    "order": 1090
   },
   {
     "id": "soap-morozhenoe-v-kremanke",
@@ -9531,7 +9531,7 @@
       "#E7E680",
       "#D5E14A"
     ],
-    "order": 1110
+    "order": 1100
   },
   {
     "id": "soap-malina-v-kremanke",
@@ -9600,7 +9600,7 @@
       "#F9D7B0",
       "#D6D3CF"
     ],
-    "order": 1130
+    "order": 1120
   },
   {
     "id": "soap-serdtse-malinovoe",
@@ -9630,7 +9630,7 @@
       "#F9B2B4",
       "#DFD1C8"
     ],
-    "order": 1140
+    "order": 1130
   },
   {
     "id": "gypsum-rakushka",
