@@ -9324,7 +9324,7 @@
     "id": "soap-ponchik",
     "slug": "ponchik",
     "title": "Пончик",
-    "article": "МЛ-104",
+    "article": "1145",
     "category": "soap",
     "tags": [
       "kids",
@@ -9341,14 +9341,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Пончик с шоколадной глазурью и сахарной струйкой поверх. Глазурь стекает по краю по-разному, поэтому каждый пончик свой.",
+    "description": "Пончик с шоколадной глазурью и сахарной струйкой поверх.",
     "specs": {},
     "tones": [
       "#F9C3BC",
       "#E2DED9",
       "#D6D3CE"
     ],
-    "order": 140
+    "order": 140,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-kusok-piroga",
