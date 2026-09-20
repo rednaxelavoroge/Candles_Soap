@@ -5879,7 +5879,7 @@
     "id": "soap-beze-s-yagodami",
     "slug": "beze-s-yagodami",
     "title": "Десерт Павлова",
-    "article": "МЛ-21",
+    "article": "1083",
     "category": "soap",
     "tags": [
       "food",
@@ -5887,18 +5887,18 @@
     ],
     "images": [
       {
+        "src": "/catalog/soap/beze-s-yagodami-06.webp",
+        "width": 1600,
+        "height": 1200,
+        "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAACQAQCdASoQAAwAA4BaJQBOgMVuQ4AA/HV1Z2SZv10Px3RqFSZN6fAXJeZtJ3EdDn3OYUGgSA4LCYxbfmfa3qzzM5XYYAAA",
+        "alt": "Десерт Павлова — ракурс 6"
+      },
+      {
         "src": "/catalog/soap/beze-s-yagodami-01.webp",
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADwAQCdASoQAAwAA4BaJaACdAEM/rf3k5AA/urTPOk4H0Gbf+gGGP+5gHBxoyTLZyGutV7HfK+squnLDBwuOuV9p1KeBJfQpc0AAA==",
         "alt": "Десерт Павлова"
-      },
-      {
-        "src": "/catalog/soap/beze-s-yagodami-02.webp",
-        "width": 1600,
-        "height": 1200,
-        "blurDataURL": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAACwAQCdASoQAAwAA4BaJYgCdAEOGY+AAP6yEv5TrY6j6FtWUMDpjP7s5dnjgRcrV4XAVhxB1bax8iyHQOrzXO6iMAA=",
-        "alt": "Десерт Павлова — ракурс 2"
       },
       {
         "src": "/catalog/soap/beze-s-yagodami-03.webp",
@@ -5920,32 +5920,20 @@
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAAAwAgCdASoQAAwAA4BaJYwCdAEPSb+ceLo3gAD+1JTVqFVijJ+GIO/JDBrn4U1vjVjgYeLKjUs54mWUAAA=",
         "alt": "Десерт Павлова — ракурс 5"
-      },
-      {
-        "src": "/catalog/soap/beze-s-yagodami-06.webp",
-        "width": 1600,
-        "height": 1200,
-        "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAACQAQCdASoQAAwAA4BaJQBOgMVuQ4AA/HV1Z2SZv10Px3RqFSZN6fAXJeZtJ3EdDn3OYUGgSA4LCYxbfmfa3qzzM5XYYAAA",
-        "alt": "Десерт Павлова — ракурс 6"
-      },
-      {
-        "src": "/catalog/soap/beze-s-yagodami-07.webp",
-        "width": 1600,
-        "height": 1200,
-        "blurDataURL": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAACQAQCdASoQAAwAA4BaJYwCdABvcwAA/Kt2cY0jg7Y0DmBENevm9wUYWE09dP9RLlDtBjeoaDsAAV1yjS1tSrR2D8AAAA==",
-        "alt": "Десерт Павлова — ракурс 7"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Меренга с завитком и ягодой на верхушке: завиток тянется от основания к острию, как у взбитого белка. Подаётся на деревянной или гипсовой подставке.",
+    "description": "Десерт Павлова. Безе с ягодами",
     "specs": {},
     "tones": [
       "#F9C49E",
       "#F1DBCD",
       "#DDD2C8"
     ],
-    "order": 310
+    "order": 310,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-beze-v-kashpo",
