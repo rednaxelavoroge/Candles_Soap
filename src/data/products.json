@@ -5976,9 +5976,9 @@
   },
   {
     "id": "soap-chashka-kakao",
-    "slug": "chashka-kakao",
+    "slug": "chashka-kofe",
     "title": "Чашка кофе",
-    "article": "МЛ-23",
+    "article": "1073",
     "category": "soap",
     "tags": [
       "new-year",
@@ -5987,18 +5987,18 @@
     ],
     "images": [
       {
-        "src": "/catalog/soap/chashka-kakao-01.webp",
-        "width": 1600,
-        "height": 1200,
-        "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAAAQAgCdASoQAAwAA4BaJQBOgCFskN/maOIAAP7nIadoPMS4Feld0xA/5MBdwKZjApe+S8wtvlWAE9mbrgiDDU1AyD0CCtMzPsAAAA==",
-        "alt": "Чашка кофе"
-      },
-      {
         "src": "/catalog/soap/chashka-kakao-02.webp",
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAABQAgCdASoQAAwAA4BaJQBOj+DdAAcu/tnyeIAA/vH1KnpT8cxaoxvFDTijB5NW8FeGiapej5lMhxBCZUX8EfFy4NyvOoH54PuXORCkYAA=",
         "alt": "Чашка кофе — ракурс 2"
+      },
+      {
+        "src": "/catalog/soap/chashka-kakao-01.webp",
+        "width": 1600,
+        "height": 1200,
+        "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAAAQAgCdASoQAAwAA4BaJQBOgCFskN/maOIAAP7nIadoPMS4Feld0xA/5MBdwKZjApe+S8wtvlWAE9mbrgiDDU1AyD0CCtMzPsAAAA==",
+        "alt": "Чашка кофе"
       },
       {
         "src": "/catalog/soap/chashka-kakao-03.webp",
@@ -6013,18 +6013,34 @@
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAADQAQCdASoQAAwAA4BaJQBdgCHhYBt1cAD+1C7MLKOcFG6LT47SznAAExvqr50ld+1snygBGfgQ6S+piDTF6rkJ8AA=",
         "alt": "Чашка кофе — ракурс 4"
+      },
+      {
+        "src": "/catalog/soap/chashka-kofe-1789923692191-1.webp",
+        "width": 1400,
+        "height": 1400,
+        "blurDataURL": "data:image/webp;base64,UklGRkQCAABXRUJQVlA4WAoAAAAgAAAADwAADwAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggVgAAADACAJ0BKhAAEAADgFoljAAPiLBv/xuLDgcAAP7qa91So75a39ll//VolxNZv/mn9dNAPnREzJhANMETHxnaMTuGRol/C7YnZm/iKZdHPr8FKAR4wAAA",
+        "alt": "Чашка кофе"
+      },
+      {
+        "src": "/catalog/soap/chashka-kofe-1789923692193-2.webp",
+        "width": 1400,
+        "height": 1400,
+        "blurDataURL": "data:image/webp;base64,UklGRlACAABXRUJQVlA4WAoAAAAgAAAADwAADwAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggYgAAAPABAJ0BKhAAEAADgFolAABc7GEQ9PKDuAD+3pcBJYpygx1sAckit3x3ZNrQmwAzr17sPnhAZ24QBnwjuLHL2ceGt2AFB8jju9i1G8LamrUDGR1afGnHrvcX9kQ6j3cJkAAA",
+        "alt": "Чашка кофе"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Чашка в «вязаном» свитере с блюдцем, внутри какао с зефиром.",
+    "description": "Чашка кофе согреет в холодное время года, к тому же она вязаная. Вместо кофе могут быть ягоды и цветы",
     "specs": {},
     "tones": [
       "#9CE0F0",
       "#DCE0DC",
       "#D9D3CB"
     ],
-    "order": 20
+    "order": 20,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-mandarin",
