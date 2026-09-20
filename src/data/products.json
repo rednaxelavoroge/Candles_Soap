@@ -6083,9 +6083,9 @@
   },
   {
     "id": "soap-kniga-s-tyulpanami",
-    "slug": "kniga-s-tyulpanami",
-    "title": "Книга с тюльпанами",
-    "article": "МЛ-26",
+    "slug": "ryumka",
+    "title": "Рюмка",
+    "article": "1094",
     "category": "soap",
     "tags": [
       "flowers",
@@ -6103,14 +6103,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Раскрытая книга, на страницах — букет тюльпанов с листьями. Страницы прорисованы обрезом, книга держит форму сама.",
+    "description": "Рюмка может быть пустой и наполненной, прозрачной и матовой. Одна и в наборе с напитками (бутылка водки, коньяка)",
     "specs": {},
     "tones": [
       "#D2F592",
       "#F6DCB2",
       "#DFD2C0"
     ],
-    "order": 250
+    "order": 250,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-chasy",
