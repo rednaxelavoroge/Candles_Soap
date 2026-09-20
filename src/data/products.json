@@ -9322,7 +9322,7 @@
       "#E2DED9",
       "#D6D3CE"
     ],
-    "order": 1040
+    "order": 1050
   },
   {
     "id": "soap-kusok-piroga",
@@ -9358,7 +9358,7 @@
       "#E9DCD6",
       "#D6D3CE"
     ],
-    "order": 1050
+    "order": 1060
   },
   {
     "id": "soap-arbuz",
@@ -9395,7 +9395,7 @@
       "#F2DBCD",
       "#DAD3C9"
     ],
-    "order": 1060
+    "order": 1070
   },
   {
     "id": "soap-banka-varenya",
@@ -9425,7 +9425,7 @@
       "#EADCDA",
       "#D7D3CE"
     ],
-    "order": 1070
+    "order": 1080
   },
   {
     "id": "soap-vosmoe-marta",
@@ -9477,7 +9477,7 @@
       "#E7DDDB",
       "#D8D2CE"
     ],
-    "order": 1080
+    "order": 1090
   },
   {
     "id": "soap-morozhenoe-v-kremanke",
@@ -9513,7 +9513,7 @@
       "#F9C3A6",
       "#EACFBF"
     ],
-    "order": 1090
+    "order": 1040
   },
   {
     "id": "soap-zmeya",
