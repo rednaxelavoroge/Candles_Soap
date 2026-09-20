@@ -4975,7 +4975,7 @@
       "#BFE0F0",
       "#C7D6DB"
     ],
-    "order": 390
+    "order": 400
   },
   {
     "id": "soap-pryanichnyy-nabor",
@@ -5303,7 +5303,7 @@
       "#C4E5EF",
       "#D8D3C9"
     ],
-    "order": 410
+    "order": 420
   },
   {
     "id": "soap-morskoy-brusok",
@@ -5354,7 +5354,7 @@
       "#D7E0E7",
       "#D0D4D6"
     ],
-    "order": 400
+    "order": 410
   },
   {
     "id": "soap-morskaya-zvezda",
@@ -5700,7 +5700,7 @@
       "#F3DBC7",
       "#E4D1BC"
     ],
-    "order": 380
+    "order": 390
   },
   {
     "id": "soap-konfety",
@@ -6474,7 +6474,7 @@
       "#E6E0BC",
       "#DDD2C9"
     ],
-    "order": 370
+    "order": 380
   },
   {
     "id": "soap-meduzy",
@@ -6536,7 +6536,7 @@
       "#F0D8EC",
       "#DFD1CA"
     ],
-    "order": 420
+    "order": 430
   },
   {
     "id": "soap-zvezda-s-korallom",
@@ -6599,7 +6599,7 @@
       "#F9D3C8",
       "#E1D1C9"
     ],
-    "order": 430
+    "order": 440
   },
   {
     "id": "soap-serdechki",
@@ -6629,7 +6629,7 @@
       "#ECE764",
       "#F2D943"
     ],
-    "order": 440
+    "order": 450
   },
   {
     "id": "soap-vaflya-s-yagodoy",
@@ -6698,7 +6698,7 @@
       "#EFDBD3",
       "#DDD2C8"
     ],
-    "order": 450
+    "order": 460
   },
   {
     "id": "soap-mishka-s-sharami",
@@ -6735,7 +6735,7 @@
       "#EBDCD7",
       "#DBD2C9"
     ],
-    "order": 460
+    "order": 470
   },
   {
     "id": "soap-zaytsy",
@@ -8500,7 +8500,7 @@
       "#E6DDD9",
       "#DBD2CB"
     ],
-    "order": 470
+    "order": 370
   },
   {
     "id": "soap-kniga-s-kristallami",
