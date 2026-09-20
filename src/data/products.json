@@ -9554,7 +9554,7 @@
     "id": "soap-malina-v-kremanke",
     "slug": "malina-v-kremanke",
     "title": "Креманка с ягодами",
-    "article": "МЛ-111",
+    "article": "1140",
     "category": "soap",
     "tags": [
       "food",
@@ -9571,14 +9571,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Креманка, полная малины: ягоды лепятся по одной, стенки уходят от розового к прозрачному. Ставится в ванной как маленький десерт.",
+    "description": "Креманка стеклянная полная малины. Имитация стекла",
     "specs": {},
     "tones": [
       "#F9BDAC",
       "#F9AEAB",
       "#F9AEA9"
     ],
-    "order": 50
+    "order": 50,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-serdtse-klubok",
