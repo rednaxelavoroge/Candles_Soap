@@ -5303,7 +5303,7 @@
       "#C4E5EF",
       "#D8D3C9"
     ],
-    "order": 380
+    "order": 390
   },
   {
     "id": "soap-morskoy-brusok",
@@ -5354,7 +5354,7 @@
       "#D7E0E7",
       "#D0D4D6"
     ],
-    "order": 430
+    "order": 380
   },
   {
     "id": "soap-morskaya-zvezda",
@@ -6521,7 +6521,7 @@
       "#F0D8EC",
       "#DFD1CA"
     ],
-    "order": 390
+    "order": 400
   },
   {
     "id": "soap-zvezda-s-korallom",
@@ -6582,7 +6582,7 @@
       "#F9D3C8",
       "#E1D1C9"
     ],
-    "order": 400
+    "order": 410
   },
   {
     "id": "soap-serdechki",
@@ -6612,7 +6612,7 @@
       "#ECE764",
       "#F2D943"
     ],
-    "order": 410
+    "order": 420
   },
   {
     "id": "soap-vaflya-s-yagodoy",
@@ -6853,7 +6853,7 @@
       "#F3DBC9",
       "#E2D1C5"
     ],
-    "order": 420
+    "order": 430
   },
   {
     "id": "soap-ryby",
