@@ -4975,7 +4975,7 @@
       "#BFE0F0",
       "#C7D6DB"
     ],
-    "order": 430
+    "order": 440
   },
   {
     "id": "soap-pryanichnyy-nabor",
@@ -5324,7 +5324,7 @@
       "#C4E5EF",
       "#D8D3C9"
     ],
-    "order": 440,
+    "order": 400,
     "videos": [],
     "related": []
   },
@@ -5734,7 +5734,7 @@
       "#F3DBC7",
       "#E4D1BC"
     ],
-    "order": 420
+    "order": 430
   },
   {
     "id": "soap-konfety",
@@ -6448,7 +6448,7 @@
       "#ECDCD0",
       "#DFD1C6"
     ],
-    "order": 400
+    "order": 410
   },
   {
     "id": "soap-rakushka-yantarnaya",
@@ -6510,7 +6510,7 @@
       "#E6E0BC",
       "#DDD2C9"
     ],
-    "order": 410
+    "order": 420
   },
   {
     "id": "soap-meduzy",
