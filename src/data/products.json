@@ -4975,7 +4975,7 @@
       "#BFE0F0",
       "#C7D6DB"
     ],
-    "order": 420
+    "order": 430
   },
   {
     "id": "soap-pryanichnyy-nabor",
@@ -5354,7 +5354,7 @@
       "#D7E0E7",
       "#D0D4D6"
     ],
-    "order": 430,
+    "order": 340,
     "videos": [],
     "related": []
   },
@@ -5407,7 +5407,7 @@
       "#E3DEDB",
       "#DED1CA"
     ],
-    "order": 340,
+    "order": 350,
     "videos": [],
     "related": []
   },
@@ -5711,7 +5711,7 @@
       "#F3DBC7",
       "#E4D1BC"
     ],
-    "order": 410
+    "order": 420
   },
   {
     "id": "soap-konfety",
@@ -6312,7 +6312,7 @@
       "#E2DED8",
       "#D7D3CC"
     ],
-    "order": 370
+    "order": 380
   },
   {
     "id": "soap-buterbrod-s-ikroy",
@@ -6388,7 +6388,7 @@
       "#E0DFD8",
       "#D5D3CF"
     ],
-    "order": 380
+    "order": 390
   },
   {
     "id": "soap-planeta-zemlya",
@@ -6425,7 +6425,7 @@
       "#ECDCD0",
       "#DFD1C6"
     ],
-    "order": 390
+    "order": 400
   },
   {
     "id": "soap-rakushka-yantarnaya",
@@ -6455,7 +6455,7 @@
       "#E6DDD5",
       "#D6D3CC"
     ],
-    "order": 360,
+    "order": 370,
     "videos": [],
     "related": []
   },
@@ -6487,7 +6487,7 @@
       "#E6E0BC",
       "#DDD2C9"
     ],
-    "order": 400
+    "order": 410
   },
   {
     "id": "soap-meduzy",
@@ -9271,7 +9271,7 @@
       "#E2DED8",
       "#D6D3CE"
     ],
-    "order": 350,
+    "order": 360,
     "videos": [],
     "related": []
   },
