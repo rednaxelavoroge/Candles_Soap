@@ -5247,7 +5247,7 @@
       "#DFDFD9",
       "#DAD2CC"
     ],
-    "order": 640
+    "order": 650
   },
   {
     "id": "soap-morskie-kruglyshi",
@@ -5913,7 +5913,7 @@
       "#EDE290",
       "#F9C3B8"
     ],
-    "order": 650
+    "order": 660
   },
   {
     "id": "soap-beze-s-yagodami",
@@ -7239,7 +7239,7 @@
       "#F9C6C6",
       "#E1D0CA"
     ],
-    "order": 570
+    "order": 580
   },
   {
     "id": "soap-desert-s-malinoy",
@@ -7329,7 +7329,7 @@
       "#CAE9B1",
       "#D4D6B9"
     ],
-    "order": 580
+    "order": 590
   },
   {
     "id": "soap-plate",
@@ -7380,7 +7380,7 @@
       "#AFCCF0",
       "#EACCD8"
     ],
-    "order": 590
+    "order": 600
   },
   {
     "id": "soap-pryaniki-novogodnie",
@@ -7438,7 +7438,7 @@
       "#F1E09A",
       "#F2CBCC"
     ],
-    "order": 600
+    "order": 610
   },
   {
     "id": "soap-serdtse-i-varezhka",
@@ -7496,7 +7496,7 @@
       "#99F2E9",
       "#AADEE4"
     ],
-    "order": 610
+    "order": 620
   },
   {
     "id": "soap-snezhinki-pechene",
@@ -7526,7 +7526,7 @@
       "#F4DAD0",
       "#E1D0CC"
     ],
-    "order": 630
+    "order": 640
   },
   {
     "id": "soap-vaflya-s-dzhemom",
@@ -7562,7 +7562,7 @@
       "#F9C6A6",
       "#E6CFCA"
     ],
-    "order": 660
+    "order": 670
   },
   {
     "id": "soap-soska",
@@ -8061,7 +8061,7 @@
       "#CDE0F0",
       "#CBD5DE"
     ],
-    "order": 670,
+    "order": 570,
     "videos": [],
     "related": []
   },
@@ -8890,7 +8890,7 @@
       "#EEDCC8",
       "#DFD2C0"
     ],
-    "order": 620,
+    "order": 630,
     "videos": [],
     "related": []
   },
