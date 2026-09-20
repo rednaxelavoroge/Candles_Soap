@@ -6394,7 +6394,7 @@
       "#ECDCD0",
       "#DFD1C6"
     ],
-    "order": 340
+    "order": 350
   },
   {
     "id": "soap-rakushka-yantarnaya",
@@ -6424,7 +6424,7 @@
       "#E6DDD5",
       "#D6D3CC"
     ],
-    "order": 350
+    "order": 360
   },
   {
     "id": "soap-lavanda",
@@ -6454,7 +6454,7 @@
       "#E6E0BC",
       "#DDD2C9"
     ],
-    "order": 360
+    "order": 370
   },
   {
     "id": "soap-meduzy",
@@ -6484,7 +6484,7 @@
       "#EADCD9",
       "#DCD2CB"
     ],
-    "order": 370
+    "order": 380
   },
   {
     "id": "soap-lotosy",
@@ -6514,7 +6514,7 @@
       "#F0D8EC",
       "#DFD1CA"
     ],
-    "order": 380
+    "order": 390
   },
   {
     "id": "soap-zvezda-s-korallom",
@@ -6544,7 +6544,7 @@
       "#E7DDD4",
       "#DDD2CA"
     ],
-    "order": 390
+    "order": 400
   },
   {
     "id": "soap-tyulpany",
@@ -6575,7 +6575,7 @@
       "#F9D3C8",
       "#E1D1C9"
     ],
-    "order": 400
+    "order": 410
   },
   {
     "id": "soap-serdechki",
@@ -6605,7 +6605,7 @@
       "#ECE764",
       "#F2D943"
     ],
-    "order": 410
+    "order": 420
   },
   {
     "id": "soap-vaflya-s-yagodoy",
@@ -6641,7 +6641,7 @@
       "#F9C4A5",
       "#E3D0C3"
     ],
-    "order": 430
+    "order": 440
   },
   {
     "id": "soap-tsvety-v-kashpo",
@@ -6851,7 +6851,7 @@
       "#F3DBC9",
       "#E2D1C5"
     ],
-    "order": 420
+    "order": 430
   },
   {
     "id": "soap-ryby",
@@ -9513,7 +9513,7 @@
       "#F9C3A6",
       "#EACFBF"
     ],
-    "order": 440
+    "order": 340
   },
   {
     "id": "soap-zmeya",
