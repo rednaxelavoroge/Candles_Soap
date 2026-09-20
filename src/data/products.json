@@ -9188,36 +9188,6 @@
     "order": 1060
   },
   {
-    "id": "soap-mandarin-i-tykva",
-    "slug": "mandarin-i-tykva",
-    "title": "Мандарин и тыква",
-    "article": "МЛ-101",
-    "category": "soap",
-    "tags": [
-      "new-year",
-      "food"
-    ],
-    "images": [
-      {
-        "src": "/catalog/soap/mandarin-i-tykva-01.webp",
-        "width": 1200,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAQAgCdASoMABAAA4BaJaAC7AEf3D4Y734AAP70OqQrfdduOXy/lZwrHS1yNJAIac7lG9TgT6JiluvgLwou4LbGumpTGgvqU8EqbFWbWmJp46AA",
-        "alt": "Мандарин и тыква"
-      }
-    ],
-    "video": null,
-    "price": null,
-    "description": "Мандарин и ребристая тыква на овальном блюде с веткой хвои. Осенне-зимний набор, блюдо входит в комплект.",
-    "specs": {},
-    "tones": [
-      "#EDF08E",
-      "#E1E788",
-      "#F9C4A4"
-    ],
-    "order": 970
-  },
-  {
     "id": "soap-ammonit",
     "slug": "ammonit",
     "title": "Аммонит",
