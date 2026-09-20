@@ -5797,8 +5797,8 @@
   },
   {
     "id": "soap-laym",
-    "slug": "laym",
-    "title": "Дольки лимона",
+    "slug": "ribi-jeltie",
+    "title": "Рыбы желтые и черная",
     "article": "МЛ-19",
     "category": "soap",
     "tags": [
@@ -5807,23 +5807,25 @@
     ],
     "images": [
       {
-        "src": "/catalog/soap/laym-01.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAAAQAgCdASoQABAAA4BaJZAC7ADw7pZau+TQAMkgU0NF1F/fjodkPNyPoO7BnsixawEjAtQ2SHXJBLX3/DbA41gWm3nTyLW5Lcz+6a/ZidBoPKqLgAA=",
-        "alt": "Дольки лимона"
+        "src": "/catalog/soap/ribi-jeltie-1789928156990-1.webp",
+        "width": 1400,
+        "height": 1400,
+        "blurDataURL": "data:image/webp;base64,UklGRn4CAABXRUJQVlA4WAoAAAAgAAAADwAADwAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggkAAAAPACAJ0BKhAAEAADgFolsAJ0ZoDbATScRBxeLsYgViwAAP7ELCGiblIdeYTbCG0YBY2jrDOSFy78df1NuLSjTjUtI4N1J8Bii4925CD75NGUU9mU5rA9w9JSJYacPxVb2f3/7+wiGx0O7d03IKsO324RYZ1qyTK3vs3t+PkOZr5zNcf8EQFI2ad8Z4eyyKAAAA==",
+        "alt": "Рыбы желтые и черная"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Полупрозрачные дольки лимона с прожилками: на просвет видно каждую. Подаются на стеклянной тарелке, по три-четыре штуки.",
+    "description": "Рыбы желтые и черная",
     "specs": {},
     "tones": [
       "#DCEED8",
       "#EBDEC4",
       "#E0D1C5"
     ],
-    "order": 540
+    "order": 540,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-tsvetochnoe-panno",
