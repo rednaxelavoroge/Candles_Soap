@@ -9482,38 +9482,40 @@
   {
     "id": "soap-morozhenoe-v-kremanke",
     "slug": "morozhenoe-v-kremanke",
-    "title": "Креманка на ножке с мороженым",
-    "article": "МЛ-109",
+    "title": "Креманка на ножке с мороженным или ягодами",
+    "article": "1141",
     "category": "soap",
     "tags": [
       "food"
     ],
     "images": [
       {
-        "src": "/catalog/soap/morozhenoe-v-kremanke-01.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADwAQCdASoQABAAA4BaJYwCdAEO+oLJFgAA/vkP7+A8iuFzN3Z5+Sqh51I4y2AY0b1YmPf1NYVHQeYiMu8dBLK1KqOjAPugAAA=",
-        "alt": "Креманка на ножке с мороженым"
-      },
-      {
         "src": "/catalog/soap/morozhenoe-v-kremanke-02.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAAAQAgCdASoQABAAA4BaJQBOgCHgVGk1AhKwAP72iKawX7bly42T3/glW96RnhhMC4edf85sWuEIigOwNL+6//KXYb3ifRYcAAA=",
         "alt": "Креманка на ножке с мороженым — ракурс 2"
+      },
+      {
+        "src": "/catalog/soap/morozhenoe-v-kremanke-01.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADwAQCdASoQABAAA4BaJYwCdAEO+oLJFgAA/vkP7+A8iuFzN3Z5+Sqh51I4y2AY0b1YmPf1NYVHQeYiMu8dBLK1KqOjAPugAAA=",
+        "alt": "Креманка на ножке с мороженым"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Стеклянная креманка с шариками мороженого и долькой шоколада. Креманка настоящая, стеклянная, и остаётся после мыла.",
+    "description": "Стеклянная креманка с шариками мороженого и долькой шоколада. В креманке могут быть ягоды.",
     "specs": {},
     "tones": [
       "#F9C1A8",
       "#F9C3A6",
       "#EACFBF"
     ],
-    "order": 40
+    "order": 40,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-zmeya",
