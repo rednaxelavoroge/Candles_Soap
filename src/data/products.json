@@ -30,7 +30,7 @@
       "men"
     ],
     "related": [],
-    "order": 250
+    "order": 260
   },
   {
     "id": "p-1788898729385",
@@ -5930,7 +5930,7 @@
       "#F1DBCD",
       "#DDD2C8"
     ],
-    "order": 270
+    "order": 280
   },
   {
     "id": "soap-beze-v-kashpo",
@@ -5974,7 +5974,7 @@
       "#ECDCD2",
       "#DAD2CC"
     ],
-    "order": 280
+    "order": 290
   },
   {
     "id": "soap-chashka-kakao",
@@ -6079,7 +6079,7 @@
       "#F4DBC3",
       "#DDD2C3"
     ],
-    "order": 290
+    "order": 300
   },
   {
     "id": "soap-prozrachnoe-s-tsvetami",
@@ -6130,7 +6130,7 @@
       "#E2DED8",
       "#DCD2C9"
     ],
-    "order": 300
+    "order": 310
   },
   {
     "id": "soap-kniga-s-tyulpanami",
@@ -6189,7 +6189,7 @@
       "#F6DCB2",
       "#DFD2C0"
     ],
-    "order": 240,
+    "order": 250,
     "videos": [],
     "related": []
   },
@@ -6243,7 +6243,7 @@
       "#E4DED5",
       "#D6D3CE"
     ],
-    "order": 260,
+    "order": 270,
     "videos": [],
     "related": []
   },
@@ -6283,7 +6283,7 @@
       "#E2DED8",
       "#D7D3CC"
     ],
-    "order": 310
+    "order": 320
   },
   {
     "id": "soap-buterbrod-s-ikroy",
@@ -6320,7 +6320,7 @@
       "#F8DAC0",
       "#D6D3CD"
     ],
-    "order": 320
+    "order": 330
   },
   {
     "id": "soap-globus",
@@ -6357,7 +6357,7 @@
       "#E0DFD8",
       "#D5D3CF"
     ],
-    "order": 330
+    "order": 340
   },
   {
     "id": "soap-planeta-zemlya",
@@ -9513,7 +9513,7 @@
       "#F9C3A6",
       "#EACFBF"
     ],
-    "order": 340
+    "order": 240
   },
   {
     "id": "soap-zmeya",
