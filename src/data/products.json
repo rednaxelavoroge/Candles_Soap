@@ -5118,16 +5118,10 @@
     "category": "soap",
     "tags": [
       "wedding",
-      "flowers"
+      "flowers",
+      "women"
     ],
     "images": [
-      {
-        "src": "/catalog/soap/kniga-s-pionami-01.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAQAgCdASoQABAAA4BaJQBOgB5yvee2+JmAAP7xgZmx93D1yuh1poQDv8SKgSD2KslLmWHDvQO+ISH2tZ+ysc68InCHH3jETPjYDZtUhCIu7Zj9GWbvQHIiQ/K1wAAA",
-        "alt": "Мыло-книга с букетом пионов на развороте"
-      },
       {
         "src": "/catalog/soap/kniga-s-pionami-02.webp",
         "width": 1600,
@@ -5148,9 +5142,26 @@
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAQAgCdASoMABAAA4BaJbACdADNFS3OOa4AAP6bEy/r0Wpktipg7pFHB5CxjVMi389bS2jwlAp/iAqOy2a87BLubq7iuFHDAhvA3oSy4c4x3HYjdpBakAAA",
         "alt": "Размер мыла-книги виден по ладони"
+      },
+      {
+        "src": "/catalog/soap/kniga-s-pionami-1789921622261-1.webp",
+        "width": 1050,
+        "height": 1400,
+        "blurDataURL": "data:image/webp;base64,UklGRpYCAABXRUJQVlA4WAoAAAAgAAAADwAAFAAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggqAAAADAEAJ0BKhAAFQA+7WKpTamlo6IwCAEwHYlkALDtiw619TywB+KYSzRfMAD4JaShElTNPZQCfPno/YmJb4/8Em/JkwNMvKmuTtryZrRpokBlmH1feeijOfFFTdlXpJKgVVBcUO4Jay80wUXg4HsNKDFWwUZ/r0j0z8sNIWtDrnfzphB5uJv+9g6Rni8edebPxg0q+lXzwTBgfLLEHw01s19OOkSDSgAAAA==",
+        "alt": "Книга с пионами"
       }
     ],
-    "video": null,
+    "video": {
+      "kind": "file",
+      "src": "/catalog/video/1-1789900962616.mp4",
+      "poster": {
+        "src": "/catalog/video/1-1789900962616-poster.webp",
+        "width": 720,
+        "height": 1280,
+        "blurDataURL": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAABwAgCdASoQABAAA4BaJQBOgMXhtfz3nu/ZqVLAAP7ytNRPX356EB2cdWgXTK1OSE5ctUviZIrBk3vGrvUNzkqmjLA9+XFg1KW1+zKYXuZAzS/7mOvfVZdeX4ffjYmnNF37o2AA",
+        "alt": "мыло - цветные букеты1"
+      }
+    },
     "price": null,
     "description": "Раскрытая книга, из которой растёт букет: пионы, хризантемы и мелкая зелень вылеплены отдельно и посажены в разворот. Страницы фисташковые, цветы пыльно-розовые. Тяжёлая, увесистая вещь — её обычно не пускают в дело, а ставят на полку.",
     "specs": {
@@ -5164,7 +5175,21 @@
       "#F6DBBC",
       "#E4D0C4"
     ],
-    "order": 20
+    "order": 20,
+    "videos": [
+      {
+        "kind": "file",
+        "src": "/catalog/video/1-1789900962616.mp4",
+        "poster": {
+          "src": "/catalog/video/1-1789900962616-poster.webp",
+          "width": 720,
+          "height": 1280,
+          "blurDataURL": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAABwAgCdASoQABAAA4BaJQBOgMXhtfz3nu/ZqVLAAP7ytNRPX356EB2cdWgXTK1OSE5ctUviZIrBk3vGrvUNzkqmjLA9+XFg1KW1+zKYXuZAzS/7mOvfVZdeX4ffjYmnNF37o2AA",
+          "alt": "мыло - цветные букеты1"
+        }
+      }
+    ],
+    "related": []
   },
   {
     "id": "soap-buket-v-korobke",
