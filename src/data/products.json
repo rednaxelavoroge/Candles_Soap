@@ -8863,9 +8863,9 @@
   },
   {
     "id": "soap-kryshka-banki",
-    "slug": "kryshka-banki",
+    "slug": "konservnaya-banka",
     "title": "Консервная банка",
-    "article": "МЛ-93",
+    "article": "1118",
     "category": "soap",
     "tags": [
       "men"
@@ -8888,14 +8888,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Крышка жестяной банки с ключом-открывашкой, отлитая в сером металлике. Мелкая деталь сделана точно — узнаётся сразу.",
+    "description": "Консервная банка - имитация жестяной банки",
     "specs": {},
     "tones": [
       "#F9E4D2",
       "#EEDCC8",
       "#DFD2C0"
     ],
-    "order": 960
+    "order": 960,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-elochki-s-sharikami",
