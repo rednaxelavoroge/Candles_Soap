@@ -5078,7 +5078,7 @@
       "#F9C29B",
       "#F9C7A8"
     ],
-    "order": 240,
+    "order": 250,
     "videos": [],
     "related": []
   },
@@ -5303,7 +5303,7 @@
       "#C4E5EF",
       "#D8D3C9"
     ],
-    "order": 170
+    "order": 180
   },
   {
     "id": "soap-morskoy-brusok",
@@ -5354,7 +5354,7 @@
       "#D7E0E7",
       "#D0D4D6"
     ],
-    "order": 180
+    "order": 190
   },
   {
     "id": "soap-morskaya-zvezda",
@@ -5398,7 +5398,7 @@
       "#E3DEDB",
       "#DED1CA"
     ],
-    "order": 190
+    "order": 200
   },
   {
     "id": "soap-desertnyy-nabor-na-doske",
@@ -5700,7 +5700,7 @@
       "#F3DBC7",
       "#E4D1BC"
     ],
-    "order": 200
+    "order": 210
   },
   {
     "id": "soap-konfety",
@@ -5745,7 +5745,7 @@
       "#F3D9DA",
       "#DED1CF"
     ],
-    "order": 210
+    "order": 220
   },
   {
     "id": "soap-banka-s-varenem",
@@ -5821,7 +5821,7 @@
       "#EBDEC4",
       "#E0D1C5"
     ],
-    "order": 220
+    "order": 230
   },
   {
     "id": "soap-tsvetochnoe-panno",
@@ -5873,7 +5873,7 @@
       "#EDE290",
       "#F9C3B8"
     ],
-    "order": 230
+    "order": 240
   },
   {
     "id": "soap-beze-s-yagodami",
@@ -5931,7 +5931,7 @@
       "#F1DBCD",
       "#DDD2C8"
     ],
-    "order": 270,
+    "order": 170,
     "videos": [],
     "related": []
   },
@@ -7599,7 +7599,7 @@
       "#F9C4A0",
       "#F8CCAE"
     ],
-    "order": 250,
+    "order": 260,
     "videos": [],
     "related": []
   },
@@ -7666,7 +7666,7 @@
       "#F9C3A5",
       "#F9C39E"
     ],
-    "order": 260,
+    "order": 270,
     "videos": [],
     "related": []
   },
