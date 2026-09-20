@@ -5078,7 +5078,7 @@
       "#F9C29B",
       "#F9C7A8"
     ],
-    "order": 190,
+    "order": 200,
     "videos": [],
     "related": []
   },
@@ -5804,7 +5804,7 @@
       "#EBDEC4",
       "#E0D1C5"
     ],
-    "order": 170
+    "order": 180
   },
   {
     "id": "soap-tsvetochnoe-panno",
@@ -5856,7 +5856,7 @@
       "#EDE290",
       "#F9C3B8"
     ],
-    "order": 180
+    "order": 190
   },
   {
     "id": "soap-beze-s-yagodami",
@@ -6024,7 +6024,7 @@
       "#DCE0DC",
       "#D9D3CB"
     ],
-    "order": 220
+    "order": 170
   },
   {
     "id": "soap-mandarin",
@@ -7595,7 +7595,7 @@
       "#F9C4A0",
       "#F8CCAE"
     ],
-    "order": 200,
+    "order": 210,
     "videos": [],
     "related": []
   },
@@ -7662,7 +7662,7 @@
       "#F9C3A5",
       "#F9C39E"
     ],
-    "order": 210,
+    "order": 220,
     "videos": [],
     "related": []
   },
