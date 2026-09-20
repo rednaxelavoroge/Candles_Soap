@@ -30,7 +30,7 @@
       "men"
     ],
     "related": [],
-    "order": 280
+    "order": 290
   },
   {
     "id": "p-1788898729385",
@@ -5078,7 +5078,7 @@
       "#F9C29B",
       "#F9C7A8"
     ],
-    "order": 230,
+    "order": 240,
     "videos": [],
     "related": []
   },
@@ -5957,7 +5957,7 @@
       "#F1DBCD",
       "#DDD2C8"
     ],
-    "order": 300
+    "order": 310
   },
   {
     "id": "soap-beze-v-kashpo",
@@ -6001,7 +6001,7 @@
       "#ECDCD2",
       "#DAD2CC"
     ],
-    "order": 310
+    "order": 320
   },
   {
     "id": "soap-chashka-kakao",
@@ -6106,7 +6106,7 @@
       "#F4DBC3",
       "#DDD2C3"
     ],
-    "order": 320
+    "order": 330
   },
   {
     "id": "soap-prozrachnoe-s-tsvetami",
@@ -6157,7 +6157,7 @@
       "#E2DED8",
       "#DCD2C9"
     ],
-    "order": 330
+    "order": 340
   },
   {
     "id": "soap-kniga-s-tyulpanami",
@@ -6216,7 +6216,7 @@
       "#F6DCB2",
       "#DFD2C0"
     ],
-    "order": 270,
+    "order": 280,
     "videos": [],
     "related": []
   },
@@ -6270,7 +6270,7 @@
       "#E4DED5",
       "#D6D3CE"
     ],
-    "order": 290,
+    "order": 300,
     "videos": [],
     "related": []
   },
@@ -6310,7 +6310,7 @@
       "#E2DED8",
       "#D7D3CC"
     ],
-    "order": 340
+    "order": 350
   },
   {
     "id": "soap-buterbrod-s-ikroy",
@@ -6347,7 +6347,7 @@
       "#F8DAC0",
       "#D6D3CD"
     ],
-    "order": 350
+    "order": 360
   },
   {
     "id": "soap-globus",
@@ -6384,7 +6384,7 @@
       "#E0DFD8",
       "#D5D3CF"
     ],
-    "order": 360
+    "order": 370
   },
   {
     "id": "soap-planeta-zemlya",
@@ -6421,7 +6421,7 @@
       "#ECDCD0",
       "#DFD1C6"
     ],
-    "order": 370
+    "order": 380
   },
   {
     "id": "soap-rakushka-yantarnaya",
@@ -7011,7 +7011,7 @@
       "#F9D5BE",
       "#E8CFC0"
     ],
-    "order": 260,
+    "order": 270,
     "videos": [],
     "related": []
   },
@@ -7628,7 +7628,7 @@
       "#F9C4A0",
       "#F8CCAE"
     ],
-    "order": 240,
+    "order": 250,
     "videos": [],
     "related": []
   },
@@ -7695,7 +7695,7 @@
       "#F9C3A5",
       "#F9C39E"
     ],
-    "order": 250,
+    "order": 260,
     "videos": [],
     "related": []
   },
@@ -10878,7 +10878,7 @@
       "#F2DBCF",
       "#DDD2C9"
     ],
-    "order": 380,
+    "order": 230,
     "videos": [],
     "related": []
   }
