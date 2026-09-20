@@ -4434,7 +4434,7 @@
       "#F9B7A6",
       "#F9ABA3"
     ],
-    "order": 550,
+    "order": 560,
     "videos": [],
     "related": []
   },
@@ -6788,7 +6788,7 @@
       "#F0DBCC",
       "#DDD2C7"
     ],
-    "order": 490
+    "order": 500
   },
   {
     "id": "soap-buket-v-pakete",
@@ -6819,7 +6819,7 @@
       "#F9D9C4",
       "#E1D1C5"
     ],
-    "order": 500
+    "order": 510
   },
   {
     "id": "soap-shlepanets",
@@ -6849,7 +6849,7 @@
       "#E4DED3",
       "#CFD5D5"
     ],
-    "order": 510
+    "order": 520
   },
   {
     "id": "soap-koshelek",
@@ -6965,7 +6965,7 @@
       "#ECDCD5",
       "#F9C7B9"
     ],
-    "order": 520
+    "order": 530
   },
   {
     "id": "soap-pivnoy-nabor",
@@ -7141,7 +7141,7 @@
       "#F9D8C4",
       "#E8CFBF"
     ],
-    "order": 530
+    "order": 540
   },
   {
     "id": "soap-tsyplenok-v-skorlupe",
@@ -7172,7 +7172,7 @@
       "#F5DAC9",
       "#E6D0C0"
     ],
-    "order": 540
+    "order": 550
   },
   {
     "id": "soap-tsvety-v-korobke",
@@ -7217,7 +7217,7 @@
       "#F9C6C6",
       "#E1D0CA"
     ],
-    "order": 560
+    "order": 570
   },
   {
     "id": "soap-desert-s-malinoy",
@@ -7307,7 +7307,7 @@
       "#CAE9B1",
       "#D4D6B9"
     ],
-    "order": 570
+    "order": 580
   },
   {
     "id": "soap-plate",
@@ -7358,7 +7358,7 @@
       "#AFCCF0",
       "#EACCD8"
     ],
-    "order": 580
+    "order": 590
   },
   {
     "id": "soap-pryaniki-novogodnie",
@@ -9267,7 +9267,7 @@
       "#E2DED8",
       "#D6D3CE"
     ],
-    "order": 590
+    "order": 490
   },
   {
     "id": "soap-ananas",
