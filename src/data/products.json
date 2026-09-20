@@ -6529,7 +6529,7 @@
       "#F0D8EC",
       "#DFD1CA"
     ],
-    "order": 420
+    "order": 430
   },
   {
     "id": "soap-zvezda-s-korallom",
@@ -6559,7 +6559,7 @@
       "#E7DDD4",
       "#DDD2CA"
     ],
-    "order": 430
+    "order": 440
   },
   {
     "id": "soap-tyulpany",
@@ -6590,7 +6590,7 @@
       "#F9D3C8",
       "#E1D1C9"
     ],
-    "order": 440
+    "order": 450
   },
   {
     "id": "soap-serdechki",
@@ -6620,7 +6620,7 @@
       "#ECE764",
       "#F2D943"
     ],
-    "order": 450
+    "order": 460
   },
   {
     "id": "soap-vaflya-s-yagodoy",
@@ -6649,7 +6649,7 @@
       "#F9C4A5",
       "#E3D0C3"
     ],
-    "order": 470,
+    "order": 420,
     "videos": [],
     "related": []
   },
@@ -6861,7 +6861,7 @@
       "#F3DBC9",
       "#E2D1C5"
     ],
-    "order": 460
+    "order": 470
   },
   {
     "id": "soap-ryby",
