@@ -5622,9 +5622,9 @@
   },
   {
     "id": "soap-kusok-torta",
-    "slug": "kusok-torta",
+    "slug": "kusok-torta-treugolni",
     "title": "Кусок торта треугольный",
-    "article": "МЛ-15",
+    "article": "1077",
     "category": "soap",
     "tags": [
       "food"
@@ -5647,7 +5647,9 @@
       "#F9C4A6",
       "#EBCEC0"
     ],
-    "order": 160
+    "order": 160,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-zayka-s-serdtsem",
