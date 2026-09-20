@@ -30,7 +30,7 @@
       "men"
     ],
     "related": [],
-    "order": 240
+    "order": 250
   },
   {
     "id": "p-1788898729385",
@@ -5928,7 +5928,7 @@
       "#F1DBCD",
       "#DDD2C8"
     ],
-    "order": 260
+    "order": 270
   },
   {
     "id": "soap-beze-v-kashpo",
@@ -5972,7 +5972,7 @@
       "#ECDCD2",
       "#DAD2CC"
     ],
-    "order": 270
+    "order": 280
   },
   {
     "id": "soap-chashka-kakao",
@@ -6024,7 +6024,7 @@
       "#DCE0DC",
       "#D9D3CB"
     ],
-    "order": 280
+    "order": 220
   },
   {
     "id": "soap-mandarin",
@@ -6171,7 +6171,7 @@
       "#F6DCB2",
       "#DFD2C0"
     ],
-    "order": 230,
+    "order": 240,
     "videos": [],
     "related": []
   },
@@ -6225,7 +6225,7 @@
       "#E4DED5",
       "#D6D3CE"
     ],
-    "order": 250,
+    "order": 260,
     "videos": [],
     "related": []
   },
@@ -6966,7 +6966,7 @@
       "#F9D5BE",
       "#E8CFC0"
     ],
-    "order": 220,
+    "order": 230,
     "videos": [],
     "related": []
   },
