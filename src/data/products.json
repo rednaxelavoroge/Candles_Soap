@@ -4434,7 +4434,7 @@
       "#F9B7A6",
       "#F9ABA3"
     ],
-    "order": 120,
+    "order": 130,
     "videos": [],
     "related": []
   },
@@ -4975,7 +4975,7 @@
       "#BFE0F0",
       "#C7D6DB"
     ],
-    "order": 110
+    "order": 120
   },
   {
     "id": "soap-pryanichnyy-nabor",
@@ -5030,7 +5030,7 @@
       "#F2DAD3",
       "#E1D0CD"
     ],
-    "order": 130
+    "order": 140
   },
   {
     "id": "soap-konyak-i-stopka",
@@ -5523,7 +5523,7 @@
       "#F9BC9D",
       "#F9BD92"
     ],
-    "order": 140,
+    "order": 110,
     "videos": [],
     "related": []
   },
