@@ -5001,21 +5001,14 @@
   },
   {
     "id": "soap-konyak-i-stopka",
-    "slug": "konyak-i-stopka",
-    "title": "Коньяк и стопка",
-    "article": "МЛ-03",
+    "slug": "konyak",
+    "title": "Бутылка коньяка",
+    "article": "1098",
     "category": "soap",
     "tags": [
       "men"
     ],
     "images": [
-      {
-        "src": "/catalog/soap/konyak-i-stopka-01.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADQAQCdASoQABAAA4BaJbACdAC8qlnqWAD9Hfd6eHOWLW70zx7sIUoudbG3KWF8iNjD+q2zHoDw6oSTznOWsA/qGkCUU9etLZs/328z9yNLAAAA",
-        "alt": "Мыло-бутылка коньяка и стопка в деревянном ящике"
-      },
       {
         "src": "/catalog/soap/konyak-i-stopka-02.webp",
         "width": 1600,
@@ -5024,18 +5017,18 @@
         "alt": "Набор «Коньяк и стопка», вид сбоку"
       },
       {
+        "src": "/catalog/soap/konyak-i-stopka-01.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADQAQCdASoQABAAA4BaJbACdAC8qlnqWAD9Hfd6eHOWLW70zx7sIUoudbG3KWF8iNjD+q2zHoDw6oSTznOWsA/qGkCUU9etLZs/328z9yNLAAAA",
+        "alt": "Мыло-бутылка коньяка и стопка в деревянном ящике"
+      },
+      {
         "src": "/catalog/soap/konyak-i-stopka-03.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAQAgCdASoQABAAA4BaJbACdLoAAwMV30+AAP5T9Ka9o605Cteq9EDiq/vWpzPQozx0XwOMZxR7MJwMzRpPfpyFriyfjVg7/XeLaBbv4tikNSAA",
         "alt": "Мыло-бутылка коньяка на древесной стружке"
-      },
-      {
-        "src": "/catalog/soap/konyak-i-stopka-04.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADQAQCdASoQABAAA4BaJaACdADuGVPAAAD+05tFzQQeRo6owolUdMMPQSg8qteEXp/X6/Lmy5IZN5nlo52LZdGSGQJH8foK7jl6i96WuGvgTP3IuAAAAA==",
-        "alt": "Мыло-стопка с янтарным слоем внутри"
       }
     ],
     "video": null,
@@ -5052,7 +5045,9 @@
       "#F9C29B",
       "#F9C7A8"
     ],
-    "order": 10
+    "order": 10,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-nabor-dlya-malysha",
