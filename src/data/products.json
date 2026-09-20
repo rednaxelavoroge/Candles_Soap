@@ -9425,8 +9425,8 @@
   },
   {
     "id": "soap-banka-varenya",
-    "slug": "banka-varenya",
-    "title": "Банка варенья",
+    "slug": "banka-varenya-2d",
+    "title": "Банка варенья 2d",
     "article": "МЛ-107",
     "category": "soap",
     "tags": [
@@ -9444,14 +9444,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Баночка варенья с надписью на этикетке и кружевом на крышке. Этикетка расписывается вручную, надпись можно сделать свою.",
+    "description": "Баночка варенья с надписью на этикетке и кружевом на крышке. ",
     "specs": {},
     "tones": [
       "#F9BBCF",
       "#EADCDA",
       "#D7D3CE"
     ],
-    "order": 170
+    "order": 170,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-vosmoe-marta",
