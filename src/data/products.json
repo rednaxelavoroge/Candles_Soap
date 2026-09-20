@@ -6456,7 +6456,7 @@
       "#E6E0BC",
       "#DDD2C9"
     ],
-    "order": 380
+    "order": 390
   },
   {
     "id": "soap-meduzy",
@@ -6486,7 +6486,7 @@
       "#EADCD9",
       "#DCD2CB"
     ],
-    "order": 390
+    "order": 400
   },
   {
     "id": "soap-lotosy",
@@ -6516,7 +6516,7 @@
       "#F0D8EC",
       "#DFD1CA"
     ],
-    "order": 400
+    "order": 410
   },
   {
     "id": "soap-zvezda-s-korallom",
@@ -6546,7 +6546,7 @@
       "#E7DDD4",
       "#DDD2CA"
     ],
-    "order": 410
+    "order": 420
   },
   {
     "id": "soap-tyulpany",
@@ -6577,7 +6577,7 @@
       "#F9D3C8",
       "#E1D1C9"
     ],
-    "order": 420
+    "order": 430
   },
   {
     "id": "soap-serdechki",
@@ -7213,7 +7213,7 @@
       "#F1DBCD",
       "#DED1CB"
     ],
-    "order": 430,
+    "order": 380,
     "videos": [],
     "related": []
   },
