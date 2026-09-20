@@ -5247,7 +5247,7 @@
       "#DFDFD9",
       "#DAD2CC"
     ],
-    "order": 630
+    "order": 640
   },
   {
     "id": "soap-morskie-kruglyshi",
@@ -5913,7 +5913,7 @@
       "#EDE290",
       "#F9C3B8"
     ],
-    "order": 640
+    "order": 650
   },
   {
     "id": "soap-beze-s-yagodami",
@@ -7526,7 +7526,7 @@
       "#F4DAD0",
       "#E1D0CC"
     ],
-    "order": 620
+    "order": 630
   },
   {
     "id": "soap-vaflya-s-dzhemom",
@@ -7562,7 +7562,7 @@
       "#F9C6A6",
       "#E6CFCA"
     ],
-    "order": 650
+    "order": 660
   },
   {
     "id": "soap-soska",
@@ -7592,7 +7592,7 @@
       "#A9EAF0",
       "#D3D3D4"
     ],
-    "order": 660
+    "order": 670
   },
   {
     "id": "soap-barelef-materinstvo",
@@ -8890,7 +8890,7 @@
       "#EEDCC8",
       "#DFD2C0"
     ],
-    "order": 670,
+    "order": 620,
     "videos": [],
     "related": []
   },
