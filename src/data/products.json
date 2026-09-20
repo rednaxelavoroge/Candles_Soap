@@ -6625,20 +6625,13 @@
   {
     "id": "soap-vaflya-s-yagodoy",
     "slug": "vaflya-s-yagodoy",
-    "title": "Вафля с ягодой",
-    "article": "МЛ-39",
+    "title": "Вафля круглая",
+    "article": "1079",
     "category": "soap",
     "tags": [
       "food"
     ],
     "images": [
-      {
-        "src": "/catalog/soap/vaflya-s-yagodoy-01.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAABQAgCdASoQABAAA4BaJbACdAEO9cRXO6uCEAAA/ucoAUWr0qXcDW5AWbDQ9Fx/eb8f3uqlmFlbueX/nZUWn6p01bN/JZelpvYrH9VP3VL+PgDSbNVgAA==",
-        "alt": "Вафля с ягодой"
-      },
       {
         "src": "/catalog/soap/vaflya-s-yagodoy-02.webp",
         "width": 1600,
@@ -6649,14 +6642,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Вафля с шоколадной прослойкой и ягодой сверху. Клетки прорабатываются глубоко, поэтому рисунок держится до конца куска.",
+    "description": "Круглая вафля с ягодами, мороженым",
     "specs": {},
     "tones": [
       "#F9BA9C",
       "#F9C4A5",
       "#E3D0C3"
     ],
-    "order": 470
+    "order": 470,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-tsvety-v-kashpo",
