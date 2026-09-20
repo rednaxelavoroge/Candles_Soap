@@ -6054,8 +6054,8 @@
   {
     "id": "soap-mandarin",
     "slug": "mandarin",
-    "title": "Мандарин",
-    "article": "МЛ-24",
+    "title": "Мандарин очищенный",
+    "article": "1086",
     "category": "soap",
     "tags": [
       "food",
@@ -6079,14 +6079,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Наполовину очищенный мандарин: дольки видны под снятой кожурой, кожура отогнута лепестками. Собирается из двух отливок — плода и кожуры.",
+    "description": "Очищенный мандарин. Самый востребованный на Новый Год",
     "specs": {},
     "tones": [
       "#F9C8AA",
       "#F4DBC3",
       "#DDD2C3"
     ],
-    "order": 280
+    "order": 280,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-prozrachnoe-s-tsvetami",
