@@ -6987,7 +6987,7 @@
       "#F9D9C7",
       "#DDD1CB"
     ],
-    "order": 480
+    "order": 490
   },
   {
     "id": "soap-raki",
@@ -7017,7 +7017,7 @@
       "#F9D0BA",
       "#EACFBF"
     ],
-    "order": 490
+    "order": 500
   },
   {
     "id": "soap-utyata",
@@ -7061,7 +7061,7 @@
       "#F9D8C4",
       "#E8CFBF"
     ],
-    "order": 500
+    "order": 510
   },
   {
     "id": "soap-tsyplenok-v-skorlupe",
@@ -7092,7 +7092,7 @@
       "#F5DAC9",
       "#E6D0C0"
     ],
-    "order": 510
+    "order": 520
   },
   {
     "id": "soap-tsvety-v-korobke",
@@ -7137,7 +7137,7 @@
       "#F9C6C6",
       "#E1D0CA"
     ],
-    "order": 520
+    "order": 530
   },
   {
     "id": "soap-desert-s-malinoy",
@@ -7188,7 +7188,7 @@
       "#F1DBCD",
       "#DED1CB"
     ],
-    "order": 530
+    "order": 540
   },
   {
     "id": "soap-elka-s-gusenitsey",
@@ -7239,7 +7239,7 @@
       "#CAE9B1",
       "#D4D6B9"
     ],
-    "order": 540
+    "order": 550
   },
   {
     "id": "soap-plate",
@@ -7290,7 +7290,7 @@
       "#AFCCF0",
       "#EACCD8"
     ],
-    "order": 550
+    "order": 560
   },
   {
     "id": "soap-pryaniki-novogodnie",
@@ -7348,7 +7348,7 @@
       "#F1E09A",
       "#F2CBCC"
     ],
-    "order": 560
+    "order": 570
   },
   {
     "id": "soap-serdtse-i-varezhka",
@@ -7569,7 +7569,7 @@
       "#F9C4A0",
       "#F8CCAE"
     ],
-    "order": 570
+    "order": 580
   },
   {
     "id": "soap-pivo-i-stopka",
@@ -7606,7 +7606,7 @@
       "#F9C3A5",
       "#F9C39E"
     ],
-    "order": 580
+    "order": 480
   },
   {
     "id": "soap-tsvetok-na-tarelke",
