@@ -5360,7 +5360,7 @@
     "id": "soap-morskaya-zvezda",
     "slug": "morskaya-zvezda",
     "title": "Морская звезда",
-    "article": "МЛ-10",
+    "article": "1005",
     "category": "soap",
     "tags": [
       "sea",
@@ -5387,18 +5387,27 @@
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADwAQCdASoQAAwAA4BaJYgCdAEDbn1m9gAA/GZDCK2eR5ma+NEs75kzMDnSmdMDj4d184XCYVOrHxYC33vGsS5B8Pk9gAAA",
         "alt": "Морская звезда — ракурс 3"
+      },
+      {
+        "src": "/catalog/soap/morskaya-zvezda-1789928619954-1.webp",
+        "width": 960,
+        "height": 1280,
+        "blurDataURL": "data:image/webp;base64,UklGRqQCAABXRUJQVlA4WAoAAAAgAAAADwAAFAAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggtgAAANAEAJ0BKhAAFQA+7WKpTamlo6IwCAEwHYlmAJ0ygKICaA2cBxYMXkJjJokH7vwAAP7novsDZ+pn+MziddsWpv2AZ4ACv4gyLBisGM8pvv8ztMJRHuPwd0ow8VtjMJrhpJoPDbvszmouuBeyCp/G448j5KHJ5Rr7sQDzQEkstXSv/6yxpyNAG1FasSrI48nYqRT9Mk/tvNNBbHA9of7jtVPEvg/bHEcf6NqLTMBgKptSfZj0uAAA",
+        "alt": "Морская звезда"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Крупная морская звезда с зернистой поверхностью: лучи чуть подняты, как у настоящей. Кладётся в подарочную коробку с наполнителем — так и дарится.",
+    "description": "Крупная морская звезда с зернистой поверхностью. Отличный подарок в наборе",
     "specs": {},
     "tones": [
       "#DCEDE4",
       "#E3DEDB",
       "#DED1CA"
     ],
-    "order": 510
+    "order": 510,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-desertnyy-nabor-na-doske",
