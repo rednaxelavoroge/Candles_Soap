@@ -5136,7 +5136,7 @@
       "#A2E4F0",
       "#C9D6D8"
     ],
-    "order": 140
+    "order": 150
   },
   {
     "id": "soap-kniga-s-pionami",
@@ -5259,7 +5259,7 @@
       "#DFDFD9",
       "#DAD2CC"
     ],
-    "order": 150
+    "order": 160
   },
   {
     "id": "soap-morskie-kruglyshi",
@@ -5303,7 +5303,7 @@
       "#C4E5EF",
       "#D8D3C9"
     ],
-    "order": 160
+    "order": 170
   },
   {
     "id": "soap-morskoy-brusok",
@@ -5354,7 +5354,7 @@
       "#D7E0E7",
       "#D0D4D6"
     ],
-    "order": 170
+    "order": 180
   },
   {
     "id": "soap-morskaya-zvezda",
@@ -5398,7 +5398,7 @@
       "#E3DEDB",
       "#DED1CA"
     ],
-    "order": 180
+    "order": 190
   },
   {
     "id": "soap-desertnyy-nabor-na-doske",
@@ -5523,7 +5523,7 @@
       "#F9BC9D",
       "#F9BD92"
     ],
-    "order": 190,
+    "order": 140,
     "videos": [],
     "related": []
   },
