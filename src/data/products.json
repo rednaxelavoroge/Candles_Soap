@@ -5078,7 +5078,7 @@
       "#F9C29B",
       "#F9C7A8"
     ],
-    "order": 200,
+    "order": 210,
     "videos": [],
     "related": []
   },
@@ -5581,7 +5581,7 @@
       "#F9B796",
       "#F9C4A4"
     ],
-    "order": 130
+    "order": 140
   },
   {
     "id": "soap-tartaletki",
@@ -5618,7 +5618,7 @@
       "#F9B797",
       "#F9B991"
     ],
-    "order": 140
+    "order": 150
   },
   {
     "id": "soap-kusok-torta",
@@ -5647,7 +5647,7 @@
       "#F9C4A6",
       "#EBCEC0"
     ],
-    "order": 150
+    "order": 160
   },
   {
     "id": "soap-zayka-s-serdtsem",
@@ -5685,7 +5685,7 @@
       "#F3DBC7",
       "#E4D1BC"
     ],
-    "order": 160
+    "order": 170
   },
   {
     "id": "soap-konfety",
@@ -5730,7 +5730,7 @@
       "#F3D9DA",
       "#DED1CF"
     ],
-    "order": 170
+    "order": 180
   },
   {
     "id": "soap-banka-s-varenem",
@@ -5806,7 +5806,7 @@
       "#EBDEC4",
       "#E0D1C5"
     ],
-    "order": 180
+    "order": 190
   },
   {
     "id": "soap-tsvetochnoe-panno",
@@ -5858,7 +5858,7 @@
       "#EDE290",
       "#F9C3B8"
     ],
-    "order": 190
+    "order": 200
   },
   {
     "id": "soap-beze-s-yagodami",
@@ -6984,7 +6984,7 @@
       "#F9D5BE",
       "#E8CFC0"
     ],
-    "order": 230,
+    "order": 240,
     "videos": [],
     "related": []
   },
@@ -7613,7 +7613,7 @@
       "#F9C4A0",
       "#F8CCAE"
     ],
-    "order": 210,
+    "order": 220,
     "videos": [],
     "related": []
   },
@@ -7680,7 +7680,7 @@
       "#F9C3A5",
       "#F9C39E"
     ],
-    "order": 220,
+    "order": 230,
     "videos": [],
     "related": []
   },
@@ -9513,7 +9513,7 @@
       "#F9C3A6",
       "#EACFBF"
     ],
-    "order": 240
+    "order": 130
   },
   {
     "id": "soap-zmeya",
