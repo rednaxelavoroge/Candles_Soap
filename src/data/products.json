@@ -4961,7 +4961,7 @@
       "#BFE0F0",
       "#C7D6DB"
     ],
-    "order": 450,
+    "order": 460,
     "videos": [],
     "related": []
   },
@@ -5312,7 +5312,7 @@
       "#C4E5EF",
       "#D8D3C9"
     ],
-    "order": 400,
+    "order": 410,
     "videos": [],
     "related": []
   },
@@ -5372,7 +5372,7 @@
       "#D7E0E7",
       "#D0D4D6"
     ],
-    "order": 390,
+    "order": 400,
     "videos": [],
     "related": []
   },
@@ -5425,7 +5425,7 @@
       "#E3DEDB",
       "#DED1CA"
     ],
-    "order": 410,
+    "order": 420,
     "videos": [],
     "related": []
   },
@@ -5729,7 +5729,7 @@
       "#F3DBC7",
       "#E4D1BC"
     ],
-    "order": 510
+    "order": 520
   },
   {
     "id": "soap-konfety",
@@ -6330,7 +6330,7 @@
       "#E2DED8",
       "#D7D3CC"
     ],
-    "order": 470
+    "order": 480
   },
   {
     "id": "soap-buterbrod-s-ikroy",
@@ -6406,7 +6406,7 @@
       "#E0DFD8",
       "#D5D3CF"
     ],
-    "order": 480
+    "order": 490
   },
   {
     "id": "soap-planeta-zemlya",
@@ -6443,7 +6443,7 @@
       "#ECDCD0",
       "#DFD1C6"
     ],
-    "order": 490
+    "order": 500
   },
   {
     "id": "soap-rakushka-yantarnaya",
@@ -6473,7 +6473,7 @@
       "#E6DDD5",
       "#D6D3CC"
     ],
-    "order": 430,
+    "order": 440,
     "videos": [],
     "related": []
   },
@@ -6505,7 +6505,7 @@
       "#E6E0BC",
       "#DDD2C9"
     ],
-    "order": 500
+    "order": 510
   },
   {
     "id": "soap-meduzy",
@@ -6535,7 +6535,7 @@
       "#EADCD9",
       "#DCD2CB"
     ],
-    "order": 350,
+    "order": 360,
     "videos": [],
     "related": []
   },
@@ -6567,7 +6567,7 @@
       "#F0D8EC",
       "#DFD1CA"
     ],
-    "order": 520
+    "order": 530
   },
   {
     "id": "soap-zvezda-s-korallom",
@@ -6597,7 +6597,7 @@
       "#E7DDD4",
       "#DDD2CA"
     ],
-    "order": 360,
+    "order": 370,
     "videos": [],
     "related": []
   },
@@ -6630,7 +6630,7 @@
       "#F9D3C8",
       "#E1D1C9"
     ],
-    "order": 530
+    "order": 540
   },
   {
     "id": "soap-serdechki",
@@ -6660,7 +6660,7 @@
       "#ECE764",
       "#F2D943"
     ],
-    "order": 540
+    "order": 550
   },
   {
     "id": "soap-vaflya-s-yagodoy",
@@ -7562,7 +7562,7 @@
       "#F9C6A6",
       "#E6CFCA"
     ],
-    "order": 440
+    "order": 450
   },
   {
     "id": "soap-soska",
@@ -8061,7 +8061,7 @@
       "#CDE0F0",
       "#CBD5DE"
     ],
-    "order": 460,
+    "order": 470,
     "videos": [],
     "related": []
   },
@@ -8301,7 +8301,7 @@
       "#EADEC7",
       "#C3D7E2"
     ],
-    "order": 370,
+    "order": 380,
     "videos": [],
     "related": []
   },
@@ -8526,7 +8526,7 @@
       "#E6DDD9",
       "#DBD2CB"
     ],
-    "order": 380,
+    "order": 390,
     "videos": [],
     "related": []
   },
@@ -9286,7 +9286,7 @@
       "#E2DED8",
       "#D6D3CE"
     ],
-    "order": 420,
+    "order": 430,
     "videos": [],
     "related": []
   },
@@ -9318,7 +9318,7 @@
       "#E3DED9",
       "#D7D3CF"
     ],
-    "order": 550
+    "order": 350
   },
   {
     "id": "soap-ponchik",
