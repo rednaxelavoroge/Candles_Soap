@@ -7536,9 +7536,9 @@
   },
   {
     "id": "soap-butylka-i-ryumka",
-    "slug": "butylka-i-ryumka",
+    "slug": "butylka-vodki",
     "title": "Бутылка водки",
-    "article": "МЛ-63",
+    "article": "1097",
     "category": "soap",
     "tags": [
       "men",
@@ -7558,6 +7558,13 @@
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAQCdASoQABAAA4BaJbACdADdtnl5tgAA/nGY7ecwHdJB0lw8OCMjhdkrP+bRHccXEc7wYkFKc99rZVv9vyo0PT2TKNY+8K8YdMWAAAA=",
         "alt": "Бутылка водки — ракурс 2"
+      },
+      {
+        "src": "/catalog/soap/butylka-vodki-1789922177668-1.webp",
+        "width": 1400,
+        "height": 1400,
+        "blurDataURL": "data:image/webp;base64,UklGRmICAABXRUJQVlA4WAoAAAAgAAAADwAADwAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggdAAAADACAJ0BKhAAEAADgFolsAJ0BilDhSTqFxBgANtwG9sZ1O+dDT/1tGBhrl0uZ8aiIQTkwfAF/rZEAk8yTS3yURYcADKMS4kG0uM8d0h2SPpUS6JZKvvPQGJNAS514XuJiem2//r0c6NYWEOvUrDC7JhtcAAA",
+        "alt": "Бутылка водки"
       }
     ],
     "video": null,
@@ -7569,7 +7576,9 @@
       "#F9C4A0",
       "#F8CCAE"
     ],
-    "order": 370
+    "order": 370,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-pivo-i-stopka",
