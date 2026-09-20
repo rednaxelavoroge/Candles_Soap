@@ -4975,7 +4975,7 @@
       "#BFE0F0",
       "#C7D6DB"
     ],
-    "order": 380
+    "order": 390
   },
   {
     "id": "soap-pryanichnyy-nabor",
@@ -5303,7 +5303,7 @@
       "#C4E5EF",
       "#D8D3C9"
     ],
-    "order": 400
+    "order": 410
   },
   {
     "id": "soap-morskoy-brusok",
@@ -5354,7 +5354,7 @@
       "#D7E0E7",
       "#D0D4D6"
     ],
-    "order": 390
+    "order": 400
   },
   {
     "id": "soap-morskaya-zvezda",
@@ -5700,7 +5700,7 @@
       "#F3DBC7",
       "#E4D1BC"
     ],
-    "order": 370
+    "order": 380
   },
   {
     "id": "soap-konfety",
@@ -5830,7 +5830,7 @@
       "#EBDEC4",
       "#E0D1C5"
     ],
-    "order": 440,
+    "order": 290,
     "videos": [],
     "related": []
   },
@@ -6148,7 +6148,7 @@
       "#E2DED8",
       "#DCD2C9"
     ],
-    "order": 310
+    "order": 320
   },
   {
     "id": "soap-kniga-s-tyulpanami",
@@ -6301,7 +6301,7 @@
       "#E2DED8",
       "#D7D3CC"
     ],
-    "order": 320
+    "order": 330
   },
   {
     "id": "soap-buterbrod-s-ikroy",
@@ -6377,7 +6377,7 @@
       "#E0DFD8",
       "#D5D3CF"
     ],
-    "order": 330
+    "order": 340
   },
   {
     "id": "soap-planeta-zemlya",
@@ -6414,7 +6414,7 @@
       "#ECDCD0",
       "#DFD1C6"
     ],
-    "order": 340
+    "order": 350
   },
   {
     "id": "soap-rakushka-yantarnaya",
@@ -6444,7 +6444,7 @@
       "#E6DDD5",
       "#D6D3CC"
     ],
-    "order": 350
+    "order": 360
   },
   {
     "id": "soap-lavanda",
@@ -6474,7 +6474,7 @@
       "#E6E0BC",
       "#DDD2C9"
     ],
-    "order": 360
+    "order": 370
   },
   {
     "id": "soap-meduzy",
@@ -6504,7 +6504,7 @@
       "#EADCD9",
       "#DCD2CB"
     ],
-    "order": 290,
+    "order": 300,
     "videos": [],
     "related": []
   },
@@ -6536,7 +6536,7 @@
       "#F0D8EC",
       "#DFD1CA"
     ],
-    "order": 410
+    "order": 420
   },
   {
     "id": "soap-zvezda-s-korallom",
@@ -6566,7 +6566,7 @@
       "#E7DDD4",
       "#DDD2CA"
     ],
-    "order": 300,
+    "order": 310,
     "videos": [],
     "related": []
   },
@@ -6599,7 +6599,7 @@
       "#F9D3C8",
       "#E1D1C9"
     ],
-    "order": 420
+    "order": 430
   },
   {
     "id": "soap-serdechki",
@@ -6629,7 +6629,7 @@
       "#ECE764",
       "#F2D943"
     ],
-    "order": 430
+    "order": 440
   },
   {
     "id": "soap-vaflya-s-yagodoy",
