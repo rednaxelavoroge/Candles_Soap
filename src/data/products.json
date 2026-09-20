@@ -6177,7 +6177,7 @@
       "#E2DED8",
       "#DCD2C9"
     ],
-    "order": 760
+    "order": 770
   },
   {
     "id": "soap-kniga-s-tyulpanami",
@@ -7592,7 +7592,7 @@
       "#A9EAF0",
       "#D3D3D4"
     ],
-    "order": 670
+    "order": 680
   },
   {
     "id": "soap-barelef-materinstvo",
@@ -7622,7 +7622,7 @@
       "#E0DDEA",
       "#D6D2D9"
     ],
-    "order": 680
+    "order": 690
   },
   {
     "id": "soap-butylka-i-ryumka",
@@ -7765,7 +7765,7 @@
       "#F9CCE7",
       "#DCD1D4"
     ],
-    "order": 690
+    "order": 700
   },
   {
     "id": "soap-balerina",
@@ -7795,7 +7795,7 @@
       "#EADBE2",
       "#DBD1D1"
     ],
-    "order": 700
+    "order": 710
   },
   {
     "id": "soap-avtomobil",
@@ -7839,7 +7839,7 @@
       "#F1DCC1",
       "#DED3BC"
     ],
-    "order": 710
+    "order": 720
   },
   {
     "id": "soap-serdtse-kristall",
@@ -7876,7 +7876,7 @@
       "#E6DDD7",
       "#DDD3B9"
     ],
-    "order": 720
+    "order": 730
   },
   {
     "id": "soap-mishki-v-korobke",
@@ -7913,7 +7913,7 @@
       "#F9C1AB",
       "#DED2C3"
     ],
-    "order": 730
+    "order": 740
   },
   {
     "id": "soap-figurki-na-podstavke",
@@ -7964,7 +7964,7 @@
       "#EADDD3",
       "#DED2C6"
     ],
-    "order": 740
+    "order": 750
   },
   {
     "id": "soap-mashinka-s-elkoy",
@@ -8009,7 +8009,7 @@
       "#E9DDD0",
       "#DCD2C7"
     ],
-    "order": 750
+    "order": 760
   },
   {
     "id": "soap-rakushka-s-zhemchuzhinami",
@@ -8061,7 +8061,7 @@
       "#CDE0F0",
       "#CBD5DE"
     ],
-    "order": 770,
+    "order": 670,
     "videos": [],
     "related": []
   },
