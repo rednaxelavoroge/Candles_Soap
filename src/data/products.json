@@ -7181,8 +7181,8 @@
   {
     "id": "soap-desert-s-malinoy",
     "slug": "desert-s-malinoy",
-    "title": "Десерт с малиной",
-    "article": "МЛ-54",
+    "title": "Круглое пирожное",
+    "article": "1076",
     "category": "soap",
     "tags": [
       "women",
@@ -7197,37 +7197,25 @@
         "alt": "Десерт с малиной"
       },
       {
-        "src": "/catalog/soap/desert-s-malinoy-02.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAADQAQCdASoQABAAA4BaJQAAXOlB4HtiYAD+6nXGUxD6pOq1N3bPr45RFM78RqE44UziG9PFGAY0q9swaFkmy/QAAAA=",
-        "alt": "Десерт с малиной — ракурс 2"
-      },
-      {
-        "src": "/catalog/soap/desert-s-malinoy-03.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADwAQCdASoQABAAA4BaJQAAX0bRyQAYrAAA/uchZNqpI93f7hohvLse0Bwe5RUHvPmoPMmB29peWYgoTTspfEf/hsDofaqkEuZkAAAA",
-        "alt": "Десерт с малиной — ракурс 3"
-      },
-      {
-        "src": "/catalog/soap/desert-s-malinoy-04.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADwAQCdASoQABAAA4BaJQAAXU75mb8ByiAA/t6Hu8qJmsvERc7KuymKXHfk9G+b/6N4tqWwA5Xgnx97ZRJfO20oyH0AAA==",
-        "alt": "Десерт с малиной — ракурс 4"
+        "src": "/catalog/soap/desert-s-malinoy-1789924742533-1.webp",
+        "width": 1086,
+        "height": 943,
+        "blurDataURL": "data:image/webp;base64,UklGRmYCAABXRUJQVlA4WAoAAAAgAAAADwAADQAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggeAAAAPABAJ0BKhAADgADgFolsAJ0APHsv3RgAAD+qNGYLXsFbJw3h+mvLfhQJXu2atqM9Su7xc8F0tbXS2r7qjJsMWH94W8Lu2HpBuQsOPZq/R3PkSfJGBAphXhk4sca8XlVxF64u7uhXlel7+IbWvflr9n68ow3ePgAAA==",
+        "alt": "Круглое пирожное"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Сиреневая гипсовая чаша с малиной и муссовый торт с ягодами на подарочной коробке. Собирается как подарок целиком — с коробкой и наполнителем.",
+    "description": "Круглое пирожное может быть украшено ягодами, желе",
     "specs": {},
     "tones": [
       "#F9B4B0",
       "#F1DBCD",
       "#DED1CB"
     ],
-    "order": 580
+    "order": 580,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-elka-s-gusenitsey",
