@@ -5618,7 +5618,7 @@
       "#F9B797",
       "#F9B991"
     ],
-    "order": 120
+    "order": 130
   },
   {
     "id": "soap-kusok-torta",
@@ -5647,7 +5647,7 @@
       "#F9C4A6",
       "#EBCEC0"
     ],
-    "order": 130
+    "order": 140
   },
   {
     "id": "soap-zayka-s-serdtsem",
@@ -5685,7 +5685,7 @@
       "#F3DBC7",
       "#E4D1BC"
     ],
-    "order": 140
+    "order": 150
   },
   {
     "id": "soap-konfety",
@@ -5730,7 +5730,7 @@
       "#F3D9DA",
       "#DED1CF"
     ],
-    "order": 150
+    "order": 160
   },
   {
     "id": "soap-banka-s-varenem",
@@ -5774,7 +5774,7 @@
       "#F9B399",
       "#F9CAB9"
     ],
-    "order": 160
+    "order": 170
   },
   {
     "id": "soap-laym",
@@ -6024,7 +6024,7 @@
       "#DCE0DC",
       "#D9D3CB"
     ],
-    "order": 170
+    "order": 120
   },
   {
     "id": "soap-mandarin",
