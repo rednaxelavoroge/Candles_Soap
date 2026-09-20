@@ -5265,20 +5265,13 @@
     "id": "soap-morskie-kruglyshi",
     "slug": "morskie-kruglyshi",
     "title": "Круглое с ракушками",
-    "article": "МЛ-08",
+    "article": "1009",
     "category": "soap",
     "tags": [
       "sea",
       "women"
     ],
     "images": [
-      {
-        "src": "/catalog/soap/morskie-kruglyshi-01.webp",
-        "width": 1600,
-        "height": 1200,
-        "blurDataURL": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAAAQAgCdASoQAAwAA4BaJagCdAEWjQGxlcIAAP6pxHyQGXlq8QGl9HHMaZCOtQxydN13dy+xpTp4rWln06qde51A8S7nF9ZbP0QHjbx9HJ/JFGzCUot7ZNnHJwcotHkb0pW+4SAA",
-        "alt": "Круглое с ракушками"
-      },
       {
         "src": "/catalog/soap/morskie-kruglyshi-02.webp",
         "width": 1600,
@@ -5287,23 +5280,53 @@
         "alt": "Круглое с ракушками — ракурс 2"
       },
       {
+        "src": "/catalog/soap/morskie-kruglyshi-01.webp",
+        "width": 1600,
+        "height": 1200,
+        "blurDataURL": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAAAQAgCdASoQAAwAA4BaJagCdAEWjQGxlcIAAP6pxHyQGXlq8QGl9HHMaZCOtQxydN13dy+xpTp4rWln06qde51A8S7nF9ZbP0QHjbx9HJ/JFGzCUot7ZNnHJwcotHkb0pW+4SAA",
+        "alt": "Круглое с ракушками"
+      },
+      {
         "src": "/catalog/soap/morskie-kruglyshi-03.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAAAwAgCdASoQABAAA4BaJQBOgMXrqygiADAtgAD+81Mte92eQ2i2x3opJJd099fCGGtiB6YdnFj6+TaXndgQRZ6glbpmpK1Ba7uK9OB5RMa9iOUNXKE6DCUNpOdXfDqwMeHS0y+oZgVJ5fKV3xoAAA==",
         "alt": "Круглое с ракушками — ракурс 3"
+      },
+      {
+        "src": "/catalog/soap/morskie-kruglyshi-1789929040640-1.webp",
+        "width": 1400,
+        "height": 1050,
+        "blurDataURL": "data:image/webp;base64,UklGRlwCAABXRUJQVlA4WAoAAAAgAAAADwAACwAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggbgAAAFACAJ0BKhAADAADgFoloAJ0BiqttpAV/3LdoAD99s2Z3g+hbnSwoX/H6MnFEbz8SM96476LxmZTVW5S5Gvybimg6jZix+PLTbvdNUKrQqXHDHlZVR4zSX1GuZnvxW7cRASIhB+egNccI/EuAAAA",
+        "alt": "Круглое с ракушками"
+      },
+      {
+        "src": "/catalog/soap/morskie-kruglyshi-1789929040642-2.webp",
+        "width": 1400,
+        "height": 1050,
+        "blurDataURL": "data:image/webp;base64,UklGRmwCAABXRUJQVlA4WAoAAAAgAAAADwAACwAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggfgAAALACAJ0BKhAADAADgFoliAJ0B3At4zs8VGia4zymQAD43Oyu+VHsZ8rg322li0PhybCA5eILcEFBM6kydUxQwuuLkFWz68Hg8NJ9sJsn8jwZG/DR+AM9sTnyqa1hKfH8cjrpNZnFwABcjNt5GTyCW6aZFTHBjrZ1OMuDmtPAAA==",
+        "alt": "Круглое с ракушками"
+      },
+      {
+        "src": "/catalog/soap/morskie-kruglyshi-1789929040643-3.webp",
+        "width": 1400,
+        "height": 1400,
+        "blurDataURL": "data:image/webp;base64,UklGRn4CAABXRUJQVlA4WAoAAAAgAAAADwAADwAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggkAAAAPABAJ0BKhAAEAADgFolkAJ0BijMYbrUAADd4dplUzqj8euuU3sTgb879MzZwGP8V8WDtUWeFUEK2zuBAGU1rzzS/OZbVcN886vF3QyFqJ9DrrILAjGfBgg+DV3mnAswfijuX/maPZCSvdKVCYRC0cPcj1MBOFGFPuvba+d0pp6LomKxoaT7OgKinwMkYoYgAA==",
+        "alt": "Круглое с ракушками"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Круглое мыло цвета глубокой воды: сквозь прозрачный слой видны створки раковин, будто смотришь в воду сверху. Раковины ложатся при каждой заливке по-своему, поэтому двух одинаковых кусков не бывает.",
+    "description": "Круглое мыло цвета глубокой воды: сквозь прозрачный слой видны ракушки",
     "specs": {},
     "tones": [
       "#A3DAF0",
       "#C4E5EF",
       "#D8D3C9"
     ],
-    "order": 440
+    "order": 440,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-morskoy-brusok",
