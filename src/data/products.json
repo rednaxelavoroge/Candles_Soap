@@ -8462,7 +8462,7 @@
     "id": "soap-delfiny",
     "slug": "delfiny",
     "title": "Дельфины",
-    "article": "МЛ-84",
+    "article": "1004",
     "category": "soap",
     "tags": [
       "sea",
@@ -8493,14 +8493,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Круглое мыло с дельфинами, выпрыгивающими из волны: гребень пены прорисован отдельно, белым. Рельеф глубокий, рисунок держится до конца куска.",
+    "description": "Круглое мыло с дельфинами, выпрыгивающими из волны",
     "specs": {},
     "tones": [
       "#C3DEF0",
       "#E6DDD9",
       "#DBD2CB"
     ],
-    "order": 330
+    "order": 330,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-kniga-s-kristallami",
