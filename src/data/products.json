@@ -8584,7 +8584,7 @@
       "#EDDCD2",
       "#E4D0C3"
     ],
-    "order": 880
+    "order": 890
   },
   {
     "id": "soap-mesyats",
@@ -8622,7 +8622,7 @@
       "#F9D3B9",
       "#F9C397"
     ],
-    "order": 890
+    "order": 900
   },
   {
     "id": "soap-kristally",
@@ -8652,7 +8652,7 @@
       "#E9DDCD",
       "#E4D0C8"
     ],
-    "order": 900
+    "order": 910
   },
   {
     "id": "soap-konvert-s-serdechkami",
@@ -8689,7 +8689,7 @@
       "#E6DDDB",
       "#DFD1C9"
     ],
-    "order": 910
+    "order": 920
   },
   {
     "id": "soap-kolyaska",
@@ -8895,7 +8895,7 @@
       "#EEDCC8",
       "#DFD2C0"
     ],
-    "order": 920,
+    "order": 870,
     "videos": [],
     "related": []
   },
@@ -9456,7 +9456,7 @@
       "#EADCDA",
       "#D7D3CE"
     ],
-    "order": 870
+    "order": 880
   },
   {
     "id": "soap-vosmoe-marta",
