@@ -30,7 +30,7 @@
       "men"
     ],
     "related": [],
-    "order": 290
+    "order": 240
   },
   {
     "id": "p-1788898729385",
@@ -5928,7 +5928,7 @@
       "#F1DBCD",
       "#DDD2C8"
     ],
-    "order": 250
+    "order": 260
   },
   {
     "id": "soap-beze-v-kashpo",
@@ -5972,7 +5972,7 @@
       "#ECDCD2",
       "#DAD2CC"
     ],
-    "order": 260
+    "order": 270
   },
   {
     "id": "soap-chashka-kakao",
@@ -6024,7 +6024,7 @@
       "#DCE0DC",
       "#D9D3CB"
     ],
-    "order": 270
+    "order": 280
   },
   {
     "id": "soap-mandarin",
@@ -6061,7 +6061,7 @@
       "#F4DBC3",
       "#DDD2C3"
     ],
-    "order": 280
+    "order": 290
   },
   {
     "id": "soap-prozrachnoe-s-tsvetami",
@@ -6225,7 +6225,7 @@
       "#E4DED5",
       "#D6D3CE"
     ],
-    "order": 240,
+    "order": 250,
     "videos": [],
     "related": []
   },
