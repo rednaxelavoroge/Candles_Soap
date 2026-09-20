@@ -10840,9 +10840,9 @@
   },
   {
     "id": "soap-desert-na-blyudtse-serdtse",
-    "slug": "desert-na-blyudtse-serdtse",
-    "title": "Десертный набор на блюдце-сердце",
-    "article": "МЛ-07",
+    "slug": "morojenoe-rojok",
+    "title": "Мороженое рожок",
+    "article": "1089",
     "category": "soap",
     "tags": [
       "gift",
@@ -10851,16 +10851,23 @@
     ],
     "images": [
       {
-        "src": "/catalog/featured/anna-art-1.webp",
-        "width": 1254,
-        "height": 1254,
-        "blurDataURL": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAQAgCdASoQABAAA4BaJQBOgB5yvee2+JmAAP7xgZmx93D1yuh1poQDv8SKgSD2KslLmWHDvQO+ISH2tZ+ysc68InCHH3jETPjYDZtUhCIu7Zj9GWbvQHIiQ/K1wAAA",
-        "alt": "Десертный набор на блюдце-сердце"
+        "src": "/catalog/soap/morojenoe-rojok-1789925296896-1.webp",
+        "width": 1400,
+        "height": 1400,
+        "blurDataURL": "data:image/webp;base64,UklGRnYCAABXRUJQVlA4WAoAAAAgAAAADwAADwAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggiAAAANACAJ0BKhAAEAADgFolsAJ0ugAQhhlzOe2sUj+5agAA/tz5Vi5+lFIv5+Bi7rVCFCn5ZlOaD8vrgckAh5gkRLkbi4cgdUPqaHqrm4TvNH/IybOIAj25DxtgM9vDwuzcc4kB/+EEN9uB4evQ2d/4uqkC9sCoCu1LiW4J89EiO1N/Pj4kOw5IAAA=",
+        "alt": "Мороженое рожок"
+      },
+      {
+        "src": "/catalog/soap/morojenoe-rojok-1789925296898-2.webp",
+        "width": 1400,
+        "height": 1400,
+        "blurDataURL": "data:image/webp;base64,UklGRn4CAABXRUJQVlA4WAoAAAAgAAAADwAADwAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggkAAAALACAJ0BKhAAEAADgFolsAJ0ugASKbxIvTS6jjBAAAD+u2EPfpAsvs747LTqqeEToOIk9jT74JOdjKoIi6wTjHIoz/dWTzPyzDbPSjmlWUyxcEkoRQoB3xgwQr0zaQ5pu2h5rrj72nTecvtJc+WbakDGZC3Nchbvahan6kWfGqmRX0u2KaDRwfjImGQuUAAAAA==",
+        "alt": "Мороженое рожок"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Нежная десертная композиция из мыла ручной работы в виде ягодных пирожных и безе на изящном блюдце-сердце. Натуральные масла и тонкий десертный аромат.",
+    "description": "Мороженое рожок",
     "specs": {
       "scent": "Ягодный мусс и ваниль",
       "composition": "Натуральная мыльная основа, ухаживающие масла, косметический пигмент, гипоаллергенный аромат",
@@ -10871,6 +10878,8 @@
       "#F2DBCF",
       "#DDD2C9"
     ],
-    "order": 1140
+    "order": 1140,
+    "videos": [],
+    "related": []
   }
 ]
