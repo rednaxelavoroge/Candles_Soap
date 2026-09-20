@@ -4434,7 +4434,7 @@
       "#F9B7A6",
       "#F9ABA3"
     ],
-    "order": 160,
+    "order": 170,
     "videos": [],
     "related": []
   },
@@ -4975,7 +4975,7 @@
       "#BFE0F0",
       "#C7D6DB"
     ],
-    "order": 150
+    "order": 160
   },
   {
     "id": "soap-pryanichnyy-nabor",
@@ -5030,7 +5030,7 @@
       "#F2DAD3",
       "#E1D0CD"
     ],
-    "order": 170
+    "order": 180
   },
   {
     "id": "soap-konyak-i-stopka",
@@ -5136,7 +5136,7 @@
       "#A2E4F0",
       "#C9D6D8"
     ],
-    "order": 180
+    "order": 190
   },
   {
     "id": "soap-kniga-s-pionami",
@@ -5745,7 +5745,7 @@
       "#F3D9DA",
       "#DED1CF"
     ],
-    "order": 190,
+    "order": 150,
     "videos": [],
     "related": []
   },
