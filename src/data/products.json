@@ -7026,7 +7026,7 @@
       "#F9D9C7",
       "#DDD1CB"
     ],
-    "order": 530
+    "order": 540
   },
   {
     "id": "soap-raki",
@@ -7056,7 +7056,7 @@
       "#F9D0BA",
       "#EACFBF"
     ],
-    "order": 540
+    "order": 550
   },
   {
     "id": "soap-utyata",
@@ -7100,7 +7100,7 @@
       "#F9D8C4",
       "#E8CFBF"
     ],
-    "order": 550
+    "order": 560
   },
   {
     "id": "soap-tsyplenok-v-skorlupe",
@@ -7131,7 +7131,7 @@
       "#F5DAC9",
       "#E6D0C0"
     ],
-    "order": 560
+    "order": 570
   },
   {
     "id": "soap-tsvety-v-korobke",
@@ -7176,7 +7176,7 @@
       "#F9C6C6",
       "#E1D0CA"
     ],
-    "order": 570
+    "order": 580
   },
   {
     "id": "soap-desert-s-malinoy",
@@ -7213,7 +7213,7 @@
       "#F1DBCD",
       "#DED1CB"
     ],
-    "order": 580,
+    "order": 530,
     "videos": [],
     "related": []
   },
