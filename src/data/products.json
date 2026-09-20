@@ -5937,9 +5937,9 @@
   },
   {
     "id": "soap-beze-v-kashpo",
-    "slug": "beze-v-kashpo",
-    "title": "Безе в кашпо",
-    "article": "МЛ-22",
+    "slug": "xinkali",
+    "title": "Хинкали",
+    "article": "1084",
     "category": "soap",
     "tags": [
       "women",
@@ -5970,14 +5970,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Белая меренга в ребристом гипсовом кашпо. Кашпо остаётся после — в нём удобно держать кольца или мелочи.",
+    "description": "Хинкали в реальном размере",
     "specs": {},
     "tones": [
       "#F9E1D3",
       "#ECDCD2",
       "#DAD2CC"
     ],
-    "order": 330
+    "order": 330,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-chashka-kakao",
