@@ -4434,7 +4434,7 @@
       "#F9B7A6",
       "#F9ABA3"
     ],
-    "order": 110,
+    "order": 120,
     "videos": [],
     "related": []
   },
@@ -4975,7 +4975,7 @@
       "#BFE0F0",
       "#C7D6DB"
     ],
-    "order": 100
+    "order": 110
   },
   {
     "id": "soap-pryanichnyy-nabor",
@@ -5030,7 +5030,7 @@
       "#F2DAD3",
       "#E1D0CD"
     ],
-    "order": 120
+    "order": 130
   },
   {
     "id": "soap-konyak-i-stopka",
@@ -5136,7 +5136,7 @@
       "#A2E4F0",
       "#C9D6D8"
     ],
-    "order": 130
+    "order": 140
   },
   {
     "id": "soap-kniga-s-pionami",
@@ -5259,7 +5259,7 @@
       "#DFDFD9",
       "#DAD2CC"
     ],
-    "order": 140
+    "order": 150
   },
   {
     "id": "soap-morskie-kruglyshi",
@@ -5303,7 +5303,7 @@
       "#C4E5EF",
       "#D8D3C9"
     ],
-    "order": 150
+    "order": 160
   },
   {
     "id": "soap-morskoy-brusok",
@@ -5354,7 +5354,7 @@
       "#D7E0E7",
       "#D0D4D6"
     ],
-    "order": 160
+    "order": 170
   },
   {
     "id": "soap-morskaya-zvezda",
@@ -5398,7 +5398,7 @@
       "#E3DEDB",
       "#DED1CA"
     ],
-    "order": 170
+    "order": 180
   },
   {
     "id": "soap-desertnyy-nabor-na-doske",
@@ -5537,7 +5537,7 @@
       "#F9BC9D",
       "#F9BD92"
     ],
-    "order": 180
+    "order": 190
   },
   {
     "id": "soap-morozhenoe-rozhki",
@@ -5574,7 +5574,7 @@
       "#F9B796",
       "#F9C4A4"
     ],
-    "order": 90,
+    "order": 100,
     "videos": [],
     "related": []
   },
@@ -5712,7 +5712,7 @@
       "#F3DBC7",
       "#E4D1BC"
     ],
-    "order": 190
+    "order": 200
   },
   {
     "id": "soap-konfety",
@@ -5757,7 +5757,7 @@
       "#F3D9DA",
       "#DED1CF"
     ],
-    "order": 200
+    "order": 210
   },
   {
     "id": "soap-banka-s-varenem",
@@ -5833,7 +5833,7 @@
       "#EBDEC4",
       "#E0D1C5"
     ],
-    "order": 210
+    "order": 220
   },
   {
     "id": "soap-tsvetochnoe-panno",
@@ -5885,7 +5885,7 @@
       "#EDE290",
       "#F9C3B8"
     ],
-    "order": 220
+    "order": 230
   },
   {
     "id": "soap-beze-s-yagodami",
@@ -7238,7 +7238,7 @@
       "#F1DBCD",
       "#DED1CB"
     ],
-    "order": 80,
+    "order": 90,
     "videos": [],
     "related": []
   },
@@ -10878,7 +10878,7 @@
       "#F2DBCF",
       "#DDD2C9"
     ],
-    "order": 230,
+    "order": 80,
     "videos": [],
     "related": []
   }
