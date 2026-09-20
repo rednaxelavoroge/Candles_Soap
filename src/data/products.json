@@ -9296,7 +9296,7 @@
     "id": "soap-ananas",
     "slug": "ananas",
     "title": "Ананас",
-    "article": "МЛ-103",
+    "article": "1143",
     "category": "soap",
     "tags": [
       "food",
@@ -9313,14 +9313,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Ананас с чешуйчатым телом и зелёной короной: чешуя идёт по спирали, как у настоящего. Корона лепится отдельно.",
+    "description": "Ананас с чешуйчатым телом и зелёной короной: чешуя идёт по спирали, как у настоящего",
     "specs": {},
     "tones": [
       "#F9D5A6",
       "#E3DED9",
       "#D7D3CF"
     ],
-    "order": 360
+    "order": 360,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-ponchik",
