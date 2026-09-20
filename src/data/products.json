@@ -4975,7 +4975,7 @@
       "#BFE0F0",
       "#C7D6DB"
     ],
-    "order": 370
+    "order": 380
   },
   {
     "id": "soap-pryanichnyy-nabor",
@@ -5303,7 +5303,7 @@
       "#C4E5EF",
       "#D8D3C9"
     ],
-    "order": 390
+    "order": 400
   },
   {
     "id": "soap-morskoy-brusok",
@@ -5354,7 +5354,7 @@
       "#D7E0E7",
       "#D0D4D6"
     ],
-    "order": 380
+    "order": 390
   },
   {
     "id": "soap-morskaya-zvezda",
@@ -5700,7 +5700,7 @@
       "#F3DBC7",
       "#E4D1BC"
     ],
-    "order": 360
+    "order": 370
   },
   {
     "id": "soap-konfety",
@@ -6137,7 +6137,7 @@
       "#E2DED8",
       "#DCD2C9"
     ],
-    "order": 300
+    "order": 310
   },
   {
     "id": "soap-kniga-s-tyulpanami",
@@ -6290,7 +6290,7 @@
       "#E2DED8",
       "#D7D3CC"
     ],
-    "order": 310
+    "order": 320
   },
   {
     "id": "soap-buterbrod-s-ikroy",
@@ -6364,7 +6364,7 @@
       "#E0DFD8",
       "#D5D3CF"
     ],
-    "order": 320
+    "order": 330
   },
   {
     "id": "soap-planeta-zemlya",
@@ -6401,7 +6401,7 @@
       "#ECDCD0",
       "#DFD1C6"
     ],
-    "order": 330
+    "order": 340
   },
   {
     "id": "soap-rakushka-yantarnaya",
@@ -6431,7 +6431,7 @@
       "#E6DDD5",
       "#D6D3CC"
     ],
-    "order": 340
+    "order": 350
   },
   {
     "id": "soap-lavanda",
@@ -6461,7 +6461,7 @@
       "#E6E0BC",
       "#DDD2C9"
     ],
-    "order": 350
+    "order": 360
   },
   {
     "id": "soap-meduzy",
@@ -6491,7 +6491,7 @@
       "#EADCD9",
       "#DCD2CB"
     ],
-    "order": 280
+    "order": 290
   },
   {
     "id": "soap-lotosy",
@@ -6521,7 +6521,7 @@
       "#F0D8EC",
       "#DFD1CA"
     ],
-    "order": 400
+    "order": 410
   },
   {
     "id": "soap-zvezda-s-korallom",
@@ -6551,7 +6551,7 @@
       "#E7DDD4",
       "#DDD2CA"
     ],
-    "order": 290
+    "order": 300
   },
   {
     "id": "soap-tyulpany",
@@ -6582,7 +6582,7 @@
       "#F9D3C8",
       "#E1D1C9"
     ],
-    "order": 410
+    "order": 420
   },
   {
     "id": "soap-serdechki",
@@ -6612,7 +6612,7 @@
       "#ECE764",
       "#F2D943"
     ],
-    "order": 420
+    "order": 430
   },
   {
     "id": "soap-vaflya-s-yagodoy",
@@ -6853,7 +6853,7 @@
       "#F3DBC9",
       "#E2D1C5"
     ],
-    "order": 430
+    "order": 280
   },
   {
     "id": "soap-ryby",
