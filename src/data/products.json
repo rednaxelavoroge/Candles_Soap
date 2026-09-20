@@ -8438,7 +8438,7 @@
       "#DAE4B7",
       "#D6D3CF"
     ],
-    "order": 870
+    "order": 880
   },
   {
     "id": "soap-mishka-s-karandashami",
@@ -8482,7 +8482,7 @@
       "#D7E2D6",
       "#D6D3CD"
     ],
-    "order": 880
+    "order": 890
   },
   {
     "id": "soap-delfiny",
@@ -8579,7 +8579,7 @@
       "#EDDCD2",
       "#E4D0C3"
     ],
-    "order": 890
+    "order": 900
   },
   {
     "id": "soap-mesyats",
@@ -8617,7 +8617,7 @@
       "#F9D3B9",
       "#F9C397"
     ],
-    "order": 900
+    "order": 910
   },
   {
     "id": "soap-kristally",
@@ -8647,7 +8647,7 @@
       "#E9DDCD",
       "#E4D0C8"
     ],
-    "order": 910
+    "order": 920
   },
   {
     "id": "soap-konvert-s-serdechkami",
@@ -8684,7 +8684,7 @@
       "#E6DDDB",
       "#DFD1C9"
     ],
-    "order": 920
+    "order": 930
   },
   {
     "id": "soap-kolyaska",
@@ -8714,7 +8714,7 @@
       "#E1DEDB",
       "#D9D3C8"
     ],
-    "order": 930
+    "order": 940
   },
   {
     "id": "soap-serdtse-s-serdechkami",
@@ -8751,7 +8751,7 @@
       "#EFDBD3",
       "#E0D1C7"
     ],
-    "order": 940
+    "order": 950
   },
   {
     "id": "soap-panno-s-serdtsem",
@@ -8789,7 +8789,7 @@
       "#F9C2D7",
       "#E5CED4"
     ],
-    "order": 950
+    "order": 960
   },
   {
     "id": "soap-guby",
@@ -8854,7 +8854,7 @@
       "#F0DBD1",
       "#DAD3C9"
     ],
-    "order": 960
+    "order": 970
   },
   {
     "id": "soap-kryshka-banki",
@@ -9384,7 +9384,7 @@
       "#E9DCD6",
       "#D6D3CE"
     ],
-    "order": 970,
+    "order": 870,
     "videos": [],
     "related": []
   },
