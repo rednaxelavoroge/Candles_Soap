@@ -5324,7 +5324,7 @@
       "#C4E5EF",
       "#D8D3C9"
     ],
-    "order": 400,
+    "order": 350,
     "videos": [],
     "related": []
   },
@@ -5437,7 +5437,7 @@
       "#E3DEDB",
       "#DED1CA"
     ],
-    "order": 350,
+    "order": 360,
     "videos": [],
     "related": []
   },
@@ -6342,7 +6342,7 @@
       "#E2DED8",
       "#D7D3CC"
     ],
-    "order": 380
+    "order": 390
   },
   {
     "id": "soap-buterbrod-s-ikroy",
@@ -6418,7 +6418,7 @@
       "#E0DFD8",
       "#D5D3CF"
     ],
-    "order": 390
+    "order": 400
   },
   {
     "id": "soap-planeta-zemlya",
@@ -6485,7 +6485,7 @@
       "#E6DDD5",
       "#D6D3CC"
     ],
-    "order": 370,
+    "order": 380,
     "videos": [],
     "related": []
   },
@@ -9301,7 +9301,7 @@
       "#E2DED8",
       "#D6D3CE"
     ],
-    "order": 360,
+    "order": 370,
     "videos": [],
     "related": []
   },
