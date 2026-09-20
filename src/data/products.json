@@ -5398,7 +5398,7 @@
       "#E3DEDB",
       "#DED1CA"
     ],
-    "order": 120
+    "order": 130
   },
   {
     "id": "soap-desertnyy-nabor-na-doske",
@@ -5537,7 +5537,7 @@
       "#F9BC9D",
       "#F9BD92"
     ],
-    "order": 130
+    "order": 140
   },
   {
     "id": "soap-morozhenoe-rozhki",
@@ -5581,7 +5581,7 @@
       "#F9B796",
       "#F9C4A4"
     ],
-    "order": 140
+    "order": 150
   },
   {
     "id": "soap-tartaletki",
@@ -5618,7 +5618,7 @@
       "#F9B797",
       "#F9B991"
     ],
-    "order": 150
+    "order": 160
   },
   {
     "id": "soap-kusok-torta",
@@ -5647,7 +5647,7 @@
       "#F9C4A6",
       "#EBCEC0"
     ],
-    "order": 160,
+    "order": 120,
     "videos": [],
     "related": []
   },
