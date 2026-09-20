@@ -6427,9 +6427,9 @@
   },
   {
     "id": "soap-rakushka-yantarnaya",
-    "slug": "rakushka-yantarnaya",
-    "title": "Ракушка спиральная",
-    "article": "МЛ-32",
+    "slug": "rakushka",
+    "title": "Ракушка ",
+    "article": "1006",
     "category": "soap",
     "tags": [
       "sea",
@@ -6446,14 +6446,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Витая раковина из медовой прозрачной основы: витки просвечивают насквозь и на свету становятся тёплыми, янтарными.",
+    "description": "Ракушка. Может входить в набор",
     "specs": {},
     "tones": [
       "#F9D29F",
       "#E6DDD5",
       "#D6D3CC"
     ],
-    "order": 360
+    "order": 360,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-lavanda",
