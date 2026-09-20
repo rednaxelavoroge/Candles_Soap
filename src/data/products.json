@@ -8163,7 +8163,7 @@
       "#F7D8D4",
       "#DCD1D2"
     ],
-    "order": 770
+    "order": 780
   },
   {
     "id": "soap-assorti-figurok",
@@ -8200,7 +8200,7 @@
       "#F7D9CB",
       "#DED1CA"
     ],
-    "order": 780
+    "order": 790
   },
   {
     "id": "soap-serdtsa-v-korobke",
@@ -8245,7 +8245,7 @@
       "#EDDEBF",
       "#D1D4D4"
     ],
-    "order": 790
+    "order": 800
   },
   {
     "id": "soap-rybki-v-more",
@@ -8307,7 +8307,7 @@
       "#DCE1CF",
       "#DCD2C8"
     ],
-    "order": 800
+    "order": 810
   },
   {
     "id": "soap-tsvetochnaya-kartina",
@@ -8338,7 +8338,7 @@
       "#F3DAD0",
       "#D3D4CD"
     ],
-    "order": 810
+    "order": 820
   },
   {
     "id": "soap-shar-iz-sharikov",
@@ -8376,7 +8376,7 @@
       "#E9DDD5",
       "#D6D3CD"
     ],
-    "order": 820
+    "order": 830
   },
   {
     "id": "soap-dinozavriki",
@@ -8412,7 +8412,7 @@
       "#DAE4B7",
       "#D6D3CF"
     ],
-    "order": 830
+    "order": 840
   },
   {
     "id": "soap-mishka-s-karandashami",
@@ -8456,7 +8456,7 @@
       "#D7E2D6",
       "#D6D3CD"
     ],
-    "order": 840
+    "order": 850
   },
   {
     "id": "soap-delfiny",
@@ -8500,7 +8500,7 @@
       "#E6DDD9",
       "#DBD2CB"
     ],
-    "order": 860
+    "order": 770
   },
   {
     "id": "soap-kniga-s-kristallami",
@@ -9419,7 +9419,7 @@
       "#EADCDA",
       "#D7D3CE"
     ],
-    "order": 850
+    "order": 860
   },
   {
     "id": "soap-vosmoe-marta",
