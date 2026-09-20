@@ -7532,7 +7532,7 @@
     "id": "soap-vaflya-s-dzhemom",
     "slug": "vaflya-s-dzhemom",
     "title": "Слойка с джемом",
-    "article": "МЛ-60",
+    "article": "1082",
     "category": "soap",
     "tags": [
       "food"
@@ -7555,14 +7555,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Толстая вафля с ягодным джемом, залитым в клетки, на деревянном блюде. Джем наливается отдельным слоем, поверх готовой вафли.",
+    "description": "Слойка , в которой виден слой джема ягодного",
     "specs": {},
     "tones": [
       "#F9B5A7",
       "#F9C6A6",
       "#E6CFCA"
     ],
-    "order": 450
+    "order": 450,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-soska",
