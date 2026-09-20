@@ -9353,8 +9353,8 @@
   {
     "id": "soap-kusok-piroga",
     "slug": "kusok-piroga",
-    "title": "Кусок торта треугольный с ягодами",
-    "article": "МЛ-105",
+    "title": "Кусок пирога треугольный с ягодами",
+    "article": "1144",
     "category": "soap",
     "tags": [
       "food"
@@ -9377,14 +9377,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Треугольный кусок пирога: ягоды и фисташковая крошка лежат на тёмной глазури. Ягоды отливаются по одной и сажаются вручную.",
+    "description": "Треугольный кусок пирога с ягодами",
     "specs": {},
     "tones": [
       "#F9BEBD",
       "#E9DCD6",
       "#D6D3CE"
     ],
-    "order": 1020
+    "order": 1020,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-arbuz",
