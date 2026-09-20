@@ -6867,9 +6867,9 @@
   },
   {
     "id": "soap-pivnoy-nabor",
-    "slug": "pivnoy-nabor",
-    "title": "Пивной набор",
-    "article": "МЛ-48",
+    "slug": "kruzka-piva",
+    "title": "Кружка пива",
+    "article": "1095",
     "category": "soap",
     "tags": [
       "men",
@@ -6884,13 +6884,6 @@
         "alt": "Пивной набор"
       },
       {
-        "src": "/catalog/soap/pivnoy-nabor-02.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAAAQAgCdASoQABAAA4BaJaACdAC9OAHfYIAAAP5ehNdzZWoXQWJc77xeEHFo16ZfoUrCCOxYbRf8Q/9IcLIOFLbbPIAAAA==",
-        "alt": "Пивной набор — ракурс 2"
-      },
-      {
         "src": "/catalog/soap/pivnoy-nabor-03.webp",
         "width": 1600,
         "height": 1600,
@@ -6898,39 +6891,11 @@
         "alt": "Пивной набор — ракурс 3"
       },
       {
-        "src": "/catalog/soap/pivnoy-nabor-04.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAAAwAgCdASoQABAAA4BaJZACdADbZp7HOCiAAAD+VFDQQI5XE1ICDZjFokAwNwuZP1LkddGuLaKdr1pjTXAf+k5AAAA=",
-        "alt": "Пивной набор — ракурс 4"
-      },
-      {
-        "src": "/catalog/soap/pivnoy-nabor-05.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAADwAQCdASoQABAAA4BaJbACdACVxw6TCAAA/plmYBMgjPVP3UaKKGK8b+6alf1bSibjgp9v2HH0Ym0GRQi/Ngm2bW+vQfnu+UA5IJQIA2deEzxMmLUAOWUatEBmjBzoTXo4tEsAAAA=",
-        "alt": "Пивной набор — ракурс 5"
-      },
-      {
         "src": "/catalog/soap/pivnoy-nabor-06.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAAAwAgCdASoQABAAA4BaJbACdAD5JgWWwxq2AAD+jAFA8wIsjIX441xpk6Bh/o57j/T5fIdN1D3+jAdZWs7qxFVdSJwHgYpQW96Iu1+uLm+in5SEFWDjTlaXzYlw0SLEAAA=",
         "alt": "Пивной набор — ракурс 6"
-      },
-      {
-        "src": "/catalog/soap/pivnoy-nabor-07.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAAAQAgCdASoQABAAA4BaJaACdAD6OyJIHumAAP6MAT0BkB1DyomOHSuMUZ+oJdFUxHN5Z7TW504+6wUmAOx3U3QeKGlaN9q8w0RsfEYlg5baRrcBPzlGitJteoDVEgeAAAA=",
-        "alt": "Пивной набор — ракурс 7"
-      },
-      {
-        "src": "/catalog/soap/pivnoy-nabor-08.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAADwAQCdASoQABAAA4BaJbACdACqhw+xtSAA/o755RwWNzLMYSASZ6TEsRCvcIdJUxkFQOi5OCsdjGWYfDKa2qYHhixpdLUyzaYjgBd6tfFqzfv07jThoI951HAAAA==",
-        "alt": "Пивной набор — ракурс 8"
       },
       {
         "src": "/catalog/soap/pivnoy-nabor-09.webp",
@@ -6949,7 +6914,9 @@
       "#F9D5BE",
       "#E8CFC0"
     ],
-    "order": 390
+    "order": 390,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-yaichnitsa",
