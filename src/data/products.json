@@ -8015,7 +8015,7 @@
     "id": "soap-rakushka-s-zhemchuzhinami",
     "slug": "rakushka-s-zhemchuzhinami",
     "title": "Ракушка с жемчугами",
-    "article": "МЛ-72",
+    "article": "1007",
     "category": "soap",
     "tags": [
       "sea",
@@ -8045,13 +8045,6 @@
         "alt": "Ракушка с жемчугами — ракурс 3"
       },
       {
-        "src": "/catalog/soap/rakushka-s-zhemchuzhinami-04.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAABQAgCdASoQABAAA4BaJQBOj+EEAAqRf/pMcAAA/ozyPIdlIrzpHY8w09xtlS3zZbw6tUsyrvOfb8xCopIEaFIUjDUZauwBF3OQAA==",
-        "alt": "Ракушка с жемчугами — ракурс 4"
-      },
-      {
         "src": "/catalog/soap/rakushka-s-zhemchuzhinami-05.webp",
         "width": 1523,
         "height": 1600,
@@ -8061,14 +8054,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Раскрытая створка гребешка, внутри — жемчужины. Синий перламутр набирается по краю и уходит к светлому центру. Жемчужины ставятся вручную, поэтому лежат каждый раз иначе.",
+    "description": "Раскрытая створка гребешка, внутри — жемчужины. ",
     "specs": {},
     "tones": [
       "#B3D3F0",
       "#CDE0F0",
       "#CBD5DE"
     ],
-    "order": 770
+    "order": 770,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-kosmetika",
