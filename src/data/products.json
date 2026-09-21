@@ -23,7 +23,7 @@
       "kids"
     ],
     "related": [],
-    "order": 1040
+    "order": 1050
   },
   {
     "id": "p-1790024502282",
@@ -49,7 +49,7 @@
       "kids"
     ],
     "related": [],
-    "order": 1100
+    "order": 940
   },
   {
     "id": "p-1790024407884",
@@ -75,7 +75,7 @@
       "kids"
     ],
     "related": [],
-    "order": 1030
+    "order": 1040
   },
   {
     "id": "p-1790023336268",
@@ -6351,7 +6351,7 @@
       "#E2DED8",
       "#DCD2C9"
     ],
-    "order": 950
+    "order": 960
   },
   {
     "id": "soap-kniga-s-tyulpanami",
@@ -7610,7 +7610,7 @@
       "#CAE9B1",
       "#D4D6B9"
     ],
-    "order": 1000
+    "order": 1010
   },
   {
     "id": "soap-plate",
@@ -7719,7 +7719,7 @@
       "#F1E09A",
       "#F2CBCC"
     ],
-    "order": 1050
+    "order": 1060
   },
   {
     "id": "soap-serdtse-i-varezhka",
@@ -8495,7 +8495,7 @@
       "#F7D8D4",
       "#DCD1D2"
     ],
-    "order": 1060
+    "order": 1070
   },
   {
     "id": "soap-serdtsa-v-korobke",
@@ -8602,7 +8602,7 @@
       "#DCE1CF",
       "#DCD2C8"
     ],
-    "order": 1020
+    "order": 1030
   },
   {
     "id": "soap-tsvetochnaya-kartina",
@@ -8731,7 +8731,7 @@
       "#DAE4B7",
       "#D6D3CF"
     ],
-    "order": 990
+    "order": 1000
   },
   {
     "id": "soap-mishka-s-karandashami",
@@ -8872,7 +8872,7 @@
       "#EDDCD2",
       "#E4D0C3"
     ],
-    "order": 960
+    "order": 970
   },
   {
     "id": "soap-mesyats",
@@ -8910,7 +8910,7 @@
       "#F9D3B9",
       "#F9C397"
     ],
-    "order": 980
+    "order": 990
   },
   {
     "id": "soap-kristally",
@@ -8940,7 +8940,7 @@
       "#E9DDCD",
       "#E4D0C8"
     ],
-    "order": 970
+    "order": 980
   },
   {
     "id": "soap-konvert-s-serdechkami",
@@ -8977,7 +8977,7 @@
       "#E6DDDB",
       "#DFD1C9"
     ],
-    "order": 940
+    "order": 950
   },
   {
     "id": "soap-kolyaska",
@@ -9257,7 +9257,7 @@
       "#BFF093",
       "#DDD795"
     ],
-    "order": 1080
+    "order": 1090
   },
   {
     "id": "soap-elka-s-sharami-bezhevaya",
@@ -9294,7 +9294,7 @@
       "#F9C9AF",
       "#F2CEB1"
     ],
-    "order": 1090
+    "order": 1100
   },
   {
     "id": "soap-novogodnie-barelefy",
@@ -9482,7 +9482,7 @@
       "#C9E5E0",
       "#DED2C6"
     ],
-    "order": 1070
+    "order": 1080
   },
   {
     "id": "soap-novogodniy-nabor-krasnyy",
@@ -9910,7 +9910,7 @@
       "#E7E680",
       "#D5E14A"
     ],
-    "order": 1010
+    "order": 1020
   },
   {
     "id": "soap-malina-v-kremanke",
