@@ -6549,9 +6549,9 @@
   },
   {
     "id": "soap-lotosy",
-    "slug": "lotosy",
-    "title": "Лотосы",
-    "article": "МЛ-35",
+    "slug": "magnolii",
+    "title": "Магнолии",
+    "article": "1050",
     "category": "soap",
     "tags": [
       "flowers",
@@ -6568,14 +6568,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Круглое мыло с розовыми лотосами на синей воде: цветы подняты рельефом, вода уходит вглубь. Лепестки расписываются по одному.",
+    "description": "Круглое мыло с магнолиями",
     "specs": {},
     "tones": [
       "#9FD3F0",
       "#F0D8EC",
       "#DFD1CA"
     ],
-    "order": 530
+    "order": 530,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-zvezda-s-korallom",
