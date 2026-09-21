@@ -6709,7 +6709,7 @@
     "id": "soap-tsvety-v-kashpo",
     "slug": "tsvety-v-kashpo",
     "title": "Мак в гипсовом кашпо",
-    "article": "МЛ-40",
+    "article": "1053",
     "category": "soap",
     "tags": [
       "flowers",
@@ -6723,25 +6723,20 @@
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADwAQCdASoQABAAA4BaJQBOgBndTcdWIAAA/tS00fnAStDXaSd9TfyE0Ve0w6RIu32wJKh3e907Bd/ky2wTWcB+9ppmQ9+FoS2aCYAA",
         "alt": "Мак в гипсовом кашпо"
-      },
-      {
-        "src": "/catalog/soap/tsvety-v-kashpo-02.webp",
-        "width": 1200,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADwAQCdASoMABAAA4BaJZQAAu1ipgkk+QAA/mYB+yur7SBi7bXaJ6AL2e7NUBtZun5HJeZQJyf1wP0zi9MipVcnL0tcAA==",
-        "alt": "Мак в гипсовом кашпо — ракурс 2"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Букет объёмных цветов в вязаном гипсовом кашпо. Кашпо остаётся после того, как мыло израсходуется, — в нём хорошо смотрятся живые сухоцветы.",
+    "description": "Мак или любой другой цветок в маленьком гипсовом кашпо",
     "specs": {},
     "tones": [
       "#F9CFBF",
       "#EFDBD3",
       "#DDD2C8"
     ],
-    "order": 550
+    "order": 550,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-mishka-s-sharami",
