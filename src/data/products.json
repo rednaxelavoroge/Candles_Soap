@@ -7248,8 +7248,8 @@
   },
   {
     "id": "soap-tsvety-v-korobke",
-    "slug": "tsvety-v-korobke",
-    "title": "Цветы в коробке",
+    "slug": "buket-cvetov-8",
+    "title": "Букет цветов в упаковке 7 кашпо бумажное",
     "article": "МЛ-53",
     "category": "soap",
     "tags": [
@@ -7280,16 +7280,40 @@
         "alt": "Цветы в коробке — ракурс 3"
       }
     ],
-    "video": null,
+    "video": {
+      "kind": "file",
+      "src": "/catalog/video/1-1789900962616.mp4",
+      "poster": {
+        "src": "/catalog/video/1-1789900962616-poster.webp",
+        "width": 720,
+        "height": 1280,
+        "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADwAQCdASoQABAAA4BaJZACdADde6buppAA/lP8o0EDF04v0dOVzuUVzHo6SIIi/RlKtYkCsKmG8LNTUtiWugH2S/4B4AAA",
+        "alt": "мыло - цветные букеты1"
+      }
+    },
     "price": null,
-    "description": "Кашпо-коробка с растительным рисунком, полная объёмных цветов: пионы, ромашки, мелкие бутоны. Дарится целиком, разбирать не нужно.",
+    "description": "Букет цветов в кашпо-коробке ",
     "specs": {},
     "tones": [
       "#F9D4BE",
       "#F9C6C6",
       "#E1D0CA"
     ],
-    "order": 590
+    "order": 590,
+    "videos": [
+      {
+        "kind": "file",
+        "src": "/catalog/video/1-1789900962616.mp4",
+        "poster": {
+          "src": "/catalog/video/1-1789900962616-poster.webp",
+          "width": 720,
+          "height": 1280,
+          "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADwAQCdASoQABAAA4BaJZACdADde6buppAA/lP8o0EDF04v0dOVzuUVzHo6SIIi/RlKtYkCsKmG8LNTUtiWugH2S/4B4AAA",
+          "alt": "мыло - цветные букеты1"
+        }
+      }
+    ],
+    "related": []
   },
   {
     "id": "soap-desert-s-malinoy",
