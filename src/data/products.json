@@ -8063,7 +8063,7 @@
     "id": "soap-soska",
     "slug": "soska",
     "title": "Соска",
-    "article": "МЛ-61",
+    "article": "1102",
     "category": "soap",
     "tags": [
       "newborn",
@@ -8080,14 +8080,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Детская соска голубого цвета на рифлёном блюдце. Мелочь, которую дарят вместе с большим подарком к рождению.",
+    "description": "Соска - подарок к рождению ребенка",
     "specs": {},
     "tones": [
       "#A9EFF0",
       "#A9EAF0",
       "#D3D3D4"
     ],
-    "order": 930
+    "order": 930,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-barelef-materinstvo",
