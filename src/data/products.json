@@ -4434,7 +4434,7 @@
       "#F9B7A6",
       "#F9ABA3"
     ],
-    "order": 550,
+    "order": 600,
     "videos": [],
     "related": []
   },
@@ -5913,7 +5913,7 @@
       "#EDE290",
       "#F9C3B8"
     ],
-    "order": 590
+    "order": 580
   },
   {
     "id": "soap-beze-s-yagodami",
@@ -6741,7 +6741,7 @@
       "#EFDBD3",
       "#DDD2C8"
     ],
-    "order": 600
+    "order": 590
   },
   {
     "id": "soap-mishka-s-sharami",
@@ -6853,7 +6853,7 @@
       "#F9D9C4",
       "#E1D1C5"
     ],
-    "order": 570
+    "order": 560
   },
   {
     "id": "soap-shlepanets",
@@ -7002,7 +7002,7 @@
       "#ECDCD5",
       "#F9C7B9"
     ],
-    "order": 560
+    "order": 550
   },
   {
     "id": "soap-pivnoy-nabor",
@@ -7254,7 +7254,7 @@
       "#F9C6C6",
       "#E1D0CA"
     ],
-    "order": 580
+    "order": 570
   },
   {
     "id": "soap-desert-s-malinoy",
