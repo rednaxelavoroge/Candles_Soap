@@ -8808,9 +8808,9 @@
   },
   {
     "id": "soap-panno-s-serdtsem",
-    "slug": "panno-s-serdtsem",
-    "title": "Панно с сердцем",
-    "article": "МЛ-91",
+    "slug": "buket-cvetov-s-serdtsem",
+    "title": "Букет цветов в упаковке 3 с сердцем",
+    "article": "1056",
     "category": "soap",
     "tags": [
       "heart",
@@ -8833,16 +8833,51 @@
         "alt": "Панно с сердцем — ракурс 2"
       }
     ],
-    "video": null,
+    "video": {
+      "kind": "file",
+      "src": "/catalog/video/1-1789900962616.mp4",
+      "poster": {
+        "src": "/catalog/video/1-1789900962616-poster.webp",
+        "width": 720,
+        "height": 1280,
+        "blurDataURL": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAACwAQCdASoMABAAA4BaJQAAUdUlp0AIAM4nuqoUP7CeYylAoeD9TVAEcOOgm0VkdS0rxd2yGmcD/Z7jQYLdc7OgAAA=",
+        "alt": "мыло - цветные букеты1"
+      }
+    },
     "price": null,
-    "description": "Розовая доска с сердцем из цветов и бусин: цветы лепятся по одному и укладываются по контуру.",
+    "description": "Цветы в упаковке с сердцем. Хороший подарок для тех кого любите",
     "specs": {},
     "tones": [
       "#EBE9DA",
       "#F9C2D7",
       "#E5CED4"
     ],
-    "order": 590
+    "order": 590,
+    "videos": [
+      {
+        "kind": "file",
+        "src": "/catalog/video/1-1789900962616.mp4",
+        "poster": {
+          "src": "/catalog/video/1-1789900962616-poster.webp",
+          "width": 720,
+          "height": 1280,
+          "blurDataURL": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAACwAQCdASoMABAAA4BaJQAAUdUlp0AIAM4nuqoUP7CeYylAoeD9TVAEcOOgm0VkdS0rxd2yGmcD/Z7jQYLdc7OgAAA=",
+          "alt": "мыло - цветные букеты1"
+        }
+      },
+      {
+        "kind": "file",
+        "src": "/catalog/video/video-1789901175628.mp4",
+        "poster": {
+          "src": "/catalog/video/video-1789901175628-poster.webp",
+          "width": 720,
+          "height": 1280,
+          "blurDataURL": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAACwAQCdASoMABAAA4BaJQAAUdUlp0AIAM4nuqoUP7CeYylAoeD9TVAEcOOgm0VkdS0rxd2yGmcD/Z7jQYLdc7OgAAA=",
+          "alt": "мыло - цветы - упаковка с сердцем"
+        }
+      }
+    ],
+    "related": []
   },
   {
     "id": "soap-guby",
