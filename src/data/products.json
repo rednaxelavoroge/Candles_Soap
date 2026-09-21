@@ -4434,7 +4434,7 @@
       "#F9B7A6",
       "#F9ABA3"
     ],
-    "order": 600,
+    "order": 650,
     "videos": [],
     "related": []
   },
@@ -5247,7 +5247,7 @@
       "#DFDFD9",
       "#DAD2CC"
     ],
-    "order": 630
+    "order": 620
   },
   {
     "id": "soap-morskie-kruglyshi",
@@ -7782,7 +7782,7 @@
       "#F9CCE7",
       "#DCD1D4"
     ],
-    "order": 650
+    "order": 640
   },
   {
     "id": "soap-balerina",
@@ -8169,7 +8169,7 @@
       "#F9D2DD",
       "#E3CFD3"
     ],
-    "order": 610
+    "order": 600
   },
   {
     "id": "soap-pryanichnyy-domik",
@@ -8344,7 +8344,7 @@
       "#F3DAD0",
       "#D3D4CD"
     ],
-    "order": 620
+    "order": 610
   },
   {
     "id": "soap-shar-iz-sharikov",
@@ -8769,7 +8769,7 @@
       "#F9C2D7",
       "#E5CED4"
     ],
-    "order": 640
+    "order": 630
   },
   {
     "id": "soap-guby",
