@@ -1,5 +1,30 @@
 [
   {
+    "id": "p-1790024920061",
+    "category": "candles",
+    "slug": "medvejonok-v-podarke",
+    "title": "Медвежонок в подарке 3d",
+    "article": "1024",
+    "description": "Медвежонок в подарке. Это отличный подарок на День Рождения ребенку",
+    "images": [
+      {
+        "src": "/catalog/candles/medvejonok-v-podarke-1790024920059-1.webp",
+        "width": 1400,
+        "height": 1400,
+        "blurDataURL": "data:image/webp;base64,UklGRkYCAABXRUJQVlA4WAoAAAAgAAAADwAADwAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggWAAAABACAJ0BKhAAEAADgFolkAJ0AQnuL/ZJ+gAA/H4Bc+7u5709KJZy6EEDW33UivViqG0uKPzGPUAFtoaWeoVtRiyNk6upOeb+5sgM7oAHxdRaCmSfrGVWAAA=",
+        "alt": "Медвежонок в подарке 3d"
+      }
+    ],
+    "videos": [],
+    "video": null,
+    "price": null,
+    "specs": {},
+    "tags": [
+      "kids"
+    ],
+    "related": []
+  },
+  {
     "id": "p-1790024633149",
     "category": "soap",
     "slug": "medvezonok-so-snejkami",
