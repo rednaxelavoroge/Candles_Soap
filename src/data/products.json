@@ -75,7 +75,7 @@
       "kids"
     ],
     "related": [],
-    "order": 830
+    "order": 700
   },
   {
     "id": "p-1790023336268",
@@ -6954,7 +6954,7 @@
       "#EBDCD7",
       "#DBD2C9"
     ],
-    "order": 700
+    "order": 710
   },
   {
     "id": "soap-zaytsy",
@@ -6998,7 +6998,7 @@
       "#F0DBCC",
       "#DDD2C7"
     ],
-    "order": 710
+    "order": 720
   },
   {
     "id": "soap-buket-v-pakete",
@@ -7661,7 +7661,7 @@
       "#AFCCF0",
       "#EACCD8"
     ],
-    "order": 790
+    "order": 800
   },
   {
     "id": "soap-pryaniki-novogodnie",
@@ -7905,7 +7905,7 @@
       "#E0DDEA",
       "#D6D2D9"
     ],
-    "order": 820
+    "order": 830
   },
   {
     "id": "soap-butylka-i-ryumka",
@@ -8087,7 +8087,7 @@
       "#EADBE2",
       "#DBD1D1"
     ],
-    "order": 800
+    "order": 810
   },
   {
     "id": "soap-avtomobil",
@@ -8131,7 +8131,7 @@
       "#F1DCC1",
       "#DED3BC"
     ],
-    "order": 730
+    "order": 740
   },
   {
     "id": "soap-serdtse-kristall",
@@ -8205,7 +8205,7 @@
       "#F9C1AB",
       "#DED2C3"
     ],
-    "order": 740
+    "order": 750
   },
   {
     "id": "soap-figurki-na-podstavke",
@@ -8256,7 +8256,7 @@
       "#EADDD3",
       "#DED2C6"
     ],
-    "order": 750
+    "order": 760
   },
   {
     "id": "soap-mashinka-s-elkoy",
@@ -8301,7 +8301,7 @@
       "#E9DDD0",
       "#DCD2C7"
     ],
-    "order": 760
+    "order": 770
   },
   {
     "id": "soap-rakushka-s-zhemchuzhinami",
@@ -8392,7 +8392,7 @@
       "#E9DDCF",
       "#D7D3C9"
     ],
-    "order": 810
+    "order": 820
   },
   {
     "id": "soap-tyulpany-v-korobke",
@@ -8775,7 +8775,7 @@
       "#D7E2D6",
       "#D6D3CD"
     ],
-    "order": 720
+    "order": 730
   },
   {
     "id": "soap-delfiny",
@@ -9182,7 +9182,7 @@
       "#F0DBD1",
       "#DAD3C9"
     ],
-    "order": 770
+    "order": 780
   },
   {
     "id": "soap-kryshka-banki",
@@ -9841,7 +9841,7 @@
       "#E7DDDB",
       "#D8D2CE"
     ],
-    "order": 780
+    "order": 790
   },
   {
     "id": "soap-morozhenoe-v-kremanke",
