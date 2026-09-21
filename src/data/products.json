@@ -6412,7 +6412,7 @@
     "id": "soap-planeta-zemlya",
     "slug": "planeta-zemlya",
     "title": "Земной шар",
-    "article": "МЛ-31",
+    "article": "1108",
     "category": "soap",
     "tags": [
       "school",
@@ -6436,14 +6436,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Полусфера-планета из прозрачной основы: океаны просвечивают, материки набраны светлее. На просвет видно всю толщу.",
+    "description": "Земной шар с серебряными или золотыми участками суши",
     "specs": {},
     "tones": [
       "#B0EAF0",
       "#ECDCD0",
       "#DFD1C6"
     ],
-    "order": 480
+    "order": 480,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-rakushka-yantarnaya",
