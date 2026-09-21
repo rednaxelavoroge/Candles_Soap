@@ -6375,11 +6375,12 @@
     "id": "soap-globus",
     "slug": "globus",
     "title": "Глобус",
-    "article": "МЛ-30",
+    "article": "1105",
     "category": "soap",
     "tags": [
       "school",
-      "men"
+      "men",
+      "kids"
     ],
     "images": [
       {
@@ -6399,14 +6400,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Глобус на подставке с прорисованными материками: ось и ножка отливаются серебром. Подарок учителю или школьнику.",
+    "description": "Глобус с прорисованными материками, ось и ножка серебряные. Подарок учителю или школьнику.",
     "specs": {},
     "tones": [
       "#DEEBEF",
       "#E0DFD8",
       "#D5D3CF"
     ],
-    "order": 490
+    "order": 490,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-planeta-zemlya",
