@@ -5773,8 +5773,8 @@
   {
     "id": "soap-zayka-s-serdtsem",
     "slug": "zayka-s-serdtsem",
-    "title": "Зайчик с сердечком",
-    "article": "МЛ-16",
+    "title": "Зайчик с сердечком 3d",
+    "article": "1030",
     "category": "soap",
     "tags": [
       "kids",
@@ -5783,30 +5783,32 @@
     ],
     "images": [
       {
-        "src": "/catalog/soap/zayka-s-serdtsem-01.webp",
-        "width": 1200,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADwAQCdASoMABAAA4BaJQBOgCIfuW2jsYAAzjkxxF4Nlf6hfC/OLKNjK+e18OcVfoL/aq7gQg550wFHKGcCOJSNUYqyT+iMMgdj2uAA",
-        "alt": "Зайчик с сердечком"
-      },
-      {
         "src": "/catalog/soap/zayka-s-serdtsem-02.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADQAQCdASoQABAAA4BaJQAAXCaa7OvhQAD3mRRuS0zeUTKe+EjL04gAtkdJf7Co3yhC6eMVJYs49uAWyJkpax9mh+Oey5cMAAA=",
         "alt": "Зайчик с сердечком — ракурс 2"
+      },
+      {
+        "src": "/catalog/soap/zayka-s-serdtsem-01.webp",
+        "width": 1200,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADwAQCdASoMABAAA4BaJQBOgCIfuW2jsYAAzjkxxF4Nlf6hfC/OLKNjK+e18OcVfoL/aq7gQg550wFHKGcCOJSNUYqyT+iMMgdj2uAA",
+        "alt": "Зайчик с сердечком"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Пушистый зайчонок с красным сердечком в лапах: шерсть проработана зерном по всему телу. Дарится в коробке с наполнителем или на блюдце.",
+    "description": "Милый зайчик с сердечком для вашего малыша",
     "specs": {},
     "tones": [
       "#F9DAC2",
       "#F3DBC7",
       "#E4D1BC"
     ],
-    "order": 680
+    "order": 680,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-konfety",
