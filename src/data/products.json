@@ -8439,8 +8439,8 @@
   {
     "id": "soap-tsvetochnaya-kartina",
     "slug": "tsvetochnaya-kartina",
-    "title": "Цветочная картина",
-    "article": "МЛ-80",
+    "title": "Букет цветов в упаковке 9 конверт бумажный",
+    "article": "1062",
     "category": "soap",
     "tags": [
       "flowers",
@@ -8449,23 +8449,47 @@
     ],
     "images": [
       {
-        "src": "/catalog/soap/tsvetochnaya-kartina-01.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAQAgCdASoQABAAA4BaJQBOgCB4kPpCTnGwAPygNpFBLX6JfC0MbfgxMtWtQBCbpkvUFrFvwW9+JWsgwMqGEYZITC47DX5n1p5lSV87Tn4AAA==",
-        "alt": "Цветочная картина"
+        "src": "/catalog/soap/tsvetochnaya-kartina-1790023132074-1.webp",
+        "width": 1400,
+        "height": 1400,
+        "blurDataURL": "data:image/webp;base64,UklGRmACAABXRUJQVlA4WAoAAAAgAAAADwAADwAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggcgAAAFACAJ0BKhAAEAADgFoliAJ0Bixm8Q59/HupAAD+kJ75FObDs8YTpMWzNOfrjN5sFAdL6XqDDMY2inCd2uQSeRaF588eZSMHQD8ddUNtAk/hf+j7mFWeaDY0s8VbgQu0LAEpzZTwMJf8HxcuWCfCExJAAA==",
+        "alt": "Букет цветов в упаковке 9 конверт бумажный"
       }
     ],
-    "video": null,
+    "video": {
+      "kind": "file",
+      "src": "/catalog/video/1-1789900962616.mp4",
+      "poster": {
+        "src": "/catalog/video/1-1789900962616-poster.webp",
+        "width": 720,
+        "height": 1280,
+        "blurDataURL": "data:image/webp;base64,UklGRmACAABXRUJQVlA4WAoAAAAgAAAADwAADwAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggcgAAAFACAJ0BKhAAEAADgFoliAJ0Bixm8Q59/HupAAD+kJ75FObDs8YTpMWzNOfrjN5sFAdL6XqDDMY2inCd2uQSeRaF588eZSMHQD8ddUNtAk/hf+j7mFWeaDY0s8VbgQu0LAEpzZTwMJf8HxcuWCfCExJAAA==",
+        "alt": "мыло - цветные букеты1"
+      }
+    },
     "price": null,
-    "description": "Квадратное панно, сплошь покрытое объёмными цветами — от края до края, без просветов. Дарится как картина: его чаще ставят на полку, чем пускают в дело.",
+    "description": "Букет цветов в конверте бумажном",
     "specs": {},
     "tones": [
       "#F9C8C1",
       "#F3DAD0",
       "#D3D4CD"
     ],
-    "order": 630
+    "order": 630,
+    "videos": [
+      {
+        "kind": "file",
+        "src": "/catalog/video/1-1789900962616.mp4",
+        "poster": {
+          "src": "/catalog/video/1-1789900962616-poster.webp",
+          "width": 720,
+          "height": 1280,
+          "blurDataURL": "data:image/webp;base64,UklGRmACAABXRUJQVlA4WAoAAAAgAAAADwAADwAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggcgAAAFACAJ0BKhAAEAADgFoliAJ0Bixm8Q59/HupAAD+kJ75FObDs8YTpMWzNOfrjN5sFAdL6XqDDMY2inCd2uQSeRaF588eZSMHQD8ddUNtAk/hf+j7mFWeaDY0s8VbgQu0LAEpzZTwMJf8HxcuWCfCExJAAA==",
+          "alt": "мыло - цветные букеты1"
+        }
+      }
+    ],
+    "related": []
   },
   {
     "id": "soap-shar-iz-sharikov",
