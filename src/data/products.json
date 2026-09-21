@@ -6660,7 +6660,7 @@
       "#ECE764",
       "#F2D943"
     ],
-    "order": 710
+    "order": 720
   },
   {
     "id": "soap-vaflya-s-yagodoy",
@@ -7329,7 +7329,7 @@
       "#CAE9B1",
       "#D4D6B9"
     ],
-    "order": 720
+    "order": 730
   },
   {
     "id": "soap-plate",
@@ -7380,7 +7380,7 @@
       "#AFCCF0",
       "#EACCD8"
     ],
-    "order": 730
+    "order": 740
   },
   {
     "id": "soap-pryaniki-novogodnie",
@@ -7438,7 +7438,7 @@
       "#F1E09A",
       "#F2CBCC"
     ],
-    "order": 740
+    "order": 750
   },
   {
     "id": "soap-serdtse-i-varezhka",
@@ -7496,7 +7496,7 @@
       "#99F2E9",
       "#AADEE4"
     ],
-    "order": 750
+    "order": 760
   },
   {
     "id": "soap-snezhinki-pechene",
@@ -7526,7 +7526,7 @@
       "#F4DAD0",
       "#E1D0CC"
     ],
-    "order": 760
+    "order": 770
   },
   {
     "id": "soap-vaflya-s-dzhemom",
@@ -7594,7 +7594,7 @@
       "#A9EAF0",
       "#D3D3D4"
     ],
-    "order": 770
+    "order": 780
   },
   {
     "id": "soap-barelef-materinstvo",
@@ -7624,7 +7624,7 @@
       "#E0DDEA",
       "#D6D2D9"
     ],
-    "order": 780
+    "order": 790
   },
   {
     "id": "soap-butylka-i-ryumka",
@@ -7797,7 +7797,7 @@
       "#EADBE2",
       "#DBD1D1"
     ],
-    "order": 790
+    "order": 800
   },
   {
     "id": "soap-avtomobil",
@@ -7841,7 +7841,7 @@
       "#F1DCC1",
       "#DED3BC"
     ],
-    "order": 800
+    "order": 710
   },
   {
     "id": "soap-serdtse-kristall",
