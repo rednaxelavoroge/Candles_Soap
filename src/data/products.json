@@ -42,7 +42,8 @@
     "price": null,
     "specs": {},
     "tags": [],
-    "related": []
+    "related": [],
+    "order": 1080
   },
   {
     "id": "p-1789923351561",
@@ -5063,7 +5064,7 @@
       "#F2DAD3",
       "#E1D0CD"
     ],
-    "order": 1100
+    "order": 1110
   },
   {
     "id": "soap-konyak-i-stopka",
@@ -7693,7 +7694,7 @@
       "#F4DAD0",
       "#E1D0CC"
     ],
-    "order": 1080
+    "order": 1090
   },
   {
     "id": "soap-vaflya-s-dzhemom",
@@ -9323,7 +9324,7 @@
       "#E5DED4",
       "#DDD2C8"
     ],
-    "order": 1090
+    "order": 1100
   },
   {
     "id": "soap-snezhinki",
@@ -9424,7 +9425,7 @@
       "#F9B09C",
       "#F9A99C"
     ],
-    "order": 1120
+    "order": 1130
   },
   {
     "id": "soap-ded-moroz",
@@ -9454,7 +9455,7 @@
       "#F9B3A4",
       "#F4CCB9"
     ],
-    "order": 1110
+    "order": 1120
   },
   {
     "id": "soap-ammonit",
