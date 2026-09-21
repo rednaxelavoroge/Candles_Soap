@@ -8135,8 +8135,8 @@
   {
     "id": "soap-avtomobil",
     "slug": "avtomobil",
-    "title": "Автомобиль Порше",
-    "article": "МЛ-67",
+    "title": "Автомобиль Порше 3d",
+    "article": "1029",
     "category": "soap",
     "tags": [
       "men",
@@ -8167,14 +8167,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Спортивная машина с прорисованными фарами и дисками. Отливается красной и фиолетовой, кузов полируется до глянца.",
+    "description": "Спортивная машина",
     "specs": {},
     "tones": [
       "#F9B6B1",
       "#F1DCC1",
       "#DED3BC"
     ],
-    "order": 780
+    "order": 780,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-serdtse-kristall",
