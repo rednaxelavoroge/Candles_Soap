@@ -30,7 +30,7 @@
       "kids"
     ],
     "related": [],
-    "order": 890
+    "order": 760
   },
   {
     "id": "p-1790024920061",
@@ -5307,7 +5307,7 @@
       "#A2E4F0",
       "#C9D6D8"
     ],
-    "order": 880
+    "order": 890
   },
   {
     "id": "soap-kniga-s-pionami",
@@ -7720,7 +7720,7 @@
       "#AFCCF0",
       "#EACCD8"
     ],
-    "order": 820
+    "order": 830
   },
   {
     "id": "soap-pryaniki-novogodnie",
@@ -7934,7 +7934,7 @@
       "#A9EAF0",
       "#D3D3D4"
     ],
-    "order": 870
+    "order": 880
   },
   {
     "id": "soap-barelef-materinstvo",
@@ -7964,7 +7964,7 @@
       "#E0DDEA",
       "#D6D2D9"
     ],
-    "order": 850
+    "order": 860
   },
   {
     "id": "soap-butylka-i-ryumka",
@@ -8146,7 +8146,7 @@
       "#EADBE2",
       "#DBD1D1"
     ],
-    "order": 830
+    "order": 840
   },
   {
     "id": "soap-avtomobil",
@@ -8190,7 +8190,7 @@
       "#F1DCC1",
       "#DED3BC"
     ],
-    "order": 760
+    "order": 770
   },
   {
     "id": "soap-serdtse-kristall",
@@ -8264,7 +8264,7 @@
       "#F9C1AB",
       "#DED2C3"
     ],
-    "order": 770
+    "order": 780
   },
   {
     "id": "soap-figurki-na-podstavke",
@@ -8315,7 +8315,7 @@
       "#EADDD3",
       "#DED2C6"
     ],
-    "order": 780
+    "order": 790
   },
   {
     "id": "soap-mashinka-s-elkoy",
@@ -8360,7 +8360,7 @@
       "#E9DDD0",
       "#DCD2C7"
     ],
-    "order": 790
+    "order": 800
   },
   {
     "id": "soap-rakushka-s-zhemchuzhinami",
@@ -8451,7 +8451,7 @@
       "#E9DDCF",
       "#D7D3C9"
     ],
-    "order": 840
+    "order": 850
   },
   {
     "id": "soap-tyulpany-v-korobke",
@@ -9066,7 +9066,7 @@
       "#E1DEDB",
       "#D9D3C8"
     ],
-    "order": 860
+    "order": 870
   },
   {
     "id": "soap-serdtse-s-serdechkami",
@@ -9241,7 +9241,7 @@
       "#F0DBD1",
       "#DAD3C9"
     ],
-    "order": 800
+    "order": 810
   },
   {
     "id": "soap-kryshka-banki",
@@ -9900,7 +9900,7 @@
       "#E7DDDB",
       "#D8D2CE"
     ],
-    "order": 810
+    "order": 820
   },
   {
     "id": "soap-morozhenoe-v-kremanke",
