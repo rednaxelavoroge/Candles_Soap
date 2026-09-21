@@ -69,7 +69,9 @@
     "video": null,
     "price": null,
     "specs": {},
-    "tags": [],
+    "tags": [
+      "kids"
+    ],
     "related": []
   },
   {
