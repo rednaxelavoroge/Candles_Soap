@@ -6994,9 +6994,9 @@
   },
   {
     "id": "soap-rozy-v-shkatulke",
-    "slug": "rozy-v-shkatulke",
-    "title": "Розы в шкатулке",
-    "article": "МЛ-47",
+    "slug": "buket-cvetov-7-kruglaya",
+    "title": "Букет цветов в упаковке 7 (круглая)",
+    "article": "1060",
     "category": "soap",
     "tags": [
       "flowers",
@@ -7028,14 +7028,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Гипсовая шкатулка с крышкой, внутри — розы и пионы из мыла. Шкатулка остаётся: в ней держат украшения.",
+    "description": "Букет цветов в круглой упаковке",
     "specs": {},
     "tones": [
       "#F9E4D2",
       "#ECDCD5",
       "#F9C7B9"
     ],
-    "order": 560
+    "order": 560,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-pivnoy-nabor",
