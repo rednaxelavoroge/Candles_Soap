@@ -1,5 +1,28 @@
 [
   {
+    "id": "p-1790024502282",
+    "category": "soap",
+    "slug": "snegovik",
+    "title": "Снеговик в шапке 2d",
+    "article": "1021",
+    "description": "Новогодний подарок малышу-снеговичок",
+    "images": [
+      {
+        "src": "/catalog/soap/snegovik-1790024502281-1.webp",
+        "width": 1400,
+        "height": 1400,
+        "blurDataURL": "data:image/webp;base64,UklGRk4CAABXRUJQVlA4WAoAAAAgAAAADwAADwAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggYAAAAHACAJ0BKhAAEAADgFolsAJ0BiluVux5hejMwAAA/udCKakWsYopVMcwI2TeCXg1S8WubQ3VcX5aMATqbaecDZ5+Bbr91fnIpHsAjtGjmznDQLLqSf/J+l12PcIBrAAAAA==",
+        "alt": "Снеговик в шапке 2d"
+      }
+    ],
+    "videos": [],
+    "video": null,
+    "price": null,
+    "specs": {},
+    "tags": [],
+    "related": []
+  },
+  {
     "id": "p-1790024407884",
     "category": "soap",
     "slug": "pingvin-v-shapke",
