@@ -5422,9 +5422,9 @@
   },
   {
     "id": "soap-nabor-dlya-malysha",
-    "slug": "nabor-dlya-malysha",
-    "title": "Набор для малыша",
-    "article": "МЛ-04",
+    "slug": "bodi",
+    "title": "Боди",
+    "article": "1103",
     "category": "soap",
     "tags": [
       "newborn",
@@ -5432,37 +5432,23 @@
     ],
     "images": [
       {
-        "src": "/catalog/soap/nabor-dlya-malysha-01.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAQAgCdASoQABAAA4BaJbACdACyiX0P2mAAAP6B+LRQhNSft31r+62bWSxLOwLkrz5qPrfUQYGn/7jfNSCCAPXLjkC1LfvwyEA8Juy9/XsBINh8NoQAAA==",
-        "alt": "Набор детского мыла: коляска, соска и боди"
-      },
-      {
-        "src": "/catalog/soap/nabor-dlya-malysha-02.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAAAQAgCdASoQABAAA4BaJbACdADQ878SssT0APnnuPLyQSJo9mVyRERdIzfqwvV25Fn6dwHVOzyp4MURu+jmVyxPtiWlU2XL2DRTicqRVOsjWbzeb+inwf3Dy42BuDphJGAAAA==",
-        "alt": "Мыло в форме соски с жемчужным кантом"
-      },
-      {
-        "src": "/catalog/soap/nabor-dlya-malysha-03.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAwAgCdASoQABAAA4BaJbACdADOd/4zWpXZgAD+fUTrXclELyohhjFbGEYmAkdo+pYr/WeRpWbGm3Yb2AbBWh6y7/Cx6iCFZ4JlTxl7IdL8IMR3OCW5O4+vSIAAAA==",
-        "alt": "Мыло в форме детской коляски"
-      },
-      {
         "src": "/catalog/soap/nabor-dlya-malysha-04.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADQAQCdASoQABAAA4BaJbACdABk3GdeAADuWyJmER43vXf8MxO4vmpv5kgwcKqSEcnXucMD00EWOmbWM1WRf3sA+pV7wA9ssDwebgrlf0yRpsAakjSc9RBAAAA=",
         "alt": "Мыло в форме боди для новорождённого"
+      },
+      {
+        "src": "/catalog/soap/nabor-dlya-malysha-01.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAQAgCdASoQABAAA4BaJbACdACyiX0P2mAAAP6B+LRQhNSft31r+62bWSxLOwLkrz5qPrfUQYGn/7jfNSCCAPXLjkC1LfvwyEA8Juy9/XsBINh8NoQAAA==",
+        "alt": "Набор детского мыла: коляска, соска и боди"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Три куска на выписку и первые месяцы: соска, боди и коляска. Голубой оттенок ровный, по краям пущен жемчужный кант, рельеф мелкий и чёткий. Тот же набор отливается в розовом, если девочка.",
+    "description": "Боди . Подарок для новорожденных",
     "specs": {
       "size": "набор из четырёх фигур",
       "scent": "Без отдушки",
@@ -5474,7 +5460,9 @@
       "#A2E4F0",
       "#C9D6D8"
     ],
-    "order": 940
+    "order": 940,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-kniga-s-pionami",
