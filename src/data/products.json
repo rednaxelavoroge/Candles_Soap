@@ -8507,8 +8507,8 @@
   {
     "id": "soap-kosmetika",
     "slug": "kosmetika",
-    "title": "Косметика",
-    "article": "МЛ-73",
+    "title": "Набор косметики из 4-х предметов",
+    "article": "1017",
     "category": "soap",
     "tags": [
       "women",
@@ -8532,14 +8532,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Набор косметики: помада, флакон духов, тени и кисти. Каждая мелочь отливается отдельно, набор собирается в коробку.",
+    "description": "Набор косметики из 4-х предметов (помада, крем, духи, кисточка)",
     "specs": {},
     "tones": [
       "#F9D5B8",
       "#E9DDCF",
       "#D7D3C9"
     ],
-    "order": 890
+    "order": 890,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-tyulpany-v-korobke",
