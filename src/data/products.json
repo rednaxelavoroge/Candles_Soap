@@ -1,5 +1,28 @@
 [
   {
+    "id": "p-1790024407884",
+    "category": "soap",
+    "slug": "pingvin-v-shapke",
+    "title": "Пингвин в шапке 2d",
+    "article": "1020",
+    "description": "Милый пингвин в шапке",
+    "images": [
+      {
+        "src": "/catalog/soap/pingvin-v-shapke-1790024407883-1.webp",
+        "width": 1400,
+        "height": 1400,
+        "blurDataURL": "data:image/webp;base64,UklGRlICAABXRUJQVlA4WAoAAAAgAAAADwAADwAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggZAAAADACAJ0BKhAAEAADgFolsAJ0AQOlixvXmvSAAP7fxvFfXP44h3VnkKu9gGNbYYM0ZWxUxIt2Qr2js9LqbW+iXif8ABs5FoATV1cMUGgX6zz7kgkssy1eys+ad79mUVQjbK+tMAA=",
+        "alt": "Пингвин в шапке 2d"
+      }
+    ],
+    "videos": [],
+    "video": null,
+    "price": null,
+    "specs": {},
+    "tags": [],
+    "related": []
+  },
+  {
     "id": "p-1790023336268",
     "category": "soap",
     "slug": "buket-tsvetov-v-vaze",
