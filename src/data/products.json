@@ -5254,7 +5254,7 @@
       "#DFDFD9",
       "#DAD2CC"
     ],
-    "order": 620
+    "order": 630
   },
   {
     "id": "soap-morskie-kruglyshi",
@@ -5920,7 +5920,7 @@
       "#EDE290",
       "#F9C3B8"
     ],
-    "order": 600
+    "order": 610
   },
   {
     "id": "soap-beze-s-yagodami",
@@ -7299,7 +7299,7 @@
       "#F9C6C6",
       "#E1D0CA"
     ],
-    "order": 590,
+    "order": 600,
     "videos": [
       {
         "kind": "file",
@@ -8417,7 +8417,7 @@
       "#F3DAD0",
       "#D3D4CD"
     ],
-    "order": 610
+    "order": 620
   },
   {
     "id": "soap-shar-iz-sharikov",
@@ -8842,7 +8842,7 @@
       "#F9C2D7",
       "#E5CED4"
     ],
-    "order": 630
+    "order": 590
   },
   {
     "id": "soap-guby",
