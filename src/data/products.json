@@ -7267,9 +7267,9 @@
   },
   {
     "id": "soap-utyata",
-    "slug": "utyata",
-    "title": "Утята",
-    "article": "МЛ-51",
+    "slug": "ciplyonok-spyashi",
+    "title": "Цыпленок спящий",
+    "article": "1028",
     "category": "soap",
     "tags": [
       "kids",
@@ -7277,18 +7277,18 @@
     ],
     "images": [
       {
-        "src": "/catalog/soap/utyata-01.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADQAQCdASoQABAAA4BaJZgCdAEOI1C4AAD8f3jHUSBZyI313UC2991xFO9+/eLtf8y7SLCDml3m+WF2jrZr9wDge0AAAA==",
-        "alt": "Утята"
-      },
-      {
         "src": "/catalog/soap/utyata-02.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAAAQAgCdASoQABAAA4BaJbACdAEPCf0cg+wAAP5ZiEBgCM8O0z11+x6ZwLvBm8dWmGWritx/TtJGYyfBgkx0YPjLpxV6vK4AAAA=",
         "alt": "Утята — ракурс 2"
+      },
+      {
+        "src": "/catalog/soap/utyata-01.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADQAQCdASoQABAAA4BaJZgCdAEOI1C4AAD8f3jHUSBZyI313UC2991xFO9+/eLtf8y7SLCDml3m+WF2jrZr9wDge0AAAA==",
+        "alt": "Утята"
       },
       {
         "src": "/catalog/soap/utyata-03.webp",
@@ -7300,14 +7300,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Спящие утята — на блюдце-сердце и в деревянном ящичке. Клювы и лапки расписываются вручную, поэтому мордочки чуть разные.",
+    "description": "Спящий цыпленок. ",
     "specs": {},
     "tones": [
       "#F9CCB2",
       "#F9D8C4",
       "#E8CFBF"
     ],
-    "order": 670
+    "order": 670,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-tsyplenok-v-skorlupe",
