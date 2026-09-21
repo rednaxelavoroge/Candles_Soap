@@ -4434,7 +4434,7 @@
       "#F9B7A6",
       "#F9ABA3"
     ],
-    "order": 640,
+    "order": 650,
     "videos": [],
     "related": []
   },
@@ -5729,7 +5729,7 @@
       "#F3DBC7",
       "#E4D1BC"
     ],
-    "order": 570
+    "order": 580
   },
   {
     "id": "soap-konfety",
@@ -6660,7 +6660,7 @@
       "#ECE764",
       "#F2D943"
     ],
-    "order": 630
+    "order": 640
   },
   {
     "id": "soap-vaflya-s-yagodoy",
@@ -6729,7 +6729,7 @@
       "#EFDBD3",
       "#DDD2C8"
     ],
-    "order": 580
+    "order": 590
   },
   {
     "id": "soap-mishka-s-sharami",
@@ -6766,7 +6766,7 @@
       "#EBDCD7",
       "#DBD2C9"
     ],
-    "order": 590
+    "order": 600
   },
   {
     "id": "soap-zaytsy",
@@ -6810,7 +6810,7 @@
       "#F0DBCC",
       "#DDD2C7"
     ],
-    "order": 600
+    "order": 610
   },
   {
     "id": "soap-buket-v-pakete",
@@ -7163,7 +7163,7 @@
       "#F9D8C4",
       "#E8CFBF"
     ],
-    "order": 610
+    "order": 620
   },
   {
     "id": "soap-tsyplenok-v-skorlupe",
@@ -7194,7 +7194,7 @@
       "#F5DAC9",
       "#E6D0C0"
     ],
-    "order": 620
+    "order": 630
   },
   {
     "id": "soap-tsvety-v-korobke",
@@ -7239,7 +7239,7 @@
       "#F9C6C6",
       "#E1D0CA"
     ],
-    "order": 650
+    "order": 570
   },
   {
     "id": "soap-desert-s-malinoy",
