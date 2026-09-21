@@ -5124,7 +5124,7 @@
       "#A2E4F0",
       "#C9D6D8"
     ],
-    "order": 830
+    "order": 790
   },
   {
     "id": "soap-kniga-s-pionami",
@@ -6660,7 +6660,7 @@
       "#ECE764",
       "#F2D943"
     ],
-    "order": 790
+    "order": 800
   },
   {
     "id": "soap-vaflya-s-yagodoy",
@@ -7329,7 +7329,7 @@
       "#CAE9B1",
       "#D4D6B9"
     ],
-    "order": 800
+    "order": 810
   },
   {
     "id": "soap-plate",
@@ -7496,7 +7496,7 @@
       "#99F2E9",
       "#AADEE4"
     ],
-    "order": 810
+    "order": 820
   },
   {
     "id": "soap-snezhinki-pechene",
@@ -7878,7 +7878,7 @@
       "#E6DDD7",
       "#DDD3B9"
     ],
-    "order": 820
+    "order": 830
   },
   {
     "id": "soap-mishki-v-korobke",
