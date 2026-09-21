@@ -6298,11 +6298,10 @@
     "id": "soap-tabletki",
     "slug": "tabletki",
     "title": "Таблетки",
-    "article": "МЛ-28",
+    "article": "1109",
     "category": "soap",
     "tags": [
       "men",
-      "gift",
       "misc"
     ],
     "images": [
@@ -6323,14 +6322,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Мыло-блистер: серебристая подложка с белыми таблетками в ячейках. Шутка для врача или того, кто устал болеть.",
+    "description": "Мыло-блистер: серебристая подложка с белыми таблетками в ячейках. Шуточный подарок для врача или того, кто устал болеть.",
     "specs": {},
     "tones": [
       "#ECE8E2",
       "#E2DED8",
       "#D7D3CC"
     ],
-    "order": 510
+    "order": 510,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-buterbrod-s-ikroy",
