@@ -6487,7 +6487,7 @@
     "id": "soap-lavanda",
     "slug": "lavanda",
     "title": "Букет лаванды",
-    "article": "МЛ-33",
+    "article": "1052",
     "category": "soap",
     "tags": [
       "flowers",
@@ -6504,14 +6504,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Связка лавандовых соцветий на стебле: каждое соцветие проработано зерном, стебель уходит зелёным. Кладётся в бельё как саше.",
+    "description": "Букет лаванды",
     "specs": {},
     "tones": [
       "#F9C7E2",
       "#E6E0BC",
       "#DDD2C9"
     ],
-    "order": 520
+    "order": 520,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-meduzy",
