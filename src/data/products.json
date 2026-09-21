@@ -9965,9 +9965,9 @@
   },
   {
     "id": "soap-vosmoe-marta",
-    "slug": "vosmoe-marta",
-    "title": "8 марта с ландышами",
-    "article": "МЛ-108",
+    "slug": "vosmoe-marta-lili",
+    "title": "8 марта с лилиями",
+    "article": "1139",
     "category": "soap",
     "tags": [
       "flowers",
@@ -9976,13 +9976,6 @@
     ],
     "images": [
       {
-        "src": "/catalog/soap/vosmoe-marta-01.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAAAQAgCdASoQABAAA4BaJYwBTAA9EHkI81q2AP7v0SgrZl4WTlbQm1KbJTCrbM2fUjuwBFPkRGIsuQZjAyBMg2AA",
-        "alt": "8 марта с ландышами"
-      },
-      {
         "src": "/catalog/soap/vosmoe-marta-02.webp",
         "width": 1600,
         "height": 1600,
@@ -9990,30 +9983,25 @@
         "alt": "8 марта с ландышами — ракурс 2"
       },
       {
-        "src": "/catalog/soap/vosmoe-marta-03.webp",
+        "src": "/catalog/soap/vosmoe-marta-01.webp",
         "width": 1600,
         "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAABQAQCdASoQABAAA4BaJZQABDOAAP7s+I/+TfcyYvJX9JnR5/I5umwedU0ZJ98yxbt2gBAlQe+rBPPts9+lwQAA",
-        "alt": "8 марта с ландышами — ракурс 3"
-      },
-      {
-        "src": "/catalog/soap/vosmoe-marta-04.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAADQAQCdASoQABAAA4BaJZwAAp1NJeX4oAD+3uww0JINeqLW+YWZlhVW0TYqZiGlSkhWicGlNM9TEnF+ma3gAA==",
-        "alt": "8 марта с ландышами — ракурс 4"
+        "blurDataURL": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAAAQAgCdASoQABAAA4BaJYwBTAA9EHkI81q2AP7v0SgrZl4WTlbQm1KbJTCrbM2fUjuwBFPkRGIsuQZjAyBMg2AA",
+        "alt": "8 марта с ландышами"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Восьмёрка с объёмными цветами: по цифре пущены гиацинты и ландыши на зелёных листьях. Отливается к весеннему празднику, цветы можно выбрать.",
+    "description": "Восьмёрка с объёмными цветами. С лилиями",
     "specs": {},
     "tones": [
       "#F9C6E8",
       "#E7DDDB",
       "#D8D2CE"
     ],
-    "order": 850
+    "order": 850,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-morozhenoe-v-kremanke",
