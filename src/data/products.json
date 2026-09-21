@@ -8287,8 +8287,8 @@
   {
     "id": "soap-mashinka-s-elkoy",
     "slug": "mashinka-s-elkoy",
-    "title": "Машина с ёлкой",
-    "article": "МЛ-71",
+    "title": "Машина с ёлкой 2d",
+    "article": "1038",
     "category": "soap",
     "tags": [
       "new-year",
@@ -8302,32 +8302,20 @@
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAwAgCdASoQABAAA4BaJaACdAD6ClFsn1w6gAD+3ugT7uQZVn1NUI+1byZsQsPcMQaA+S7ZBjq23UaSnpc4q0UlGVmWQ1YARRpnpbUUdzwAAA==",
         "alt": "Машина с ёлкой"
-      },
-      {
-        "src": "/catalog/soap/mashinka-s-elkoy-02.webp",
-        "width": 1600,
-        "height": 1200,
-        "blurDataURL": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAABQAgCdASoQAAwAA4BaJZACw7Ef/ReTCrrKAAAA/rHUrXuU1lVKeKBmnAfho3DYzm/kV5LY2JJkTijkFoEZpD9oU5V8zw+YpPYZ/URX4PW8LIVufgAAAA==",
-        "alt": "Машина с ёлкой — ракурс 2"
-      },
-      {
-        "src": "/catalog/soap/mashinka-s-elkoy-03.webp",
-        "width": 1200,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAABQAgCdASoMABAAA4BaJagC7AELZBHsiT53KcAA/uEyJx5Twv+7gYTtk4if8HB1UPpOZQYEb20VR6SJpakw5XC02UwEgRh4DBRyRFrmVagAAA==",
-        "alt": "Машина с ёлкой — ракурс 3"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Красный автомобиль с ёлкой на крыше — сюжет, который все узнают. Ёлка лепится отдельно и ставится на багажник.",
+    "description": "Красный автомобиль с ёлкой на крышею Новогодний сюжет",
     "specs": {},
     "tones": [
       "#F9C5AB",
       "#E9DDD0",
       "#DCD2C7"
     ],
-    "order": 790
+    "order": 790,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-rakushka-s-zhemchuzhinami",
