@@ -8397,7 +8397,7 @@
     "id": "soap-mishki-v-korobke",
     "slug": "mishki-v-korobke",
     "title": "Мишки в коробке",
-    "article": "МЛ-69",
+    "article": "1113",
     "category": "soap",
     "tags": [
       "kids",
@@ -8421,14 +8421,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Мишки и сердца, разложенные по ячейкам белой коробки-витрины. Набор дарится как есть, ячейки держат фигурки на месте.",
+    "description": "Мишки и сердца, разложенные по ячейкам коробки-витрины. ",
     "specs": {},
     "tones": [
       "#F9C9CE",
       "#F9C1AB",
       "#DED2C3"
     ],
-    "order": 830
+    "order": 830,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-figurki-na-podstavke",
