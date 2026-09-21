@@ -9285,7 +9285,7 @@
     "id": "soap-guby",
     "slug": "guby",
     "title": "Губы",
-    "article": "МЛ-92",
+    "article": "1147",
     "category": "soap",
     "tags": [
       "women",
@@ -9298,13 +9298,6 @@
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAADQAgCdASoQABAAA4BaJbACdDiAN5ABfrfE7nZRaQMAAP6NRej4iGGZCLG+x0qumkGVwTW3IEOqI09Nxx0uF2CKZH4Icc63m4e1Qqrjtx8mMslHsEtjOinXxH7AjKfJ+YWFy+ORjMU4AA==",
         "alt": "Губы"
-      },
-      {
-        "src": "/catalog/soap/guby-02.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAQCdASoQABAAA4BaJbACdAEO9V756zgA/tMynHzYMj8Gfug8NzNMbSKcu/bgyh4Bu7utoQhCwsjeowUb2CWoITsMNYO23O6Nz+qGwAA=",
-        "alt": "Губы — ракурс 2"
       },
       {
         "src": "/catalog/soap/guby-03.webp",
@@ -9326,25 +9319,42 @@
         "height": 1067,
         "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADwAQCdASoQAAsAA4BaJZACdAEe3e8bfmAA/uzhvbJ3zZ4Bkwz3m+LeuzoEAtQRFgAexOW8V8sTLAkpkZzQGfI44U+86mFeGtArqAAA",
         "alt": "Губы — ракурс 5"
-      },
-      {
-        "src": "/catalog/soap/guby-06.webp",
-        "width": 1600,
-        "height": 1200,
-        "blurDataURL": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAAAwAgCdASoQAAwAA4BaJbACdAD7K+oV+fkR4AD+yl19hWGNPfU47qKL01SpaxpOCJItvprvl2epp4hRnUfB3hSaOR3gYXao3Jb0QYmZUYStbdteiAittjgcDwFpzSjur4aXc6xz2fD5OzO8yLg3O9FEAAA=",
-        "alt": "Губы — ракурс 6"
       }
     ],
-    "video": null,
+    "video": {
+      "kind": "file",
+      "src": "/catalog/video/video-1789899661552.mp4",
+      "poster": {
+        "src": "/catalog/video/video-1789899661552-poster.webp",
+        "width": 720,
+        "height": 1280,
+        "blurDataURL": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAADQAgCdASoQABAAA4BaJbACdDiAN5ABfrfE7nZRaQMAAP6NRej4iGGZCLG+x0qumkGVwTW3IEOqI09Nxx0uF2CKZH4Icc63m4e1Qqrjtx8mMslHsEtjOinXxH7AjKfJ+YWFy+ORjMU4AA==",
+        "alt": "мыло - губы гелевые"
+      }
+    },
     "price": null,
-    "description": "Красные губы с глянцевой поверхностью на рифлёном блюдце. Цвет набирается плотный, глянец держится до конца куска.",
+    "description": "Губы желейные",
     "specs": {},
     "tones": [
       "#F9BABB",
       "#F0DBD1",
       "#DAD3C9"
     ],
-    "order": 840
+    "order": 840,
+    "videos": [
+      {
+        "kind": "file",
+        "src": "/catalog/video/video-1789899661552.mp4",
+        "poster": {
+          "src": "/catalog/video/video-1789899661552-poster.webp",
+          "width": 720,
+          "height": 1280,
+          "blurDataURL": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAADQAgCdASoQABAAA4BaJbACdDiAN5ABfrfE7nZRaQMAAP6NRej4iGGZCLG+x0qumkGVwTW3IEOqI09Nxx0uF2CKZH4Icc63m4e1Qqrjtx8mMslHsEtjOinXxH7AjKfJ+YWFy+ORjMU4AA==",
+          "alt": "мыло - губы гелевые"
+        }
+      }
+    ],
+    "related": []
   },
   {
     "id": "soap-kryshka-banki",
