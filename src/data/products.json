@@ -8156,9 +8156,9 @@
   },
   {
     "id": "soap-tyulpany-v-korobke",
-    "slug": "tyulpany-v-korobke",
+    "slug": "buket-cvetov-2",
     "title": "Тюльпаны в коробке",
-    "article": "МЛ-74",
+    "article": "1055",
     "category": "soap",
     "tags": [
       "flowers",
@@ -8172,39 +8172,53 @@
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADwAQCdASoQABAAA4BaJZAC7ADRZbkgTpgA/sdZLWOjtWRdUi0xUctPEJ3Lp2fSj+sbOh+4NALZ+M6psNYBTVXvZAQncAAA",
         "alt": "Тюльпаны в коробке"
-      },
-      {
-        "src": "/catalog/soap/tyulpany-v-korobke-02.webp",
-        "width": 1200,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAADwAQCdASoMABAAA4BaJZQAAl2EW78mkAAA/td9/XGJ5CgTztTa/cglzEIW7piLvel14VQD46rAAA==",
-        "alt": "Тюльпаны в коробке — ракурс 2"
-      },
-      {
-        "src": "/catalog/soap/tyulpany-v-korobke-03.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAACQAQCdASoQABAAA4BaJQBdgCB69gAA/fakkaKDhb052UyANJ3ALvXs0gexxeyndrPnOHSY3kTc+w4xPb/PhgpKDAAAAA==",
-        "alt": "Тюльпаны в коробке — ракурс 3"
-      },
-      {
-        "src": "/catalog/soap/tyulpany-v-korobke-04.webp",
-        "width": 1200,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACwAQCdASoMABAAA4BaJZwAAuTeSAYAAP7nJ/s9hKjT2pm7HIuzKwJqm8mOPCAA",
-        "alt": "Тюльпаны в коробке — ракурс 4"
       }
     ],
-    "video": null,
+    "video": {
+      "kind": "file",
+      "src": "/catalog/video/1-1789900962616.mp4",
+      "poster": {
+        "src": "/catalog/video/1-1789900962616-poster.webp",
+        "width": 720,
+        "height": 1280,
+        "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADwAQCdASoQABAAA4BaJZAC7ADRZbkgTpgA/sdZLWOjtWRdUi0xUctPEJ3Lp2fSj+sbOh+4NALZ+M6psNYBTVXvZAQncAAA",
+        "alt": "мыло - цветные букеты1"
+      }
+    },
     "price": null,
-    "description": "Коробка-витрина с букетом тюльпанов и пионов под прозрачной крышкой. Через крышку видно весь букет — подарок не нужно разворачивать.",
+    "description": "Букет цветов в прямоугольной упаковке",
     "specs": {},
     "tones": [
       "#F9C8CB",
       "#F9D2DD",
       "#E3CFD3"
     ],
-    "order": 580
+    "order": 580,
+    "videos": [
+      {
+        "kind": "file",
+        "src": "/catalog/video/1-1789900962616.mp4",
+        "poster": {
+          "src": "/catalog/video/1-1789900962616-poster.webp",
+          "width": 720,
+          "height": 1280,
+          "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADwAQCdASoQABAAA4BaJZAC7ADRZbkgTpgA/sdZLWOjtWRdUi0xUctPEJ3Lp2fSj+sbOh+4NALZ+M6psNYBTVXvZAQncAAA",
+          "alt": "мыло - цветные букеты1"
+        }
+      },
+      {
+        "kind": "file",
+        "src": "/catalog/video/video-1789897141946.mp4",
+        "poster": {
+          "src": "/catalog/video/video-1789897141946-poster.webp",
+          "width": 720,
+          "height": 1280,
+          "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADwAQCdASoQABAAA4BaJZAC7ADRZbkgTpgA/sdZLWOjtWRdUi0xUctPEJ3Lp2fSj+sbOh+4NALZ+M6psNYBTVXvZAQncAAA",
+          "alt": "мыло - букет тюльпанов-сборка"
+        }
+      }
+    ],
+    "related": []
   },
   {
     "id": "soap-pryanichnyy-domik",
