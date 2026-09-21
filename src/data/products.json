@@ -8239,9 +8239,9 @@
   },
   {
     "id": "soap-balerina",
-    "slug": "balerina",
-    "title": "Балерина",
-    "article": "МЛ-66",
+    "slug": "devushka-s-sharami",
+    "title": "Девушка с шарами",
+    "article": "1015",
     "category": "soap",
     "tags": [
       "women",
@@ -8254,6 +8254,13 @@
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAAAQAgCdASoQABAAA4BaJZgC7ADRk6xfLvcAAP3timfZ50DOeLnGJj3HYnIN2X6lPQ+T4jXK5Bx4CYzGr1pbw7+7AE30FI+ddZ6CGLw0BHzrVIPZJZU8OqEBzTvkjU+RzneSKmMU0AA=",
         "alt": "Балерина"
+      },
+      {
+        "src": "/catalog/soap/devushka-s-sharami-1790028263483-1.webp",
+        "width": 1400,
+        "height": 1400,
+        "blurDataURL": "data:image/webp;base64,UklGRlQCAABXRUJQVlA4WAoAAAAgAAAADwAADwAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggZgAAADACAJ0BKhAAEAADgFolmAJ0Bi5Di5bHJiQAAP6X8o8k4kRkFlaSgVm8rYkUZVRR+ayg5/fXGsm5rTp6NdCuSOvoz6kBOPmX4IJBbcMZw4dofFZvL4TtriyinXV0lyGAd4lBI+AAAA==",
+        "alt": "Девушка с шарами"
       }
     ],
     "video": null,
@@ -8265,7 +8272,9 @@
       "#EADBE2",
       "#DBD1D1"
     ],
-    "order": 870
+    "order": 870,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-avtomobil",
