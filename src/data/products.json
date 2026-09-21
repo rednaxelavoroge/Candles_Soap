@@ -7792,7 +7792,7 @@
     "id": "soap-plate",
     "slug": "plate",
     "title": "Платье",
-    "article": "МЛ-56",
+    "article": "1019",
     "category": "soap",
     "tags": [
       "women",
@@ -7830,14 +7830,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Платье с драпированным лифом и пышной юбкой: складки идут от талии к подолу. Отливается розовым и сиреневым, отдельно кладётся цветок.",
+    "description": "Платье с драпированным лифом и пышной юбкой: складки идут от талии к подолу. ",
     "specs": {},
     "tones": [
       "#EAD4F0",
       "#AFCCF0",
       "#EACCD8"
     ],
-    "order": 860
+    "order": 860,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-pryaniki-novogodnie",
