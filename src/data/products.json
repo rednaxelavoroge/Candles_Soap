@@ -7909,9 +7909,9 @@
   },
   {
     "id": "soap-tsvetok-na-tarelke",
-    "slug": "tsvetok-na-tarelke",
-    "title": "Цветок на тарелке",
-    "article": "МЛ-65",
+    "slug": "tsvetok",
+    "title": "Цветок в ассортименте",
+    "article": "1064",
     "category": "soap",
     "tags": [
       "flowers",
@@ -7924,18 +7924,27 @@
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAABwAgCdASoQABAAA4BaJbACdAEXf/mc7qjK02SAAP5xUb4ljjLTrCof/pWP3mXDSusmuHrmoXgkpV6c1HV1Hkh8+RAbbUOztt1kI/EduGAqAR+3gShN0gCxkbgAAA==",
         "alt": "Цветок на тарелке"
+      },
+      {
+        "src": "/catalog/soap/tsvetok-1790023530737-1.webp",
+        "width": 1400,
+        "height": 1050,
+        "blurDataURL": "data:image/webp;base64,UklGRlYCAABXRUJQVlA4WAoAAAAgAAAADwAACwAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggaAAAAFACAJ0BKhAADAADgFoloALsBigf2AoWScuIwAD+7FYAm71f/O4+0qOT36+DibUy5mvVlud0CDn2RSnnmuCm2Wb2pjMibAu933jWsd19WowX7HYTWi3+0KzWrf1R+3i38Omkkm5GQAAA",
+        "alt": "Цветок в ассортименте"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Крупный сиреневый цветок с раскрытыми лепестками на белой тарелке. Лепестки идут слоями, к середине сходятся плотнее.",
+    "description": "1 любой цветок",
     "specs": {},
     "tones": [
       "#F9B8DB",
       "#F9CCE7",
       "#DCD1D4"
     ],
-    "order": 650
+    "order": 650,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-balerina",
