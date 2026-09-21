@@ -5210,8 +5210,8 @@
   {
     "id": "soap-buket-v-korobke",
     "slug": "buket-v-korobke",
-    "title": "Букет в коробке",
-    "article": "МЛ-06",
+    "title": "Букет цветов в упаковке 11 пакет",
+    "article": "1121",
     "category": "soap",
     "tags": [
       "flowers",
@@ -5219,18 +5219,18 @@
     ],
     "images": [
       {
-        "src": "/catalog/soap/buket-v-korobke-01.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAADwAQCdASoQABAAA4BaJZQAAudgSRa7MwAA/tMqa7WJQOlJ7T/FZ5+8mjzlXqusPgPTZGxtoFyiALpj6AA=",
-        "alt": "Мятная коробка с букетом мыльных цветов"
-      },
-      {
         "src": "/catalog/soap/buket-v-korobke-02.webp",
         "width": 1200,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAACQAQCdASoMABAAA4BaJZQAApYI6AAA/O8XXDaNsgLkz6Fgbf5QipPR20bhsfzS7ACZJfcwl1WAAA==",
         "alt": "С коробки снимают крышку, под ней мыльные цветы"
+      },
+      {
+        "src": "/catalog/soap/buket-v-korobke-01.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAADwAQCdASoQABAAA4BaJZQAAudgSRa7MwAA/tMqa7WJQOlJ7T/FZ5+8mjzlXqusPgPTZGxtoFyiALpj6AA=",
+        "alt": "Мятная коробка с букетом мыльных цветов"
       },
       {
         "src": "/catalog/soap/buket-v-korobke-03.webp",
@@ -5240,9 +5240,19 @@
         "alt": "Букет мыльных цветов сверху"
       }
     ],
-    "video": null,
+    "video": {
+      "kind": "file",
+      "src": "/catalog/video/1-1789900962616.mp4",
+      "poster": {
+        "src": "/catalog/video/1-1789900962616-poster.webp",
+        "width": 720,
+        "height": 1280,
+        "blurDataURL": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAACQAQCdASoMABAAA4BaJZQAApYI6AAA/O8XXDaNsgLkz6Fgbf5QipPR20bhsfzS7ACZJfcwl1WAAA==",
+        "alt": "мыло - цветные букеты1"
+      }
+    },
     "price": null,
-    "description": "Мятная шляпная коробка, доверху набитая мыльными цветами: пионы, ранункулюсы, мелкие соцветия и веточки зелени. Оттенки идут от пудрового до лилового, ни один цветок не повторяется. Крышка снимается — под ней такой же плотный слой, коробка набита не только сверху.",
+    "description": "Букет цветов в упаковке для подарка. Эти цветы не завянут",
     "specs": {
       "size": "коробка 14 × 14 см",
       "scent": "Роза",
@@ -5254,7 +5264,21 @@
       "#DFDFD9",
       "#DAD2CC"
     ],
-    "order": 600
+    "order": 600,
+    "videos": [
+      {
+        "kind": "file",
+        "src": "/catalog/video/1-1789900962616.mp4",
+        "poster": {
+          "src": "/catalog/video/1-1789900962616-poster.webp",
+          "width": 720,
+          "height": 1280,
+          "blurDataURL": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAACQAQCdASoMABAAA4BaJZQAApYI6AAA/O8XXDaNsgLkz6Fgbf5QipPR20bhsfzS7ACZJfcwl1WAAA==",
+          "alt": "мыло - цветные букеты1"
+        }
+      }
+    ],
+    "related": []
   },
   {
     "id": "soap-morskie-kruglyshi",
