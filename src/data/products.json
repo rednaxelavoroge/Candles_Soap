@@ -8093,7 +8093,7 @@
     "id": "soap-barelef-materinstvo",
     "slug": "barelef-materinstvo",
     "title": "Беременная",
-    "article": "МЛ-62",
+    "article": "1104",
     "category": "soap",
     "tags": [
       "newborn",
@@ -8110,14 +8110,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Овальный барельеф: женский силуэт в ожидании ребёнка, сине-белый. Рельеф мягкий, без резких линий.",
+    "description": "Овальный барельеф: женский силуэт в ожидании ребёнка. Рельеф мягкий, без резких линий.",
     "specs": {},
     "tones": [
       "#C4C3F0",
       "#E0DDEA",
       "#D6D2D9"
     ],
-    "order": 910
+    "order": 910,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-butylka-i-ryumka",
