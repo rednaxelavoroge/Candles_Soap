@@ -8264,9 +8264,9 @@
   },
   {
     "id": "soap-figurki-na-podstavke",
-    "slug": "figurki-na-podstavke",
-    "title": "Фигурки на подставке",
-    "article": "МЛ-70",
+    "slug": "slonyinok-s-sharami",
+    "title": "Слоненок с шарами 2d",
+    "article": "1026",
     "category": "soap",
     "tags": [
       "kids",
@@ -8279,39 +8279,20 @@
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAABwAgCdASoQABAAA4BaJagCdEf/gdGYvbM8tYoAAP7UsFsedUWCZJEGbGoibCpD36rCQJzWf4N3UERYDlBRodOBwIHSio1ndzhu7X1rMAA=",
         "alt": "Фигурки на подставке"
-      },
-      {
-        "src": "/catalog/soap/figurki-na-podstavke-02.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAQAgCdASoQABAAA4BaJaACdAECpu2L1DOQAP7nktGTe9AoXFzU45wHHFIHh9ZLjAmcSTxuzK1fnapHv+3I6MqTftzyocRDIyCyhB4/FxBgwAAA",
-        "alt": "Фигурки на подставке — ракурс 2"
-      },
-      {
-        "src": "/catalog/soap/figurki-na-podstavke-03.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAQAgCdASoQABAAA4BaJaACdAEDH3zX7dSAAP7nktIsqVOz7NrjK/3Ka2AOToL4B1qv+v1SwvyMvEj7cikPwalE8CqzRaQ+qzAtmTdYEAAAAA==",
-        "alt": "Фигурки на подставке — ракурс 3"
-      },
-      {
-        "src": "/catalog/soap/figurki-na-podstavke-04.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAQAgCdASoQABAAA4BaJZACdAD5PIZLUEMAAP7v37nhRsjYG0KJVpmzyQQON5S/E4hA+zHntq85sMPeegUSLQP8R11w1DmYT6HGtHwAAqsKDwjzT5fKgcWIohe4SRgA",
-        "alt": "Фигурки на подставке — ракурс 4"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Фигурки на деревянных блюдцах: слонёнок с шарами, пингвин в шапке, снеговик, мишка в шарфе. Каждая расписывается вручную, блюдце входит в набор.",
+    "description": "Слоненок с шарами ",
     "specs": {},
     "tones": [
       "#F9D1B4",
       "#EADDD3",
       "#DED2C6"
     ],
-    "order": 730
+    "order": 730,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-mashinka-s-elkoy",
