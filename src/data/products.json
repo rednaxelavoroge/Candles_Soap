@@ -7313,7 +7313,7 @@
     "id": "soap-tsyplenok-v-skorlupe",
     "slug": "tsyplenok-v-skorlupe",
     "title": "Цыплёнок в скорлупе",
-    "article": "МЛ-52",
+    "article": "1027",
     "category": "soap",
     "tags": [
       "kids",
@@ -7327,18 +7327,49 @@
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAAAwAgCdASoQABAAA4BaJZgCdAEO95JS/9XIAAD+kD7HN1Zy54c1UTDr1xCxVbZScFwy2MQVcztzp4AA",
         "alt": "Цыплёнок в скорлупе"
+      },
+      {
+        "src": "/catalog/soap/tsyplenok-v-skorlupe-1790024078907-1.webp",
+        "width": 1400,
+        "height": 1400,
+        "blurDataURL": "data:image/webp;base64,UklGRkoCAABXRUJQVlA4WAoAAAAgAAAADwAADwAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggXAAAALABAJ0BKhAAEAADgFolkAJ0Bi0A2gAA/FzMDAYqRyRamduS2v7kdVICs7OW18uPtX1GZvtOJN/vr8+I9bE2DPYhY4TTWU9GCCTb2zUx7iqL3k/jHE6wZbb6SmAA",
+        "alt": "Цыплёнок в скорлупе"
       }
     ],
-    "video": null,
+    "video": {
+      "kind": "file",
+      "src": "/catalog/video/video-1789901360738.mp4",
+      "poster": {
+        "src": "/catalog/video/video-1789901360738-poster.webp",
+        "width": 720,
+        "height": 1280,
+        "blurDataURL": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAAAwAgCdASoQABAAA4BaJZgCdAEO95JS/9XIAAD+kD7HN1Zy54c1UTDr1xCxVbZScFwy2MQVcztzp4AA",
+        "alt": "мыло - цыпленок"
+      }
+    },
     "price": null,
-    "description": "Цыплёнок, вылупляющийся из скорлупы: половинка скорлупы отлита отдельно, цыплёнок сидит в ней. Пух проработан зерном.",
+    "description": "Цыпленок в скорлупе, может быть и без скорлупы. Этот веселый цыпленок вдохновит вашего ребенка мыть руки",
     "specs": {},
     "tones": [
       "#F9D0AA",
       "#F5DAC9",
       "#E6D0C0"
     ],
-    "order": 660
+    "order": 660,
+    "videos": [
+      {
+        "kind": "file",
+        "src": "/catalog/video/video-1789901360738.mp4",
+        "poster": {
+          "src": "/catalog/video/video-1789901360738-poster.webp",
+          "width": 720,
+          "height": 1280,
+          "blurDataURL": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAAAwAgCdASoQABAAA4BaJZgCdAEO95JS/9XIAAD+kD7HN1Zy54c1UTDr1xCxVbZScFwy2MQVcztzp4AA",
+          "alt": "мыло - цыпленок"
+        }
+      }
+    ],
+    "related": []
   },
   {
     "id": "soap-tsvety-v-korobke",
