@@ -6615,7 +6615,7 @@
     "id": "soap-tyulpany",
     "slug": "tyulpany",
     "title": "Тюльпаны",
-    "article": "МЛ-37",
+    "article": "1051",
     "category": "soap",
     "tags": [
       "flowers",
@@ -6633,14 +6633,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Три тюльпана с листьями на сиреневом поле. Бутоны объёмные, листья лежат по диагонали — рисунок читается с любой стороны.",
+    "description": "Мыло с тюльпанами",
     "specs": {},
     "tones": [
       "#F9C0E7",
       "#F9D3C8",
       "#E1D1C9"
     ],
-    "order": 540
+    "order": 540,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-serdechki",
