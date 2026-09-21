@@ -6850,13 +6850,14 @@
   },
   {
     "id": "soap-shlepanets",
-    "slug": "shlepanets",
+    "slug": "shlepki",
     "title": "Шлепки",
-    "article": "МЛ-44",
+    "article": "1018",
     "category": "soap",
     "tags": [
       "sea",
-      "kids"
+      "kids",
+      "women"
     ],
     "images": [
       {
@@ -6869,14 +6870,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Пляжный шлёпанец с цветами на ремешке: подошва прорисована рифлением, цветы лепятся отдельно.",
+    "description": "Пляжные шлепанцы с цветами",
     "specs": {},
     "tones": [
       "#B1EDF0",
       "#E4DED3",
       "#CFD5D5"
     ],
-    "order": 500
+    "order": 500,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-koshelek",
