@@ -7012,9 +7012,9 @@
   },
   {
     "id": "soap-zaytsy",
-    "slug": "zaytsy",
-    "title": "Зайка с зайчонком",
-    "article": "МЛ-42",
+    "slug": "zayka-s-malishom",
+    "title": "Зайка с малышом 2d",
+    "article": "1031",
     "category": "soap",
     "tags": [
       "kids",
@@ -7027,32 +7027,20 @@
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAABwAgCdASoQABAAA4BaJbACdAECwgQs3kxcfawAAP3tMr/PKgeEXxWjmQBqtEZx5EEaA8tfS47P2n1kPzOl5AgCFI1+jBB3MXgmK+kt2JUYpK6EYAA=",
         "alt": "Зайка с зайчонком"
-      },
-      {
-        "src": "/catalog/soap/zaytsy-02.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADwAQCdASoQABAAA4BaJZwAAu1oSHZ0tYAA/sNs/69HFQ4aqx8RvAuZfMnAj936BHQiTWuMuSfO0NhIl7EdqAvkEHJEAAAA",
-        "alt": "Зайка с зайчонком — ракурс 2"
-      },
-      {
-        "src": "/catalog/soap/zaytsy-03.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADQAQCdASoQABAAA4BaJZwAAq9boyYQAAD+rysAKRIgS8p6BFXjpbf7gi8zRDmJcdRCIoPaoxq/Hvfesxk9wijp5XAAAA==",
-        "alt": "Зайка с зайчонком — ракурс 3"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Пара зайцев, прижавшихся друг к другу, и зайчонок отдельно. Серый тон с белым подпалом, уши подняты — фигурка стоит сама.",
+    "description": "Зайка с малышом",
     "specs": {},
     "tones": [
       "#F9C5A4",
       "#F0DBCC",
       "#DDD2C7"
     ],
-    "order": 740
+    "order": 740,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-buket-v-pakete",
