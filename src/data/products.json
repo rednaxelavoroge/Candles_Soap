@@ -1,5 +1,30 @@
 [
   {
+    "id": "p-1790024633149",
+    "category": "soap",
+    "slug": "medvezonok-so-snejkami",
+    "title": "Медвежонок со снежками 2d",
+    "article": "1023",
+    "description": "Медвежонок со снежками",
+    "images": [
+      {
+        "src": "/catalog/soap/medvezonok-so-snejkami-1790024633148-1.webp",
+        "width": 1400,
+        "height": 1400,
+        "blurDataURL": "data:image/webp;base64,UklGRlwCAABXRUJQVlA4WAoAAAAgAAAADwAADwAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggbgAAADACAJ0BKhAAEAADgFolmAJ0BixlHxy2S1wAAP7v2AXQOHTMRwrcKjehzb1K1dCD/1jDQW6TFrsxQfnTksVs6c744YZ/g11Zs78CTKD5ciGN6tq93ZgJ4poYpeyud0ZpbjtrkowCpOhnw1h5wAAA",
+        "alt": "Медвежонок со снежками 2d"
+      }
+    ],
+    "videos": [],
+    "video": null,
+    "price": null,
+    "specs": {},
+    "tags": [
+      "kids"
+    ],
+    "related": []
+  },
+  {
     "id": "p-1790024502282",
     "category": "soap",
     "slug": "snegovik",
