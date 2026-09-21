@@ -5897,8 +5897,8 @@
   {
     "id": "soap-tsvetochnoe-panno",
     "slug": "tsvetochnoe-panno",
-    "title": "Цветочное панно",
-    "article": "МЛ-20",
+    "title": "Букет цветов в упаковке  10 коробка квадратная",
+    "article": "1063",
     "category": "soap",
     "tags": [
       "flowers",
@@ -5906,6 +5906,13 @@
       "march8"
     ],
     "images": [
+      {
+        "src": "/catalog/soap/tsvetochnoe-panno-03.webp",
+        "width": 1600,
+        "height": 1200,
+        "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAACwAQCdASoQAAwAA4BaJaACdADwpizUAP70Minfr7SrbfEhojbDT6FfDR5zm9DeOJFZO2y1bWQsgAE/1D+S0FE/QzIYLfDAAAA=",
+        "alt": "Цветочное панно — ракурс 3"
+      },
       {
         "src": "/catalog/soap/tsvetochnoe-panno-01.webp",
         "width": 1200,
@@ -5919,32 +5926,42 @@
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAQAgCdASoMABAAA4BaJaACdADw3CJcV9ngAP7vaG+P4clI8ENqI7wGlNPFeE9zthOHMqvnLFsw+dATRv9QWWVo8hiprWHVK2xblW5ddLAAAA==",
         "alt": "Цветочное панно — ракурс 2"
-      },
-      {
-        "src": "/catalog/soap/tsvetochnoe-panno-03.webp",
-        "width": 1600,
-        "height": 1200,
-        "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAACwAQCdASoQAAwAA4BaJaACdADwpizUAP70Minfr7SrbfEhojbDT6FfDR5zm9DeOJFZO2y1bWQsgAE/1D+S0FE/QzIYLfDAAAA=",
-        "alt": "Цветочное панно — ракурс 3"
-      },
-      {
-        "src": "/catalog/soap/tsvetochnoe-panno-04.webp",
-        "width": 1600,
-        "height": 1200,
-        "blurDataURL": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAAAQAgCdASoQAAwAA4BaJZgC7AEPh7Cz/HgAAP7pP9T6n4z1fGsJ3FIEfvn4DXRwgaX7dsWoIp6ibpOIChKjUCAA",
-        "alt": "Цветочное панно — ракурс 4"
       }
     ],
-    "video": null,
+    "video": {
+      "kind": "file",
+      "src": "/catalog/video/1-1789900962616.mp4",
+      "poster": {
+        "src": "/catalog/video/1-1789900962616-poster.webp",
+        "width": 720,
+        "height": 1280,
+        "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAACwAQCdASoQAAwAA4BaJaACdADwpizUAP70Minfr7SrbfEhojbDT6FfDR5zm9DeOJFZO2y1bWQsgAE/1D+S0FE/QzIYLfDAAAA=",
+        "alt": "мыло - цветные букеты1"
+      }
+    },
     "price": null,
-    "description": "Плитка на мешковине, засаженная объёмными цветами: сиреневые пионы, розовые бутоны, зелёные листья. Каждый цветок лепится отдельно и садится на основу вручную — букет получается свой.",
+    "description": "Букет цветов в квадратной подарочной коробке",
     "specs": {},
     "tones": [
       "#D2F58A",
       "#EDE290",
       "#F9C3B8"
     ],
-    "order": 620
+    "order": 620,
+    "videos": [
+      {
+        "kind": "file",
+        "src": "/catalog/video/1-1789900962616.mp4",
+        "poster": {
+          "src": "/catalog/video/1-1789900962616-poster.webp",
+          "width": 720,
+          "height": 1280,
+          "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAACwAQCdASoQAAwAA4BaJaACdADwpizUAP70Minfr7SrbfEhojbDT6FfDR5zm9DeOJFZO2y1bWQsgAE/1D+S0FE/QzIYLfDAAAA=",
+          "alt": "мыло - цветные букеты1"
+        }
+      }
+    ],
+    "related": []
   },
   {
     "id": "soap-beze-s-yagodami",
