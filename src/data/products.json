@@ -8194,43 +8194,6 @@
     "order": 1040
   },
   {
-    "id": "soap-assorti-figurok",
-    "slug": "assorti-figurok",
-    "title": "Ассорти фигурок",
-    "article": "МЛ-76",
-    "category": "soap",
-    "tags": [
-      "gift",
-      "kids"
-    ],
-    "images": [
-      {
-        "src": "/catalog/soap/assorti-figurok-01.webp",
-        "width": 1600,
-        "height": 1199,
-        "blurDataURL": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAQAgCdASoQAAwAA4BaJaACdADxMIBYDKQAAP7KJ0RvWKeIXk2n6XmxCd9WlpRWJlYuSrkgKlejLvLWSzeVnf7VO/yV5Zjzhj1NT8a7NLjq8VARunGlTLtnWH8AAA==",
-        "alt": "Ассорти фигурок"
-      },
-      {
-        "src": "/catalog/soap/assorti-figurok-02.webp",
-        "width": 1600,
-        "height": 1123,
-        "blurDataURL": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAwAgCdASoQAAsAA4BaJbACdAYwxWLSuwBHAAD+2BJjowdWwVAL38qpqjQh/5v1YuahttxK6CVGlC4CoGDDCtesI5u/2YGRx8AJWTVTIs8fyzBmCoGx+y5YgIJYEAAA",
-        "alt": "Ассорти фигурок — ракурс 2"
-      }
-    ],
-    "video": null,
-    "price": null,
-    "description": "Раскладка мелких фигур одной партии: пирожные, пингвины, ёлочки, варежки, помада, машинки. Так набор выглядит до того, как его разложат по коробкам, — из него собирают подарок под заказ.",
-    "specs": {},
-    "tones": [
-      "#F9D9C5",
-      "#F7D9CB",
-      "#DED1CA"
-    ],
-    "order": 890
-  },
-  {
     "id": "soap-serdtsa-v-korobke",
     "slug": "serdtsa-v-korobke",
     "title": "Сердца в коробке",
