@@ -7140,33 +7140,36 @@
   },
   {
     "id": "soap-serdechki",
-    "slug": "serdechki",
-    "title": "Сердечки",
-    "article": "МЛ-38",
+    "slug": "serdce3",
+    "title": "Сердце3",
+    "article": "1067",
     "category": "soap",
     "tags": [
       "heart",
-      "kids"
+      "kids",
+      "den-rozhdeniya"
     ],
     "images": [
       {
-        "src": "/catalog/soap/serdechki-01.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAABQAgCdASoQABAAA4BaJbACdDBOAZCGWTlrSgAA/d4FMGIJY3+/qk/3+fmZNu3uUIHT/Y+Tcrvcb3+VDpybjfruXpkHz54oS9/c+cAZFzfZK72zCISSlGFn5fCAAA==",
-        "alt": "Сердечки"
+        "src": "/catalog/soap/serdce3-1790083876822-1.webp",
+        "width": 1400,
+        "height": 1400,
+        "blurDataURL": "data:image/webp;base64,UklGRmICAABXRUJQVlA4WAoAAAAgAAAADwAADwAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggdAAAADACAJ0BKhAAEAADgFolsAJ0BislYFsmls0AAP7y4bkZ2sIOinskS5gNLAnmv27ok+fN5HFF992XB4xCtwlwo+RVT+ApXtYqnMOqd/ZC307o2GrbwomQtMP8zDcrv8O5l4jvaQzUdWBAs+ejve0a5mu9wgAA",
+        "alt": "Сердце3"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Жёлтый прозрачный брусок с двумя сердцами внутри, красным и зелёным. На просвет сердца читаются насквозь.",
+    "description": "Сердце с узором",
     "specs": {},
     "tones": [
       "#F2E7D9",
       "#ECE764",
       "#F2D943"
     ],
-    "order": 970
+    "order": 970,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-vaflya-s-yagodoy",
