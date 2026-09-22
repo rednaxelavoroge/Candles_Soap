@@ -7866,7 +7866,7 @@
     "id": "soap-elka-s-gusenitsey",
     "slug": "zmeya-elka-1",
     "title": "Змея елка 1",
-    "article": "МЛ-55",
+    "article": "1033",
     "category": "soap",
     "tags": [
       "new-year",
@@ -7888,7 +7888,17 @@
         "alt": "Ёлка с гусеницей — ракурс 4"
       }
     ],
-    "video": null,
+    "video": {
+      "kind": "file",
+      "src": "/catalog/video/video-1789902689968.mp4",
+      "poster": {
+        "src": "/catalog/video/video-1789902689968-poster.webp",
+        "width": 720,
+        "height": 1280,
+        "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAAAwAgCdASoMABAAA4BaJYgC7ADdQcu56ecvEAD+3foh7GOp07XR+87er6050xejQSUnwnHsMLeF36tXdcMykAF6z4vObkH0bYpA8AAA",
+        "alt": "мыло-упаковки новогодние"
+      }
+    },
     "price": null,
     "description": "Змея закрутилась в елку с разноцветными игрушками",
     "specs": {},
@@ -7898,7 +7908,19 @@
       "#D4D6B9"
     ],
     "order": 1100,
-    "videos": [],
+    "videos": [
+      {
+        "kind": "file",
+        "src": "/catalog/video/video-1789902689968.mp4",
+        "poster": {
+          "src": "/catalog/video/video-1789902689968-poster.webp",
+          "width": 720,
+          "height": 1280,
+          "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAAAwAgCdASoMABAAA4BaJYgC7ADdQcu56ecvEAD+3foh7GOp07XR+87er6050xejQSUnwnHsMLeF36tXdcMykAF6z4vObkH0bYpA8AAA",
+          "alt": "мыло-упаковки новогодние"
+        }
+      }
+    ],
     "related": []
   },
   {
