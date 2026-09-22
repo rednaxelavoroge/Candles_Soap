@@ -7832,8 +7832,8 @@
   },
   {
     "id": "soap-elka-s-gusenitsey",
-    "slug": "elka-s-gusenitsey",
-    "title": "Ёлка с гусеницей",
+    "slug": "zmeya-elka-1",
+    "title": "Змея елка 1",
     "article": "МЛ-55",
     "category": "soap",
     "tags": [
@@ -7849,20 +7849,6 @@
         "alt": "Ёлка с гусеницей"
       },
       {
-        "src": "/catalog/soap/elka-s-gusenitsey-02.webp",
-        "width": 1200,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADQAQCdASoMABAAA4BaJQBdgCFrpw+QAAD+73pH6mBn7/j/RfL9fbi2KHEBnN0cJejQ+njGtbC0GOkq4ENfk5BiA21ygNTkccAAAA==",
-        "alt": "Ёлка с гусеницей — ракурс 2"
-      },
-      {
-        "src": "/catalog/soap/elka-s-gusenitsey-03.webp",
-        "width": 1600,
-        "height": 1200,
-        "blurDataURL": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAACwAQCdASoQAAwAA4BaJYgCdADwuBwAAP6rifaNqOl/CHUNs66EyyKOI0mKnUZL8mbaahU+MOh15a05tbGsR4cVznkpRz5Ch90UXTpEHeoOpDhY2hG4hEAA",
-        "alt": "Ёлка с гусеницей — ракурс 3"
-      },
-      {
         "src": "/catalog/soap/elka-s-gusenitsey-04.webp",
         "width": 1600,
         "height": 1600,
@@ -7872,14 +7858,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Зелёная ёлка с цветными шарами, у подножия — гусеница. Шары лепятся по одному, каждый своего цвета; детский сюжет, который рассматривают.",
+    "description": "Змея закрутилась в елку с разноцветными игрушками",
     "specs": {},
     "tones": [
       "#D4F5A3",
       "#CAE9B1",
       "#D4D6B9"
     ],
-    "order": 1100
+    "order": 1100,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-plate",
