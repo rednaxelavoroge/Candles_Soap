@@ -6655,9 +6655,9 @@
   },
   {
     "id": "soap-prozrachnoe-s-tsvetami",
-    "slug": "prozrachnoe-s-tsvetami",
-    "title": "Прозрачное с цветами",
-    "article": "МЛ-25",
+    "slug": "kniga-malenkaya",
+    "title": "Книга маленькая",
+    "article": "1106",
     "category": "soap",
     "tags": [
       "flowers",
@@ -6684,25 +6684,20 @@
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAACwAQCdASoQABAAA4BaJZQAAh0aWVigAP6vEWOWUNaZB3QzQFp2HwD5b9WkwYJJuRVeU6qHEXYj+REt9XM0CAAA",
         "alt": "Прозрачное с цветами — ракурс 3"
-      },
-      {
-        "src": "/catalog/soap/prozrachnoe-s-tsvetami-04.webp",
-        "width": 1600,
-        "height": 1200,
-        "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAAAQAgCdASoQAAwAA4BaJbACdH8AFWJKc4YgAPgesC90NqZl77fT15TJK3g01c3sPaTor18Oc8vIL1C5lF460+tnTjmtHdg5oAA=",
-        "alt": "Прозрачное с цветами — ракурс 4"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Брусок из прозрачной основы, внутри — цветы и листья, будто в стекле. На просвет видно каждый лепесток. Композиция собирается перед заливкой, поэтому повторить её точно нельзя.",
+    "description": "Маленькая прозрачная книга с цветами внутри",
     "specs": {},
     "tones": [
       "#F9DCC6",
       "#E2DED8",
       "#DCD2C9"
     ],
-    "order": 1090
+    "order": 1090,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-kniga-s-tyulpanami",
