@@ -10312,9 +10312,9 @@
   },
   {
     "id": "soap-serdtse-malinovoe",
-    "slug": "serdtse-malinovoe",
-    "title": "Сердце малиновое",
-    "article": "МЛ-113",
+    "slug": "serdtse-pletennoe",
+    "title": "Сердце плетенное",
+    "article": "1149",
     "category": "soap",
     "tags": [
       "heart",
@@ -10331,14 +10331,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Сердце с ягодной фактурой — поверхность собрана из мелких зёрен, как малина. Подаётся в гипсовом блюде с бусинным краем.",
+    "description": "Сердце плетенное 3-х размеров.",
     "specs": {},
     "tones": [
       "#F9DBCD",
       "#F9B2B4",
       "#DFD1C8"
     ],
-    "order": 1030
+    "order": 1030,
+    "videos": [],
+    "related": []
   },
   {
     "id": "gypsum-rakushka",
