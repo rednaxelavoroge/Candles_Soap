@@ -8981,7 +8981,7 @@
     "id": "soap-shar-iz-sharikov",
     "slug": "shar-iz-sharikov",
     "title": "Круг с шариками",
-    "article": "МЛ-81",
+    "article": "1111",
     "category": "soap",
     "tags": [
       "kids",
@@ -8990,30 +8990,32 @@
     ],
     "images": [
       {
-        "src": "/catalog/soap/shar-iz-sharikov-01.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAACwAQCdASoQABAAA4BaJZwAAudF0LTAAP7tTzWMDylSNMKaRBcsnciQEhjbNbPwnnHcXY4AAAA=",
-        "alt": "Круг с шариками"
-      },
-      {
         "src": "/catalog/soap/shar-iz-sharikov-02.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADwAQCdASoQABAAA4BaJQBdgCHfPbw+qcAA/tNExNjg0Wfx1JdESUe1/p/xA7/G+BoC6xv/pHc861j6e3/k3GE9lu5kGioAAAA=",
         "alt": "Круг с шариками — ракурс 2"
+      },
+      {
+        "src": "/catalog/soap/shar-iz-sharikov-01.webp",
+        "width": 1600,
+        "height": 1600,
+        "blurDataURL": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAACwAQCdASoQABAAA4BaJZwAAudF0LTAAP7tTzWMDylSNMKaRBcsnciQEhjbNbPwnnHcXY4AAAA=",
+        "alt": "Круг с шариками"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Шар, собранный из мелких шариков, розово-голубой, на гипсовом блюде. Каждый шарик отливается отдельно.",
+    "description": "Шар, собранный из мелких шариков",
     "specs": {},
     "tones": [
       "#F8E3EC",
       "#E9DDD5",
       "#D6D3CD"
     ],
-    "order": 1060
+    "order": 1060,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-dinozavriki",
