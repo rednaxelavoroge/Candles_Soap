@@ -8797,8 +8797,8 @@
   {
     "id": "soap-serdtsa-v-korobke",
     "slug": "serdtsa-v-korobke",
-    "title": "Сердца в коробке",
-    "article": "МЛ-77",
+    "title": "Набор из сердец с символами",
+    "article": "1072",
     "category": "soap",
     "tags": [
       "heart",
@@ -8812,13 +8812,6 @@
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAABQAgCdASoQAAwAA4BaJbACdH8AFXhQ/jHBlwAA/o2CwvIH+u5kyRxRESQLq/knux8zLJNWospEH31wioSoaLDffmxWpcsY934NBt1ujKFb+bq6Go8pTnNzJ23xu/3JAAA=",
         "alt": "Сердца в коробке"
-      },
-      {
-        "src": "/catalog/soap/serdtsa-v-korobke-02.webp",
-        "width": 1600,
-        "height": 1200,
-        "blurDataURL": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAABwAgCdASoQAAwAA4BaJbACdH8AFd8og3/60URAAP5fXjM1taX5uQzWn7TE2y6jsgtWFcEsBJRzmz5FywDM/fPnV69Fj1IET2vBNlr/ZCZ1ejU4HGj8/Mw9jyZQT9pHSEqfFAAA",
-        "alt": "Сердца в коробке — ракурс 2"
       },
       {
         "src": "/catalog/soap/serdtsa-v-korobke-03.webp",
@@ -8837,7 +8830,9 @@
       "#EDDEBF",
       "#D1D4D4"
     ],
-    "order": 990
+    "order": 990,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-rybki-v-more",
