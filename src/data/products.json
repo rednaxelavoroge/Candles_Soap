@@ -9611,7 +9611,7 @@
     "id": "soap-elochki-s-sharikami",
     "slug": "elochki-s-sharikami",
     "title": "Ёлка с шарами",
-    "article": "МЛ-94",
+    "article": "1041",
     "category": "soap",
     "tags": [
       "new-year",
@@ -9631,18 +9631,27 @@
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAwAgCdASoQAAwAA4BaJZQC7AEfla02/6ptIAD941Oi3b+s7ZZ7VIrU7TqLunsEYq32UBIzKAiVmu/On0S9AUnRV3aVnYVy/Sw6oavyJ7ZAdO7UZEcwHPrKvAgAAA==",
         "alt": "Ёлка с шарами — ракурс 2"
+      },
+      {
+        "src": "/catalog/soap/elochki-s-sharikami-1790104107402-1.webp",
+        "width": 1400,
+        "height": 1050,
+        "blurDataURL": "data:image/webp;base64,UklGRkICAABXRUJQVlA4WAoAAAAgAAAADwAACwAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggVAAAABACAJ0BKhAADAADgFolAE6AxQDfdbnRZAAA/vV0ZVJPEZD9MbmWEgZqizWx1tyqL5A8RwE0qiC3GFH6fRQbiS9Mbb+fVjW+VQdOCtlbXW9+x7XAAA==",
+        "alt": "Ёлка с шарами"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Плоские ёлочки с цветными шарами и звёздами, по нескольку штук вместе. Шары расписываются вручную, поэтому одинаковых ёлок не бывает.",
+    "description": "Плоские ёлочки с цветными шарами ",
     "specs": {},
     "tones": [
       "#C5F595",
       "#BFF093",
       "#DDD795"
     ],
-    "order": 1180
+    "order": 1180,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-elka-s-sharami-bezhevaya",
