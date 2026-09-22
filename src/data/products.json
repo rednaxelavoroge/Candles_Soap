@@ -9095,7 +9095,7 @@
     "id": "soap-kniga-s-kristallami",
     "slug": "kniga-s-kristallami",
     "title": "Кристаллы в книге гипсовой",
-    "article": "МЛ-85",
+    "article": "1112",
     "category": "soap",
     "tags": [
       "men",
@@ -9133,14 +9133,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Раскрытая книга, на правой странице — россыпь кристаллов с гранями. Страницы прорисованы обрезом, кристаллы отливаются отдельно.",
+    "description": "Раскрытая книга, на одной стороне кристаллы с гранями. ",
     "specs": {},
     "tones": [
       "#D7EEE2",
       "#EDDCD2",
       "#E4D0C3"
     ],
-    "order": 1060
+    "order": 1060,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-mesyats",
