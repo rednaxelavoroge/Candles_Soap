@@ -9232,33 +9232,36 @@
   },
   {
     "id": "soap-kristally",
-    "slug": "kristally",
-    "title": "Кристаллы",
-    "article": "МЛ-87",
+    "slug": "serdce2",
+    "title": "Сердце узор 2",
+    "article": "1066",
     "category": "soap",
     "tags": [
       "geometric",
-      "women"
+      "women",
+      "men"
     ],
     "images": [
       {
-        "src": "/catalog/soap/kristally-01.webp",
-        "width": 1201,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAAAQAgCdASoMABAAA4BaJZQCdAEOz34ZojAAAP7ZKfQgSJ0I6YDW60EnUp1uAbChgQgL6Oc/9oAAAA==",
-        "alt": "Кристаллы"
+        "src": "/catalog/soap/serdce2-1790083675030-1.webp",
+        "width": 1400,
+        "height": 1400,
+        "blurDataURL": "data:image/webp;base64,UklGRlgCAABXRUJQVlA4WAoAAAAgAAAADwAADwAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggagAAADACAJ0BKhAAEAADgFolAE6AxXjkrwOVJJcAAP7e8T+bbsGiSIRq5GHTB1KyakEyeh/Na3wjhoDkX3OeNdLPIcyaRVZN1j7mvrmNkt5sUfeDM4/XDBiJ0JZZsMP6ah1nPE6T3hjZ8m7AwAA=",
+        "alt": "Сердце узор 2"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Сросшиеся кристаллы сиреневого тона с прозрачными гранями — как кусок породы. Грани скалываются вручную, поэтому форма у каждого своя.",
+    "description": "Сердце с узором",
     "specs": {},
     "tones": [
       "#F9E6C8",
       "#E9DDCD",
       "#E4D0C8"
     ],
-    "order": 1070
+    "order": 1070,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-konvert-s-serdechkami",
