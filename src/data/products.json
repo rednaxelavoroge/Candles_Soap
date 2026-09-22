@@ -8012,9 +8012,9 @@
   },
   {
     "id": "soap-pryaniki-novogodnie",
-    "slug": "pryaniki-novogodnie",
-    "title": "Пряники новогодние",
-    "article": "МЛ-57",
+    "slug": "varezka-s-uzorom",
+    "title": "Варежка с узором",
+    "article": "1043",
     "category": "soap",
     "tags": [
       "new-year",
@@ -8055,18 +8055,27 @@
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAQAgCdASoQAAwAA4BaJQBOgCHqWGu0ZfzAAP7y2AVMSkMbUkpGziOT6NjXtIlGYaPi5OnydJacxtPRXHmdO/s8C2jRp7hLrZPsUqmZZUl6/B/PRiMIVApgAAA=",
         "alt": "Пряники новогодние — ракурс 5"
+      },
+      {
+        "src": "/catalog/soap/varezka-s-uzorom-1790106374520-1.webp",
+        "width": 1400,
+        "height": 1400,
+        "blurDataURL": "data:image/webp;base64,UklGRmwCAABXRUJQVlA4WAoAAAAgAAAADwAADwAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggfgAAAHACAJ0BKhAAEAADgFolsAJ0BixX0kxlrhEpKwAA/vDpQcBqqr4xHM37+x+Pae26AM2HczXCRvXRLKYU8QvsdsYhxXIzW5utboj7bXU8Aywd4zDx3eJSJqf6jeJxN19tYo3x8GNV9SYTZNx+7cQQ1UX/g4X93drLYMBLk8AAAA==",
+        "alt": "Варежка с узором"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Набор плоских фигур с белой росписью, как имбирные пряники: сердце, варежка, домик, сапожок, звёзды. Роспись наносится тонкой кистью по остывшему рельефу, поэтому узор у каждой фигуры свой.",
+    "description": "Варежка с узором новогодним",
     "specs": {},
     "tones": [
       "#F2EF91",
       "#F1E09A",
       "#F2CBCC"
     ],
-    "order": 1220
+    "order": 1220,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-serdtse-i-varezhka",
