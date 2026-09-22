@@ -5450,8 +5450,8 @@
   },
   {
     "id": "soap-pryanichnyy-nabor",
-    "slug": "pryanichnyy-nabor",
-    "title": "Пряничный набор",
+    "slug": "pryanichnyy-dom",
+    "title": "Пряничный дом с узором",
     "article": "МЛ-02",
     "category": "soap",
     "tags": [
@@ -5466,30 +5466,23 @@
         "alt": "Мыло-пряник в виде домика с белой росписью"
       },
       {
-        "src": "/catalog/soap/pryanichnyy-nabor-02.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAQCdASoQABAAA4BaJQBOgCGudtKU0YAA/t7StfwQTpAX9qVWUgnZoNoqfA1rUoL9GJqxavjxsMvratzhYpQqu/42Z+Kns+lk7xAAAAA=",
-        "alt": "Мыло-пряник в форме сердца"
+        "src": "/catalog/soap/pryanichnyy-dom-1790105552150-1.webp",
+        "width": 1400,
+        "height": 1086,
+        "blurDataURL": "data:image/webp;base64,UklGRloCAABXRUJQVlA4WAoAAAAgAAAADwAACwAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggbAAAAFACAJ0BKhAADAADgFolqAJ0BirXKe9fifA4QAD+psSdUF1cmQWibINYvJiY8oavXpKPhDwt9JyCRrPKQcebSPRqTjWojxkaA/mKfy99P0/uV7+1kivycjEyyY4DUItWHJtwWmYMuMW1Ua8AAA==",
+        "alt": "Пряничный дом с узором"
       },
       {
-        "src": "/catalog/soap/pryanichnyy-nabor-03.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAAAQAgCdASoQABAAA4BaJYwCdADRGxZbzAcAAP7q3AMOtJC7pSQKq+ERpHdE2He2BUbgSjyUOiTU4PFSuncMAAAA",
-        "alt": "Мыло-пряник в виде резной рамки"
-      },
-      {
-        "src": "/catalog/soap/pryanichnyy-nabor-04.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAADwAQCdASoQABAAA4BaJQBOgCPzoy8BOwAA/ueQiGnm+Rb+jmJlTKttOF8tReksfQSXtuW+SW6FzWyI5boEhEqwAAA=",
-        "alt": "Мыло-пряник в виде рождественского сапожка"
+        "src": "/catalog/soap/pryanichnyy-dom-1790105552151-2.webp",
+        "width": 1400,
+        "height": 1176,
+        "blurDataURL": "data:image/webp;base64,UklGRmwCAABXRUJQVlA4WAoAAAAgAAAADwAADAAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggfgAAAHACAJ0BKhAADQADgFoloAJ0B/AsgPZnBDUBIAAA/qbEh3ZhOPEIP3fRGPUvKnzUBecTdT2T4SuvfH9nmr9ZiMVekhhix6jSqea61oDJUOGH/S5x465KDhuCT2AXODak7cBLluw5i4/j5rm+5K+laLTG33rTFaxM0SxL7PAAAA==",
+        "alt": "Пряничный дом с узором"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Четыре куска в виде расписных пряников: домик, рамка, сердце и рождественский сапожок. Основа карамельного цвета, узор выведен белым — как глазурь, только не липнет. Набор кладётся в коробку целиком, но каждый кусок живёт и отдельно.",
+    "description": "Пряничный дом с узором новогодним.",
     "specs": {
       "size": "набор из четырёх фигур",
       "scent": "Корица и имбирь",
@@ -5501,7 +5494,9 @@
       "#F2DAD3",
       "#E1D0CD"
     ],
-    "order": 1210
+    "order": 1210,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-konyak-i-stopka",
