@@ -9696,9 +9696,9 @@
   },
   {
     "id": "soap-novogodnie-barelefy",
-    "slug": "novogodnie-barelefy",
-    "title": "Новогодние барельефы",
-    "article": "МЛ-96",
+    "slug": "elka-s-uzorom",
+    "title": "Елка узор 1",
+    "article": "1039",
     "category": "soap",
     "tags": [
       "new-year",
@@ -9713,34 +9713,6 @@
         "alt": "Новогодние барельефы"
       },
       {
-        "src": "/catalog/soap/novogodnie-barelefy-02.webp",
-        "width": 1200,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADQAQCdASoMABAAA4BaJbACdADbd+vcgAD+Uz010Cs8yG9fUBumSsQ/LaZqIaeiccjy+diKwMpwFBOqt8wFxcMhiNS+97m3SQAAAA==",
-        "alt": "Новогодние барельефы — ракурс 2"
-      },
-      {
-        "src": "/catalog/soap/novogodnie-barelefy-03.webp",
-        "width": 1600,
-        "height": 1200,
-        "blurDataURL": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAQAgCdASoQAAwAA4BaJbACdADxMsYp/gNQAP70J0irgUOc7Dgb9xnmG+RgTsy71Xx/YJg2qhpgb6LW01YL9zsDZnCKnvvuY3BT2Re138lou0VPyPtvnbwtRAAAAA==",
-        "alt": "Новогодние барельефы — ракурс 3"
-      },
-      {
-        "src": "/catalog/soap/novogodnie-barelefy-04.webp",
-        "width": 1600,
-        "height": 1200,
-        "blurDataURL": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAADwAQCdASoQAAwAA4BaJaACdADxJkMzMwAA/vVxqPVRr3WmEuo9nxN17rOjo4L2ZsPCrEBddaRy5cUIwP7pbuqFP1stH1yzoorE6/vvjrr8USWjKL4/qqOzFl/y+eAA",
-        "alt": "Новогодние барельефы — ракурс 4"
-      },
-      {
-        "src": "/catalog/soap/novogodnie-barelefy-05.webp",
-        "width": 1600,
-        "height": 1200,
-        "blurDataURL": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAAAwAgCdASoQAAwAA4BaJZACdADxMolLIK7AAAD+9C+H6oUMM8NtZ96B3GPWJ7JQzRHYEu3xL6u+j9HcRztuw5dTLlHiRkSpp9C+yduMHD3Xta9uPv+jIzOm5ZvvmbQAcgAAAA==",
-        "alt": "Новогодние барельефы — ракурс 5"
-      },
-      {
         "src": "/catalog/soap/novogodnie-barelefy-06.webp",
         "width": 1600,
         "height": 1067,
@@ -9750,14 +9722,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Плоские фигуры с золотой и белой росписью: ёлка, сердце с ключом, ретро-паровоз, машинка с ёлкой. Золото втирается по рельефу вручную.",
+    "description": "Елка с узором",
     "specs": {},
     "tones": [
       "#F9E4A6",
       "#F9D6BA",
       "#EDCEBC"
     ],
-    "order": 1200
+    "order": 1200,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-shapki-i-varezhki",
