@@ -10167,9 +10167,9 @@
   },
   {
     "id": "soap-zmeya",
-    "slug": "zmeya",
+    "slug": "zmeya-na-kruge",
     "title": "Змея на круге",
-    "article": "МЛ-110",
+    "article": "1137",
     "category": "soap",
     "tags": [
       "gift",
@@ -10187,14 +10187,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Круглое мыло салатового цвета с серебряной змеёй в рельефе. Чешуя проработана до сегментов.",
+    "description": "Круглое мыло салатового цвета с серебряной змеёй в рельефе. Чешуя проработана",
     "specs": {},
     "tones": [
       "#F9E2BF",
       "#E7E680",
       "#D5E14A"
     ],
-    "order": 1110
+    "order": 1110,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-malina-v-kremanke",
