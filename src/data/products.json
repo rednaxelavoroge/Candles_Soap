@@ -9203,7 +9203,7 @@
     "id": "soap-mesyats",
     "slug": "mesyats",
     "title": "Луна и солнце",
-    "article": "МЛ-86",
+    "article": "1110",
     "category": "soap",
     "tags": [
       "kids",
@@ -9212,18 +9212,18 @@
     ],
     "images": [
       {
-        "src": "/catalog/soap/mesyats-01.webp",
-        "width": 1600,
-        "height": 1200,
-        "blurDataURL": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAQAgCdASoQAAwAA4BaJQBOgCHw6Sx0LocAAP7xgJgzpMafKrpq6VMxaU4XVGp0oInttbFCnMAtPmgpDTxfchHyr5Kp2NPZOLusDmkaxe4sgJ4XX7uzWw1GWlBHwAAA",
-        "alt": "Луна и солнце"
-      },
-      {
         "src": "/catalog/soap/mesyats-02.webp",
         "width": 1600,
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAACwAgCdASoQABAAA4BaJZACdH8G6AA4lKNDtsTkvTgA/vDOXLjdfME3eDy17lTNqkGXQ5AEC2ecHeb+FkLQNMlod98VDLKGTdRerXr6DGsyLgAA",
         "alt": "Луна и солнце — ракурс 2"
+      },
+      {
+        "src": "/catalog/soap/mesyats-01.webp",
+        "width": 1600,
+        "height": 1200,
+        "blurDataURL": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAQAgCdASoQAAwAA4BaJQBOgCHw6Sx0LocAAP7xgJgzpMafKrpq6VMxaU4XVGp0oInttbFCnMAtPmgpDTxfchHyr5Kp2NPZOLusDmkaxe4sgJ4XX7uzWw1GWlBHwAAA",
+        "alt": "Луна и солнце"
       }
     ],
     "video": null,
@@ -9235,7 +9235,9 @@
       "#F9D3B9",
       "#F9C397"
     ],
-    "order": 1110
+    "order": 1110,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-kristally",
