@@ -9007,12 +9007,13 @@
   },
   {
     "id": "soap-dinozavriki",
-    "slug": "dinozavriki",
-    "title": "Динозаврики",
-    "article": "МЛ-82",
+    "slug": "zmeya",
+    "title": "Змея ",
+    "article": "1035",
     "category": "soap",
     "tags": [
-      "kids"
+      "kids",
+      "den-rozhdeniya"
     ],
     "images": [
       {
@@ -9032,14 +9033,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Зелёные динозаврики с длинной шеей — по одному и парой. Простая форма, которую удобно держать детской рукой.",
+    "description": "Змея как символ года или рождения",
     "specs": {},
     "tones": [
       "#85F593",
       "#DAE4B7",
       "#D6D3CF"
     ],
-    "order": 1090
+    "order": 1090,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-mishka-s-karandashami",
