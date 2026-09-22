@@ -8451,8 +8451,8 @@
   {
     "id": "soap-serdtse-kristall",
     "slug": "serdtse-kristall",
-    "title": "Сердце-кристалл",
-    "article": "МЛ-68",
+    "title": "Сердце с гранями",
+    "article": "1068",
     "category": "soap",
     "tags": [
       "heart",
@@ -8467,23 +8467,32 @@
         "alt": "Сердце-кристалл"
       },
       {
-        "src": "/catalog/soap/serdtse-kristall-02.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAACQAgCdASoQABAAA4BaJbACdEIA3gAFE++2DwtWgAD8XqAywrFuhzyDLMDyxxTYSzl0Zk7AUZE4eK+tnuHjVgtli8gGi2UsgVbY5PMfNMHsEaTipQO2oVS5TkkwyGAVPVFrAAAA",
-        "alt": "Сердце-кристалл — ракурс 2"
+        "src": "/catalog/soap/serdtse-kristall-1790092140076-1.webp",
+        "width": 1050,
+        "height": 1400,
+        "blurDataURL": "data:image/webp;base64,UklGRl4CAABXRUJQVlA4WAoAAAAgAAAADwAAFAAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggcAAAAPADAJ0BKhAAFQA+7WKpTamlo6IwCAEwHYljALsBi/6aKG0ZrnYJjAAA97CamofootMNv+6Bap35V9Q1FPE1dsRFwEr/6YPz6iqjAsjmKvTMqR/ethu/eP76oJy2dwAp1++qdr+U8wi4FcsG5U6wAAA=",
+        "alt": "Сердце с гранями"
+      },
+      {
+        "src": "/catalog/soap/serdtse-kristall-1790092140078-2.webp",
+        "width": 1050,
+        "height": 1400,
+        "blurDataURL": "data:image/webp;base64,UklGRnwCAABXRUJQVlA4WAoAAAAgAAAADwAAFAAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggjgAAAPADAJ0BKhAAFQA+7WKpTamlo6IwCAEwHYlmAFMAW98lTbXJ2xJc/QAA/q9u2PFxBwy/3ADqEB/7EgZsafRtf+yjsXXhVOWdLx4SikNHzhzPcimjx+xEVW5CFeXZaCbAfDYHQ+0G3cN+O02+iM7seU+wNfvn9Fdh3qk340M3zP/7UBnWyj6Q//nhVFZAAAA=",
+        "alt": "Сердце с гранями"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Гранёное сердце, как обработанный камень: грани идут от середины к краю и ловят свет. Отливается синим и сине-фиолетовым.",
+    "description": "Гранёное сердце, как обработанный камень: грани идут от середины к краю и ловят свет. ",
     "specs": {},
     "tones": [
       "#E0B9F0",
       "#E6DDD7",
       "#DDD3B9"
     ],
-    "order": 980
+    "order": 980,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-mishki-v-korobke",
