@@ -8022,32 +8022,11 @@
     ],
     "images": [
       {
-        "src": "/catalog/soap/pryaniki-novogodnie-01.webp",
-        "width": 1600,
-        "height": 1296,
-        "blurDataURL": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAQAgCdASoQAA0AA4BaJagCdAERHz3R0gAAAP7qAWfD1fr/mof0Bng+zZ8wFq4bKbZBpIpYBVbnFp05sXpyapWQuMQTrN6jd6bOhesXZtvE9gprasMKBNZZ+6vAAA==",
-        "alt": "Пряники новогодние"
-      },
-      {
-        "src": "/catalog/soap/pryaniki-novogodnie-02.webp",
-        "width": 1600,
-        "height": 1156,
-        "blurDataURL": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAABQAgCdASoQAAwAA4BaJaACdB2gAjsNmtMI5gAA/tIHr216yE1o56sqW+VkOCg7vxdDRj4d3c6BN3M0xlqTh60frDJ54cma6i+u1jvxhMgEmvp3u3zVIZWgAAA=",
-        "alt": "Пряники новогодние — ракурс 2"
-      },
-      {
-        "src": "/catalog/soap/pryaniki-novogodnie-03.webp",
-        "width": 1600,
-        "height": 1242,
-        "blurDataURL": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAwAgCdASoQAAwAA4BaJaACdADdlkQHfcjaAAD+hbeoBJFrhs6WyZA0IY3R3teQDytaTBhL12UxjaMDOJIPLhWBZYMHuFijYYYd2wwmDkuBJWUErgAAAA==",
-        "alt": "Пряники новогодние — ракурс 3"
-      },
-      {
-        "src": "/catalog/soap/pryaniki-novogodnie-04.webp",
-        "width": 1600,
-        "height": 1345,
-        "blurDataURL": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAADwAQCdASoQAA0AA4BaJZgCdAENyt3t8AAA/s3z9xFV2sP0OauVACVcwqfYiiNRQXdgB8BL4vDU6Hs7Slzl6ivh1VRQpSYaL/XljB50xwMpwq3r1ovBTW4nhy/kwAAA",
-        "alt": "Пряники новогодние — ракурс 4"
+        "src": "/catalog/soap/varezka-s-uzorom-1790106374520-1.webp",
+        "width": 1400,
+        "height": 1400,
+        "blurDataURL": "data:image/webp;base64,UklGRmwCAABXRUJQVlA4WAoAAAAgAAAADwAADwAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggfgAAAHACAJ0BKhAAEAADgFolsAJ0BixX0kxlrhEpKwAA/vDpQcBqqr4xHM37+x+Pae26AM2HczXCRvXRLKYU8QvsdsYhxXIzW5utboj7bXU8Aywd4zDx3eJSJqf6jeJxN19tYo3x8GNV9SYTZNx+7cQQ1UX/g4X93drLYMBLk8AAAA==",
+        "alt": "Варежка с узором"
       },
       {
         "src": "/catalog/soap/pryaniki-novogodnie-05.webp",
@@ -8057,11 +8036,11 @@
         "alt": "Пряники новогодние — ракурс 5"
       },
       {
-        "src": "/catalog/soap/varezka-s-uzorom-1790106374520-1.webp",
-        "width": 1400,
-        "height": 1400,
-        "blurDataURL": "data:image/webp;base64,UklGRmwCAABXRUJQVlA4WAoAAAAgAAAADwAADwAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggfgAAAHACAJ0BKhAAEAADgFolsAJ0BixX0kxlrhEpKwAA/vDpQcBqqr4xHM37+x+Pae26AM2HczXCRvXRLKYU8QvsdsYhxXIzW5utboj7bXU8Aywd4zDx3eJSJqf6jeJxN19tYo3x8GNV9SYTZNx+7cQQ1UX/g4X93drLYMBLk8AAAA==",
-        "alt": "Варежка с узором"
+        "src": "/catalog/soap/pryaniki-novogodnie-01.webp",
+        "width": 1600,
+        "height": 1296,
+        "blurDataURL": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAQAgCdASoQAA0AA4BaJagCdAERHz3R0gAAAP7qAWfD1fr/mof0Bng+zZ8wFq4bKbZBpIpYBVbnFp05sXpyapWQuMQTrN6jd6bOhesXZtvE9gprasMKBNZZ+6vAAA==",
+        "alt": "Пряники новогодние"
       }
     ],
     "video": null,
