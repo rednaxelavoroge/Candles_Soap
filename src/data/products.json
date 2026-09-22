@@ -9646,9 +9646,9 @@
   },
   {
     "id": "soap-elka-s-sharami-bezhevaya",
-    "slug": "elka-s-sharami-bezhevaya",
-    "title": "Ёлка бежевая",
-    "article": "МЛ-95",
+    "slug": "elka-s-sharami",
+    "title": "Набор новогодний елка и игрушки",
+    "article": "1128",
     "category": "soap",
     "tags": [
       "new-year",
@@ -9656,30 +9656,32 @@
     ],
     "images": [
       {
-        "src": "/catalog/soap/elka-s-sharami-bezhevaya-01.webp",
-        "width": 1600,
-        "height": 1200,
-        "blurDataURL": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAQAgCdASoQAAwAA4BaJQBOgCHht/TDn14AAP71eUfIAN/P3dZBEjwH2gJeCwYiQVz1IvkRr0bZ0xZZTA8jMjpOAgNOqHf+ItpxTR6KJ+AAAA==",
-        "alt": "Ёлка бежевая"
-      },
-      {
         "src": "/catalog/soap/elka-s-sharami-bezhevaya-02.webp",
         "width": 1600,
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAQAgCdASoQAAwAA4BaJYgCdAEO67EfAmAAAP71dCHz1zfUaRL0U/2k3Cf/9wAT50Wy6E23/MRhhDeUUWE3T35VTqtd9mwLFaLWCbogemf5vfsyiifgAA==",
         "alt": "Ёлка бежевая — ракурс 2"
+      },
+      {
+        "src": "/catalog/soap/elka-s-sharami-bezhevaya-01.webp",
+        "width": 1600,
+        "height": 1200,
+        "blurDataURL": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAQAgCdASoQAAwAA4BaJQBOgCHht/TDn14AAP71eUfIAN/P3dZBEjwH2gJeCwYiQVz1IvkRr0bZ0xZZTA8jMjpOAgNOqHf+ItpxTR6KJ+AAAA==",
+        "alt": "Ёлка бежевая"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Бежевая ёлка с перламутровыми шарами, рядом — ёлочные шары того же тона. Спокойная гамма, для тех, кому яркое не подходит.",
+    "description": "Набор елка с игрушками",
     "specs": {},
     "tones": [
       "#F9C2A8",
       "#F9C9AF",
       "#F2CEB1"
     ],
-    "order": 1210
+    "order": 1210,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-novogodnie-barelefy",
