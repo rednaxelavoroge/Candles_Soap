@@ -29,7 +29,8 @@
     "tags": [
       "new-year"
     ],
-    "related": []
+    "related": [],
+    "order": 1190
   },
   {
     "id": "p-1790077450381",
@@ -62,7 +63,8 @@
       "school",
       "kids"
     ],
-    "related": []
+    "related": [],
+    "order": 1250
   },
   {
     "id": "p-1790077203422",
@@ -89,7 +91,8 @@
       "women",
       "den-rozhdeniya"
     ],
-    "related": []
+    "related": [],
+    "order": 1260
   },
   {
     "id": "p-1790028646976",
@@ -5467,7 +5470,7 @@
       "#F2DAD3",
       "#E1D0CD"
     ],
-    "order": 1210
+    "order": 1220
   },
   {
     "id": "soap-konyak-i-stopka",
@@ -8120,7 +8123,7 @@
       "#F4DAD0",
       "#E1D0CC"
     ],
-    "order": 1190
+    "order": 1200
   },
   {
     "id": "soap-vaflya-s-dzhemom",
@@ -9787,7 +9790,7 @@
       "#E5DED4",
       "#DDD2C8"
     ],
-    "order": 1200
+    "order": 1210
   },
   {
     "id": "soap-snezhinki",
@@ -9888,7 +9891,7 @@
       "#F9B09C",
       "#F9A99C"
     ],
-    "order": 1230
+    "order": 1240
   },
   {
     "id": "soap-ded-moroz",
@@ -9918,7 +9921,7 @@
       "#F9B3A4",
       "#F4CCB9"
     ],
-    "order": 1220
+    "order": 1230
   },
   {
     "id": "soap-ammonit",
