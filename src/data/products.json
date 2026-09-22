@@ -4886,7 +4886,7 @@
       "#F9B7A6",
       "#F9ABA3"
     ],
-    "order": 1000,
+    "order": 1010,
     "videos": [],
     "related": []
   },
@@ -6671,7 +6671,7 @@
       "#E2DED8",
       "#DCD2C9"
     ],
-    "order": 1050
+    "order": 1060
   },
   {
     "id": "soap-kniga-s-tyulpanami",
@@ -8506,7 +8506,7 @@
       "#E6DDD7",
       "#DDD3B9"
     ],
-    "order": 970
+    "order": 980
   },
   {
     "id": "soap-mishki-v-korobke",
@@ -8851,7 +8851,7 @@
       "#EDDEBF",
       "#D1D4D4"
     ],
-    "order": 980
+    "order": 990
   },
   {
     "id": "soap-rybki-v-more",
@@ -9006,7 +9006,7 @@
       "#E9DDD5",
       "#D6D3CD"
     ],
-    "order": 1030
+    "order": 1040
   },
   {
     "id": "soap-dinozavriki",
@@ -9188,7 +9188,7 @@
       "#EDDCD2",
       "#E4D0C3"
     ],
-    "order": 1060,
+    "order": 1070,
     "videos": [],
     "related": []
   },
@@ -9259,7 +9259,7 @@
       "#E9DDCD",
       "#E4D0C8"
     ],
-    "order": 1070,
+    "order": 970,
     "videos": [],
     "related": []
   },
@@ -9298,7 +9298,7 @@
       "#E6DDDB",
       "#DFD1C9"
     ],
-    "order": 1040
+    "order": 1050
   },
   {
     "id": "soap-kolyaska",
@@ -9381,7 +9381,7 @@
       "#EFDBD3",
       "#E0D1C7"
     ],
-    "order": 990
+    "order": 1000
   },
   {
     "id": "soap-panno-s-serdtsem",
@@ -10316,7 +10316,7 @@
       "#F9D7B0",
       "#D6D3CF"
     ],
-    "order": 1010
+    "order": 1020
   },
   {
     "id": "soap-serdtse-malinovoe",
@@ -10346,7 +10346,7 @@
       "#F9B2B4",
       "#DFD1C8"
     ],
-    "order": 1020
+    "order": 1030
   },
   {
     "id": "gypsum-rakushka",
