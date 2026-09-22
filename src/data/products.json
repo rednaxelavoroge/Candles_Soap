@@ -28,7 +28,7 @@
     "specs": {},
     "tags": [],
     "related": [],
-    "order": 1170
+    "order": 1180
   },
   {
     "id": "p-1790083232431",
@@ -95,7 +95,7 @@
       "kids"
     ],
     "related": [],
-    "order": 1260
+    "order": 1270
   },
   {
     "id": "p-1790077203422",
@@ -123,7 +123,7 @@
       "den-rozhdeniya"
     ],
     "related": [],
-    "order": 1270
+    "order": 1130
   },
   {
     "id": "p-1790028646976",
@@ -5501,7 +5501,7 @@
       "#F2DAD3",
       "#E1D0CD"
     ],
-    "order": 1230
+    "order": 1240
   },
   {
     "id": "soap-konyak-i-stopka",
@@ -8069,7 +8069,7 @@
       "#F1E09A",
       "#F2CBCC"
     ],
-    "order": 1140
+    "order": 1150
   },
   {
     "id": "soap-serdtse-i-varezhka",
@@ -8131,7 +8131,7 @@
       "#F4DAD0",
       "#E1D0CC"
     ],
-    "order": 1210
+    "order": 1220
   },
   {
     "id": "soap-vaflya-s-dzhemom",
@@ -8823,7 +8823,7 @@
       "#F7D8D4",
       "#DCD1D2"
     ],
-    "order": 1150
+    "order": 1160
   },
   {
     "id": "soap-serdtsa-v-korobke",
@@ -8925,7 +8925,7 @@
       "#DCE1CF",
       "#DCD2C8"
     ],
-    "order": 1130
+    "order": 1140
   },
   {
     "id": "soap-tsvetochnaya-kartina",
@@ -9627,7 +9627,7 @@
       "#BFF093",
       "#DDD795"
     ],
-    "order": 1180
+    "order": 1190
   },
   {
     "id": "soap-elka-s-sharami-bezhevaya",
@@ -9664,7 +9664,7 @@
       "#F9C9AF",
       "#F2CEB1"
     ],
-    "order": 1190
+    "order": 1200
   },
   {
     "id": "soap-novogodnie-barelefy",
@@ -9729,7 +9729,7 @@
       "#F9D6BA",
       "#EDCEBC"
     ],
-    "order": 1200
+    "order": 1210
   },
   {
     "id": "soap-shapki-i-varezhki",
@@ -9816,7 +9816,7 @@
       "#E5DED4",
       "#DDD2C8"
     ],
-    "order": 1220
+    "order": 1230
   },
   {
     "id": "soap-snezhinki",
@@ -9852,7 +9852,7 @@
       "#C9E5E0",
       "#DED2C6"
     ],
-    "order": 1160
+    "order": 1170
   },
   {
     "id": "soap-novogodniy-nabor-krasnyy",
@@ -9917,7 +9917,7 @@
       "#F9B09C",
       "#F9A99C"
     ],
-    "order": 1250
+    "order": 1260
   },
   {
     "id": "soap-ded-moroz",
@@ -9947,7 +9947,7 @@
       "#F9B3A4",
       "#F4CCB9"
     ],
-    "order": 1240
+    "order": 1250
   },
   {
     "id": "soap-ammonit",
