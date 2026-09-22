@@ -8042,9 +8042,9 @@
   },
   {
     "id": "soap-serdtse-i-varezhka",
-    "slug": "serdtse-i-varezhka",
-    "title": "Сердце и варежка",
-    "article": "МЛ-58",
+    "slug": "serdce1",
+    "title": "Сердце1",
+    "article": "1065",
     "category": "soap",
     "tags": [
       "new-year",
@@ -8057,34 +8057,6 @@
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAAAwAgCdASoQABAAA4BaJbACdAENp+Yq0b9GgAD+7pdukVltoro1OQRdqrY4wvvheV/hIqi7U0tN96zyugXJANmXy8GT+vrdb8rQBXNz6MWHh5AAAAA=",
         "alt": "Сердце и варежка"
-      },
-      {
-        "src": "/catalog/soap/serdtse-i-varezhka-02.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAAAQAgCdASoQABAAA4BaJbACdADxMr6PWyUAAP7uyXujO1KJAC6yYlpKwfuwFqDYy7nh2ImPuY3zpe6veHxxmD6pEzwMeR3rc6lFyF/d3ays+ItwgAA=",
-        "alt": "Сердце и варежка — ракурс 2"
-      },
-      {
-        "src": "/catalog/soap/serdtse-i-varezhka-03.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAQAgCdASoQABAAA4BaJbACdAEUiVYAPCT4AP7r+9RcTVzoce+LbDmSLo5v7pAHWyqQdm0xd5S/VOSrjpdiO1ac15MtDvXBtHiocPolKJtAAA==",
-        "alt": "Сердце и варежка — ракурс 3"
-      },
-      {
-        "src": "/catalog/soap/serdtse-i-varezhka-04.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAADQAQCdASoQABAAA4BaJaACdADsZIjskAD+8r2PygE6IWB2boeNI7/lmXdrvQOPkvJls6UuNwFJReqtH5HgV5ATViOV4UpvuXpgna/t2aYFs3egOREh+V8e3VZiMcFvAAA=",
-        "alt": "Сердце и варежка — ракурс 4"
-      },
-      {
-        "src": "/catalog/soap/serdtse-i-varezhka-05.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAQAgCdASoQABAAA4BaJbACdAELZNI8F2oAAP7i9whUD3PolbBz3w8hMdMpFTiRNl5fMBd5iN9pKZ1sPFsu6SpkRtwEWqBq4lLX0cuic+EpLbE0JLf1xc2Q3gAAAA==",
-        "alt": "Сердце и варежка — ракурс 5"
       }
     ],
     "video": null,
@@ -8096,7 +8068,9 @@
       "#99F2E9",
       "#AADEE4"
     ],
-    "order": 950
+    "order": 950,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-snezhinki-pechene",
