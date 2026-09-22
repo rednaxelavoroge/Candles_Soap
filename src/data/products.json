@@ -8785,8 +8785,8 @@
   },
   {
     "id": "soap-pryanichnyy-domik",
-    "slug": "pryanichnyy-domik",
-    "title": "Пряничный домик",
+    "slug": "elka-so-zvezdami",
+    "title": "Елка со звездами",
     "article": "МЛ-75",
     "category": "soap",
     "tags": [
@@ -8795,30 +8795,32 @@
     ],
     "images": [
       {
-        "src": "/catalog/soap/pryanichnyy-domik-01.webp",
-        "width": 1200,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADQAQCdASoMABAAA4BaJQBOgB8/npKRwAD+VbFpapswjuhTNbJu/9NB+jo3OO982/mheX0xECypl2CgZX9nru4BMcH9SEAA",
-        "alt": "Пряничный домик"
+        "src": "/catalog/soap/elka-so-zvezdami-1790104247111-1.webp",
+        "width": 1400,
+        "height": 1050,
+        "blurDataURL": "data:image/webp;base64,UklGRmgCAABXRUJQVlA4WAoAAAAgAAAADwAACwAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggegAAAPABAJ0BKhAADAADgFolAE6AxWlsW4qsAAD8tDSwvuw+flIZXfk27nSEq742h3jo7m4wgQ8Sq+HaL9nobTnt+BjRd821901VKsWppSGVmbv1vAlvOZ17E1XlO1riZidIjjj8n4F74ZuH5B9f0S2LCgThPAACANUMgAAA",
+        "alt": "Елка со звездами"
       },
       {
-        "src": "/catalog/soap/pryanichnyy-domik-02.webp",
-        "width": 1600,
-        "height": 1200,
-        "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAABQAgCdASoQAAwAA4BaJaACdH8AGCV2V1717OAA/uHEssKU06mc/GyFouK7hVZeVop7WSj+zwHsXk352kw1BHNyX3KSctbJ53/GAAAA",
-        "alt": "Пряничный домик — ракурс 2"
+        "src": "/catalog/soap/elka-so-zvezdami-1790104247112-2.webp",
+        "width": 1400,
+        "height": 1050,
+        "blurDataURL": "data:image/webp;base64,UklGRkICAABXRUJQVlA4WAoAAAAgAAAADwAACwAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggVAAAABACAJ0BKhAADAADgFolAE6AxQDfdbnRZAAA/vV0ZVJPEZD9MbmWEgZqizWx1tyqL5A8RwE0qiC3GFH6fRQbiS9Mbb+fVjW+VQdOCtlbXW9+x7XAAA==",
+        "alt": "Елка со звездами"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Домик с белой росписью и снежинками, в подарочной коробке. Роспись идёт по крыше и наличникам, как на настоящем прянике.",
+    "description": "Елочка плоская со звездами",
     "specs": {},
     "tones": [
       "#F9D5B7",
       "#F7D8D4",
       "#DCD1D2"
     ],
-    "order": 1200
+    "order": 1200,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-serdtsa-v-korobke",
