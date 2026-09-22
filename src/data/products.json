@@ -30,7 +30,7 @@
       "new-year"
     ],
     "related": [],
-    "order": 1190
+    "order": 1090
   },
   {
     "id": "p-1790077450381",
@@ -7910,7 +7910,7 @@
       "#CAE9B1",
       "#D4D6B9"
     ],
-    "order": 1100,
+    "order": 1110,
     "videos": [
       {
         "kind": "file",
@@ -8035,7 +8035,7 @@
       "#F1E09A",
       "#F2CBCC"
     ],
-    "order": 1130
+    "order": 1140
   },
   {
     "id": "soap-serdtse-i-varezhka",
@@ -8806,7 +8806,7 @@
       "#F7D8D4",
       "#DCD1D2"
     ],
-    "order": 1140
+    "order": 1150
   },
   {
     "id": "soap-serdtsa-v-korobke",
@@ -8913,7 +8913,7 @@
       "#DCE1CF",
       "#DCD2C8"
     ],
-    "order": 1120
+    "order": 1130
   },
   {
     "id": "soap-tsvetochnaya-kartina",
@@ -9043,7 +9043,7 @@
       "#DAE4B7",
       "#D6D3CF"
     ],
-    "order": 1090,
+    "order": 1100,
     "videos": [],
     "related": []
   },
@@ -9601,7 +9601,7 @@
       "#BFF093",
       "#DDD795"
     ],
-    "order": 1160
+    "order": 1170
   },
   {
     "id": "soap-elka-s-sharami-bezhevaya",
@@ -9638,7 +9638,7 @@
       "#F9C9AF",
       "#F2CEB1"
     ],
-    "order": 1170
+    "order": 1180
   },
   {
     "id": "soap-novogodnie-barelefy",
@@ -9703,7 +9703,7 @@
       "#F9D6BA",
       "#EDCEBC"
     ],
-    "order": 1180
+    "order": 1190
   },
   {
     "id": "soap-shapki-i-varezhki",
@@ -9826,7 +9826,7 @@
       "#C9E5E0",
       "#DED2C6"
     ],
-    "order": 1150
+    "order": 1160
   },
   {
     "id": "soap-novogodniy-nabor-krasnyy",
@@ -10242,7 +10242,7 @@
       "#E7E680",
       "#D5E14A"
     ],
-    "order": 1110,
+    "order": 1120,
     "videos": [],
     "related": []
   },
