@@ -9248,7 +9248,7 @@
     "id": "soap-konvert-s-serdechkami",
     "slug": "konvert-s-serdechkami",
     "title": "Конверт с сердцами",
-    "article": "МЛ-88",
+    "article": "1069",
     "category": "soap",
     "tags": [
       "heart",
@@ -9272,14 +9272,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Прямоугольник из прозрачной основы с россыпью цветных сердец и одним крупным в центре — как конверт с письмом.",
+    "description": "Конверт из прозрачной основы с россыпью цветных сердец и одним крупным в центре",
     "specs": {},
     "tones": [
       "#F9C7CA",
       "#E6DDDB",
       "#DFD1C9"
     ],
-    "order": 1050
+    "order": 1050,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-kolyaska",
