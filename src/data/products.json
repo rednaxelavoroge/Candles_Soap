@@ -10274,8 +10274,8 @@
   {
     "id": "soap-serdtse-klubok",
     "slug": "serdtse-klubok",
-    "title": "Сердце-клубок",
-    "article": "МЛ-112",
+    "title": "Сердце вязаное",
+    "article": "1148",
     "category": "soap",
     "tags": [
       "heart",
@@ -10299,14 +10299,16 @@
     ],
     "video": null,
     "price": null,
-    "description": "Сердце с фактурой мотка пряжи: нити идут виток к витку, серо-голубой тон. Подаётся на гипсовом блюде.",
+    "description": "Сердце из ниток для вязания",
     "specs": {},
     "tones": [
       "#F9E1C4",
       "#F9D7B0",
       "#D6D3CF"
     ],
-    "order": 1020
+    "order": 1020,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-serdtse-malinovoe",
