@@ -9336,7 +9336,7 @@
     "id": "soap-serdtse-s-serdechkami",
     "slug": "serdtse-s-serdechkami",
     "title": "Сердце с сердечками",
-    "article": "МЛ-90",
+    "article": "1070",
     "category": "soap",
     "tags": [
       "heart",
@@ -9356,18 +9356,27 @@
         "height": 1600,
         "blurDataURL": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAADwAQCdASoMABAAA4BaJZgCw7DdNu46JAAA/sOc+FD0YUM4nehcsQBvrFe52i00nPqXFuhvUo/uXAAA",
         "alt": "Сердце с сердечками — ракурс 2"
+      },
+      {
+        "src": "/catalog/soap/serdtse-s-serdechkami-1790092234933-1.webp",
+        "width": 1400,
+        "height": 1400,
+        "blurDataURL": "data:image/webp;base64,UklGRloCAABXRUJQVlA4WAoAAAAgAAAADwAADwAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggbAAAAFACAJ0BKhAAEAADgFolsAJ0ME4BkIbQDAk2wAD93gUtFUXp+kM9Omvzh2tUha1iQbYDTexHKb83JTw9PeZxE8jKc/37OXyL2jAO/L7w/4641fHjF3QUjOW83Aun/wxImGwOh9oht4uhn+AgAA==",
+        "alt": "Сердце с сердечками"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Сердце из прозрачной основы, внутри — россыпь цветных сердечек. На просвет видно, как они лежат в толще.",
+    "description": "Сердце из прозрачной основы, внутри — россыпь цветных сердечек. На просвет видно, как они лежат в толще. маленькие сердечки могут быть и в прямоугольном бруске",
     "specs": {},
     "tones": [
       "#F9D8DC",
       "#EFDBD3",
       "#E0D1C7"
     ],
-    "order": 1000
+    "order": 1000,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-panno-s-serdtsem",
