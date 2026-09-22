@@ -8895,8 +8895,8 @@
   {
     "id": "soap-elochnye-shary",
     "slug": "elochnye-shary",
-    "title": "Ёлочные шары",
-    "article": "МЛ-79",
+    "title": "Набор елочных игрушек",
+    "article": "1048",
     "category": "soap",
     "tags": [
       "new-year",
@@ -8909,18 +8909,34 @@
         "height": 1200,
         "blurDataURL": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAwAgCdASoQAAwAA4BaJQBWAMYJ4GlhfQ4EAAD+3f8iBts4T8gmJGgkp/2YnJJrq2J6SLRwdupRF9GEdL8PXQP2whzisVLYqq3jyRqd9CYs9NpO5HvZJbiXEs6HAAAA",
         "alt": "Ёлочные шары"
+      },
+      {
+        "src": "/catalog/soap/elochnye-shary-1790103668703-1.webp",
+        "width": 1400,
+        "height": 1050,
+        "blurDataURL": "data:image/webp;base64,UklGRkICAABXRUJQVlA4WAoAAAAgAAAADwAACwAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggVAAAABACAJ0BKhAADAADgFolAE6AxQDfdbnRZAAA/vV0ZVJPEZD9MbmWEgZqizWx1tyqL5A8RwE0qiC3GFH6fRQbiS9Mbb+fVjW+VQdOCtlbXW9+x7XAAA==",
+        "alt": "Набор елочных игрушек"
+      },
+      {
+        "src": "/catalog/soap/elochnye-shary-1790103668705-2.webp",
+        "width": 1400,
+        "height": 1050,
+        "blurDataURL": "data:image/webp;base64,UklGRlICAABXRUJQVlA4WAoAAAAgAAAADwAACwAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggZAAAAFACAJ0BKhAADAADgFoliAJ0BiwXCfIIAjCpgAD+9ciTwBtqVPGvV+6Xa3rrp/Hu/TJP4XCTdFt4cjAjz5WJFejgd3oPdPZFhht7+yorIXHeuwaCymHuavsZ1+JDD3v2ZRRPwAA=",
+        "alt": "Набор елочных игрушек"
       }
     ],
     "video": null,
     "price": null,
-    "description": "Шары с блеском, уложенные в деревянный ящичек с ячейками. Ящик входит в набор — его ставят под ёлку как есть.",
+    "description": "Набор елочных игрушек",
     "specs": {},
     "tones": [
       "#D6F2C2",
       "#DCE1CF",
       "#DCD2C8"
     ],
-    "order": 1160
+    "order": 1160,
+    "videos": [],
+    "related": []
   },
   {
     "id": "soap-tsvetochnaya-kartina",
