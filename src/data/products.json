@@ -5392,49 +5392,6 @@
     ]
   },
   {
-    "id": "decor-vazochki-skorlupki",
-    "slug": "vazochki-skorlupki",
-    "title": "Вазочки-скорлупки",
-    "article": "ДК-04",
-    "category": "decor",
-    "tags": [
-      "flowers",
-      "women"
-    ],
-    "images": [
-      {
-        "src": "/catalog/decor/vazochki-skorlupki-01.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAADQAQCdASoQABAAA4BaJZwAAua0BP0acAD+5ymHCHyMci0sVQ9kFDg4NGUuGzUbIDjIme2WwU+Ic+Y15oAAAA==",
-        "alt": "Вазочки-скорлупки"
-      },
-      {
-        "src": "/catalog/decor/vazochki-skorlupki-02.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAACwAQCdASoQABAAA4BaJZwAAuVN28gAAP7e2l9zU771tP6O04V1Y+2mbbw9sAtqOf8yZFd8KrVF2D1lq2AAAA==",
-        "alt": "Вазочки-скорлупки — ракурс 2"
-      },
-      {
-        "src": "/catalog/decor/vazochki-skorlupki-03.webp",
-        "width": 1200,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAADQAQCdASoMABAAA4BaJZwAAtzJVITcAAD+0zzgEKya5gMNG/priRfzIa+fMo7+t7azEnboUAA=",
-        "alt": "Вазочки-скорлупки — ракурс 3"
-      }
-    ],
-    "video": null,
-    "price": null,
-    "description": "Гипсовые вазочки с рваным краем, будто скорлупа, расписанные мелкими цветами. Роспись наносится вручную, по одной вазочке.",
-    "specs": {},
-    "tones": [
-      "#F8E4E5",
-      "#E5DED5",
-      "#D9D2CC"
-    ]
-  },
-  {
     "id": "gypsum-kashpo-meshochki",
     "slug": "kashpo-meshochki",
     "title": "Кашпо-мешочки",
