@@ -11188,41 +11188,6 @@
     ]
   },
   {
-    "id": "decor-lodka-i-vannochka",
-    "slug": "lodka-i-vannochka",
-    "title": "Лодка и ванночка",
-    "article": "ДК-03",
-    "category": "decor",
-    "tags": [
-      "sea"
-    ],
-    "images": [
-      {
-        "src": "/catalog/decor/lodka-i-vannochka-01.webp",
-        "width": 1600,
-        "height": 1067,
-        "blurDataURL": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAADwAQCdASoQAAsAA4BaJaQAAp1zMxIXQAAA/vavbrzNqzgcNHTumqsSOR8atkBsFmMWc8C1VYG9KHXYAAA=",
-        "alt": "Гипсовая лодка с канатом по борту"
-      },
-      {
-        "src": "/catalog/decor/lodka-i-vannochka-02.webp",
-        "width": 1600,
-        "height": 1067,
-        "blurDataURL": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAACQAQCdASoQAAsAA4BaJaQAAuMf9wAA/vd5jhR1/1LF2x9QhYXsIcdD2ioH36XY6V4KzTepgJSbwdbATwm5WC1hcluU5a4F6OjhhU1wAAA=",
-        "alt": "Гипсовая ванночка на низких ножках"
-      }
-    ],
-    "video": null,
-    "price": null,
-    "description": "Две белые формы из одной серии: лодка с перекинутым через борт канатом и ванночка на низких ножках. Обе достаточно глубокие, чтобы держать мыло у раковины или мелочь в прихожей, и достаточно узнаваемые, чтобы стоять пустыми. Гипс не крашен, только заглажен, — фактура остаётся матовой.",
-    "specs": {},
-    "tones": [
-      "#F1E7E2",
-      "#E6DDD9",
-      "#D9D2CE"
-    ]
-  },
-  {
     "id": "decor-chashi-rakoviny",
     "slug": "chashi-rakoviny",
     "title": "Чаши-раковины",
