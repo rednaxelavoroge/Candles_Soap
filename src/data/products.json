@@ -5377,43 +5377,6 @@
     ]
   },
   {
-    "id": "gypsum-blyudo-s-butonami",
-    "slug": "blyudo-s-butonami",
-    "title": "Блюдо с бутонами",
-    "article": "ПД-06",
-    "category": "gypsum",
-    "tags": [
-      "flowers",
-      "podnosy",
-      "march8"
-    ],
-    "images": [
-      {
-        "src": "/catalog/gypsum/blyudo-s-butonami-01.webp",
-        "width": 1600,
-        "height": 1200,
-        "blurDataURL": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAADQAQCdASoQAAwAA4BaJZQAAuawvLfAgAD+9CiSUsYm6ATqC1xJGcOHGaEK7cz9oozafj3yPKEYfDQAAAA=",
-        "alt": "Блюдо с бутонами"
-      },
-      {
-        "src": "/catalog/gypsum/blyudo-s-butonami-02.webp",
-        "width": 1600,
-        "height": 1200,
-        "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADwAQCdASoQAAwAA4BaJZwAAveBx6pBiAAA/vVxjhuu+zpy+iSebqlXYt1p4XVt7lXMwKEzqMuT8+9TC4s17CuvlMkOOZv5A2QAAA==",
-        "alt": "Блюдо с бутонами — ракурс 2"
-      }
-    ],
-    "video": null,
-    "price": null,
-    "description": "Овальное блюдо с зелёной поляной и бутонами тюльпанов по всей длине. Бутоны отливаются отдельно и сажаются на поверхность вручную.",
-    "specs": {},
-    "tones": [
-      "#F9E4D6",
-      "#F9D6CF",
-      "#EDCDCB"
-    ]
-  },
-  {
     "id": "gypsum-kashpo-meshochki",
     "slug": "kashpo-meshochki",
     "title": "Кашпо-мешочки",
