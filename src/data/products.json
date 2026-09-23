@@ -11104,55 +11104,6 @@
     ]
   },
   {
-    "id": "decor-rakoviny",
-    "slug": "rakoviny",
-    "title": "Раковины",
-    "article": "ДК-01",
-    "category": "decor",
-    "tags": [
-      "sea"
-    ],
-    "images": [
-      {
-        "src": "/catalog/decor/rakoviny-01.webp",
-        "width": 1600,
-        "height": 1200,
-        "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAAAwAgCdASoQAAwAA4BaJQBOj+ACr96tGybtgAD+8N973uXduBZeLd/amE6PN3SZvVtmLokRq/u59lktKKf+o9eCXkC/sl3Qz2gAAA==",
-        "alt": "Голубая гипсовая раковина-рапан с волнистым краем"
-      },
-      {
-        "src": "/catalog/decor/rakoviny-02.webp",
-        "width": 1600,
-        "height": 1200,
-        "blurDataURL": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAACwAQCdASoQAAwAA4BaJZwAAuP4VZEgAP70K1tzNl4pWJ7wkEkPKy449G+GJa15GisyvwcGBqDgAA==",
-        "alt": "Графитовый рапан, вид сверху"
-      },
-      {
-        "src": "/catalog/decor/rakoviny-03.webp",
-        "width": 1600,
-        "height": 1200,
-        "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADwAQCdASoQAAwAA4BaJZQCdADwh38GxgAA/vQyydVAkDydy+ukndFo4ZVqiMXgmZUULYYxriv64LzI+7axpRjmiaEVoOo31jjHEsAA",
-        "alt": "Белый рапан с перламутровой растяжкой"
-      },
-      {
-        "src": "/catalog/decor/rakoviny-04.webp",
-        "width": 1600,
-        "height": 1200,
-        "blurDataURL": "data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAADwAQCdASoQAAwAA4BaJZwAAvrew1eAm2AA/vQnK1U7DNC9ZHVCDfmqlskkiLiB6Q2QAA==",
-        "alt": "Витая раковина-башенка из чёрного гипса"
-      }
-    ],
-    "video": null,
-    "price": null,
-    "description": "Створки, снятые с настоящих раковин: волнистый рапан с гофрированным краем и витая башенка. Заливка идёт с растяжкой — от белого к небу, от графита к чёрному, так что цвет сгущается ко дну. Внутри чаша, поэтому раковину берут и как подставку: под кольца, под спички, под маленькую свечу.",
-    "specs": {},
-    "tones": [
-      "#F9DAC8",
-      "#AFE6F0",
-      "#ABDDE6"
-    ]
-  },
-  {
     "id": "decor-chashi-rakoviny",
     "slug": "chashi-rakoviny",
     "title": "Чаши-раковины",
