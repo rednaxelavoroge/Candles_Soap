@@ -1,5 +1,31 @@
 [
   {
+    "id": "p-1790150354477",
+    "category": "candles",
+    "slug": "dlinnoe-kashpo-oblaka",
+    "title": "Облака в длинном кашпо",
+    "article": "АРТ-984",
+    "description": "Свеча в продолговатом кашпо с несколькими фитилями",
+    "images": [
+      {
+        "src": "/catalog/candles/dlinnoe-kashpo-oblaka-1790150354476-1.webp",
+        "width": 1400,
+        "height": 1050,
+        "blurDataURL": "data:image/webp;base64,UklGRmICAABXRUJQVlA4WAoAAAAgAAAADwAACwAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggdAAAAFACAJ0BKhAADAADgFolsAJ0BirXH3KQcOAMAAD+6U1biwG8JauFRA9Xf0/HjGrddK1NA+d/71nBtzYFDPkp+/7BZnrGKb0W3uuXLzdJoj9XcdJ2guBU1FM9B9G+47rgCgNPyFYeQy64ubRa9wJn7IDgAAAA",
+        "alt": "Облака в длинном кашпо"
+      }
+    ],
+    "videos": [],
+    "video": null,
+    "price": null,
+    "specs": {},
+    "tags": [
+      "women",
+      "sea"
+    ],
+    "related": []
+  },
+  {
     "id": "p-1790106826586",
     "category": "candles",
     "slug": "okno-s-usorom",
