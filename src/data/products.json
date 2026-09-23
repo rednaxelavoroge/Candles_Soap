@@ -11153,41 +11153,6 @@
     ]
   },
   {
-    "id": "decor-tsvetochnyy-lug",
-    "slug": "tsvetochnyy-lug",
-    "title": "Цветочный луг",
-    "article": "ДК-02",
-    "category": "decor",
-    "tags": [
-      "flowers"
-    ],
-    "images": [
-      {
-        "src": "/catalog/decor/tsvetochnyy-lug-01.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAQAgCdASoQABAAA4BaJYwAAueIMToUfV8AAP73ehu4bKtoECmNxg3rtsJJBYiPfZlyStpYw7a7u4Zb1AloQ8prl6QeLwxa+UCTGusGlAAAAA==",
-        "alt": "Гипсовое кашпо с травой и сиреневыми цветами"
-      },
-      {
-        "src": "/catalog/decor/tsvetochnyy-lug-02.webp",
-        "width": 1600,
-        "height": 1600,
-        "blurDataURL": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAQAgCdASoQABAAA4BaJQApgAatIy6Tj+6AAP72k7O8FaYc1zPKSoiqYiFZ2i2HOQH2wTeJXtjF9keqKiFYbq5cz/cEBGQVmrxofazM/AiFGJf1ieCgAA==",
-        "alt": "Кашпо «Цветочный луг», вид сбоку"
-      }
-    ],
-    "video": null,
-    "price": null,
-    "description": "Кашпо, у которого низ — трава, а по верхнему краю посажены сиреневые цветы. Стебли протянуты вертикально и прокрашены в два зелёных, лепестки ставятся по одному, поэтому венок на двух кашпо не повторяется. Внутрь входит наливная свеча или горшок с суккулентом.",
-    "specs": {},
-    "tones": [
-      "#94F5B3",
-      "#F9D2DA",
-      "#D8D3CB"
-    ]
-  },
-  {
     "id": "decor-chashi-rakoviny",
     "slug": "chashi-rakoviny",
     "title": "Чаши-раковины",
